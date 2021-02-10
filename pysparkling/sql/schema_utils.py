@@ -66,6 +66,8 @@ def get_on_fields(left_schema, right_schema, on):
 
 
 def get_schema_from_cols(cols, current_schema):
+    [col.with_pre_evaluation_schema(current_schema) for col in cols]
+
     new_schema = StructType(fields=[
         field for col in cols for field in col.find_fields_in_schema(current_schema)
     ])
