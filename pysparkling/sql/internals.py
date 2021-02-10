@@ -1057,7 +1057,7 @@ class InternalGroupedDataFrame(object):
                 grouping_schema.fields + [
                     StructField(
                         str(stat),
-                        DataType(),
+                        stat.data_type(self.jdf.bound_schema),
                         True
                     ) for stat in stats
                 ]

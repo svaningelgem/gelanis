@@ -682,10 +682,10 @@ class Column(object):
 
     __bool__ = __nonzero__
 
-    @property
-    def data_type(self):
-        # pylint: disable=W0511
-        # todo: be more specific
+    def data_type(self, schema):
+        if isinstance(self.expr, Expression):
+            return self.expr.data_type(schema)
+
         return DataType()
 
     @property

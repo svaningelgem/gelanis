@@ -370,10 +370,8 @@ class Alias(Expression):
             self.alias
         )
 
-    @property
-    def data_type(self):
-        # Return the previous version.
-        return self.pre_evaluation_schema[str(self.expr)].dataType
+    def data_type(self, schema):
+        return schema[str(self.expr)].dataType
 
 
 class UnaryPositive(UnaryExpression):

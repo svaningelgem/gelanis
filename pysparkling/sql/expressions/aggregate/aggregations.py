@@ -1,4 +1,5 @@
 from pysparkling.sql.expressions.expressions import Expression
+from pysparkling.sql.types import ArrayType
 
 
 class Aggregation(Expression):
@@ -17,3 +18,9 @@ class Aggregation(Expression):
 
     def args(self):
         raise NotImplementedError
+
+    def data_type(self, schema):
+        return ArrayType(
+            elementType=schema[str(self.column)].dataType,
+            containsNull=self.column.is_nullable
+        )
