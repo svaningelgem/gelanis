@@ -20,6 +20,9 @@ class Aggregation(Expression):
         raise NotImplementedError
 
     def data_type(self, schema):
+        # TODO: Check if we can generalize this. By default, this should be fine, but needs to be overridden in each
+        #    subclass where it deviates from this standard.
+        # pylint: disable=E1101
         return ArrayType(
             elementType=schema[str(self.column)].dataType,
             containsNull=self.column.is_nullable
