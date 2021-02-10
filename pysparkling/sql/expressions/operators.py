@@ -371,7 +371,7 @@ class Alias(Expression):
         )
 
     def data_type(self, schema):
-        return schema[str(self.expr)].dataType
+        return self.expr.data_type(schema)
 
 
 class UnaryPositive(UnaryExpression):
