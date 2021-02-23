@@ -4,11 +4,11 @@ import random
 import re
 import string
 
-from pysparkling.sql.expressions.expressions import Expression, NullSafeColumnOperation, UnaryExpression
-from pysparkling.sql.internal_utils.column import resolve_column
-from pysparkling.sql.types import create_row, StringType
-from pysparkling.sql.utils import AnalysisException
-from pysparkling.utils import half_even_round, half_up_round, MonotonicallyIncreasingIDGenerator, XORShiftRandom
+from ...utils import half_even_round, half_up_round, MonotonicallyIncreasingIDGenerator, XORShiftRandom
+from ..internal_utils.column import resolve_column
+from ..types import create_row, StringType
+from ..utils import AnalysisException
+from .expressions import Expression, NullSafeColumnOperation, UnaryExpression
 
 JVM_MAX_INTEGER_SIZE = 2 ** 63
 
@@ -45,12 +45,12 @@ class CaseWhen(Expression):
         return None
 
     def __str__(self):
-        return "CASE {0} END".format(
-            " ".join(
-                "WHEN {0} THEN {1}".format(condition, value)
-                for condition, value in zip(self.conditions, self.values)
-            )
+        when_statements = " ".join(
+            f"WHEN {condition} THEN {value}"
+            for condition, value in zip(self.conditions, self.values)
         )
+
+        return f"CASE {when_statements} END"
 
     def args(self):
         return (
@@ -90,13 +90,12 @@ class Otherwise(Expression):
         return None
 
     def __str__(self):
-        return "CASE {0} ELSE {1} END".format(
-            " ".join(
-                "WHEN {0} THEN {1}".format(condition, value)
-                for condition, value in zip(self.conditions, self.values)
-            ),
-            self.default
+        whens = " ".join(
+            f"WHEN {condition} THEN {value}"
+            for condition, value in zip(self.conditions, self.values)
         )
+
+        return f"CASE {whens} ELSE {self.default} END"
 
     def args(self):
         return (
@@ -211,7 +210,7 @@ class FormatNumber(Expression):
         if not isinstance(value, (int, float)):
             return None
         rounded_value = half_even_round(value, self.digits)
-        return "{0:,}".format(rounded_value)
+        return f"{rounded_value:,}"
 
     def args(self):
         return (
@@ -263,7 +262,7 @@ class IsNaN(UnaryExpression):
     pretty_name = "isnan"
 
     def eval(self, row, schema):
-        return self.eval(row, schema) is float("nan")
+        return math.isnan(self.eval(row, schema))
 
 
 class NaNvl(Expression):
@@ -962,7 +961,7 @@ class MonotonicallyIncreasingID(Expression):
         self.generator = None
 
     def eval(self, row, schema):
-        return self.generator.next()
+        return next(self.generator)
 
     def initialize(self, partition_index):
         self.generator = MonotonicallyIncreasingIDGenerator(partition_index)

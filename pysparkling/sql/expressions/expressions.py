@@ -1,6 +1,6 @@
-from pysparkling.sql.casts import get_caster
-from pysparkling.sql.types import DataType, INTERNAL_TYPE_ORDER, python_to_spark_type, StructField
-from pysparkling.sql.utils import AnalysisException
+from ..casts import get_caster
+from ..types import DataType, INTERNAL_TYPE_ORDER, python_to_spark_type, StructField
+from ..utils import AnalysisException
 
 expression_registry = {}
 
@@ -14,7 +14,7 @@ class RegisterExpressions(type):
             expression_registry[cls.pretty_name] = cls
 
 
-class Expression(object, metaclass=RegisterExpressions):
+class Expression(metaclass=RegisterExpressions):
     pretty_name = None
 
     def __init__(self, *children):
@@ -25,7 +25,7 @@ class Expression(object, metaclass=RegisterExpressions):
         raise NotImplementedError
 
     def __str__(self):
-        return "{0}({1})".format(self.pretty_name, ", ".join(str(arg) for arg in self.args()))
+        return f"{self.pretty_name}({', '.join(str(arg) for arg in self.args())})"
 
     def args(self):
         raise NotImplementedError
@@ -82,9 +82,9 @@ class Expression(object, metaclass=RegisterExpressions):
         pass
 
     def recursive_merge_stats(self, other, schema):
-        # Top level import would cause cyclic dependencies
-        # pylint: disable=import-outside-toplevel
-        from pysparkling.sql.expressions.operators import Alias
+        # pylint: disable=import-outside-toplevel, cyclic-import
+        from .operators import Alias
+
         if isinstance(other.expr, Alias):
             self.recursive_merge_stats(other.expr.expr, schema)
         else:
@@ -93,9 +93,9 @@ class Expression(object, metaclass=RegisterExpressions):
 
     @staticmethod
     def children_merge_stats(children, other, schema):
-        # Top level import would cause cyclic dependencies
-        # pylint: disable=import-outside-toplevel
-        from pysparkling.sql.column import Column
+        # pylint: disable=import-outside-toplevel, cyclic-import
+        from ..column import Column
+
         for child in children:
             if isinstance(child, Expression):
                 child.recursive_merge_stats(other, schema)
@@ -115,9 +115,9 @@ class Expression(object, metaclass=RegisterExpressions):
 
     @staticmethod
     def children_initialize(children, partition_index):
-        # Top level import would cause cyclic dependencies
-        # pylint: disable=import-outside-toplevel
-        from pysparkling.sql.column import Column
+        # pylint: disable=import-outside-toplevel, cyclic-import
+        from ..column import Column
+
         for child in children:
             if isinstance(child, Expression):
                 child.recursive_initialize(partition_index)
@@ -139,9 +139,9 @@ class Expression(object, metaclass=RegisterExpressions):
 
     @staticmethod
     def children_pre_evaluation_schema(children, schema):
-        # Top level import would cause cyclic dependencies
-        # pylint: disable=import-outside-toplevel
-        from pysparkling.sql.column import Column
+        # pylint: disable=import-outside-toplevel, cyclic-import
+        from ..column import Column
+
         for child in children:
             if isinstance(child, Expression):
                 child.recursive_pre_evaluation_schema(schema)
@@ -151,7 +151,7 @@ class Expression(object, metaclass=RegisterExpressions):
                 Expression.children_pre_evaluation_schema(child, schema)
 
     def get_literal_value(self):
-        raise AnalysisException("Expecting a Literal, but got {0}: {1}".format(type(self), self))
+        raise AnalysisException(f"Expecting a Literal, but got {type(self)}: {self}")
 
 
 class UnaryExpression(Expression):
@@ -210,7 +210,7 @@ class TypeSafeBinaryOperation(BinaryOperation):
             order_1 = INTERNAL_TYPE_ORDER.index(type_1)
             order_2 = INTERNAL_TYPE_ORDER.index(type_2)
         except ValueError as e:
-            raise AnalysisException("Unable to process type: {0}".format(e)) from e
+            raise AnalysisException(f"Unable to process type: {e}") from e
 
         spark_type_1 = python_to_spark_type(type_1)
         spark_type_2 = python_to_spark_type(type_2)
@@ -254,8 +254,8 @@ class NullSafeBinaryOperation(BinaryOperation):
             return self.unsafe_operation(value_1, value_2)
 
         raise AnalysisException(
-            "Cannot resolve {0} due to data type mismatch, first value is {1}, second value is {2}."
-            "".format(self, type_1, type_2)
+            f"Cannot resolve {self} due to data type mismatch,"
+            f" first value is {type_1}, second value is {type_2}."
         )
 
     def __str__(self):

@@ -1,4 +1,4 @@
-from pysparkling.sql.expressions.expressions import Expression
+from .expressions import Expression
 
 
 class UserDefinedFunction(Expression):
@@ -12,10 +12,8 @@ class UserDefinedFunction(Expression):
         return self.f(*(expr.eval(row, schema) for expr in self.exprs))
 
     def __str__(self):
-        return "{0}({1})".format(
-            self.f.__name__,
-            ", ".join(str(arg) for arg in self.args())
-        )
+        arguments = ', '.join(str(arg) for arg in self.args())
+        return f"{self.f.__name__}({arguments})"
 
     def args(self):
         return self.exprs

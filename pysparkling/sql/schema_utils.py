@@ -1,10 +1,10 @@
 from functools import reduce
 
-from pysparkling.sql.internal_utils.joins import (
+from .internal_utils.joins import (
     CROSS_JOIN, FULL_JOIN, INNER_JOIN, LEFT_ANTI_JOIN, LEFT_JOIN, LEFT_SEMI_JOIN, RIGHT_JOIN
 )
-from pysparkling.sql.types import _get_null_fields, _has_nulltype, _infer_schema, _merge_type, StructField, StructType
-from pysparkling.sql.utils import IllegalArgumentException
+from .types import _get_null_fields, _has_nulltype, _infer_schema, _merge_type, StructField, StructType
+from .utils import IllegalArgumentException
 
 
 def infer_schema_from_rdd(rdd):
@@ -30,10 +30,10 @@ def infer_schema_from_list(data, names=None):
         )
     schema = reduce(_merge_type, (_infer_schema(row, names) for row in data))
     if _has_nulltype(schema):
+        null_fields = "', '".join(_get_null_fields(schema))
         raise ValueError(
-            "Type(s) of the following field(s) cannot be determined after inferring: '{0}'".format(
-                "', '".join(_get_null_fields(schema))
-            )
+            "Type(s) of the following field(s) cannot be determined after inferring:"
+            f" '{null_fields}'"
         )
     return schema
 
@@ -54,7 +54,7 @@ def merge_schemas(left_schema, right_schema, how, on=None):
         on_fields = [StructField(field.name, field.dataType, nullable=True)
                      for field in left_on_fields]
     else:
-        raise IllegalArgumentException("Invalid how argument in join: {0}".format(how))
+        raise IllegalArgumentException(f"Invalid how argument in join: {how}")
 
     return StructType(fields=on_fields + other_left_fields + other_right_fields)
 

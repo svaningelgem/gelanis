@@ -1,9 +1,8 @@
-from pysparkling import RDD
-from pysparkling.sql.dataframe import DataFrame
-from pysparkling.sql.internal_utils.readers import InternalReader
-from pysparkling.sql.internal_utils.readwrite import OptionUtils
-from pysparkling.sql.internal_utils.writers import CSVWriter, InternalWriter, JSONWriter
-from pysparkling.sql.utils import IllegalArgumentException
+from .dataframe import DataFrame
+from .internal_utils.readers import InternalReader
+from .internal_utils.readwrite import OptionUtils
+from .internal_utils.writers import CSVWriter, InternalWriter, JSONWriter
+from .utils import IllegalArgumentException
 
 WRITE_MODES = ("overwrite", "append", "ignore", "error", "errorifexists")
 DATA_WRITERS = dict(
@@ -32,6 +31,21 @@ class DataFrameReader(OptionUtils):
     def _df(self, jdf):
         return DataFrame(jdf, self._spark)
 
+    def _generic_read(self, path, method_to_read_if_rdd):
+        if isinstance(path, str):
+            path = [path]
+
+        if isinstance(path, list):
+            return self._df(method_to_read_if_rdd(path))
+
+        # pylint: disable=import-outside-toplevel, cyclic-import
+        from ..rdd import RDD
+
+        if isinstance(path, RDD):
+            return self._df(method_to_read_if_rdd(path.collect()))
+
+        raise TypeError("path can be only string, list or RDD")
+
     # pylint: disable=R0914
     def csv(self, path, schema=None, sep=None, encoding=None, quote=None, escape=None,
             comment=None, header=None, inferSchema=None, ignoreLeadingWhiteSpace=None,
@@ -52,13 +66,8 @@ class DataFrameReader(OptionUtils):
             charToEscapeQuoteEscaping=charToEscapeQuoteEscaping, samplingRatio=samplingRatio,
             enforceSchema=enforceSchema, emptyValue=emptyValue, locale=locale, lineSep=lineSep
         )
-        if isinstance(path, str):
-            path = [path]
-        if isinstance(path, list):
-            return self._df(self._jreader.csv(path))
-        if isinstance(path, RDD):
-            return self._df(self._jreader.csv(path.collect()))
-        raise TypeError("path can be only string, list or RDD")
+
+        return self._generic_read(path, self._jreader.csv)
 
     # pylint: disable=R0914
     def json(self, path, schema=None, primitivesAsString=None, prefersDecimal=None,
@@ -77,27 +86,17 @@ class DataFrameReader(OptionUtils):
             allowUnquotedControlChars=allowUnquotedControlChars, lineSep=lineSep,
             samplingRatio=samplingRatio, dropFieldIfAllNull=dropFieldIfAllNull, encoding=encoding,
             locale=locale)
-        if isinstance(path, str):
-            path = [path]
-        if isinstance(path, list):
-            return self._df(self._jreader.json(path))
-        if isinstance(path, RDD):
-            return self._df(self._jreader.json(path.collect()))
-        raise TypeError("path can be only string, list or RDD")
 
-    def text(self, paths, wholetext=False, lineSep=None,
+        return self._generic_read(path, self._jreader.json)
+
+    def text(self, path, wholetext=False, lineSep=None,
              pathGlobFilter=None, recursiveFileLookup=None):
         self._set_opts(wholetext=wholetext,
                        lineSep=lineSep,
                        pathGlobFilter=pathGlobFilter,
                        recursiveFileLookup=recursiveFileLookup)
-        if isinstance(paths, str):
-            paths = [paths]
-        if isinstance(paths, list):
-            return self._df(self._jreader.text(paths))
-        if isinstance(paths, RDD):
-            return self._df(self._jreader.text(paths.collect()))
-        raise TypeError("paths can be only string, list or RDD")
+
+        return self._generic_read(path, self._jreader.text)
 
 
 class DataFrameWriter(OptionUtils):
@@ -110,11 +109,9 @@ class DataFrameWriter(OptionUtils):
         if saveMode is None:
             return self
         if saveMode not in WRITE_MODES:
+            accepted_modes = "', '".join(WRITE_MODES)
             raise IllegalArgumentException(
-                "Unknown save mode: {0}. Accepted save modes are {1}.".format(
-                    saveMode,
-                    "', '".join(WRITE_MODES)
-                )
+                f"Unknown save mode: {saveMode}. Accepted save modes are {accepted_modes}."
             )
         self._jwrite = self._jwrite.mode(saveMode)
         return self
@@ -140,11 +137,11 @@ class DataFrameWriter(OptionUtils):
 
     def bucketBy(self, numBuckets, col, *cols):
         if not isinstance(numBuckets, int):
-            raise TypeError("numBuckets should be an int, got {0}.".format(type(numBuckets)))
+            raise TypeError(f"numBuckets should be an int, got {type(numBuckets)}.")
 
         if isinstance(col, (list, tuple)):
             if cols:
-                raise ValueError("col is a {0} but cols are not empty".format(type(col)))
+                raise ValueError(f"col is a {type(col)} but cols are not empty")
 
             cols = col
         else:
@@ -159,7 +156,7 @@ class DataFrameWriter(OptionUtils):
     def sortBy(self, col, *cols):
         if isinstance(col, (list, tuple)):
             if cols:
-                raise ValueError("col is a {0} but cols are not empty".format(type(col)))
+                raise ValueError(f"col is a {type(col)} but cols are not empty")
 
             col, cols = col[0], col[1:]
 

@@ -2,15 +2,14 @@ from functools import partial
 import itertools
 import json
 
-from pysparkling.sql.casts import get_struct_caster
-from pysparkling.sql.internal_utils.options import Options
-from pysparkling.sql.internal_utils.readers.utils import get_records, resolve_partitions
-from pysparkling.sql.internals import DataFrameInternal
-from pysparkling.sql.schema_utils import infer_schema_from_rdd
-from pysparkling.sql.types import create_row, row_from_keyed_values, StructType
+from ...casts import get_struct_caster
+from ...internal_utils.options import Options
+from ...internal_utils.readers.utils import get_records, resolve_partitions
+from ...schema_utils import infer_schema_from_rdd
+from ...types import create_row, row_from_keyed_values, StructType
 
 
-class JSONReader(object):
+class JSONReader:
     default_options = dict(
         primitivesAsString=False,
         prefersDecimal=False,
@@ -74,6 +73,9 @@ class JSONReader(object):
         casted_rdd = rdd.map(cast_row)
         casted_rdd._name = paths
 
+        # pylint: disable=import-outside-toplevel, cyclic-import
+        from ...internals import DataFrameInternal
+
         return DataFrameInternal(
             sc,
             casted_rdd,
@@ -96,10 +98,8 @@ def parse_record(record, schema, partition, partition_schema, options):
     raw_record_value = json.loads(record, encoding=options.encoding)
     if not isinstance(raw_record_value, dict):
         raise NotImplementedError(
-            "Top level items should be JSON objects (dicts), got {0} with {1}".format(
-                type(raw_record_value),
-                raw_record_value
-            )
+            "Top level items should be JSON objects (dicts),"
+            f" got {type(raw_record_value)} with {raw_record_value}"
         )
     record_value = decode_record(raw_record_value)
     if schema is not None:

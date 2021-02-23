@@ -13,7 +13,7 @@ N_CONNECTIONS = (100, 1000, 2000, 3000, 3500, 4000, 4500, 5000,
 N_CONNECTIONS_1K = (10, 20, 30, 40, 45, 50, 60, 70, 80, 90, 100)
 
 
-class Server(object):
+class Server:
     def __init__(self, pause=60, values=1, start_port=8123, processes=2):
         self.pause = pause
         self.values = values
@@ -22,10 +22,11 @@ class Server(object):
 
     def client(self, n=2000, format_='hello'):
         for _ in range(self.processes):
-            os.system('python tests/tcpperf_client.py '
-                      '-n {} --port {} --format {} --values {} &'
-                      ''.format(int(n / self.processes), self.port, format_,
-                                self.values))
+            os.system(
+                f'python tests/tcpperf_client.py -n {int(n / self.processes)}'
+                f' --port {self.port} --format {format_} --values {self.values}'
+                f' &'
+            )
 
     def _run_process(self, n, to_kv, format_):
         c = pysparkling.Context()
@@ -75,9 +76,8 @@ class Server(object):
             k: (ex_ex2[0], math.sqrt(ex_ex2[1] - ex_ex2[0] ** 2))
             for k, ex_ex2 in sensor_expections.items()
         }
-        print('run: n = {}, counts = {}, result = {}'
-              ''.format(n, counts, result))
-        print('sensors = {}'.format(sensors))
+        print(f'run: n = {n}, counts = {counts}, result = {result}')
+        print(f'sensors = {sensors}')
         time.sleep(self.pause)
         self.port += 1
         return result
@@ -96,7 +96,7 @@ def main():
 
     def kv_from_struct(b):
         s, v = struct.unpack('If', b)
-        return 'sensor{}'.format(s), v
+        return f'sensor{s}', v
 
     with open('tests/tcpperf_messages.csv', 'w') as f:
         f.write('# messages, hello, text, json, bello, struct\n')
@@ -110,7 +110,7 @@ def main():
                 server_1k.run(n, kv_from_json, 'json'),
                 server_1k.run(n, kv_from_struct, 'struct'),
             )
-            f.write(', '.join('{}'.format(d) for d in data) + '\n')
+            f.write(', '.join(f'{d}' for d in data) + '\n')
 
     with open('tests/tcpperf_connections.csv', 'w') as f:
         f.write('# messages, hello, text, json, bello, struct\n')
@@ -124,7 +124,7 @@ def main():
                 server.run(n, kv_from_json, 'json'),
                 server.run(n, kv_from_struct, 'struct'),
             )
-            f.write(', '.join('{}'.format(d) for d in data) + '\n')
+            f.write(', '.join(f'{d}' for d in data) + '\n')
 
 
 if __name__ == '__main__':

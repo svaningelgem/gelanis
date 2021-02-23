@@ -24,7 +24,7 @@ import os
 import re
 import sys
 
-from pysparkling.sql.utils import ParseException, require_minimum_pandas_version
+from .utils import ParseException, require_minimum_pandas_version
 
 __all__ = [
     "DataType", "NullType", "StringType", "BinaryType", "BooleanType", "DateType",
@@ -33,7 +33,7 @@ __all__ = [
 ]
 
 
-class DataType(object):
+class DataType:
     """Base class for data types."""
 
     def __repr__(self):
@@ -538,7 +538,7 @@ class StructType(DataType):
             for field in self:
                 if field.name == key:
                     return field
-            raise KeyError('No StructField named {0}'.format(key))
+            raise KeyError(f'No StructField named {key}')
         if isinstance(key, int):
             try:
                 return self.fields[key]
@@ -559,12 +559,59 @@ class StructType(DataType):
          |-- some_int: integer (nullable = true)
          |-- some_date: date (nullable = true)
 
+        >>> schema = StructType.fromDDL('some_str: string, arr: array<string>')
+        >>> print(schema.treeString())
+         |-- some_str: string (nullable = true)
+         |-- arr: array (nullable = true)
+         |    |-- element: string (containsNull = true)
+
+        >>> schema = StructType.fromDDL('some_str: string, arr: array<array<string>>')
+        >>> print(schema.treeString())
+         |-- some_str: string (nullable = true)
+         |-- arr: array (nullable = true)
+         |    |-- element: array (containsNull = true)
+         |    |    |-- element: string (containsNull = true)
+
         :return: str with the schema inside.
         """
-        return '\n'.join(
-            f' |-- {field.name}: {field.dataType.typeName()} (nullable = {"true" if field.nullable else "false"})'
-            for field in self.fields
-        )
+        txt = []
+        indent = 0
+
+        def _dump(name: str, type_: DataType, nullable: bool, nullable_name: str = 'nullable') -> str:
+            pre = ' |   ' * indent
+            return f'{pre} |-- {name}: {type_.typeName()} ({nullable_name} = {"true" if nullable else "false"})'
+
+        def _dump_array(data_type):
+            if not isinstance(data_type, ArrayType):
+                return []
+
+            nonlocal indent
+
+            txt = []
+
+            indent += 1
+
+            txt.append(
+                _dump(
+                    'element',
+                    data_type.elementType,
+                    nullable=data_type.containsNull,
+                    nullable_name='containsNull'
+                )
+            )
+
+            txt.extend(_dump_array(data_type.elementType))
+
+            indent -= 1
+
+            return txt
+
+        for field in self.fields:
+            data_type = field.dataType
+            txt.append(_dump(field.name, data_type, field.nullable))
+            txt.extend(_dump_array(data_type))
+
+        return '\n'.join(txt)
 
     def __repr__(self):
         return ("StructType(List(%s))" %
@@ -1035,7 +1082,7 @@ def _get_null_fields(field, prefix=""):
         )))
 
     if prefix:
-        prefixed_field_name = "{0}.{1}".format(prefix, field.name)
+        prefixed_field_name = f"{prefix}.{field.name}"
     else:
         prefixed_field_name = field.name
 
@@ -1158,8 +1205,9 @@ def _create_converter(dataType):
             raise TypeError("Unexpected obj type: %s" % type(obj))
 
         if convert_fields:
-            return tuple([convert(d.get(name)) for name, convert in zip(names, converters)])
-        return tuple([d.get(name) for name in names])
+            return tuple(convert(d.get(name)) for name, convert in zip(names, converters))
+
+        return tuple(d.get(name) for name in names)
 
     return convert_struct
 
@@ -1816,7 +1864,7 @@ def string_to_type(string):
         else:
             precision, scale = arguments, 0
         return DecimalType(precision=int(precision), scale=int(scale))
-    raise ParseException("Unable to parse data type {0}".format(string))
+    raise ParseException(f"Unable to parse data type {string}")
 
 
 # Internal type hierarchy:
@@ -1851,6 +1899,5 @@ def python_to_spark_type(python_type):
     if python_type in PYTHON_TO_SPARK_TYPE:
         return PYTHON_TO_SPARK_TYPE[python_type]
     raise NotImplementedError(
-        "Pysparkling does not currently support "
-        "type {0} for the requested operation".format(python_type)
+        f"Pysparkling does not currently support type {python_type} for the requested operation"
     )

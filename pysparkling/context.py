@@ -7,8 +7,8 @@ import struct
 import time
 import traceback
 
-from . import __version__ as PYSPARKLING_VERSION
 from . import accumulators
+from .__version__ import __version__ as PYSPARKLING_VERSION
 from .broadcast import Broadcast
 from .cache_manager import CacheManager
 from .exceptions import ContextIsLockedException
@@ -35,21 +35,22 @@ def _run_task(task_context, rdd, func, partition):
     """
     task_context.attempt_number += 1
 
-    log.debug('Running stage {} for partition {} of {} (id: {}).'
-              ''.format(task_context.stage_id,
-                        task_context.partition_id,
-                        rdd.name(), rdd.id()))
+    log.debug(
+        'Running stage %s for partition %s of %s (id: %s).',
+        task_context.stage_id, task_context.partition_id, rdd.name(), rdd.id()
+    )
 
     try:
         return func(task_context, rdd.compute(partition, task_context))
     except Exception as e:  # pylint: disable=broad-except
-        log.warning('Attempt {} failed for partition {} of {} (id: {}): {}'
-                    ''.format(task_context.attempt_number, partition.index,
-                              rdd.name(), rdd.id(), traceback.format_exc()))
+        log.warning(
+            'Attempt %s failed for partition %s of %s (id: %s): %s',
+            task_context.attempt_number, partition.index, rdd.name(), rdd.id(), traceback.format_exc()
+        )
 
         if task_context.attempt_number == task_context.max_retries:
-            log.error('Partition {} of {} failed.'
-                      ''.format(partition.index, rdd.name()))
+            log.error('Partition %s of %s failed.', partition.index, rdd.name())
+
             if not task_context.catch_exceptions:
                 raise e
 
@@ -92,7 +93,7 @@ def runJob_map(i):  # pylint: disable=too-many-locals
     ))
 
 
-class Context(object):
+class Context:
     """Context object similar to a Spark Context.
 
     The variable `_stats` contains measured timing information about data and
@@ -170,7 +171,7 @@ class Context(object):
             elif isinstance(value, complex):
                 accum_param = accumulators.COMPLEX_ACCUMULATOR_PARAM
             else:
-                raise TypeError("No default accumulator param for type {0}".format(type(value)))
+                raise TypeError(f"No default accumulator param for type {type(value)}")
         return accumulators.Accumulator(value, accum_param)
 
     def newRddId(self):
@@ -215,7 +216,6 @@ class Context(object):
         :param partitions: An iterable over the partitioned data.
         :rtype: RDD
         """
-
         return RDD(
             (Partition(p_data, i) for i, p_data in enumerate(partitions)),
             self,
@@ -252,8 +252,7 @@ class Context(object):
 
         """
         resolved_names = File.resolve_filenames(name)
-        log.debug('pickleFile() resolved "{0}" to {1} files.'
-                  ''.format(name, len(resolved_names)))
+        log.debug('pickleFile() resolved "%s" to %s files.', name, len(resolved_names))
 
         n_partitions = len(resolved_names)
         if minPartitions and minPartitions > n_partitions:
@@ -404,8 +403,7 @@ class Context(object):
         ['bellobello']
         """
         resolved_names = File.resolve_filenames(path)
-        log.debug('binaryFile() resolved "{0}" to {1} files.'
-                  ''.format(path, len(resolved_names)))
+        log.debug('binaryFile() resolved "%s" to %s files.', path, len(resolved_names))
 
         n_partitions = len(resolved_names)
         if minPartitions and minPartitions > n_partitions:
@@ -503,8 +501,7 @@ class Context(object):
         :rtype: RDD
         """
         resolved_names = TextFile.resolve_filenames(filename)
-        log.debug('textFile() resolved "{0}" to {1} files.'
-                  ''.format(filename, len(resolved_names)))
+        log.debug('textFile() resolved "%s" to %s files.', filename, len(resolved_names))
 
         n_partitions = len(resolved_names)
         if minPartitions and minPartitions > n_partitions:
@@ -551,8 +548,7 @@ class Context(object):
         :rtype: RDD
         """
         resolved_names = TextFile.resolve_filenames(path)
-        log.debug('wholeTextFiles() resolved "{0}" to {1} files.'
-                  ''.format(path, len(resolved_names)))
+        log.debug('wholeTextFiles() resolved "%s" to %s files.', path, len(resolved_names))
 
         n_partitions = len(resolved_names)
         if minPartitions and minPartitions > n_partitions:
@@ -568,7 +564,7 @@ class Context(object):
         return rdd
 
 
-class DummyPool(object):
+class DummyPool:
     def __init__(self):
         pass
 
@@ -592,7 +588,7 @@ def map_whole_text_file(f_name__encoding):
     )
 
 
-class FixedLengthChunker(object):
+class FixedLengthChunker:
     def __init__(self, recordLength):
         self.record_length = recordLength
 
@@ -601,7 +597,7 @@ class FixedLengthChunker(object):
             yield data[i: i + self.record_length]
 
 
-class VariableLengthChunker(object):
+class VariableLengthChunker:
     def __init__(self, recordLength):
         self.length_fmt = recordLength
         self.prefix_length = struct.calcsize(recordLength)

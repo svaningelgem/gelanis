@@ -6,7 +6,7 @@ from . import codec, fs
 log = logging.getLogger(__name__)
 
 
-class File(object):
+class File:
     """File object.
 
     :param file_name: Any file name.
@@ -35,7 +35,7 @@ class File(object):
         for expr in all_expr.split(','):
             expr = expr.strip()
             files += fs.get_fs(expr).resolve_filenames(expr)
-        log.debug('Filenames: {0}'.format(files))
+        log.debug('Filenames: %s', files)
         return files
 
     @classmethod
@@ -53,7 +53,7 @@ class File(object):
         for expr in all_expr:
             expr = expr.strip()
             files += fs.get_fs(expr).resolve_content(expr)
-        log.debug('Filenames: {0}'.format(files))
+        log.debug('Filenames: %s', files)
         return files
 
     def exists(self):

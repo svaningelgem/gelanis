@@ -1,5 +1,5 @@
-from pysparkling.sql.expressions.expressions import Expression
-from pysparkling.sql.types import ArrayType
+from ..expressions import Expression
+from ...types import ArrayType
 
 
 class Aggregation(Expression):

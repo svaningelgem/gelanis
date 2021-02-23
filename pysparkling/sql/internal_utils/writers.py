@@ -4,18 +4,18 @@ import json
 import os
 import shutil
 
-from pysparkling import Row
-from pysparkling.sql.casts import cast_to_string
-from pysparkling.sql.expressions.aggregate.aggregations import Aggregation
-from pysparkling.sql.expressions.mappers import StarOperator
-from pysparkling.sql.functions import col
-from pysparkling.sql.internal_utils.options import Options
-from pysparkling.sql.internal_utils.readwrite import to_option_stored_value
-from pysparkling.sql.utils import AnalysisException
-from pysparkling.utils import get_json_encoder, portable_hash
+from ...utils import get_json_encoder, portable_hash
+from ..casts import cast_to_string
+from ..expressions.aggregate.aggregations import Aggregation
+from ..expressions.mappers import StarOperator
+from ..functions import col
+from ..internal_utils.options import Options
+from ..internal_utils.readwrite import to_option_stored_value
+from ..types import Row
+from ..utils import AnalysisException
 
 
-class InternalWriter(object):
+class InternalWriter:
     def __init__(self, df):
         self._df = df
         self._source = "parquet"
@@ -108,13 +108,13 @@ class WriteInFolder(Aggregation):
         )
 
     def __str__(self):
-        return "write_in_folder({0})".format(self.column)
+        return f"write_in_folder({self.column})"
 
     def args(self):
         return (self.column,)
 
 
-class DataWriter(object):
+class DataWriter:
     default_options = dict(
         dateFormat="yyyy-MM-dd",
         timestampFormat="yyyy-MM-dd'T'HH:mm:ss.SSSXXX",
@@ -162,7 +162,7 @@ class DataWriter(object):
             if mode == "ignore":
                 return
             if mode in ("error", "errorifexists"):
-                raise AnalysisException("path {0} already exists.;".format(output_path))
+                raise AnalysisException(f"path {output_path} already exists.;")
             if mode == "overwrite":
                 shutil.rmtree(output_path)
                 os.makedirs(output_path)
@@ -200,9 +200,8 @@ class CSVWriter(DataWriter):
         options_requested_but_not_supported = set(self.options) & unsupported_options
         if options_requested_but_not_supported:
             raise NotImplementedError(
-                "Pysparkling does not support yet the following options: {0}".format(
-                    options_requested_but_not_supported
-                )
+                "Pysparkling does not support yet the following options:"
+                f" {options_requested_but_not_supported}"
             )
 
     def preformat_cell(self, value, field):
@@ -285,13 +284,13 @@ class CSVWriter(DataWriter):
             return 0
 
         partition_parts = [
-            "{0}={1}".format(col_name, ref_value[col_name])
+            f"{col_name}={ref_value[col_name]}"
             for col_name in self.partitioning_col_names
         ]
         file_path = "/".join(
             [output_path]
             + partition_parts
-            + ["part-00000-{0}.csv".format(portable_hash(ref_value))]
+            + [f"part-00000-{portable_hash(ref_value)}.csv"]
         )
 
         # pylint: disable=W0511
@@ -336,9 +335,8 @@ class JSONWriter(DataWriter):
         options_requested_but_not_supported = set(self.options) & unsupported_options
         if options_requested_but_not_supported:
             raise NotImplementedError(
-                "Pysparkling does not support yet the following options: {0}".format(
-                    options_requested_but_not_supported
-                )
+                "Pysparkling does not support yet the following options:"
+                f" {options_requested_but_not_supported}"
             )
 
     @property
@@ -360,11 +358,11 @@ class JSONWriter(DataWriter):
             return 0
 
         partition_parts = [
-            "{0}={1}".format(col_name, ref_value[col_name])
+            f"{col_name}={ref_value[col_name]}"
             for col_name in self.partitioning_col_names
         ]
-        partition_folder = "/".join([output_path] + partition_parts)
-        file_path = "{0}/part-00000-{1}.json".format(partition_folder, portable_hash(ref_value))
+        partition_folder: str = "/".join([output_path] + partition_parts)
+        file_path = f"{partition_folder}/part-00000-{portable_hash(ref_value)}.json"
 
         if not os.path.exists(partition_folder):
             os.makedirs(partition_folder)

@@ -1,4 +1,4 @@
-from pysparkling.sql.expressions.aggregate.aggregations import Aggregation
+from .aggregations import Aggregation
 
 
 class CollectList(Aggregation):
@@ -141,7 +141,7 @@ class CountDistinct(Aggregation):
         return len(self.items)
 
     def args(self):
-        return "DISTINCT {0}".format(",".join(self.columns))
+        return f"DISTINCT {','.join(self.columns)}"
 
 
 class ApproxCountDistinct(Aggregation):

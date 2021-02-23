@@ -22,8 +22,8 @@ import copy
 import math
 import numbers
 
-from pysparkling.sql.functions import parse
-from pysparkling.sql.types import row_from_keyed_values
+from .sql.column import parse
+from .sql.types import row_from_keyed_values
 
 try:
     from numpy import maximum, minimum, sqrt
@@ -33,7 +33,7 @@ except ImportError:
     sqrt = math.sqrt
 
 
-class StatCounter(object):
+class StatCounter:
 
     def __init__(self, values=None):
         self.n = 0  # Running count of our values
@@ -145,7 +145,7 @@ class StatCounter(object):
 PercentileStats = namedtuple("PercentileStats", ["value", "g", "delta"])
 
 
-class ColumnStatHelper(object):
+class ColumnStatHelper:
     """
     This class is used to compute statistics on a column
 
@@ -446,7 +446,7 @@ class ColumnStatHelper(object):
         return self.count * self.m4 / (self.m2 * self.m2) - 3
 
 
-class RowStatHelper(object):
+class RowStatHelper:
     """
     Class use to maintain one ColumnStatHelper for each Column found when aggregating a list of Rows
     """
@@ -515,15 +515,15 @@ class RowStatHelper(object):
             try:
                 percentile = float(stat[:-1]) / 100
             except ValueError as e:
-                raise ValueError("Unable to parse {0} as a percentile".format(stat)) from e
+                raise ValueError(f"Unable to parse {stat} as a percentile") from e
             value = stats_counter.get_quantile(percentile)
         else:
-            raise ValueError("{0} is not a recognised statistic".format(stat))
+            raise ValueError(f"{stat} is not a recognised statistic")
         return RowStatHelper.format_stat(value)
 
     def get_col_quantile(self, col, quantile):
         if str(col) not in self.column_stat_helpers:
-            raise Exception("Unable to get quantile for {0}".format(quantile))
+            raise Exception(f"Unable to get quantile for {quantile}")
         quantile = self.column_stat_helpers[str(col)].get_quantile(quantile)
         return float(quantile) if quantile is not None else None
 
@@ -532,7 +532,7 @@ class RowStatHelper(object):
         return str(stat) if stat is not None else None
 
 
-class CovarianceCounter(object):
+class CovarianceCounter:
     def __init__(self, method):
         if method != "pearson":
             raise ValueError(

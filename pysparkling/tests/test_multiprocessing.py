@@ -15,17 +15,17 @@ import cloudpickle
 import pysparkling
 
 
-class Processor(object):
+class Processor:
     """This modifies lines but also keeps track whether it was executed."""
     def __init__(self):
         self.executed = False
 
     def indent_line(self, line):
         self.executed = True
-        return '--- {}'.format(line)
+        return f'--- {line}'
 
 
-class LazyTestInjection(object):
+class LazyTestInjection:
     def lazy_execution_test(self):
         r = self.sc.textFile(__file__)  # pylint: disable=no-member
 
@@ -229,7 +229,7 @@ def test_performance():
     })
     print('time spent where:')
     pprint.pprint({
-        n: {k: '{:.1%}'.format(t / v[1]['map_exec']) for k, t in v[1].items()}
+        n: {k: f'{t / v[1]["map_exec"]:.1%}' for k, t in v[1].items()}
         for n, v in test_results.items()
     })
 
