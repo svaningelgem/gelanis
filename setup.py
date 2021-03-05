@@ -45,6 +45,7 @@ setup(
             'isort',
             'tornado>=4.3',
             'parameterized>=0.7.4',
+            'ply',
         ],
         'scripts': [
             'ipyparallel',
