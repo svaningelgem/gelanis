@@ -24,8 +24,6 @@ import json as _json
 import os
 import re
 import sys
-from collections import ChainMap
-from typing import Union
 
 from .utils import ParseException, require_minimum_pandas_version
 
