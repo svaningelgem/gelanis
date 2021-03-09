@@ -26,7 +26,6 @@ setup(
         'streaming': ['tornado>=4.3'],
         'dev': [
             'antlr4-python3-runtime==4.7.1',
-            'parameterized',
         ],
         'sql': [
             'numpy',
