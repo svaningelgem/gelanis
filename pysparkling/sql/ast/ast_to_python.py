@@ -1,8 +1,10 @@
 import ast
 import logging
+from functools import partial
 
 from sqlparser import string_to_ast
 
+from ..utils import ParseException
 from ...sql import functions
 from ..column import Column, parse
 from ..expressions.expressions import expression_registry
@@ -15,7 +17,7 @@ from ..expressions.operators import (
 from ..types import DoubleType, parsed_string_to_type, StringType, StructField, StructType
 
 
-class SqlParsingError(Exception):
+class SqlParsingError(ParseException):
     pass
 
 
@@ -32,9 +34,14 @@ def check_children(expected, children):
         )
 
 
-def unwrap(*children):
+def unwrap(*children, has_quotes=False):
     check_children(1, children)
-    return convert_tree(children[0])
+    tmp = convert_tree(children[0])
+
+    if has_quotes:
+        return tmp[1:-1]  # Strip the quotes.
+
+    return tmp
 
 
 def never_found(*children):
@@ -44,6 +51,11 @@ def never_found(*children):
 
 def unsupported(*children):
     raise UnsupportedStatement
+
+
+def add_comment(*children):
+    # children[0] == 'COMMENT'
+    return {'comment': get_leaf_value(children[1])[1:-1]}  # [1:-1] to strip the quotes.
 
 
 def empty(*children):
@@ -67,6 +79,10 @@ def convert_tree(tree):
         converter = CONVERTERS[tree_type]
     except UnsupportedStatement:
         raise SqlParsingError("Unsupported statement {0}".format(tree_type)) from None
+
+    if tree.children is None:
+        raise SqlParsingError
+
     return converter(*tree.children)
 
 
@@ -125,6 +141,10 @@ def cast_context(*children):
 def detect_data_type(*children):
     if children[0].__class__.__name__ == 'ErrorNodeImpl':
         children = children[1:]
+
+    if any(child.__class__.__name__ == 'ErrorNodeImpl' for child in children):
+        raise SqlParsingError
+
     data_type = convert_tree(children[0])
     params = [convert_tree(c) for c in children[2:-1:2]]
     return parsed_string_to_type(data_type, params)
@@ -184,10 +204,16 @@ def convert_to_null(*children):
 def get_leaf_value(*children):
     check_children(1, children)
     value = children[0]
+
+    if value.__class__.__name__ == 'NonReservedContext':
+        return get_leaf_value(*value.children)
+
     if value.__class__.__name__ != "TerminalNodeImpl":
         raise SqlParsingError("Expecting TerminalNodeImpl, got {0}".format(type(value).__name__))
+
     if not hasattr(value, "symbol"):
         raise SqlParsingError("Got leaf value but without symbol")
+
     return value.symbol.text
 
 
@@ -206,7 +232,8 @@ def explicit_list(*children):
 def implicit_list(*children):
     return tuple(
         convert_tree(c)
-        for c in children[::2]
+        for c in children
+        if c.__class__.__name__ != 'TerminalNodeImpl'
     )
 
 
@@ -280,7 +307,7 @@ CONVERTERS = {
     'ColTypeListContext': implicit_list,
     'ColumnReferenceContext': convert_column,
     'CommentNamespaceContext': unsupported,
-    'CommentSpecContext': unsupported,
+    'CommentSpecContext': add_comment,
     'CommentTableContext': unsupported,
     'ComparisonContext': binary_operation,
     'ComparisonOperatorContext': get_leaf_value,
@@ -428,7 +455,7 @@ CONVERTERS = {
     'QuerySpecificationContext': unsupported,
     'QueryTermContext': never_found,
     'QueryTermDefaultContext': unwrap,
-    'QuotedIdentifierAlternativeContext': unwrap,
+    'QuotedIdentifierAlternativeContext': partial(unwrap, has_quotes=True),
     'QuotedIdentifierContext': get_leaf_value,
     'RealIdentContext': empty,
     'RecoverPartitionsContext': unsupported,
@@ -574,7 +601,11 @@ unary_operations = {
 
 
 def parse_sql(string, rule, debug=False):
-    tree = string_to_ast(string, rule, debug=debug)
+    try:
+        tree = string_to_ast(string, rule, debug=debug)
+    except TypeError as e:
+        raise SqlParsingError(str(e)) from e
+
     return convert_tree(tree)
 
 
