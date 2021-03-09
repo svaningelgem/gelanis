@@ -4,8 +4,8 @@ Most of these test cases come from pyspark.sql.types._parse_datatype_string()
 import pytest
 
 from pysparkling.sql.types import (
-    ArrayType, ByteType, DateType, DecimalType, DoubleType, IntegerType, LongType, MapType, ShortType, StringType,
-    StructField, StructType
+    ArrayType, ByteType, DateType, DecimalType, DoubleType, IntegerType, LongType, ShortType, StringType, StructField,
+    StructType
 )
 # DataType
 from pysparkling.sql.utils import ParseException
