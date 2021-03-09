@@ -23,6 +23,7 @@ import json as _json
 import os
 import re
 import sys
+from collections import ChainMap
 
 from .utils import ParseException, require_minimum_pandas_version
 
@@ -399,7 +400,7 @@ class StructField(DataType):
         self.name = name
         self.dataType = dataType
         self.nullable = nullable
-        self.metadata = metadata or {}
+        self.metadata = dict(metadata or {})
 
     def simpleString(self):
         return '%s:%s' % (self.name, self.dataType.simpleString())
@@ -468,7 +469,7 @@ class StructType(DataType):
             self.fields = []
             self.names = []
         else:
-            self.fields = fields
+            self.fields = list(fields)
             self.names = [f.name for f in fields]
             assert all(isinstance(f, StructField) for f in fields), \
                 "fields should be a list of StructField"
@@ -1833,10 +1834,13 @@ STRING_TO_TYPE = dict(
     date=DateType(),
     timestamp=TimestampType(),
     string=StringType(),
+    varchar=StringType(),
+    char=StringType(),
     binary=BinaryType(),
     decimal=DecimalType(),
     dec=DecimalType(),
-    numeric=DecimalType()
+    numeric=DecimalType(),
+    void=NullType(),
 )
 
 
@@ -1844,7 +1848,11 @@ def parsed_string_to_type(data_type, arguments):
     data_type = data_type.lower()
     if not arguments and data_type in STRING_TO_TYPE:
         return STRING_TO_TYPE[data_type]
-    if data_type == "decimal":
+
+    if data_type in ['varchar', 'char']:
+        return STRING_TO_TYPE[data_type]
+
+    if data_type in ["decimal", 'dec', 'numeric']:
         if len(arguments) == 2:
             precision, scale = arguments
         elif len(arguments) == 1:
@@ -1852,15 +1860,19 @@ def parsed_string_to_type(data_type, arguments):
         else:
             raise ParseException("Unrecognized decimal parameters: {0}".format(arguments))
         return DecimalType(precision=int(precision), scale=int(scale))
+
     if data_type == "array" and len(arguments) == 1:
         return ArrayType(arguments[0])
+
     if data_type == "map" and len(arguments) == 2:
         return MapType(arguments[0], arguments[1])
-    if data_type == "struct" and len(arguments) == 1:
+
+    if data_type == "struct":
         return StructType([
-            StructField(name, data_type)
-            for name, data_type in arguments[0]
+            StructField(name, data_type, metadata=ChainMap(*metadata))
+            for name, data_type, *metadata in (arguments[0] if arguments else [])
         ])
+
     raise ParseException(
         "Unable to parse data type {0}{1}".format(data_type, arguments if arguments else "")
     )
