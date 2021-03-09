@@ -1,10 +1,9 @@
 import ast
-import logging
 from functools import partial
+import logging
 
 from sqlparser import string_to_ast
 
-from ..utils import ParseException
 from ...sql import functions
 from ..column import Column, parse
 from ..expressions.expressions import expression_registry
@@ -15,6 +14,7 @@ from ..expressions.operators import (
     GreaterThanOrEqual, Invert, LessThan, LessThanOrEqual, Minus, Mod, Negate, Or, Time, UnaryPositive
 )
 from ..types import DoubleType, parsed_string_to_type, StringType, StructField, StructType
+from ..utils import ParseException
 
 
 class SqlParsingError(ParseException):

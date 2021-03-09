@@ -4,7 +4,7 @@ import io
 import pytest
 
 from pysparkling import Context
-from pysparkling.sql.ast.ast_to_python import SqlParsingError, parse_data_type
+from pysparkling.sql.ast.ast_to_python import parse_data_type, SqlParsingError
 from pysparkling.sql.session import SparkSession
 from pysparkling.sql.types import (
     ArrayType, BinaryType, BooleanType, ByteType, DateType, DecimalType, DoubleType, FloatType, IntegerType, LongType,
@@ -49,15 +49,15 @@ DATA_TYPE_SCENARIOS = {
         StructType([StructField('tinYint', ByteType())]),
     ),
     "MAp<int, ARRAY<double>>": MapType(IntegerType(), ArrayType(DoubleType())),
-    "MAP<int, struct<varchar:string>>":  MapType(
+    "MAP<int, struct<varchar:string>>": MapType(
         IntegerType(),
         StructType([StructField("varchar", StringType())])
     ),
-    "struct<intType: int, ts:timestamp>":  StructType([
+    "struct<intType: int, ts:timestamp>": StructType([
         StructField("intType", IntegerType()),
         StructField("ts", TimestampType())
     ]),
-    "Struct<int: int, timestamp:timestamp>":  StructType([
+    "Struct<int: int, timestamp:timestamp>": StructType([
         StructField("int", IntegerType()),
         StructField("timestamp", TimestampType())
     ]),
