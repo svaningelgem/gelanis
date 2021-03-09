@@ -85,11 +85,11 @@ DATA_TYPE_SCENARIOS = {
         # StructField("1_2.345<>:\"", VarcharType(20))])
         StructField("1_2.345<>:\"", StringType())
     ]),
-    # # todo: "interval": CalendarIntervalType(),
-    # # todo: "char": CharType(), + with param
-    # # todo: "character": CharType(), + with param
-    # # todo: "varchar": VarChar(), + with param
-    # # Empty struct
+    # todo: "interval": CalendarIntervalType(),
+    # todo: "char": CharType(), + with param
+    # todo: "character": CharType(), + with param
+    # todo: "varchar": VarChar(), + with param
+    # Empty struct
     "strUCt<>": StructType([]),
     # DataType parser accepts certain reserved keywords.
     "Struct<TABLE: string, DATE:boolean>": StructType([
