@@ -15,6 +15,7 @@
 # limitations under the License.
 #
 from array import array
+from collections import ChainMap
 import ctypes
 import datetime
 import decimal
@@ -25,7 +26,7 @@ import re
 import sys
 from typing import Union
 
-from .utils import require_minimum_pandas_version
+from .utils import ParseException, require_minimum_pandas_version
 
 
 class DataType:
@@ -398,7 +399,7 @@ class StructField(DataType):
         self.name = name
         self.dataType = dataType
         self.nullable = nullable
-        self.metadata = metadata or {}
+        self.metadata = dict(metadata or {})
 
     def simpleString(self):
         return '%s:%s' % (self.name, self.dataType.simpleString())
@@ -467,7 +468,7 @@ class StructType(DataType):
             self.fields = []
             self.names = []
         else:
-            self.fields = fields
+            self.fields = list(fields)
             self.names = [f.name for f in fields]
             assert all(isinstance(f, StructField) for f in fields), \
                 "fields should be a list of StructField"
@@ -691,8 +692,10 @@ class StructType(DataType):
         return create_row(self.names, values)
 
     @classmethod
-    def fromDDL(cls, s: str):
-        return _parse_datatype_string(s)
+    def fromDDL(cls, string):
+        # pylint: disable=import-outside-toplevel, cyclic-import
+        from .ast.ast_to_python import parse_schema
+        return parse_schema(string)
 
 
 class UserDefinedType(DataType):
@@ -1773,6 +1776,68 @@ def _check_series_convert_timestamps_tz_local(s, timezone):
     return _check_series_convert_timestamps_localize(s, timezone, None)
 
 
+# As defined with visitPrimitiveDataType in spark master sql/catalyst/src/main/scala/
+# org/apache/spark/sql/catalyst/parser/AstBuilder.scala
+STRING_TO_TYPE = dict(
+    boolean=BooleanType(),
+    tinyint=ByteType(),
+    byte=ByteType(),
+    smallint=ShortType(),
+    short=ShortType(),
+    int=IntegerType(),
+    integer=IntegerType(),
+    bigint=LongType(),
+    long=LongType(),
+    float=FloatType(),
+    real=FloatType(),
+    double=DoubleType(),
+    date=DateType(),
+    timestamp=TimestampType(),
+    string=StringType(),
+    varchar=StringType(),
+    char=StringType(),
+    binary=BinaryType(),
+    decimal=DecimalType(),
+    dec=DecimalType(),
+    numeric=DecimalType(),
+    void=NullType(),
+)
+
+
+def parsed_string_to_type(data_type, arguments):
+    data_type = data_type.lower()
+    if not arguments and data_type in STRING_TO_TYPE:
+        return STRING_TO_TYPE[data_type]
+
+    if data_type in ['varchar', 'char']:
+        return STRING_TO_TYPE[data_type]
+
+    if data_type in ["decimal", 'dec', 'numeric']:
+        if len(arguments) == 2:
+            precision, scale = arguments
+        elif len(arguments) == 1:
+            precision, scale = arguments[0], 0
+        else:
+            raise ParseException("Unrecognized decimal parameters: {0}".format(arguments))
+        return DecimalType(precision=int(precision), scale=int(scale))
+
+    if data_type == "array" and len(arguments) == 1:
+        return ArrayType(arguments[0])
+
+    if data_type == "map" and len(arguments) == 2:
+        return MapType(arguments[0], arguments[1])
+
+    if data_type == "struct":
+        return StructType([
+            StructField(name, data_type, metadata=ChainMap(*metadata))
+            for name, data_type, *metadata in (arguments[0] if arguments else [])
+        ])
+
+    raise ParseException(
+        "Unable to parse data type {0}{1}".format(data_type, arguments if arguments else "")
+    )
+
+
 # Internal type hierarchy:
 # Lower order types are converted to first order type when performing operation
 # across multiple types (e.g. datetime.date(2019,1,1) == "2019-01-01")
@@ -1812,51 +1877,3 @@ def python_to_spark_type(python_type):
     raise NotImplementedError(
         f"Pysparkling does not currently support type {python_type} for the requested operation"
     )
-
-
-def _parse_datatype_string(s: str) -> Union[DataType, StructType]:
-    """
-    Parses the given data type string to a :class:`DataType`. The data type string format equals
-    :class:`DataType.simpleString`, except that the top level struct type can omit
-    the ``struct<>`` and atomic types use ``typeName()`` as their format, e.g. use ``byte`` instead
-    of ``tinyint`` for :class:`ByteType`. We can also use ``int`` as a short name
-    for :class:`IntegerType`. Since Spark 2.3, this also supports a schema in a DDL-formatted
-    string and case-insensitive strings.
-
-    >>> _parse_datatype_string("int ")
-    IntegerType
-    >>> _parse_datatype_string("INT ")
-    IntegerType
-    >>> _parse_datatype_string("a: byte, b: decimal(  16 , 8   ) ")
-    StructType(List(StructField(a,ByteType,true),StructField(b,DecimalType(16,8),true)))
-    >>> _parse_datatype_string("a DOUBLE, b STRING")
-    StructType(List(StructField(a,DoubleType,true),StructField(b,StringType,true)))
-    >>> _parse_datatype_string("a: array< short>")
-    StructType(List(StructField(a,ArrayType(ShortType,true),true)))
-    >>> _parse_datatype_string(" map<string , string > ")
-    MapType(StringType,StringType,true)
-
-    >>> # Error cases
-    >>> _parse_datatype_string("blabla") # doctest: +IGNORE_EXCEPTION_DETAIL
-    Traceback (most recent call last):
-        ...
-    ParseException:...
-    >>> _parse_datatype_string("a: int,") # doctest: +IGNORE_EXCEPTION_DETAIL
-    Traceback (most recent call last):
-        ...
-    ParseException:...
-    >>> _parse_datatype_string("array<int") # doctest: +IGNORE_EXCEPTION_DETAIL
-    Traceback (most recent call last):
-        ...
-    ParseException:...
-    >>> _parse_datatype_string("map<int, boolean>>") # doctest: +IGNORE_EXCEPTION_DETAIL
-    Traceback (most recent call last):
-        ...
-    ParseException:...
-    """
-    # pylint: disable=import-outside-toplevel, cyclic-import
-    from .parsers.types_parser import parser
-    return parser.parse(s)
-
-
-string_to_type = _parse_datatype_string

@@ -88,3 +88,4 @@ target/
 parser.out
 parsetab.py
 .scannerwork/
+*.jar

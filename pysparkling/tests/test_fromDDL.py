@@ -4,8 +4,8 @@ Most of these test cases come from pyspark.sql.types._parse_datatype_string()
 import pytest
 
 from pysparkling.sql.types import (
-    ArrayType, ByteType, DateType, DecimalType, DoubleType, IntegerType, LongType, MapType, ShortType, StringType,
-    StructField, StructType
+    ArrayType, ByteType, DateType, DecimalType, DoubleType, IntegerType, LongType, ShortType, StringType, StructField,
+    StructType
 )
 # DataType
 from pysparkling.sql.utils import ParseException
@@ -25,14 +25,6 @@ def test_basic_entries():
         'StructField(some_date,DateType,true)'
         '))'
     )
-
-
-def test_just_returning_the_type():
-    schema = StructType.fromDDL('int')
-    assert schema == IntegerType()
-
-    schema = StructType.fromDDL('INT')
-    assert schema == IntegerType()
 
 
 def test_byte_decimal():
@@ -59,12 +51,6 @@ def test_array_short():
         StructField('a', ArrayType(ShortType()), True),
     ])
     assert str(schema) == 'StructType(List(StructField(a,ArrayType(ShortType,true),true)))'
-
-
-def test_map():
-    schema = StructType.fromDDL(" map<string , string > ")
-    assert schema == MapType(StringType(), StringType(), True)
-    assert str(schema) == 'MapType(StringType,StringType,true)'
 
 
 def test_array():
@@ -108,12 +94,7 @@ def test_wrong_type():
 
 def test_comma_at_end():
     with pytest.raises(ParseException):
-        StructType.fromDDL("a: int,")
-
-
-def test_unclosed_array():
-    with pytest.raises(ParseException):
-        StructType.fromDDL("array<int")
+        print(StructType.fromDDL("a: int,"))
 
 
 def test_too_much_closed_map():
