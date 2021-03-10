@@ -1,5 +1,9 @@
+import collections
 import datetime
+import functools
+import inspect
 import itertools
+import json
 import math
 from operator import itemgetter
 import random
@@ -9,6 +13,15 @@ from typing import List, Optional, Union
 
 import pytz
 from pytz import UnknownTimeZoneError
+
+from ._config import config
+from .sql.casts import get_time_formatter
+from .sql.internal_utils.joins import (
+    CROSS_JOIN, FULL_JOIN, INNER_JOIN, LEFT_ANTI_JOIN, LEFT_JOIN, LEFT_SEMI_JOIN, RIGHT_JOIN
+)
+from .sql.schema_utils import get_on_fields
+from .sql.types import create_row, Row, row_from_keyed_values
+from .sql.utils import IllegalArgumentException
 
 
 class Tokenizer:
@@ -450,3 +463,56 @@ def levenshtein_distance(str1, str2):
         levenshtein_distance(str1[1:], str2) + 1,
         levenshtein_distance(str1, str2[1:]) + 1
     )
+
+
+class NotSupportedByThisSparkVersion(Exception):
+    pass
+
+
+def _decorate_with(decorator):
+    def inner(obj):
+        if inspect.isclass(obj):
+            # Process it as a class, decorating all methods of the class
+            for name, method in inspect.getmembers(obj, inspect.isroutine):
+                setattr(obj, name, decorator(method))
+            return obj
+
+        # Otherwise, just assume it's a method here
+        return decorator(obj)
+
+    return inner
+
+
+def since(need_spark_version: str):
+    """
+    Decorator that tells pysparkling to only allow access to this method when the spark version is higher or equal to
+      the need_spark_version.
+    """
+    def decorator(func):
+        @functools.wraps(func)
+        def wrapper(*args, **kwargs):
+            if config.spark_version is not None and config.spark_version < need_spark_version:
+                raise NotSupportedByThisSparkVersion
+
+            return func(*args, **kwargs)
+        return wrapper
+
+    return _decorate_with(decorator)
+
+
+def until(gone_at_spark_version: str):
+    """
+    Decorator that tells pysparkling to only allow access to this method when the spark version is lower than the
+      gone_at_spark_version.
+    """
+    def decorator(func):
+        @functools.wraps(func)
+        def wrapper(*args, **kwargs):
+            if config.spark_version is not None and config.spark_version >= gone_at_spark_version:
+                raise NotSupportedByThisSparkVersion
+
+            return func(*args, **kwargs)
+
+        return wrapper
+
+    return _decorate_with(decorator)

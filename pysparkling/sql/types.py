@@ -15,14 +15,18 @@
 # limitations under the License.
 #
 from array import array
+from collections import ChainMap
 import ctypes
 import datetime
 import decimal
 import itertools
 import json as _json
+import os
 import re
 import sys
+from typing import Union
 
+from .utils import ParseException, require_minimum_pandas_version
 from ._row import create_row, Row
 
 __all__ = [
@@ -42,7 +46,11 @@ class DataType:
         return hash(str(self))
 
     def __eq__(self, other):
-        return isinstance(other, self.__class__) and self.__dict__ == other.__dict__
+        return (
+            isinstance(other, self.__class__)
+            and set(self.__dict__.keys()) == set(other.__dict__.keys())
+            and all(self.__dict__[k] == other.__dict__[k] for k in self.__dict__)
+        )
 
     def __ne__(self, other):
         return not self.__eq__(other)
@@ -179,8 +187,8 @@ class DecimalType(FractionalType):
     """
 
     def __init__(self, precision=10, scale=0):
-        self.precision = precision
-        self.scale = scale
+        self.precision = int(precision)
+        self.scale = int(scale)
         self.hasPrecisionInfo = True  # this is public API
 
     def simpleString(self):
@@ -369,12 +377,12 @@ class StructField(DataType):
         False
         """
         assert isinstance(dataType, DataType), \
-            "dataType %s should be an instance of %s" % (dataType, DataType)
+            "dataType %s should be an instance of %s (got %s)" % (dataType, DataType, type(self))
         assert isinstance(name, str), "field name %s should be string" % name
         self.name = name
         self.dataType = dataType
         self.nullable = nullable
-        self.metadata = metadata or {}
+        self.metadata = dict(metadata or {})
 
     def simpleString(self):
         return '%s:%s' % (self.name, self.dataType.simpleString())
@@ -443,7 +451,7 @@ class StructType(DataType):
             self.fields = []
             self.names = []
         else:
-            self.fields = fields
+            self.fields = list(fields)
             self.names = [f.name for f in fields]
             assert all(isinstance(f, StructField) for f in fields), \
                 "fields should be a list of StructField"
@@ -507,7 +515,7 @@ class StructType(DataType):
         """Return the number of fields."""
         return len(self.fields)
 
-    def __getitem__(self, key):
+    def __getitem__(self, key: Union[str, int, slice]):
         """Access fields by name or slice."""
         if isinstance(key, str):
             for field in self:
@@ -668,26 +676,9 @@ class StructType(DataType):
 
     @classmethod
     def fromDDL(cls, string):
-        def get_class(type_: str) -> DataType:
-            type_to_load = f'{type_.strip().title()}Type'
-
-            if type_to_load not in globals():
-                match = re.match(r'^\s*array\s*<(.*)>\s*$', type_, flags=re.IGNORECASE)
-                if match:
-                    return ArrayType(get_class(match.group(1)))
-
-                raise ValueError(f"Couldn't find '{type_to_load}'?")
-
-            return globals()[type_to_load]()
-
-        fields = StructType()
-
-        for description in string.split(','):
-            name, type_ = [x.strip() for x in description.split(':')]
-
-            fields.add(StructField(name.strip(), get_class(type_), True))
-
-        return fields
+        # pylint: disable=import-outside-toplevel, cyclic-import
+        from .ast.ast_to_python import parse_schema
+        return parse_schema(string)
 
 
 class UserDefinedType(DataType):
@@ -1407,3 +1398,106 @@ def _make_type_verifier(dataType, nullable=True, name=None):
             verify_value(obj)
 
     return verify
+
+
+# As defined with visitPrimitiveDataType in spark master sql/catalyst/src/main/scala/
+# org/apache/spark/sql/catalyst/parser/AstBuilder.scala
+STRING_TO_TYPE = dict(
+    boolean=BooleanType(),
+    tinyint=ByteType(),
+    byte=ByteType(),
+    smallint=ShortType(),
+    short=ShortType(),
+    int=IntegerType(),
+    integer=IntegerType(),
+    bigint=LongType(),
+    long=LongType(),
+    float=FloatType(),
+    real=FloatType(),
+    double=DoubleType(),
+    date=DateType(),
+    timestamp=TimestampType(),
+    string=StringType(),
+    varchar=StringType(),
+    char=StringType(),
+    binary=BinaryType(),
+    decimal=DecimalType(),
+    dec=DecimalType(),
+    numeric=DecimalType(),
+    void=NullType(),
+)
+
+
+def parsed_string_to_type(data_type, arguments):
+    data_type = data_type.lower()
+    if not arguments and data_type in STRING_TO_TYPE:
+        return STRING_TO_TYPE[data_type]
+
+    if data_type in ['varchar', 'char']:
+        return STRING_TO_TYPE[data_type]
+
+    if data_type in ["decimal", 'dec', 'numeric']:
+        if len(arguments) == 2:
+            precision, scale = arguments
+        elif len(arguments) == 1:
+            precision, scale = arguments[0], 0
+        else:
+            raise ParseException("Unrecognized decimal parameters: {0}".format(arguments))
+        return DecimalType(precision=int(precision), scale=int(scale))
+
+    if data_type == "array" and len(arguments) == 1:
+        return ArrayType(arguments[0])
+
+    if data_type == "map" and len(arguments) == 2:
+        return MapType(arguments[0], arguments[1])
+
+    if data_type == "struct":
+        return StructType([
+            StructField(name, data_type, metadata=ChainMap(*metadata))
+            for name, data_type, *metadata in (arguments[0] if arguments else [])
+        ])
+
+    raise ParseException(
+        "Unable to parse data type {0}{1}".format(data_type, arguments if arguments else "")
+    )
+
+
+# Internal type hierarchy:
+# Lower order types are converted to first order type when performing operation
+# across multiple types (e.g. datetime.date(2019,1,1) == "2019-01-01")
+INTERNAL_TYPE_ORDER = [
+    float,
+    int,
+    str,
+    bool,
+    datetime.datetime,
+    datetime.date,
+]
+
+PYTHON_TO_SPARK_TYPE = {
+    type(None): NullType(),
+    bool: BooleanType(),
+    int: IntegerType(),
+    float: DoubleType(),
+    str: StringType(),
+    bytearray: BinaryType,
+    bytes: BinaryType,
+    decimal.Decimal: DecimalType(),
+    datetime.date: DateType(),
+    datetime.datetime: TimestampType(),
+    datetime.time: TimestampType(),
+}
+
+
+def python_to_spark_type(python_type):
+    """
+    :type python_type: type
+    :rtype DataType
+    """
+    # pylint: disable=W0511
+    # todo: support Decimal
+    if python_type in PYTHON_TO_SPARK_TYPE:
+        return PYTHON_TO_SPARK_TYPE[python_type]
+    raise NotImplementedError(
+        f"Pysparkling does not currently support type {python_type} for the requested operation"
+    )

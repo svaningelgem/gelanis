@@ -8,6 +8,8 @@ from ...utils import parse_tz
 from .._casts import get_time_formatter
 from .._date_time import get_unix_timestamp_parser
 from ..types import DateType, FloatType, TimestampType
+from .expressions import Expression, UnaryExpression
+from .operators import Cast
 
 GMT_TIMEZONE = pytz.timezone("GMT")
 
@@ -24,7 +26,7 @@ class AddMonths(Expression):
         self.timedelta = datetime.timedelta(days=self.num_months)
 
     def eval(self, row, schema):
-        return self.start_date.cast(DateType()).eval(row, schema) + self.timedelta
+        return Cast(self.start_date, DateType()).eval(row, schema) + self.timedelta
 
     def args(self):
         return (
@@ -43,7 +45,7 @@ class DateAdd(Expression):
         self.timedelta = datetime.timedelta(days=self.num_days)
 
     def eval(self, row, schema):
-        return self.start_date.cast(DateType()).eval(row, schema) + self.timedelta
+        return Cast(self.start_date, DateType()).eval(row, schema) + self.timedelta
 
     def args(self):
         return (
@@ -62,7 +64,7 @@ class DateSub(Expression):
         self.timedelta = datetime.timedelta(days=self.num_days)
 
     def eval(self, row, schema):
-        return self.start_date.cast(DateType()).eval(row, schema) - self.timedelta
+        return Cast(self.start_date, DateType()).eval(row, schema) - self.timedelta
 
     def args(self):
         return (
@@ -75,21 +77,21 @@ class Year(UnaryExpression):
     pretty_name = "year"
 
     def eval(self, row, schema):
-        return self.column.cast(DateType()).eval(row, schema).year
+        return Cast(self.column, DateType()).eval(row, schema).year
 
 
 class Month(UnaryExpression):
     pretty_name = "month"
 
     def eval(self, row, schema):
-        return self.column.cast(DateType()).eval(row, schema).month
+        return Cast(self.column, DateType()).eval(row, schema).month
 
 
 class Quarter(UnaryExpression):
     pretty_name = "quarter"
 
     def eval(self, row, schema):
-        month = self.column.cast(DateType()).eval(row, schema).month
+        month = Cast(self.column, DateType()).eval(row, schema).month
         return 1 + int((month - 1) / 3)
 
 
@@ -97,35 +99,35 @@ class Hour(UnaryExpression):
     pretty_name = "hour"
 
     def eval(self, row, schema):
-        return self.column.cast(TimestampType()).eval(row, schema).hour
+        return Cast(self.column, TimestampType()).eval(row, schema).hour
 
 
 class Minute(UnaryExpression):
     pretty_name = "minute"
 
     def eval(self, row, schema):
-        return self.column.cast(TimestampType()).eval(row, schema).minute
+        return Cast(self.column, TimestampType()).eval(row, schema).minute
 
 
 class Second(UnaryExpression):
     pretty_name = "second"
 
     def eval(self, row, schema):
-        return self.column.cast(TimestampType()).eval(row, schema).second
+        return Cast(self.column, TimestampType()).eval(row, schema).second
 
 
 class DayOfMonth(UnaryExpression):
     pretty_name = "dayofmonth"
 
     def eval(self, row, schema):
-        return self.column.cast(DateType()).eval(row, schema).day
+        return Cast(self.column, DateType()).eval(row, schema).day
 
 
 class DayOfYear(UnaryExpression):
     pretty_name = "dayofyear"
 
     def eval(self, row, schema):
-        value = self.column.cast(DateType()).eval(row, schema)
+        value = Cast(self.column, DateType()).eval(row, schema)
         day_from_the_first = value - datetime.date(value.year, 1, 1)
         return 1 + day_from_the_first.days
 
@@ -134,7 +136,7 @@ class LastDay(UnaryExpression):
     pretty_name = "last_day"
 
     def eval(self, row, schema):
-        value = self.column.cast(DateType()).eval(row, schema)
+        value = Cast(self.column, DateType()).eval(row, schema)
         first_of_next_month = value + relativedelta(months=1, day=1)
         return first_of_next_month - datetime.timedelta(days=1)
 
@@ -143,14 +145,14 @@ class WeekOfYear(UnaryExpression):
     pretty_name = "weekofyear"
 
     def eval(self, row, schema):
-        return self.column.cast(DateType()).eval(row, schema).isocalendar()[1]
+        return Cast(self.column, DateType()).eval(row, schema).isocalendar()[1]
 
 
 class DayOfWeek(UnaryExpression):
     pretty_name = "dayofweek"
 
     def eval(self, row, schema):
-        date = self.column.cast(DateType()).eval(row, schema)
+        date = Cast(self.column, DateType()).eval(row, schema)
         return date.isoweekday() + 1 if date.isoweekday() != 7 else 1
 
 
@@ -163,7 +165,7 @@ class NextDay(Expression):
         self.day_of_week = day_of_week.get_literal_value()
 
     def eval(self, row, schema):
-        value = self.column.cast(DateType()).eval(row, schema)
+        value = Cast(self.column, DateType()).eval(row, schema)
 
         if self.day_of_week.upper() not in DAYS_OF_WEEK:
             return None
@@ -192,8 +194,8 @@ class MonthsBetween(Expression):
         self.round_off = round_off.get_literal_value()
 
     def eval(self, row, schema):
-        value_1 = self.column1.cast(TimestampType()).eval(row, schema)
-        value_2 = self.column2.cast(TimestampType()).eval(row, schema)
+        value_1 = Cast(self.column1, TimestampType()).eval(row, schema)
+        value_2 = Cast(self.column2, TimestampType()).eval(row, schema)
 
         if (not isinstance(value_1, datetime.datetime)
                 or not isinstance(value_2, datetime.datetime)):
@@ -238,8 +240,8 @@ class DateDiff(Expression):
         self.column2 = column2
 
     def eval(self, row, schema):
-        value_1 = self.column1.cast(DateType()).eval(row, schema)
-        value_2 = self.column2.cast(DateType()).eval(row, schema)
+        value_1 = Cast(self.column1, DateType()).eval(row, schema)
+        value_2 = Cast(self.column2, DateType()).eval(row, schema)
 
         if (not isinstance(value_1, datetime.date)
                 or not isinstance(value_2, datetime.date)):
@@ -264,7 +266,7 @@ class FromUnixTime(Expression):
         self.formatter = get_time_formatter(self.format)
 
     def eval(self, row, schema):
-        timestamp = self.column.cast(FloatType()).eval(row, schema)
+        timestamp = Cast(self.column, FloatType()).eval(row, schema)
         return self.formatter(datetime.datetime.fromtimestamp(timestamp))
 
     def args(self):
@@ -284,7 +286,7 @@ class DateFormat(Expression):
         self.formatter = get_time_formatter(self.format)
 
     def eval(self, row, schema):
-        timestamp = self.column.cast(TimestampType()).eval(row, schema)
+        timestamp = Cast(self.column, TimestampType()).eval(row, schema)
         return self.formatter(timestamp)
 
     def args(self):
@@ -407,7 +409,7 @@ class TruncDate(Expression):
         self.level = level.get_literal_value()
 
     def eval(self, row, schema):
-        value = self.column.cast(DateType()).eval(row, schema)
+        value = Cast(self.column, DateType()).eval(row, schema)
         if self.level in ('year', 'yyyy', 'yy'):
             return datetime.date(value.year, 1, 1)
         if self.level in ('month', 'mon', 'mm'):
@@ -430,7 +432,7 @@ class TruncTimestamp(Expression):
         self.column = column
 
     def eval(self, row, schema):
-        value = self.column.cast(TimestampType()).eval(row, schema)
+        value = Cast(self.column, TimestampType()).eval(row, schema)
 
         day_truncation = self.truncate_to_day(value)
         if day_truncation:
@@ -486,7 +488,7 @@ class FromUTCTimestamp(Expression):
         self.pytz = parse_tz(self.tz)
 
     def eval(self, row, schema):
-        value = self.column.cast(TimestampType()).eval(row, schema)
+        value = Cast(self.column, TimestampType()).eval(row, schema)
         if self.pytz is None:
             return value
         gmt_date = GMT_TIMEZONE.localize(value)
@@ -510,7 +512,7 @@ class ToUTCTimestamp(Expression):
         self.pytz = parse_tz(self.tz)
 
     def eval(self, row, schema):
-        value = self.column.cast(TimestampType()).eval(row, schema)
+        value = Cast(self.column, TimestampType()).eval(row, schema)
         if self.pytz is None:
             return value
         local_date = self.pytz.localize(value)

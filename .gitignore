@@ -85,4 +85,7 @@ target/
 /pysparkling/tests/20news-19997.tar.gz
 
 /scripts_private/
-/.scannerwork/
+parser.out
+parsetab.py
+.scannerwork/
+*.jar
