@@ -5,14 +5,14 @@ import logging
 from sqlparser import string_to_ast
 
 from ...sql import functions
-from ..column import Column, parse
-from ..expressions.expressions import expression_registry
-from ..expressions.literals import Literal
-from ..expressions.mappers import Concat, CreateStruct
-from ..expressions.operators import (
+from .._expressions.expressions import expression_registry
+from .._expressions.literals import Literal
+from .._expressions.mappers import Concat, CreateStruct
+from .._expressions.operators import (
     Add, Alias, And, BitwiseAnd, BitwiseNot, BitwiseOr, BitwiseXor, Cast, Divide, Equal, GreaterThan,
     GreaterThanOrEqual, Invert, LessThan, LessThanOrEqual, Minus, Mod, Negate, Or, Time, UnaryPositive
 )
+from ..column import Column, parse
 from ..types import DoubleType, parsed_string_to_type, StringType, StructField, StructType
 from ..utils import ParseException
 

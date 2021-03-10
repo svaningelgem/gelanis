@@ -13,7 +13,7 @@ class _TransparentImporter(MetaPathFinder, Loader):
     def find_spec(cls, name, path, target=None):
         if not (
             name == cls.__from__  # Root
-            or name[:len(cls.__from__)+1] == f'{cls.__from__}.'  # Submodule/package
+            or name[:len(cls.__from__) + 1] == f'{cls.__from__}.'  # Submodule/package
         ):
             return None  # Nope. We're not providing this..
 

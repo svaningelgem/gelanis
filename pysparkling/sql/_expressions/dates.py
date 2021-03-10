@@ -3,7 +3,6 @@ import datetime
 from dateutil.relativedelta import relativedelta
 import pytz
 
-from . import Expression, UnaryExpression
 from ...utils import parse_tz
 from .._casts import get_time_formatter
 from .._date_time import get_unix_timestamp_parser

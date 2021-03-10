@@ -21,13 +21,12 @@ import datetime
 import decimal
 import itertools
 import json as _json
-import os
 import re
 import sys
 from typing import Union
 
-from .utils import ParseException, require_minimum_pandas_version
 from ._row import create_row, Row
+from .utils import ParseException
 
 __all__ = [
     "DataType", "NullType", "StringType", "BinaryType", "BooleanType", "DateType",

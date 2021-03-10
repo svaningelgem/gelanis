@@ -8,7 +8,6 @@ from ._expressions.operators import (
     Or, Pow, StartsWith, Substring, Time
 )
 from ._expressions.orders import Asc, AscNullsFirst, AscNullsLast, Desc, DescNullsFirst, DescNullsLast, SortOrder
-from ._types import string_to_type
 from .types import DataType, StructField
 from .utils import AnalysisException, IllegalArgumentException
 
