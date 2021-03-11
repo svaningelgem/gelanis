@@ -1,28 +1,27 @@
 import math
 
-from .column import Column, ensure_column, parse
-from .expressions.aggregate.collectors import (
+from ._expressions.aggregate.collectors import (
     ApproxCountDistinct, CollectList, CollectSet, CountDistinct, First, Last, SumDistinct
 )
-from .expressions.aggregate.covariance_aggregations import Corr, CovarPop, CovarSamp
-from .expressions.aggregate.stat_aggregations import (
+from ._expressions.aggregate.covariance_aggregations import Corr, CovarPop, CovarSamp
+from ._expressions.aggregate.stat_aggregations import (
     Avg, Count, Kurtosis, Max, Min, Skewness, StddevPop, StddevSamp, Sum, VarPop, VarSamp
 )
-from .expressions.arrays import (
+from ._expressions.arrays import (
     ArrayColumn, ArrayContains, ArrayDistinct, ArrayExcept, ArrayIntersect, ArrayJoin, ArrayMax, ArrayMin,
     ArrayPosition, ArrayRemove, ArrayRepeat, ArraySort, ArraysOverlap, ArraysZip, ArrayUnion, ElementAt, Flatten,
     MapColumn, MapFromArraysColumn, Sequence, Size, Slice, SortArray
 )
-from .expressions.csvs import SchemaOfCsv
-from .expressions.dates import (
+from ._expressions.csvs import SchemaOfCsv
+from ._expressions.dates import (
     AddMonths, CurrentDate, CurrentTimestamp, DateAdd, DateDiff, DateFormat, DateSub, DayOfMonth, DayOfWeek, DayOfYear,
     FromUnixTime, FromUTCTimestamp, Hour, LastDay, Minute, Month, MonthsBetween, NextDay, ParseToDate,
     ParseToTimestamp, Quarter, Second, ToUTCTimestamp, TruncDate, TruncTimestamp, UnixTimestamp, WeekOfYear, Year
 )
-from .expressions.explodes import Explode, ExplodeOuter, PosExplode, PosExplodeOuter
-from .expressions.jsons import StructsToJson
-from .expressions.literals import Literal
-from .expressions.mappers import (
+from ._expressions.explodes import Explode, ExplodeOuter, PosExplode, PosExplodeOuter
+from ._expressions.jsons import StructsToJson
+from ._expressions.literals import Literal
+from ._expressions.mappers import (
     Abs, Acos, Ascii, Asin, Atan, Atan2, Base64, Bin, Bround, CaseWhen, Cbrt, Ceil, Coalesce, Concat, ConcatWs, Conv,
     Cos, Cosh, CreateStruct, Exp, ExpM1, Factorial, Floor, FormatNumber, Greatest, Grouping, GroupingID, Hex, Hypot,
     InputFileName, IsNaN, Least, Length, Log, Log1p, Log2, Log10, Lower, MapConcat, MapEntries, MapFromEntries,
@@ -30,12 +29,13 @@ from .expressions.mappers import (
     Round, ShiftLeft, ShiftRight, ShiftRightUnsigned, Signum, Sin, Sinh, SparkPartitionID, Sqrt, StringSplit,
     SubstringIndex, Tan, Tanh, ToDegrees, ToRadians, UnBase64, Unhex, Upper
 )
-from .expressions.operators import BitwiseNot, IsNull, Pow, Substring
-from .expressions.strings import (
+from ._expressions.operators import BitwiseNot, IsNull, Pow, Substring
+from ._expressions.strings import (
     InitCap, Levenshtein, SoundEx, StringInStr, StringLocate, StringLPad, StringLTrim, StringRepeat, StringRPad,
     StringRTrim, StringTranslate, StringTrim
 )
-from .expressions.userdefined import UserDefinedFunction
+from ._expressions.userdefined import UserDefinedFunction
+from .column import Column, ensure_column, parse
 from .types import DataType
 from .utils import AnalysisException
 
@@ -355,8 +355,8 @@ def struct(*exprs):
     """
     if len(exprs) == 1 and isinstance(exprs[0], list):
         exprs = exprs[0]
-    cols = [parse(e) for e in exprs]
-    return col(CreateStruct(cols))
+    columns = [parse(e) for e in exprs]
+    return col(CreateStruct(*columns))
 
 
 def array(*exprs):
@@ -364,7 +364,7 @@ def array(*exprs):
     :rtype: Column
     """
     columns = [parse(e) for e in exprs]
-    return col(ArrayColumn(columns))
+    return col(ArrayColumn(*columns))
 
 
 def map_from_arrays(col1, col2):
@@ -412,7 +412,7 @@ def countDistinct(*exprs):
     :rtype: Column
     """
     columns = [parse(e) for e in exprs]
-    return col(CountDistinct(columns=columns))
+    return col(CountDistinct(*columns))
 
 
 def collect_set(e):
@@ -532,8 +532,8 @@ def grouping_id(*exprs):
 
     :rtype: Column
     """
-    cols = [parse(e) for e in exprs]
-    return col(GroupingID(cols))
+    columns = [parse(e) for e in exprs]
+    return col(GroupingID(*columns))
 
 
 def kurtosis(e):
@@ -725,9 +725,9 @@ def create_map(*exprs):
     """
     if len(exprs) == 1 and isinstance(exprs[0], (list, set)):
         exprs = exprs[0]
-    cols = [parse(e) for e in exprs]
+    columns = [parse(e) for e in exprs]
 
-    return col(MapColumn(cols))
+    return col(MapColumn(*columns))
 
 
 def broadcast(df):
@@ -743,7 +743,7 @@ def coalesce(*exprs):
     :rtype: Column
     """
     columns = [parse(e) for e in exprs]
-    return col(Coalesce(columns))
+    return col(Coalesce(*columns))
 
 
 def input_file_name():
@@ -945,8 +945,8 @@ def greatest(*exprs):
     """
     :rtype: Column
     """
-    cols = [parse(e) for e in exprs]
-    return col(Greatest(cols))
+    columns = [parse(e) for e in exprs]
+    return col(Greatest(*columns))
 
 
 # noinspection PyShadowingBuiltins
@@ -978,8 +978,8 @@ def least(*exprs):
     """
     :rtype: Column
     """
-    cols = [parse(e) for e in exprs]
-    return col(Least(cols))
+    columns = [parse(e) for e in exprs]
+    return col(Least(*columns))
 
 
 def log(arg1, arg2=None):
@@ -1288,8 +1288,8 @@ def concat_ws(sep, *exprs):
     +--------------+
 
     """
-    cols = [parse(e) for e in exprs]
-    return col(ConcatWs(lit(sep), cols))
+    columns = [parse(e) for e in exprs]
+    return col(ConcatWs(lit(sep), *columns))
 
 
 def decode(value, charset):
@@ -2177,8 +2177,8 @@ def concat(*exprs):
     """
     :rtype: Column
     """
-    cols = [parse(e) for e in exprs]
-    return col(Concat(cols))
+    columns = [parse(e) for e in exprs]
+    return col(Concat(*columns))
 
 
 def array_position(column, value):
@@ -2432,7 +2432,8 @@ def arrays_zip(*exprs):
     """
     :rtype: Column
     """
-    return col(ArraysZip([parse(e) for e in exprs]))
+    columns = [parse(e) for e in exprs]
+    return col(ArraysZip(*columns))
 
 
 def map_concat(*exprs):
@@ -2453,8 +2454,8 @@ def map_concat(*exprs):
     [Row(map_concat(m1, m2)={1: 'a', 2: 'c', 3: 'd'})]
 
     """
-    cols = [parse(e) for e in exprs]
-    return col(MapConcat(cols))
+    columns = [parse(e) for e in exprs]
+    return col(MapConcat(*columns))
 
 
 def from_csv(e, schema, options=None):
@@ -2538,7 +2539,7 @@ def pandas_udf(f=None, returnType=None, functionType=None):
     raise NotImplementedError("Pysparkling does not support yet this function")
 
 
-def callUDF(udfName, *cols):
+def callUDF(udfName, *columns):
     raise NotImplementedError("Pysparkling does not support yet this function")
 
 

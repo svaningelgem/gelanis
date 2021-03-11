@@ -11,6 +11,7 @@ from . import accumulators
 from .__version__ import __version__ as PYSPARKLING_VERSION
 from .broadcast import Broadcast
 from .cache_manager import CacheManager
+from .conf import SparkConf
 from .exceptions import ContextIsLockedException
 from .fileio import File, TextFile
 from .partition import Partition
@@ -18,6 +19,8 @@ from .rdd import EmptyRDD, RDD
 from .task_context import TaskContext
 
 log = logging.getLogger(__name__)
+
+__all__ = ['SparkContext']
 
 
 def unit_fn(arg):
@@ -608,3 +611,28 @@ class VariableLengthChunker:
             length = struct.unpack(self.length_fmt, prefix)[0]
             package, data = data[:length], data[length:]
             yield package
+
+
+class SparkContext(Context):
+    """Accepts the same initialization parameters as pyspark, but redirects everything to Context."""
+
+    _spark_active_context = None
+
+    def __new__(cls, *args, **kwargs):
+        if cls._spark_active_context:
+            raise ValueError("Only one spark session can be active at one time.")
+
+        obj = super().__new__(cls)
+        cls._spark_active_context = obj
+        return obj
+
+    def __init__(self, master=None, appName=None, sparkHome=None, pyFiles=None,
+                 environment=None, batchSize=0, serializer=None, conf=None,
+                 gateway=None, jsc=None, profiler_cls=None):
+        super().__init__(serializer=serializer)
+
+        self.conf = conf or SparkConf()
+
+        self.master = master or self.conf.get('spark.master', None)
+        self.appName = appName or self.conf.get('spark.app.name', None)
+        self.sparkHome = sparkHome or self.conf.get('spark.home', None)

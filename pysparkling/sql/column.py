@@ -1,15 +1,17 @@
-from .expressions.expressions import Expression
-from .expressions.fields import find_position_in_schema
-from .expressions.literals import Literal
-from .expressions.mappers import CaseWhen, StarOperator
-from .expressions.operators import (
+from ._expressions.expressions import Expression
+from ._expressions.fields import find_position_in_schema
+from ._expressions.literals import Literal
+from ._expressions.mappers import CaseWhen, StarOperator
+from ._expressions.operators import (
     Add, Alias, And, BitwiseAnd, BitwiseOr, BitwiseXor, Cast, Contains, Divide, EndsWith, EqNullSafe, Equal, GetField,
     GreaterThan, GreaterThanOrEqual, Invert, IsIn, IsNotNull, IsNull, LessThan, LessThanOrEqual, Minus, Mod, Negate,
     Or, Pow, StartsWith, Substring, Time
 )
-from .expressions.orders import Asc, AscNullsFirst, AscNullsLast, Desc, DescNullsFirst, DescNullsLast, SortOrder
-from .types import DataType, string_to_type, StructField
+from ._expressions.orders import Asc, AscNullsFirst, AscNullsLast, Desc, DescNullsFirst, DescNullsLast, SortOrder
+from .types import DataType, StructField
 from .utils import AnalysisException, IllegalArgumentException
+
+__all__ = ['Column']
 
 
 class Column:
@@ -469,7 +471,7 @@ class Column:
             raise ValueError('Pysparkling does not support alias with metadata')
 
         if len(alias) == 1:
-            return Column(Alias(self, Literal(alias[0])))
+            return Column(Alias(self, alias[0]))
         # pylint: disable=W0511
         # todo: support it
         raise ValueError('Pysparkling does not support multiple aliases')
@@ -511,7 +513,9 @@ class Column:
         """
 
         if isinstance(dataType, str):
-            dataType = string_to_type(dataType)
+            # pylint: disable=import-outside-toplevel, cyclic-import
+            from pysparkling.sql.ast.ast_to_python import parse_data_type
+            dataType = parse_data_type(dataType)
         elif not isinstance(dataType, DataType):
             raise NotImplementedError(f"Unknown cast type: {dataType}")
 

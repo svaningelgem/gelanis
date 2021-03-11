@@ -1,16 +1,17 @@
 import warnings
 
 from ..storagelevel import StorageLevel
+from ._date_time import _check_series_convert_timestamps_local_tz
+from ._expressions.fields import FieldAsExpression
 from .column import Column, parse
-from .expressions.fields import FieldAsExpression
 from .group import GroupedData
 from .internal_utils.joins import CROSS_JOIN, JOIN_TYPES
 from .internals import CUBE_TYPE, InternalGroupedDataFrame, ROLLUP_TYPE
-from .types import (
-    _check_series_convert_timestamps_local_tz, ByteType, FloatType, IntegerType, IntegralType, ShortType,
-    TimestampType
-)
-from .utils import AnalysisException, IllegalArgumentException, require_minimum_pandas_version
+from .pandas.utils import require_minimum_pandas_version
+from .types import ByteType, FloatType, IntegerType, IntegralType, ShortType, TimestampType
+from .utils import AnalysisException, IllegalArgumentException
+
+__all__ = ['DataFrame', 'DataFrameNaFunctions', 'DataFrameStatFunctions']
 
 _NoValue = object()
 
@@ -1438,7 +1439,7 @@ class DataFrame:
         Approximate a list of quantiles (probabilities) for one or a list of columns (col)
         with an error related to relativeError.
 
-        More information in pysparkling.stat_counter.ColumnStatHelper
+        More information in pysparkling.sql._statcounter.ColumnStatHelper
 
         >>> from pysparkling import Context, Row
         >>> from pysparkling.sql.session import SparkSession
