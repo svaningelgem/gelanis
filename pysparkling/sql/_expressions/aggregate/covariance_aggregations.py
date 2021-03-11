@@ -1,4 +1,4 @@
-from ....stat_counter import CovarianceCounter
+from ..._statcounter import CovarianceCounter
 from .aggregations import Aggregation
 
 

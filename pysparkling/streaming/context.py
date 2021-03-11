@@ -25,6 +25,8 @@ try:
 except ImportError:
     speedups = None
 
+__all__ = ['StreamingContext']
+
 log = logging.getLogger(__name__)
 
 
@@ -205,7 +207,7 @@ class StreamingContext:
     def stop(self, stopSparkContext=True, stopGraceFully=False):
         """Stop processing streams.
 
-        :param stopSparkContext: stop the SparkContext (NOT IMPLEMENTED)
+        :param stopSparkContext: stop the Context (NOT IMPLEMENTED)
         :param stopGracefully: stop gracefully (NOT IMPLEMENTED)
         """
         while self._on_stop_cb:

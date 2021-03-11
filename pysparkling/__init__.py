@@ -9,8 +9,8 @@ from .broadcast import Broadcast
 from .cache_manager import CacheManager, TimedCacheManager
 from .context import Context
 from .rdd import RDD
-from .sql.types import Row
-from .stat_counter import StatCounter
+from .sql import Row
+from .statcounter import StatCounter
 from .storagelevel import StorageLevel
 
 __all__ = [

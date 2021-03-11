@@ -1,5 +1,6 @@
 from functools import reduce
 
+from ._utils import get_on_fields
 from .internal_utils.joins import (
     CROSS_JOIN, FULL_JOIN, INNER_JOIN, LEFT_ANTI_JOIN, LEFT_JOIN, LEFT_SEMI_JOIN, RIGHT_JOIN
 )
@@ -57,12 +58,6 @@ def merge_schemas(left_schema, right_schema, how, on=None):
         raise IllegalArgumentException(f"Invalid how argument in join: {how}")
 
     return StructType(fields=on_fields + other_left_fields + other_right_fields)
-
-
-def get_on_fields(left_schema, right_schema, on):
-    left_on_fields = [next(field for field in left_schema if field.name == c) for c in on]
-    right_on_fields = [next(field for field in right_schema if field.name == c) for c in on]
-    return left_on_fields, right_on_fields
 
 
 def get_schema_from_cols(cols, current_schema):

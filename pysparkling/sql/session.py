@@ -3,20 +3,121 @@ from threading import RLock
 from ..__version__ import __version__
 from ..context import Context
 from ..rdd import RDD
+from ._schema_utils import infer_schema_from_list
 from .conf import RuntimeConfig
 from .dataframe import DataFrame
 from .internals import DataFrameInternal
+from .pandas.utils import require_minimum_pandas_version
 from .readwriter import DataFrameReader
-from .schema_utils import infer_schema_from_list
 from .types import (
     _create_converter, _has_nulltype, _infer_schema, _make_type_verifier, _merge_type, DataType, StructType
 )
-from .utils import require_minimum_pandas_version
+
+__all__ = ['SparkSession']
+
+
+def _monkey_patch_RDD(sparkSession):
+    def toDF(self, schema=None, sampleRatio=None):
+        """
+        Converts current :class:`RDD` into a :class:`DataFrame`
+
+        This is a shorthand for ``spark.createDataFrame(rdd, schema, sampleRatio)``
+
+        Parameters
+        ----------
+        schema : :class:`pyspark.sql.types.DataType`, str or list, optional
+            a :class:`pyspark.sql.types.DataType` or a datatype string or a list of
+            column names, default is None.  The data type string format equals to
+            :class:`pyspark.sql.types.DataType.simpleString`, except that top level struct type can
+            omit the ``struct<>`` and atomic types use ``typeName()`` as their format, e.g. use
+            ``byte`` instead of ``tinyint`` for :class:`pyspark.sql.types.ByteType`.
+            We can also use ``int`` as a short name for :class:`pyspark.sql.types.IntegerType`.
+        sampleRatio : float, optional
+            the sample ratio of rows used for inferring
+
+        Returns
+        -------
+        :class:`DataFrame`
+
+        Examples
+        --------
+        >>> rdd.toDF().collect()
+        [Row(name='Alice', age=1)]
+        """
+        return sparkSession.createDataFrame(self, schema, sampleRatio)
+
+    RDD.toDF = toDF
 
 
 class SparkSession:
     class Builder:
         _lock = RLock()
+        _options = {}
+
+        def config(self, key=None, value=None, conf=None):
+            """Sets a config option. Options set using this method are automatically propagated to
+            both :class:`SparkConf` and :class:`SparkSession`'s own configuration.
+
+            .. versionadded:: 2.0.0
+
+            Parameters
+            ----------
+            key : str, optional
+                a key name string for configuration property
+            value : str, optional
+                a value for configuration property
+            conf : :class:`SparkConf`, optional
+                an instance of :class:`SparkConf`
+
+            Examples
+            --------
+            For an existing SparkConf, use `conf` parameter.
+
+            >>> from pysparkling.conf import SparkConf
+            >>> SparkSession.builder.config(conf=SparkConf())  # doctest: +ELLIPSIS
+            <pysparkling.sql.session...
+
+            For a (key, value) pair, you can omit parameter names.
+
+            >>> SparkSession.builder.config("spark.some.config.option", "some-value")  # doctest: +ELLIPSIS
+            <pysparkling.sql.session...
+
+            """
+            with self._lock:
+                if conf is None:
+                    self._options[key] = str(value)
+                else:
+                    for (k, v) in conf.getAll():
+                        self._options[k] = v
+                return self
+
+        def master(self, master):
+            """Sets the Spark master URL to connect to, such as "local" to run locally, "local[4]"
+            to run locally with 4 cores, or "spark://master:7077" to run on a Spark standalone
+            cluster.
+
+            .. versionadded:: 2.0.0
+
+            Parameters
+            ----------
+            master : str
+                a url for spark master
+            """
+            return self.config("spark.master", master)
+
+        def appName(self, name):
+            """Sets a name for the application, which will be shown in the Spark web UI.
+
+            If no application name is set, a randomly generated name will be used.
+
+            .. versionadded:: 2.0.0
+
+            Parameters
+            ----------
+            name : str
+                an application name
+            """
+            return self.config("spark.app.name", name)
 
         def getOrCreate(self):
             with self._lock:
@@ -39,10 +140,12 @@ class SparkSession:
         SparkSession._instantiatedSession = self
         SparkSession._activeSession = self
 
+        _monkey_patch_RDD(self)
+
     def newSession(self):
         """
         Returns a new SparkSession as new session, that has separate SQLConf,
-        registered temporary views and UDFs, but shared SparkContext and
+        registered temporary views and UDFs, but shared Context and
         table cache.
         """
         return self.__class__(self._sc)
@@ -66,7 +169,7 @@ class SparkSession:
 
         This is the interface through which the user can get and set all Spark and Hadoop
         configurations that are relevant to Spark SQL. When getting the value of a config,
-        this defaults to the value set in the underlying :class:`SparkContext`, if any.
+        this defaults to the value set in the underlying :class:`Context`, if any.
         """
         if not hasattr(self, "_conf"):
             # Compatibility with Pyspark behavior
