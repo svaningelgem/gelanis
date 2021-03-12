@@ -1,7 +1,8 @@
+# pylint: disable=logging-fstring-interpolation, too-many-return-statements, too-many-boolean-expressions
 import contextlib
-import inspect
 from functools import partial
 from importlib import import_module
+import inspect
 import io
 import logging
 from pathlib import Path
@@ -87,16 +88,31 @@ def compare_one_symbol(txt: str, pyspark_class, pysparkling_class, attr: inspect
 
 
 def compare_symbols(pyspark_symbol, pysparkling_symbol):
-    if type(pyspark_symbol) != type(pysparkling_symbol):
-        log.warning(f'    - [CHECK] {pyspark_symbol.__name__} is of type "{type(pyspark_symbol)}". Pysparklings one is "{type(pysparkling_symbol)}".')
+    if type(pyspark_symbol) is not type(pysparkling_symbol):
+        log.warning(f'    - [CHECK] {pyspark_symbol.__name__} is of type "{type(pyspark_symbol)}".'
+                    f' Pysparklings one is "{type(pysparkling_symbol)}".')
         return
 
     if hasattr(pyspark_symbol, '__module__'):
         pass
 
     if inspect.isclass(pyspark_symbol):
-        pyspark_attributes = {x.name: x for x in inspect.classify_class_attrs(pyspark_symbol) if not _is_private(x.name) and x.defining_class not in [object, BaseException]}
-        pysparkling_attributes = {x.name: x for x in inspect.classify_class_attrs(pysparkling_symbol) if not _is_private(x.name) and x.defining_class not in [object, BaseException]}
+        pyspark_attributes = {
+            x.name: x
+            for x in inspect.classify_class_attrs(pyspark_symbol)
+            if (
+                not _is_private(x.name)
+                and x.defining_class not in [object, BaseException]
+            )
+        }
+        pysparkling_attributes = {
+            x.name: x
+            for x in inspect.classify_class_attrs(pysparkling_symbol)
+            if (
+                not _is_private(x.name)
+                and x.defining_class not in [object, BaseException]
+            )
+        }
 
         compare = partial(compare_one_symbol, pyspark_class=pyspark_symbol, pysparkling_class=pysparkling_symbol)
 
@@ -107,23 +123,25 @@ def compare_symbols(pyspark_symbol, pysparkling_symbol):
             compare('DEL', attr=pysparkling_attributes[x])
 
         for x in sorted(set(pyspark_attributes) & set(pysparkling_attributes)):  # In both. Check signatures
+            a1 = getattr(pyspark_symbol, x, None)
+            a2 = getattr(pysparkling_symbol, x, None)
+
             if (
                 pyspark_attributes[x].kind != pysparkling_attributes[x].kind
                 or (
                     'method' in pyspark_attributes[x].kind
-                    and
-                    inspect.signature(getattr(pyspark_symbol, x)) != inspect.signature(getattr(pysparkling_symbol, x))
+                    and inspect.signature(a1) != inspect.signature(a2)
                 )
                 or (
                     pyspark_attributes[x].kind == 'data'
-                    and getattr(pyspark_symbol, x) != getattr(pysparkling_symbol, x)
+                    and a1 != a2
                 )
                 or (
                     pyspark_attributes[x].kind == 'property'
                     and (
-                        ((getattr(pyspark_symbol, x).fget is None) ^ (getattr(pysparkling_symbol, x).fget is None))
-                        or ((getattr(pyspark_symbol, x).fset is None) ^ (getattr(pysparkling_symbol, x).fset is None))
-                        or ((getattr(pyspark_symbol, x).fdel is None) ^ (getattr(pysparkling_symbol, x).fdel is None))
+                        ((a1.fget is None) ^ (a2.fget is None))
+                        or ((a1.fset is None) ^ (a2.fset is None))
+                        or ((a1.fdel is None) ^ (a2.fdel is None))
                     )
                 )
             ):
@@ -151,7 +169,9 @@ def _is_private(name: str, in_module=None) -> bool:
         return False
 
     # Ignore these names (module)
-    if name in ['__name__', '__doc__', '__package__', '__loader__', '__spec__', '__file__', '__cached__', '__builtins__',]:
+    if name in [
+        '__name__', '__doc__', '__package__', '__loader__', '__spec__', '__file__', '__cached__', '__builtins__',
+    ]:
         return True
 
     # Ignore these names (classes)
@@ -216,16 +236,15 @@ def compare_with_module(pysparkling_path, converted_to_module_name, pyspark_mod)
 
         if inspect.isclass(attr):
             return 'class'
-        elif inspect.isfunction(attr):
+        if inspect.isfunction(attr):
             return 'def'
-        elif isinstance(attr, property):
+        if isinstance(attr, property):
             return '@property'
-        elif isinstance(attr, classmethod):
+        if isinstance(attr, classmethod):
             return '@classmethod'
-        elif isinstance(attr, staticmethod):
+        if isinstance(attr, staticmethod):
             return '@staticmethod'
-        else:
-            return ''
+        return ''
 
     for x in sorted(pyspark_all - pysparkling_all):  # Missing pysparkling
         log.warning('    - [ADD] %s %s', _give_class_def_txt(pyspark_mod, x), x)
