@@ -106,8 +106,28 @@ def compare_symbols(pyspark_symbol, pysparkling_symbol):
         for x in sorted(set(pysparkling_attributes) - set(pyspark_attributes)):
             compare('DEL', attr=pysparkling_attributes[x])
 
-        for x in sorted(set(pyspark_attributes) & set(pysparkling_attributes)):
-            compare('CORRECT', attr=pyspark_attributes[x])
+        for x in sorted(set(pyspark_attributes) & set(pysparkling_attributes)):  # In both. Check signatures
+            if (
+                pyspark_attributes[x].kind != pysparkling_attributes[x].kind
+                or (
+                    'method' in pyspark_attributes[x].kind
+                    and
+                    inspect.signature(getattr(pyspark_symbol, x)) != inspect.signature(getattr(pysparkling_symbol, x))
+                )
+                or (
+                    pyspark_attributes[x].kind == 'data'
+                    and getattr(pyspark_symbol, x) != getattr(pysparkling_symbol, x)
+                )
+                or (
+                    pyspark_attributes[x].kind == 'property'
+                    and (
+                        ((getattr(pyspark_symbol, x).fget is None) ^ (getattr(pysparkling_symbol, x).fget is None))
+                        or ((getattr(pyspark_symbol, x).fset is None) ^ (getattr(pysparkling_symbol, x).fset is None))
+                        or ((getattr(pyspark_symbol, x).fdel is None) ^ (getattr(pysparkling_symbol, x).fdel is None))
+                    )
+                )
+            ):
+                compare('CORRECT', attr=pyspark_attributes[x])
 
         return
 
@@ -130,9 +150,6 @@ def _is_private(name: str, in_module=None) -> bool:
     if not name.startswith('_') and in_module is None:
         return False
 
-    if in_module is None:
-        return True
-
     # Ignore these names (module)
     if name in ['__name__', '__doc__', '__package__', '__loader__', '__spec__', '__file__', '__cached__', '__builtins__',]:
         return True
@@ -143,6 +160,9 @@ def _is_private(name: str, in_module=None) -> bool:
 
     if name.startswith('__') and name.endswith('__'):
         return False
+
+    if in_module is None:
+        return True
 
     attr = getattr(in_module, name)
     if hasattr(attr, '__module__'):
