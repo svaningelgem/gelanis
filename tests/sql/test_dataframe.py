@@ -1,6 +1,5 @@
 import pytest
 
-from pysparkling import Context, Row
 from pysparkling.sql import SparkSession
 from pysparkling.sql.functions import array, col, map_from_arrays
 
