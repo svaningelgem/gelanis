@@ -115,7 +115,7 @@ def test_df_show_vertical(spark, capsys):
     (
         spark
         .range(9, 11)
-        .select(c, c*2, c**2)
+        .select(c, c * 2, c ** 2)
         .show(vertical=True)
     )
 
