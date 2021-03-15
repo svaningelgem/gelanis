@@ -9,6 +9,7 @@ import random
 import time
 import timeit
 import unittest
+from platform import platform
 
 import cloudpickle
 
@@ -145,6 +146,7 @@ class ProcessPool(unittest.TestCase):  # cannot work here: LazyTestInjection):
         self.assertLess(time.time() - start, 0.5)
 
 
+@unittest.skipIf(platform() != 'Linux', "Disable due to timing sensitivity under non-Linux systems.")
 class ProcessPoolIdlePerformance(unittest.TestCase):
     """Idle performance tests.
 
