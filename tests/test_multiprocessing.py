@@ -4,12 +4,12 @@ import math
 import multiprocessing
 import os
 import pickle
+from platform import platform
 import pprint
 import random
 import time
 import timeit
 import unittest
-from platform import platform
 
 import cloudpickle
 
