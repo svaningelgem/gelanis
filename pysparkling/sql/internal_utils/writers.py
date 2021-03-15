@@ -12,7 +12,7 @@ from .._json import get_json_encoder
 from ..functions import col
 from ..internal_utils.options import Options
 from ..internal_utils.readwrite import to_option_stored_value
-from ..types import Row
+from ..types import DataType, Row
 from ..utils import AnalysisException
 
 
@@ -113,6 +113,9 @@ class WriteInFolder(Aggregation):
 
     def args(self):
         return (self.column,)
+
+    def data_type(self, schema):
+        return DataType()
 
 
 class DataWriter:

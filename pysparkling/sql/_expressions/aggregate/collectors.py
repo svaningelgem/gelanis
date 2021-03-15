@@ -1,3 +1,4 @@
+from ...types import LongType
 from .aggregations import Aggregation
 
 
@@ -143,6 +144,9 @@ class CountDistinct(Aggregation):
     def args(self):
         return f"DISTINCT {','.join(self.columns)}"
 
+    def data_type(self, schema):
+        return LongType()
+
 
 class ApproxCountDistinct(Aggregation):
     pretty_name = "approx_count_distinct"
@@ -163,6 +167,9 @@ class ApproxCountDistinct(Aggregation):
 
     def args(self):
         return (self.column,)
+
+    def data_type(self, schema):
+        return LongType()
 
 
 __all__ = [

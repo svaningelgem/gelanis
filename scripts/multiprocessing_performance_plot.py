@@ -1,7 +1,6 @@
 import matplotlib.pyplot as plt
 import numpy as np
-
-import pysparkling.tests.test_multiprocessing as test_mp
+import tests.test_multiprocessing as test_mp
 
 
 def plot(has_hyperthreading=True):

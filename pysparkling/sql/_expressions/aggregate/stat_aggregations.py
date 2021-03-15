@@ -1,5 +1,6 @@
 from ..._statcounter import ColumnStatHelper
 from ...column import Column
+from ...types import LongType
 from ..literals import Literal
 from ..mappers import StarOperator
 from .aggregations import Aggregation
@@ -22,6 +23,9 @@ class SimpleStatAggregation(Aggregation):
 
     def args(self):
         return (self.column,)
+
+    def data_type(self, schema):
+        return LongType()
 
 
 class Count(SimpleStatAggregation):

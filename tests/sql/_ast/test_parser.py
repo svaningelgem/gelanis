@@ -1,6 +1,6 @@
 from unittest import TestCase
 
-from pysparkling.sql.ast.ast_to_python import parse_sql, SqlParsingError
+from pysparkling.sql._ast.ast_to_python import parse_sql, SqlParsingError
 
 
 class TestParser(TestCase):

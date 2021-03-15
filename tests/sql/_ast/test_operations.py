@@ -3,7 +3,7 @@ import logging
 import pytest
 
 from pysparkling import Row
-from pysparkling.sql.ast.ast_to_python import parse_expression
+from pysparkling.sql._ast.ast_to_python import parse_expression
 from pysparkling.sql.types import StructType
 
 ROW = Row()

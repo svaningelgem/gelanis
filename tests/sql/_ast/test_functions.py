@@ -1,7 +1,7 @@
 import pytest
 
 from pysparkling import Row
-from pysparkling.sql.ast.ast_to_python import parse_expression
+from pysparkling.sql._ast.ast_to_python import parse_expression
 from pysparkling.sql.types import IntegerType, StructField, StructType
 
 ROW = Row(a=1, b=2, c=3)

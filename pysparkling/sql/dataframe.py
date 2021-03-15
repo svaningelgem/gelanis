@@ -143,44 +143,6 @@ class DataFrame:
         |  5|  Bob|
         |  2|Alice|
         +---+-----+
-        >>> from pysparkling.sql.functions import map_from_arrays, array, col
-        >>> df = spark.range(3)
-        >>> df.select(array(df.id, df.id * 2)).show()
-        +-------------------+
-        |array(id, (id * 2))|
-        +-------------------+
-        |             [0, 0]|
-        |             [1, 2]|
-        |             [2, 4]|
-        +-------------------+
-        >>> df.select(map_from_arrays(array(df.id), array(df.id))).show()
-        +-------------------------------------+
-        |map_from_arrays(array(id), array(id))|
-        +-------------------------------------+
-        |                             [0 -> 0]|
-        |                             [1 -> 1]|
-        |                             [2 -> 2]|
-        +-------------------------------------+
-        >>> df.select(map_from_arrays(array(df.id, df.id * 2), array(df.id, df.id * 2))).show()
-        +---------------------------------------------------------+
-        |map_from_arrays(array(id, (id * 2)), array(id, (id * 2)))|
-        +---------------------------------------------------------+
-        |                                                 [0 -> 0]|
-        |                                         [1 -> 1, 2 -> 2]|
-        |                                         [2 -> 2, 4 -> 4]|
-        +---------------------------------------------------------+
-        >>> c = col("id")
-        >>> (spark.range(9, 11)
-        ...       .select(c, c*2, c**2)
-        ...       .show(vertical=True))  # doctest: +NORMALIZE_WHITESPACE
-        -RECORD 0-------------
-         id           | 9
-         (id * 2)     | 18
-         POWER(id, 2) | 81.0
-        -RECORD 1-------------
-         id           | 10
-         (id * 2)     | 20
-         POWER(id, 2) | 100.0
         """
         if truncate is True:
             print(self._jdf.showString(n, 20, vertical))
