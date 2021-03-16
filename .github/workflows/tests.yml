@@ -56,4 +56,5 @@ jobs:
       run: python -m pycodestyle src tests scripts
 
     - name: Test All
+      if: matrix.os == 'ubuntu-latest'  # because of timing sensitivity in stream tests
       run: pytest -vv
