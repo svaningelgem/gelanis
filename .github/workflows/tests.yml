@@ -33,7 +33,7 @@ jobs:
       run: |
         python -m pip freeze
         python --version
-        python -c "import gelanis; print(gelanis.__version__)"
+        python -c "from gelanis.__version__ import __version__; print(__version__)"
 
     - name: Check if import order is fine
       run: |
@@ -46,14 +46,14 @@ jobs:
     - name: Lint
       if: matrix.python == '3.9'
       # https://github.com/PyCQA/pylint/issues/3882
-      run: pylint gelanis scripts tests --disable=fixme,unsubscriptable-object
+      run: pylint src scripts tests --disable=fixme,unsubscriptable-object
 
     - name: Lint
       if: matrix.python != '3.9'
-      run: pylint gelanis scripts tests --disable=fixme
+      run: pylint src scripts tests --disable=fixme
 
     - name: pycodestyle
-      run: python -m pycodestyle gelanis tests scripts
+      run: python -m pycodestyle src tests scripts
 
     - name: Test All
       run: pytest -vv
