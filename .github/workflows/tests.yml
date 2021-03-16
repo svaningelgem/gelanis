@@ -6,8 +6,8 @@ jobs:
   build:
     runs-on: ${{ matrix.os }}
 
-    env:
-      PYTHONPATH: src
+#    env:
+#      PYTHONPATH: src
 
     strategy:
       matrix:
