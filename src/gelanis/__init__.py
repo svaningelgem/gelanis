@@ -1,8 +1,12 @@
 """gelanis module"""
 # flake8: noqa
 
+from ._version import get_versions
+
+__version__ = get_versions()['version']
+del get_versions
+
 from . import exceptions, fileio, streaming
-from .__version__ import __version__
 from ._config import config
 from .accumulators import Accumulator, AccumulatorParam
 from .broadcast import Broadcast

@@ -16,8 +16,6 @@ import re
 import subprocess
 import sys
 
-# pylint: skip-file
-
 
 def get_keywords():
     """Get the keywords needed to look up the version information."""
@@ -45,7 +43,7 @@ def get_config():
     cfg.style = "pep440"
     cfg.tag_prefix = "v"
     cfg.parentdir_prefix = "None"
-    cfg.versionfile_source = "gelanis/_version.py"
+    cfg.versionfile_source = "src/gelanis/_version.py"
     cfg.verbose = False
     return cfg
 
