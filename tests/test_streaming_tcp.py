@@ -6,7 +6,7 @@ import tornado.gen
 import tornado.tcpclient
 import tornado.testing
 
-import pysparkling
+import gelanis
 
 
 class TCPTextTest(tornado.testing.AsyncTestCase):
@@ -20,8 +20,8 @@ class TCPTextTest(tornado.testing.AsyncTestCase):
         client.close()
 
     def test_connect(self):
-        sc = pysparkling.Context()
-        ssc = pysparkling.streaming.StreamingContext(sc, 0.1)
+        sc = gelanis.Context()
+        ssc = gelanis.streaming.StreamingContext(sc, 0.1)
 
         counter = Counter()
         (
@@ -47,8 +47,8 @@ class TCPBinaryFixedLengthTest(tornado.testing.AsyncTestCase):
         client.close()
 
     def test_main(self):
-        sc = pysparkling.Context()
-        ssc = pysparkling.streaming.StreamingContext(sc, 0.1)
+        sc = gelanis.Context()
+        ssc = gelanis.streaming.StreamingContext(sc, 0.1)
 
         counter = Counter()
         (
@@ -72,8 +72,8 @@ class TCPBinaryUIntLengthTest(tornado.testing.AsyncTestCase):
         client.close()
 
     def test_main(self):
-        sc = pysparkling.Context()
-        ssc = pysparkling.streaming.StreamingContext(sc, 0.1)
+        sc = gelanis.Context()
+        ssc = gelanis.streaming.StreamingContext(sc, 0.1)
 
         counter = Counter()
         (

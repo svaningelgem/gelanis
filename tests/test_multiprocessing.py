@@ -13,7 +13,7 @@ import unittest
 
 import cloudpickle
 
-import pysparkling
+import gelanis
 
 
 class Processor:
@@ -44,9 +44,9 @@ class LazyTestInjection:
 class Multiprocessing(unittest.TestCase):
     def setUp(self):
         self.pool = multiprocessing.Pool(4)
-        self.sc = pysparkling.Context(pool=self.pool,
-                                      serializer=cloudpickle.dumps,
-                                      deserializer=pickle.loads)
+        self.sc = gelanis.Context(pool=self.pool,
+                                  serializer=cloudpickle.dumps,
+                                  deserializer=pickle.loads)
 
     def test_basic(self):
         my_rdd = self.sc.parallelize([1, 3, 4])
@@ -68,7 +68,7 @@ def square_op(x):
 class MultiprocessingWithoutCloudpickle(unittest.TestCase):
     def setUp(self):
         self.pool = multiprocessing.Pool(4)
-        self.sc = pysparkling.Context(pool=self.pool)
+        self.sc = gelanis.Context(pool=self.pool)
 
     def test_basic(self):
         my_rdd = self.sc.parallelize([1, 3, 4])
@@ -83,13 +83,13 @@ class NotParallel(unittest.TestCase, LazyTestInjection):
     """Test cases in the spirit of the parallel test cases for reference."""
 
     def setUp(self):
-        self.sc = pysparkling.Context()
+        self.sc = gelanis.Context()
 
 
 class ThreadPool(unittest.TestCase, LazyTestInjection):
     def setUp(self):
         self.pool = futures.ThreadPoolExecutor(4)
-        self.sc = pysparkling.Context(pool=self.pool)
+        self.sc = gelanis.Context(pool=self.pool)
 
     def tearDown(self):
         self.pool.shutdown()
@@ -102,9 +102,9 @@ class ThreadPool(unittest.TestCase, LazyTestInjection):
 class ProcessPool(unittest.TestCase):  # cannot work here: LazyTestInjection):
     def setUp(self):
         self.pool = futures.ProcessPoolExecutor(4)
-        self.sc = pysparkling.Context(pool=self.pool,
-                                      serializer=cloudpickle.dumps,
-                                      deserializer=pickle.loads)
+        self.sc = gelanis.Context(pool=self.pool,
+                                  serializer=cloudpickle.dumps,
+                                  deserializer=pickle.loads)
 
     def tearDown(self):
         self.pool.shutdown()
@@ -154,9 +154,9 @@ class ProcessPoolIdlePerformance(unittest.TestCase):
     """
     @staticmethod
     def _sub_procedure(pool, n):
-        sc = pysparkling.Context(pool=pool,
-                                 serializer=cloudpickle.dumps,
-                                 deserializer=pickle.loads)
+        sc = gelanis.Context(pool=pool,
+                             serializer=cloudpickle.dumps,
+                             deserializer=pickle.loads)
         rdd = sc.parallelize(range(n), 10)
         rdd.map(lambda _: time.sleep(0.01)).collect()
 
@@ -201,13 +201,13 @@ def test_performance():
 
     def create_context(n_processes=0):
         if not n_processes:
-            return pysparkling.Context()
+            return gelanis.Context()
 
         pool = futures.ProcessPoolExecutor(n_processes)
-        return pysparkling.Context(pool=pool,
-                                   serializer=cloudpickle.dumps,
-                                   # serializer=pickle.dumps,
-                                   deserializer=pickle.loads)
+        return gelanis.Context(pool=pool,
+                               serializer=cloudpickle.dumps,
+                               # serializer=pickle.dumps,
+                               deserializer=pickle.loads)
 
     def test(n_processes):
         sc = create_context(n_processes)

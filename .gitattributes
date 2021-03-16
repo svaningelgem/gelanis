@@ -1,1 +1,1 @@
-pysparkling/_version.py export-subst
+src/gelanis/_version.py export-subst

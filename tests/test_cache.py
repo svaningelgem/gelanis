@@ -1,7 +1,7 @@
 import logging
 import time
 
-import pysparkling
+import gelanis
 
 
 class Manip:
@@ -17,7 +17,7 @@ class Manip:
 def test_cache_empty_partition():
     m = Manip()
 
-    c = pysparkling.Context()
+    c = gelanis.Context()
     rdd = c.parallelize(range(10), 2)
     rdd = rdd.map(m.trivial_manip_with_debug)
     rdd = rdd.filter(lambda e: e > 6).cache()
@@ -32,10 +32,10 @@ def test_timed_cache():
     m = Manip()
 
     # create a timed cache manager
-    cm = pysparkling.TimedCacheManager(timeout=1.0)
+    cm = gelanis.TimedCacheManager(timeout=1.0)
 
     # create a cache entry
-    c = pysparkling.Context(cache_manager=cm)
+    c = gelanis.Context(cache_manager=cm)
     rdd = c.parallelize(range(10), 2)
     rdd = rdd.map(m.trivial_manip_with_debug).cache()
     print(rdd.collect())

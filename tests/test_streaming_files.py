@@ -1,13 +1,13 @@
 import tornado.testing
 
-import pysparkling
+import gelanis
 
 
 class TextFile(tornado.testing.AsyncTestCase):
 
     def test_connect(self):
-        sc = pysparkling.Context()
-        ssc = pysparkling.streaming.StreamingContext(sc, 0.1)
+        sc = gelanis.Context()
+        ssc = gelanis.streaming.StreamingContext(sc, 0.1)
 
         result = []
         (
@@ -21,8 +21,8 @@ class TextFile(tornado.testing.AsyncTestCase):
         self.assertEqual(sum(result), 44)
 
     def test_save(self):
-        sc = pysparkling.Context()
-        ssc = pysparkling.streaming.StreamingContext(sc, 0.1)
+        sc = gelanis.Context()
+        ssc = gelanis.streaming.StreamingContext(sc, 0.1)
 
         (
             ssc.textFileStream('LICENS*')
@@ -31,8 +31,8 @@ class TextFile(tornado.testing.AsyncTestCase):
         )
 
     def test_save_gz(self):
-        sc = pysparkling.Context()
-        ssc = pysparkling.streaming.StreamingContext(sc, 0.1)
+        sc = gelanis.Context()
+        ssc = gelanis.streaming.StreamingContext(sc, 0.1)
 
         (
             ssc.textFileStream('LICENS*')
@@ -44,8 +44,8 @@ class TextFile(tornado.testing.AsyncTestCase):
 class BinaryFile(tornado.testing.AsyncTestCase):
 
     def test_read_file(self):
-        sc = pysparkling.Context()
-        ssc = pysparkling.streaming.StreamingContext(sc, 0.1)
+        sc = gelanis.Context()
+        ssc = gelanis.streaming.StreamingContext(sc, 0.1)
 
         result = []
         (
@@ -59,8 +59,8 @@ class BinaryFile(tornado.testing.AsyncTestCase):
         self.assertEqual(sum(result), 1)
 
     def test_read_chunks(self):
-        sc = pysparkling.Context()
-        ssc = pysparkling.streaming.StreamingContext(sc, 0.1)
+        sc = gelanis.Context()
+        ssc = gelanis.streaming.StreamingContext(sc, 0.1)
 
         result = []
         (

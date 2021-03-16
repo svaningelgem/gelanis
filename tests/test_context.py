@@ -1,19 +1,19 @@
 import logging
 import unittest
 
-import pysparkling
+import gelanis
 
 
 class Context(unittest.TestCase):
     def test_broadcast(self):
-        b = pysparkling.Context().broadcast([1, 2, 3])
+        b = gelanis.Context().broadcast([1, 2, 3])
         self.assertEqual(b.value[0], 1)
 
     def test_lock1(self):
         """Should not be able to create a new RDD inside a map operation."""
-        sc = pysparkling.Context()
+        sc = gelanis.Context()
         self.assertRaises(
-            pysparkling.exceptions.ContextIsLockedException,
+            gelanis.exceptions.ContextIsLockedException,
             lambda: (sc
                      .parallelize(range(5))
                      .map(lambda _: sc.parallelize([1]))
@@ -22,27 +22,27 @@ class Context(unittest.TestCase):
 
     def test_lock2(self):
         """Should not be able to create RDDs containing RDDs."""
-        sc = pysparkling.Context()
+        sc = gelanis.Context()
 
         def parallelize_in_parallelize():
             o = sc.parallelize(sc.parallelize(range(x)) for x in range(5))
             print(o.map(lambda x: x.collect()).collect())
 
         self.assertRaises(
-            pysparkling.exceptions.ContextIsLockedException,
+            gelanis.exceptions.ContextIsLockedException,
             parallelize_in_parallelize
         )
 
     def test_parallelize_single_element(self):
-        my_rdd = pysparkling.Context().parallelize([7], 100)
+        my_rdd = gelanis.Context().parallelize([7], 100)
         self.assertEqual(my_rdd.collect(), [7])
 
     def test_parallelize_matched_elements(self):
-        my_rdd = pysparkling.Context().parallelize([1, 2, 3, 4, 5], 5)
+        my_rdd = gelanis.Context().parallelize([1, 2, 3, 4, 5], 5)
         self.assertEqual(my_rdd.collect(), [1, 2, 3, 4, 5])
 
     def test_parallelize_empty_partitions_at_end(self):
-        my_rdd = pysparkling.Context().parallelize(range(3529), 500)
+        my_rdd = gelanis.Context().parallelize(range(3529), 500)
         print(my_rdd.getNumPartitions())
         my_rdd.foreachPartition(lambda p: print(sum(1 for _ in p)))
         self.assertEqual(my_rdd.getNumPartitions(), 500)
@@ -61,12 +61,12 @@ class Context(unittest.TestCase):
                 return value
 
         data = list(range(6))
-        rdd = pysparkling.Context().parallelize(data, 3)
+        rdd = gelanis.Context().parallelize(data, 3)
         result = rdd.mapPartitions(EverySecondCallFails()).collect()
         self.assertEqual(result, data)
 
     def test_union(self):
-        sc = pysparkling.Context()
+        sc = gelanis.Context()
         rdd1 = sc.parallelize(['Hello'])
         rdd2 = sc.parallelize(['World'])
         union = sc.union([rdd1, rdd2]).collect()
@@ -74,7 +74,7 @@ class Context(unittest.TestCase):
         self.assertEqual(union, ['Hello', 'World'])
 
     def test_version(self):
-        self.assertIsInstance(pysparkling.Context().version, str)
+        self.assertIsInstance(gelanis.Context().version, str)
 
 
 if __name__ == '__main__':

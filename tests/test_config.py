@@ -2,7 +2,7 @@ from collections import namedtuple
 
 import pytest
 
-from pysparkling._config import config, InvalidVersionFound, Version
+from gelanis._config import config, InvalidVersionFound, Version
 
 ConstructorTest = namedtuple('ConstructorTest', 'pass_in major minor patch')
 ComparisonTest = namedtuple('ComparisonTest', 'v1 operation v2 result')

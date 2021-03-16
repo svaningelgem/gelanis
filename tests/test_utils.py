@@ -1,7 +1,7 @@
 import pytest
 
-import pysparkling
-from pysparkling.utils import NotSupportedByThisSparkVersion, since, until
+import gelanis
+from gelanis.utils import NotSupportedByThisSparkVersion, since, until
 
 
 @since('2.3.2')
@@ -43,7 +43,7 @@ class SomeNewFeatureUntil:
 
 
 def test_happy_flow():
-    pysparkling.config.spark_version = '2.0'
+    gelanis.config.spark_version = '2.0'
     assert until_24() == 'ok'
 
 
@@ -65,7 +65,7 @@ def test_happy_flow():
     ('2.4', since_23_until_24, True),
 ])
 def test_since(spark_version_to_set, method, should_raise):
-    pysparkling.config.spark_version = spark_version_to_set
+    gelanis.config.spark_version = spark_version_to_set
     if should_raise:
         with pytest.raises(NotSupportedByThisSparkVersion):
             method()
@@ -85,7 +85,7 @@ def test_since(spark_version_to_set, method, should_raise):
     ('2.4.1', SomeNewFeatureUntil().a, True),
 ])
 def test_until(spark_version_to_set, method, should_raise):
-    pysparkling.config.spark_version = spark_version_to_set
+    gelanis.config.spark_version = spark_version_to_set
     if should_raise:
         with pytest.raises(NotSupportedByThisSparkVersion):
             method()

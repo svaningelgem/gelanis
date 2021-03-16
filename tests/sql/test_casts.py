@@ -4,12 +4,12 @@ from unittest import TestCase
 
 import pytz
 
-from pysparkling.sql._casts import (
+from gelanis.sql._casts import (
     cast_from_none, cast_to_array, cast_to_binary, cast_to_boolean, cast_to_byte, cast_to_date, cast_to_decimal,
     cast_to_float, cast_to_int, cast_to_long, cast_to_map, cast_to_short, cast_to_string, cast_to_struct,
     cast_to_timestamp, FloatType, identity
 )
-from pysparkling.sql.types import (
+from gelanis.sql.types import (
     ArrayType, BooleanType, ByteType, DataType, DateType, DecimalType, DoubleType, IntegerType, LongType, MapType,
     NullType, Row, StringType, StructField, StructType, TimestampType
 )
@@ -122,7 +122,7 @@ class CastTests(TestCase):
 
     def test_cast_random_string_to_boolean(self):
         self.assertEqual(
-            cast_to_boolean("pysparkling", StringType(), options=BASE_OPTIONS),
+            cast_to_boolean("gelanis", StringType(), options=BASE_OPTIONS),
             None
         )
 
@@ -242,10 +242,10 @@ class CastTests(TestCase):
 
     def test_cast_timestamp_to_float_without_jump_issue(self):
         # Spark's floats have precision issue.
-        # As pysparkling is using python that does not have this issue,
+        # As gelanis is using python that does not have this issue,
         # there is a discrepancy in behaviours
         # This test is using a value for which Spark can handle the exact value
-        # Hence the behaviour is the same in pysparkling and PySpark
+        # Hence the behaviour is the same in gelanis and PySpark
         self.assertEqual(
             cast_to_float(
                 datetime.datetime(2019, 8, 28, 0, 2, 40),

@@ -17,7 +17,7 @@ IGNORE_SUBPACKAGES = ['ml', 'mllib']
 
 
 pyspark_root = Path(pyspark.__file__).parent
-pysparkling_root = Path('../pysparkling')
+pysparkling_root = Path('../gelanis')
 
 examples = pyspark_root / 'examples'
 
@@ -198,7 +198,7 @@ def _is_private(name: str, in_module=None) -> bool:
 
 # pylint: disable=too-many-branches
 def compare_with_module(pysparkling_path, converted_to_module_name, pyspark_mod):
-    pysparkling_module_name = 'pysparkling' + converted_to_module_name[7:]
+    pysparkling_module_name = 'gelanis' + converted_to_module_name[7:]
 
     # Load the module, suppressing std output
     try:
@@ -226,9 +226,9 @@ def compare_with_module(pysparkling_path, converted_to_module_name, pyspark_mod)
         pysparkling_has_all_set = False
 
     if pyspark_has_all_set and not pysparkling_has_all_set:
-        log.warning(rf"! set this in pysparkling: \_\_all\_\_ = {list(pyspark_all)}")
+        log.warning(rf"! set this in gelanis: \_\_all\_\_ = {list(pyspark_all)}")
     elif not pyspark_has_all_set and pysparkling_has_all_set:
-        log.warning(r'! _pyspark_ has no \_\_all\_\_ set, remove it from pysparkling')
+        log.warning(r'! _pyspark_ has no \_\_all\_\_ set, remove it from gelanis')
     # Neither of them has it set. Or both have it set... So all's fine.
 
     def _give_class_def_txt(a, x):
@@ -246,7 +246,7 @@ def compare_with_module(pysparkling_path, converted_to_module_name, pyspark_mod)
             return '@staticmethod'
         return ''
 
-    for x in sorted(pyspark_all - pysparkling_all):  # Missing pysparkling
+    for x in sorted(pyspark_all - pysparkling_all):  # Missing gelanis
         log.warning('    - [ADD] %s %s', _give_class_def_txt(pyspark_mod, x), x)
 
     for x in sorted(pysparkling_all - pyspark_all):  # Is not in the public API of pyspark
@@ -260,7 +260,7 @@ def compare_with_module(pysparkling_path, converted_to_module_name, pyspark_mod)
 
 
 def tell_differences_between_modules():
-    log.info('REPORT: pyspark vs pysparkling')
+    log.info('REPORT: pyspark vs gelanis')
     log.info('---')
 
     for file in files_to_compare:

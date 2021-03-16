@@ -1,12 +1,12 @@
-import pysparkling
-from pysparkling.sql._statcounter import ColumnStatHelper
-from pysparkling.sql.functions import col
-from pysparkling.sql.types import IntegerType, Row, StructField, StructType
+import gelanis
+from gelanis.sql._statcounter import ColumnStatHelper
+from gelanis.sql.functions import col
+from gelanis.sql.types import IntegerType, Row, StructField, StructType
 
 
 def test_mean():
     d = [1, 4, 9, 160]
-    s = pysparkling.StatCounter(d)
+    s = gelanis.StatCounter(d)
     assert sum(d) / len(d) == s.mean()
 
 

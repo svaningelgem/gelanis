@@ -1,7 +1,7 @@
 from operator import add
 import unittest
 
-from pysparkling import Context
+from gelanis import Context
 
 
 class RDDTest(unittest.TestCase):

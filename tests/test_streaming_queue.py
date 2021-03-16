@@ -1,13 +1,13 @@
 import tornado.testing
 
-import pysparkling
+import gelanis
 
 
 class TestCount(tornado.testing.AsyncTestCase):
 
     def test_count(self):
-        sc = pysparkling.Context()
-        ssc = pysparkling.streaming.StreamingContext(sc, 0.1)
+        sc = gelanis.Context()
+        ssc = gelanis.streaming.StreamingContext(sc, 0.1)
 
         result = []
         (
@@ -21,8 +21,8 @@ class TestCount(tornado.testing.AsyncTestCase):
         self.assertEqual(sum(result), 23)
 
     def test_groupByKey(self):
-        sc = pysparkling.Context()
-        ssc = pysparkling.streaming.StreamingContext(sc, 0.1)
+        sc = gelanis.Context()
+        ssc = gelanis.streaming.StreamingContext(sc, 0.1)
 
         result = []
         (
@@ -38,8 +38,8 @@ class TestCount(tornado.testing.AsyncTestCase):
             result, [[('a', [2, 5]), ('b', [8])], [('a', [2]), ('b', [3])]])
 
     def test_mapValues(self):
-        sc = pysparkling.Context()
-        ssc = pysparkling.streaming.StreamingContext(sc, 0.1)
+        sc = gelanis.Context()
+        ssc = gelanis.streaming.StreamingContext(sc, 0.1)
 
         result = []
         (

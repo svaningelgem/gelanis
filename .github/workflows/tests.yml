@@ -4,8 +4,11 @@ on: [push, pull_request]
 
 jobs:
   build:
-
     runs-on: ${{ matrix.os }}
+
+    env:
+      PYTHONPATH: src
+
     strategy:
       matrix:
         os: [ ubuntu-latest, macos-latest, windows-latest ]
@@ -30,7 +33,7 @@ jobs:
       run: |
         python -m pip freeze
         python --version
-        python -c "import pysparkling; print(pysparkling.__version__)"
+        python -c "import gelanis; print(gelanis.__version__)"
 
     - name: Check if import order is fine
       run: |
@@ -43,14 +46,14 @@ jobs:
     - name: Lint
       if: matrix.python == '3.9'
       # https://github.com/PyCQA/pylint/issues/3882
-      run: pylint pysparkling scripts tests --disable=fixme,unsubscriptable-object
+      run: pylint gelanis scripts tests --disable=fixme,unsubscriptable-object
 
     - name: Lint
       if: matrix.python != '3.9'
-      run: pylint pysparkling scripts tests --disable=fixme
+      run: pylint gelanis scripts tests --disable=fixme
 
     - name: pycodestyle
-      run: python -m pycodestyle pysparkling tests scripts
+      run: python -m pycodestyle gelanis tests scripts
 
     - name: Test All
       run: pytest -vv

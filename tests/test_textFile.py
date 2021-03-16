@@ -8,8 +8,8 @@ import unittest
 
 import pytest
 
-from pysparkling import Context
-from pysparkling.fileio import File
+from gelanis import Context
+from gelanis.fileio import File
 
 try:
     import py7zlib
@@ -33,14 +33,14 @@ def test_cache():
     lines = lines.map(lambda l: '-' + l).cache()
     lines = lines.collect()
     print(lines)
-    assert '-+-from pysparkling import Context' in lines
+    assert '-+-from gelanis import Context' in lines
 
 
 def test_local_textFile_1():
     lines = Context().textFile(f'{LOCAL_TEST_PATH}/*textFil*.py')
     lines = lines.collect()
     print(lines)
-    assert 'from pysparkling import Context' in lines
+    assert 'from gelanis import Context' in lines
 
 
 def test_local_textFile_2():

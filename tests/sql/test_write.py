@@ -5,9 +5,9 @@ from unittest import TestCase
 
 from dateutil.tz import tzlocal
 
-from pysparkling import Context, Row
-from pysparkling.sql.session import SparkSession
-from pysparkling.sql.utils import AnalysisException
+from gelanis import Context, Row
+from gelanis.sql.session import SparkSession
+from gelanis.sql.utils import AnalysisException
 
 spark = SparkSession(Context())
 

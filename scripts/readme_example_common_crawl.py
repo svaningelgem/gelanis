@@ -1,4 +1,4 @@
-from pysparkling import Context
+from gelanis import Context
 
 # read all the paths of warc and wat files of the latest Common Crawl
 paths_rdd = Context().textFile(

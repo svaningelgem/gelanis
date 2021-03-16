@@ -1,6 +1,6 @@
 from unittest import TestCase
 
-from pysparkling.utils import MonotonicallyIncreasingIDGenerator
+from gelanis.utils import MonotonicallyIncreasingIDGenerator
 
 
 class MonotonicallyIncreasingIDGeneratorTests(TestCase):

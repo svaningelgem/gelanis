@@ -1,7 +1,7 @@
 import pytest
 
-from pysparkling.sql import SparkSession
-from pysparkling.sql.functions import array, col, map_from_arrays
+from gelanis.sql import SparkSession
+from gelanis.sql.functions import array, col, map_from_arrays
 
 
 def _strip_line(line: str) -> str:

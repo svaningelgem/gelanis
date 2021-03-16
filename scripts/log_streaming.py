@@ -1,9 +1,9 @@
-import pysparkling
+import gelanis
 
 
 def main():
-    sc = pysparkling.Context()
-    ssc = pysparkling.streaming.StreamingContext(sc, 1)
+    sc = gelanis.Context()
+    ssc = gelanis.streaming.StreamingContext(sc, 1)
     ssc.textFileStream('/var/log/system.log*').pprint()
     ssc.start()
     ssc.awaitTermination(timeout=3.0)

@@ -6,7 +6,7 @@ import os
 import struct
 import time
 
-import pysparkling
+import gelanis
 
 N_CONNECTIONS = (100, 1000, 2000, 3000, 3500, 4000, 4500, 5000,
                  6000, 7000, 8000)
@@ -29,8 +29,8 @@ class Server:
             )
 
     def _run_process(self, n, to_kv, format_):
-        c = pysparkling.Context()
-        stream_c = pysparkling.streaming.StreamingContext(c, 1.0)
+        c = gelanis.Context()
+        stream_c = gelanis.streaming.StreamingContext(c, 1.0)
 
         counts = []
         sensor_sums = defaultdict(float)
