@@ -1,4 +1,4 @@
-from pysparkling import Context
+from gelanis import Context
 
 my_rdd = Context().textFile('tests/*.py')
 

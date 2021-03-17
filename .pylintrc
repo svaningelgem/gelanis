@@ -5,8 +5,10 @@ good-names=log
 
 disable=invalid-name,unused-argument,too-few-public-methods,no-self-use,missing-docstring,logging-format-interpolation,too-many-instance-attributes,duplicate-code,too-many-public-methods,too-many-arguments,protected-access,too-many-lines
 
+ignore=_version.py
+
 [FORMAT]
-max-line-length=119
+max-line-length=120
 
 [SIMILARITIES]
 

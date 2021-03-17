@@ -89,3 +89,4 @@ parser.out
 parsetab.py
 .scannerwork/
 *.jar
+/tests/20news-19997.tar.gz

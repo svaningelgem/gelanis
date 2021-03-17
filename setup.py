@@ -2,15 +2,16 @@ from setuptools import find_packages, setup
 import versioneer
 
 setup(
-    name='pysparkling',
+    name='gelanis',
     version=versioneer.get_version(),
     cmdclass=versioneer.get_cmdclass(),
-    packages=find_packages(),
+    packages=find_packages(where='src'),
+    package_dir={'': 'src'},
     license='MIT',
     description='Pure Python implementation of the Spark RDD interface.',
     long_description=open('README.rst').read(),
     author='pysparkling contributors',
-    url='https://github.com/svenkreiss/pysparkling',
+    url='https://github.com/kbc-opensource/pysparkling',
 
     install_requires=[
         'boto>=2.36.0',

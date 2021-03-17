@@ -1,5 +1,24 @@
-.. image:: https://raw.githubusercontent.com/svenkreiss/pysparkling/master/logo/logo-w100.png
-    :target: https://github.com/svenkreiss/pysparkling
+.. image:: https://raw.githubusercontent.com/kbc-opensource/pysparkling/master/logo/logo-w100.png
+    :target: https://github.com/kbc-opensource/pysparkling
+
+gelanis
+=======
+
+**Gelanis** is an enhanced version of
+`pysparkling <https://github.com/svenkreiss/pysparkling>`_.
+
+List of improvements:
+
+* Data types of the resulting dataframes are equal to pyspark
+
+List of todos:
+
+* Implemented since/until + be able to target a certain pyspark version
+* Get a drop-in API compatibility with pyspark (auto-injector is written, but more tests are needed here).
+* Test the tests against both pyspark & pysparkling & compare the outputs so we're 100% certain both libraries are API equal.
+* Achieve API equality between pyspark & pysparkling (meaning that any public symbol should exist in both libraries).
+* Increase tests to ensure 100% compatibility with pyspark.
+
 
 pysparkling
 ===========

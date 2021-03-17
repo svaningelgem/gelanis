@@ -1,2 +1,2 @@
 include versioneer.py
-include pysparkling/_version.py
+include src/gelanis/_version.py

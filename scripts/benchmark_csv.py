@@ -4,7 +4,7 @@ import argparse
 import random
 from string import ascii_uppercase
 
-import pysparkling
+import gelanis
 
 
 def create_csv(filename, lines=10000000, columns=12):
@@ -21,7 +21,7 @@ def create_csv(filename, lines=10000000, columns=12):
 
 
 def read_csv(filename):
-    c = pysparkling.Context()
+    c = gelanis.Context()
     r = c.textFile(filename)
     r = r.map(lambda l: l + 'something else')
     print(r.count())

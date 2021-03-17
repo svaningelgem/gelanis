@@ -4,8 +4,11 @@ on: [push, pull_request]
 
 jobs:
   build:
-
     runs-on: ${{ matrix.os }}
+
+#    env:
+#      PYTHONPATH: src
+
     strategy:
       matrix:
         os: [ ubuntu-latest, macos-latest, windows-latest ]
@@ -30,18 +33,11 @@ jobs:
       run: |
         python -m pip freeze
         python --version
-        python -c "import pysparkling; print(pysparkling.__version__)"
+        python -c "from gelanis.__version__ import __version__; print(__version__)"
 
     - name: Check if import order is fine
       run: |
         isort . --check --diff
-
-    - name: Test pysparkling.rdd
-      run: python -m pytest --pyargs pysparkling.rdd -vv
-
-    - name: Test pysparkling.tests
-      if: matrix.os == 'ubuntu-latest'  # because of timing sensitivity in stream tests
-      run: python -m pytest --pyargs pysparkling.tests -vv
 
     - name: Install SQL Dependencies
       run: |
@@ -50,15 +46,15 @@ jobs:
     - name: Lint
       if: matrix.python == '3.9'
       # https://github.com/PyCQA/pylint/issues/3882
-      run: pylint pysparkling scripts --disable=fixme,unsubscriptable-object
+      run: pylint src scripts tests --disable=fixme,unsubscriptable-object
 
     - name: Lint
       if: matrix.python != '3.9'
-      run: pylint pysparkling scripts --disable=fixme
+      run: pylint src scripts tests --disable=fixme
 
     - name: pycodestyle
-      run: python -m pycodestyle pysparkling scripts
+      run: python -m pycodestyle src tests scripts
 
     - name: Test All
       if: matrix.os == 'ubuntu-latest'  # because of timing sensitivity in stream tests
-      run: python -m pytest -vv
+      run: pytest -vv
