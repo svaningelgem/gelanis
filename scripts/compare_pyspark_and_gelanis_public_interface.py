@@ -17,7 +17,7 @@ IGNORE_SUBPACKAGES = ['ml', 'mllib']
 
 
 pyspark_root = Path(pyspark.__file__).parent
-pysparkling_root = Path('../gelanis')
+gelanis_root = Path('../gelanis')
 
 examples = pyspark_root / 'examples'
 
@@ -42,9 +42,9 @@ def tell_files_to_be_internalized():
     log.info('Files that should not be exposed:')
     log.info('---')
 
-    pysparkling_files = {
-        file.relative_to(pysparkling_root)
-        for file in pysparkling_root.rglob('*.py')
+    gelanis_files = {
+        file.relative_to(gelanis_root)
+        for file in gelanis_root.rglob('*.py')
         if (
             not file.name.startswith('_')
             and not any(parent.name.startswith('_') for parent in file.parents)
@@ -61,11 +61,11 @@ def tell_files_to_be_internalized():
         )
     }
 
-    for file in sorted(pysparkling_files - pyspark_files):
+    for file in sorted(gelanis_files - pyspark_files):
         log.info('- %s', file)
 
 
-def compare_one_symbol(txt: str, pyspark_class, pysparkling_class, attr: inspect.Attribute):
+def compare_one_symbol(txt: str, pyspark_class, gelanis_class, attr: inspect.Attribute):
     txt_to_report = f'    - [{txt}] {pyspark_class.__name__}.'
     if txt in ['ADD', 'CORRECT']:
         txt_to_report += attr.name
@@ -87,10 +87,10 @@ def compare_one_symbol(txt: str, pyspark_class, pysparkling_class, attr: inspect
     log.info(txt_to_report)
 
 
-def compare_symbols(pyspark_symbol, pysparkling_symbol):
-    if type(pyspark_symbol) is not type(pysparkling_symbol):
+def compare_symbols(pyspark_symbol, gelanis_symbol):
+    if type(pyspark_symbol) is not type(gelanis_symbol):
         log.warning(f'    - [CHECK] {pyspark_symbol.__name__} is of type "{type(pyspark_symbol)}".'
-                    f' Pysparklings one is "{type(pysparkling_symbol)}".')
+                    f' Pysparklings one is "{type(gelanis_symbol)}".')
         return
 
     if hasattr(pyspark_symbol, '__module__'):
@@ -105,29 +105,29 @@ def compare_symbols(pyspark_symbol, pysparkling_symbol):
                 and x.defining_class not in [object, BaseException]
             )
         }
-        pysparkling_attributes = {
+        gelanis_attributes = {
             x.name: x
-            for x in inspect.classify_class_attrs(pysparkling_symbol)
+            for x in inspect.classify_class_attrs(gelanis_symbol)
             if (
                 not _is_private(x.name)
                 and x.defining_class not in [object, BaseException]
             )
         }
 
-        compare = partial(compare_one_symbol, pyspark_class=pyspark_symbol, pysparkling_class=pysparkling_symbol)
+        compare = partial(compare_one_symbol, pyspark_class=pyspark_symbol, gelanis_class=gelanis_symbol)
 
-        for x in sorted(set(pyspark_attributes) - set(pysparkling_attributes)):
+        for x in sorted(set(pyspark_attributes) - set(gelanis_attributes)):
             compare('ADD', attr=pyspark_attributes[x])
 
-        for x in sorted(set(pysparkling_attributes) - set(pyspark_attributes)):
-            compare('DEL', attr=pysparkling_attributes[x])
+        for x in sorted(set(gelanis_attributes) - set(pyspark_attributes)):
+            compare('DEL', attr=gelanis_attributes[x])
 
-        for x in sorted(set(pyspark_attributes) & set(pysparkling_attributes)):  # In both. Check signatures
+        for x in sorted(set(pyspark_attributes) & set(gelanis_attributes)):  # In both. Check signatures
             a1 = getattr(pyspark_symbol, x, None)
-            a2 = getattr(pysparkling_symbol, x, None)
+            a2 = getattr(gelanis_symbol, x, None)
 
             if (
-                pyspark_attributes[x].kind != pysparkling_attributes[x].kind
+                pyspark_attributes[x].kind != gelanis_attributes[x].kind
                 or (
                     'method' in pyspark_attributes[x].kind
                     and inspect.signature(a1) != inspect.signature(a2)
@@ -151,7 +151,7 @@ def compare_symbols(pyspark_symbol, pysparkling_symbol):
 
     if inspect.isfunction(pyspark_symbol):
         sig1 = inspect.signature(pyspark_symbol)
-        sig2 = inspect.signature(pysparkling_symbol)
+        sig2 = inspect.signature(gelanis_symbol)
 
         if sig1 != sig2:
             log.info(f'    - [CORRECT] {pyspark_symbol.__name__}{sig1}')
@@ -197,19 +197,19 @@ def _is_private(name: str, in_module=None) -> bool:
 
 
 # pylint: disable=too-many-branches
-def compare_with_module(pysparkling_path, converted_to_module_name, pyspark_mod):
-    pysparkling_module_name = 'gelanis' + converted_to_module_name[7:]
+def compare_with_module(gelanis_path, converted_to_module_name, pyspark_mod):
+    gelanis_module_name = 'gelanis' + converted_to_module_name[7:]
 
     # Load the module, suppressing std output
     try:
         with suppress_std():
-            pysparkling_mod = import_module(pysparkling_module_name)
+            gelanis_mod = import_module(gelanis_module_name)
     except ImportError:
-        log.error("  *--> CANNOT LOAD %s*", pysparkling_module_name.replace('_', r'\_'))
+        log.error("  *--> CANNOT LOAD %s*", gelanis_module_name.replace('_', r'\_'))
         return
 
     pyspark_vars = {x for x in vars(pyspark_mod) if not _is_private(x, pyspark_mod)}
-    pysparkling_vars = {x for x in vars(pysparkling_mod) if not _is_private(x, pysparkling_mod)}
+    gelanis_vars = {x for x in vars(gelanis_mod) if not _is_private(x, gelanis_mod)}
 
     try:
         pyspark_all = {x for x in pyspark_mod.__all__ if not _is_private(x, pyspark_mod)}
@@ -219,15 +219,15 @@ def compare_with_module(pysparkling_path, converted_to_module_name, pyspark_mod)
         pyspark_has_all_set = False
 
     try:
-        pysparkling_all = {x for x in pysparkling_mod.__all__ if not _is_private(x, pysparkling_mod)}
-        pysparkling_has_all_set = True
+        gelanis_all = {x for x in gelanis_mod.__all__ if not _is_private(x, gelanis_mod)}
+        gelanis_has_all_set = True
     except AttributeError:
-        pysparkling_all = pysparkling_vars
-        pysparkling_has_all_set = False
+        gelanis_all = gelanis_vars
+        gelanis_has_all_set = False
 
-    if pyspark_has_all_set and not pysparkling_has_all_set:
+    if pyspark_has_all_set and not gelanis_has_all_set:
         log.warning(rf"! set this in gelanis: \_\_all\_\_ = {list(pyspark_all)}")
-    elif not pyspark_has_all_set and pysparkling_has_all_set:
+    elif not pyspark_has_all_set and gelanis_has_all_set:
         log.warning(r'! _pyspark_ has no \_\_all\_\_ set, remove it from gelanis')
     # Neither of them has it set. Or both have it set... So all's fine.
 
@@ -246,16 +246,16 @@ def compare_with_module(pysparkling_path, converted_to_module_name, pyspark_mod)
             return '@staticmethod'
         return ''
 
-    for x in sorted(pyspark_all - pysparkling_all):  # Missing gelanis
+    for x in sorted(pyspark_all - gelanis_all):  # Missing gelanis
         log.warning('    - [ADD] %s %s', _give_class_def_txt(pyspark_mod, x), x)
 
-    for x in sorted(pysparkling_all - pyspark_all):  # Is not in the public API of pyspark
-        log.warning('    - [DEL] %s %s', _give_class_def_txt(pysparkling_mod, x), x)
+    for x in sorted(gelanis_all - pyspark_all):  # Is not in the public API of pyspark
+        log.warning('    - [DEL] %s %s', _give_class_def_txt(gelanis_mod, x), x)
 
-    for x in sorted(pyspark_all & pysparkling_all):  # Is in both
+    for x in sorted(pyspark_all & gelanis_all):  # Is in both
         compare_symbols(
             getattr(pyspark_mod, x),
-            getattr(pysparkling_mod, x),
+            getattr(gelanis_mod, x),
         )
 
 
@@ -286,10 +286,10 @@ def tell_differences_between_modules():
             log.error("  --> CANNOT IMPORT %s", converted_to_module_name.replace('_', r'\_'))
             continue
 
-        pysparkling_path = pysparkling_root / file.relative_to(pyspark_root)
+        gelanis_path = gelanis_root / file.relative_to(pyspark_root)
 
         compare_with_module(
-            pysparkling_path,
+            gelanis_path,
             converted_to_module_name,
             mod
         )
