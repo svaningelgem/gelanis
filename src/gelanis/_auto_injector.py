@@ -11,46 +11,25 @@ class _TransparentImporter(MetaPathFinder, Loader):
 
     @classmethod
     def find_spec(cls, name, path, target=None):
-        if not (
-            name == cls.__from__  # Root
-            or name[:len(cls.__from__) + 1] == f'{cls.__from__}.'  # Submodule/package
-        ):
+        splitted = name.split('.')
+        if splitted[0] != cls.__from__:
             return None  # Nope. We're not providing this..
 
-        new_name = cls.__to__ + name[len(cls.__from__):]
+        splitted[0] = cls.__to__
+        new_name = '.'.join(splitted)
+        return importlib.util.spec_from_loader(name, cls(new_name, name))
 
-        for finder in sys.meta_path[1:]:
-            module_spec = finder.find_spec(fullname=new_name, path=path, target=target)
-            if module_spec:
-                break
-        else:
-            return None  # No finder could be found?
-
-        module_spec.loader = cls(module_spec.loader)  # Inject my own loader here.
-
-        return module_spec
-
-    def __init__(self, old_loader: Loader):
-        self.old_loader = old_loader
+    def __init__(self, new_name: str, old_name: str):
+        self.new_name = new_name
+        self.old_name = old_name
 
     def create_module(self, spec):
-        # Delegate to the old loader
-        return self.old_loader.create_module(spec)
+        module = importlib.import_module(self.new_name)
+        return module
 
     def exec_module(self, module):
-        # Delegate to the old loader
-        return_value = self.old_loader.exec_module(module)
-
-        # Cache it for future use
-        new_name = module.__name__
-        old_name = self.__from__ + new_name[len(self.__to__):]
-        sys.modules[old_name] = module
-
-        return return_value
-
-    def module_repr(self, module):
-        # Delegate to the old loader
-        return self.old_loader.module_repr(module)
+        sys.modules[self.old_name] = module
+        return None
 
     @classmethod
     def is_enabled(cls):

@@ -1,7 +1,7 @@
 from threading import RLock
 
 from ..__version__ import __version__
-from ..context import Context
+from ..context import SparkContext
 from ..rdd import RDD
 from ._schema_utils import infer_schema_from_list
 from .conf import RuntimeConfig
@@ -123,7 +123,7 @@ class SparkSession:
             with self._lock:
                 session = SparkSession._instantiatedSession
                 if session is None:
-                    session = SparkSession(Context())
+                    session = SparkSession(SparkContext())
                 return session
 
     _instantiatedSession = None
@@ -145,7 +145,7 @@ class SparkSession:
     def newSession(self):
         """
         Returns a new SparkSession as new session, that has separate SQLConf,
-        registered temporary views and UDFs, but shared Context and
+        registered temporary views and UDFs, but shared SparkContext and
         table cache.
         """
         return self.__class__(self._sc)
@@ -156,7 +156,7 @@ class SparkSession:
 
     @property
     def sparkContext(self):
-        """Returns the underlying Context."""
+        """Returns the underlying SparkContext."""
         return self._sc
 
     @property
@@ -169,7 +169,7 @@ class SparkSession:
 
         This is the interface through which the user can get and set all Spark and Hadoop
         configurations that are relevant to Spark SQL. When getting the value of a config,
-        this defaults to the value set in the underlying :class:`Context`, if any.
+        this defaults to the value set in the underlying :class:`SparkContext`, if any.
         """
         if not hasattr(self, "_conf"):
             # Compatibility with Pyspark behavior
@@ -185,21 +185,17 @@ class SparkSession:
 
         :return: :class:`Catalog`
         """
-        # from .catalog import Catalog
-        # if not hasattr(self, "_catalog"):
-        #     # Compatibility with Pyspark behavior
-        #     # noinspection PyAttributeOutsideInit
-        #     self._catalog = Catalog(self)
-        # return self._catalog
-        raise NotImplementedError()
+        from .catalog import Catalog
+        if not hasattr(self, "_catalog"):
+            # noinspection PyAttributeOutsideInit
+            self._catalog = Catalog(self)
+        return self._catalog
 
     @property
     def udf(self):
         # pylint: disable=W0511
-        # todo: Add support of udf registration
-        raise NotImplementedError("Pysparkling does not support yet catalog")
-        # from .udf import UDFRegistration
-        # return UDFRegistration(self)
+        from .udf import UDFRegistration
+        return UDFRegistration(self)
 
     def _inferSchema(self, rdd, samplingRatio=None, names=None):
         """

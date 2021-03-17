@@ -6,6 +6,7 @@ import pickle
 import struct
 import time
 import traceback
+import random
 
 from . import accumulators
 from .__version__ import __version__ as PYSPARKLING_VERSION
@@ -633,6 +634,15 @@ class SparkContext(Context):
 
         self.conf = conf or SparkConf()
 
+        self.logger = logging.getLogger('SparkContext')  # TODO: set logging level based on conf
+
         self.master = master or self.conf.get('spark.master', None)
         self.appName = appName or self.conf.get('spark.app.name', None)
         self.sparkHome = sparkHome or self.conf.get('spark.home', None)
+
+    def setLogLevel(self, logLevel):
+        self.logger.setLevel(logLevel)
+
+    @property
+    def applicationId(self):
+        return f'gelanis_app_{random.randint(1, 100_000)}'

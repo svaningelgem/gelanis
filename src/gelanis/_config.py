@@ -19,6 +19,9 @@ class Version:
         minor: Union[None, str, int] = None,
         patch: Union[None, str, int] = None
     ):
+        if isinstance(major, float) and not (minor or patch):  # Allow to pass in a str to directly create the object
+            major = str(major)
+
         if isinstance(major, str) and not (minor or patch):  # Allow to pass in a str to directly create the object
             major = self._parse_version(major)
 
