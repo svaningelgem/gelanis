@@ -3,9 +3,9 @@
 API
 ===
 
-.. currentmodule:: pysparkling
+.. currentmodule:: gelanis
 
-A usual ``pysparkling`` session starts with either parallelizing a `list`
+A usual ``gelanis`` session starts with either parallelizing a `list`
 with :func:`Context.parallelize` or by reading data from a file using
 :func:`Context.textFile`. These two methods return :class:`RDD` instances that
 can then be processed.

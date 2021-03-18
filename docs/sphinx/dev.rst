@@ -4,7 +4,7 @@ Development
 ===========
 
 Fork the Github repository and apply your changes in a feature branch.
-To run pysparkling's unit tests:
+To run gelanis's unit tests:
 
 .. code-block:: sh
 
