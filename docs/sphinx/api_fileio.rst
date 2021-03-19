@@ -4,12 +4,12 @@
 fileio
 ------
 
-.. currentmodule:: pysparkling
+.. currentmodule:: gelanis
 
 The functionality provided by this module is used in :func:`Context.textFile`
 for reading and in :func:`RDD.saveAsTextFile` for writing.
 
-.. currentmodule:: pysparkling.fileio
+.. currentmodule:: gelanis.fileio
 
 You can use this submodule with :func:`File.dump`, :func:`File.load` and
 :func:`File.exists` to read, write and check for existance of a file.
@@ -18,61 +18,61 @@ All methods transparently handle various schemas (for example ``http://``,
 ``.bz2`` files (among others).
 
 
-.. autoclass:: pysparkling.fileio.File
+.. autoclass:: gelanis.fileio.File
     :members:
 
-.. autoclass:: pysparkling.fileio.TextFile
+.. autoclass:: gelanis.fileio.TextFile
     :members:
 
 
 File System
 ^^^^^^^^^^^
 
-.. autoclass:: pysparkling.fileio.fs.FileSystem
+.. autoclass:: gelanis.fileio.fs.FileSystem
     :members:
 
-.. autoclass:: pysparkling.fileio.fs.Local
+.. autoclass:: gelanis.fileio.fs.Local
     :members:
 
-.. autoclass:: pysparkling.fileio.fs.GS
+.. autoclass:: gelanis.fileio.fs.GS
     :members:
 
-.. autoclass:: pysparkling.fileio.fs.Hdfs
+.. autoclass:: gelanis.fileio.fs.Hdfs
     :members:
 
-.. autoclass:: pysparkling.fileio.fs.Http
+.. autoclass:: gelanis.fileio.fs.Http
     :members:
 
-.. autoclass:: pysparkling.fileio.fs.S3
+.. autoclass:: gelanis.fileio.fs.S3
     :members:
 
 
 Codec
 ^^^^^
 
-.. autoclass:: pysparkling.fileio.codec.Codec
+.. autoclass:: gelanis.fileio.codec.Codec
     :members:
 
-.. autoclass:: pysparkling.fileio.codec.Bz2
+.. autoclass:: gelanis.fileio.codec.Bz2
     :members:
 
-.. autoclass:: pysparkling.fileio.codec.Gz
+.. autoclass:: gelanis.fileio.codec.Gz
     :members:
 
-.. autoclass:: pysparkling.fileio.codec.Lzma
+.. autoclass:: gelanis.fileio.codec.Lzma
     :members:
 
-.. autoclass:: pysparkling.fileio.codec.SevenZ
+.. autoclass:: gelanis.fileio.codec.SevenZ
     :members:
 
-.. autoclass:: pysparkling.fileio.codec.Tar
+.. autoclass:: gelanis.fileio.codec.Tar
     :members:
 
-.. autoclass:: pysparkling.fileio.codec.TarGz
+.. autoclass:: gelanis.fileio.codec.TarGz
     :members:
 
-.. autoclass:: pysparkling.fileio.codec.TarBz2
+.. autoclass:: gelanis.fileio.codec.TarBz2
     :members:
 
-.. autoclass:: pysparkling.fileio.codec.Zip
+.. autoclass:: gelanis.fileio.codec.Zip
     :members:

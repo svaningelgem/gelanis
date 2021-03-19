@@ -11,12 +11,12 @@ Streaming
 StreamingContext
 ^^^^^^^^^^^^^^^^
 
-.. autoclass:: pysparkling.streaming.StreamingContext
+.. autoclass:: gelanis.streaming.StreamingContext
    :members:
 
 
 DStream
 ^^^^^^^
 
-.. autoclass:: pysparkling.streaming.DStream
+.. autoclass:: gelanis.streaming.DStream
    :members:

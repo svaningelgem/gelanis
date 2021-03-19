@@ -4,7 +4,7 @@
 Parallelization
 ===============
 
-Pysparkling supports parallelizations on the local machine and across clusters
+Gelanis supports parallelizations on the local machine and across clusters
 of computers.
 
 
@@ -22,9 +22,9 @@ serialization to support lambda functions (and more) for data transformations.
 
     import cloudpickle
     import concurrent
-    import pysparkling
+    import gelanis
 
-    sc = pysparkling.Context(
+    sc = gelanis.Context(
         pool=concurrent.futures.ProcessPoolExecutor(4),
         serializer=cloudpickle.dumps,
         deserializer=pickle.loads,
@@ -36,7 +36,7 @@ Experimental
 ------------
 
 The following are experimental notes. Most of them don't even contain examples how to make
-use of these techniques with pysparkling.
+use of these techniques with gelanis.
 
 ipcluster and IPython.parallel
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -119,7 +119,7 @@ Setup
     KEYNAME = starclusterkey
 
     # disable the queue, Sun Grid Engine
-    # (unnecessary for pysparkling and takes time during setup)
+    # (unnecessary for gelanis and takes time during setup)
     DISABLE_QUEUE=True
 
     # to enable IPython parallel support, uncomment these lines in config:

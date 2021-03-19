@@ -3,8 +3,8 @@
 RDD
 ---
 
-.. autoclass:: pysparkling.RDD
+.. autoclass:: gelanis.RDD
    :members:
 
-.. autoclass:: pysparkling.StatCounter
+.. autoclass:: gelanis.StatCounter
    :members:
