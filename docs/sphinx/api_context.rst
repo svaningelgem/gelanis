@@ -1,11 +1,11 @@
 .. _api_context:
 
-.. currentmodule:: pysparkling
+.. currentmodule:: gelanis
 
 Context
 -------
 
-A :class:`~pysparkling.Context` describes the setup. Instantiating a Context with the default
+A :class:`~gelanis.Context` describes the setup. Instantiating a Context with the default
 arguments using ``Context()`` is the most lightweight setup. All data is just
 in the local thread and is never serialized or deserialized.
 
@@ -16,7 +16,7 @@ a common instantiation with `multiprocessing` looks like this:
 
 .. code-block:: python
 
-  sc = pysparkling.Context(
+  sc = gelanis.Context(
       multiprocessing.Pool(4),
       serializer=cloudpickle.dumps,
       deserializer=pickle.loads,
@@ -25,5 +25,5 @@ a common instantiation with `multiprocessing` looks like this:
 This assumes that your data is serializable with `pickle` which is generally
 faster. You can also specify a custom serializer/deserializer for data.
 
-.. autoclass:: pysparkling.Context
+.. autoclass:: gelanis.Context
    :members:
