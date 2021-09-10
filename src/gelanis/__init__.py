@@ -25,7 +25,7 @@ __all__ = [
 ]
 
 
-def setup(spark_version: str):
+def setup(spark_version: str) -> None:
     config.spark_version = spark_version
 
     from ._auto_injector import Pyspark2Gelanis

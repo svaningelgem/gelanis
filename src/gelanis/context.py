@@ -646,3 +646,6 @@ class SparkContext(Context):
     @property
     def applicationId(self):
         return f'gelanis_app_{random.randint(1, 100_000)}'
+
+    def getConf(self):
+        return self.conf

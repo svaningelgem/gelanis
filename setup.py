@@ -27,7 +27,7 @@ setup(
         'performance': ['matplotlib>=1.5.3'],
         'streaming': ['tornado>=4.3'],
         'dev': [
-            'antlr4-python3-runtime==4.7.1',
+            'antlr4-python3-runtime>=4.7.1',
         ],
         'sql': [
             'numpy',
