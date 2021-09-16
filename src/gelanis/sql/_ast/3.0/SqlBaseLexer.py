@@ -1759,44 +1759,39 @@ class SqlBaseLexer(Lexer):
         self._predicates = None
 
 
-      /**
-       * When false, INTERSECT is given the greater precedence over the other set
-       * operations (UNION, EXCEPT and MINUS) as per the SQL standard.
-       */
-      public boolean legacy_setops_precedence_enbled = false;
+      """
+      When false, INTERSECT is given the greater precedence over the other set
+      operations (UNION, EXCEPT and MINUS) as per the SQL standard.
+      """
+      legacy_setops_precedence_enbled = False
 
-      /**
-       * When false, a literal with an exponent would be converted into
-       * double type rather than decimal type.
-       */
-      public boolean legacy_exponent_literal_as_decimal_enabled = false;
+      """
+      When false, a literal with an exponent would be converted into
+      double type rather than decimal type.
+      """
+      legacy_exponent_literal_as_decimal_enabled = False
 
-      /**
-       * Verify whether current token is a valid decimal token (which contains dot).
-       * Returns true if the character that follows the token is not a digit or letter or underscore.
-       *
-       * For example:
-       * For char stream "2.3", "2." is not a valid decimal token, because it is followed by digit '3'.
-       * For char stream "2.3_", "2.3" is not a valid decimal token, because it is followed by '_'.
-       * For char stream "2.3W", "2.3" is not a valid decimal token, because it is followed by 'W'.
-       * For char stream "12.0D 34.E2+0.12 "  12.0D is a valid decimal token because it is followed
-       * by a space. 34.E2 is a valid decimal token because it is followed by symbol '+'
-       * which is not a digit or letter or underscore.
-       */
-      public boolean isValidDecimal() {
-        int nextChar = _input.LA(1);
-        if (nextChar >= 'A' && nextChar <= 'Z' || nextChar >= '0' && nextChar <= '9' ||
-          nextChar == '_') {
-          return false;
-        } else {
-          return true;
-        }
-      }
+      """
+      Verify whether current token is a valid decimal token (which contains dot).
+      Returns true if the character that follows the token is not a digit or letter or underscore.
 
-      /**
-       * When true, the behavior of keywords follows ANSI SQL standard.
-       */
-      public boolean SQL_standard_keyword_behavior = false;
+      For example:
+      For char stream "2.3", "2." is not a valid decimal token, because it is followed by digit '3'.
+      For char stream "2.3_", "2.3" is not a valid decimal token, because it is followed by '_'.
+      For char stream "2.3W", "2.3" is not a valid decimal token, because it is followed by 'W'.
+      For char stream "12.0D 34.E2+0.12 "  12.0D is a valid decimal token because it is followed
+      by a space. 34.E2 is a valid decimal token because it is followed by symbol '+'
+      which is not a digit or letter or underscore.
+      """
+      def isValidDecimal(self): 
+        nextChar = self._input.LA(1)
+        return not ('A' <= nextChar <= 'Z' or '0' <= nextChar <= '9' or nextChar == '_')
+
+
+      """
+      When true, the behavior of keywords follows ANSI SQL standard.
+      """
+      SQL_standard_keyword_behavior = False
 
 
     def sempred(self, localctx:RuleContext, ruleIndex:int, predIndex:int):

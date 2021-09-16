@@ -2403,22 +2403,22 @@ class SqlBaseParser ( Parser ):
 
 
 
-      /**
-       * When false, INTERSECT is given the greater precedence over the other set
-       * operations (UNION, EXCEPT and MINUS) as per the SQL standard.
-       */
-      public boolean legacy_setops_precedence_enabled = false;
+      """
+      When false, INTERSECT is given the greater precedence over the other set
+      operations (UNION, EXCEPT and MINUS) as per the SQL standard.
+      """
+      legacy_setops_precedence_enabled = False
 
-      /**
-       * When false, a literal with an exponent would be converted into
-       * double type rather than decimal type.
-       */
-      public boolean legacy_exponent_literal_as_decimal_enabled = false;
+      """
+      When false, a literal with an exponent would be converted into
+      double type rather than decimal type.
+      """
+      legacy_exponent_literal_as_decimal_enabled = False
 
-      /**
-       * When true, the behavior of keywords follows ANSI SQL standard.
-       */
-      public boolean SQL_standard_keyword_behavior = false;
+      """
+      When true, the behavior of keywords follows ANSI SQL standard.
+      """
+      SQL_standard_keyword_behavior = False
 
 
 

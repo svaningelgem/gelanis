@@ -1779,43 +1779,34 @@ class SqlBaseLexer(Lexer):
         self._predicates = None
 
 
-      /**
-       * Verify whether current token is a valid decimal token (which contains dot).
-       * Returns true if the character that follows the token is not a digit or letter or underscore.
-       *
-       * For example:
-       * For char stream "2.3", "2." is not a valid decimal token, because it is followed by digit '3'.
-       * For char stream "2.3_", "2.3" is not a valid decimal token, because it is followed by '_'.
-       * For char stream "2.3W", "2.3" is not a valid decimal token, because it is followed by 'W'.
-       * For char stream "12.0D 34.E2+0.12 "  12.0D is a valid decimal token because it is followed
-       * by a space. 34.E2 is a valid decimal token because it is followed by symbol '+'
-       * which is not a digit or letter or underscore.
-       */
-      public boolean isValidDecimal() {
-        int nextChar = _input.LA(1);
-        if (nextChar >= 'A' && nextChar <= 'Z' || nextChar >= '0' && nextChar <= '9' ||
-          nextChar == '_') {
-          return false;
-        } else {
-          return true;
-        }
-      }
+      """
+      Verify whether current token is a valid decimal token (which contains dot).
+      Returns true if the character that follows the token is not a digit or letter or underscore.
 
-      /**
-       * This method will be called when we see '/*' and try to match it as a bracketed comment.
-       * If the next character is '+', it should be parsed as hint later, and we cannot match
-       * it as a bracketed comment.
-       *
-       * Returns true if the next character is '+'.
-       */
-      public boolean isHint() {
-        int nextChar = _input.LA(1);
-        if (nextChar == '+') {
-          return true;
-        } else {
-          return false;
-        }
-      }
+      For example:
+      For char stream "2.3", "2." is not a valid decimal token, because it is followed by digit '3'.
+      For char stream "2.3_", "2.3" is not a valid decimal token, because it is followed by '_'.
+      For char stream "2.3W", "2.3" is not a valid decimal token, because it is followed by 'W'.
+      For char stream "12.0D 34.E2+0.12 "  12.0D is a valid decimal token because it is followed
+      by a space. 34.E2 is a valid decimal token because it is followed by symbol '+'
+      which is not a digit or letter or underscore.
+      """
+      def isValidDecimal(self): 
+        nextChar = self._input.LA(1)
+        return not ('A' <= nextChar <= 'Z' or '0' <= nextChar <= '9' or nextChar == '_')
+
+
+      """
+      This method will be called when we see '/*' and try to match it as a bracketed comment.
+      If the next character is '+', it should be parsed as hint later, and we cannot match
+      it as a bracketed comment.
+
+      Returns true if the next character is '+'.
+      """
+      def isHint(self): 
+        nextChar = self._input.LA(1);
+        return nextChar == '+'
+
 
 
     def sempred(self, localctx:RuleContext, ruleIndex:int, predIndex:int):
