@@ -3,10 +3,11 @@
 from antlr4 import *
 from io import StringIO
 import sys
+
 if sys.version_info[1] > 5:
-	from typing import TextIO
+    from typing import TextIO
 else:
-	from typing.io import TextIO
+    from typing.io import TextIO
 
 
 def serializedATN():
@@ -17,8 +18,8 @@ def serializedATN():
         buf.write("\t\16\4\17\t\17\4\20\t\20\4\21\t\21\4\22\t\22\4\23\t\23")
         buf.write("\4\24\t\24\4\25\t\25\4\26\t\26\4\27\t\27\4\30\t\30\4\31")
         buf.write("\t\31\4\32\t\32\4\33\t\33\4\34\t\34\4\35\t\35\4\36\t\36")
-        buf.write("\4\37\t\37\4 \t \4!\t!\4\"\t\"\4#\t#\4$\t$\4%\t%\4&\t")
-        buf.write("&\4\'\t\'\4(\t(\4)\t)\4*\t*\4+\t+\4,\t,\4-\t-\4.\t.\4")
+        buf.write('\4\37\t\37\4 \t \4!\t!\4"\t"\4#\t#\4$\t$\4%\t%\4&\t')
+        buf.write("&\4'\t'\4(\t(\4)\t)\4*\t*\4+\t+\4,\t,\4-\t-\4.\t.\4")
         buf.write("/\t/\4\60\t\60\4\61\t\61\4\62\t\62\4\63\t\63\4\64\t\64")
         buf.write("\4\65\t\65\4\66\t\66\4\67\t\67\48\t8\49\t9\4:\t:\4;\t")
         buf.write(";\4<\t<\4=\t=\4>\t>\4?\t?\4@\t@\4A\tA\4B\tB\4C\tC\4D\t")
@@ -122,8 +123,8 @@ def serializedATN():
         buf.write("\13 \5 \u04a2\n \3 \3 \3 \3 \3 \7 \u04a9\n \f \16 \u04ac")
         buf.write("\13 \5 \u04ae\n \3 \3 \3 \3 \3 \7 \u04b5\n \f \16 \u04b8")
         buf.write("\13 \5 \u04ba\n \3 \5 \u04bd\n \3 \3 \5 \u04c1\n \3!\5")
-        buf.write("!\u04c4\n!\3!\3!\3!\3\"\3\"\3\"\3\"\3\"\3\"\5\"\u04cf")
-        buf.write("\n\"\3\"\7\"\u04d2\n\"\f\"\16\"\u04d5\13\"\3#\3#\3#\3")
+        buf.write('!\u04c4\n!\3!\3!\3!\3"\3"\3"\3"\3"\3"\5"\u04cf')
+        buf.write('\n"\3"\7"\u04d2\n"\f"\16"\u04d5\13"\3#\3#\3#\3')
         buf.write("#\3#\3#\3#\3#\5#\u04df\n#\3$\3$\5$\u04e3\n$\3%\3%\3%\3")
         buf.write("%\3%\3%\3%\3%\3%\3%\5%\u04ef\n%\3%\5%\u04f2\n%\3%\3%\5")
         buf.write("%\u04f6\n%\3%\3%\3%\3%\3%\3%\3%\3%\5%\u0500\n%\3%\3%\5")
@@ -133,10 +134,10 @@ def serializedATN():
         buf.write("%\u0526\n%\3%\7%\u0529\n%\f%\16%\u052c\13%\3%\3%\5%\u0530")
         buf.write("\n%\3%\5%\u0533\n%\3%\3%\5%\u0537\n%\3%\5%\u053a\n%\5")
         buf.write("%\u053c\n%\3&\3&\3&\3&\7&\u0542\n&\f&\16&\u0545\13&\3")
-        buf.write("&\7&\u0548\n&\f&\16&\u054b\13&\3\'\3\'\3\'\3\'\3\'\7\'")
-        buf.write("\u0552\n\'\f\'\16\'\u0555\13\'\3\'\3\'\3\'\3\'\3\'\3\'")
-        buf.write("\3\'\3\'\3\'\3\'\7\'\u0561\n\'\f\'\16\'\u0564\13\'\3\'")
-        buf.write("\3\'\5\'\u0568\n\'\3(\3(\3(\3(\7(\u056e\n(\f(\16(\u0571")
+        buf.write("&\7&\u0548\n&\f&\16&\u054b\13&\3'\3'\3'\3'\3'\7'")
+        buf.write("\u0552\n'\f'\16'\u0555\13'\3'\3'\3'\3'\3'\3'")
+        buf.write("\3'\3'\3'\3'\7'\u0561\n'\f'\16'\u0564\13'\3'")
+        buf.write("\3'\5'\u0568\n'\3(\3(\3(\3(\7(\u056e\n(\f(\16(\u0571")
         buf.write("\13(\5(\u0573\n(\3(\3(\5(\u0577\n(\3)\3)\3)\5)\u057c\n")
         buf.write(")\3)\3)\3)\3)\3)\7)\u0583\n)\f)\16)\u0586\13)\5)\u0588")
         buf.write("\n)\3)\3)\3)\5)\u058d\n)\3)\3)\3)\7)\u0592\n)\f)\16)\u0595")
@@ -201,22 +202,22 @@ def serializedATN():
         buf.write("W\3W\5W\u0857\nW\3W\3W\5W\u085b\nW\3W\3W\5W\u085f\nW\3")
         buf.write("W\3W\5W\u0863\nW\3W\3W\5W\u0867\nW\3W\5W\u086a\nW\3X\3")
         buf.write("X\3X\7\u02a2\u02d5\u02dd\u02e4\u02ec\6Bx~\u0080Y\2\4\6")
-        buf.write("\b\n\f\16\20\22\24\26\30\32\34\36 \"$&(*,.\60\62\64\66")
+        buf.write('\b\n\f\16\20\22\24\26\30\32\34\36 "$&(*,.\60\62\64\66')
         buf.write("8:<>@BDFHJLNPRTVXZ\\^`bdfhjlnprtvxz|~\u0080\u0082\u0084")
         buf.write("\u0086\u0088\u008a\u008c\u008e\u0090\u0092\u0094\u0096")
         buf.write("\u0098\u009a\u009c\u009e\u00a0\u00a2\u00a4\u00a6\u00a8")
         buf.write("\u00aa\u00ac\u00ae\2\32\3\2\u00b7\u00b8\3\2JK\5\2ST\u009e")
         buf.write("\u009e\u00a4\u00a4\4\2\13\13\35\35\4\2**PP\4\2\u009e\u009e")
         buf.write("\u00a4\u00a4\4\2\f\f\u00c4\u00c4\3\2^`\3\2)*\3\2\16\17")
-        buf.write("\3\2\u00e6\u00e7\3\2\"#\4\2{|\u0081\u0081\3\2}\u0080\3")
-        buf.write("\2{|\3\2\u00df\u00e0\3\2sz\3\2{\u0084\3\2\33\36\3\2&\'")
+        buf.write('\3\2\u00e6\u00e7\3\2"#\4\2{|\u0081\u0081\3\2}\u0080\3')
+        buf.write("\2{|\3\2\u00df\u00e0\3\2sz\3\2{\u0084\3\2\33\36\3\2&'")
         buf.write("\4\2??\u008b\u008b\4\2\27\27\u0089\u0089\3\2CD\t\2\n\61")
         buf.write("\64\64<]ar\u0080\u0080\u0085\u00db\u00dd\u00e0\2\u09e1")
         buf.write("\2\u00b0\3\2\2\2\4\u00b3\3\2\2\2\6\u00b6\3\2\2\2\b\u00b9")
         buf.write("\3\2\2\2\n\u02ef\3\2\2\2\f\u03ae\3\2\2\2\16\u03b0\3\2")
         buf.write("\2\2\20\u03bf\3\2\2\2\22\u03cb\3\2\2\2\24\u03d8\3\2\2")
         buf.write("\2\26\u03dc\3\2\2\2\30\u03f5\3\2\2\2\32\u03f7\3\2\2\2")
-        buf.write("\34\u03fb\3\2\2\2\36\u0407\3\2\2\2 \u0411\3\2\2\2\"\u0413")
+        buf.write('\34\u03fb\3\2\2\2\36\u0407\3\2\2\2 \u0411\3\2\2\2"\u0413')
         buf.write("\3\2\2\2$\u041e\3\2\2\2&\u0427\3\2\2\2(\u042f\3\2\2\2")
         buf.write("*\u0432\3\2\2\2,\u043d\3\2\2\2.\u044d\3\2\2\2\60\u044f")
         buf.write("\3\2\2\2\62\u045a\3\2\2\2\64\u046b\3\2\2\2\66\u0472\3")
@@ -302,7 +303,7 @@ def serializedATN():
         buf.write("\u013c\7J\2\2\u0139\u013a\7r\2\2\u013a\u013b\7\36\2\2")
         buf.write("\u013b\u013d\7 \2\2\u013c\u0139\3\2\2\2\u013c\u013d\3")
         buf.write("\2\2\2\u013d\u013e\3\2\2\2\u013e\u013f\5p9\2\u013f\u0140")
-        buf.write("\7\"\2\2\u0140\u0141\5p9\2\u0141\u02f0\3\2\2\2\u0142\u0143")
+        buf.write('\7"\2\2\u0140\u0141\5p9\2\u0141\u02f0\3\2\2\2\u0142\u0143')
         buf.write("\7\u00c2\2\2\u0143\u0144\7J\2\2\u0144\u0146\5p9\2\u0145")
         buf.write("\u0147\5\34\17\2\u0146\u0145\3\2\2\2\u0146\u0147\3\2\2")
         buf.write("\2\u0147\u0148\3\2\2\2\u0148\u0149\7\u00c3\2\2\u0149\u0150")
@@ -416,11 +417,11 @@ def serializedATN():
         buf.write("\3\2\2\2\u0248\u02f0\5\n\6\2\u0249\u024a\7V\2\2\u024a")
         buf.write("\u024d\7W\2\2\u024b\u024c\t\5\2\2\u024c\u024e\5\u00a6")
         buf.write("T\2\u024d\u024b\3\2\2\2\u024d\u024e\3\2\2\2\u024e\u0253")
-        buf.write("\3\2\2\2\u024f\u0251\7\"\2\2\u0250\u024f\3\2\2\2\u0250")
+        buf.write('\3\2\2\2\u024f\u0251\7"\2\2\u0250\u024f\3\2\2\2\u0250')
         buf.write("\u0251\3\2\2\2\u0251\u0252\3\2\2\2\u0252\u0254\7\u00e1")
         buf.write("\2\2\u0253\u0250\3\2\2\2\u0253\u0254\3\2\2\2\u0254\u02f0")
         buf.write("\3\2\2\2\u0255\u0256\7V\2\2\u0256\u0259\7\u00bf\2\2\u0257")
-        buf.write("\u0258\7\"\2\2\u0258\u025a\7\u00e1\2\2\u0259\u0257\3\2")
+        buf.write('\u0258\7"\2\2\u0258\u025a\7\u00e1\2\2\u0259\u0257\3\2')
         buf.write("\2\2\u0259\u025a\3\2\2\2\u025a\u02f0\3\2\2\2\u025b\u025c")
         buf.write("\7V\2\2\u025c\u025d\7\u00a8\2\2\u025d\u0262\5p9\2\u025e")
         buf.write("\u025f\7\3\2\2\u025f\u0260\5.\30\2\u0260\u0261\7\4\2\2")
@@ -433,7 +434,7 @@ def serializedATN():
         buf.write("\17\2\u0270\u026f\3\2\2\2\u0270\u0271\3\2\2\2\u0271\u02f0")
         buf.write("\3\2\2\2\u0272\u0274\7V\2\2\u0273\u0275\5\u00a6T\2\u0274")
         buf.write("\u0273\3\2\2\2\u0274\u0275\3\2\2\2\u0275\u0276\3\2\2\2")
-        buf.write("\u0276\u027e\7\\\2\2\u0277\u0279\7\"\2\2\u0278\u0277\3")
+        buf.write('\u0276\u027e\7\\\2\2\u0277\u0279\7"\2\2\u0278\u0277\3')
         buf.write("\2\2\2\u0278\u0279\3\2\2\2\u0279\u027c\3\2\2\2\u027a\u027d")
         buf.write("\5\u00a4S\2\u027b\u027d\7\u00e1\2\2\u027c\u027a\3\2\2")
         buf.write("\2\u027c\u027b\3\2\2\2\u027d\u027f\3\2\2\2\u027e\u0278")
@@ -448,7 +449,7 @@ def serializedATN():
         buf.write("\u0293\t\7\2\2\u0292\u0291\3\2\2\2\u0292\u0293\3\2\2\2")
         buf.write("\u0293\u0294\3\2\2\2\u0294\u0296\5p9\2\u0295\u0297\5\34")
         buf.write("\17\2\u0296\u0295\3\2\2\2\u0296\u0297\3\2\2\2\u0297\u0299")
-        buf.write("\3\2\2\2\u0298\u029a\5\"\22\2\u0299\u0298\3\2\2\2\u0299")
+        buf.write('\3\2\2\2\u0298\u029a\5"\22\2\u0299\u0298\3\2\2\2\u0299')
         buf.write("\u029a\3\2\2\2\u029a\u02f0\3\2\2\2\u029b\u029c\7\u009f")
         buf.write("\2\2\u029c\u029d\7J\2\2\u029d\u02f0\5p9\2\u029e\u02a2")
         buf.write("\7\u009f\2\2\u029f\u02a1\13\2\2\2\u02a0\u029f\3\2\2\2")
@@ -652,7 +653,7 @@ def serializedATN():
         buf.write("\3\2\2\2\u0426\u0424\3\2\2\2\u0427\u0429\5\u00a6T\2\u0428")
         buf.write("\u042a\7\r\2\2\u0429\u0428\3\2\2\2\u0429\u042a\3\2\2\2")
         buf.write("\u042a\u042b\3\2\2\2\u042b\u042c\7\3\2\2\u042c\u042d\5")
-        buf.write("<\37\2\u042d\u042e\7\4\2\2\u042e\'\3\2\2\2\u042f\u0430")
+        buf.write("<\37\2\u042d\u042e\7\4\2\2\u042e'\3\2\2\2\u042f\u0430")
         buf.write("\7\u008f\2\2\u0430\u0431\5\u00a4S\2\u0431)\3\2\2\2\u0432")
         buf.write("\u0433\7\3\2\2\u0433\u0438\5,\27\2\u0434\u0435\7\5\2\2")
         buf.write("\u0435\u0437\5,\27\2\u0436\u0434\3\2\2\2\u0437\u043a\3")
@@ -687,7 +688,7 @@ def serializedATN():
         buf.write("9\3\2\2\2\u047a\u047b\5\u00a6T\2\u047b\u047c\7\u00e1\2")
         buf.write("\2\u047c;\3\2\2\2\u047d\u047f\5\30\r\2\u047e\u047d\3\2")
         buf.write("\2\2\u047e\u047f\3\2\2\2\u047f\u0480\3\2\2\2\u0480\u0481")
-        buf.write("\5B\"\2\u0481\u0482\5> \2\u0482\u048a\3\2\2\2\u0483\u0485")
+        buf.write('\5B"\2\u0481\u0482\5> \2\u0482\u048a\3\2\2\2\u0483\u0485')
         buf.write("\5J&\2\u0484\u0486\5@!\2\u0485\u0484\3\2\2\2\u0486\u0487")
         buf.write("\3\2\2\2\u0487\u0485\3\2\2\2\u0487\u0488\3\2\2\2\u0488")
         buf.write("\u048a\3\2\2\2\u0489\u047e\3\2\2\2\u0489\u0483\3\2\2\2")
@@ -717,10 +718,10 @@ def serializedATN():
         buf.write("\u04c0\u04be\3\2\2\2\u04c0\u04c1\3\2\2\2\u04c1?\3\2\2")
         buf.write("\2\u04c2\u04c4\5\30\r\2\u04c3\u04c2\3\2\2\2\u04c3\u04c4")
         buf.write("\3\2\2\2\u04c4\u04c5\3\2\2\2\u04c5\u04c6\5H%\2\u04c6\u04c7")
-        buf.write("\5> \2\u04c7A\3\2\2\2\u04c8\u04c9\b\"\1\2\u04c9\u04ca")
+        buf.write('\5> \2\u04c7A\3\2\2\2\u04c8\u04c9\b"\1\2\u04c9\u04ca')
         buf.write("\5D#\2\u04ca\u04d3\3\2\2\2\u04cb\u04cc\f\3\2\2\u04cc\u04ce")
         buf.write("\t\t\2\2\u04cd\u04cf\5R*\2\u04ce\u04cd\3\2\2\2\u04ce\u04cf")
-        buf.write("\3\2\2\2\u04cf\u04d0\3\2\2\2\u04d0\u04d2\5B\"\4\u04d1")
+        buf.write('\3\2\2\2\u04cf\u04d0\3\2\2\2\u04d0\u04d2\5B"\4\u04d1')
         buf.write("\u04cb\3\2\2\2\u04d2\u04d5\3\2\2\2\u04d3\u04d1\3\2\2\2")
         buf.write("\u04d3\u04d4\3\2\2\2\u04d4C\3\2\2\2\u04d5\u04d3\3\2\2")
         buf.write("\2\u04d6\u04df\5H%\2\u04d7\u04d8\7J\2\2\u04d8\u04df\5")
@@ -764,7 +765,7 @@ def serializedATN():
         buf.write("\3\2\2\2\u052a\u0528\3\2\2\2\u052a\u052b\3\2\2\2\u052b")
         buf.write("\u052f\3\2\2\2\u052c\u052a\3\2\2\2\u052d\u052e\7\20\2")
         buf.write("\2\u052e\u0530\5x=\2\u052f\u052d\3\2\2\2\u052f\u0530\3")
-        buf.write("\2\2\2\u0530\u0532\3\2\2\2\u0531\u0533\5L\'\2\u0532\u0531")
+        buf.write("\2\2\2\u0530\u0532\3\2\2\2\u0531\u0533\5L'\2\u0532\u0531")
         buf.write("\3\2\2\2\u0532\u0533\3\2\2\2\u0533\u0536\3\2\2\2\u0534")
         buf.write("\u0535\7\30\2\2\u0535\u0537\5x=\2\u0536\u0534\3\2\2\2")
         buf.write("\u0536\u0537\3\2\2\2\u0537\u0539\3\2\2\2\u0538\u053a\5")
@@ -1174,111 +1175,484 @@ def serializedATN():
         return buf.getvalue()
 
 
-class SqlBaseParser ( Parser ):
+class SqlBaseParser(Parser):
 
     grammarFileName = "SqlBase.g4"
 
     atn = ATNDeserializer().deserialize(serializedATN())
 
-    decisionsToDFA = [ DFA(ds, i) for i, ds in enumerate(atn.decisionToState) ]
+    decisionsToDFA = [DFA(ds, i) for i, ds in enumerate(atn.decisionToState)]
 
     sharedContextCache = PredictionContextCache()
 
-    literalNames = [ "<INVALID>", "'('", "')'", "','", "'.'", "'['", "']'", 
-                     "':'", "'SELECT'", "'FROM'", "'ADD'", "'AS'", "'ALL'", 
-                     "'DISTINCT'", "'WHERE'", "'GROUP'", "'BY'", "'GROUPING'", 
-                     "'SETS'", "'CUBE'", "'ROLLUP'", "'ORDER'", "'HAVING'", 
-                     "'LIMIT'", "'AT'", "'OR'", "'AND'", "'IN'", "<INVALID>", 
-                     "'NO'", "'EXISTS'", "'BETWEEN'", "'LIKE'", "<INVALID>", 
-                     "'IS'", "'NULL'", "'TRUE'", "'FALSE'", "'NULLS'", "'ASC'", 
-                     "'DESC'", "'FOR'", "'INTERVAL'", "'CASE'", "'WHEN'", 
-                     "'THEN'", "'ELSE'", "'END'", "'JOIN'", "'CROSS'", "'OUTER'", 
-                     "'INNER'", "'LEFT'", "'SEMI'", "'RIGHT'", "'FULL'", 
-                     "'NATURAL'", "'ON'", "'LATERAL'", "'WINDOW'", "'OVER'", 
-                     "'PARTITION'", "'RANGE'", "'ROWS'", "'UNBOUNDED'", 
-                     "'PRECEDING'", "'FOLLOWING'", "'CURRENT'", "'ROW'", 
-                     "'WITH'", "'VALUES'", "'CREATE'", "'TABLE'", "'VIEW'", 
-                     "'REPLACE'", "'INSERT'", "'DELETE'", "'INTO'", "'DESCRIBE'", 
-                     "'EXPLAIN'", "'FORMAT'", "'LOGICAL'", "'CODEGEN'", 
-                     "'CAST'", "'SHOW'", "'TABLES'", "'COLUMNS'", "'COLUMN'", 
-                     "'USE'", "'PARTITIONS'", "'FUNCTIONS'", "'DROP'", "'UNION'", 
-                     "'EXCEPT'", "'INTERSECT'", "'TO'", "'TABLESAMPLE'", 
-                     "'STRATIFY'", "'ALTER'", "'RENAME'", "'ARRAY'", "'MAP'", 
-                     "'STRUCT'", "'COMMENT'", "'SET'", "'RESET'", "'DATA'", 
-                     "'START'", "'TRANSACTION'", "'COMMIT'", "'ROLLBACK'", 
-                     "'MACRO'", "'IF'", "<INVALID>", "'<=>'", "'<>'", "'!='", 
-                     "'<'", "<INVALID>", "'>'", "<INVALID>", "'+'", "'-'", 
-                     "'*'", "'/'", "'%'", "'DIV'", "'~'", "'&'", "'|'", 
-                     "'^'", "'PERCENT'", "'BUCKET'", "'OUT'", "'OF'", "'SORT'", 
-                     "'CLUSTER'", "'DISTRIBUTE'", "'OVERWRITE'", "'TRANSFORM'", 
-                     "'REDUCE'", "'USING'", "'SERDE'", "'SERDEPROPERTIES'", 
-                     "'RECORDREADER'", "'RECORDWRITER'", "'DELIMITED'", 
-                     "'FIELDS'", "'TERMINATED'", "'COLLECTION'", "'ITEMS'", 
-                     "'KEYS'", "'ESCAPED'", "'LINES'", "'SEPARATED'", "'FUNCTION'", 
-                     "'EXTENDED'", "'REFRESH'", "'CLEAR'", "'CACHE'", "'UNCACHE'", 
-                     "'LAZY'", "'FORMATTED'", "<INVALID>", "'OPTIONS'", 
-                     "'UNSET'", "'TBLPROPERTIES'", "'DBPROPERTIES'", "'BUCKETS'", 
-                     "'SKEWED'", "'STORED'", "'DIRECTORIES'", "'LOCATION'", 
-                     "'EXCHANGE'", "'ARCHIVE'", "'UNARCHIVE'", "'FILEFORMAT'", 
-                     "'TOUCH'", "'COMPACT'", "'CONCATENATE'", "'CHANGE'", 
-                     "'CASCADE'", "'RESTRICT'", "'CLUSTERED'", "'SORTED'", 
-                     "'PURGE'", "'INPUTFORMAT'", "'OUTPUTFORMAT'", "<INVALID>", 
-                     "<INVALID>", "'DFS'", "'TRUNCATE'", "'ANALYZE'", "'COMPUTE'", 
-                     "'LIST'", "'STATISTICS'", "'PARTITIONED'", "'EXTERNAL'", 
-                     "'DEFINED'", "'REVOKE'", "'GRANT'", "'LOCK'", "'UNLOCK'", 
-                     "'MSCK'", "'REPAIR'", "'RECOVER'", "'EXPORT'", "'IMPORT'", 
-                     "'LOAD'", "'ROLE'", "'ROLES'", "'COMPACTIONS'", "'PRINCIPALS'", 
-                     "'TRANSACTIONS'", "'INDEX'", "'INDEXES'", "'LOCKS'", 
-                     "'OPTION'", "'ANTI'", "'LOCAL'", "'INPATH'", "'CURRENT_DATE'", 
-                     "'CURRENT_TIMESTAMP'" ]
+    literalNames = [
+        "<INVALID>",
+        "'('",
+        "')'",
+        "','",
+        "'.'",
+        "'['",
+        "']'",
+        "':'",
+        "'SELECT'",
+        "'FROM'",
+        "'ADD'",
+        "'AS'",
+        "'ALL'",
+        "'DISTINCT'",
+        "'WHERE'",
+        "'GROUP'",
+        "'BY'",
+        "'GROUPING'",
+        "'SETS'",
+        "'CUBE'",
+        "'ROLLUP'",
+        "'ORDER'",
+        "'HAVING'",
+        "'LIMIT'",
+        "'AT'",
+        "'OR'",
+        "'AND'",
+        "'IN'",
+        "<INVALID>",
+        "'NO'",
+        "'EXISTS'",
+        "'BETWEEN'",
+        "'LIKE'",
+        "<INVALID>",
+        "'IS'",
+        "'NULL'",
+        "'TRUE'",
+        "'FALSE'",
+        "'NULLS'",
+        "'ASC'",
+        "'DESC'",
+        "'FOR'",
+        "'INTERVAL'",
+        "'CASE'",
+        "'WHEN'",
+        "'THEN'",
+        "'ELSE'",
+        "'END'",
+        "'JOIN'",
+        "'CROSS'",
+        "'OUTER'",
+        "'INNER'",
+        "'LEFT'",
+        "'SEMI'",
+        "'RIGHT'",
+        "'FULL'",
+        "'NATURAL'",
+        "'ON'",
+        "'LATERAL'",
+        "'WINDOW'",
+        "'OVER'",
+        "'PARTITION'",
+        "'RANGE'",
+        "'ROWS'",
+        "'UNBOUNDED'",
+        "'PRECEDING'",
+        "'FOLLOWING'",
+        "'CURRENT'",
+        "'ROW'",
+        "'WITH'",
+        "'VALUES'",
+        "'CREATE'",
+        "'TABLE'",
+        "'VIEW'",
+        "'REPLACE'",
+        "'INSERT'",
+        "'DELETE'",
+        "'INTO'",
+        "'DESCRIBE'",
+        "'EXPLAIN'",
+        "'FORMAT'",
+        "'LOGICAL'",
+        "'CODEGEN'",
+        "'CAST'",
+        "'SHOW'",
+        "'TABLES'",
+        "'COLUMNS'",
+        "'COLUMN'",
+        "'USE'",
+        "'PARTITIONS'",
+        "'FUNCTIONS'",
+        "'DROP'",
+        "'UNION'",
+        "'EXCEPT'",
+        "'INTERSECT'",
+        "'TO'",
+        "'TABLESAMPLE'",
+        "'STRATIFY'",
+        "'ALTER'",
+        "'RENAME'",
+        "'ARRAY'",
+        "'MAP'",
+        "'STRUCT'",
+        "'COMMENT'",
+        "'SET'",
+        "'RESET'",
+        "'DATA'",
+        "'START'",
+        "'TRANSACTION'",
+        "'COMMIT'",
+        "'ROLLBACK'",
+        "'MACRO'",
+        "'IF'",
+        "<INVALID>",
+        "'<=>'",
+        "'<>'",
+        "'!='",
+        "'<'",
+        "<INVALID>",
+        "'>'",
+        "<INVALID>",
+        "'+'",
+        "'-'",
+        "'*'",
+        "'/'",
+        "'%'",
+        "'DIV'",
+        "'~'",
+        "'&'",
+        "'|'",
+        "'^'",
+        "'PERCENT'",
+        "'BUCKET'",
+        "'OUT'",
+        "'OF'",
+        "'SORT'",
+        "'CLUSTER'",
+        "'DISTRIBUTE'",
+        "'OVERWRITE'",
+        "'TRANSFORM'",
+        "'REDUCE'",
+        "'USING'",
+        "'SERDE'",
+        "'SERDEPROPERTIES'",
+        "'RECORDREADER'",
+        "'RECORDWRITER'",
+        "'DELIMITED'",
+        "'FIELDS'",
+        "'TERMINATED'",
+        "'COLLECTION'",
+        "'ITEMS'",
+        "'KEYS'",
+        "'ESCAPED'",
+        "'LINES'",
+        "'SEPARATED'",
+        "'FUNCTION'",
+        "'EXTENDED'",
+        "'REFRESH'",
+        "'CLEAR'",
+        "'CACHE'",
+        "'UNCACHE'",
+        "'LAZY'",
+        "'FORMATTED'",
+        "<INVALID>",
+        "'OPTIONS'",
+        "'UNSET'",
+        "'TBLPROPERTIES'",
+        "'DBPROPERTIES'",
+        "'BUCKETS'",
+        "'SKEWED'",
+        "'STORED'",
+        "'DIRECTORIES'",
+        "'LOCATION'",
+        "'EXCHANGE'",
+        "'ARCHIVE'",
+        "'UNARCHIVE'",
+        "'FILEFORMAT'",
+        "'TOUCH'",
+        "'COMPACT'",
+        "'CONCATENATE'",
+        "'CHANGE'",
+        "'CASCADE'",
+        "'RESTRICT'",
+        "'CLUSTERED'",
+        "'SORTED'",
+        "'PURGE'",
+        "'INPUTFORMAT'",
+        "'OUTPUTFORMAT'",
+        "<INVALID>",
+        "<INVALID>",
+        "'DFS'",
+        "'TRUNCATE'",
+        "'ANALYZE'",
+        "'COMPUTE'",
+        "'LIST'",
+        "'STATISTICS'",
+        "'PARTITIONED'",
+        "'EXTERNAL'",
+        "'DEFINED'",
+        "'REVOKE'",
+        "'GRANT'",
+        "'LOCK'",
+        "'UNLOCK'",
+        "'MSCK'",
+        "'REPAIR'",
+        "'RECOVER'",
+        "'EXPORT'",
+        "'IMPORT'",
+        "'LOAD'",
+        "'ROLE'",
+        "'ROLES'",
+        "'COMPACTIONS'",
+        "'PRINCIPALS'",
+        "'TRANSACTIONS'",
+        "'INDEX'",
+        "'INDEXES'",
+        "'LOCKS'",
+        "'OPTION'",
+        "'ANTI'",
+        "'LOCAL'",
+        "'INPATH'",
+        "'CURRENT_DATE'",
+        "'CURRENT_TIMESTAMP'",
+    ]
 
-    symbolicNames = [ "<INVALID>", "<INVALID>", "<INVALID>", "<INVALID>", 
-                      "<INVALID>", "<INVALID>", "<INVALID>", "<INVALID>", 
-                      "SELECT", "FROM", "ADD", "AS", "ALL", "DISTINCT", 
-                      "WHERE", "GROUP", "BY", "GROUPING", "SETS", "CUBE", 
-                      "ROLLUP", "ORDER", "HAVING", "LIMIT", "AT", "OR", 
-                      "AND", "IN", "NOT", "NO", "EXISTS", "BETWEEN", "LIKE", 
-                      "RLIKE", "IS", "NULL", "TRUE", "FALSE", "NULLS", "ASC", 
-                      "DESC", "FOR", "INTERVAL", "CASE", "WHEN", "THEN", 
-                      "ELSE", "END", "JOIN", "CROSS", "OUTER", "INNER", 
-                      "LEFT", "SEMI", "RIGHT", "FULL", "NATURAL", "ON", 
-                      "LATERAL", "WINDOW", "OVER", "PARTITION", "RANGE", 
-                      "ROWS", "UNBOUNDED", "PRECEDING", "FOLLOWING", "CURRENT", 
-                      "ROW", "WITH", "VALUES", "CREATE", "TABLE", "VIEW", 
-                      "REPLACE", "INSERT", "DELETE", "INTO", "DESCRIBE", 
-                      "EXPLAIN", "FORMAT", "LOGICAL", "CODEGEN", "CAST", 
-                      "SHOW", "TABLES", "COLUMNS", "COLUMN", "USE", "PARTITIONS", 
-                      "FUNCTIONS", "DROP", "UNION", "EXCEPT", "INTERSECT", 
-                      "TO", "TABLESAMPLE", "STRATIFY", "ALTER", "RENAME", 
-                      "ARRAY", "MAP", "STRUCT", "COMMENT", "SET", "RESET", 
-                      "DATA", "START", "TRANSACTION", "COMMIT", "ROLLBACK", 
-                      "MACRO", "IF", "EQ", "NSEQ", "NEQ", "NEQJ", "LT", 
-                      "LTE", "GT", "GTE", "PLUS", "MINUS", "ASTERISK", "SLASH", 
-                      "PERCENT", "DIV", "TILDE", "AMPERSAND", "PIPE", "HAT", 
-                      "PERCENTLIT", "BUCKET", "OUT", "OF", "SORT", "CLUSTER", 
-                      "DISTRIBUTE", "OVERWRITE", "TRANSFORM", "REDUCE", 
-                      "USING", "SERDE", "SERDEPROPERTIES", "RECORDREADER", 
-                      "RECORDWRITER", "DELIMITED", "FIELDS", "TERMINATED", 
-                      "COLLECTION", "ITEMS", "KEYS", "ESCAPED", "LINES", 
-                      "SEPARATED", "FUNCTION", "EXTENDED", "REFRESH", "CLEAR", 
-                      "CACHE", "UNCACHE", "LAZY", "FORMATTED", "TEMPORARY", 
-                      "OPTIONS", "UNSET", "TBLPROPERTIES", "DBPROPERTIES", 
-                      "BUCKETS", "SKEWED", "STORED", "DIRECTORIES", "LOCATION", 
-                      "EXCHANGE", "ARCHIVE", "UNARCHIVE", "FILEFORMAT", 
-                      "TOUCH", "COMPACT", "CONCATENATE", "CHANGE", "CASCADE", 
-                      "RESTRICT", "CLUSTERED", "SORTED", "PURGE", "INPUTFORMAT", 
-                      "OUTPUTFORMAT", "DATABASE", "DATABASES", "DFS", "TRUNCATE", 
-                      "ANALYZE", "COMPUTE", "LIST", "STATISTICS", "PARTITIONED", 
-                      "EXTERNAL", "DEFINED", "REVOKE", "GRANT", "LOCK", 
-                      "UNLOCK", "MSCK", "REPAIR", "RECOVER", "EXPORT", "IMPORT", 
-                      "LOAD", "ROLE", "ROLES", "COMPACTIONS", "PRINCIPALS", 
-                      "TRANSACTIONS", "INDEX", "INDEXES", "LOCKS", "OPTION", 
-                      "ANTI", "LOCAL", "INPATH", "CURRENT_DATE", "CURRENT_TIMESTAMP", 
-                      "STRING", "BIGINT_LITERAL", "SMALLINT_LITERAL", "TINYINT_LITERAL", 
-                      "BYTELENGTH_LITERAL", "INTEGER_VALUE", "DECIMAL_VALUE", 
-                      "SCIENTIFIC_DECIMAL_VALUE", "DOUBLE_LITERAL", "BIGDECIMAL_LITERAL", 
-                      "IDENTIFIER", "BACKQUOTED_IDENTIFIER", "SIMPLE_COMMENT", 
-                      "BRACKETED_COMMENT", "WS", "UNRECOGNIZED", "DELIMITER" ]
+    symbolicNames = [
+        "<INVALID>",
+        "<INVALID>",
+        "<INVALID>",
+        "<INVALID>",
+        "<INVALID>",
+        "<INVALID>",
+        "<INVALID>",
+        "<INVALID>",
+        "SELECT",
+        "FROM",
+        "ADD",
+        "AS",
+        "ALL",
+        "DISTINCT",
+        "WHERE",
+        "GROUP",
+        "BY",
+        "GROUPING",
+        "SETS",
+        "CUBE",
+        "ROLLUP",
+        "ORDER",
+        "HAVING",
+        "LIMIT",
+        "AT",
+        "OR",
+        "AND",
+        "IN",
+        "NOT",
+        "NO",
+        "EXISTS",
+        "BETWEEN",
+        "LIKE",
+        "RLIKE",
+        "IS",
+        "NULL",
+        "TRUE",
+        "FALSE",
+        "NULLS",
+        "ASC",
+        "DESC",
+        "FOR",
+        "INTERVAL",
+        "CASE",
+        "WHEN",
+        "THEN",
+        "ELSE",
+        "END",
+        "JOIN",
+        "CROSS",
+        "OUTER",
+        "INNER",
+        "LEFT",
+        "SEMI",
+        "RIGHT",
+        "FULL",
+        "NATURAL",
+        "ON",
+        "LATERAL",
+        "WINDOW",
+        "OVER",
+        "PARTITION",
+        "RANGE",
+        "ROWS",
+        "UNBOUNDED",
+        "PRECEDING",
+        "FOLLOWING",
+        "CURRENT",
+        "ROW",
+        "WITH",
+        "VALUES",
+        "CREATE",
+        "TABLE",
+        "VIEW",
+        "REPLACE",
+        "INSERT",
+        "DELETE",
+        "INTO",
+        "DESCRIBE",
+        "EXPLAIN",
+        "FORMAT",
+        "LOGICAL",
+        "CODEGEN",
+        "CAST",
+        "SHOW",
+        "TABLES",
+        "COLUMNS",
+        "COLUMN",
+        "USE",
+        "PARTITIONS",
+        "FUNCTIONS",
+        "DROP",
+        "UNION",
+        "EXCEPT",
+        "INTERSECT",
+        "TO",
+        "TABLESAMPLE",
+        "STRATIFY",
+        "ALTER",
+        "RENAME",
+        "ARRAY",
+        "MAP",
+        "STRUCT",
+        "COMMENT",
+        "SET",
+        "RESET",
+        "DATA",
+        "START",
+        "TRANSACTION",
+        "COMMIT",
+        "ROLLBACK",
+        "MACRO",
+        "IF",
+        "EQ",
+        "NSEQ",
+        "NEQ",
+        "NEQJ",
+        "LT",
+        "LTE",
+        "GT",
+        "GTE",
+        "PLUS",
+        "MINUS",
+        "ASTERISK",
+        "SLASH",
+        "PERCENT",
+        "DIV",
+        "TILDE",
+        "AMPERSAND",
+        "PIPE",
+        "HAT",
+        "PERCENTLIT",
+        "BUCKET",
+        "OUT",
+        "OF",
+        "SORT",
+        "CLUSTER",
+        "DISTRIBUTE",
+        "OVERWRITE",
+        "TRANSFORM",
+        "REDUCE",
+        "USING",
+        "SERDE",
+        "SERDEPROPERTIES",
+        "RECORDREADER",
+        "RECORDWRITER",
+        "DELIMITED",
+        "FIELDS",
+        "TERMINATED",
+        "COLLECTION",
+        "ITEMS",
+        "KEYS",
+        "ESCAPED",
+        "LINES",
+        "SEPARATED",
+        "FUNCTION",
+        "EXTENDED",
+        "REFRESH",
+        "CLEAR",
+        "CACHE",
+        "UNCACHE",
+        "LAZY",
+        "FORMATTED",
+        "TEMPORARY",
+        "OPTIONS",
+        "UNSET",
+        "TBLPROPERTIES",
+        "DBPROPERTIES",
+        "BUCKETS",
+        "SKEWED",
+        "STORED",
+        "DIRECTORIES",
+        "LOCATION",
+        "EXCHANGE",
+        "ARCHIVE",
+        "UNARCHIVE",
+        "FILEFORMAT",
+        "TOUCH",
+        "COMPACT",
+        "CONCATENATE",
+        "CHANGE",
+        "CASCADE",
+        "RESTRICT",
+        "CLUSTERED",
+        "SORTED",
+        "PURGE",
+        "INPUTFORMAT",
+        "OUTPUTFORMAT",
+        "DATABASE",
+        "DATABASES",
+        "DFS",
+        "TRUNCATE",
+        "ANALYZE",
+        "COMPUTE",
+        "LIST",
+        "STATISTICS",
+        "PARTITIONED",
+        "EXTERNAL",
+        "DEFINED",
+        "REVOKE",
+        "GRANT",
+        "LOCK",
+        "UNLOCK",
+        "MSCK",
+        "REPAIR",
+        "RECOVER",
+        "EXPORT",
+        "IMPORT",
+        "LOAD",
+        "ROLE",
+        "ROLES",
+        "COMPACTIONS",
+        "PRINCIPALS",
+        "TRANSACTIONS",
+        "INDEX",
+        "INDEXES",
+        "LOCKS",
+        "OPTION",
+        "ANTI",
+        "LOCAL",
+        "INPATH",
+        "CURRENT_DATE",
+        "CURRENT_TIMESTAMP",
+        "STRING",
+        "BIGINT_LITERAL",
+        "SMALLINT_LITERAL",
+        "TINYINT_LITERAL",
+        "BYTELENGTH_LITERAL",
+        "INTEGER_VALUE",
+        "DECIMAL_VALUE",
+        "SCIENTIFIC_DECIMAL_VALUE",
+        "DOUBLE_LITERAL",
+        "BIGDECIMAL_LITERAL",
+        "IDENTIFIER",
+        "BACKQUOTED_IDENTIFIER",
+        "SIMPLE_COMMENT",
+        "BRACKETED_COMMENT",
+        "WS",
+        "UNRECOGNIZED",
+        "DELIMITER",
+    ]
 
     RULE_singleStatement = 0
     RULE_singleExpression = 1
@@ -1368,310 +1742,373 @@ class SqlBaseParser ( Parser ):
     RULE_number = 85
     RULE_nonReserved = 86
 
-    ruleNames =  [ "singleStatement", "singleExpression", "singleTableIdentifier", 
-                   "singleDataType", "statement", "unsupportedHiveNativeCommands", 
-                   "createTableHeader", "bucketSpec", "skewSpec", "locationSpec", 
-                   "query", "insertInto", "partitionSpecLocation", "partitionSpec", 
-                   "partitionVal", "describeFuncName", "describeColName", 
-                   "ctes", "namedQuery", "tableProvider", "tablePropertyList", 
-                   "tableProperty", "tablePropertyKey", "constantList", 
-                   "nestedConstantList", "createFileFormat", "fileFormat", 
-                   "storageHandler", "resource", "queryNoWith", "queryOrganization", 
-                   "multiInsertQueryBody", "queryTerm", "queryPrimary", 
-                   "sortItem", "querySpecification", "fromClause", "aggregation", 
-                   "groupingSet", "lateralView", "setQuantifier", "relation", 
-                   "joinRelation", "joinType", "joinCriteria", "sample", 
-                   "identifierList", "identifierSeq", "orderedIdentifierList", 
-                   "orderedIdentifier", "identifierCommentList", "identifierComment", 
-                   "relationPrimary", "inlineTable", "rowFormat", "tableIdentifier", 
-                   "namedExpression", "namedExpressionSeq", "expression", 
-                   "booleanExpression", "predicated", "predicate", "valueExpression", 
-                   "primaryExpression", "constant", "comparisonOperator", 
-                   "arithmeticOperator", "predicateOperator", "booleanValue", 
-                   "interval", "intervalField", "intervalValue", "dataType", 
-                   "colTypeList", "colType", "whenClause", "windows", "namedWindow", 
-                   "windowSpec", "windowFrame", "frameBound", "qualifiedName", 
-                   "identifier", "strictIdentifier", "quotedIdentifier", 
-                   "number", "nonReserved" ]
+    ruleNames = [
+        "singleStatement",
+        "singleExpression",
+        "singleTableIdentifier",
+        "singleDataType",
+        "statement",
+        "unsupportedHiveNativeCommands",
+        "createTableHeader",
+        "bucketSpec",
+        "skewSpec",
+        "locationSpec",
+        "query",
+        "insertInto",
+        "partitionSpecLocation",
+        "partitionSpec",
+        "partitionVal",
+        "describeFuncName",
+        "describeColName",
+        "ctes",
+        "namedQuery",
+        "tableProvider",
+        "tablePropertyList",
+        "tableProperty",
+        "tablePropertyKey",
+        "constantList",
+        "nestedConstantList",
+        "createFileFormat",
+        "fileFormat",
+        "storageHandler",
+        "resource",
+        "queryNoWith",
+        "queryOrganization",
+        "multiInsertQueryBody",
+        "queryTerm",
+        "queryPrimary",
+        "sortItem",
+        "querySpecification",
+        "fromClause",
+        "aggregation",
+        "groupingSet",
+        "lateralView",
+        "setQuantifier",
+        "relation",
+        "joinRelation",
+        "joinType",
+        "joinCriteria",
+        "sample",
+        "identifierList",
+        "identifierSeq",
+        "orderedIdentifierList",
+        "orderedIdentifier",
+        "identifierCommentList",
+        "identifierComment",
+        "relationPrimary",
+        "inlineTable",
+        "rowFormat",
+        "tableIdentifier",
+        "namedExpression",
+        "namedExpressionSeq",
+        "expression",
+        "booleanExpression",
+        "predicated",
+        "predicate",
+        "valueExpression",
+        "primaryExpression",
+        "constant",
+        "comparisonOperator",
+        "arithmeticOperator",
+        "predicateOperator",
+        "booleanValue",
+        "interval",
+        "intervalField",
+        "intervalValue",
+        "dataType",
+        "colTypeList",
+        "colType",
+        "whenClause",
+        "windows",
+        "namedWindow",
+        "windowSpec",
+        "windowFrame",
+        "frameBound",
+        "qualifiedName",
+        "identifier",
+        "strictIdentifier",
+        "quotedIdentifier",
+        "number",
+        "nonReserved",
+    ]
 
     EOF = Token.EOF
-    T__0=1
-    T__1=2
-    T__2=3
-    T__3=4
-    T__4=5
-    T__5=6
-    T__6=7
-    SELECT=8
-    FROM=9
-    ADD=10
-    AS=11
-    ALL=12
-    DISTINCT=13
-    WHERE=14
-    GROUP=15
-    BY=16
-    GROUPING=17
-    SETS=18
-    CUBE=19
-    ROLLUP=20
-    ORDER=21
-    HAVING=22
-    LIMIT=23
-    AT=24
-    OR=25
-    AND=26
-    IN=27
-    NOT=28
-    NO=29
-    EXISTS=30
-    BETWEEN=31
-    LIKE=32
-    RLIKE=33
-    IS=34
-    NULL=35
-    TRUE=36
-    FALSE=37
-    NULLS=38
-    ASC=39
-    DESC=40
-    FOR=41
-    INTERVAL=42
-    CASE=43
-    WHEN=44
-    THEN=45
-    ELSE=46
-    END=47
-    JOIN=48
-    CROSS=49
-    OUTER=50
-    INNER=51
-    LEFT=52
-    SEMI=53
-    RIGHT=54
-    FULL=55
-    NATURAL=56
-    ON=57
-    LATERAL=58
-    WINDOW=59
-    OVER=60
-    PARTITION=61
-    RANGE=62
-    ROWS=63
-    UNBOUNDED=64
-    PRECEDING=65
-    FOLLOWING=66
-    CURRENT=67
-    ROW=68
-    WITH=69
-    VALUES=70
-    CREATE=71
-    TABLE=72
-    VIEW=73
-    REPLACE=74
-    INSERT=75
-    DELETE=76
-    INTO=77
-    DESCRIBE=78
-    EXPLAIN=79
-    FORMAT=80
-    LOGICAL=81
-    CODEGEN=82
-    CAST=83
-    SHOW=84
-    TABLES=85
-    COLUMNS=86
-    COLUMN=87
-    USE=88
-    PARTITIONS=89
-    FUNCTIONS=90
-    DROP=91
-    UNION=92
-    EXCEPT=93
-    INTERSECT=94
-    TO=95
-    TABLESAMPLE=96
-    STRATIFY=97
-    ALTER=98
-    RENAME=99
-    ARRAY=100
-    MAP=101
-    STRUCT=102
-    COMMENT=103
-    SET=104
-    RESET=105
-    DATA=106
-    START=107
-    TRANSACTION=108
-    COMMIT=109
-    ROLLBACK=110
-    MACRO=111
-    IF=112
-    EQ=113
-    NSEQ=114
-    NEQ=115
-    NEQJ=116
-    LT=117
-    LTE=118
-    GT=119
-    GTE=120
-    PLUS=121
-    MINUS=122
-    ASTERISK=123
-    SLASH=124
-    PERCENT=125
-    DIV=126
-    TILDE=127
-    AMPERSAND=128
-    PIPE=129
-    HAT=130
-    PERCENTLIT=131
-    BUCKET=132
-    OUT=133
-    OF=134
-    SORT=135
-    CLUSTER=136
-    DISTRIBUTE=137
-    OVERWRITE=138
-    TRANSFORM=139
-    REDUCE=140
-    USING=141
-    SERDE=142
-    SERDEPROPERTIES=143
-    RECORDREADER=144
-    RECORDWRITER=145
-    DELIMITED=146
-    FIELDS=147
-    TERMINATED=148
-    COLLECTION=149
-    ITEMS=150
-    KEYS=151
-    ESCAPED=152
-    LINES=153
-    SEPARATED=154
-    FUNCTION=155
-    EXTENDED=156
-    REFRESH=157
-    CLEAR=158
-    CACHE=159
-    UNCACHE=160
-    LAZY=161
-    FORMATTED=162
-    TEMPORARY=163
-    OPTIONS=164
-    UNSET=165
-    TBLPROPERTIES=166
-    DBPROPERTIES=167
-    BUCKETS=168
-    SKEWED=169
-    STORED=170
-    DIRECTORIES=171
-    LOCATION=172
-    EXCHANGE=173
-    ARCHIVE=174
-    UNARCHIVE=175
-    FILEFORMAT=176
-    TOUCH=177
-    COMPACT=178
-    CONCATENATE=179
-    CHANGE=180
-    CASCADE=181
-    RESTRICT=182
-    CLUSTERED=183
-    SORTED=184
-    PURGE=185
-    INPUTFORMAT=186
-    OUTPUTFORMAT=187
-    DATABASE=188
-    DATABASES=189
-    DFS=190
-    TRUNCATE=191
-    ANALYZE=192
-    COMPUTE=193
-    LIST=194
-    STATISTICS=195
-    PARTITIONED=196
-    EXTERNAL=197
-    DEFINED=198
-    REVOKE=199
-    GRANT=200
-    LOCK=201
-    UNLOCK=202
-    MSCK=203
-    REPAIR=204
-    RECOVER=205
-    EXPORT=206
-    IMPORT=207
-    LOAD=208
-    ROLE=209
-    ROLES=210
-    COMPACTIONS=211
-    PRINCIPALS=212
-    TRANSACTIONS=213
-    INDEX=214
-    INDEXES=215
-    LOCKS=216
-    OPTION=217
-    ANTI=218
-    LOCAL=219
-    INPATH=220
-    CURRENT_DATE=221
-    CURRENT_TIMESTAMP=222
-    STRING=223
-    BIGINT_LITERAL=224
-    SMALLINT_LITERAL=225
-    TINYINT_LITERAL=226
-    BYTELENGTH_LITERAL=227
-    INTEGER_VALUE=228
-    DECIMAL_VALUE=229
-    SCIENTIFIC_DECIMAL_VALUE=230
-    DOUBLE_LITERAL=231
-    BIGDECIMAL_LITERAL=232
-    IDENTIFIER=233
-    BACKQUOTED_IDENTIFIER=234
-    SIMPLE_COMMENT=235
-    BRACKETED_COMMENT=236
-    WS=237
-    UNRECOGNIZED=238
-    DELIMITER=239
+    T__0 = 1
+    T__1 = 2
+    T__2 = 3
+    T__3 = 4
+    T__4 = 5
+    T__5 = 6
+    T__6 = 7
+    SELECT = 8
+    FROM = 9
+    ADD = 10
+    AS = 11
+    ALL = 12
+    DISTINCT = 13
+    WHERE = 14
+    GROUP = 15
+    BY = 16
+    GROUPING = 17
+    SETS = 18
+    CUBE = 19
+    ROLLUP = 20
+    ORDER = 21
+    HAVING = 22
+    LIMIT = 23
+    AT = 24
+    OR = 25
+    AND = 26
+    IN = 27
+    NOT = 28
+    NO = 29
+    EXISTS = 30
+    BETWEEN = 31
+    LIKE = 32
+    RLIKE = 33
+    IS = 34
+    NULL = 35
+    TRUE = 36
+    FALSE = 37
+    NULLS = 38
+    ASC = 39
+    DESC = 40
+    FOR = 41
+    INTERVAL = 42
+    CASE = 43
+    WHEN = 44
+    THEN = 45
+    ELSE = 46
+    END = 47
+    JOIN = 48
+    CROSS = 49
+    OUTER = 50
+    INNER = 51
+    LEFT = 52
+    SEMI = 53
+    RIGHT = 54
+    FULL = 55
+    NATURAL = 56
+    ON = 57
+    LATERAL = 58
+    WINDOW = 59
+    OVER = 60
+    PARTITION = 61
+    RANGE = 62
+    ROWS = 63
+    UNBOUNDED = 64
+    PRECEDING = 65
+    FOLLOWING = 66
+    CURRENT = 67
+    ROW = 68
+    WITH = 69
+    VALUES = 70
+    CREATE = 71
+    TABLE = 72
+    VIEW = 73
+    REPLACE = 74
+    INSERT = 75
+    DELETE = 76
+    INTO = 77
+    DESCRIBE = 78
+    EXPLAIN = 79
+    FORMAT = 80
+    LOGICAL = 81
+    CODEGEN = 82
+    CAST = 83
+    SHOW = 84
+    TABLES = 85
+    COLUMNS = 86
+    COLUMN = 87
+    USE = 88
+    PARTITIONS = 89
+    FUNCTIONS = 90
+    DROP = 91
+    UNION = 92
+    EXCEPT = 93
+    INTERSECT = 94
+    TO = 95
+    TABLESAMPLE = 96
+    STRATIFY = 97
+    ALTER = 98
+    RENAME = 99
+    ARRAY = 100
+    MAP = 101
+    STRUCT = 102
+    COMMENT = 103
+    SET = 104
+    RESET = 105
+    DATA = 106
+    START = 107
+    TRANSACTION = 108
+    COMMIT = 109
+    ROLLBACK = 110
+    MACRO = 111
+    IF = 112
+    EQ = 113
+    NSEQ = 114
+    NEQ = 115
+    NEQJ = 116
+    LT = 117
+    LTE = 118
+    GT = 119
+    GTE = 120
+    PLUS = 121
+    MINUS = 122
+    ASTERISK = 123
+    SLASH = 124
+    PERCENT = 125
+    DIV = 126
+    TILDE = 127
+    AMPERSAND = 128
+    PIPE = 129
+    HAT = 130
+    PERCENTLIT = 131
+    BUCKET = 132
+    OUT = 133
+    OF = 134
+    SORT = 135
+    CLUSTER = 136
+    DISTRIBUTE = 137
+    OVERWRITE = 138
+    TRANSFORM = 139
+    REDUCE = 140
+    USING = 141
+    SERDE = 142
+    SERDEPROPERTIES = 143
+    RECORDREADER = 144
+    RECORDWRITER = 145
+    DELIMITED = 146
+    FIELDS = 147
+    TERMINATED = 148
+    COLLECTION = 149
+    ITEMS = 150
+    KEYS = 151
+    ESCAPED = 152
+    LINES = 153
+    SEPARATED = 154
+    FUNCTION = 155
+    EXTENDED = 156
+    REFRESH = 157
+    CLEAR = 158
+    CACHE = 159
+    UNCACHE = 160
+    LAZY = 161
+    FORMATTED = 162
+    TEMPORARY = 163
+    OPTIONS = 164
+    UNSET = 165
+    TBLPROPERTIES = 166
+    DBPROPERTIES = 167
+    BUCKETS = 168
+    SKEWED = 169
+    STORED = 170
+    DIRECTORIES = 171
+    LOCATION = 172
+    EXCHANGE = 173
+    ARCHIVE = 174
+    UNARCHIVE = 175
+    FILEFORMAT = 176
+    TOUCH = 177
+    COMPACT = 178
+    CONCATENATE = 179
+    CHANGE = 180
+    CASCADE = 181
+    RESTRICT = 182
+    CLUSTERED = 183
+    SORTED = 184
+    PURGE = 185
+    INPUTFORMAT = 186
+    OUTPUTFORMAT = 187
+    DATABASE = 188
+    DATABASES = 189
+    DFS = 190
+    TRUNCATE = 191
+    ANALYZE = 192
+    COMPUTE = 193
+    LIST = 194
+    STATISTICS = 195
+    PARTITIONED = 196
+    EXTERNAL = 197
+    DEFINED = 198
+    REVOKE = 199
+    GRANT = 200
+    LOCK = 201
+    UNLOCK = 202
+    MSCK = 203
+    REPAIR = 204
+    RECOVER = 205
+    EXPORT = 206
+    IMPORT = 207
+    LOAD = 208
+    ROLE = 209
+    ROLES = 210
+    COMPACTIONS = 211
+    PRINCIPALS = 212
+    TRANSACTIONS = 213
+    INDEX = 214
+    INDEXES = 215
+    LOCKS = 216
+    OPTION = 217
+    ANTI = 218
+    LOCAL = 219
+    INPATH = 220
+    CURRENT_DATE = 221
+    CURRENT_TIMESTAMP = 222
+    STRING = 223
+    BIGINT_LITERAL = 224
+    SMALLINT_LITERAL = 225
+    TINYINT_LITERAL = 226
+    BYTELENGTH_LITERAL = 227
+    INTEGER_VALUE = 228
+    DECIMAL_VALUE = 229
+    SCIENTIFIC_DECIMAL_VALUE = 230
+    DOUBLE_LITERAL = 231
+    BIGDECIMAL_LITERAL = 232
+    IDENTIFIER = 233
+    BACKQUOTED_IDENTIFIER = 234
+    SIMPLE_COMMENT = 235
+    BRACKETED_COMMENT = 236
+    WS = 237
+    UNRECOGNIZED = 238
+    DELIMITER = 239
 
-    def __init__(self, input:TokenStream, output:TextIO = sys.stdout):
+    def __init__(self, input: TokenStream, output: TextIO = sys.stdout):
         super().__init__(input, output)
         self.checkVersion("4.9.2")
-        self._interp = ParserATNSimulator(self, self.atn, self.decisionsToDFA, self.sharedContextCache)
+        self._interp = ParserATNSimulator(
+            self, self.atn, self.decisionsToDFA, self.sharedContextCache
+        )
         self._predicates = None
 
+    """
+    Verify whether current token is a valid decimal token (which contains dot).
+    Returns true if the character that follows the token is not a digit or letter or underscore.
 
+    For example:
+    For char stream "2.3", "2." is not a valid decimal token, because it is followed by digit '3'.
+    For char stream "2.3_", "2.3" is not a valid decimal token, because it is followed by '_'.
+    For char stream "2.3W", "2.3" is not a valid decimal token, because it is followed by 'W'.
+    For char stream "12.0D 34.E2+0.12 "  12.0D is a valid decimal token because it is folllowed
+    by a space. 34.E2 is a valid decimal token because it is followed by symbol '+'
+    which is not a digit or letter or underscore.
+    """
 
-      """
-      Verify whether current token is a valid decimal token (which contains dot).
-      Returns true if the character that follows the token is not a digit or letter or underscore.
-
-      For example:
-      For char stream "2.3", "2." is not a valid decimal token, because it is followed by digit '3'.
-      For char stream "2.3_", "2.3" is not a valid decimal token, because it is followed by '_'.
-      For char stream "2.3W", "2.3" is not a valid decimal token, because it is followed by 'W'.
-      For char stream "12.0D 34.E2+0.12 "  12.0D is a valid decimal token because it is folllowed
-      by a space. 34.E2 is a valid decimal token because it is followed by symbol '+'
-      which is not a digit or letter or underscore.
-      """
-      def isValidDecimal(self): 
+    def isValidDecimal(self):
         nextChar = self._input.LA(1)
-        return not ('A' <= nextChar <= 'Z' or '0' <= nextChar <= '9' or nextChar == '_')
-
-
-
+        return not ("A" <= nextChar <= "Z" or "0" <= nextChar <= "9" or nextChar == "_")
 
     class SingleStatementContext(ParserRuleContext):
-        __slots__ = 'parser'
+        __slots__ = "parser"
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
         def statement(self):
-            return self.getTypedRuleContext(SqlBaseParser.StatementContext,0)
-
+            return self.getTypedRuleContext(SqlBaseParser.StatementContext, 0)
 
         def EOF(self):
             return self.getToken(SqlBaseParser.EOF, 0)
@@ -1679,16 +2116,13 @@ class SqlBaseParser ( Parser ):
         def getRuleIndex(self):
             return SqlBaseParser.RULE_singleStatement
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterSingleStatement" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterSingleStatement"):
                 listener.enterSingleStatement(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitSingleStatement" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitSingleStatement"):
                 listener.exitSingleStatement(self)
-
-
-
 
     def singleStatement(self):
 
@@ -1708,17 +2142,17 @@ class SqlBaseParser ( Parser ):
             self.exitRule()
         return localctx
 
-
     class SingleExpressionContext(ParserRuleContext):
-        __slots__ = 'parser'
+        __slots__ = "parser"
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
         def namedExpression(self):
-            return self.getTypedRuleContext(SqlBaseParser.NamedExpressionContext,0)
-
+            return self.getTypedRuleContext(SqlBaseParser.NamedExpressionContext, 0)
 
         def EOF(self):
             return self.getToken(SqlBaseParser.EOF, 0)
@@ -1726,16 +2160,13 @@ class SqlBaseParser ( Parser ):
         def getRuleIndex(self):
             return SqlBaseParser.RULE_singleExpression
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterSingleExpression" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterSingleExpression"):
                 listener.enterSingleExpression(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitSingleExpression" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitSingleExpression"):
                 listener.exitSingleExpression(self)
-
-
-
 
     def singleExpression(self):
 
@@ -1755,17 +2186,17 @@ class SqlBaseParser ( Parser ):
             self.exitRule()
         return localctx
 
-
     class SingleTableIdentifierContext(ParserRuleContext):
-        __slots__ = 'parser'
+        __slots__ = "parser"
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
         def tableIdentifier(self):
-            return self.getTypedRuleContext(SqlBaseParser.TableIdentifierContext,0)
-
+            return self.getTypedRuleContext(SqlBaseParser.TableIdentifierContext, 0)
 
         def EOF(self):
             return self.getToken(SqlBaseParser.EOF, 0)
@@ -1773,20 +2204,19 @@ class SqlBaseParser ( Parser ):
         def getRuleIndex(self):
             return SqlBaseParser.RULE_singleTableIdentifier
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterSingleTableIdentifier" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterSingleTableIdentifier"):
                 listener.enterSingleTableIdentifier(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitSingleTableIdentifier" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitSingleTableIdentifier"):
                 listener.exitSingleTableIdentifier(self)
-
-
-
 
     def singleTableIdentifier(self):
 
-        localctx = SqlBaseParser.SingleTableIdentifierContext(self, self._ctx, self.state)
+        localctx = SqlBaseParser.SingleTableIdentifierContext(
+            self, self._ctx, self.state
+        )
         self.enterRule(localctx, 4, self.RULE_singleTableIdentifier)
         try:
             self.enterOuterAlt(localctx, 1)
@@ -1802,17 +2232,17 @@ class SqlBaseParser ( Parser ):
             self.exitRule()
         return localctx
 
-
     class SingleDataTypeContext(ParserRuleContext):
-        __slots__ = 'parser'
+        __slots__ = "parser"
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
         def dataType(self):
-            return self.getTypedRuleContext(SqlBaseParser.DataTypeContext,0)
-
+            return self.getTypedRuleContext(SqlBaseParser.DataTypeContext, 0)
 
         def EOF(self):
             return self.getToken(SqlBaseParser.EOF, 0)
@@ -1820,16 +2250,13 @@ class SqlBaseParser ( Parser ):
         def getRuleIndex(self):
             return SqlBaseParser.RULE_singleDataType
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterSingleDataType" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterSingleDataType"):
                 listener.enterSingleDataType(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitSingleDataType" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitSingleDataType"):
                 listener.exitSingleDataType(self)
-
-
-
 
     def singleDataType(self):
 
@@ -1849,1514 +2276,1674 @@ class SqlBaseParser ( Parser ):
             self.exitRule()
         return localctx
 
-
     class StatementContext(ParserRuleContext):
-        __slots__ = 'parser'
+        __slots__ = "parser"
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
-
 
         def getRuleIndex(self):
             return SqlBaseParser.RULE_statement
 
-     
-        def copyFrom(self, ctx:ParserRuleContext):
+        def copyFrom(self, ctx: ParserRuleContext):
             super().copyFrom(ctx)
 
-
-
     class ExplainContext(StatementContext):
-
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a SqlBaseParser.StatementContext
+        def __init__(
+            self, parser, ctx: ParserRuleContext
+        ):  # actually a SqlBaseParser.StatementContext
             super().__init__(parser)
             self.copyFrom(ctx)
 
         def EXPLAIN(self):
             return self.getToken(SqlBaseParser.EXPLAIN, 0)
+
         def statement(self):
-            return self.getTypedRuleContext(SqlBaseParser.StatementContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.StatementContext, 0)
 
         def LOGICAL(self):
             return self.getToken(SqlBaseParser.LOGICAL, 0)
+
         def FORMATTED(self):
             return self.getToken(SqlBaseParser.FORMATTED, 0)
+
         def EXTENDED(self):
             return self.getToken(SqlBaseParser.EXTENDED, 0)
+
         def CODEGEN(self):
             return self.getToken(SqlBaseParser.CODEGEN, 0)
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterExplain" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterExplain"):
                 listener.enterExplain(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitExplain" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitExplain"):
                 listener.exitExplain(self)
 
-
     class SetDatabasePropertiesContext(StatementContext):
-
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a SqlBaseParser.StatementContext
+        def __init__(
+            self, parser, ctx: ParserRuleContext
+        ):  # actually a SqlBaseParser.StatementContext
             super().__init__(parser)
             self.copyFrom(ctx)
 
         def ALTER(self):
             return self.getToken(SqlBaseParser.ALTER, 0)
+
         def DATABASE(self):
             return self.getToken(SqlBaseParser.DATABASE, 0)
+
         def identifier(self):
-            return self.getTypedRuleContext(SqlBaseParser.IdentifierContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.IdentifierContext, 0)
 
         def SET(self):
             return self.getToken(SqlBaseParser.SET, 0)
+
         def DBPROPERTIES(self):
             return self.getToken(SqlBaseParser.DBPROPERTIES, 0)
+
         def tablePropertyList(self):
-            return self.getTypedRuleContext(SqlBaseParser.TablePropertyListContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.TablePropertyListContext, 0)
 
-
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterSetDatabaseProperties" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterSetDatabaseProperties"):
                 listener.enterSetDatabaseProperties(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitSetDatabaseProperties" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitSetDatabaseProperties"):
                 listener.exitSetDatabaseProperties(self)
 
-
     class DropDatabaseContext(StatementContext):
-
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a SqlBaseParser.StatementContext
+        def __init__(
+            self, parser, ctx: ParserRuleContext
+        ):  # actually a SqlBaseParser.StatementContext
             super().__init__(parser)
             self.copyFrom(ctx)
 
         def DROP(self):
             return self.getToken(SqlBaseParser.DROP, 0)
+
         def DATABASE(self):
             return self.getToken(SqlBaseParser.DATABASE, 0)
+
         def identifier(self):
-            return self.getTypedRuleContext(SqlBaseParser.IdentifierContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.IdentifierContext, 0)
 
         def IF(self):
             return self.getToken(SqlBaseParser.IF, 0)
+
         def EXISTS(self):
             return self.getToken(SqlBaseParser.EXISTS, 0)
+
         def RESTRICT(self):
             return self.getToken(SqlBaseParser.RESTRICT, 0)
+
         def CASCADE(self):
             return self.getToken(SqlBaseParser.CASCADE, 0)
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterDropDatabase" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterDropDatabase"):
                 listener.enterDropDatabase(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitDropDatabase" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitDropDatabase"):
                 listener.exitDropDatabase(self)
 
-
     class CreateTableContext(StatementContext):
-
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a SqlBaseParser.StatementContext
+        def __init__(
+            self, parser, ctx: ParserRuleContext
+        ):  # actually a SqlBaseParser.StatementContext
             super().__init__(parser)
-            self.columns = None # ColTypeListContext
-            self.partitionColumns = None # ColTypeListContext
+            self.columns = None  # ColTypeListContext
+            self.partitionColumns = None  # ColTypeListContext
             self.copyFrom(ctx)
 
         def createTableHeader(self):
-            return self.getTypedRuleContext(SqlBaseParser.CreateTableHeaderContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.CreateTableHeaderContext, 0)
 
         def COMMENT(self):
             return self.getToken(SqlBaseParser.COMMENT, 0)
+
         def STRING(self):
             return self.getToken(SqlBaseParser.STRING, 0)
+
         def PARTITIONED(self):
             return self.getToken(SqlBaseParser.PARTITIONED, 0)
+
         def BY(self):
             return self.getToken(SqlBaseParser.BY, 0)
+
         def bucketSpec(self):
-            return self.getTypedRuleContext(SqlBaseParser.BucketSpecContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.BucketSpecContext, 0)
 
         def skewSpec(self):
-            return self.getTypedRuleContext(SqlBaseParser.SkewSpecContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.SkewSpecContext, 0)
 
         def rowFormat(self):
-            return self.getTypedRuleContext(SqlBaseParser.RowFormatContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.RowFormatContext, 0)
 
         def createFileFormat(self):
-            return self.getTypedRuleContext(SqlBaseParser.CreateFileFormatContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.CreateFileFormatContext, 0)
 
         def locationSpec(self):
-            return self.getTypedRuleContext(SqlBaseParser.LocationSpecContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.LocationSpecContext, 0)
 
         def TBLPROPERTIES(self):
             return self.getToken(SqlBaseParser.TBLPROPERTIES, 0)
+
         def tablePropertyList(self):
-            return self.getTypedRuleContext(SqlBaseParser.TablePropertyListContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.TablePropertyListContext, 0)
 
         def query(self):
-            return self.getTypedRuleContext(SqlBaseParser.QueryContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.QueryContext, 0)
 
-        def colTypeList(self, i:int=None):
+        def colTypeList(self, i: int = None):
             if i is None:
                 return self.getTypedRuleContexts(SqlBaseParser.ColTypeListContext)
             else:
-                return self.getTypedRuleContext(SqlBaseParser.ColTypeListContext,i)
+                return self.getTypedRuleContext(SqlBaseParser.ColTypeListContext, i)
 
         def AS(self):
             return self.getToken(SqlBaseParser.AS, 0)
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterCreateTable" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterCreateTable"):
                 listener.enterCreateTable(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitCreateTable" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitCreateTable"):
                 listener.exitCreateTable(self)
 
-
     class ResetConfigurationContext(StatementContext):
-
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a SqlBaseParser.StatementContext
+        def __init__(
+            self, parser, ctx: ParserRuleContext
+        ):  # actually a SqlBaseParser.StatementContext
             super().__init__(parser)
             self.copyFrom(ctx)
 
         def RESET(self):
             return self.getToken(SqlBaseParser.RESET, 0)
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterResetConfiguration" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterResetConfiguration"):
                 listener.enterResetConfiguration(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitResetConfiguration" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitResetConfiguration"):
                 listener.exitResetConfiguration(self)
 
-
     class DescribeDatabaseContext(StatementContext):
-
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a SqlBaseParser.StatementContext
+        def __init__(
+            self, parser, ctx: ParserRuleContext
+        ):  # actually a SqlBaseParser.StatementContext
             super().__init__(parser)
             self.copyFrom(ctx)
 
         def DATABASE(self):
             return self.getToken(SqlBaseParser.DATABASE, 0)
+
         def identifier(self):
-            return self.getTypedRuleContext(SqlBaseParser.IdentifierContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.IdentifierContext, 0)
 
         def DESC(self):
             return self.getToken(SqlBaseParser.DESC, 0)
+
         def DESCRIBE(self):
             return self.getToken(SqlBaseParser.DESCRIBE, 0)
+
         def EXTENDED(self):
             return self.getToken(SqlBaseParser.EXTENDED, 0)
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterDescribeDatabase" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterDescribeDatabase"):
                 listener.enterDescribeDatabase(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitDescribeDatabase" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitDescribeDatabase"):
                 listener.exitDescribeDatabase(self)
 
-
     class AlterViewQueryContext(StatementContext):
-
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a SqlBaseParser.StatementContext
+        def __init__(
+            self, parser, ctx: ParserRuleContext
+        ):  # actually a SqlBaseParser.StatementContext
             super().__init__(parser)
             self.copyFrom(ctx)
 
         def ALTER(self):
             return self.getToken(SqlBaseParser.ALTER, 0)
+
         def VIEW(self):
             return self.getToken(SqlBaseParser.VIEW, 0)
+
         def tableIdentifier(self):
-            return self.getTypedRuleContext(SqlBaseParser.TableIdentifierContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.TableIdentifierContext, 0)
 
         def query(self):
-            return self.getTypedRuleContext(SqlBaseParser.QueryContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.QueryContext, 0)
 
         def AS(self):
             return self.getToken(SqlBaseParser.AS, 0)
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterAlterViewQuery" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterAlterViewQuery"):
                 listener.enterAlterViewQuery(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitAlterViewQuery" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitAlterViewQuery"):
                 listener.exitAlterViewQuery(self)
 
-
     class DescribeTableContext(StatementContext):
-
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a SqlBaseParser.StatementContext
+        def __init__(
+            self, parser, ctx: ParserRuleContext
+        ):  # actually a SqlBaseParser.StatementContext
             super().__init__(parser)
-            self.option = None # Token
+            self.option = None  # Token
             self.copyFrom(ctx)
 
         def tableIdentifier(self):
-            return self.getTypedRuleContext(SqlBaseParser.TableIdentifierContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.TableIdentifierContext, 0)
 
         def DESC(self):
             return self.getToken(SqlBaseParser.DESC, 0)
+
         def DESCRIBE(self):
             return self.getToken(SqlBaseParser.DESCRIBE, 0)
+
         def partitionSpec(self):
-            return self.getTypedRuleContext(SqlBaseParser.PartitionSpecContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.PartitionSpecContext, 0)
 
         def describeColName(self):
-            return self.getTypedRuleContext(SqlBaseParser.DescribeColNameContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.DescribeColNameContext, 0)
 
         def EXTENDED(self):
             return self.getToken(SqlBaseParser.EXTENDED, 0)
+
         def FORMATTED(self):
             return self.getToken(SqlBaseParser.FORMATTED, 0)
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterDescribeTable" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterDescribeTable"):
                 listener.enterDescribeTable(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitDescribeTable" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitDescribeTable"):
                 listener.exitDescribeTable(self)
 
-
     class UseContext(StatementContext):
-
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a SqlBaseParser.StatementContext
+        def __init__(
+            self, parser, ctx: ParserRuleContext
+        ):  # actually a SqlBaseParser.StatementContext
             super().__init__(parser)
-            self.db = None # IdentifierContext
+            self.db = None  # IdentifierContext
             self.copyFrom(ctx)
 
         def USE(self):
             return self.getToken(SqlBaseParser.USE, 0)
+
         def identifier(self):
-            return self.getTypedRuleContext(SqlBaseParser.IdentifierContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.IdentifierContext, 0)
 
-
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterUse" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterUse"):
                 listener.enterUse(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitUse" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitUse"):
                 listener.exitUse(self)
 
-
     class CreateTempViewUsingContext(StatementContext):
-
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a SqlBaseParser.StatementContext
+        def __init__(
+            self, parser, ctx: ParserRuleContext
+        ):  # actually a SqlBaseParser.StatementContext
             super().__init__(parser)
             self.copyFrom(ctx)
 
         def CREATE(self):
             return self.getToken(SqlBaseParser.CREATE, 0)
+
         def TEMPORARY(self):
             return self.getToken(SqlBaseParser.TEMPORARY, 0)
+
         def VIEW(self):
             return self.getToken(SqlBaseParser.VIEW, 0)
+
         def tableIdentifier(self):
-            return self.getTypedRuleContext(SqlBaseParser.TableIdentifierContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.TableIdentifierContext, 0)
 
         def tableProvider(self):
-            return self.getTypedRuleContext(SqlBaseParser.TableProviderContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.TableProviderContext, 0)
 
         def OR(self):
             return self.getToken(SqlBaseParser.OR, 0)
+
         def REPLACE(self):
             return self.getToken(SqlBaseParser.REPLACE, 0)
+
         def colTypeList(self):
-            return self.getTypedRuleContext(SqlBaseParser.ColTypeListContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.ColTypeListContext, 0)
 
         def OPTIONS(self):
             return self.getToken(SqlBaseParser.OPTIONS, 0)
+
         def tablePropertyList(self):
-            return self.getTypedRuleContext(SqlBaseParser.TablePropertyListContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.TablePropertyListContext, 0)
 
-
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterCreateTempViewUsing" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterCreateTempViewUsing"):
                 listener.enterCreateTempViewUsing(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitCreateTempViewUsing" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitCreateTempViewUsing"):
                 listener.exitCreateTempViewUsing(self)
 
-
     class CreateTableLikeContext(StatementContext):
-
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a SqlBaseParser.StatementContext
+        def __init__(
+            self, parser, ctx: ParserRuleContext
+        ):  # actually a SqlBaseParser.StatementContext
             super().__init__(parser)
-            self.target = None # TableIdentifierContext
-            self.source = None # TableIdentifierContext
+            self.target = None  # TableIdentifierContext
+            self.source = None  # TableIdentifierContext
             self.copyFrom(ctx)
 
         def CREATE(self):
             return self.getToken(SqlBaseParser.CREATE, 0)
+
         def TABLE(self):
             return self.getToken(SqlBaseParser.TABLE, 0)
+
         def LIKE(self):
             return self.getToken(SqlBaseParser.LIKE, 0)
-        def tableIdentifier(self, i:int=None):
+
+        def tableIdentifier(self, i: int = None):
             if i is None:
                 return self.getTypedRuleContexts(SqlBaseParser.TableIdentifierContext)
             else:
-                return self.getTypedRuleContext(SqlBaseParser.TableIdentifierContext,i)
+                return self.getTypedRuleContext(SqlBaseParser.TableIdentifierContext, i)
 
         def IF(self):
             return self.getToken(SqlBaseParser.IF, 0)
+
         def NOT(self):
             return self.getToken(SqlBaseParser.NOT, 0)
+
         def EXISTS(self):
             return self.getToken(SqlBaseParser.EXISTS, 0)
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterCreateTableLike" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterCreateTableLike"):
                 listener.enterCreateTableLike(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitCreateTableLike" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitCreateTableLike"):
                 listener.exitCreateTableLike(self)
 
-
     class RenameTableContext(StatementContext):
-
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a SqlBaseParser.StatementContext
+        def __init__(
+            self, parser, ctx: ParserRuleContext
+        ):  # actually a SqlBaseParser.StatementContext
             super().__init__(parser)
-            self.from = None # TableIdentifierContext
-            self.to = None # TableIdentifierContext
+            self.from_ = None  # TableIdentifierContext
+            self.to = None  # TableIdentifierContext
             self.copyFrom(ctx)
 
         def ALTER(self):
             return self.getToken(SqlBaseParser.ALTER, 0)
+
         def RENAME(self):
             return self.getToken(SqlBaseParser.RENAME, 0)
+
         def TO(self):
             return self.getToken(SqlBaseParser.TO, 0)
+
         def TABLE(self):
             return self.getToken(SqlBaseParser.TABLE, 0)
+
         def VIEW(self):
             return self.getToken(SqlBaseParser.VIEW, 0)
-        def tableIdentifier(self, i:int=None):
+
+        def tableIdentifier(self, i: int = None):
             if i is None:
                 return self.getTypedRuleContexts(SqlBaseParser.TableIdentifierContext)
             else:
-                return self.getTypedRuleContext(SqlBaseParser.TableIdentifierContext,i)
+                return self.getTypedRuleContext(SqlBaseParser.TableIdentifierContext, i)
 
-
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterRenameTable" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterRenameTable"):
                 listener.enterRenameTable(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitRenameTable" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitRenameTable"):
                 listener.exitRenameTable(self)
 
-
     class UncacheTableContext(StatementContext):
-
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a SqlBaseParser.StatementContext
+        def __init__(
+            self, parser, ctx: ParserRuleContext
+        ):  # actually a SqlBaseParser.StatementContext
             super().__init__(parser)
             self.copyFrom(ctx)
 
         def UNCACHE(self):
             return self.getToken(SqlBaseParser.UNCACHE, 0)
+
         def TABLE(self):
             return self.getToken(SqlBaseParser.TABLE, 0)
+
         def tableIdentifier(self):
-            return self.getTypedRuleContext(SqlBaseParser.TableIdentifierContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.TableIdentifierContext, 0)
 
-
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterUncacheTable" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterUncacheTable"):
                 listener.enterUncacheTable(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitUncacheTable" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitUncacheTable"):
                 listener.exitUncacheTable(self)
 
-
     class DropFunctionContext(StatementContext):
-
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a SqlBaseParser.StatementContext
+        def __init__(
+            self, parser, ctx: ParserRuleContext
+        ):  # actually a SqlBaseParser.StatementContext
             super().__init__(parser)
             self.copyFrom(ctx)
 
         def DROP(self):
             return self.getToken(SqlBaseParser.DROP, 0)
+
         def FUNCTION(self):
             return self.getToken(SqlBaseParser.FUNCTION, 0)
+
         def qualifiedName(self):
-            return self.getTypedRuleContext(SqlBaseParser.QualifiedNameContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.QualifiedNameContext, 0)
 
         def TEMPORARY(self):
             return self.getToken(SqlBaseParser.TEMPORARY, 0)
+
         def IF(self):
             return self.getToken(SqlBaseParser.IF, 0)
+
         def EXISTS(self):
             return self.getToken(SqlBaseParser.EXISTS, 0)
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterDropFunction" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterDropFunction"):
                 listener.enterDropFunction(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitDropFunction" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitDropFunction"):
                 listener.exitDropFunction(self)
 
-
     class FailNativeCommandContext(StatementContext):
-
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a SqlBaseParser.StatementContext
+        def __init__(
+            self, parser, ctx: ParserRuleContext
+        ):  # actually a SqlBaseParser.StatementContext
             super().__init__(parser)
             self.copyFrom(ctx)
 
         def SET(self):
             return self.getToken(SqlBaseParser.SET, 0)
+
         def ROLE(self):
             return self.getToken(SqlBaseParser.ROLE, 0)
+
         def unsupportedHiveNativeCommands(self):
-            return self.getTypedRuleContext(SqlBaseParser.UnsupportedHiveNativeCommandsContext,0)
+            return self.getTypedRuleContext(
+                SqlBaseParser.UnsupportedHiveNativeCommandsContext, 0
+            )
 
-
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterFailNativeCommand" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterFailNativeCommand"):
                 listener.enterFailNativeCommand(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitFailNativeCommand" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitFailNativeCommand"):
                 listener.exitFailNativeCommand(self)
 
-
     class LoadDataContext(StatementContext):
-
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a SqlBaseParser.StatementContext
+        def __init__(
+            self, parser, ctx: ParserRuleContext
+        ):  # actually a SqlBaseParser.StatementContext
             super().__init__(parser)
-            self.path = None # Token
+            self.path = None  # Token
             self.copyFrom(ctx)
 
         def LOAD(self):
             return self.getToken(SqlBaseParser.LOAD, 0)
+
         def DATA(self):
             return self.getToken(SqlBaseParser.DATA, 0)
+
         def INPATH(self):
             return self.getToken(SqlBaseParser.INPATH, 0)
+
         def INTO(self):
             return self.getToken(SqlBaseParser.INTO, 0)
+
         def TABLE(self):
             return self.getToken(SqlBaseParser.TABLE, 0)
+
         def tableIdentifier(self):
-            return self.getTypedRuleContext(SqlBaseParser.TableIdentifierContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.TableIdentifierContext, 0)
 
         def STRING(self):
             return self.getToken(SqlBaseParser.STRING, 0)
+
         def LOCAL(self):
             return self.getToken(SqlBaseParser.LOCAL, 0)
+
         def OVERWRITE(self):
             return self.getToken(SqlBaseParser.OVERWRITE, 0)
+
         def partitionSpec(self):
-            return self.getTypedRuleContext(SqlBaseParser.PartitionSpecContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.PartitionSpecContext, 0)
 
-
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterLoadData" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterLoadData"):
                 listener.enterLoadData(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitLoadData" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitLoadData"):
                 listener.exitLoadData(self)
 
-
     class ShowPartitionsContext(StatementContext):
-
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a SqlBaseParser.StatementContext
+        def __init__(
+            self, parser, ctx: ParserRuleContext
+        ):  # actually a SqlBaseParser.StatementContext
             super().__init__(parser)
             self.copyFrom(ctx)
 
         def SHOW(self):
             return self.getToken(SqlBaseParser.SHOW, 0)
+
         def PARTITIONS(self):
             return self.getToken(SqlBaseParser.PARTITIONS, 0)
+
         def tableIdentifier(self):
-            return self.getTypedRuleContext(SqlBaseParser.TableIdentifierContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.TableIdentifierContext, 0)
 
         def partitionSpec(self):
-            return self.getTypedRuleContext(SqlBaseParser.PartitionSpecContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.PartitionSpecContext, 0)
 
-
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterShowPartitions" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterShowPartitions"):
                 listener.enterShowPartitions(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitShowPartitions" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitShowPartitions"):
                 listener.exitShowPartitions(self)
 
-
     class DescribeFunctionContext(StatementContext):
-
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a SqlBaseParser.StatementContext
+        def __init__(
+            self, parser, ctx: ParserRuleContext
+        ):  # actually a SqlBaseParser.StatementContext
             super().__init__(parser)
             self.copyFrom(ctx)
 
         def FUNCTION(self):
             return self.getToken(SqlBaseParser.FUNCTION, 0)
+
         def describeFuncName(self):
-            return self.getTypedRuleContext(SqlBaseParser.DescribeFuncNameContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.DescribeFuncNameContext, 0)
 
         def DESC(self):
             return self.getToken(SqlBaseParser.DESC, 0)
+
         def DESCRIBE(self):
             return self.getToken(SqlBaseParser.DESCRIBE, 0)
+
         def EXTENDED(self):
             return self.getToken(SqlBaseParser.EXTENDED, 0)
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterDescribeFunction" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterDescribeFunction"):
                 listener.enterDescribeFunction(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitDescribeFunction" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitDescribeFunction"):
                 listener.exitDescribeFunction(self)
 
-
     class ClearCacheContext(StatementContext):
-
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a SqlBaseParser.StatementContext
+        def __init__(
+            self, parser, ctx: ParserRuleContext
+        ):  # actually a SqlBaseParser.StatementContext
             super().__init__(parser)
             self.copyFrom(ctx)
 
         def CLEAR(self):
             return self.getToken(SqlBaseParser.CLEAR, 0)
+
         def CACHE(self):
             return self.getToken(SqlBaseParser.CACHE, 0)
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterClearCache" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterClearCache"):
                 listener.enterClearCache(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitClearCache" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitClearCache"):
                 listener.exitClearCache(self)
 
-
     class ShowTablesContext(StatementContext):
-
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a SqlBaseParser.StatementContext
+        def __init__(
+            self, parser, ctx: ParserRuleContext
+        ):  # actually a SqlBaseParser.StatementContext
             super().__init__(parser)
-            self.db = None # IdentifierContext
-            self.pattern = None # Token
+            self.db = None  # IdentifierContext
+            self.pattern = None  # Token
             self.copyFrom(ctx)
 
         def SHOW(self):
             return self.getToken(SqlBaseParser.SHOW, 0)
+
         def TABLES(self):
             return self.getToken(SqlBaseParser.TABLES, 0)
+
         def FROM(self):
             return self.getToken(SqlBaseParser.FROM, 0)
+
         def IN(self):
             return self.getToken(SqlBaseParser.IN, 0)
+
         def identifier(self):
-            return self.getTypedRuleContext(SqlBaseParser.IdentifierContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.IdentifierContext, 0)
 
         def STRING(self):
             return self.getToken(SqlBaseParser.STRING, 0)
+
         def LIKE(self):
             return self.getToken(SqlBaseParser.LIKE, 0)
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterShowTables" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterShowTables"):
                 listener.enterShowTables(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitShowTables" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitShowTables"):
                 listener.exitShowTables(self)
 
-
     class RecoverPartitionsContext(StatementContext):
-
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a SqlBaseParser.StatementContext
+        def __init__(
+            self, parser, ctx: ParserRuleContext
+        ):  # actually a SqlBaseParser.StatementContext
             super().__init__(parser)
             self.copyFrom(ctx)
 
         def ALTER(self):
             return self.getToken(SqlBaseParser.ALTER, 0)
+
         def TABLE(self):
             return self.getToken(SqlBaseParser.TABLE, 0)
+
         def tableIdentifier(self):
-            return self.getTypedRuleContext(SqlBaseParser.TableIdentifierContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.TableIdentifierContext, 0)
 
         def RECOVER(self):
             return self.getToken(SqlBaseParser.RECOVER, 0)
+
         def PARTITIONS(self):
             return self.getToken(SqlBaseParser.PARTITIONS, 0)
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterRecoverPartitions" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterRecoverPartitions"):
                 listener.enterRecoverPartitions(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitRecoverPartitions" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitRecoverPartitions"):
                 listener.exitRecoverPartitions(self)
 
-
     class StatementDefaultContext(StatementContext):
-
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a SqlBaseParser.StatementContext
+        def __init__(
+            self, parser, ctx: ParserRuleContext
+        ):  # actually a SqlBaseParser.StatementContext
             super().__init__(parser)
             self.copyFrom(ctx)
 
         def query(self):
-            return self.getTypedRuleContext(SqlBaseParser.QueryContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.QueryContext, 0)
 
-
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterStatementDefault" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterStatementDefault"):
                 listener.enterStatementDefault(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitStatementDefault" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitStatementDefault"):
                 listener.exitStatementDefault(self)
 
-
     class RenameTablePartitionContext(StatementContext):
-
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a SqlBaseParser.StatementContext
+        def __init__(
+            self, parser, ctx: ParserRuleContext
+        ):  # actually a SqlBaseParser.StatementContext
             super().__init__(parser)
-            self.from = None # PartitionSpecContext
-            self.to = None # PartitionSpecContext
+            self.from_ = None  # PartitionSpecContext
+            self.to = None  # PartitionSpecContext
             self.copyFrom(ctx)
 
         def ALTER(self):
             return self.getToken(SqlBaseParser.ALTER, 0)
+
         def TABLE(self):
             return self.getToken(SqlBaseParser.TABLE, 0)
+
         def tableIdentifier(self):
-            return self.getTypedRuleContext(SqlBaseParser.TableIdentifierContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.TableIdentifierContext, 0)
 
         def RENAME(self):
             return self.getToken(SqlBaseParser.RENAME, 0)
+
         def TO(self):
             return self.getToken(SqlBaseParser.TO, 0)
-        def partitionSpec(self, i:int=None):
+
+        def partitionSpec(self, i: int = None):
             if i is None:
                 return self.getTypedRuleContexts(SqlBaseParser.PartitionSpecContext)
             else:
-                return self.getTypedRuleContext(SqlBaseParser.PartitionSpecContext,i)
+                return self.getTypedRuleContext(SqlBaseParser.PartitionSpecContext, i)
 
-
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterRenameTablePartition" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterRenameTablePartition"):
                 listener.enterRenameTablePartition(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitRenameTablePartition" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitRenameTablePartition"):
                 listener.exitRenameTablePartition(self)
 
-
     class RepairTableContext(StatementContext):
-
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a SqlBaseParser.StatementContext
+        def __init__(
+            self, parser, ctx: ParserRuleContext
+        ):  # actually a SqlBaseParser.StatementContext
             super().__init__(parser)
             self.copyFrom(ctx)
 
         def MSCK(self):
             return self.getToken(SqlBaseParser.MSCK, 0)
+
         def REPAIR(self):
             return self.getToken(SqlBaseParser.REPAIR, 0)
+
         def TABLE(self):
             return self.getToken(SqlBaseParser.TABLE, 0)
+
         def tableIdentifier(self):
-            return self.getTypedRuleContext(SqlBaseParser.TableIdentifierContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.TableIdentifierContext, 0)
 
-
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterRepairTable" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterRepairTable"):
                 listener.enterRepairTable(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitRepairTable" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitRepairTable"):
                 listener.exitRepairTable(self)
 
-
     class RefreshResourceContext(StatementContext):
-
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a SqlBaseParser.StatementContext
+        def __init__(
+            self, parser, ctx: ParserRuleContext
+        ):  # actually a SqlBaseParser.StatementContext
             super().__init__(parser)
             self.copyFrom(ctx)
 
         def REFRESH(self):
             return self.getToken(SqlBaseParser.REFRESH, 0)
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterRefreshResource" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterRefreshResource"):
                 listener.enterRefreshResource(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitRefreshResource" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitRefreshResource"):
                 listener.exitRefreshResource(self)
 
-
     class TruncateTableContext(StatementContext):
-
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a SqlBaseParser.StatementContext
+        def __init__(
+            self, parser, ctx: ParserRuleContext
+        ):  # actually a SqlBaseParser.StatementContext
             super().__init__(parser)
             self.copyFrom(ctx)
 
         def TRUNCATE(self):
             return self.getToken(SqlBaseParser.TRUNCATE, 0)
+
         def TABLE(self):
             return self.getToken(SqlBaseParser.TABLE, 0)
+
         def tableIdentifier(self):
-            return self.getTypedRuleContext(SqlBaseParser.TableIdentifierContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.TableIdentifierContext, 0)
 
         def partitionSpec(self):
-            return self.getTypedRuleContext(SqlBaseParser.PartitionSpecContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.PartitionSpecContext, 0)
 
-
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterTruncateTable" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterTruncateTable"):
                 listener.enterTruncateTable(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitTruncateTable" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitTruncateTable"):
                 listener.exitTruncateTable(self)
 
-
     class SetTableSerDeContext(StatementContext):
-
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a SqlBaseParser.StatementContext
+        def __init__(
+            self, parser, ctx: ParserRuleContext
+        ):  # actually a SqlBaseParser.StatementContext
             super().__init__(parser)
             self.copyFrom(ctx)
 
         def ALTER(self):
             return self.getToken(SqlBaseParser.ALTER, 0)
+
         def TABLE(self):
             return self.getToken(SqlBaseParser.TABLE, 0)
+
         def tableIdentifier(self):
-            return self.getTypedRuleContext(SqlBaseParser.TableIdentifierContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.TableIdentifierContext, 0)
 
         def SET(self):
             return self.getToken(SqlBaseParser.SET, 0)
+
         def SERDE(self):
             return self.getToken(SqlBaseParser.SERDE, 0)
+
         def STRING(self):
             return self.getToken(SqlBaseParser.STRING, 0)
+
         def partitionSpec(self):
-            return self.getTypedRuleContext(SqlBaseParser.PartitionSpecContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.PartitionSpecContext, 0)
 
         def WITH(self):
             return self.getToken(SqlBaseParser.WITH, 0)
+
         def SERDEPROPERTIES(self):
             return self.getToken(SqlBaseParser.SERDEPROPERTIES, 0)
+
         def tablePropertyList(self):
-            return self.getTypedRuleContext(SqlBaseParser.TablePropertyListContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.TablePropertyListContext, 0)
 
-
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterSetTableSerDe" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterSetTableSerDe"):
                 listener.enterSetTableSerDe(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitSetTableSerDe" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitSetTableSerDe"):
                 listener.exitSetTableSerDe(self)
 
-
     class CreateViewContext(StatementContext):
-
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a SqlBaseParser.StatementContext
+        def __init__(
+            self, parser, ctx: ParserRuleContext
+        ):  # actually a SqlBaseParser.StatementContext
             super().__init__(parser)
             self.copyFrom(ctx)
 
         def CREATE(self):
             return self.getToken(SqlBaseParser.CREATE, 0)
+
         def VIEW(self):
             return self.getToken(SqlBaseParser.VIEW, 0)
+
         def tableIdentifier(self):
-            return self.getTypedRuleContext(SqlBaseParser.TableIdentifierContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.TableIdentifierContext, 0)
 
         def AS(self):
             return self.getToken(SqlBaseParser.AS, 0)
+
         def query(self):
-            return self.getTypedRuleContext(SqlBaseParser.QueryContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.QueryContext, 0)
 
         def OR(self):
             return self.getToken(SqlBaseParser.OR, 0)
+
         def REPLACE(self):
             return self.getToken(SqlBaseParser.REPLACE, 0)
+
         def TEMPORARY(self):
             return self.getToken(SqlBaseParser.TEMPORARY, 0)
+
         def IF(self):
             return self.getToken(SqlBaseParser.IF, 0)
+
         def NOT(self):
             return self.getToken(SqlBaseParser.NOT, 0)
+
         def EXISTS(self):
             return self.getToken(SqlBaseParser.EXISTS, 0)
+
         def identifierCommentList(self):
-            return self.getTypedRuleContext(SqlBaseParser.IdentifierCommentListContext,0)
+            return self.getTypedRuleContext(
+                SqlBaseParser.IdentifierCommentListContext, 0
+            )
 
         def COMMENT(self):
             return self.getToken(SqlBaseParser.COMMENT, 0)
+
         def STRING(self):
             return self.getToken(SqlBaseParser.STRING, 0)
+
         def PARTITIONED(self):
             return self.getToken(SqlBaseParser.PARTITIONED, 0)
+
         def ON(self):
             return self.getToken(SqlBaseParser.ON, 0)
+
         def identifierList(self):
-            return self.getTypedRuleContext(SqlBaseParser.IdentifierListContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.IdentifierListContext, 0)
 
         def TBLPROPERTIES(self):
             return self.getToken(SqlBaseParser.TBLPROPERTIES, 0)
+
         def tablePropertyList(self):
-            return self.getTypedRuleContext(SqlBaseParser.TablePropertyListContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.TablePropertyListContext, 0)
 
-
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterCreateView" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterCreateView"):
                 listener.enterCreateView(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitCreateView" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitCreateView"):
                 listener.exitCreateView(self)
 
-
     class DropTablePartitionsContext(StatementContext):
-
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a SqlBaseParser.StatementContext
+        def __init__(
+            self, parser, ctx: ParserRuleContext
+        ):  # actually a SqlBaseParser.StatementContext
             super().__init__(parser)
             self.copyFrom(ctx)
 
         def ALTER(self):
             return self.getToken(SqlBaseParser.ALTER, 0)
+
         def TABLE(self):
             return self.getToken(SqlBaseParser.TABLE, 0)
+
         def tableIdentifier(self):
-            return self.getTypedRuleContext(SqlBaseParser.TableIdentifierContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.TableIdentifierContext, 0)
 
         def DROP(self):
             return self.getToken(SqlBaseParser.DROP, 0)
-        def partitionSpec(self, i:int=None):
+
+        def partitionSpec(self, i: int = None):
             if i is None:
                 return self.getTypedRuleContexts(SqlBaseParser.PartitionSpecContext)
             else:
-                return self.getTypedRuleContext(SqlBaseParser.PartitionSpecContext,i)
+                return self.getTypedRuleContext(SqlBaseParser.PartitionSpecContext, i)
 
         def IF(self):
             return self.getToken(SqlBaseParser.IF, 0)
+
         def EXISTS(self):
             return self.getToken(SqlBaseParser.EXISTS, 0)
+
         def PURGE(self):
             return self.getToken(SqlBaseParser.PURGE, 0)
+
         def VIEW(self):
             return self.getToken(SqlBaseParser.VIEW, 0)
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterDropTablePartitions" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterDropTablePartitions"):
                 listener.enterDropTablePartitions(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitDropTablePartitions" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitDropTablePartitions"):
                 listener.exitDropTablePartitions(self)
 
-
     class ShowCreateTableContext(StatementContext):
-
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a SqlBaseParser.StatementContext
+        def __init__(
+            self, parser, ctx: ParserRuleContext
+        ):  # actually a SqlBaseParser.StatementContext
             super().__init__(parser)
             self.copyFrom(ctx)
 
         def SHOW(self):
             return self.getToken(SqlBaseParser.SHOW, 0)
+
         def CREATE(self):
             return self.getToken(SqlBaseParser.CREATE, 0)
+
         def TABLE(self):
             return self.getToken(SqlBaseParser.TABLE, 0)
+
         def tableIdentifier(self):
-            return self.getTypedRuleContext(SqlBaseParser.TableIdentifierContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.TableIdentifierContext, 0)
 
-
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterShowCreateTable" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterShowCreateTable"):
                 listener.enterShowCreateTable(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitShowCreateTable" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitShowCreateTable"):
                 listener.exitShowCreateTable(self)
 
-
     class SetConfigurationContext(StatementContext):
-
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a SqlBaseParser.StatementContext
+        def __init__(
+            self, parser, ctx: ParserRuleContext
+        ):  # actually a SqlBaseParser.StatementContext
             super().__init__(parser)
             self.copyFrom(ctx)
 
         def SET(self):
             return self.getToken(SqlBaseParser.SET, 0)
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterSetConfiguration" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterSetConfiguration"):
                 listener.enterSetConfiguration(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitSetConfiguration" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitSetConfiguration"):
                 listener.exitSetConfiguration(self)
 
-
     class DropTableContext(StatementContext):
-
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a SqlBaseParser.StatementContext
+        def __init__(
+            self, parser, ctx: ParserRuleContext
+        ):  # actually a SqlBaseParser.StatementContext
             super().__init__(parser)
             self.copyFrom(ctx)
 
         def DROP(self):
             return self.getToken(SqlBaseParser.DROP, 0)
+
         def TABLE(self):
             return self.getToken(SqlBaseParser.TABLE, 0)
+
         def tableIdentifier(self):
-            return self.getTypedRuleContext(SqlBaseParser.TableIdentifierContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.TableIdentifierContext, 0)
 
         def IF(self):
             return self.getToken(SqlBaseParser.IF, 0)
+
         def EXISTS(self):
             return self.getToken(SqlBaseParser.EXISTS, 0)
+
         def PURGE(self):
             return self.getToken(SqlBaseParser.PURGE, 0)
+
         def VIEW(self):
             return self.getToken(SqlBaseParser.VIEW, 0)
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterDropTable" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterDropTable"):
                 listener.enterDropTable(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitDropTable" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitDropTable"):
                 listener.exitDropTable(self)
 
-
     class ShowColumnsContext(StatementContext):
-
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a SqlBaseParser.StatementContext
+        def __init__(
+            self, parser, ctx: ParserRuleContext
+        ):  # actually a SqlBaseParser.StatementContext
             super().__init__(parser)
-            self.db = None # IdentifierContext
+            self.db = None  # IdentifierContext
             self.copyFrom(ctx)
 
         def SHOW(self):
             return self.getToken(SqlBaseParser.SHOW, 0)
+
         def COLUMNS(self):
             return self.getToken(SqlBaseParser.COLUMNS, 0)
-        def tableIdentifier(self):
-            return self.getTypedRuleContext(SqlBaseParser.TableIdentifierContext,0)
 
-        def FROM(self, i:int=None):
+        def tableIdentifier(self):
+            return self.getTypedRuleContext(SqlBaseParser.TableIdentifierContext, 0)
+
+        def FROM(self, i: int = None):
             if i is None:
                 return self.getTokens(SqlBaseParser.FROM)
             else:
                 return self.getToken(SqlBaseParser.FROM, i)
-        def IN(self, i:int=None):
+
+        def IN(self, i: int = None):
             if i is None:
                 return self.getTokens(SqlBaseParser.IN)
             else:
                 return self.getToken(SqlBaseParser.IN, i)
+
         def identifier(self):
-            return self.getTypedRuleContext(SqlBaseParser.IdentifierContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.IdentifierContext, 0)
 
-
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterShowColumns" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterShowColumns"):
                 listener.enterShowColumns(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitShowColumns" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitShowColumns"):
                 listener.exitShowColumns(self)
 
-
     class CreateTableUsingContext(StatementContext):
-
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a SqlBaseParser.StatementContext
+        def __init__(
+            self, parser, ctx: ParserRuleContext
+        ):  # actually a SqlBaseParser.StatementContext
             super().__init__(parser)
-            self.partitionColumnNames = None # IdentifierListContext
+            self.partitionColumnNames = None  # IdentifierListContext
             self.copyFrom(ctx)
 
         def createTableHeader(self):
-            return self.getTypedRuleContext(SqlBaseParser.CreateTableHeaderContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.CreateTableHeaderContext, 0)
 
         def tableProvider(self):
-            return self.getTypedRuleContext(SqlBaseParser.TableProviderContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.TableProviderContext, 0)
 
         def colTypeList(self):
-            return self.getTypedRuleContext(SqlBaseParser.ColTypeListContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.ColTypeListContext, 0)
 
         def OPTIONS(self):
             return self.getToken(SqlBaseParser.OPTIONS, 0)
+
         def tablePropertyList(self):
-            return self.getTypedRuleContext(SqlBaseParser.TablePropertyListContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.TablePropertyListContext, 0)
 
         def PARTITIONED(self):
             return self.getToken(SqlBaseParser.PARTITIONED, 0)
+
         def BY(self):
             return self.getToken(SqlBaseParser.BY, 0)
+
         def bucketSpec(self):
-            return self.getTypedRuleContext(SqlBaseParser.BucketSpecContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.BucketSpecContext, 0)
 
         def identifierList(self):
-            return self.getTypedRuleContext(SqlBaseParser.IdentifierListContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.IdentifierListContext, 0)
 
         def query(self):
-            return self.getTypedRuleContext(SqlBaseParser.QueryContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.QueryContext, 0)
 
         def AS(self):
             return self.getToken(SqlBaseParser.AS, 0)
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterCreateTableUsing" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterCreateTableUsing"):
                 listener.enterCreateTableUsing(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitCreateTableUsing" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitCreateTableUsing"):
                 listener.exitCreateTableUsing(self)
 
-
     class ShowDatabasesContext(StatementContext):
-
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a SqlBaseParser.StatementContext
+        def __init__(
+            self, parser, ctx: ParserRuleContext
+        ):  # actually a SqlBaseParser.StatementContext
             super().__init__(parser)
-            self.pattern = None # Token
+            self.pattern = None  # Token
             self.copyFrom(ctx)
 
         def SHOW(self):
             return self.getToken(SqlBaseParser.SHOW, 0)
+
         def DATABASES(self):
             return self.getToken(SqlBaseParser.DATABASES, 0)
+
         def LIKE(self):
             return self.getToken(SqlBaseParser.LIKE, 0)
+
         def STRING(self):
             return self.getToken(SqlBaseParser.STRING, 0)
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterShowDatabases" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterShowDatabases"):
                 listener.enterShowDatabases(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitShowDatabases" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitShowDatabases"):
                 listener.exitShowDatabases(self)
 
-
     class AddTablePartitionContext(StatementContext):
-
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a SqlBaseParser.StatementContext
+        def __init__(
+            self, parser, ctx: ParserRuleContext
+        ):  # actually a SqlBaseParser.StatementContext
             super().__init__(parser)
             self.copyFrom(ctx)
 
         def ALTER(self):
             return self.getToken(SqlBaseParser.ALTER, 0)
+
         def TABLE(self):
             return self.getToken(SqlBaseParser.TABLE, 0)
+
         def tableIdentifier(self):
-            return self.getTypedRuleContext(SqlBaseParser.TableIdentifierContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.TableIdentifierContext, 0)
 
         def ADD(self):
             return self.getToken(SqlBaseParser.ADD, 0)
+
         def IF(self):
             return self.getToken(SqlBaseParser.IF, 0)
+
         def NOT(self):
             return self.getToken(SqlBaseParser.NOT, 0)
+
         def EXISTS(self):
             return self.getToken(SqlBaseParser.EXISTS, 0)
-        def partitionSpecLocation(self, i:int=None):
+
+        def partitionSpecLocation(self, i: int = None):
             if i is None:
-                return self.getTypedRuleContexts(SqlBaseParser.PartitionSpecLocationContext)
+                return self.getTypedRuleContexts(
+                    SqlBaseParser.PartitionSpecLocationContext
+                )
             else:
-                return self.getTypedRuleContext(SqlBaseParser.PartitionSpecLocationContext,i)
+                return self.getTypedRuleContext(
+                    SqlBaseParser.PartitionSpecLocationContext, i
+                )
 
         def VIEW(self):
             return self.getToken(SqlBaseParser.VIEW, 0)
-        def partitionSpec(self, i:int=None):
+
+        def partitionSpec(self, i: int = None):
             if i is None:
                 return self.getTypedRuleContexts(SqlBaseParser.PartitionSpecContext)
             else:
-                return self.getTypedRuleContext(SqlBaseParser.PartitionSpecContext,i)
+                return self.getTypedRuleContext(SqlBaseParser.PartitionSpecContext, i)
 
-
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterAddTablePartition" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterAddTablePartition"):
                 listener.enterAddTablePartition(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitAddTablePartition" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitAddTablePartition"):
                 listener.exitAddTablePartition(self)
 
-
     class RefreshTableContext(StatementContext):
-
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a SqlBaseParser.StatementContext
+        def __init__(
+            self, parser, ctx: ParserRuleContext
+        ):  # actually a SqlBaseParser.StatementContext
             super().__init__(parser)
             self.copyFrom(ctx)
 
         def REFRESH(self):
             return self.getToken(SqlBaseParser.REFRESH, 0)
+
         def TABLE(self):
             return self.getToken(SqlBaseParser.TABLE, 0)
+
         def tableIdentifier(self):
-            return self.getTypedRuleContext(SqlBaseParser.TableIdentifierContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.TableIdentifierContext, 0)
 
-
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterRefreshTable" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterRefreshTable"):
                 listener.enterRefreshTable(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitRefreshTable" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitRefreshTable"):
                 listener.exitRefreshTable(self)
 
-
     class ManageResourceContext(StatementContext):
-
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a SqlBaseParser.StatementContext
+        def __init__(
+            self, parser, ctx: ParserRuleContext
+        ):  # actually a SqlBaseParser.StatementContext
             super().__init__(parser)
-            self.op = None # Token
+            self.op = None  # Token
             self.copyFrom(ctx)
 
         def identifier(self):
-            return self.getTypedRuleContext(SqlBaseParser.IdentifierContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.IdentifierContext, 0)
 
         def ADD(self):
             return self.getToken(SqlBaseParser.ADD, 0)
+
         def LIST(self):
             return self.getToken(SqlBaseParser.LIST, 0)
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterManageResource" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterManageResource"):
                 listener.enterManageResource(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitManageResource" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitManageResource"):
                 listener.exitManageResource(self)
 
-
     class CreateDatabaseContext(StatementContext):
-
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a SqlBaseParser.StatementContext
+        def __init__(
+            self, parser, ctx: ParserRuleContext
+        ):  # actually a SqlBaseParser.StatementContext
             super().__init__(parser)
-            self.comment = None # Token
+            self.comment = None  # Token
             self.copyFrom(ctx)
 
         def CREATE(self):
             return self.getToken(SqlBaseParser.CREATE, 0)
+
         def DATABASE(self):
             return self.getToken(SqlBaseParser.DATABASE, 0)
+
         def identifier(self):
-            return self.getTypedRuleContext(SqlBaseParser.IdentifierContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.IdentifierContext, 0)
 
         def IF(self):
             return self.getToken(SqlBaseParser.IF, 0)
+
         def NOT(self):
             return self.getToken(SqlBaseParser.NOT, 0)
+
         def EXISTS(self):
             return self.getToken(SqlBaseParser.EXISTS, 0)
+
         def COMMENT(self):
             return self.getToken(SqlBaseParser.COMMENT, 0)
+
         def locationSpec(self):
-            return self.getTypedRuleContext(SqlBaseParser.LocationSpecContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.LocationSpecContext, 0)
 
         def WITH(self):
             return self.getToken(SqlBaseParser.WITH, 0)
+
         def DBPROPERTIES(self):
             return self.getToken(SqlBaseParser.DBPROPERTIES, 0)
+
         def tablePropertyList(self):
-            return self.getTypedRuleContext(SqlBaseParser.TablePropertyListContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.TablePropertyListContext, 0)
 
         def STRING(self):
             return self.getToken(SqlBaseParser.STRING, 0)
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterCreateDatabase" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterCreateDatabase"):
                 listener.enterCreateDatabase(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitCreateDatabase" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitCreateDatabase"):
                 listener.exitCreateDatabase(self)
 
-
     class ShowTblPropertiesContext(StatementContext):
-
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a SqlBaseParser.StatementContext
+        def __init__(
+            self, parser, ctx: ParserRuleContext
+        ):  # actually a SqlBaseParser.StatementContext
             super().__init__(parser)
-            self.table = None # TableIdentifierContext
-            self.key = None # TablePropertyKeyContext
+            self.table = None  # TableIdentifierContext
+            self.key = None  # TablePropertyKeyContext
             self.copyFrom(ctx)
 
         def SHOW(self):
             return self.getToken(SqlBaseParser.SHOW, 0)
+
         def TBLPROPERTIES(self):
             return self.getToken(SqlBaseParser.TBLPROPERTIES, 0)
+
         def tableIdentifier(self):
-            return self.getTypedRuleContext(SqlBaseParser.TableIdentifierContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.TableIdentifierContext, 0)
 
         def tablePropertyKey(self):
-            return self.getTypedRuleContext(SqlBaseParser.TablePropertyKeyContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.TablePropertyKeyContext, 0)
 
-
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterShowTblProperties" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterShowTblProperties"):
                 listener.enterShowTblProperties(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitShowTblProperties" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitShowTblProperties"):
                 listener.exitShowTblProperties(self)
 
-
     class AnalyzeContext(StatementContext):
-
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a SqlBaseParser.StatementContext
+        def __init__(
+            self, parser, ctx: ParserRuleContext
+        ):  # actually a SqlBaseParser.StatementContext
             super().__init__(parser)
             self.copyFrom(ctx)
 
         def ANALYZE(self):
             return self.getToken(SqlBaseParser.ANALYZE, 0)
+
         def TABLE(self):
             return self.getToken(SqlBaseParser.TABLE, 0)
+
         def tableIdentifier(self):
-            return self.getTypedRuleContext(SqlBaseParser.TableIdentifierContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.TableIdentifierContext, 0)
 
         def COMPUTE(self):
             return self.getToken(SqlBaseParser.COMPUTE, 0)
+
         def STATISTICS(self):
             return self.getToken(SqlBaseParser.STATISTICS, 0)
+
         def partitionSpec(self):
-            return self.getTypedRuleContext(SqlBaseParser.PartitionSpecContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.PartitionSpecContext, 0)
 
         def identifier(self):
-            return self.getTypedRuleContext(SqlBaseParser.IdentifierContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.IdentifierContext, 0)
 
         def FOR(self):
             return self.getToken(SqlBaseParser.FOR, 0)
+
         def COLUMNS(self):
             return self.getToken(SqlBaseParser.COLUMNS, 0)
+
         def identifierSeq(self):
-            return self.getTypedRuleContext(SqlBaseParser.IdentifierSeqContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.IdentifierSeqContext, 0)
 
-
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterAnalyze" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterAnalyze"):
                 listener.enterAnalyze(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitAnalyze" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitAnalyze"):
                 listener.exitAnalyze(self)
 
-
     class UnsetTablePropertiesContext(StatementContext):
-
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a SqlBaseParser.StatementContext
+        def __init__(
+            self, parser, ctx: ParserRuleContext
+        ):  # actually a SqlBaseParser.StatementContext
             super().__init__(parser)
             self.copyFrom(ctx)
 
         def ALTER(self):
             return self.getToken(SqlBaseParser.ALTER, 0)
+
         def tableIdentifier(self):
-            return self.getTypedRuleContext(SqlBaseParser.TableIdentifierContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.TableIdentifierContext, 0)
 
         def UNSET(self):
             return self.getToken(SqlBaseParser.UNSET, 0)
+
         def TBLPROPERTIES(self):
             return self.getToken(SqlBaseParser.TBLPROPERTIES, 0)
+
         def tablePropertyList(self):
-            return self.getTypedRuleContext(SqlBaseParser.TablePropertyListContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.TablePropertyListContext, 0)
 
         def TABLE(self):
             return self.getToken(SqlBaseParser.TABLE, 0)
+
         def VIEW(self):
             return self.getToken(SqlBaseParser.VIEW, 0)
+
         def IF(self):
             return self.getToken(SqlBaseParser.IF, 0)
+
         def EXISTS(self):
             return self.getToken(SqlBaseParser.EXISTS, 0)
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterUnsetTableProperties" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterUnsetTableProperties"):
                 listener.enterUnsetTableProperties(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitUnsetTableProperties" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitUnsetTableProperties"):
                 listener.exitUnsetTableProperties(self)
 
-
     class SetTableLocationContext(StatementContext):
-
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a SqlBaseParser.StatementContext
+        def __init__(
+            self, parser, ctx: ParserRuleContext
+        ):  # actually a SqlBaseParser.StatementContext
             super().__init__(parser)
             self.copyFrom(ctx)
 
         def ALTER(self):
             return self.getToken(SqlBaseParser.ALTER, 0)
+
         def TABLE(self):
             return self.getToken(SqlBaseParser.TABLE, 0)
+
         def tableIdentifier(self):
-            return self.getTypedRuleContext(SqlBaseParser.TableIdentifierContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.TableIdentifierContext, 0)
 
         def SET(self):
             return self.getToken(SqlBaseParser.SET, 0)
+
         def locationSpec(self):
-            return self.getTypedRuleContext(SqlBaseParser.LocationSpecContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.LocationSpecContext, 0)
 
         def partitionSpec(self):
-            return self.getTypedRuleContext(SqlBaseParser.PartitionSpecContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.PartitionSpecContext, 0)
 
-
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterSetTableLocation" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterSetTableLocation"):
                 listener.enterSetTableLocation(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitSetTableLocation" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitSetTableLocation"):
                 listener.exitSetTableLocation(self)
 
-
     class CreateFunctionContext(StatementContext):
-
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a SqlBaseParser.StatementContext
+        def __init__(
+            self, parser, ctx: ParserRuleContext
+        ):  # actually a SqlBaseParser.StatementContext
             super().__init__(parser)
-            self.className = None # Token
+            self.className = None  # Token
             self.copyFrom(ctx)
 
         def CREATE(self):
             return self.getToken(SqlBaseParser.CREATE, 0)
+
         def FUNCTION(self):
             return self.getToken(SqlBaseParser.FUNCTION, 0)
+
         def qualifiedName(self):
-            return self.getTypedRuleContext(SqlBaseParser.QualifiedNameContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.QualifiedNameContext, 0)
 
         def AS(self):
             return self.getToken(SqlBaseParser.AS, 0)
+
         def STRING(self):
             return self.getToken(SqlBaseParser.STRING, 0)
+
         def TEMPORARY(self):
             return self.getToken(SqlBaseParser.TEMPORARY, 0)
+
         def USING(self):
             return self.getToken(SqlBaseParser.USING, 0)
-        def resource(self, i:int=None):
+
+        def resource(self, i: int = None):
             if i is None:
                 return self.getTypedRuleContexts(SqlBaseParser.ResourceContext)
             else:
-                return self.getTypedRuleContext(SqlBaseParser.ResourceContext,i)
+                return self.getTypedRuleContext(SqlBaseParser.ResourceContext, i)
 
-
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterCreateFunction" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterCreateFunction"):
                 listener.enterCreateFunction(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitCreateFunction" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitCreateFunction"):
                 listener.exitCreateFunction(self)
 
-
     class ShowFunctionsContext(StatementContext):
-
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a SqlBaseParser.StatementContext
+        def __init__(
+            self, parser, ctx: ParserRuleContext
+        ):  # actually a SqlBaseParser.StatementContext
             super().__init__(parser)
-            self.pattern = None # Token
+            self.pattern = None  # Token
             self.copyFrom(ctx)
 
         def SHOW(self):
             return self.getToken(SqlBaseParser.SHOW, 0)
+
         def FUNCTIONS(self):
             return self.getToken(SqlBaseParser.FUNCTIONS, 0)
+
         def identifier(self):
-            return self.getTypedRuleContext(SqlBaseParser.IdentifierContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.IdentifierContext, 0)
 
         def qualifiedName(self):
-            return self.getTypedRuleContext(SqlBaseParser.QualifiedNameContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.QualifiedNameContext, 0)
 
         def LIKE(self):
             return self.getToken(SqlBaseParser.LIKE, 0)
+
         def STRING(self):
             return self.getToken(SqlBaseParser.STRING, 0)
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterShowFunctions" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterShowFunctions"):
                 listener.enterShowFunctions(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitShowFunctions" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitShowFunctions"):
                 listener.exitShowFunctions(self)
 
-
     class CacheTableContext(StatementContext):
-
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a SqlBaseParser.StatementContext
+        def __init__(
+            self, parser, ctx: ParserRuleContext
+        ):  # actually a SqlBaseParser.StatementContext
             super().__init__(parser)
             self.copyFrom(ctx)
 
         def CACHE(self):
             return self.getToken(SqlBaseParser.CACHE, 0)
+
         def TABLE(self):
             return self.getToken(SqlBaseParser.TABLE, 0)
+
         def tableIdentifier(self):
-            return self.getTypedRuleContext(SqlBaseParser.TableIdentifierContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.TableIdentifierContext, 0)
 
         def LAZY(self):
             return self.getToken(SqlBaseParser.LAZY, 0)
+
         def query(self):
-            return self.getTypedRuleContext(SqlBaseParser.QueryContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.QueryContext, 0)
 
         def AS(self):
             return self.getToken(SqlBaseParser.AS, 0)
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterCacheTable" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterCacheTable"):
                 listener.enterCacheTable(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitCacheTable" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitCacheTable"):
                 listener.exitCacheTable(self)
 
-
     class SetTablePropertiesContext(StatementContext):
-
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a SqlBaseParser.StatementContext
+        def __init__(
+            self, parser, ctx: ParserRuleContext
+        ):  # actually a SqlBaseParser.StatementContext
             super().__init__(parser)
             self.copyFrom(ctx)
 
         def ALTER(self):
             return self.getToken(SqlBaseParser.ALTER, 0)
+
         def tableIdentifier(self):
-            return self.getTypedRuleContext(SqlBaseParser.TableIdentifierContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.TableIdentifierContext, 0)
 
         def SET(self):
             return self.getToken(SqlBaseParser.SET, 0)
+
         def TBLPROPERTIES(self):
             return self.getToken(SqlBaseParser.TBLPROPERTIES, 0)
+
         def tablePropertyList(self):
-            return self.getTypedRuleContext(SqlBaseParser.TablePropertyListContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.TablePropertyListContext, 0)
 
         def TABLE(self):
             return self.getToken(SqlBaseParser.TABLE, 0)
+
         def VIEW(self):
             return self.getToken(SqlBaseParser.VIEW, 0)
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterSetTableProperties" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterSetTableProperties"):
                 listener.enterSetTableProperties(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitSetTableProperties" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitSetTableProperties"):
                 listener.exitSetTableProperties(self)
-
-
 
     def statement(self):
 
         localctx = SqlBaseParser.StatementContext(self, self._ctx, self.state)
         self.enterRule(localctx, 8, self.RULE_statement)
-        self._la = 0 # Token type
+        self._la = 0  # Token type
         try:
             self.state = 749
             self._errHandler.sync(self)
-            la_ = self._interp.adaptivePredict(self._input,91,self._ctx)
+            la_ = self._interp.adaptivePredict(self._input, 91, self._ctx)
             if la_ == 1:
                 localctx = SqlBaseParser.StatementDefaultContext(self, localctx)
                 self.enterOuterAlt(localctx, 1)
@@ -3382,7 +3969,7 @@ class SqlBaseParser ( Parser ):
                 self.match(SqlBaseParser.DATABASE)
                 self.state = 194
                 self._errHandler.sync(self)
-                la_ = self._interp.adaptivePredict(self._input,0,self._ctx)
+                la_ = self._interp.adaptivePredict(self._input, 0, self._ctx)
                 if la_ == 1:
                     self.state = 191
                     self.match(SqlBaseParser.IF)
@@ -3391,38 +3978,34 @@ class SqlBaseParser ( Parser ):
                     self.state = 193
                     self.match(SqlBaseParser.EXISTS)
 
-
                 self.state = 196
                 self.identifier()
                 self.state = 199
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==SqlBaseParser.COMMENT:
+                if _la == SqlBaseParser.COMMENT:
                     self.state = 197
                     self.match(SqlBaseParser.COMMENT)
                     self.state = 198
                     localctx.comment = self.match(SqlBaseParser.STRING)
 
-
                 self.state = 202
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==SqlBaseParser.LOCATION:
+                if _la == SqlBaseParser.LOCATION:
                     self.state = 201
                     self.locationSpec()
-
 
                 self.state = 207
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==SqlBaseParser.WITH:
+                if _la == SqlBaseParser.WITH:
                     self.state = 204
                     self.match(SqlBaseParser.WITH)
                     self.state = 205
                     self.match(SqlBaseParser.DBPROPERTIES)
                     self.state = 206
                     self.tablePropertyList()
-
 
                 pass
 
@@ -3452,28 +4035,28 @@ class SqlBaseParser ( Parser ):
                 self.match(SqlBaseParser.DATABASE)
                 self.state = 220
                 self._errHandler.sync(self)
-                la_ = self._interp.adaptivePredict(self._input,4,self._ctx)
+                la_ = self._interp.adaptivePredict(self._input, 4, self._ctx)
                 if la_ == 1:
                     self.state = 218
                     self.match(SqlBaseParser.IF)
                     self.state = 219
                     self.match(SqlBaseParser.EXISTS)
 
-
                 self.state = 222
                 self.identifier()
                 self.state = 224
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==SqlBaseParser.CASCADE or _la==SqlBaseParser.RESTRICT:
+                if _la == SqlBaseParser.CASCADE or _la == SqlBaseParser.RESTRICT:
                     self.state = 223
                     _la = self._input.LA(1)
-                    if not(_la==SqlBaseParser.CASCADE or _la==SqlBaseParser.RESTRICT):
+                    if not (
+                        _la == SqlBaseParser.CASCADE or _la == SqlBaseParser.RESTRICT
+                    ):
                         self._errHandler.recoverInline(self)
                     else:
                         self._errHandler.reportMatch(self)
                         self.consume()
-
 
                 pass
 
@@ -3485,7 +4068,7 @@ class SqlBaseParser ( Parser ):
                 self.state = 231
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==SqlBaseParser.T__0:
+                if _la == SqlBaseParser.T__0:
                     self.state = 227
                     self.match(SqlBaseParser.T__0)
                     self.state = 228
@@ -3493,23 +4076,21 @@ class SqlBaseParser ( Parser ):
                     self.state = 229
                     self.match(SqlBaseParser.T__1)
 
-
                 self.state = 233
                 self.tableProvider()
                 self.state = 236
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==SqlBaseParser.OPTIONS:
+                if _la == SqlBaseParser.OPTIONS:
                     self.state = 234
                     self.match(SqlBaseParser.OPTIONS)
                     self.state = 235
                     self.tablePropertyList()
 
-
                 self.state = 241
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==SqlBaseParser.PARTITIONED:
+                if _la == SqlBaseParser.PARTITIONED:
                     self.state = 238
                     self.match(SqlBaseParser.PARTITIONED)
                     self.state = 239
@@ -3517,14 +4098,12 @@ class SqlBaseParser ( Parser ):
                     self.state = 240
                     localctx.partitionColumnNames = self.identifierList()
 
-
                 self.state = 244
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==SqlBaseParser.CLUSTERED:
+                if _la == SqlBaseParser.CLUSTERED:
                     self.state = 243
                     self.bucketSpec()
-
 
                 pass
 
@@ -3538,17 +4117,16 @@ class SqlBaseParser ( Parser ):
                 self.state = 250
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==SqlBaseParser.OPTIONS:
+                if _la == SqlBaseParser.OPTIONS:
                     self.state = 248
                     self.match(SqlBaseParser.OPTIONS)
                     self.state = 249
                     self.tablePropertyList()
 
-
                 self.state = 255
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==SqlBaseParser.PARTITIONED:
+                if _la == SqlBaseParser.PARTITIONED:
                     self.state = 252
                     self.match(SqlBaseParser.PARTITIONED)
                     self.state = 253
@@ -3556,22 +4134,19 @@ class SqlBaseParser ( Parser ):
                     self.state = 254
                     localctx.partitionColumnNames = self.identifierList()
 
-
                 self.state = 258
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==SqlBaseParser.CLUSTERED:
+                if _la == SqlBaseParser.CLUSTERED:
                     self.state = 257
                     self.bucketSpec()
-
 
                 self.state = 261
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==SqlBaseParser.AS:
+                if _la == SqlBaseParser.AS:
                     self.state = 260
                     self.match(SqlBaseParser.AS)
-
 
                 self.state = 263
                 self.query()
@@ -3584,7 +4159,7 @@ class SqlBaseParser ( Parser ):
                 self.createTableHeader()
                 self.state = 270
                 self._errHandler.sync(self)
-                la_ = self._interp.adaptivePredict(self._input,14,self._ctx)
+                la_ = self._interp.adaptivePredict(self._input, 14, self._ctx)
                 if la_ == 1:
                     self.state = 266
                     self.match(SqlBaseParser.T__0)
@@ -3593,21 +4168,19 @@ class SqlBaseParser ( Parser ):
                     self.state = 268
                     self.match(SqlBaseParser.T__1)
 
-
                 self.state = 274
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==SqlBaseParser.COMMENT:
+                if _la == SqlBaseParser.COMMENT:
                     self.state = 272
                     self.match(SqlBaseParser.COMMENT)
                     self.state = 273
                     self.match(SqlBaseParser.STRING)
 
-
                 self.state = 282
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==SqlBaseParser.PARTITIONED:
+                if _la == SqlBaseParser.PARTITIONED:
                     self.state = 276
                     self.match(SqlBaseParser.PARTITIONED)
                     self.state = 277
@@ -3619,72 +4192,92 @@ class SqlBaseParser ( Parser ):
                     self.state = 280
                     self.match(SqlBaseParser.T__1)
 
-
                 self.state = 285
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==SqlBaseParser.CLUSTERED:
+                if _la == SqlBaseParser.CLUSTERED:
                     self.state = 284
                     self.bucketSpec()
-
 
                 self.state = 288
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==SqlBaseParser.SKEWED:
+                if _la == SqlBaseParser.SKEWED:
                     self.state = 287
                     self.skewSpec()
-
 
                 self.state = 291
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==SqlBaseParser.ROW:
+                if _la == SqlBaseParser.ROW:
                     self.state = 290
                     self.rowFormat()
-
 
                 self.state = 294
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==SqlBaseParser.STORED:
+                if _la == SqlBaseParser.STORED:
                     self.state = 293
                     self.createFileFormat()
-
 
                 self.state = 297
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==SqlBaseParser.LOCATION:
+                if _la == SqlBaseParser.LOCATION:
                     self.state = 296
                     self.locationSpec()
-
 
                 self.state = 301
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==SqlBaseParser.TBLPROPERTIES:
+                if _la == SqlBaseParser.TBLPROPERTIES:
                     self.state = 299
                     self.match(SqlBaseParser.TBLPROPERTIES)
                     self.state = 300
                     self.tablePropertyList()
 
-
                 self.state = 307
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if (((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << SqlBaseParser.T__0) | (1 << SqlBaseParser.SELECT) | (1 << SqlBaseParser.FROM) | (1 << SqlBaseParser.AS))) != 0) or ((((_la - 69)) & ~0x3f) == 0 and ((1 << (_la - 69)) & ((1 << (SqlBaseParser.WITH - 69)) | (1 << (SqlBaseParser.VALUES - 69)) | (1 << (SqlBaseParser.TABLE - 69)) | (1 << (SqlBaseParser.INSERT - 69)) | (1 << (SqlBaseParser.MAP - 69)))) != 0) or _la==SqlBaseParser.REDUCE:
+                if (
+                    (
+                        ((_la) & ~0x3F) == 0
+                        and (
+                            (1 << _la)
+                            & (
+                                (1 << SqlBaseParser.T__0)
+                                | (1 << SqlBaseParser.SELECT)
+                                | (1 << SqlBaseParser.FROM)
+                                | (1 << SqlBaseParser.AS)
+                            )
+                        )
+                        != 0
+                    )
+                    or (
+                        (((_la - 69)) & ~0x3F) == 0
+                        and (
+                            (1 << (_la - 69))
+                            & (
+                                (1 << (SqlBaseParser.WITH - 69))
+                                | (1 << (SqlBaseParser.VALUES - 69))
+                                | (1 << (SqlBaseParser.TABLE - 69))
+                                | (1 << (SqlBaseParser.INSERT - 69))
+                                | (1 << (SqlBaseParser.MAP - 69))
+                            )
+                        )
+                        != 0
+                    )
+                    or _la == SqlBaseParser.REDUCE
+                ):
                     self.state = 304
                     self._errHandler.sync(self)
                     _la = self._input.LA(1)
-                    if _la==SqlBaseParser.AS:
+                    if _la == SqlBaseParser.AS:
                         self.state = 303
                         self.match(SqlBaseParser.AS)
 
-
                     self.state = 306
                     self.query()
-
 
                 pass
 
@@ -3697,7 +4290,7 @@ class SqlBaseParser ( Parser ):
                 self.match(SqlBaseParser.TABLE)
                 self.state = 314
                 self._errHandler.sync(self)
-                la_ = self._interp.adaptivePredict(self._input,25,self._ctx)
+                la_ = self._interp.adaptivePredict(self._input, 25, self._ctx)
                 if la_ == 1:
                     self.state = 311
                     self.match(SqlBaseParser.IF)
@@ -3705,7 +4298,6 @@ class SqlBaseParser ( Parser ):
                     self.match(SqlBaseParser.NOT)
                     self.state = 313
                     self.match(SqlBaseParser.EXISTS)
-
 
                 self.state = 316
                 localctx.target = self.tableIdentifier()
@@ -3727,10 +4319,9 @@ class SqlBaseParser ( Parser ):
                 self.state = 324
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==SqlBaseParser.PARTITION:
+                if _la == SqlBaseParser.PARTITION:
                     self.state = 323
                     self.partitionSpec()
-
 
                 self.state = 326
                 self.match(SqlBaseParser.COMPUTE)
@@ -3738,7 +4329,7 @@ class SqlBaseParser ( Parser ):
                 self.match(SqlBaseParser.STATISTICS)
                 self.state = 334
                 self._errHandler.sync(self)
-                la_ = self._interp.adaptivePredict(self._input,28,self._ctx)
+                la_ = self._interp.adaptivePredict(self._input, 28, self._ctx)
                 if la_ == 1:
                     self.state = 328
                     self.identifier()
@@ -3751,12 +4342,246 @@ class SqlBaseParser ( Parser ):
                     self.state = 332
                     self._errHandler.sync(self)
                     _la = self._input.LA(1)
-                    if (((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << SqlBaseParser.SELECT) | (1 << SqlBaseParser.FROM) | (1 << SqlBaseParser.ADD) | (1 << SqlBaseParser.AS) | (1 << SqlBaseParser.ALL) | (1 << SqlBaseParser.DISTINCT) | (1 << SqlBaseParser.WHERE) | (1 << SqlBaseParser.GROUP) | (1 << SqlBaseParser.BY) | (1 << SqlBaseParser.GROUPING) | (1 << SqlBaseParser.SETS) | (1 << SqlBaseParser.CUBE) | (1 << SqlBaseParser.ROLLUP) | (1 << SqlBaseParser.ORDER) | (1 << SqlBaseParser.HAVING) | (1 << SqlBaseParser.LIMIT) | (1 << SqlBaseParser.AT) | (1 << SqlBaseParser.OR) | (1 << SqlBaseParser.AND) | (1 << SqlBaseParser.IN) | (1 << SqlBaseParser.NOT) | (1 << SqlBaseParser.NO) | (1 << SqlBaseParser.EXISTS) | (1 << SqlBaseParser.BETWEEN) | (1 << SqlBaseParser.LIKE) | (1 << SqlBaseParser.RLIKE) | (1 << SqlBaseParser.IS) | (1 << SqlBaseParser.NULL) | (1 << SqlBaseParser.TRUE) | (1 << SqlBaseParser.FALSE) | (1 << SqlBaseParser.NULLS) | (1 << SqlBaseParser.ASC) | (1 << SqlBaseParser.DESC) | (1 << SqlBaseParser.FOR) | (1 << SqlBaseParser.INTERVAL) | (1 << SqlBaseParser.CASE) | (1 << SqlBaseParser.WHEN) | (1 << SqlBaseParser.THEN) | (1 << SqlBaseParser.ELSE) | (1 << SqlBaseParser.END) | (1 << SqlBaseParser.JOIN) | (1 << SqlBaseParser.CROSS) | (1 << SqlBaseParser.OUTER) | (1 << SqlBaseParser.INNER) | (1 << SqlBaseParser.LEFT) | (1 << SqlBaseParser.SEMI) | (1 << SqlBaseParser.RIGHT) | (1 << SqlBaseParser.FULL) | (1 << SqlBaseParser.NATURAL) | (1 << SqlBaseParser.ON) | (1 << SqlBaseParser.LATERAL) | (1 << SqlBaseParser.WINDOW) | (1 << SqlBaseParser.OVER) | (1 << SqlBaseParser.PARTITION) | (1 << SqlBaseParser.RANGE) | (1 << SqlBaseParser.ROWS))) != 0) or ((((_la - 64)) & ~0x3f) == 0 and ((1 << (_la - 64)) & ((1 << (SqlBaseParser.UNBOUNDED - 64)) | (1 << (SqlBaseParser.PRECEDING - 64)) | (1 << (SqlBaseParser.FOLLOWING - 64)) | (1 << (SqlBaseParser.CURRENT - 64)) | (1 << (SqlBaseParser.ROW - 64)) | (1 << (SqlBaseParser.WITH - 64)) | (1 << (SqlBaseParser.VALUES - 64)) | (1 << (SqlBaseParser.CREATE - 64)) | (1 << (SqlBaseParser.TABLE - 64)) | (1 << (SqlBaseParser.VIEW - 64)) | (1 << (SqlBaseParser.REPLACE - 64)) | (1 << (SqlBaseParser.INSERT - 64)) | (1 << (SqlBaseParser.DELETE - 64)) | (1 << (SqlBaseParser.INTO - 64)) | (1 << (SqlBaseParser.DESCRIBE - 64)) | (1 << (SqlBaseParser.EXPLAIN - 64)) | (1 << (SqlBaseParser.FORMAT - 64)) | (1 << (SqlBaseParser.LOGICAL - 64)) | (1 << (SqlBaseParser.CODEGEN - 64)) | (1 << (SqlBaseParser.CAST - 64)) | (1 << (SqlBaseParser.SHOW - 64)) | (1 << (SqlBaseParser.TABLES - 64)) | (1 << (SqlBaseParser.COLUMNS - 64)) | (1 << (SqlBaseParser.COLUMN - 64)) | (1 << (SqlBaseParser.USE - 64)) | (1 << (SqlBaseParser.PARTITIONS - 64)) | (1 << (SqlBaseParser.FUNCTIONS - 64)) | (1 << (SqlBaseParser.DROP - 64)) | (1 << (SqlBaseParser.UNION - 64)) | (1 << (SqlBaseParser.EXCEPT - 64)) | (1 << (SqlBaseParser.INTERSECT - 64)) | (1 << (SqlBaseParser.TO - 64)) | (1 << (SqlBaseParser.TABLESAMPLE - 64)) | (1 << (SqlBaseParser.STRATIFY - 64)) | (1 << (SqlBaseParser.ALTER - 64)) | (1 << (SqlBaseParser.RENAME - 64)) | (1 << (SqlBaseParser.ARRAY - 64)) | (1 << (SqlBaseParser.MAP - 64)) | (1 << (SqlBaseParser.STRUCT - 64)) | (1 << (SqlBaseParser.COMMENT - 64)) | (1 << (SqlBaseParser.SET - 64)) | (1 << (SqlBaseParser.RESET - 64)) | (1 << (SqlBaseParser.DATA - 64)) | (1 << (SqlBaseParser.START - 64)) | (1 << (SqlBaseParser.TRANSACTION - 64)) | (1 << (SqlBaseParser.COMMIT - 64)) | (1 << (SqlBaseParser.ROLLBACK - 64)) | (1 << (SqlBaseParser.MACRO - 64)) | (1 << (SqlBaseParser.IF - 64)) | (1 << (SqlBaseParser.DIV - 64)))) != 0) or ((((_la - 131)) & ~0x3f) == 0 and ((1 << (_la - 131)) & ((1 << (SqlBaseParser.PERCENTLIT - 131)) | (1 << (SqlBaseParser.BUCKET - 131)) | (1 << (SqlBaseParser.OUT - 131)) | (1 << (SqlBaseParser.OF - 131)) | (1 << (SqlBaseParser.SORT - 131)) | (1 << (SqlBaseParser.CLUSTER - 131)) | (1 << (SqlBaseParser.DISTRIBUTE - 131)) | (1 << (SqlBaseParser.OVERWRITE - 131)) | (1 << (SqlBaseParser.TRANSFORM - 131)) | (1 << (SqlBaseParser.REDUCE - 131)) | (1 << (SqlBaseParser.USING - 131)) | (1 << (SqlBaseParser.SERDE - 131)) | (1 << (SqlBaseParser.SERDEPROPERTIES - 131)) | (1 << (SqlBaseParser.RECORDREADER - 131)) | (1 << (SqlBaseParser.RECORDWRITER - 131)) | (1 << (SqlBaseParser.DELIMITED - 131)) | (1 << (SqlBaseParser.FIELDS - 131)) | (1 << (SqlBaseParser.TERMINATED - 131)) | (1 << (SqlBaseParser.COLLECTION - 131)) | (1 << (SqlBaseParser.ITEMS - 131)) | (1 << (SqlBaseParser.KEYS - 131)) | (1 << (SqlBaseParser.ESCAPED - 131)) | (1 << (SqlBaseParser.LINES - 131)) | (1 << (SqlBaseParser.SEPARATED - 131)) | (1 << (SqlBaseParser.FUNCTION - 131)) | (1 << (SqlBaseParser.EXTENDED - 131)) | (1 << (SqlBaseParser.REFRESH - 131)) | (1 << (SqlBaseParser.CLEAR - 131)) | (1 << (SqlBaseParser.CACHE - 131)) | (1 << (SqlBaseParser.UNCACHE - 131)) | (1 << (SqlBaseParser.LAZY - 131)) | (1 << (SqlBaseParser.FORMATTED - 131)) | (1 << (SqlBaseParser.TEMPORARY - 131)) | (1 << (SqlBaseParser.OPTIONS - 131)) | (1 << (SqlBaseParser.UNSET - 131)) | (1 << (SqlBaseParser.TBLPROPERTIES - 131)) | (1 << (SqlBaseParser.DBPROPERTIES - 131)) | (1 << (SqlBaseParser.BUCKETS - 131)) | (1 << (SqlBaseParser.SKEWED - 131)) | (1 << (SqlBaseParser.STORED - 131)) | (1 << (SqlBaseParser.DIRECTORIES - 131)) | (1 << (SqlBaseParser.LOCATION - 131)) | (1 << (SqlBaseParser.EXCHANGE - 131)) | (1 << (SqlBaseParser.ARCHIVE - 131)) | (1 << (SqlBaseParser.UNARCHIVE - 131)) | (1 << (SqlBaseParser.FILEFORMAT - 131)) | (1 << (SqlBaseParser.TOUCH - 131)) | (1 << (SqlBaseParser.COMPACT - 131)) | (1 << (SqlBaseParser.CONCATENATE - 131)) | (1 << (SqlBaseParser.CHANGE - 131)) | (1 << (SqlBaseParser.CASCADE - 131)) | (1 << (SqlBaseParser.RESTRICT - 131)) | (1 << (SqlBaseParser.CLUSTERED - 131)) | (1 << (SqlBaseParser.SORTED - 131)) | (1 << (SqlBaseParser.PURGE - 131)) | (1 << (SqlBaseParser.INPUTFORMAT - 131)) | (1 << (SqlBaseParser.OUTPUTFORMAT - 131)) | (1 << (SqlBaseParser.DATABASE - 131)) | (1 << (SqlBaseParser.DATABASES - 131)) | (1 << (SqlBaseParser.DFS - 131)) | (1 << (SqlBaseParser.TRUNCATE - 131)) | (1 << (SqlBaseParser.ANALYZE - 131)) | (1 << (SqlBaseParser.COMPUTE - 131)) | (1 << (SqlBaseParser.LIST - 131)))) != 0) or ((((_la - 195)) & ~0x3f) == 0 and ((1 << (_la - 195)) & ((1 << (SqlBaseParser.STATISTICS - 195)) | (1 << (SqlBaseParser.PARTITIONED - 195)) | (1 << (SqlBaseParser.EXTERNAL - 195)) | (1 << (SqlBaseParser.DEFINED - 195)) | (1 << (SqlBaseParser.REVOKE - 195)) | (1 << (SqlBaseParser.GRANT - 195)) | (1 << (SqlBaseParser.LOCK - 195)) | (1 << (SqlBaseParser.UNLOCK - 195)) | (1 << (SqlBaseParser.MSCK - 195)) | (1 << (SqlBaseParser.REPAIR - 195)) | (1 << (SqlBaseParser.RECOVER - 195)) | (1 << (SqlBaseParser.EXPORT - 195)) | (1 << (SqlBaseParser.IMPORT - 195)) | (1 << (SqlBaseParser.LOAD - 195)) | (1 << (SqlBaseParser.ROLE - 195)) | (1 << (SqlBaseParser.ROLES - 195)) | (1 << (SqlBaseParser.COMPACTIONS - 195)) | (1 << (SqlBaseParser.PRINCIPALS - 195)) | (1 << (SqlBaseParser.TRANSACTIONS - 195)) | (1 << (SqlBaseParser.INDEX - 195)) | (1 << (SqlBaseParser.INDEXES - 195)) | (1 << (SqlBaseParser.LOCKS - 195)) | (1 << (SqlBaseParser.OPTION - 195)) | (1 << (SqlBaseParser.ANTI - 195)) | (1 << (SqlBaseParser.LOCAL - 195)) | (1 << (SqlBaseParser.INPATH - 195)) | (1 << (SqlBaseParser.CURRENT_DATE - 195)) | (1 << (SqlBaseParser.CURRENT_TIMESTAMP - 195)) | (1 << (SqlBaseParser.IDENTIFIER - 195)) | (1 << (SqlBaseParser.BACKQUOTED_IDENTIFIER - 195)))) != 0):
+                    if (
+                        (
+                            ((_la) & ~0x3F) == 0
+                            and (
+                                (1 << _la)
+                                & (
+                                    (1 << SqlBaseParser.SELECT)
+                                    | (1 << SqlBaseParser.FROM)
+                                    | (1 << SqlBaseParser.ADD)
+                                    | (1 << SqlBaseParser.AS)
+                                    | (1 << SqlBaseParser.ALL)
+                                    | (1 << SqlBaseParser.DISTINCT)
+                                    | (1 << SqlBaseParser.WHERE)
+                                    | (1 << SqlBaseParser.GROUP)
+                                    | (1 << SqlBaseParser.BY)
+                                    | (1 << SqlBaseParser.GROUPING)
+                                    | (1 << SqlBaseParser.SETS)
+                                    | (1 << SqlBaseParser.CUBE)
+                                    | (1 << SqlBaseParser.ROLLUP)
+                                    | (1 << SqlBaseParser.ORDER)
+                                    | (1 << SqlBaseParser.HAVING)
+                                    | (1 << SqlBaseParser.LIMIT)
+                                    | (1 << SqlBaseParser.AT)
+                                    | (1 << SqlBaseParser.OR)
+                                    | (1 << SqlBaseParser.AND)
+                                    | (1 << SqlBaseParser.IN)
+                                    | (1 << SqlBaseParser.NOT)
+                                    | (1 << SqlBaseParser.NO)
+                                    | (1 << SqlBaseParser.EXISTS)
+                                    | (1 << SqlBaseParser.BETWEEN)
+                                    | (1 << SqlBaseParser.LIKE)
+                                    | (1 << SqlBaseParser.RLIKE)
+                                    | (1 << SqlBaseParser.IS)
+                                    | (1 << SqlBaseParser.NULL)
+                                    | (1 << SqlBaseParser.TRUE)
+                                    | (1 << SqlBaseParser.FALSE)
+                                    | (1 << SqlBaseParser.NULLS)
+                                    | (1 << SqlBaseParser.ASC)
+                                    | (1 << SqlBaseParser.DESC)
+                                    | (1 << SqlBaseParser.FOR)
+                                    | (1 << SqlBaseParser.INTERVAL)
+                                    | (1 << SqlBaseParser.CASE)
+                                    | (1 << SqlBaseParser.WHEN)
+                                    | (1 << SqlBaseParser.THEN)
+                                    | (1 << SqlBaseParser.ELSE)
+                                    | (1 << SqlBaseParser.END)
+                                    | (1 << SqlBaseParser.JOIN)
+                                    | (1 << SqlBaseParser.CROSS)
+                                    | (1 << SqlBaseParser.OUTER)
+                                    | (1 << SqlBaseParser.INNER)
+                                    | (1 << SqlBaseParser.LEFT)
+                                    | (1 << SqlBaseParser.SEMI)
+                                    | (1 << SqlBaseParser.RIGHT)
+                                    | (1 << SqlBaseParser.FULL)
+                                    | (1 << SqlBaseParser.NATURAL)
+                                    | (1 << SqlBaseParser.ON)
+                                    | (1 << SqlBaseParser.LATERAL)
+                                    | (1 << SqlBaseParser.WINDOW)
+                                    | (1 << SqlBaseParser.OVER)
+                                    | (1 << SqlBaseParser.PARTITION)
+                                    | (1 << SqlBaseParser.RANGE)
+                                    | (1 << SqlBaseParser.ROWS)
+                                )
+                            )
+                            != 0
+                        )
+                        or (
+                            (((_la - 64)) & ~0x3F) == 0
+                            and (
+                                (1 << (_la - 64))
+                                & (
+                                    (1 << (SqlBaseParser.UNBOUNDED - 64))
+                                    | (1 << (SqlBaseParser.PRECEDING - 64))
+                                    | (1 << (SqlBaseParser.FOLLOWING - 64))
+                                    | (1 << (SqlBaseParser.CURRENT - 64))
+                                    | (1 << (SqlBaseParser.ROW - 64))
+                                    | (1 << (SqlBaseParser.WITH - 64))
+                                    | (1 << (SqlBaseParser.VALUES - 64))
+                                    | (1 << (SqlBaseParser.CREATE - 64))
+                                    | (1 << (SqlBaseParser.TABLE - 64))
+                                    | (1 << (SqlBaseParser.VIEW - 64))
+                                    | (1 << (SqlBaseParser.REPLACE - 64))
+                                    | (1 << (SqlBaseParser.INSERT - 64))
+                                    | (1 << (SqlBaseParser.DELETE - 64))
+                                    | (1 << (SqlBaseParser.INTO - 64))
+                                    | (1 << (SqlBaseParser.DESCRIBE - 64))
+                                    | (1 << (SqlBaseParser.EXPLAIN - 64))
+                                    | (1 << (SqlBaseParser.FORMAT - 64))
+                                    | (1 << (SqlBaseParser.LOGICAL - 64))
+                                    | (1 << (SqlBaseParser.CODEGEN - 64))
+                                    | (1 << (SqlBaseParser.CAST - 64))
+                                    | (1 << (SqlBaseParser.SHOW - 64))
+                                    | (1 << (SqlBaseParser.TABLES - 64))
+                                    | (1 << (SqlBaseParser.COLUMNS - 64))
+                                    | (1 << (SqlBaseParser.COLUMN - 64))
+                                    | (1 << (SqlBaseParser.USE - 64))
+                                    | (1 << (SqlBaseParser.PARTITIONS - 64))
+                                    | (1 << (SqlBaseParser.FUNCTIONS - 64))
+                                    | (1 << (SqlBaseParser.DROP - 64))
+                                    | (1 << (SqlBaseParser.UNION - 64))
+                                    | (1 << (SqlBaseParser.EXCEPT - 64))
+                                    | (1 << (SqlBaseParser.INTERSECT - 64))
+                                    | (1 << (SqlBaseParser.TO - 64))
+                                    | (1 << (SqlBaseParser.TABLESAMPLE - 64))
+                                    | (1 << (SqlBaseParser.STRATIFY - 64))
+                                    | (1 << (SqlBaseParser.ALTER - 64))
+                                    | (1 << (SqlBaseParser.RENAME - 64))
+                                    | (1 << (SqlBaseParser.ARRAY - 64))
+                                    | (1 << (SqlBaseParser.MAP - 64))
+                                    | (1 << (SqlBaseParser.STRUCT - 64))
+                                    | (1 << (SqlBaseParser.COMMENT - 64))
+                                    | (1 << (SqlBaseParser.SET - 64))
+                                    | (1 << (SqlBaseParser.RESET - 64))
+                                    | (1 << (SqlBaseParser.DATA - 64))
+                                    | (1 << (SqlBaseParser.START - 64))
+                                    | (1 << (SqlBaseParser.TRANSACTION - 64))
+                                    | (1 << (SqlBaseParser.COMMIT - 64))
+                                    | (1 << (SqlBaseParser.ROLLBACK - 64))
+                                    | (1 << (SqlBaseParser.MACRO - 64))
+                                    | (1 << (SqlBaseParser.IF - 64))
+                                    | (1 << (SqlBaseParser.DIV - 64))
+                                )
+                            )
+                            != 0
+                        )
+                        or (
+                            (((_la - 131)) & ~0x3F) == 0
+                            and (
+                                (1 << (_la - 131))
+                                & (
+                                    (1 << (SqlBaseParser.PERCENTLIT - 131))
+                                    | (1 << (SqlBaseParser.BUCKET - 131))
+                                    | (1 << (SqlBaseParser.OUT - 131))
+                                    | (1 << (SqlBaseParser.OF - 131))
+                                    | (1 << (SqlBaseParser.SORT - 131))
+                                    | (1 << (SqlBaseParser.CLUSTER - 131))
+                                    | (1 << (SqlBaseParser.DISTRIBUTE - 131))
+                                    | (1 << (SqlBaseParser.OVERWRITE - 131))
+                                    | (1 << (SqlBaseParser.TRANSFORM - 131))
+                                    | (1 << (SqlBaseParser.REDUCE - 131))
+                                    | (1 << (SqlBaseParser.USING - 131))
+                                    | (1 << (SqlBaseParser.SERDE - 131))
+                                    | (1 << (SqlBaseParser.SERDEPROPERTIES - 131))
+                                    | (1 << (SqlBaseParser.RECORDREADER - 131))
+                                    | (1 << (SqlBaseParser.RECORDWRITER - 131))
+                                    | (1 << (SqlBaseParser.DELIMITED - 131))
+                                    | (1 << (SqlBaseParser.FIELDS - 131))
+                                    | (1 << (SqlBaseParser.TERMINATED - 131))
+                                    | (1 << (SqlBaseParser.COLLECTION - 131))
+                                    | (1 << (SqlBaseParser.ITEMS - 131))
+                                    | (1 << (SqlBaseParser.KEYS - 131))
+                                    | (1 << (SqlBaseParser.ESCAPED - 131))
+                                    | (1 << (SqlBaseParser.LINES - 131))
+                                    | (1 << (SqlBaseParser.SEPARATED - 131))
+                                    | (1 << (SqlBaseParser.FUNCTION - 131))
+                                    | (1 << (SqlBaseParser.EXTENDED - 131))
+                                    | (1 << (SqlBaseParser.REFRESH - 131))
+                                    | (1 << (SqlBaseParser.CLEAR - 131))
+                                    | (1 << (SqlBaseParser.CACHE - 131))
+                                    | (1 << (SqlBaseParser.UNCACHE - 131))
+                                    | (1 << (SqlBaseParser.LAZY - 131))
+                                    | (1 << (SqlBaseParser.FORMATTED - 131))
+                                    | (1 << (SqlBaseParser.TEMPORARY - 131))
+                                    | (1 << (SqlBaseParser.OPTIONS - 131))
+                                    | (1 << (SqlBaseParser.UNSET - 131))
+                                    | (1 << (SqlBaseParser.TBLPROPERTIES - 131))
+                                    | (1 << (SqlBaseParser.DBPROPERTIES - 131))
+                                    | (1 << (SqlBaseParser.BUCKETS - 131))
+                                    | (1 << (SqlBaseParser.SKEWED - 131))
+                                    | (1 << (SqlBaseParser.STORED - 131))
+                                    | (1 << (SqlBaseParser.DIRECTORIES - 131))
+                                    | (1 << (SqlBaseParser.LOCATION - 131))
+                                    | (1 << (SqlBaseParser.EXCHANGE - 131))
+                                    | (1 << (SqlBaseParser.ARCHIVE - 131))
+                                    | (1 << (SqlBaseParser.UNARCHIVE - 131))
+                                    | (1 << (SqlBaseParser.FILEFORMAT - 131))
+                                    | (1 << (SqlBaseParser.TOUCH - 131))
+                                    | (1 << (SqlBaseParser.COMPACT - 131))
+                                    | (1 << (SqlBaseParser.CONCATENATE - 131))
+                                    | (1 << (SqlBaseParser.CHANGE - 131))
+                                    | (1 << (SqlBaseParser.CASCADE - 131))
+                                    | (1 << (SqlBaseParser.RESTRICT - 131))
+                                    | (1 << (SqlBaseParser.CLUSTERED - 131))
+                                    | (1 << (SqlBaseParser.SORTED - 131))
+                                    | (1 << (SqlBaseParser.PURGE - 131))
+                                    | (1 << (SqlBaseParser.INPUTFORMAT - 131))
+                                    | (1 << (SqlBaseParser.OUTPUTFORMAT - 131))
+                                    | (1 << (SqlBaseParser.DATABASE - 131))
+                                    | (1 << (SqlBaseParser.DATABASES - 131))
+                                    | (1 << (SqlBaseParser.DFS - 131))
+                                    | (1 << (SqlBaseParser.TRUNCATE - 131))
+                                    | (1 << (SqlBaseParser.ANALYZE - 131))
+                                    | (1 << (SqlBaseParser.COMPUTE - 131))
+                                    | (1 << (SqlBaseParser.LIST - 131))
+                                )
+                            )
+                            != 0
+                        )
+                        or (
+                            (((_la - 195)) & ~0x3F) == 0
+                            and (
+                                (1 << (_la - 195))
+                                & (
+                                    (1 << (SqlBaseParser.STATISTICS - 195))
+                                    | (1 << (SqlBaseParser.PARTITIONED - 195))
+                                    | (1 << (SqlBaseParser.EXTERNAL - 195))
+                                    | (1 << (SqlBaseParser.DEFINED - 195))
+                                    | (1 << (SqlBaseParser.REVOKE - 195))
+                                    | (1 << (SqlBaseParser.GRANT - 195))
+                                    | (1 << (SqlBaseParser.LOCK - 195))
+                                    | (1 << (SqlBaseParser.UNLOCK - 195))
+                                    | (1 << (SqlBaseParser.MSCK - 195))
+                                    | (1 << (SqlBaseParser.REPAIR - 195))
+                                    | (1 << (SqlBaseParser.RECOVER - 195))
+                                    | (1 << (SqlBaseParser.EXPORT - 195))
+                                    | (1 << (SqlBaseParser.IMPORT - 195))
+                                    | (1 << (SqlBaseParser.LOAD - 195))
+                                    | (1 << (SqlBaseParser.ROLE - 195))
+                                    | (1 << (SqlBaseParser.ROLES - 195))
+                                    | (1 << (SqlBaseParser.COMPACTIONS - 195))
+                                    | (1 << (SqlBaseParser.PRINCIPALS - 195))
+                                    | (1 << (SqlBaseParser.TRANSACTIONS - 195))
+                                    | (1 << (SqlBaseParser.INDEX - 195))
+                                    | (1 << (SqlBaseParser.INDEXES - 195))
+                                    | (1 << (SqlBaseParser.LOCKS - 195))
+                                    | (1 << (SqlBaseParser.OPTION - 195))
+                                    | (1 << (SqlBaseParser.ANTI - 195))
+                                    | (1 << (SqlBaseParser.LOCAL - 195))
+                                    | (1 << (SqlBaseParser.INPATH - 195))
+                                    | (1 << (SqlBaseParser.CURRENT_DATE - 195))
+                                    | (1 << (SqlBaseParser.CURRENT_TIMESTAMP - 195))
+                                    | (1 << (SqlBaseParser.IDENTIFIER - 195))
+                                    | (1 << (SqlBaseParser.BACKQUOTED_IDENTIFIER - 195))
+                                )
+                            )
+                            != 0
+                        )
+                    ):
                         self.state = 331
                         self.identifierSeq()
-
-
-
 
                 pass
 
@@ -3767,13 +4592,13 @@ class SqlBaseParser ( Parser ):
                 self.match(SqlBaseParser.ALTER)
                 self.state = 337
                 _la = self._input.LA(1)
-                if not(_la==SqlBaseParser.TABLE or _la==SqlBaseParser.VIEW):
+                if not (_la == SqlBaseParser.TABLE or _la == SqlBaseParser.VIEW):
                     self._errHandler.recoverInline(self)
                 else:
                     self._errHandler.reportMatch(self)
                     self.consume()
                 self.state = 338
-                localctx.from = self.tableIdentifier()
+                localctx.from_ = self.tableIdentifier()
                 self.state = 339
                 self.match(SqlBaseParser.RENAME)
                 self.state = 340
@@ -3789,7 +4614,7 @@ class SqlBaseParser ( Parser ):
                 self.match(SqlBaseParser.ALTER)
                 self.state = 344
                 _la = self._input.LA(1)
-                if not(_la==SqlBaseParser.TABLE or _la==SqlBaseParser.VIEW):
+                if not (_la == SqlBaseParser.TABLE or _la == SqlBaseParser.VIEW):
                     self._errHandler.recoverInline(self)
                 else:
                     self._errHandler.reportMatch(self)
@@ -3811,7 +4636,7 @@ class SqlBaseParser ( Parser ):
                 self.match(SqlBaseParser.ALTER)
                 self.state = 351
                 _la = self._input.LA(1)
-                if not(_la==SqlBaseParser.TABLE or _la==SqlBaseParser.VIEW):
+                if not (_la == SqlBaseParser.TABLE or _la == SqlBaseParser.VIEW):
                     self._errHandler.recoverInline(self)
                 else:
                     self._errHandler.reportMatch(self)
@@ -3825,12 +4650,11 @@ class SqlBaseParser ( Parser ):
                 self.state = 357
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==SqlBaseParser.IF:
+                if _la == SqlBaseParser.IF:
                     self.state = 355
                     self.match(SqlBaseParser.IF)
                     self.state = 356
                     self.match(SqlBaseParser.EXISTS)
-
 
                 self.state = 359
                 self.tablePropertyList()
@@ -3848,10 +4672,9 @@ class SqlBaseParser ( Parser ):
                 self.state = 365
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==SqlBaseParser.PARTITION:
+                if _la == SqlBaseParser.PARTITION:
                     self.state = 364
                     self.partitionSpec()
-
 
                 self.state = 367
                 self.match(SqlBaseParser.SET)
@@ -3862,14 +4685,13 @@ class SqlBaseParser ( Parser ):
                 self.state = 373
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==SqlBaseParser.WITH:
+                if _la == SqlBaseParser.WITH:
                     self.state = 370
                     self.match(SqlBaseParser.WITH)
                     self.state = 371
                     self.match(SqlBaseParser.SERDEPROPERTIES)
                     self.state = 372
                     self.tablePropertyList()
-
 
                 pass
 
@@ -3885,10 +4707,9 @@ class SqlBaseParser ( Parser ):
                 self.state = 379
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==SqlBaseParser.PARTITION:
+                if _la == SqlBaseParser.PARTITION:
                     self.state = 378
                     self.partitionSpec()
-
 
                 self.state = 381
                 self.match(SqlBaseParser.SET)
@@ -3912,7 +4733,7 @@ class SqlBaseParser ( Parser ):
                 self.state = 392
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==SqlBaseParser.IF:
+                if _la == SqlBaseParser.IF:
                     self.state = 389
                     self.match(SqlBaseParser.IF)
                     self.state = 390
@@ -3920,17 +4741,16 @@ class SqlBaseParser ( Parser ):
                     self.state = 391
                     self.match(SqlBaseParser.EXISTS)
 
-
-                self.state = 395 
+                self.state = 395
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
                 while True:
                     self.state = 394
                     self.partitionSpecLocation()
-                    self.state = 397 
+                    self.state = 397
                     self._errHandler.sync(self)
                     _la = self._input.LA(1)
-                    if not (_la==SqlBaseParser.PARTITION):
+                    if not (_la == SqlBaseParser.PARTITION):
                         break
 
                 pass
@@ -3949,7 +4769,7 @@ class SqlBaseParser ( Parser ):
                 self.state = 406
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==SqlBaseParser.IF:
+                if _la == SqlBaseParser.IF:
                     self.state = 403
                     self.match(SqlBaseParser.IF)
                     self.state = 404
@@ -3957,17 +4777,16 @@ class SqlBaseParser ( Parser ):
                     self.state = 405
                     self.match(SqlBaseParser.EXISTS)
 
-
-                self.state = 409 
+                self.state = 409
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
                 while True:
                     self.state = 408
                     self.partitionSpec()
-                    self.state = 411 
+                    self.state = 411
                     self._errHandler.sync(self)
                     _la = self._input.LA(1)
-                    if not (_la==SqlBaseParser.PARTITION):
+                    if not (_la == SqlBaseParser.PARTITION):
                         break
 
                 pass
@@ -3982,7 +4801,7 @@ class SqlBaseParser ( Parser ):
                 self.state = 415
                 self.tableIdentifier()
                 self.state = 416
-                localctx.from = self.partitionSpec()
+                localctx.from_ = self.partitionSpec()
                 self.state = 417
                 self.match(SqlBaseParser.RENAME)
                 self.state = 418
@@ -4005,19 +4824,18 @@ class SqlBaseParser ( Parser ):
                 self.state = 427
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==SqlBaseParser.IF:
+                if _la == SqlBaseParser.IF:
                     self.state = 425
                     self.match(SqlBaseParser.IF)
                     self.state = 426
                     self.match(SqlBaseParser.EXISTS)
-
 
                 self.state = 429
                 self.partitionSpec()
                 self.state = 434
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                while _la==SqlBaseParser.T__2:
+                while _la == SqlBaseParser.T__2:
                     self.state = 430
                     self.match(SqlBaseParser.T__2)
                     self.state = 431
@@ -4029,10 +4847,9 @@ class SqlBaseParser ( Parser ):
                 self.state = 438
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==SqlBaseParser.PURGE:
+                if _la == SqlBaseParser.PURGE:
                     self.state = 437
                     self.match(SqlBaseParser.PURGE)
-
 
                 pass
 
@@ -4050,19 +4867,18 @@ class SqlBaseParser ( Parser ):
                 self.state = 446
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==SqlBaseParser.IF:
+                if _la == SqlBaseParser.IF:
                     self.state = 444
                     self.match(SqlBaseParser.IF)
                     self.state = 445
                     self.match(SqlBaseParser.EXISTS)
-
 
                 self.state = 448
                 self.partitionSpec()
                 self.state = 453
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                while _la==SqlBaseParser.T__2:
+                while _la == SqlBaseParser.T__2:
                     self.state = 449
                     self.match(SqlBaseParser.T__2)
                     self.state = 450
@@ -4085,10 +4901,9 @@ class SqlBaseParser ( Parser ):
                 self.state = 460
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==SqlBaseParser.PARTITION:
+                if _la == SqlBaseParser.PARTITION:
                     self.state = 459
                     self.partitionSpec()
-
 
                 self.state = 462
                 self.match(SqlBaseParser.SET)
@@ -4120,23 +4935,21 @@ class SqlBaseParser ( Parser ):
                 self.match(SqlBaseParser.TABLE)
                 self.state = 475
                 self._errHandler.sync(self)
-                la_ = self._interp.adaptivePredict(self._input,43,self._ctx)
+                la_ = self._interp.adaptivePredict(self._input, 43, self._ctx)
                 if la_ == 1:
                     self.state = 473
                     self.match(SqlBaseParser.IF)
                     self.state = 474
                     self.match(SqlBaseParser.EXISTS)
 
-
                 self.state = 477
                 self.tableIdentifier()
                 self.state = 479
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==SqlBaseParser.PURGE:
+                if _la == SqlBaseParser.PURGE:
                     self.state = 478
                     self.match(SqlBaseParser.PURGE)
-
 
                 pass
 
@@ -4149,13 +4962,12 @@ class SqlBaseParser ( Parser ):
                 self.match(SqlBaseParser.VIEW)
                 self.state = 485
                 self._errHandler.sync(self)
-                la_ = self._interp.adaptivePredict(self._input,45,self._ctx)
+                la_ = self._interp.adaptivePredict(self._input, 45, self._ctx)
                 if la_ == 1:
                     self.state = 483
                     self.match(SqlBaseParser.IF)
                     self.state = 484
                     self.match(SqlBaseParser.EXISTS)
-
 
                 self.state = 487
                 self.tableIdentifier()
@@ -4169,26 +4981,24 @@ class SqlBaseParser ( Parser ):
                 self.state = 491
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==SqlBaseParser.OR:
+                if _la == SqlBaseParser.OR:
                     self.state = 489
                     self.match(SqlBaseParser.OR)
                     self.state = 490
                     self.match(SqlBaseParser.REPLACE)
 
-
                 self.state = 494
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==SqlBaseParser.TEMPORARY:
+                if _la == SqlBaseParser.TEMPORARY:
                     self.state = 493
                     self.match(SqlBaseParser.TEMPORARY)
-
 
                 self.state = 496
                 self.match(SqlBaseParser.VIEW)
                 self.state = 500
                 self._errHandler.sync(self)
-                la_ = self._interp.adaptivePredict(self._input,48,self._ctx)
+                la_ = self._interp.adaptivePredict(self._input, 48, self._ctx)
                 if la_ == 1:
                     self.state = 497
                     self.match(SqlBaseParser.IF)
@@ -4197,31 +5007,28 @@ class SqlBaseParser ( Parser ):
                     self.state = 499
                     self.match(SqlBaseParser.EXISTS)
 
-
                 self.state = 502
                 self.tableIdentifier()
                 self.state = 504
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==SqlBaseParser.T__0:
+                if _la == SqlBaseParser.T__0:
                     self.state = 503
                     self.identifierCommentList()
-
 
                 self.state = 508
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==SqlBaseParser.COMMENT:
+                if _la == SqlBaseParser.COMMENT:
                     self.state = 506
                     self.match(SqlBaseParser.COMMENT)
                     self.state = 507
                     self.match(SqlBaseParser.STRING)
 
-
                 self.state = 513
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==SqlBaseParser.PARTITIONED:
+                if _la == SqlBaseParser.PARTITIONED:
                     self.state = 510
                     self.match(SqlBaseParser.PARTITIONED)
                     self.state = 511
@@ -4229,16 +5036,14 @@ class SqlBaseParser ( Parser ):
                     self.state = 512
                     self.identifierList()
 
-
                 self.state = 517
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==SqlBaseParser.TBLPROPERTIES:
+                if _la == SqlBaseParser.TBLPROPERTIES:
                     self.state = 515
                     self.match(SqlBaseParser.TBLPROPERTIES)
                     self.state = 516
                     self.tablePropertyList()
-
 
                 self.state = 519
                 self.match(SqlBaseParser.AS)
@@ -4254,12 +5059,11 @@ class SqlBaseParser ( Parser ):
                 self.state = 525
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==SqlBaseParser.OR:
+                if _la == SqlBaseParser.OR:
                     self.state = 523
                     self.match(SqlBaseParser.OR)
                     self.state = 524
                     self.match(SqlBaseParser.REPLACE)
-
 
                 self.state = 527
                 self.match(SqlBaseParser.TEMPORARY)
@@ -4270,7 +5074,7 @@ class SqlBaseParser ( Parser ):
                 self.state = 534
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==SqlBaseParser.T__0:
+                if _la == SqlBaseParser.T__0:
                     self.state = 530
                     self.match(SqlBaseParser.T__0)
                     self.state = 531
@@ -4278,18 +5082,16 @@ class SqlBaseParser ( Parser ):
                     self.state = 532
                     self.match(SqlBaseParser.T__1)
 
-
                 self.state = 536
                 self.tableProvider()
                 self.state = 539
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==SqlBaseParser.OPTIONS:
+                if _la == SqlBaseParser.OPTIONS:
                     self.state = 537
                     self.match(SqlBaseParser.OPTIONS)
                     self.state = 538
                     self.tablePropertyList()
-
 
                 pass
 
@@ -4305,10 +5107,9 @@ class SqlBaseParser ( Parser ):
                 self.state = 545
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==SqlBaseParser.AS:
+                if _la == SqlBaseParser.AS:
                     self.state = 544
                     self.match(SqlBaseParser.AS)
-
 
                 self.state = 547
                 self.query()
@@ -4322,10 +5123,9 @@ class SqlBaseParser ( Parser ):
                 self.state = 551
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==SqlBaseParser.TEMPORARY:
+                if _la == SqlBaseParser.TEMPORARY:
                     self.state = 550
                     self.match(SqlBaseParser.TEMPORARY)
-
 
                 self.state = 553
                 self.match(SqlBaseParser.FUNCTION)
@@ -4338,7 +5138,7 @@ class SqlBaseParser ( Parser ):
                 self.state = 566
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==SqlBaseParser.USING:
+                if _la == SqlBaseParser.USING:
                     self.state = 557
                     self.match(SqlBaseParser.USING)
                     self.state = 558
@@ -4346,7 +5146,7 @@ class SqlBaseParser ( Parser ):
                     self.state = 563
                     self._errHandler.sync(self)
                     _la = self._input.LA(1)
-                    while _la==SqlBaseParser.T__2:
+                    while _la == SqlBaseParser.T__2:
                         self.state = 559
                         self.match(SqlBaseParser.T__2)
                         self.state = 560
@@ -4354,8 +5154,6 @@ class SqlBaseParser ( Parser ):
                         self.state = 565
                         self._errHandler.sync(self)
                         _la = self._input.LA(1)
-
-
 
                 pass
 
@@ -4367,22 +5165,20 @@ class SqlBaseParser ( Parser ):
                 self.state = 570
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==SqlBaseParser.TEMPORARY:
+                if _la == SqlBaseParser.TEMPORARY:
                     self.state = 569
                     self.match(SqlBaseParser.TEMPORARY)
-
 
                 self.state = 572
                 self.match(SqlBaseParser.FUNCTION)
                 self.state = 575
                 self._errHandler.sync(self)
-                la_ = self._interp.adaptivePredict(self._input,61,self._ctx)
+                la_ = self._interp.adaptivePredict(self._input, 61, self._ctx)
                 if la_ == 1:
                     self.state = 573
                     self.match(SqlBaseParser.IF)
                     self.state = 574
                     self.match(SqlBaseParser.EXISTS)
-
 
                 self.state = 577
                 self.qualifiedName()
@@ -4396,15 +5192,24 @@ class SqlBaseParser ( Parser ):
                 self.state = 580
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==SqlBaseParser.LOGICAL or _la==SqlBaseParser.CODEGEN or _la==SqlBaseParser.EXTENDED or _la==SqlBaseParser.FORMATTED:
+                if (
+                    _la == SqlBaseParser.LOGICAL
+                    or _la == SqlBaseParser.CODEGEN
+                    or _la == SqlBaseParser.EXTENDED
+                    or _la == SqlBaseParser.FORMATTED
+                ):
                     self.state = 579
                     _la = self._input.LA(1)
-                    if not(_la==SqlBaseParser.LOGICAL or _la==SqlBaseParser.CODEGEN or _la==SqlBaseParser.EXTENDED or _la==SqlBaseParser.FORMATTED):
+                    if not (
+                        _la == SqlBaseParser.LOGICAL
+                        or _la == SqlBaseParser.CODEGEN
+                        or _la == SqlBaseParser.EXTENDED
+                        or _la == SqlBaseParser.FORMATTED
+                    ):
                         self._errHandler.recoverInline(self)
                     else:
                         self._errHandler.reportMatch(self)
                         self.consume()
-
 
                 self.state = 582
                 self.statement()
@@ -4420,10 +5225,10 @@ class SqlBaseParser ( Parser ):
                 self.state = 587
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==SqlBaseParser.FROM or _la==SqlBaseParser.IN:
+                if _la == SqlBaseParser.FROM or _la == SqlBaseParser.IN:
                     self.state = 585
                     _la = self._input.LA(1)
-                    if not(_la==SqlBaseParser.FROM or _la==SqlBaseParser.IN):
+                    if not (_la == SqlBaseParser.FROM or _la == SqlBaseParser.IN):
                         self._errHandler.recoverInline(self)
                     else:
                         self._errHandler.reportMatch(self)
@@ -4431,22 +5236,19 @@ class SqlBaseParser ( Parser ):
                     self.state = 586
                     localctx.db = self.identifier()
 
-
                 self.state = 593
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==SqlBaseParser.LIKE or _la==SqlBaseParser.STRING:
+                if _la == SqlBaseParser.LIKE or _la == SqlBaseParser.STRING:
                     self.state = 590
                     self._errHandler.sync(self)
                     _la = self._input.LA(1)
-                    if _la==SqlBaseParser.LIKE:
+                    if _la == SqlBaseParser.LIKE:
                         self.state = 589
                         self.match(SqlBaseParser.LIKE)
 
-
                     self.state = 592
                     localctx.pattern = self.match(SqlBaseParser.STRING)
-
 
                 pass
 
@@ -4460,12 +5262,11 @@ class SqlBaseParser ( Parser ):
                 self.state = 599
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==SqlBaseParser.LIKE:
+                if _la == SqlBaseParser.LIKE:
                     self.state = 597
                     self.match(SqlBaseParser.LIKE)
                     self.state = 598
                     localctx.pattern = self.match(SqlBaseParser.STRING)
-
 
                 pass
 
@@ -4481,14 +5282,13 @@ class SqlBaseParser ( Parser ):
                 self.state = 608
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==SqlBaseParser.T__0:
+                if _la == SqlBaseParser.T__0:
                     self.state = 604
                     self.match(SqlBaseParser.T__0)
                     self.state = 605
                     localctx.key = self.tablePropertyKey()
                     self.state = 606
                     self.match(SqlBaseParser.T__1)
-
 
                 pass
 
@@ -4501,7 +5301,7 @@ class SqlBaseParser ( Parser ):
                 self.match(SqlBaseParser.COLUMNS)
                 self.state = 612
                 _la = self._input.LA(1)
-                if not(_la==SqlBaseParser.FROM or _la==SqlBaseParser.IN):
+                if not (_la == SqlBaseParser.FROM or _la == SqlBaseParser.IN):
                     self._errHandler.recoverInline(self)
                 else:
                     self._errHandler.reportMatch(self)
@@ -4511,17 +5311,16 @@ class SqlBaseParser ( Parser ):
                 self.state = 616
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==SqlBaseParser.FROM or _la==SqlBaseParser.IN:
+                if _la == SqlBaseParser.FROM or _la == SqlBaseParser.IN:
                     self.state = 614
                     _la = self._input.LA(1)
-                    if not(_la==SqlBaseParser.FROM or _la==SqlBaseParser.IN):
+                    if not (_la == SqlBaseParser.FROM or _la == SqlBaseParser.IN):
                         self._errHandler.recoverInline(self)
                     else:
                         self._errHandler.reportMatch(self)
                         self.consume()
                     self.state = 615
                     localctx.db = self.identifier()
-
 
                 pass
 
@@ -4537,10 +5336,9 @@ class SqlBaseParser ( Parser ):
                 self.state = 622
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==SqlBaseParser.PARTITION:
+                if _la == SqlBaseParser.PARTITION:
                     self.state = 621
                     self.partitionSpec()
-
 
                 pass
 
@@ -4551,30 +5349,467 @@ class SqlBaseParser ( Parser ):
                 self.match(SqlBaseParser.SHOW)
                 self.state = 626
                 self._errHandler.sync(self)
-                la_ = self._interp.adaptivePredict(self._input,70,self._ctx)
+                la_ = self._interp.adaptivePredict(self._input, 70, self._ctx)
                 if la_ == 1:
                     self.state = 625
                     self.identifier()
-
 
                 self.state = 628
                 self.match(SqlBaseParser.FUNCTIONS)
                 self.state = 636
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if (((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << SqlBaseParser.SELECT) | (1 << SqlBaseParser.FROM) | (1 << SqlBaseParser.ADD) | (1 << SqlBaseParser.AS) | (1 << SqlBaseParser.ALL) | (1 << SqlBaseParser.DISTINCT) | (1 << SqlBaseParser.WHERE) | (1 << SqlBaseParser.GROUP) | (1 << SqlBaseParser.BY) | (1 << SqlBaseParser.GROUPING) | (1 << SqlBaseParser.SETS) | (1 << SqlBaseParser.CUBE) | (1 << SqlBaseParser.ROLLUP) | (1 << SqlBaseParser.ORDER) | (1 << SqlBaseParser.HAVING) | (1 << SqlBaseParser.LIMIT) | (1 << SqlBaseParser.AT) | (1 << SqlBaseParser.OR) | (1 << SqlBaseParser.AND) | (1 << SqlBaseParser.IN) | (1 << SqlBaseParser.NOT) | (1 << SqlBaseParser.NO) | (1 << SqlBaseParser.EXISTS) | (1 << SqlBaseParser.BETWEEN) | (1 << SqlBaseParser.LIKE) | (1 << SqlBaseParser.RLIKE) | (1 << SqlBaseParser.IS) | (1 << SqlBaseParser.NULL) | (1 << SqlBaseParser.TRUE) | (1 << SqlBaseParser.FALSE) | (1 << SqlBaseParser.NULLS) | (1 << SqlBaseParser.ASC) | (1 << SqlBaseParser.DESC) | (1 << SqlBaseParser.FOR) | (1 << SqlBaseParser.INTERVAL) | (1 << SqlBaseParser.CASE) | (1 << SqlBaseParser.WHEN) | (1 << SqlBaseParser.THEN) | (1 << SqlBaseParser.ELSE) | (1 << SqlBaseParser.END) | (1 << SqlBaseParser.JOIN) | (1 << SqlBaseParser.CROSS) | (1 << SqlBaseParser.OUTER) | (1 << SqlBaseParser.INNER) | (1 << SqlBaseParser.LEFT) | (1 << SqlBaseParser.SEMI) | (1 << SqlBaseParser.RIGHT) | (1 << SqlBaseParser.FULL) | (1 << SqlBaseParser.NATURAL) | (1 << SqlBaseParser.ON) | (1 << SqlBaseParser.LATERAL) | (1 << SqlBaseParser.WINDOW) | (1 << SqlBaseParser.OVER) | (1 << SqlBaseParser.PARTITION) | (1 << SqlBaseParser.RANGE) | (1 << SqlBaseParser.ROWS))) != 0) or ((((_la - 64)) & ~0x3f) == 0 and ((1 << (_la - 64)) & ((1 << (SqlBaseParser.UNBOUNDED - 64)) | (1 << (SqlBaseParser.PRECEDING - 64)) | (1 << (SqlBaseParser.FOLLOWING - 64)) | (1 << (SqlBaseParser.CURRENT - 64)) | (1 << (SqlBaseParser.ROW - 64)) | (1 << (SqlBaseParser.WITH - 64)) | (1 << (SqlBaseParser.VALUES - 64)) | (1 << (SqlBaseParser.CREATE - 64)) | (1 << (SqlBaseParser.TABLE - 64)) | (1 << (SqlBaseParser.VIEW - 64)) | (1 << (SqlBaseParser.REPLACE - 64)) | (1 << (SqlBaseParser.INSERT - 64)) | (1 << (SqlBaseParser.DELETE - 64)) | (1 << (SqlBaseParser.INTO - 64)) | (1 << (SqlBaseParser.DESCRIBE - 64)) | (1 << (SqlBaseParser.EXPLAIN - 64)) | (1 << (SqlBaseParser.FORMAT - 64)) | (1 << (SqlBaseParser.LOGICAL - 64)) | (1 << (SqlBaseParser.CODEGEN - 64)) | (1 << (SqlBaseParser.CAST - 64)) | (1 << (SqlBaseParser.SHOW - 64)) | (1 << (SqlBaseParser.TABLES - 64)) | (1 << (SqlBaseParser.COLUMNS - 64)) | (1 << (SqlBaseParser.COLUMN - 64)) | (1 << (SqlBaseParser.USE - 64)) | (1 << (SqlBaseParser.PARTITIONS - 64)) | (1 << (SqlBaseParser.FUNCTIONS - 64)) | (1 << (SqlBaseParser.DROP - 64)) | (1 << (SqlBaseParser.UNION - 64)) | (1 << (SqlBaseParser.EXCEPT - 64)) | (1 << (SqlBaseParser.INTERSECT - 64)) | (1 << (SqlBaseParser.TO - 64)) | (1 << (SqlBaseParser.TABLESAMPLE - 64)) | (1 << (SqlBaseParser.STRATIFY - 64)) | (1 << (SqlBaseParser.ALTER - 64)) | (1 << (SqlBaseParser.RENAME - 64)) | (1 << (SqlBaseParser.ARRAY - 64)) | (1 << (SqlBaseParser.MAP - 64)) | (1 << (SqlBaseParser.STRUCT - 64)) | (1 << (SqlBaseParser.COMMENT - 64)) | (1 << (SqlBaseParser.SET - 64)) | (1 << (SqlBaseParser.RESET - 64)) | (1 << (SqlBaseParser.DATA - 64)) | (1 << (SqlBaseParser.START - 64)) | (1 << (SqlBaseParser.TRANSACTION - 64)) | (1 << (SqlBaseParser.COMMIT - 64)) | (1 << (SqlBaseParser.ROLLBACK - 64)) | (1 << (SqlBaseParser.MACRO - 64)) | (1 << (SqlBaseParser.IF - 64)) | (1 << (SqlBaseParser.DIV - 64)))) != 0) or ((((_la - 131)) & ~0x3f) == 0 and ((1 << (_la - 131)) & ((1 << (SqlBaseParser.PERCENTLIT - 131)) | (1 << (SqlBaseParser.BUCKET - 131)) | (1 << (SqlBaseParser.OUT - 131)) | (1 << (SqlBaseParser.OF - 131)) | (1 << (SqlBaseParser.SORT - 131)) | (1 << (SqlBaseParser.CLUSTER - 131)) | (1 << (SqlBaseParser.DISTRIBUTE - 131)) | (1 << (SqlBaseParser.OVERWRITE - 131)) | (1 << (SqlBaseParser.TRANSFORM - 131)) | (1 << (SqlBaseParser.REDUCE - 131)) | (1 << (SqlBaseParser.USING - 131)) | (1 << (SqlBaseParser.SERDE - 131)) | (1 << (SqlBaseParser.SERDEPROPERTIES - 131)) | (1 << (SqlBaseParser.RECORDREADER - 131)) | (1 << (SqlBaseParser.RECORDWRITER - 131)) | (1 << (SqlBaseParser.DELIMITED - 131)) | (1 << (SqlBaseParser.FIELDS - 131)) | (1 << (SqlBaseParser.TERMINATED - 131)) | (1 << (SqlBaseParser.COLLECTION - 131)) | (1 << (SqlBaseParser.ITEMS - 131)) | (1 << (SqlBaseParser.KEYS - 131)) | (1 << (SqlBaseParser.ESCAPED - 131)) | (1 << (SqlBaseParser.LINES - 131)) | (1 << (SqlBaseParser.SEPARATED - 131)) | (1 << (SqlBaseParser.FUNCTION - 131)) | (1 << (SqlBaseParser.EXTENDED - 131)) | (1 << (SqlBaseParser.REFRESH - 131)) | (1 << (SqlBaseParser.CLEAR - 131)) | (1 << (SqlBaseParser.CACHE - 131)) | (1 << (SqlBaseParser.UNCACHE - 131)) | (1 << (SqlBaseParser.LAZY - 131)) | (1 << (SqlBaseParser.FORMATTED - 131)) | (1 << (SqlBaseParser.TEMPORARY - 131)) | (1 << (SqlBaseParser.OPTIONS - 131)) | (1 << (SqlBaseParser.UNSET - 131)) | (1 << (SqlBaseParser.TBLPROPERTIES - 131)) | (1 << (SqlBaseParser.DBPROPERTIES - 131)) | (1 << (SqlBaseParser.BUCKETS - 131)) | (1 << (SqlBaseParser.SKEWED - 131)) | (1 << (SqlBaseParser.STORED - 131)) | (1 << (SqlBaseParser.DIRECTORIES - 131)) | (1 << (SqlBaseParser.LOCATION - 131)) | (1 << (SqlBaseParser.EXCHANGE - 131)) | (1 << (SqlBaseParser.ARCHIVE - 131)) | (1 << (SqlBaseParser.UNARCHIVE - 131)) | (1 << (SqlBaseParser.FILEFORMAT - 131)) | (1 << (SqlBaseParser.TOUCH - 131)) | (1 << (SqlBaseParser.COMPACT - 131)) | (1 << (SqlBaseParser.CONCATENATE - 131)) | (1 << (SqlBaseParser.CHANGE - 131)) | (1 << (SqlBaseParser.CASCADE - 131)) | (1 << (SqlBaseParser.RESTRICT - 131)) | (1 << (SqlBaseParser.CLUSTERED - 131)) | (1 << (SqlBaseParser.SORTED - 131)) | (1 << (SqlBaseParser.PURGE - 131)) | (1 << (SqlBaseParser.INPUTFORMAT - 131)) | (1 << (SqlBaseParser.OUTPUTFORMAT - 131)) | (1 << (SqlBaseParser.DATABASE - 131)) | (1 << (SqlBaseParser.DATABASES - 131)) | (1 << (SqlBaseParser.DFS - 131)) | (1 << (SqlBaseParser.TRUNCATE - 131)) | (1 << (SqlBaseParser.ANALYZE - 131)) | (1 << (SqlBaseParser.COMPUTE - 131)) | (1 << (SqlBaseParser.LIST - 131)))) != 0) or ((((_la - 195)) & ~0x3f) == 0 and ((1 << (_la - 195)) & ((1 << (SqlBaseParser.STATISTICS - 195)) | (1 << (SqlBaseParser.PARTITIONED - 195)) | (1 << (SqlBaseParser.EXTERNAL - 195)) | (1 << (SqlBaseParser.DEFINED - 195)) | (1 << (SqlBaseParser.REVOKE - 195)) | (1 << (SqlBaseParser.GRANT - 195)) | (1 << (SqlBaseParser.LOCK - 195)) | (1 << (SqlBaseParser.UNLOCK - 195)) | (1 << (SqlBaseParser.MSCK - 195)) | (1 << (SqlBaseParser.REPAIR - 195)) | (1 << (SqlBaseParser.RECOVER - 195)) | (1 << (SqlBaseParser.EXPORT - 195)) | (1 << (SqlBaseParser.IMPORT - 195)) | (1 << (SqlBaseParser.LOAD - 195)) | (1 << (SqlBaseParser.ROLE - 195)) | (1 << (SqlBaseParser.ROLES - 195)) | (1 << (SqlBaseParser.COMPACTIONS - 195)) | (1 << (SqlBaseParser.PRINCIPALS - 195)) | (1 << (SqlBaseParser.TRANSACTIONS - 195)) | (1 << (SqlBaseParser.INDEX - 195)) | (1 << (SqlBaseParser.INDEXES - 195)) | (1 << (SqlBaseParser.LOCKS - 195)) | (1 << (SqlBaseParser.OPTION - 195)) | (1 << (SqlBaseParser.ANTI - 195)) | (1 << (SqlBaseParser.LOCAL - 195)) | (1 << (SqlBaseParser.INPATH - 195)) | (1 << (SqlBaseParser.CURRENT_DATE - 195)) | (1 << (SqlBaseParser.CURRENT_TIMESTAMP - 195)) | (1 << (SqlBaseParser.STRING - 195)) | (1 << (SqlBaseParser.IDENTIFIER - 195)) | (1 << (SqlBaseParser.BACKQUOTED_IDENTIFIER - 195)))) != 0):
+                if (
+                    (
+                        ((_la) & ~0x3F) == 0
+                        and (
+                            (1 << _la)
+                            & (
+                                (1 << SqlBaseParser.SELECT)
+                                | (1 << SqlBaseParser.FROM)
+                                | (1 << SqlBaseParser.ADD)
+                                | (1 << SqlBaseParser.AS)
+                                | (1 << SqlBaseParser.ALL)
+                                | (1 << SqlBaseParser.DISTINCT)
+                                | (1 << SqlBaseParser.WHERE)
+                                | (1 << SqlBaseParser.GROUP)
+                                | (1 << SqlBaseParser.BY)
+                                | (1 << SqlBaseParser.GROUPING)
+                                | (1 << SqlBaseParser.SETS)
+                                | (1 << SqlBaseParser.CUBE)
+                                | (1 << SqlBaseParser.ROLLUP)
+                                | (1 << SqlBaseParser.ORDER)
+                                | (1 << SqlBaseParser.HAVING)
+                                | (1 << SqlBaseParser.LIMIT)
+                                | (1 << SqlBaseParser.AT)
+                                | (1 << SqlBaseParser.OR)
+                                | (1 << SqlBaseParser.AND)
+                                | (1 << SqlBaseParser.IN)
+                                | (1 << SqlBaseParser.NOT)
+                                | (1 << SqlBaseParser.NO)
+                                | (1 << SqlBaseParser.EXISTS)
+                                | (1 << SqlBaseParser.BETWEEN)
+                                | (1 << SqlBaseParser.LIKE)
+                                | (1 << SqlBaseParser.RLIKE)
+                                | (1 << SqlBaseParser.IS)
+                                | (1 << SqlBaseParser.NULL)
+                                | (1 << SqlBaseParser.TRUE)
+                                | (1 << SqlBaseParser.FALSE)
+                                | (1 << SqlBaseParser.NULLS)
+                                | (1 << SqlBaseParser.ASC)
+                                | (1 << SqlBaseParser.DESC)
+                                | (1 << SqlBaseParser.FOR)
+                                | (1 << SqlBaseParser.INTERVAL)
+                                | (1 << SqlBaseParser.CASE)
+                                | (1 << SqlBaseParser.WHEN)
+                                | (1 << SqlBaseParser.THEN)
+                                | (1 << SqlBaseParser.ELSE)
+                                | (1 << SqlBaseParser.END)
+                                | (1 << SqlBaseParser.JOIN)
+                                | (1 << SqlBaseParser.CROSS)
+                                | (1 << SqlBaseParser.OUTER)
+                                | (1 << SqlBaseParser.INNER)
+                                | (1 << SqlBaseParser.LEFT)
+                                | (1 << SqlBaseParser.SEMI)
+                                | (1 << SqlBaseParser.RIGHT)
+                                | (1 << SqlBaseParser.FULL)
+                                | (1 << SqlBaseParser.NATURAL)
+                                | (1 << SqlBaseParser.ON)
+                                | (1 << SqlBaseParser.LATERAL)
+                                | (1 << SqlBaseParser.WINDOW)
+                                | (1 << SqlBaseParser.OVER)
+                                | (1 << SqlBaseParser.PARTITION)
+                                | (1 << SqlBaseParser.RANGE)
+                                | (1 << SqlBaseParser.ROWS)
+                            )
+                        )
+                        != 0
+                    )
+                    or (
+                        (((_la - 64)) & ~0x3F) == 0
+                        and (
+                            (1 << (_la - 64))
+                            & (
+                                (1 << (SqlBaseParser.UNBOUNDED - 64))
+                                | (1 << (SqlBaseParser.PRECEDING - 64))
+                                | (1 << (SqlBaseParser.FOLLOWING - 64))
+                                | (1 << (SqlBaseParser.CURRENT - 64))
+                                | (1 << (SqlBaseParser.ROW - 64))
+                                | (1 << (SqlBaseParser.WITH - 64))
+                                | (1 << (SqlBaseParser.VALUES - 64))
+                                | (1 << (SqlBaseParser.CREATE - 64))
+                                | (1 << (SqlBaseParser.TABLE - 64))
+                                | (1 << (SqlBaseParser.VIEW - 64))
+                                | (1 << (SqlBaseParser.REPLACE - 64))
+                                | (1 << (SqlBaseParser.INSERT - 64))
+                                | (1 << (SqlBaseParser.DELETE - 64))
+                                | (1 << (SqlBaseParser.INTO - 64))
+                                | (1 << (SqlBaseParser.DESCRIBE - 64))
+                                | (1 << (SqlBaseParser.EXPLAIN - 64))
+                                | (1 << (SqlBaseParser.FORMAT - 64))
+                                | (1 << (SqlBaseParser.LOGICAL - 64))
+                                | (1 << (SqlBaseParser.CODEGEN - 64))
+                                | (1 << (SqlBaseParser.CAST - 64))
+                                | (1 << (SqlBaseParser.SHOW - 64))
+                                | (1 << (SqlBaseParser.TABLES - 64))
+                                | (1 << (SqlBaseParser.COLUMNS - 64))
+                                | (1 << (SqlBaseParser.COLUMN - 64))
+                                | (1 << (SqlBaseParser.USE - 64))
+                                | (1 << (SqlBaseParser.PARTITIONS - 64))
+                                | (1 << (SqlBaseParser.FUNCTIONS - 64))
+                                | (1 << (SqlBaseParser.DROP - 64))
+                                | (1 << (SqlBaseParser.UNION - 64))
+                                | (1 << (SqlBaseParser.EXCEPT - 64))
+                                | (1 << (SqlBaseParser.INTERSECT - 64))
+                                | (1 << (SqlBaseParser.TO - 64))
+                                | (1 << (SqlBaseParser.TABLESAMPLE - 64))
+                                | (1 << (SqlBaseParser.STRATIFY - 64))
+                                | (1 << (SqlBaseParser.ALTER - 64))
+                                | (1 << (SqlBaseParser.RENAME - 64))
+                                | (1 << (SqlBaseParser.ARRAY - 64))
+                                | (1 << (SqlBaseParser.MAP - 64))
+                                | (1 << (SqlBaseParser.STRUCT - 64))
+                                | (1 << (SqlBaseParser.COMMENT - 64))
+                                | (1 << (SqlBaseParser.SET - 64))
+                                | (1 << (SqlBaseParser.RESET - 64))
+                                | (1 << (SqlBaseParser.DATA - 64))
+                                | (1 << (SqlBaseParser.START - 64))
+                                | (1 << (SqlBaseParser.TRANSACTION - 64))
+                                | (1 << (SqlBaseParser.COMMIT - 64))
+                                | (1 << (SqlBaseParser.ROLLBACK - 64))
+                                | (1 << (SqlBaseParser.MACRO - 64))
+                                | (1 << (SqlBaseParser.IF - 64))
+                                | (1 << (SqlBaseParser.DIV - 64))
+                            )
+                        )
+                        != 0
+                    )
+                    or (
+                        (((_la - 131)) & ~0x3F) == 0
+                        and (
+                            (1 << (_la - 131))
+                            & (
+                                (1 << (SqlBaseParser.PERCENTLIT - 131))
+                                | (1 << (SqlBaseParser.BUCKET - 131))
+                                | (1 << (SqlBaseParser.OUT - 131))
+                                | (1 << (SqlBaseParser.OF - 131))
+                                | (1 << (SqlBaseParser.SORT - 131))
+                                | (1 << (SqlBaseParser.CLUSTER - 131))
+                                | (1 << (SqlBaseParser.DISTRIBUTE - 131))
+                                | (1 << (SqlBaseParser.OVERWRITE - 131))
+                                | (1 << (SqlBaseParser.TRANSFORM - 131))
+                                | (1 << (SqlBaseParser.REDUCE - 131))
+                                | (1 << (SqlBaseParser.USING - 131))
+                                | (1 << (SqlBaseParser.SERDE - 131))
+                                | (1 << (SqlBaseParser.SERDEPROPERTIES - 131))
+                                | (1 << (SqlBaseParser.RECORDREADER - 131))
+                                | (1 << (SqlBaseParser.RECORDWRITER - 131))
+                                | (1 << (SqlBaseParser.DELIMITED - 131))
+                                | (1 << (SqlBaseParser.FIELDS - 131))
+                                | (1 << (SqlBaseParser.TERMINATED - 131))
+                                | (1 << (SqlBaseParser.COLLECTION - 131))
+                                | (1 << (SqlBaseParser.ITEMS - 131))
+                                | (1 << (SqlBaseParser.KEYS - 131))
+                                | (1 << (SqlBaseParser.ESCAPED - 131))
+                                | (1 << (SqlBaseParser.LINES - 131))
+                                | (1 << (SqlBaseParser.SEPARATED - 131))
+                                | (1 << (SqlBaseParser.FUNCTION - 131))
+                                | (1 << (SqlBaseParser.EXTENDED - 131))
+                                | (1 << (SqlBaseParser.REFRESH - 131))
+                                | (1 << (SqlBaseParser.CLEAR - 131))
+                                | (1 << (SqlBaseParser.CACHE - 131))
+                                | (1 << (SqlBaseParser.UNCACHE - 131))
+                                | (1 << (SqlBaseParser.LAZY - 131))
+                                | (1 << (SqlBaseParser.FORMATTED - 131))
+                                | (1 << (SqlBaseParser.TEMPORARY - 131))
+                                | (1 << (SqlBaseParser.OPTIONS - 131))
+                                | (1 << (SqlBaseParser.UNSET - 131))
+                                | (1 << (SqlBaseParser.TBLPROPERTIES - 131))
+                                | (1 << (SqlBaseParser.DBPROPERTIES - 131))
+                                | (1 << (SqlBaseParser.BUCKETS - 131))
+                                | (1 << (SqlBaseParser.SKEWED - 131))
+                                | (1 << (SqlBaseParser.STORED - 131))
+                                | (1 << (SqlBaseParser.DIRECTORIES - 131))
+                                | (1 << (SqlBaseParser.LOCATION - 131))
+                                | (1 << (SqlBaseParser.EXCHANGE - 131))
+                                | (1 << (SqlBaseParser.ARCHIVE - 131))
+                                | (1 << (SqlBaseParser.UNARCHIVE - 131))
+                                | (1 << (SqlBaseParser.FILEFORMAT - 131))
+                                | (1 << (SqlBaseParser.TOUCH - 131))
+                                | (1 << (SqlBaseParser.COMPACT - 131))
+                                | (1 << (SqlBaseParser.CONCATENATE - 131))
+                                | (1 << (SqlBaseParser.CHANGE - 131))
+                                | (1 << (SqlBaseParser.CASCADE - 131))
+                                | (1 << (SqlBaseParser.RESTRICT - 131))
+                                | (1 << (SqlBaseParser.CLUSTERED - 131))
+                                | (1 << (SqlBaseParser.SORTED - 131))
+                                | (1 << (SqlBaseParser.PURGE - 131))
+                                | (1 << (SqlBaseParser.INPUTFORMAT - 131))
+                                | (1 << (SqlBaseParser.OUTPUTFORMAT - 131))
+                                | (1 << (SqlBaseParser.DATABASE - 131))
+                                | (1 << (SqlBaseParser.DATABASES - 131))
+                                | (1 << (SqlBaseParser.DFS - 131))
+                                | (1 << (SqlBaseParser.TRUNCATE - 131))
+                                | (1 << (SqlBaseParser.ANALYZE - 131))
+                                | (1 << (SqlBaseParser.COMPUTE - 131))
+                                | (1 << (SqlBaseParser.LIST - 131))
+                            )
+                        )
+                        != 0
+                    )
+                    or (
+                        (((_la - 195)) & ~0x3F) == 0
+                        and (
+                            (1 << (_la - 195))
+                            & (
+                                (1 << (SqlBaseParser.STATISTICS - 195))
+                                | (1 << (SqlBaseParser.PARTITIONED - 195))
+                                | (1 << (SqlBaseParser.EXTERNAL - 195))
+                                | (1 << (SqlBaseParser.DEFINED - 195))
+                                | (1 << (SqlBaseParser.REVOKE - 195))
+                                | (1 << (SqlBaseParser.GRANT - 195))
+                                | (1 << (SqlBaseParser.LOCK - 195))
+                                | (1 << (SqlBaseParser.UNLOCK - 195))
+                                | (1 << (SqlBaseParser.MSCK - 195))
+                                | (1 << (SqlBaseParser.REPAIR - 195))
+                                | (1 << (SqlBaseParser.RECOVER - 195))
+                                | (1 << (SqlBaseParser.EXPORT - 195))
+                                | (1 << (SqlBaseParser.IMPORT - 195))
+                                | (1 << (SqlBaseParser.LOAD - 195))
+                                | (1 << (SqlBaseParser.ROLE - 195))
+                                | (1 << (SqlBaseParser.ROLES - 195))
+                                | (1 << (SqlBaseParser.COMPACTIONS - 195))
+                                | (1 << (SqlBaseParser.PRINCIPALS - 195))
+                                | (1 << (SqlBaseParser.TRANSACTIONS - 195))
+                                | (1 << (SqlBaseParser.INDEX - 195))
+                                | (1 << (SqlBaseParser.INDEXES - 195))
+                                | (1 << (SqlBaseParser.LOCKS - 195))
+                                | (1 << (SqlBaseParser.OPTION - 195))
+                                | (1 << (SqlBaseParser.ANTI - 195))
+                                | (1 << (SqlBaseParser.LOCAL - 195))
+                                | (1 << (SqlBaseParser.INPATH - 195))
+                                | (1 << (SqlBaseParser.CURRENT_DATE - 195))
+                                | (1 << (SqlBaseParser.CURRENT_TIMESTAMP - 195))
+                                | (1 << (SqlBaseParser.STRING - 195))
+                                | (1 << (SqlBaseParser.IDENTIFIER - 195))
+                                | (1 << (SqlBaseParser.BACKQUOTED_IDENTIFIER - 195))
+                            )
+                        )
+                        != 0
+                    )
+                ):
                     self.state = 630
                     self._errHandler.sync(self)
-                    la_ = self._interp.adaptivePredict(self._input,71,self._ctx)
+                    la_ = self._interp.adaptivePredict(self._input, 71, self._ctx)
                     if la_ == 1:
                         self.state = 629
                         self.match(SqlBaseParser.LIKE)
 
-
                     self.state = 634
                     self._errHandler.sync(self)
                     token = self._input.LA(1)
-                    if token in [SqlBaseParser.SELECT, SqlBaseParser.FROM, SqlBaseParser.ADD, SqlBaseParser.AS, SqlBaseParser.ALL, SqlBaseParser.DISTINCT, SqlBaseParser.WHERE, SqlBaseParser.GROUP, SqlBaseParser.BY, SqlBaseParser.GROUPING, SqlBaseParser.SETS, SqlBaseParser.CUBE, SqlBaseParser.ROLLUP, SqlBaseParser.ORDER, SqlBaseParser.HAVING, SqlBaseParser.LIMIT, SqlBaseParser.AT, SqlBaseParser.OR, SqlBaseParser.AND, SqlBaseParser.IN, SqlBaseParser.NOT, SqlBaseParser.NO, SqlBaseParser.EXISTS, SqlBaseParser.BETWEEN, SqlBaseParser.LIKE, SqlBaseParser.RLIKE, SqlBaseParser.IS, SqlBaseParser.NULL, SqlBaseParser.TRUE, SqlBaseParser.FALSE, SqlBaseParser.NULLS, SqlBaseParser.ASC, SqlBaseParser.DESC, SqlBaseParser.FOR, SqlBaseParser.INTERVAL, SqlBaseParser.CASE, SqlBaseParser.WHEN, SqlBaseParser.THEN, SqlBaseParser.ELSE, SqlBaseParser.END, SqlBaseParser.JOIN, SqlBaseParser.CROSS, SqlBaseParser.OUTER, SqlBaseParser.INNER, SqlBaseParser.LEFT, SqlBaseParser.SEMI, SqlBaseParser.RIGHT, SqlBaseParser.FULL, SqlBaseParser.NATURAL, SqlBaseParser.ON, SqlBaseParser.LATERAL, SqlBaseParser.WINDOW, SqlBaseParser.OVER, SqlBaseParser.PARTITION, SqlBaseParser.RANGE, SqlBaseParser.ROWS, SqlBaseParser.UNBOUNDED, SqlBaseParser.PRECEDING, SqlBaseParser.FOLLOWING, SqlBaseParser.CURRENT, SqlBaseParser.ROW, SqlBaseParser.WITH, SqlBaseParser.VALUES, SqlBaseParser.CREATE, SqlBaseParser.TABLE, SqlBaseParser.VIEW, SqlBaseParser.REPLACE, SqlBaseParser.INSERT, SqlBaseParser.DELETE, SqlBaseParser.INTO, SqlBaseParser.DESCRIBE, SqlBaseParser.EXPLAIN, SqlBaseParser.FORMAT, SqlBaseParser.LOGICAL, SqlBaseParser.CODEGEN, SqlBaseParser.CAST, SqlBaseParser.SHOW, SqlBaseParser.TABLES, SqlBaseParser.COLUMNS, SqlBaseParser.COLUMN, SqlBaseParser.USE, SqlBaseParser.PARTITIONS, SqlBaseParser.FUNCTIONS, SqlBaseParser.DROP, SqlBaseParser.UNION, SqlBaseParser.EXCEPT, SqlBaseParser.INTERSECT, SqlBaseParser.TO, SqlBaseParser.TABLESAMPLE, SqlBaseParser.STRATIFY, SqlBaseParser.ALTER, SqlBaseParser.RENAME, SqlBaseParser.ARRAY, SqlBaseParser.MAP, SqlBaseParser.STRUCT, SqlBaseParser.COMMENT, SqlBaseParser.SET, SqlBaseParser.RESET, SqlBaseParser.DATA, SqlBaseParser.START, SqlBaseParser.TRANSACTION, SqlBaseParser.COMMIT, SqlBaseParser.ROLLBACK, SqlBaseParser.MACRO, SqlBaseParser.IF, SqlBaseParser.DIV, SqlBaseParser.PERCENTLIT, SqlBaseParser.BUCKET, SqlBaseParser.OUT, SqlBaseParser.OF, SqlBaseParser.SORT, SqlBaseParser.CLUSTER, SqlBaseParser.DISTRIBUTE, SqlBaseParser.OVERWRITE, SqlBaseParser.TRANSFORM, SqlBaseParser.REDUCE, SqlBaseParser.USING, SqlBaseParser.SERDE, SqlBaseParser.SERDEPROPERTIES, SqlBaseParser.RECORDREADER, SqlBaseParser.RECORDWRITER, SqlBaseParser.DELIMITED, SqlBaseParser.FIELDS, SqlBaseParser.TERMINATED, SqlBaseParser.COLLECTION, SqlBaseParser.ITEMS, SqlBaseParser.KEYS, SqlBaseParser.ESCAPED, SqlBaseParser.LINES, SqlBaseParser.SEPARATED, SqlBaseParser.FUNCTION, SqlBaseParser.EXTENDED, SqlBaseParser.REFRESH, SqlBaseParser.CLEAR, SqlBaseParser.CACHE, SqlBaseParser.UNCACHE, SqlBaseParser.LAZY, SqlBaseParser.FORMATTED, SqlBaseParser.TEMPORARY, SqlBaseParser.OPTIONS, SqlBaseParser.UNSET, SqlBaseParser.TBLPROPERTIES, SqlBaseParser.DBPROPERTIES, SqlBaseParser.BUCKETS, SqlBaseParser.SKEWED, SqlBaseParser.STORED, SqlBaseParser.DIRECTORIES, SqlBaseParser.LOCATION, SqlBaseParser.EXCHANGE, SqlBaseParser.ARCHIVE, SqlBaseParser.UNARCHIVE, SqlBaseParser.FILEFORMAT, SqlBaseParser.TOUCH, SqlBaseParser.COMPACT, SqlBaseParser.CONCATENATE, SqlBaseParser.CHANGE, SqlBaseParser.CASCADE, SqlBaseParser.RESTRICT, SqlBaseParser.CLUSTERED, SqlBaseParser.SORTED, SqlBaseParser.PURGE, SqlBaseParser.INPUTFORMAT, SqlBaseParser.OUTPUTFORMAT, SqlBaseParser.DATABASE, SqlBaseParser.DATABASES, SqlBaseParser.DFS, SqlBaseParser.TRUNCATE, SqlBaseParser.ANALYZE, SqlBaseParser.COMPUTE, SqlBaseParser.LIST, SqlBaseParser.STATISTICS, SqlBaseParser.PARTITIONED, SqlBaseParser.EXTERNAL, SqlBaseParser.DEFINED, SqlBaseParser.REVOKE, SqlBaseParser.GRANT, SqlBaseParser.LOCK, SqlBaseParser.UNLOCK, SqlBaseParser.MSCK, SqlBaseParser.REPAIR, SqlBaseParser.RECOVER, SqlBaseParser.EXPORT, SqlBaseParser.IMPORT, SqlBaseParser.LOAD, SqlBaseParser.ROLE, SqlBaseParser.ROLES, SqlBaseParser.COMPACTIONS, SqlBaseParser.PRINCIPALS, SqlBaseParser.TRANSACTIONS, SqlBaseParser.INDEX, SqlBaseParser.INDEXES, SqlBaseParser.LOCKS, SqlBaseParser.OPTION, SqlBaseParser.ANTI, SqlBaseParser.LOCAL, SqlBaseParser.INPATH, SqlBaseParser.CURRENT_DATE, SqlBaseParser.CURRENT_TIMESTAMP, SqlBaseParser.IDENTIFIER, SqlBaseParser.BACKQUOTED_IDENTIFIER]:
+                    if token in [
+                        SqlBaseParser.SELECT,
+                        SqlBaseParser.FROM,
+                        SqlBaseParser.ADD,
+                        SqlBaseParser.AS,
+                        SqlBaseParser.ALL,
+                        SqlBaseParser.DISTINCT,
+                        SqlBaseParser.WHERE,
+                        SqlBaseParser.GROUP,
+                        SqlBaseParser.BY,
+                        SqlBaseParser.GROUPING,
+                        SqlBaseParser.SETS,
+                        SqlBaseParser.CUBE,
+                        SqlBaseParser.ROLLUP,
+                        SqlBaseParser.ORDER,
+                        SqlBaseParser.HAVING,
+                        SqlBaseParser.LIMIT,
+                        SqlBaseParser.AT,
+                        SqlBaseParser.OR,
+                        SqlBaseParser.AND,
+                        SqlBaseParser.IN,
+                        SqlBaseParser.NOT,
+                        SqlBaseParser.NO,
+                        SqlBaseParser.EXISTS,
+                        SqlBaseParser.BETWEEN,
+                        SqlBaseParser.LIKE,
+                        SqlBaseParser.RLIKE,
+                        SqlBaseParser.IS,
+                        SqlBaseParser.NULL,
+                        SqlBaseParser.TRUE,
+                        SqlBaseParser.FALSE,
+                        SqlBaseParser.NULLS,
+                        SqlBaseParser.ASC,
+                        SqlBaseParser.DESC,
+                        SqlBaseParser.FOR,
+                        SqlBaseParser.INTERVAL,
+                        SqlBaseParser.CASE,
+                        SqlBaseParser.WHEN,
+                        SqlBaseParser.THEN,
+                        SqlBaseParser.ELSE,
+                        SqlBaseParser.END,
+                        SqlBaseParser.JOIN,
+                        SqlBaseParser.CROSS,
+                        SqlBaseParser.OUTER,
+                        SqlBaseParser.INNER,
+                        SqlBaseParser.LEFT,
+                        SqlBaseParser.SEMI,
+                        SqlBaseParser.RIGHT,
+                        SqlBaseParser.FULL,
+                        SqlBaseParser.NATURAL,
+                        SqlBaseParser.ON,
+                        SqlBaseParser.LATERAL,
+                        SqlBaseParser.WINDOW,
+                        SqlBaseParser.OVER,
+                        SqlBaseParser.PARTITION,
+                        SqlBaseParser.RANGE,
+                        SqlBaseParser.ROWS,
+                        SqlBaseParser.UNBOUNDED,
+                        SqlBaseParser.PRECEDING,
+                        SqlBaseParser.FOLLOWING,
+                        SqlBaseParser.CURRENT,
+                        SqlBaseParser.ROW,
+                        SqlBaseParser.WITH,
+                        SqlBaseParser.VALUES,
+                        SqlBaseParser.CREATE,
+                        SqlBaseParser.TABLE,
+                        SqlBaseParser.VIEW,
+                        SqlBaseParser.REPLACE,
+                        SqlBaseParser.INSERT,
+                        SqlBaseParser.DELETE,
+                        SqlBaseParser.INTO,
+                        SqlBaseParser.DESCRIBE,
+                        SqlBaseParser.EXPLAIN,
+                        SqlBaseParser.FORMAT,
+                        SqlBaseParser.LOGICAL,
+                        SqlBaseParser.CODEGEN,
+                        SqlBaseParser.CAST,
+                        SqlBaseParser.SHOW,
+                        SqlBaseParser.TABLES,
+                        SqlBaseParser.COLUMNS,
+                        SqlBaseParser.COLUMN,
+                        SqlBaseParser.USE,
+                        SqlBaseParser.PARTITIONS,
+                        SqlBaseParser.FUNCTIONS,
+                        SqlBaseParser.DROP,
+                        SqlBaseParser.UNION,
+                        SqlBaseParser.EXCEPT,
+                        SqlBaseParser.INTERSECT,
+                        SqlBaseParser.TO,
+                        SqlBaseParser.TABLESAMPLE,
+                        SqlBaseParser.STRATIFY,
+                        SqlBaseParser.ALTER,
+                        SqlBaseParser.RENAME,
+                        SqlBaseParser.ARRAY,
+                        SqlBaseParser.MAP,
+                        SqlBaseParser.STRUCT,
+                        SqlBaseParser.COMMENT,
+                        SqlBaseParser.SET,
+                        SqlBaseParser.RESET,
+                        SqlBaseParser.DATA,
+                        SqlBaseParser.START,
+                        SqlBaseParser.TRANSACTION,
+                        SqlBaseParser.COMMIT,
+                        SqlBaseParser.ROLLBACK,
+                        SqlBaseParser.MACRO,
+                        SqlBaseParser.IF,
+                        SqlBaseParser.DIV,
+                        SqlBaseParser.PERCENTLIT,
+                        SqlBaseParser.BUCKET,
+                        SqlBaseParser.OUT,
+                        SqlBaseParser.OF,
+                        SqlBaseParser.SORT,
+                        SqlBaseParser.CLUSTER,
+                        SqlBaseParser.DISTRIBUTE,
+                        SqlBaseParser.OVERWRITE,
+                        SqlBaseParser.TRANSFORM,
+                        SqlBaseParser.REDUCE,
+                        SqlBaseParser.USING,
+                        SqlBaseParser.SERDE,
+                        SqlBaseParser.SERDEPROPERTIES,
+                        SqlBaseParser.RECORDREADER,
+                        SqlBaseParser.RECORDWRITER,
+                        SqlBaseParser.DELIMITED,
+                        SqlBaseParser.FIELDS,
+                        SqlBaseParser.TERMINATED,
+                        SqlBaseParser.COLLECTION,
+                        SqlBaseParser.ITEMS,
+                        SqlBaseParser.KEYS,
+                        SqlBaseParser.ESCAPED,
+                        SqlBaseParser.LINES,
+                        SqlBaseParser.SEPARATED,
+                        SqlBaseParser.FUNCTION,
+                        SqlBaseParser.EXTENDED,
+                        SqlBaseParser.REFRESH,
+                        SqlBaseParser.CLEAR,
+                        SqlBaseParser.CACHE,
+                        SqlBaseParser.UNCACHE,
+                        SqlBaseParser.LAZY,
+                        SqlBaseParser.FORMATTED,
+                        SqlBaseParser.TEMPORARY,
+                        SqlBaseParser.OPTIONS,
+                        SqlBaseParser.UNSET,
+                        SqlBaseParser.TBLPROPERTIES,
+                        SqlBaseParser.DBPROPERTIES,
+                        SqlBaseParser.BUCKETS,
+                        SqlBaseParser.SKEWED,
+                        SqlBaseParser.STORED,
+                        SqlBaseParser.DIRECTORIES,
+                        SqlBaseParser.LOCATION,
+                        SqlBaseParser.EXCHANGE,
+                        SqlBaseParser.ARCHIVE,
+                        SqlBaseParser.UNARCHIVE,
+                        SqlBaseParser.FILEFORMAT,
+                        SqlBaseParser.TOUCH,
+                        SqlBaseParser.COMPACT,
+                        SqlBaseParser.CONCATENATE,
+                        SqlBaseParser.CHANGE,
+                        SqlBaseParser.CASCADE,
+                        SqlBaseParser.RESTRICT,
+                        SqlBaseParser.CLUSTERED,
+                        SqlBaseParser.SORTED,
+                        SqlBaseParser.PURGE,
+                        SqlBaseParser.INPUTFORMAT,
+                        SqlBaseParser.OUTPUTFORMAT,
+                        SqlBaseParser.DATABASE,
+                        SqlBaseParser.DATABASES,
+                        SqlBaseParser.DFS,
+                        SqlBaseParser.TRUNCATE,
+                        SqlBaseParser.ANALYZE,
+                        SqlBaseParser.COMPUTE,
+                        SqlBaseParser.LIST,
+                        SqlBaseParser.STATISTICS,
+                        SqlBaseParser.PARTITIONED,
+                        SqlBaseParser.EXTERNAL,
+                        SqlBaseParser.DEFINED,
+                        SqlBaseParser.REVOKE,
+                        SqlBaseParser.GRANT,
+                        SqlBaseParser.LOCK,
+                        SqlBaseParser.UNLOCK,
+                        SqlBaseParser.MSCK,
+                        SqlBaseParser.REPAIR,
+                        SqlBaseParser.RECOVER,
+                        SqlBaseParser.EXPORT,
+                        SqlBaseParser.IMPORT,
+                        SqlBaseParser.LOAD,
+                        SqlBaseParser.ROLE,
+                        SqlBaseParser.ROLES,
+                        SqlBaseParser.COMPACTIONS,
+                        SqlBaseParser.PRINCIPALS,
+                        SqlBaseParser.TRANSACTIONS,
+                        SqlBaseParser.INDEX,
+                        SqlBaseParser.INDEXES,
+                        SqlBaseParser.LOCKS,
+                        SqlBaseParser.OPTION,
+                        SqlBaseParser.ANTI,
+                        SqlBaseParser.LOCAL,
+                        SqlBaseParser.INPATH,
+                        SqlBaseParser.CURRENT_DATE,
+                        SqlBaseParser.CURRENT_TIMESTAMP,
+                        SqlBaseParser.IDENTIFIER,
+                        SqlBaseParser.BACKQUOTED_IDENTIFIER,
+                    ]:
                         self.state = 632
                         self.qualifiedName()
                         pass
@@ -4584,8 +5819,6 @@ class SqlBaseParser ( Parser ):
                         pass
                     else:
                         raise NoViableAltException(self)
-
-
 
                 pass
 
@@ -4607,7 +5840,7 @@ class SqlBaseParser ( Parser ):
                 self.enterOuterAlt(localctx, 38)
                 self.state = 642
                 _la = self._input.LA(1)
-                if not(_la==SqlBaseParser.DESC or _la==SqlBaseParser.DESCRIBE):
+                if not (_la == SqlBaseParser.DESC or _la == SqlBaseParser.DESCRIBE):
                     self._errHandler.recoverInline(self)
                 else:
                     self._errHandler.reportMatch(self)
@@ -4616,11 +5849,10 @@ class SqlBaseParser ( Parser ):
                 self.match(SqlBaseParser.FUNCTION)
                 self.state = 645
                 self._errHandler.sync(self)
-                la_ = self._interp.adaptivePredict(self._input,74,self._ctx)
+                la_ = self._interp.adaptivePredict(self._input, 74, self._ctx)
                 if la_ == 1:
                     self.state = 644
                     self.match(SqlBaseParser.EXTENDED)
-
 
                 self.state = 647
                 self.describeFuncName()
@@ -4631,7 +5863,7 @@ class SqlBaseParser ( Parser ):
                 self.enterOuterAlt(localctx, 39)
                 self.state = 648
                 _la = self._input.LA(1)
-                if not(_la==SqlBaseParser.DESC or _la==SqlBaseParser.DESCRIBE):
+                if not (_la == SqlBaseParser.DESC or _la == SqlBaseParser.DESCRIBE):
                     self._errHandler.recoverInline(self)
                 else:
                     self._errHandler.reportMatch(self)
@@ -4640,11 +5872,10 @@ class SqlBaseParser ( Parser ):
                 self.match(SqlBaseParser.DATABASE)
                 self.state = 651
                 self._errHandler.sync(self)
-                la_ = self._interp.adaptivePredict(self._input,75,self._ctx)
+                la_ = self._interp.adaptivePredict(self._input, 75, self._ctx)
                 if la_ == 1:
                     self.state = 650
                     self.match(SqlBaseParser.EXTENDED)
-
 
                 self.state = 653
                 self.identifier()
@@ -4655,42 +5886,278 @@ class SqlBaseParser ( Parser ):
                 self.enterOuterAlt(localctx, 40)
                 self.state = 654
                 _la = self._input.LA(1)
-                if not(_la==SqlBaseParser.DESC or _la==SqlBaseParser.DESCRIBE):
+                if not (_la == SqlBaseParser.DESC or _la == SqlBaseParser.DESCRIBE):
                     self._errHandler.recoverInline(self)
                 else:
                     self._errHandler.reportMatch(self)
                     self.consume()
                 self.state = 656
                 self._errHandler.sync(self)
-                la_ = self._interp.adaptivePredict(self._input,76,self._ctx)
+                la_ = self._interp.adaptivePredict(self._input, 76, self._ctx)
                 if la_ == 1:
                     self.state = 655
                     localctx.option = self._input.LT(1)
                     _la = self._input.LA(1)
-                    if not(_la==SqlBaseParser.EXTENDED or _la==SqlBaseParser.FORMATTED):
+                    if not (
+                        _la == SqlBaseParser.EXTENDED or _la == SqlBaseParser.FORMATTED
+                    ):
                         localctx.option = self._errHandler.recoverInline(self)
                     else:
                         self._errHandler.reportMatch(self)
                         self.consume()
 
-
                 self.state = 658
                 self.tableIdentifier()
                 self.state = 660
                 self._errHandler.sync(self)
-                la_ = self._interp.adaptivePredict(self._input,77,self._ctx)
+                la_ = self._interp.adaptivePredict(self._input, 77, self._ctx)
                 if la_ == 1:
                     self.state = 659
                     self.partitionSpec()
 
-
                 self.state = 663
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if (((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << SqlBaseParser.SELECT) | (1 << SqlBaseParser.FROM) | (1 << SqlBaseParser.ADD) | (1 << SqlBaseParser.AS) | (1 << SqlBaseParser.ALL) | (1 << SqlBaseParser.DISTINCT) | (1 << SqlBaseParser.WHERE) | (1 << SqlBaseParser.GROUP) | (1 << SqlBaseParser.BY) | (1 << SqlBaseParser.GROUPING) | (1 << SqlBaseParser.SETS) | (1 << SqlBaseParser.CUBE) | (1 << SqlBaseParser.ROLLUP) | (1 << SqlBaseParser.ORDER) | (1 << SqlBaseParser.HAVING) | (1 << SqlBaseParser.LIMIT) | (1 << SqlBaseParser.AT) | (1 << SqlBaseParser.OR) | (1 << SqlBaseParser.AND) | (1 << SqlBaseParser.IN) | (1 << SqlBaseParser.NOT) | (1 << SqlBaseParser.NO) | (1 << SqlBaseParser.EXISTS) | (1 << SqlBaseParser.BETWEEN) | (1 << SqlBaseParser.LIKE) | (1 << SqlBaseParser.RLIKE) | (1 << SqlBaseParser.IS) | (1 << SqlBaseParser.NULL) | (1 << SqlBaseParser.TRUE) | (1 << SqlBaseParser.FALSE) | (1 << SqlBaseParser.NULLS) | (1 << SqlBaseParser.ASC) | (1 << SqlBaseParser.DESC) | (1 << SqlBaseParser.FOR) | (1 << SqlBaseParser.INTERVAL) | (1 << SqlBaseParser.CASE) | (1 << SqlBaseParser.WHEN) | (1 << SqlBaseParser.THEN) | (1 << SqlBaseParser.ELSE) | (1 << SqlBaseParser.END) | (1 << SqlBaseParser.JOIN) | (1 << SqlBaseParser.CROSS) | (1 << SqlBaseParser.OUTER) | (1 << SqlBaseParser.INNER) | (1 << SqlBaseParser.LEFT) | (1 << SqlBaseParser.SEMI) | (1 << SqlBaseParser.RIGHT) | (1 << SqlBaseParser.FULL) | (1 << SqlBaseParser.NATURAL) | (1 << SqlBaseParser.ON) | (1 << SqlBaseParser.LATERAL) | (1 << SqlBaseParser.WINDOW) | (1 << SqlBaseParser.OVER) | (1 << SqlBaseParser.PARTITION) | (1 << SqlBaseParser.RANGE) | (1 << SqlBaseParser.ROWS))) != 0) or ((((_la - 64)) & ~0x3f) == 0 and ((1 << (_la - 64)) & ((1 << (SqlBaseParser.UNBOUNDED - 64)) | (1 << (SqlBaseParser.PRECEDING - 64)) | (1 << (SqlBaseParser.FOLLOWING - 64)) | (1 << (SqlBaseParser.CURRENT - 64)) | (1 << (SqlBaseParser.ROW - 64)) | (1 << (SqlBaseParser.WITH - 64)) | (1 << (SqlBaseParser.VALUES - 64)) | (1 << (SqlBaseParser.CREATE - 64)) | (1 << (SqlBaseParser.TABLE - 64)) | (1 << (SqlBaseParser.VIEW - 64)) | (1 << (SqlBaseParser.REPLACE - 64)) | (1 << (SqlBaseParser.INSERT - 64)) | (1 << (SqlBaseParser.DELETE - 64)) | (1 << (SqlBaseParser.INTO - 64)) | (1 << (SqlBaseParser.DESCRIBE - 64)) | (1 << (SqlBaseParser.EXPLAIN - 64)) | (1 << (SqlBaseParser.FORMAT - 64)) | (1 << (SqlBaseParser.LOGICAL - 64)) | (1 << (SqlBaseParser.CODEGEN - 64)) | (1 << (SqlBaseParser.CAST - 64)) | (1 << (SqlBaseParser.SHOW - 64)) | (1 << (SqlBaseParser.TABLES - 64)) | (1 << (SqlBaseParser.COLUMNS - 64)) | (1 << (SqlBaseParser.COLUMN - 64)) | (1 << (SqlBaseParser.USE - 64)) | (1 << (SqlBaseParser.PARTITIONS - 64)) | (1 << (SqlBaseParser.FUNCTIONS - 64)) | (1 << (SqlBaseParser.DROP - 64)) | (1 << (SqlBaseParser.UNION - 64)) | (1 << (SqlBaseParser.EXCEPT - 64)) | (1 << (SqlBaseParser.INTERSECT - 64)) | (1 << (SqlBaseParser.TO - 64)) | (1 << (SqlBaseParser.TABLESAMPLE - 64)) | (1 << (SqlBaseParser.STRATIFY - 64)) | (1 << (SqlBaseParser.ALTER - 64)) | (1 << (SqlBaseParser.RENAME - 64)) | (1 << (SqlBaseParser.ARRAY - 64)) | (1 << (SqlBaseParser.MAP - 64)) | (1 << (SqlBaseParser.STRUCT - 64)) | (1 << (SqlBaseParser.COMMENT - 64)) | (1 << (SqlBaseParser.SET - 64)) | (1 << (SqlBaseParser.RESET - 64)) | (1 << (SqlBaseParser.DATA - 64)) | (1 << (SqlBaseParser.START - 64)) | (1 << (SqlBaseParser.TRANSACTION - 64)) | (1 << (SqlBaseParser.COMMIT - 64)) | (1 << (SqlBaseParser.ROLLBACK - 64)) | (1 << (SqlBaseParser.MACRO - 64)) | (1 << (SqlBaseParser.IF - 64)) | (1 << (SqlBaseParser.DIV - 64)))) != 0) or ((((_la - 131)) & ~0x3f) == 0 and ((1 << (_la - 131)) & ((1 << (SqlBaseParser.PERCENTLIT - 131)) | (1 << (SqlBaseParser.BUCKET - 131)) | (1 << (SqlBaseParser.OUT - 131)) | (1 << (SqlBaseParser.OF - 131)) | (1 << (SqlBaseParser.SORT - 131)) | (1 << (SqlBaseParser.CLUSTER - 131)) | (1 << (SqlBaseParser.DISTRIBUTE - 131)) | (1 << (SqlBaseParser.OVERWRITE - 131)) | (1 << (SqlBaseParser.TRANSFORM - 131)) | (1 << (SqlBaseParser.REDUCE - 131)) | (1 << (SqlBaseParser.USING - 131)) | (1 << (SqlBaseParser.SERDE - 131)) | (1 << (SqlBaseParser.SERDEPROPERTIES - 131)) | (1 << (SqlBaseParser.RECORDREADER - 131)) | (1 << (SqlBaseParser.RECORDWRITER - 131)) | (1 << (SqlBaseParser.DELIMITED - 131)) | (1 << (SqlBaseParser.FIELDS - 131)) | (1 << (SqlBaseParser.TERMINATED - 131)) | (1 << (SqlBaseParser.COLLECTION - 131)) | (1 << (SqlBaseParser.ITEMS - 131)) | (1 << (SqlBaseParser.KEYS - 131)) | (1 << (SqlBaseParser.ESCAPED - 131)) | (1 << (SqlBaseParser.LINES - 131)) | (1 << (SqlBaseParser.SEPARATED - 131)) | (1 << (SqlBaseParser.FUNCTION - 131)) | (1 << (SqlBaseParser.EXTENDED - 131)) | (1 << (SqlBaseParser.REFRESH - 131)) | (1 << (SqlBaseParser.CLEAR - 131)) | (1 << (SqlBaseParser.CACHE - 131)) | (1 << (SqlBaseParser.UNCACHE - 131)) | (1 << (SqlBaseParser.LAZY - 131)) | (1 << (SqlBaseParser.FORMATTED - 131)) | (1 << (SqlBaseParser.TEMPORARY - 131)) | (1 << (SqlBaseParser.OPTIONS - 131)) | (1 << (SqlBaseParser.UNSET - 131)) | (1 << (SqlBaseParser.TBLPROPERTIES - 131)) | (1 << (SqlBaseParser.DBPROPERTIES - 131)) | (1 << (SqlBaseParser.BUCKETS - 131)) | (1 << (SqlBaseParser.SKEWED - 131)) | (1 << (SqlBaseParser.STORED - 131)) | (1 << (SqlBaseParser.DIRECTORIES - 131)) | (1 << (SqlBaseParser.LOCATION - 131)) | (1 << (SqlBaseParser.EXCHANGE - 131)) | (1 << (SqlBaseParser.ARCHIVE - 131)) | (1 << (SqlBaseParser.UNARCHIVE - 131)) | (1 << (SqlBaseParser.FILEFORMAT - 131)) | (1 << (SqlBaseParser.TOUCH - 131)) | (1 << (SqlBaseParser.COMPACT - 131)) | (1 << (SqlBaseParser.CONCATENATE - 131)) | (1 << (SqlBaseParser.CHANGE - 131)) | (1 << (SqlBaseParser.CASCADE - 131)) | (1 << (SqlBaseParser.RESTRICT - 131)) | (1 << (SqlBaseParser.CLUSTERED - 131)) | (1 << (SqlBaseParser.SORTED - 131)) | (1 << (SqlBaseParser.PURGE - 131)) | (1 << (SqlBaseParser.INPUTFORMAT - 131)) | (1 << (SqlBaseParser.OUTPUTFORMAT - 131)) | (1 << (SqlBaseParser.DATABASE - 131)) | (1 << (SqlBaseParser.DATABASES - 131)) | (1 << (SqlBaseParser.DFS - 131)) | (1 << (SqlBaseParser.TRUNCATE - 131)) | (1 << (SqlBaseParser.ANALYZE - 131)) | (1 << (SqlBaseParser.COMPUTE - 131)) | (1 << (SqlBaseParser.LIST - 131)))) != 0) or ((((_la - 195)) & ~0x3f) == 0 and ((1 << (_la - 195)) & ((1 << (SqlBaseParser.STATISTICS - 195)) | (1 << (SqlBaseParser.PARTITIONED - 195)) | (1 << (SqlBaseParser.EXTERNAL - 195)) | (1 << (SqlBaseParser.DEFINED - 195)) | (1 << (SqlBaseParser.REVOKE - 195)) | (1 << (SqlBaseParser.GRANT - 195)) | (1 << (SqlBaseParser.LOCK - 195)) | (1 << (SqlBaseParser.UNLOCK - 195)) | (1 << (SqlBaseParser.MSCK - 195)) | (1 << (SqlBaseParser.REPAIR - 195)) | (1 << (SqlBaseParser.RECOVER - 195)) | (1 << (SqlBaseParser.EXPORT - 195)) | (1 << (SqlBaseParser.IMPORT - 195)) | (1 << (SqlBaseParser.LOAD - 195)) | (1 << (SqlBaseParser.ROLE - 195)) | (1 << (SqlBaseParser.ROLES - 195)) | (1 << (SqlBaseParser.COMPACTIONS - 195)) | (1 << (SqlBaseParser.PRINCIPALS - 195)) | (1 << (SqlBaseParser.TRANSACTIONS - 195)) | (1 << (SqlBaseParser.INDEX - 195)) | (1 << (SqlBaseParser.INDEXES - 195)) | (1 << (SqlBaseParser.LOCKS - 195)) | (1 << (SqlBaseParser.OPTION - 195)) | (1 << (SqlBaseParser.ANTI - 195)) | (1 << (SqlBaseParser.LOCAL - 195)) | (1 << (SqlBaseParser.INPATH - 195)) | (1 << (SqlBaseParser.CURRENT_DATE - 195)) | (1 << (SqlBaseParser.CURRENT_TIMESTAMP - 195)) | (1 << (SqlBaseParser.IDENTIFIER - 195)) | (1 << (SqlBaseParser.BACKQUOTED_IDENTIFIER - 195)))) != 0):
+                if (
+                    (
+                        ((_la) & ~0x3F) == 0
+                        and (
+                            (1 << _la)
+                            & (
+                                (1 << SqlBaseParser.SELECT)
+                                | (1 << SqlBaseParser.FROM)
+                                | (1 << SqlBaseParser.ADD)
+                                | (1 << SqlBaseParser.AS)
+                                | (1 << SqlBaseParser.ALL)
+                                | (1 << SqlBaseParser.DISTINCT)
+                                | (1 << SqlBaseParser.WHERE)
+                                | (1 << SqlBaseParser.GROUP)
+                                | (1 << SqlBaseParser.BY)
+                                | (1 << SqlBaseParser.GROUPING)
+                                | (1 << SqlBaseParser.SETS)
+                                | (1 << SqlBaseParser.CUBE)
+                                | (1 << SqlBaseParser.ROLLUP)
+                                | (1 << SqlBaseParser.ORDER)
+                                | (1 << SqlBaseParser.HAVING)
+                                | (1 << SqlBaseParser.LIMIT)
+                                | (1 << SqlBaseParser.AT)
+                                | (1 << SqlBaseParser.OR)
+                                | (1 << SqlBaseParser.AND)
+                                | (1 << SqlBaseParser.IN)
+                                | (1 << SqlBaseParser.NOT)
+                                | (1 << SqlBaseParser.NO)
+                                | (1 << SqlBaseParser.EXISTS)
+                                | (1 << SqlBaseParser.BETWEEN)
+                                | (1 << SqlBaseParser.LIKE)
+                                | (1 << SqlBaseParser.RLIKE)
+                                | (1 << SqlBaseParser.IS)
+                                | (1 << SqlBaseParser.NULL)
+                                | (1 << SqlBaseParser.TRUE)
+                                | (1 << SqlBaseParser.FALSE)
+                                | (1 << SqlBaseParser.NULLS)
+                                | (1 << SqlBaseParser.ASC)
+                                | (1 << SqlBaseParser.DESC)
+                                | (1 << SqlBaseParser.FOR)
+                                | (1 << SqlBaseParser.INTERVAL)
+                                | (1 << SqlBaseParser.CASE)
+                                | (1 << SqlBaseParser.WHEN)
+                                | (1 << SqlBaseParser.THEN)
+                                | (1 << SqlBaseParser.ELSE)
+                                | (1 << SqlBaseParser.END)
+                                | (1 << SqlBaseParser.JOIN)
+                                | (1 << SqlBaseParser.CROSS)
+                                | (1 << SqlBaseParser.OUTER)
+                                | (1 << SqlBaseParser.INNER)
+                                | (1 << SqlBaseParser.LEFT)
+                                | (1 << SqlBaseParser.SEMI)
+                                | (1 << SqlBaseParser.RIGHT)
+                                | (1 << SqlBaseParser.FULL)
+                                | (1 << SqlBaseParser.NATURAL)
+                                | (1 << SqlBaseParser.ON)
+                                | (1 << SqlBaseParser.LATERAL)
+                                | (1 << SqlBaseParser.WINDOW)
+                                | (1 << SqlBaseParser.OVER)
+                                | (1 << SqlBaseParser.PARTITION)
+                                | (1 << SqlBaseParser.RANGE)
+                                | (1 << SqlBaseParser.ROWS)
+                            )
+                        )
+                        != 0
+                    )
+                    or (
+                        (((_la - 64)) & ~0x3F) == 0
+                        and (
+                            (1 << (_la - 64))
+                            & (
+                                (1 << (SqlBaseParser.UNBOUNDED - 64))
+                                | (1 << (SqlBaseParser.PRECEDING - 64))
+                                | (1 << (SqlBaseParser.FOLLOWING - 64))
+                                | (1 << (SqlBaseParser.CURRENT - 64))
+                                | (1 << (SqlBaseParser.ROW - 64))
+                                | (1 << (SqlBaseParser.WITH - 64))
+                                | (1 << (SqlBaseParser.VALUES - 64))
+                                | (1 << (SqlBaseParser.CREATE - 64))
+                                | (1 << (SqlBaseParser.TABLE - 64))
+                                | (1 << (SqlBaseParser.VIEW - 64))
+                                | (1 << (SqlBaseParser.REPLACE - 64))
+                                | (1 << (SqlBaseParser.INSERT - 64))
+                                | (1 << (SqlBaseParser.DELETE - 64))
+                                | (1 << (SqlBaseParser.INTO - 64))
+                                | (1 << (SqlBaseParser.DESCRIBE - 64))
+                                | (1 << (SqlBaseParser.EXPLAIN - 64))
+                                | (1 << (SqlBaseParser.FORMAT - 64))
+                                | (1 << (SqlBaseParser.LOGICAL - 64))
+                                | (1 << (SqlBaseParser.CODEGEN - 64))
+                                | (1 << (SqlBaseParser.CAST - 64))
+                                | (1 << (SqlBaseParser.SHOW - 64))
+                                | (1 << (SqlBaseParser.TABLES - 64))
+                                | (1 << (SqlBaseParser.COLUMNS - 64))
+                                | (1 << (SqlBaseParser.COLUMN - 64))
+                                | (1 << (SqlBaseParser.USE - 64))
+                                | (1 << (SqlBaseParser.PARTITIONS - 64))
+                                | (1 << (SqlBaseParser.FUNCTIONS - 64))
+                                | (1 << (SqlBaseParser.DROP - 64))
+                                | (1 << (SqlBaseParser.UNION - 64))
+                                | (1 << (SqlBaseParser.EXCEPT - 64))
+                                | (1 << (SqlBaseParser.INTERSECT - 64))
+                                | (1 << (SqlBaseParser.TO - 64))
+                                | (1 << (SqlBaseParser.TABLESAMPLE - 64))
+                                | (1 << (SqlBaseParser.STRATIFY - 64))
+                                | (1 << (SqlBaseParser.ALTER - 64))
+                                | (1 << (SqlBaseParser.RENAME - 64))
+                                | (1 << (SqlBaseParser.ARRAY - 64))
+                                | (1 << (SqlBaseParser.MAP - 64))
+                                | (1 << (SqlBaseParser.STRUCT - 64))
+                                | (1 << (SqlBaseParser.COMMENT - 64))
+                                | (1 << (SqlBaseParser.SET - 64))
+                                | (1 << (SqlBaseParser.RESET - 64))
+                                | (1 << (SqlBaseParser.DATA - 64))
+                                | (1 << (SqlBaseParser.START - 64))
+                                | (1 << (SqlBaseParser.TRANSACTION - 64))
+                                | (1 << (SqlBaseParser.COMMIT - 64))
+                                | (1 << (SqlBaseParser.ROLLBACK - 64))
+                                | (1 << (SqlBaseParser.MACRO - 64))
+                                | (1 << (SqlBaseParser.IF - 64))
+                                | (1 << (SqlBaseParser.DIV - 64))
+                            )
+                        )
+                        != 0
+                    )
+                    or (
+                        (((_la - 131)) & ~0x3F) == 0
+                        and (
+                            (1 << (_la - 131))
+                            & (
+                                (1 << (SqlBaseParser.PERCENTLIT - 131))
+                                | (1 << (SqlBaseParser.BUCKET - 131))
+                                | (1 << (SqlBaseParser.OUT - 131))
+                                | (1 << (SqlBaseParser.OF - 131))
+                                | (1 << (SqlBaseParser.SORT - 131))
+                                | (1 << (SqlBaseParser.CLUSTER - 131))
+                                | (1 << (SqlBaseParser.DISTRIBUTE - 131))
+                                | (1 << (SqlBaseParser.OVERWRITE - 131))
+                                | (1 << (SqlBaseParser.TRANSFORM - 131))
+                                | (1 << (SqlBaseParser.REDUCE - 131))
+                                | (1 << (SqlBaseParser.USING - 131))
+                                | (1 << (SqlBaseParser.SERDE - 131))
+                                | (1 << (SqlBaseParser.SERDEPROPERTIES - 131))
+                                | (1 << (SqlBaseParser.RECORDREADER - 131))
+                                | (1 << (SqlBaseParser.RECORDWRITER - 131))
+                                | (1 << (SqlBaseParser.DELIMITED - 131))
+                                | (1 << (SqlBaseParser.FIELDS - 131))
+                                | (1 << (SqlBaseParser.TERMINATED - 131))
+                                | (1 << (SqlBaseParser.COLLECTION - 131))
+                                | (1 << (SqlBaseParser.ITEMS - 131))
+                                | (1 << (SqlBaseParser.KEYS - 131))
+                                | (1 << (SqlBaseParser.ESCAPED - 131))
+                                | (1 << (SqlBaseParser.LINES - 131))
+                                | (1 << (SqlBaseParser.SEPARATED - 131))
+                                | (1 << (SqlBaseParser.FUNCTION - 131))
+                                | (1 << (SqlBaseParser.EXTENDED - 131))
+                                | (1 << (SqlBaseParser.REFRESH - 131))
+                                | (1 << (SqlBaseParser.CLEAR - 131))
+                                | (1 << (SqlBaseParser.CACHE - 131))
+                                | (1 << (SqlBaseParser.UNCACHE - 131))
+                                | (1 << (SqlBaseParser.LAZY - 131))
+                                | (1 << (SqlBaseParser.FORMATTED - 131))
+                                | (1 << (SqlBaseParser.TEMPORARY - 131))
+                                | (1 << (SqlBaseParser.OPTIONS - 131))
+                                | (1 << (SqlBaseParser.UNSET - 131))
+                                | (1 << (SqlBaseParser.TBLPROPERTIES - 131))
+                                | (1 << (SqlBaseParser.DBPROPERTIES - 131))
+                                | (1 << (SqlBaseParser.BUCKETS - 131))
+                                | (1 << (SqlBaseParser.SKEWED - 131))
+                                | (1 << (SqlBaseParser.STORED - 131))
+                                | (1 << (SqlBaseParser.DIRECTORIES - 131))
+                                | (1 << (SqlBaseParser.LOCATION - 131))
+                                | (1 << (SqlBaseParser.EXCHANGE - 131))
+                                | (1 << (SqlBaseParser.ARCHIVE - 131))
+                                | (1 << (SqlBaseParser.UNARCHIVE - 131))
+                                | (1 << (SqlBaseParser.FILEFORMAT - 131))
+                                | (1 << (SqlBaseParser.TOUCH - 131))
+                                | (1 << (SqlBaseParser.COMPACT - 131))
+                                | (1 << (SqlBaseParser.CONCATENATE - 131))
+                                | (1 << (SqlBaseParser.CHANGE - 131))
+                                | (1 << (SqlBaseParser.CASCADE - 131))
+                                | (1 << (SqlBaseParser.RESTRICT - 131))
+                                | (1 << (SqlBaseParser.CLUSTERED - 131))
+                                | (1 << (SqlBaseParser.SORTED - 131))
+                                | (1 << (SqlBaseParser.PURGE - 131))
+                                | (1 << (SqlBaseParser.INPUTFORMAT - 131))
+                                | (1 << (SqlBaseParser.OUTPUTFORMAT - 131))
+                                | (1 << (SqlBaseParser.DATABASE - 131))
+                                | (1 << (SqlBaseParser.DATABASES - 131))
+                                | (1 << (SqlBaseParser.DFS - 131))
+                                | (1 << (SqlBaseParser.TRUNCATE - 131))
+                                | (1 << (SqlBaseParser.ANALYZE - 131))
+                                | (1 << (SqlBaseParser.COMPUTE - 131))
+                                | (1 << (SqlBaseParser.LIST - 131))
+                            )
+                        )
+                        != 0
+                    )
+                    or (
+                        (((_la - 195)) & ~0x3F) == 0
+                        and (
+                            (1 << (_la - 195))
+                            & (
+                                (1 << (SqlBaseParser.STATISTICS - 195))
+                                | (1 << (SqlBaseParser.PARTITIONED - 195))
+                                | (1 << (SqlBaseParser.EXTERNAL - 195))
+                                | (1 << (SqlBaseParser.DEFINED - 195))
+                                | (1 << (SqlBaseParser.REVOKE - 195))
+                                | (1 << (SqlBaseParser.GRANT - 195))
+                                | (1 << (SqlBaseParser.LOCK - 195))
+                                | (1 << (SqlBaseParser.UNLOCK - 195))
+                                | (1 << (SqlBaseParser.MSCK - 195))
+                                | (1 << (SqlBaseParser.REPAIR - 195))
+                                | (1 << (SqlBaseParser.RECOVER - 195))
+                                | (1 << (SqlBaseParser.EXPORT - 195))
+                                | (1 << (SqlBaseParser.IMPORT - 195))
+                                | (1 << (SqlBaseParser.LOAD - 195))
+                                | (1 << (SqlBaseParser.ROLE - 195))
+                                | (1 << (SqlBaseParser.ROLES - 195))
+                                | (1 << (SqlBaseParser.COMPACTIONS - 195))
+                                | (1 << (SqlBaseParser.PRINCIPALS - 195))
+                                | (1 << (SqlBaseParser.TRANSACTIONS - 195))
+                                | (1 << (SqlBaseParser.INDEX - 195))
+                                | (1 << (SqlBaseParser.INDEXES - 195))
+                                | (1 << (SqlBaseParser.LOCKS - 195))
+                                | (1 << (SqlBaseParser.OPTION - 195))
+                                | (1 << (SqlBaseParser.ANTI - 195))
+                                | (1 << (SqlBaseParser.LOCAL - 195))
+                                | (1 << (SqlBaseParser.INPATH - 195))
+                                | (1 << (SqlBaseParser.CURRENT_DATE - 195))
+                                | (1 << (SqlBaseParser.CURRENT_TIMESTAMP - 195))
+                                | (1 << (SqlBaseParser.IDENTIFIER - 195))
+                                | (1 << (SqlBaseParser.BACKQUOTED_IDENTIFIER - 195))
+                            )
+                        )
+                        != 0
+                    )
+                ):
                     self.state = 662
                     self.describeColName()
-
 
                 pass
 
@@ -4712,14 +6179,14 @@ class SqlBaseParser ( Parser ):
                 self.match(SqlBaseParser.REFRESH)
                 self.state = 672
                 self._errHandler.sync(self)
-                _alt = self._interp.adaptivePredict(self._input,79,self._ctx)
-                while _alt!=1 and _alt!=ATN.INVALID_ALT_NUMBER:
-                    if _alt==1+1:
+                _alt = self._interp.adaptivePredict(self._input, 79, self._ctx)
+                while _alt != 1 and _alt != ATN.INVALID_ALT_NUMBER:
+                    if _alt == 1 + 1:
                         self.state = 669
-                        self.matchWildcard() 
+                        self.matchWildcard()
                     self.state = 674
                     self._errHandler.sync(self)
-                    _alt = self._interp.adaptivePredict(self._input,79,self._ctx)
+                    _alt = self._interp.adaptivePredict(self._input, 79, self._ctx)
 
                 pass
 
@@ -4731,10 +6198,9 @@ class SqlBaseParser ( Parser ):
                 self.state = 677
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==SqlBaseParser.LAZY:
+                if _la == SqlBaseParser.LAZY:
                     self.state = 676
                     self.match(SqlBaseParser.LAZY)
-
 
                 self.state = 679
                 self.match(SqlBaseParser.TABLE)
@@ -4743,18 +6209,45 @@ class SqlBaseParser ( Parser ):
                 self.state = 685
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if (((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << SqlBaseParser.T__0) | (1 << SqlBaseParser.SELECT) | (1 << SqlBaseParser.FROM) | (1 << SqlBaseParser.AS))) != 0) or ((((_la - 69)) & ~0x3f) == 0 and ((1 << (_la - 69)) & ((1 << (SqlBaseParser.WITH - 69)) | (1 << (SqlBaseParser.VALUES - 69)) | (1 << (SqlBaseParser.TABLE - 69)) | (1 << (SqlBaseParser.INSERT - 69)) | (1 << (SqlBaseParser.MAP - 69)))) != 0) or _la==SqlBaseParser.REDUCE:
+                if (
+                    (
+                        ((_la) & ~0x3F) == 0
+                        and (
+                            (1 << _la)
+                            & (
+                                (1 << SqlBaseParser.T__0)
+                                | (1 << SqlBaseParser.SELECT)
+                                | (1 << SqlBaseParser.FROM)
+                                | (1 << SqlBaseParser.AS)
+                            )
+                        )
+                        != 0
+                    )
+                    or (
+                        (((_la - 69)) & ~0x3F) == 0
+                        and (
+                            (1 << (_la - 69))
+                            & (
+                                (1 << (SqlBaseParser.WITH - 69))
+                                | (1 << (SqlBaseParser.VALUES - 69))
+                                | (1 << (SqlBaseParser.TABLE - 69))
+                                | (1 << (SqlBaseParser.INSERT - 69))
+                                | (1 << (SqlBaseParser.MAP - 69))
+                            )
+                        )
+                        != 0
+                    )
+                    or _la == SqlBaseParser.REDUCE
+                ):
                     self.state = 682
                     self._errHandler.sync(self)
                     _la = self._input.LA(1)
-                    if _la==SqlBaseParser.AS:
+                    if _la == SqlBaseParser.AS:
                         self.state = 681
                         self.match(SqlBaseParser.AS)
 
-
                     self.state = 684
                     self.query()
-
 
                 pass
 
@@ -4788,10 +6281,9 @@ class SqlBaseParser ( Parser ):
                 self.state = 695
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==SqlBaseParser.LOCAL:
+                if _la == SqlBaseParser.LOCAL:
                     self.state = 694
                     self.match(SqlBaseParser.LOCAL)
-
 
                 self.state = 697
                 self.match(SqlBaseParser.INPATH)
@@ -4800,10 +6292,9 @@ class SqlBaseParser ( Parser ):
                 self.state = 700
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==SqlBaseParser.OVERWRITE:
+                if _la == SqlBaseParser.OVERWRITE:
                     self.state = 699
                     self.match(SqlBaseParser.OVERWRITE)
-
 
                 self.state = 702
                 self.match(SqlBaseParser.INTO)
@@ -4814,10 +6305,9 @@ class SqlBaseParser ( Parser ):
                 self.state = 706
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==SqlBaseParser.PARTITION:
+                if _la == SqlBaseParser.PARTITION:
                     self.state = 705
                     self.partitionSpec()
-
 
                 pass
 
@@ -4833,10 +6323,9 @@ class SqlBaseParser ( Parser ):
                 self.state = 712
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==SqlBaseParser.PARTITION:
+                if _la == SqlBaseParser.PARTITION:
                     self.state = 711
                     self.partitionSpec()
-
 
                 pass
 
@@ -4859,7 +6348,7 @@ class SqlBaseParser ( Parser ):
                 self.state = 718
                 localctx.op = self._input.LT(1)
                 _la = self._input.LA(1)
-                if not(_la==SqlBaseParser.ADD or _la==SqlBaseParser.LIST):
+                if not (_la == SqlBaseParser.ADD or _la == SqlBaseParser.LIST):
                     localctx.op = self._errHandler.recoverInline(self)
                 else:
                     self._errHandler.reportMatch(self)
@@ -4868,14 +6357,14 @@ class SqlBaseParser ( Parser ):
                 self.identifier()
                 self.state = 723
                 self._errHandler.sync(self)
-                _alt = self._interp.adaptivePredict(self._input,87,self._ctx)
-                while _alt!=1 and _alt!=ATN.INVALID_ALT_NUMBER:
-                    if _alt==1+1:
+                _alt = self._interp.adaptivePredict(self._input, 87, self._ctx)
+                while _alt != 1 and _alt != ATN.INVALID_ALT_NUMBER:
+                    if _alt == 1 + 1:
                         self.state = 720
-                        self.matchWildcard() 
+                        self.matchWildcard()
                     self.state = 725
                     self._errHandler.sync(self)
-                    _alt = self._interp.adaptivePredict(self._input,87,self._ctx)
+                    _alt = self._interp.adaptivePredict(self._input, 87, self._ctx)
 
                 pass
 
@@ -4888,14 +6377,14 @@ class SqlBaseParser ( Parser ):
                 self.match(SqlBaseParser.ROLE)
                 self.state = 731
                 self._errHandler.sync(self)
-                _alt = self._interp.adaptivePredict(self._input,88,self._ctx)
-                while _alt!=1 and _alt!=ATN.INVALID_ALT_NUMBER:
-                    if _alt==1+1:
+                _alt = self._interp.adaptivePredict(self._input, 88, self._ctx)
+                while _alt != 1 and _alt != ATN.INVALID_ALT_NUMBER:
+                    if _alt == 1 + 1:
                         self.state = 728
-                        self.matchWildcard() 
+                        self.matchWildcard()
                     self.state = 733
                     self._errHandler.sync(self)
-                    _alt = self._interp.adaptivePredict(self._input,88,self._ctx)
+                    _alt = self._interp.adaptivePredict(self._input, 88, self._ctx)
 
                 pass
 
@@ -4906,14 +6395,14 @@ class SqlBaseParser ( Parser ):
                 self.match(SqlBaseParser.SET)
                 self.state = 738
                 self._errHandler.sync(self)
-                _alt = self._interp.adaptivePredict(self._input,89,self._ctx)
-                while _alt!=1 and _alt!=ATN.INVALID_ALT_NUMBER:
-                    if _alt==1+1:
+                _alt = self._interp.adaptivePredict(self._input, 89, self._ctx)
+                while _alt != 1 and _alt != ATN.INVALID_ALT_NUMBER:
+                    if _alt == 1 + 1:
                         self.state = 735
-                        self.matchWildcard() 
+                        self.matchWildcard()
                     self.state = 740
                     self._errHandler.sync(self)
-                    _alt = self._interp.adaptivePredict(self._input,89,self._ctx)
+                    _alt = self._interp.adaptivePredict(self._input, 89, self._ctx)
 
                 pass
 
@@ -4931,17 +6420,16 @@ class SqlBaseParser ( Parser ):
                 self.unsupportedHiveNativeCommands()
                 self.state = 746
                 self._errHandler.sync(self)
-                _alt = self._interp.adaptivePredict(self._input,90,self._ctx)
-                while _alt!=1 and _alt!=ATN.INVALID_ALT_NUMBER:
-                    if _alt==1+1:
+                _alt = self._interp.adaptivePredict(self._input, 90, self._ctx)
+                while _alt != 1 and _alt != ATN.INVALID_ALT_NUMBER:
+                    if _alt == 1 + 1:
                         self.state = 743
-                        self.matchWildcard() 
+                        self.matchWildcard()
                     self.state = 748
                     self._errHandler.sync(self)
-                    _alt = self._interp.adaptivePredict(self._input,90,self._ctx)
+                    _alt = self._interp.adaptivePredict(self._input, 90, self._ctx)
 
                 pass
-
 
         except RecognitionException as re:
             localctx.exception = re
@@ -4951,19 +6439,20 @@ class SqlBaseParser ( Parser ):
             self.exitRule()
         return localctx
 
-
     class UnsupportedHiveNativeCommandsContext(ParserRuleContext):
-        __slots__ = 'parser'
+        __slots__ = "parser"
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
-            self.kw1 = None # Token
-            self.kw2 = None # Token
-            self.kw3 = None # Token
-            self.kw4 = None # Token
-            self.kw5 = None # Token
-            self.kw6 = None # Token
+            self.kw1 = None  # Token
+            self.kw2 = None  # Token
+            self.kw3 = None  # Token
+            self.kw4 = None  # Token
+            self.kw5 = None  # Token
+            self.kw6 = None  # Token
 
         def CREATE(self):
             return self.getToken(SqlBaseParser.CREATE, 0)
@@ -5035,8 +6524,7 @@ class SqlBaseParser ( Parser ):
             return self.getToken(SqlBaseParser.MACRO, 0)
 
         def tableIdentifier(self):
-            return self.getTypedRuleContext(SqlBaseParser.TableIdentifierContext,0)
-
+            return self.getTypedRuleContext(SqlBaseParser.TableIdentifierContext, 0)
 
         def NOT(self):
             return self.getToken(SqlBaseParser.NOT, 0)
@@ -5087,8 +6575,7 @@ class SqlBaseParser ( Parser ):
             return self.getToken(SqlBaseParser.COMPACT, 0)
 
         def partitionSpec(self):
-            return self.getTypedRuleContext(SqlBaseParser.PartitionSpecContext,0)
-
+            return self.getTypedRuleContext(SqlBaseParser.PartitionSpecContext, 0)
 
         def CONCATENATE(self):
             return self.getToken(SqlBaseParser.CONCATENATE, 0)
@@ -5132,26 +6619,25 @@ class SqlBaseParser ( Parser ):
         def getRuleIndex(self):
             return SqlBaseParser.RULE_unsupportedHiveNativeCommands
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterUnsupportedHiveNativeCommands" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterUnsupportedHiveNativeCommands"):
                 listener.enterUnsupportedHiveNativeCommands(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitUnsupportedHiveNativeCommands" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitUnsupportedHiveNativeCommands"):
                 listener.exitUnsupportedHiveNativeCommands(self)
-
-
-
 
     def unsupportedHiveNativeCommands(self):
 
-        localctx = SqlBaseParser.UnsupportedHiveNativeCommandsContext(self, self._ctx, self.state)
+        localctx = SqlBaseParser.UnsupportedHiveNativeCommandsContext(
+            self, self._ctx, self.state
+        )
         self.enterRule(localctx, 10, self.RULE_unsupportedHiveNativeCommands)
-        self._la = 0 # Token type
+        self._la = 0  # Token type
         try:
             self.state = 940
             self._errHandler.sync(self)
-            la_ = self._interp.adaptivePredict(self._input,102,self._ctx)
+            la_ = self._interp.adaptivePredict(self._input, 102, self._ctx)
             if la_ == 1:
                 self.enterOuterAlt(localctx, 1)
                 self.state = 751
@@ -5174,11 +6660,10 @@ class SqlBaseParser ( Parser ):
                 localctx.kw1 = self.match(SqlBaseParser.GRANT)
                 self.state = 757
                 self._errHandler.sync(self)
-                la_ = self._interp.adaptivePredict(self._input,92,self._ctx)
+                la_ = self._interp.adaptivePredict(self._input, 92, self._ctx)
                 if la_ == 1:
                     self.state = 756
                     localctx.kw2 = self.match(SqlBaseParser.ROLE)
-
 
                 pass
 
@@ -5188,11 +6673,10 @@ class SqlBaseParser ( Parser ):
                 localctx.kw1 = self.match(SqlBaseParser.REVOKE)
                 self.state = 761
                 self._errHandler.sync(self)
-                la_ = self._interp.adaptivePredict(self._input,93,self._ctx)
+                la_ = self._interp.adaptivePredict(self._input, 93, self._ctx)
                 if la_ == 1:
                     self.state = 760
                     localctx.kw2 = self.match(SqlBaseParser.ROLE)
-
 
                 pass
 
@@ -5212,11 +6696,10 @@ class SqlBaseParser ( Parser ):
                 localctx.kw2 = self.match(SqlBaseParser.ROLE)
                 self.state = 768
                 self._errHandler.sync(self)
-                la_ = self._interp.adaptivePredict(self._input,94,self._ctx)
+                la_ = self._interp.adaptivePredict(self._input, 94, self._ctx)
                 if la_ == 1:
                     self.state = 767
                     localctx.kw3 = self.match(SqlBaseParser.GRANT)
-
 
                 pass
 
@@ -5549,10 +7032,9 @@ class SqlBaseParser ( Parser ):
                 self.state = 884
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==SqlBaseParser.PARTITION:
+                if _la == SqlBaseParser.PARTITION:
                     self.state = 883
                     self.partitionSpec()
-
 
                 self.state = 886
                 localctx.kw3 = self.match(SqlBaseParser.COMPACT)
@@ -5569,10 +7051,9 @@ class SqlBaseParser ( Parser ):
                 self.state = 892
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==SqlBaseParser.PARTITION:
+                if _la == SqlBaseParser.PARTITION:
                     self.state = 891
                     self.partitionSpec()
-
 
                 self.state = 894
                 localctx.kw3 = self.match(SqlBaseParser.CONCATENATE)
@@ -5589,10 +7070,9 @@ class SqlBaseParser ( Parser ):
                 self.state = 900
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==SqlBaseParser.PARTITION:
+                if _la == SqlBaseParser.PARTITION:
                     self.state = 899
                     self.partitionSpec()
-
 
                 self.state = 902
                 localctx.kw3 = self.match(SqlBaseParser.SET)
@@ -5611,10 +7091,9 @@ class SqlBaseParser ( Parser ):
                 self.state = 909
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==SqlBaseParser.PARTITION:
+                if _la == SqlBaseParser.PARTITION:
                     self.state = 908
                     self.partitionSpec()
-
 
                 self.state = 911
                 localctx.kw3 = self.match(SqlBaseParser.ADD)
@@ -5633,20 +7112,18 @@ class SqlBaseParser ( Parser ):
                 self.state = 918
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==SqlBaseParser.PARTITION:
+                if _la == SqlBaseParser.PARTITION:
                     self.state = 917
                     self.partitionSpec()
-
 
                 self.state = 920
                 localctx.kw3 = self.match(SqlBaseParser.CHANGE)
                 self.state = 922
                 self._errHandler.sync(self)
-                la_ = self._interp.adaptivePredict(self._input,100,self._ctx)
+                la_ = self._interp.adaptivePredict(self._input, 100, self._ctx)
                 if la_ == 1:
                     self.state = 921
                     localctx.kw4 = self.match(SqlBaseParser.COLUMNS)
-
 
                 pass
 
@@ -5661,10 +7138,9 @@ class SqlBaseParser ( Parser ):
                 self.state = 928
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==SqlBaseParser.PARTITION:
+                if _la == SqlBaseParser.PARTITION:
                     self.state = 927
                     self.partitionSpec()
-
 
                 self.state = 930
                 localctx.kw3 = self.match(SqlBaseParser.REPLACE)
@@ -5706,7 +7182,6 @@ class SqlBaseParser ( Parser ):
                 localctx.kw2 = self.match(SqlBaseParser.FROM)
                 pass
 
-
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)
@@ -5715,11 +7190,12 @@ class SqlBaseParser ( Parser ):
             self.exitRule()
         return localctx
 
-
     class CreateTableHeaderContext(ParserRuleContext):
-        __slots__ = 'parser'
+        __slots__ = "parser"
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
@@ -5730,8 +7206,7 @@ class SqlBaseParser ( Parser ):
             return self.getToken(SqlBaseParser.TABLE, 0)
 
         def tableIdentifier(self):
-            return self.getTypedRuleContext(SqlBaseParser.TableIdentifierContext,0)
-
+            return self.getTypedRuleContext(SqlBaseParser.TableIdentifierContext, 0)
 
         def TEMPORARY(self):
             return self.getToken(SqlBaseParser.TEMPORARY, 0)
@@ -5751,22 +7226,19 @@ class SqlBaseParser ( Parser ):
         def getRuleIndex(self):
             return SqlBaseParser.RULE_createTableHeader
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterCreateTableHeader" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterCreateTableHeader"):
                 listener.enterCreateTableHeader(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitCreateTableHeader" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitCreateTableHeader"):
                 listener.exitCreateTableHeader(self)
-
-
-
 
     def createTableHeader(self):
 
         localctx = SqlBaseParser.CreateTableHeaderContext(self, self._ctx, self.state)
         self.enterRule(localctx, 12, self.RULE_createTableHeader)
-        self._la = 0 # Token type
+        self._la = 0  # Token type
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 942
@@ -5774,24 +7246,22 @@ class SqlBaseParser ( Parser ):
             self.state = 944
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if _la==SqlBaseParser.TEMPORARY:
+            if _la == SqlBaseParser.TEMPORARY:
                 self.state = 943
                 self.match(SqlBaseParser.TEMPORARY)
-
 
             self.state = 947
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if _la==SqlBaseParser.EXTERNAL:
+            if _la == SqlBaseParser.EXTERNAL:
                 self.state = 946
                 self.match(SqlBaseParser.EXTERNAL)
-
 
             self.state = 949
             self.match(SqlBaseParser.TABLE)
             self.state = 953
             self._errHandler.sync(self)
-            la_ = self._interp.adaptivePredict(self._input,105,self._ctx)
+            la_ = self._interp.adaptivePredict(self._input, 105, self._ctx)
             if la_ == 1:
                 self.state = 950
                 self.match(SqlBaseParser.IF)
@@ -5799,7 +7269,6 @@ class SqlBaseParser ( Parser ):
                 self.match(SqlBaseParser.NOT)
                 self.state = 952
                 self.match(SqlBaseParser.EXISTS)
-
 
             self.state = 955
             self.tableIdentifier()
@@ -5811,26 +7280,26 @@ class SqlBaseParser ( Parser ):
             self.exitRule()
         return localctx
 
-
     class BucketSpecContext(ParserRuleContext):
-        __slots__ = 'parser'
+        __slots__ = "parser"
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
         def CLUSTERED(self):
             return self.getToken(SqlBaseParser.CLUSTERED, 0)
 
-        def BY(self, i:int=None):
+        def BY(self, i: int = None):
             if i is None:
                 return self.getTokens(SqlBaseParser.BY)
             else:
                 return self.getToken(SqlBaseParser.BY, i)
 
         def identifierList(self):
-            return self.getTypedRuleContext(SqlBaseParser.IdentifierListContext,0)
-
+            return self.getTypedRuleContext(SqlBaseParser.IdentifierListContext, 0)
 
         def INTO(self):
             return self.getToken(SqlBaseParser.INTO, 0)
@@ -5845,28 +7314,26 @@ class SqlBaseParser ( Parser ):
             return self.getToken(SqlBaseParser.SORTED, 0)
 
         def orderedIdentifierList(self):
-            return self.getTypedRuleContext(SqlBaseParser.OrderedIdentifierListContext,0)
-
+            return self.getTypedRuleContext(
+                SqlBaseParser.OrderedIdentifierListContext, 0
+            )
 
         def getRuleIndex(self):
             return SqlBaseParser.RULE_bucketSpec
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterBucketSpec" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterBucketSpec"):
                 listener.enterBucketSpec(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitBucketSpec" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitBucketSpec"):
                 listener.exitBucketSpec(self)
-
-
-
 
     def bucketSpec(self):
 
         localctx = SqlBaseParser.BucketSpecContext(self, self._ctx, self.state)
         self.enterRule(localctx, 14, self.RULE_bucketSpec)
-        self._la = 0 # Token type
+        self._la = 0  # Token type
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 957
@@ -5878,14 +7345,13 @@ class SqlBaseParser ( Parser ):
             self.state = 963
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if _la==SqlBaseParser.SORTED:
+            if _la == SqlBaseParser.SORTED:
                 self.state = 960
                 self.match(SqlBaseParser.SORTED)
                 self.state = 961
                 self.match(SqlBaseParser.BY)
                 self.state = 962
                 self.orderedIdentifierList()
-
 
             self.state = 965
             self.match(SqlBaseParser.INTO)
@@ -5901,11 +7367,12 @@ class SqlBaseParser ( Parser ):
             self.exitRule()
         return localctx
 
-
     class SkewSpecContext(ParserRuleContext):
-        __slots__ = 'parser'
+        __slots__ = "parser"
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
@@ -5916,19 +7383,16 @@ class SqlBaseParser ( Parser ):
             return self.getToken(SqlBaseParser.BY, 0)
 
         def identifierList(self):
-            return self.getTypedRuleContext(SqlBaseParser.IdentifierListContext,0)
-
+            return self.getTypedRuleContext(SqlBaseParser.IdentifierListContext, 0)
 
         def ON(self):
             return self.getToken(SqlBaseParser.ON, 0)
 
         def constantList(self):
-            return self.getTypedRuleContext(SqlBaseParser.ConstantListContext,0)
-
+            return self.getTypedRuleContext(SqlBaseParser.ConstantListContext, 0)
 
         def nestedConstantList(self):
-            return self.getTypedRuleContext(SqlBaseParser.NestedConstantListContext,0)
-
+            return self.getTypedRuleContext(SqlBaseParser.NestedConstantListContext, 0)
 
         def STORED(self):
             return self.getToken(SqlBaseParser.STORED, 0)
@@ -5942,16 +7406,13 @@ class SqlBaseParser ( Parser ):
         def getRuleIndex(self):
             return SqlBaseParser.RULE_skewSpec
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterSkewSpec" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterSkewSpec"):
                 listener.enterSkewSpec(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitSkewSpec" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitSkewSpec"):
                 listener.exitSkewSpec(self)
-
-
-
 
     def skewSpec(self):
 
@@ -5969,7 +7430,7 @@ class SqlBaseParser ( Parser ):
             self.match(SqlBaseParser.ON)
             self.state = 975
             self._errHandler.sync(self)
-            la_ = self._interp.adaptivePredict(self._input,107,self._ctx)
+            la_ = self._interp.adaptivePredict(self._input, 107, self._ctx)
             if la_ == 1:
                 self.state = 973
                 self.constantList()
@@ -5980,10 +7441,9 @@ class SqlBaseParser ( Parser ):
                 self.nestedConstantList()
                 pass
 
-
             self.state = 980
             self._errHandler.sync(self)
-            la_ = self._interp.adaptivePredict(self._input,108,self._ctx)
+            la_ = self._interp.adaptivePredict(self._input, 108, self._ctx)
             if la_ == 1:
                 self.state = 977
                 self.match(SqlBaseParser.STORED)
@@ -5991,7 +7451,6 @@ class SqlBaseParser ( Parser ):
                 self.match(SqlBaseParser.AS)
                 self.state = 979
                 self.match(SqlBaseParser.DIRECTORIES)
-
 
         except RecognitionException as re:
             localctx.exception = re
@@ -6001,11 +7460,12 @@ class SqlBaseParser ( Parser ):
             self.exitRule()
         return localctx
 
-
     class LocationSpecContext(ParserRuleContext):
-        __slots__ = 'parser'
+        __slots__ = "parser"
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
@@ -6018,16 +7478,13 @@ class SqlBaseParser ( Parser ):
         def getRuleIndex(self):
             return SqlBaseParser.RULE_locationSpec
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterLocationSpec" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterLocationSpec"):
                 listener.enterLocationSpec(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitLocationSpec" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitLocationSpec"):
                 listener.exitLocationSpec(self)
-
-
-
 
     def locationSpec(self):
 
@@ -6047,50 +7504,45 @@ class SqlBaseParser ( Parser ):
             self.exitRule()
         return localctx
 
-
     class QueryContext(ParserRuleContext):
-        __slots__ = 'parser'
+        __slots__ = "parser"
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
         def queryNoWith(self):
-            return self.getTypedRuleContext(SqlBaseParser.QueryNoWithContext,0)
-
+            return self.getTypedRuleContext(SqlBaseParser.QueryNoWithContext, 0)
 
         def ctes(self):
-            return self.getTypedRuleContext(SqlBaseParser.CtesContext,0)
-
+            return self.getTypedRuleContext(SqlBaseParser.CtesContext, 0)
 
         def getRuleIndex(self):
             return SqlBaseParser.RULE_query
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterQuery" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterQuery"):
                 listener.enterQuery(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitQuery" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitQuery"):
                 listener.exitQuery(self)
-
-
-
 
     def query(self):
 
         localctx = SqlBaseParser.QueryContext(self, self._ctx, self.state)
         self.enterRule(localctx, 20, self.RULE_query)
-        self._la = 0 # Token type
+        self._la = 0  # Token type
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 986
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if _la==SqlBaseParser.WITH:
+            if _la == SqlBaseParser.WITH:
                 self.state = 985
                 self.ctes()
-
 
             self.state = 988
             self.queryNoWith()
@@ -6102,11 +7554,12 @@ class SqlBaseParser ( Parser ):
             self.exitRule()
         return localctx
 
-
     class InsertIntoContext(ParserRuleContext):
-        __slots__ = 'parser'
+        __slots__ = "parser"
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
@@ -6120,12 +7573,10 @@ class SqlBaseParser ( Parser ):
             return self.getToken(SqlBaseParser.TABLE, 0)
 
         def tableIdentifier(self):
-            return self.getTypedRuleContext(SqlBaseParser.TableIdentifierContext,0)
-
+            return self.getTypedRuleContext(SqlBaseParser.TableIdentifierContext, 0)
 
         def partitionSpec(self):
-            return self.getTypedRuleContext(SqlBaseParser.PartitionSpecContext,0)
-
+            return self.getTypedRuleContext(SqlBaseParser.PartitionSpecContext, 0)
 
         def IF(self):
             return self.getToken(SqlBaseParser.IF, 0)
@@ -6142,26 +7593,23 @@ class SqlBaseParser ( Parser ):
         def getRuleIndex(self):
             return SqlBaseParser.RULE_insertInto
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterInsertInto" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterInsertInto"):
                 listener.enterInsertInto(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitInsertInto" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitInsertInto"):
                 listener.exitInsertInto(self)
-
-
-
 
     def insertInto(self):
 
         localctx = SqlBaseParser.InsertIntoContext(self, self._ctx, self.state)
         self.enterRule(localctx, 22, self.RULE_insertInto)
-        self._la = 0 # Token type
+        self._la = 0  # Token type
         try:
             self.state = 1011
             self._errHandler.sync(self)
-            la_ = self._interp.adaptivePredict(self._input,114,self._ctx)
+            la_ = self._interp.adaptivePredict(self._input, 114, self._ctx)
             if la_ == 1:
                 self.enterOuterAlt(localctx, 1)
                 self.state = 990
@@ -6175,22 +7623,19 @@ class SqlBaseParser ( Parser ):
                 self.state = 1000
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==SqlBaseParser.PARTITION:
+                if _la == SqlBaseParser.PARTITION:
                     self.state = 994
                     self.partitionSpec()
                     self.state = 998
                     self._errHandler.sync(self)
                     _la = self._input.LA(1)
-                    if _la==SqlBaseParser.IF:
+                    if _la == SqlBaseParser.IF:
                         self.state = 995
                         self.match(SqlBaseParser.IF)
                         self.state = 996
                         self.match(SqlBaseParser.NOT)
                         self.state = 997
                         self.match(SqlBaseParser.EXISTS)
-
-
-
 
                 pass
 
@@ -6202,24 +7647,21 @@ class SqlBaseParser ( Parser ):
                 self.match(SqlBaseParser.INTO)
                 self.state = 1005
                 self._errHandler.sync(self)
-                la_ = self._interp.adaptivePredict(self._input,112,self._ctx)
+                la_ = self._interp.adaptivePredict(self._input, 112, self._ctx)
                 if la_ == 1:
                     self.state = 1004
                     self.match(SqlBaseParser.TABLE)
-
 
                 self.state = 1007
                 self.tableIdentifier()
                 self.state = 1009
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==SqlBaseParser.PARTITION:
+                if _la == SqlBaseParser.PARTITION:
                     self.state = 1008
                     self.partitionSpec()
 
-
                 pass
-
 
         except RecognitionException as re:
             localctx.exception = re
@@ -6229,41 +7671,39 @@ class SqlBaseParser ( Parser ):
             self.exitRule()
         return localctx
 
-
     class PartitionSpecLocationContext(ParserRuleContext):
-        __slots__ = 'parser'
+        __slots__ = "parser"
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
         def partitionSpec(self):
-            return self.getTypedRuleContext(SqlBaseParser.PartitionSpecContext,0)
-
+            return self.getTypedRuleContext(SqlBaseParser.PartitionSpecContext, 0)
 
         def locationSpec(self):
-            return self.getTypedRuleContext(SqlBaseParser.LocationSpecContext,0)
-
+            return self.getTypedRuleContext(SqlBaseParser.LocationSpecContext, 0)
 
         def getRuleIndex(self):
             return SqlBaseParser.RULE_partitionSpecLocation
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterPartitionSpecLocation" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterPartitionSpecLocation"):
                 listener.enterPartitionSpecLocation(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitPartitionSpecLocation" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitPartitionSpecLocation"):
                 listener.exitPartitionSpecLocation(self)
-
-
-
 
     def partitionSpecLocation(self):
 
-        localctx = SqlBaseParser.PartitionSpecLocationContext(self, self._ctx, self.state)
+        localctx = SqlBaseParser.PartitionSpecLocationContext(
+            self, self._ctx, self.state
+        )
         self.enterRule(localctx, 24, self.RULE_partitionSpecLocation)
-        self._la = 0 # Token type
+        self._la = 0  # Token type
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 1013
@@ -6271,10 +7711,9 @@ class SqlBaseParser ( Parser ):
             self.state = 1015
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if _la==SqlBaseParser.LOCATION:
+            if _la == SqlBaseParser.LOCATION:
                 self.state = 1014
                 self.locationSpec()
-
 
         except RecognitionException as re:
             localctx.exception = re
@@ -6284,43 +7723,40 @@ class SqlBaseParser ( Parser ):
             self.exitRule()
         return localctx
 
-
     class PartitionSpecContext(ParserRuleContext):
-        __slots__ = 'parser'
+        __slots__ = "parser"
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
         def PARTITION(self):
             return self.getToken(SqlBaseParser.PARTITION, 0)
 
-        def partitionVal(self, i:int=None):
+        def partitionVal(self, i: int = None):
             if i is None:
                 return self.getTypedRuleContexts(SqlBaseParser.PartitionValContext)
             else:
-                return self.getTypedRuleContext(SqlBaseParser.PartitionValContext,i)
-
+                return self.getTypedRuleContext(SqlBaseParser.PartitionValContext, i)
 
         def getRuleIndex(self):
             return SqlBaseParser.RULE_partitionSpec
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterPartitionSpec" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterPartitionSpec"):
                 listener.enterPartitionSpec(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitPartitionSpec" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitPartitionSpec"):
                 listener.exitPartitionSpec(self)
-
-
-
 
     def partitionSpec(self):
 
         localctx = SqlBaseParser.PartitionSpecContext(self, self._ctx, self.state)
         self.enterRule(localctx, 26, self.RULE_partitionSpec)
-        self._la = 0 # Token type
+        self._la = 0  # Token type
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 1017
@@ -6332,7 +7768,7 @@ class SqlBaseParser ( Parser ):
             self.state = 1024
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            while _la==SqlBaseParser.T__2:
+            while _la == SqlBaseParser.T__2:
                 self.state = 1020
                 self.match(SqlBaseParser.T__2)
                 self.state = 1021
@@ -6351,44 +7787,40 @@ class SqlBaseParser ( Parser ):
             self.exitRule()
         return localctx
 
-
     class PartitionValContext(ParserRuleContext):
-        __slots__ = 'parser'
+        __slots__ = "parser"
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
         def identifier(self):
-            return self.getTypedRuleContext(SqlBaseParser.IdentifierContext,0)
-
+            return self.getTypedRuleContext(SqlBaseParser.IdentifierContext, 0)
 
         def EQ(self):
             return self.getToken(SqlBaseParser.EQ, 0)
 
         def constant(self):
-            return self.getTypedRuleContext(SqlBaseParser.ConstantContext,0)
-
+            return self.getTypedRuleContext(SqlBaseParser.ConstantContext, 0)
 
         def getRuleIndex(self):
             return SqlBaseParser.RULE_partitionVal
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterPartitionVal" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterPartitionVal"):
                 listener.enterPartitionVal(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitPartitionVal" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitPartitionVal"):
                 listener.exitPartitionVal(self)
-
-
-
 
     def partitionVal(self):
 
         localctx = SqlBaseParser.PartitionValContext(self, self._ctx, self.state)
         self.enterRule(localctx, 28, self.RULE_partitionVal)
-        self._la = 0 # Token type
+        self._la = 0  # Token type
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 1029
@@ -6396,12 +7828,11 @@ class SqlBaseParser ( Parser ):
             self.state = 1032
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if _la==SqlBaseParser.EQ:
+            if _la == SqlBaseParser.EQ:
                 self.state = 1030
                 self.match(SqlBaseParser.EQ)
                 self.state = 1031
                 self.constant()
-
 
         except RecognitionException as re:
             localctx.exception = re
@@ -6411,46 +7842,40 @@ class SqlBaseParser ( Parser ):
             self.exitRule()
         return localctx
 
-
     class DescribeFuncNameContext(ParserRuleContext):
-        __slots__ = 'parser'
+        __slots__ = "parser"
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
         def qualifiedName(self):
-            return self.getTypedRuleContext(SqlBaseParser.QualifiedNameContext,0)
-
+            return self.getTypedRuleContext(SqlBaseParser.QualifiedNameContext, 0)
 
         def STRING(self):
             return self.getToken(SqlBaseParser.STRING, 0)
 
         def comparisonOperator(self):
-            return self.getTypedRuleContext(SqlBaseParser.ComparisonOperatorContext,0)
-
+            return self.getTypedRuleContext(SqlBaseParser.ComparisonOperatorContext, 0)
 
         def arithmeticOperator(self):
-            return self.getTypedRuleContext(SqlBaseParser.ArithmeticOperatorContext,0)
-
+            return self.getTypedRuleContext(SqlBaseParser.ArithmeticOperatorContext, 0)
 
         def predicateOperator(self):
-            return self.getTypedRuleContext(SqlBaseParser.PredicateOperatorContext,0)
-
+            return self.getTypedRuleContext(SqlBaseParser.PredicateOperatorContext, 0)
 
         def getRuleIndex(self):
             return SqlBaseParser.RULE_describeFuncName
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterDescribeFuncName" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterDescribeFuncName"):
                 listener.enterDescribeFuncName(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitDescribeFuncName" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitDescribeFuncName"):
                 listener.exitDescribeFuncName(self)
-
-
-
 
     def describeFuncName(self):
 
@@ -6459,7 +7884,7 @@ class SqlBaseParser ( Parser ):
         try:
             self.state = 1039
             self._errHandler.sync(self)
-            la_ = self._interp.adaptivePredict(self._input,118,self._ctx)
+            la_ = self._interp.adaptivePredict(self._input, 118, self._ctx)
             if la_ == 1:
                 self.enterOuterAlt(localctx, 1)
                 self.state = 1034
@@ -6490,7 +7915,6 @@ class SqlBaseParser ( Parser ):
                 self.predicateOperator()
                 pass
 
-
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)
@@ -6499,22 +7923,22 @@ class SqlBaseParser ( Parser ):
             self.exitRule()
         return localctx
 
-
     class DescribeColNameContext(ParserRuleContext):
-        __slots__ = 'parser'
+        __slots__ = "parser"
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
-        def identifier(self, i:int=None):
+        def identifier(self, i: int = None):
             if i is None:
                 return self.getTypedRuleContexts(SqlBaseParser.IdentifierContext)
             else:
-                return self.getTypedRuleContext(SqlBaseParser.IdentifierContext,i)
+                return self.getTypedRuleContext(SqlBaseParser.IdentifierContext, i)
 
-
-        def STRING(self, i:int=None):
+        def STRING(self, i: int = None):
             if i is None:
                 return self.getTokens(SqlBaseParser.STRING)
             else:
@@ -6523,22 +7947,19 @@ class SqlBaseParser ( Parser ):
         def getRuleIndex(self):
             return SqlBaseParser.RULE_describeColName
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterDescribeColName" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterDescribeColName"):
                 listener.enterDescribeColName(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitDescribeColName" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitDescribeColName"):
                 listener.exitDescribeColName(self)
-
-
-
 
     def describeColName(self):
 
         localctx = SqlBaseParser.DescribeColNameContext(self, self._ctx, self.state)
         self.enterRule(localctx, 32, self.RULE_describeColName)
-        self._la = 0 # Token type
+        self._la = 0  # Token type
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 1041
@@ -6546,13 +7967,214 @@ class SqlBaseParser ( Parser ):
             self.state = 1049
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            while _la==SqlBaseParser.T__3:
+            while _la == SqlBaseParser.T__3:
                 self.state = 1042
                 self.match(SqlBaseParser.T__3)
                 self.state = 1045
                 self._errHandler.sync(self)
                 token = self._input.LA(1)
-                if token in [SqlBaseParser.SELECT, SqlBaseParser.FROM, SqlBaseParser.ADD, SqlBaseParser.AS, SqlBaseParser.ALL, SqlBaseParser.DISTINCT, SqlBaseParser.WHERE, SqlBaseParser.GROUP, SqlBaseParser.BY, SqlBaseParser.GROUPING, SqlBaseParser.SETS, SqlBaseParser.CUBE, SqlBaseParser.ROLLUP, SqlBaseParser.ORDER, SqlBaseParser.HAVING, SqlBaseParser.LIMIT, SqlBaseParser.AT, SqlBaseParser.OR, SqlBaseParser.AND, SqlBaseParser.IN, SqlBaseParser.NOT, SqlBaseParser.NO, SqlBaseParser.EXISTS, SqlBaseParser.BETWEEN, SqlBaseParser.LIKE, SqlBaseParser.RLIKE, SqlBaseParser.IS, SqlBaseParser.NULL, SqlBaseParser.TRUE, SqlBaseParser.FALSE, SqlBaseParser.NULLS, SqlBaseParser.ASC, SqlBaseParser.DESC, SqlBaseParser.FOR, SqlBaseParser.INTERVAL, SqlBaseParser.CASE, SqlBaseParser.WHEN, SqlBaseParser.THEN, SqlBaseParser.ELSE, SqlBaseParser.END, SqlBaseParser.JOIN, SqlBaseParser.CROSS, SqlBaseParser.OUTER, SqlBaseParser.INNER, SqlBaseParser.LEFT, SqlBaseParser.SEMI, SqlBaseParser.RIGHT, SqlBaseParser.FULL, SqlBaseParser.NATURAL, SqlBaseParser.ON, SqlBaseParser.LATERAL, SqlBaseParser.WINDOW, SqlBaseParser.OVER, SqlBaseParser.PARTITION, SqlBaseParser.RANGE, SqlBaseParser.ROWS, SqlBaseParser.UNBOUNDED, SqlBaseParser.PRECEDING, SqlBaseParser.FOLLOWING, SqlBaseParser.CURRENT, SqlBaseParser.ROW, SqlBaseParser.WITH, SqlBaseParser.VALUES, SqlBaseParser.CREATE, SqlBaseParser.TABLE, SqlBaseParser.VIEW, SqlBaseParser.REPLACE, SqlBaseParser.INSERT, SqlBaseParser.DELETE, SqlBaseParser.INTO, SqlBaseParser.DESCRIBE, SqlBaseParser.EXPLAIN, SqlBaseParser.FORMAT, SqlBaseParser.LOGICAL, SqlBaseParser.CODEGEN, SqlBaseParser.CAST, SqlBaseParser.SHOW, SqlBaseParser.TABLES, SqlBaseParser.COLUMNS, SqlBaseParser.COLUMN, SqlBaseParser.USE, SqlBaseParser.PARTITIONS, SqlBaseParser.FUNCTIONS, SqlBaseParser.DROP, SqlBaseParser.UNION, SqlBaseParser.EXCEPT, SqlBaseParser.INTERSECT, SqlBaseParser.TO, SqlBaseParser.TABLESAMPLE, SqlBaseParser.STRATIFY, SqlBaseParser.ALTER, SqlBaseParser.RENAME, SqlBaseParser.ARRAY, SqlBaseParser.MAP, SqlBaseParser.STRUCT, SqlBaseParser.COMMENT, SqlBaseParser.SET, SqlBaseParser.RESET, SqlBaseParser.DATA, SqlBaseParser.START, SqlBaseParser.TRANSACTION, SqlBaseParser.COMMIT, SqlBaseParser.ROLLBACK, SqlBaseParser.MACRO, SqlBaseParser.IF, SqlBaseParser.DIV, SqlBaseParser.PERCENTLIT, SqlBaseParser.BUCKET, SqlBaseParser.OUT, SqlBaseParser.OF, SqlBaseParser.SORT, SqlBaseParser.CLUSTER, SqlBaseParser.DISTRIBUTE, SqlBaseParser.OVERWRITE, SqlBaseParser.TRANSFORM, SqlBaseParser.REDUCE, SqlBaseParser.USING, SqlBaseParser.SERDE, SqlBaseParser.SERDEPROPERTIES, SqlBaseParser.RECORDREADER, SqlBaseParser.RECORDWRITER, SqlBaseParser.DELIMITED, SqlBaseParser.FIELDS, SqlBaseParser.TERMINATED, SqlBaseParser.COLLECTION, SqlBaseParser.ITEMS, SqlBaseParser.KEYS, SqlBaseParser.ESCAPED, SqlBaseParser.LINES, SqlBaseParser.SEPARATED, SqlBaseParser.FUNCTION, SqlBaseParser.EXTENDED, SqlBaseParser.REFRESH, SqlBaseParser.CLEAR, SqlBaseParser.CACHE, SqlBaseParser.UNCACHE, SqlBaseParser.LAZY, SqlBaseParser.FORMATTED, SqlBaseParser.TEMPORARY, SqlBaseParser.OPTIONS, SqlBaseParser.UNSET, SqlBaseParser.TBLPROPERTIES, SqlBaseParser.DBPROPERTIES, SqlBaseParser.BUCKETS, SqlBaseParser.SKEWED, SqlBaseParser.STORED, SqlBaseParser.DIRECTORIES, SqlBaseParser.LOCATION, SqlBaseParser.EXCHANGE, SqlBaseParser.ARCHIVE, SqlBaseParser.UNARCHIVE, SqlBaseParser.FILEFORMAT, SqlBaseParser.TOUCH, SqlBaseParser.COMPACT, SqlBaseParser.CONCATENATE, SqlBaseParser.CHANGE, SqlBaseParser.CASCADE, SqlBaseParser.RESTRICT, SqlBaseParser.CLUSTERED, SqlBaseParser.SORTED, SqlBaseParser.PURGE, SqlBaseParser.INPUTFORMAT, SqlBaseParser.OUTPUTFORMAT, SqlBaseParser.DATABASE, SqlBaseParser.DATABASES, SqlBaseParser.DFS, SqlBaseParser.TRUNCATE, SqlBaseParser.ANALYZE, SqlBaseParser.COMPUTE, SqlBaseParser.LIST, SqlBaseParser.STATISTICS, SqlBaseParser.PARTITIONED, SqlBaseParser.EXTERNAL, SqlBaseParser.DEFINED, SqlBaseParser.REVOKE, SqlBaseParser.GRANT, SqlBaseParser.LOCK, SqlBaseParser.UNLOCK, SqlBaseParser.MSCK, SqlBaseParser.REPAIR, SqlBaseParser.RECOVER, SqlBaseParser.EXPORT, SqlBaseParser.IMPORT, SqlBaseParser.LOAD, SqlBaseParser.ROLE, SqlBaseParser.ROLES, SqlBaseParser.COMPACTIONS, SqlBaseParser.PRINCIPALS, SqlBaseParser.TRANSACTIONS, SqlBaseParser.INDEX, SqlBaseParser.INDEXES, SqlBaseParser.LOCKS, SqlBaseParser.OPTION, SqlBaseParser.ANTI, SqlBaseParser.LOCAL, SqlBaseParser.INPATH, SqlBaseParser.CURRENT_DATE, SqlBaseParser.CURRENT_TIMESTAMP, SqlBaseParser.IDENTIFIER, SqlBaseParser.BACKQUOTED_IDENTIFIER]:
+                if token in [
+                    SqlBaseParser.SELECT,
+                    SqlBaseParser.FROM,
+                    SqlBaseParser.ADD,
+                    SqlBaseParser.AS,
+                    SqlBaseParser.ALL,
+                    SqlBaseParser.DISTINCT,
+                    SqlBaseParser.WHERE,
+                    SqlBaseParser.GROUP,
+                    SqlBaseParser.BY,
+                    SqlBaseParser.GROUPING,
+                    SqlBaseParser.SETS,
+                    SqlBaseParser.CUBE,
+                    SqlBaseParser.ROLLUP,
+                    SqlBaseParser.ORDER,
+                    SqlBaseParser.HAVING,
+                    SqlBaseParser.LIMIT,
+                    SqlBaseParser.AT,
+                    SqlBaseParser.OR,
+                    SqlBaseParser.AND,
+                    SqlBaseParser.IN,
+                    SqlBaseParser.NOT,
+                    SqlBaseParser.NO,
+                    SqlBaseParser.EXISTS,
+                    SqlBaseParser.BETWEEN,
+                    SqlBaseParser.LIKE,
+                    SqlBaseParser.RLIKE,
+                    SqlBaseParser.IS,
+                    SqlBaseParser.NULL,
+                    SqlBaseParser.TRUE,
+                    SqlBaseParser.FALSE,
+                    SqlBaseParser.NULLS,
+                    SqlBaseParser.ASC,
+                    SqlBaseParser.DESC,
+                    SqlBaseParser.FOR,
+                    SqlBaseParser.INTERVAL,
+                    SqlBaseParser.CASE,
+                    SqlBaseParser.WHEN,
+                    SqlBaseParser.THEN,
+                    SqlBaseParser.ELSE,
+                    SqlBaseParser.END,
+                    SqlBaseParser.JOIN,
+                    SqlBaseParser.CROSS,
+                    SqlBaseParser.OUTER,
+                    SqlBaseParser.INNER,
+                    SqlBaseParser.LEFT,
+                    SqlBaseParser.SEMI,
+                    SqlBaseParser.RIGHT,
+                    SqlBaseParser.FULL,
+                    SqlBaseParser.NATURAL,
+                    SqlBaseParser.ON,
+                    SqlBaseParser.LATERAL,
+                    SqlBaseParser.WINDOW,
+                    SqlBaseParser.OVER,
+                    SqlBaseParser.PARTITION,
+                    SqlBaseParser.RANGE,
+                    SqlBaseParser.ROWS,
+                    SqlBaseParser.UNBOUNDED,
+                    SqlBaseParser.PRECEDING,
+                    SqlBaseParser.FOLLOWING,
+                    SqlBaseParser.CURRENT,
+                    SqlBaseParser.ROW,
+                    SqlBaseParser.WITH,
+                    SqlBaseParser.VALUES,
+                    SqlBaseParser.CREATE,
+                    SqlBaseParser.TABLE,
+                    SqlBaseParser.VIEW,
+                    SqlBaseParser.REPLACE,
+                    SqlBaseParser.INSERT,
+                    SqlBaseParser.DELETE,
+                    SqlBaseParser.INTO,
+                    SqlBaseParser.DESCRIBE,
+                    SqlBaseParser.EXPLAIN,
+                    SqlBaseParser.FORMAT,
+                    SqlBaseParser.LOGICAL,
+                    SqlBaseParser.CODEGEN,
+                    SqlBaseParser.CAST,
+                    SqlBaseParser.SHOW,
+                    SqlBaseParser.TABLES,
+                    SqlBaseParser.COLUMNS,
+                    SqlBaseParser.COLUMN,
+                    SqlBaseParser.USE,
+                    SqlBaseParser.PARTITIONS,
+                    SqlBaseParser.FUNCTIONS,
+                    SqlBaseParser.DROP,
+                    SqlBaseParser.UNION,
+                    SqlBaseParser.EXCEPT,
+                    SqlBaseParser.INTERSECT,
+                    SqlBaseParser.TO,
+                    SqlBaseParser.TABLESAMPLE,
+                    SqlBaseParser.STRATIFY,
+                    SqlBaseParser.ALTER,
+                    SqlBaseParser.RENAME,
+                    SqlBaseParser.ARRAY,
+                    SqlBaseParser.MAP,
+                    SqlBaseParser.STRUCT,
+                    SqlBaseParser.COMMENT,
+                    SqlBaseParser.SET,
+                    SqlBaseParser.RESET,
+                    SqlBaseParser.DATA,
+                    SqlBaseParser.START,
+                    SqlBaseParser.TRANSACTION,
+                    SqlBaseParser.COMMIT,
+                    SqlBaseParser.ROLLBACK,
+                    SqlBaseParser.MACRO,
+                    SqlBaseParser.IF,
+                    SqlBaseParser.DIV,
+                    SqlBaseParser.PERCENTLIT,
+                    SqlBaseParser.BUCKET,
+                    SqlBaseParser.OUT,
+                    SqlBaseParser.OF,
+                    SqlBaseParser.SORT,
+                    SqlBaseParser.CLUSTER,
+                    SqlBaseParser.DISTRIBUTE,
+                    SqlBaseParser.OVERWRITE,
+                    SqlBaseParser.TRANSFORM,
+                    SqlBaseParser.REDUCE,
+                    SqlBaseParser.USING,
+                    SqlBaseParser.SERDE,
+                    SqlBaseParser.SERDEPROPERTIES,
+                    SqlBaseParser.RECORDREADER,
+                    SqlBaseParser.RECORDWRITER,
+                    SqlBaseParser.DELIMITED,
+                    SqlBaseParser.FIELDS,
+                    SqlBaseParser.TERMINATED,
+                    SqlBaseParser.COLLECTION,
+                    SqlBaseParser.ITEMS,
+                    SqlBaseParser.KEYS,
+                    SqlBaseParser.ESCAPED,
+                    SqlBaseParser.LINES,
+                    SqlBaseParser.SEPARATED,
+                    SqlBaseParser.FUNCTION,
+                    SqlBaseParser.EXTENDED,
+                    SqlBaseParser.REFRESH,
+                    SqlBaseParser.CLEAR,
+                    SqlBaseParser.CACHE,
+                    SqlBaseParser.UNCACHE,
+                    SqlBaseParser.LAZY,
+                    SqlBaseParser.FORMATTED,
+                    SqlBaseParser.TEMPORARY,
+                    SqlBaseParser.OPTIONS,
+                    SqlBaseParser.UNSET,
+                    SqlBaseParser.TBLPROPERTIES,
+                    SqlBaseParser.DBPROPERTIES,
+                    SqlBaseParser.BUCKETS,
+                    SqlBaseParser.SKEWED,
+                    SqlBaseParser.STORED,
+                    SqlBaseParser.DIRECTORIES,
+                    SqlBaseParser.LOCATION,
+                    SqlBaseParser.EXCHANGE,
+                    SqlBaseParser.ARCHIVE,
+                    SqlBaseParser.UNARCHIVE,
+                    SqlBaseParser.FILEFORMAT,
+                    SqlBaseParser.TOUCH,
+                    SqlBaseParser.COMPACT,
+                    SqlBaseParser.CONCATENATE,
+                    SqlBaseParser.CHANGE,
+                    SqlBaseParser.CASCADE,
+                    SqlBaseParser.RESTRICT,
+                    SqlBaseParser.CLUSTERED,
+                    SqlBaseParser.SORTED,
+                    SqlBaseParser.PURGE,
+                    SqlBaseParser.INPUTFORMAT,
+                    SqlBaseParser.OUTPUTFORMAT,
+                    SqlBaseParser.DATABASE,
+                    SqlBaseParser.DATABASES,
+                    SqlBaseParser.DFS,
+                    SqlBaseParser.TRUNCATE,
+                    SqlBaseParser.ANALYZE,
+                    SqlBaseParser.COMPUTE,
+                    SqlBaseParser.LIST,
+                    SqlBaseParser.STATISTICS,
+                    SqlBaseParser.PARTITIONED,
+                    SqlBaseParser.EXTERNAL,
+                    SqlBaseParser.DEFINED,
+                    SqlBaseParser.REVOKE,
+                    SqlBaseParser.GRANT,
+                    SqlBaseParser.LOCK,
+                    SqlBaseParser.UNLOCK,
+                    SqlBaseParser.MSCK,
+                    SqlBaseParser.REPAIR,
+                    SqlBaseParser.RECOVER,
+                    SqlBaseParser.EXPORT,
+                    SqlBaseParser.IMPORT,
+                    SqlBaseParser.LOAD,
+                    SqlBaseParser.ROLE,
+                    SqlBaseParser.ROLES,
+                    SqlBaseParser.COMPACTIONS,
+                    SqlBaseParser.PRINCIPALS,
+                    SqlBaseParser.TRANSACTIONS,
+                    SqlBaseParser.INDEX,
+                    SqlBaseParser.INDEXES,
+                    SqlBaseParser.LOCKS,
+                    SqlBaseParser.OPTION,
+                    SqlBaseParser.ANTI,
+                    SqlBaseParser.LOCAL,
+                    SqlBaseParser.INPATH,
+                    SqlBaseParser.CURRENT_DATE,
+                    SqlBaseParser.CURRENT_TIMESTAMP,
+                    SqlBaseParser.IDENTIFIER,
+                    SqlBaseParser.BACKQUOTED_IDENTIFIER,
+                ]:
                     self.state = 1043
                     self.identifier()
                     pass
@@ -6575,43 +8197,40 @@ class SqlBaseParser ( Parser ):
             self.exitRule()
         return localctx
 
-
     class CtesContext(ParserRuleContext):
-        __slots__ = 'parser'
+        __slots__ = "parser"
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
         def WITH(self):
             return self.getToken(SqlBaseParser.WITH, 0)
 
-        def namedQuery(self, i:int=None):
+        def namedQuery(self, i: int = None):
             if i is None:
                 return self.getTypedRuleContexts(SqlBaseParser.NamedQueryContext)
             else:
-                return self.getTypedRuleContext(SqlBaseParser.NamedQueryContext,i)
-
+                return self.getTypedRuleContext(SqlBaseParser.NamedQueryContext, i)
 
         def getRuleIndex(self):
             return SqlBaseParser.RULE_ctes
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterCtes" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterCtes"):
                 listener.enterCtes(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitCtes" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitCtes"):
                 listener.exitCtes(self)
-
-
-
 
     def ctes(self):
 
         localctx = SqlBaseParser.CtesContext(self, self._ctx, self.state)
         self.enterRule(localctx, 34, self.RULE_ctes)
-        self._la = 0 # Token type
+        self._la = 0  # Token type
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 1052
@@ -6621,7 +8240,7 @@ class SqlBaseParser ( Parser ):
             self.state = 1058
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            while _la==SqlBaseParser.T__2:
+            while _la == SqlBaseParser.T__2:
                 self.state = 1054
                 self.match(SqlBaseParser.T__2)
                 self.state = 1055
@@ -6638,22 +8257,21 @@ class SqlBaseParser ( Parser ):
             self.exitRule()
         return localctx
 
-
     class NamedQueryContext(ParserRuleContext):
-        __slots__ = 'parser'
+        __slots__ = "parser"
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
-            self.name = None # IdentifierContext
+            self.name = None  # IdentifierContext
 
         def queryNoWith(self):
-            return self.getTypedRuleContext(SqlBaseParser.QueryNoWithContext,0)
-
+            return self.getTypedRuleContext(SqlBaseParser.QueryNoWithContext, 0)
 
         def identifier(self):
-            return self.getTypedRuleContext(SqlBaseParser.IdentifierContext,0)
-
+            return self.getTypedRuleContext(SqlBaseParser.IdentifierContext, 0)
 
         def AS(self):
             return self.getToken(SqlBaseParser.AS, 0)
@@ -6661,22 +8279,19 @@ class SqlBaseParser ( Parser ):
         def getRuleIndex(self):
             return SqlBaseParser.RULE_namedQuery
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterNamedQuery" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterNamedQuery"):
                 listener.enterNamedQuery(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitNamedQuery" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitNamedQuery"):
                 listener.exitNamedQuery(self)
-
-
-
 
     def namedQuery(self):
 
         localctx = SqlBaseParser.NamedQueryContext(self, self._ctx, self.state)
         self.enterRule(localctx, 36, self.RULE_namedQuery)
-        self._la = 0 # Token type
+        self._la = 0  # Token type
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 1061
@@ -6684,10 +8299,9 @@ class SqlBaseParser ( Parser ):
             self.state = 1063
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if _la==SqlBaseParser.AS:
+            if _la == SqlBaseParser.AS:
                 self.state = 1062
                 self.match(SqlBaseParser.AS)
-
 
             self.state = 1065
             self.match(SqlBaseParser.T__0)
@@ -6703,11 +8317,12 @@ class SqlBaseParser ( Parser ):
             self.exitRule()
         return localctx
 
-
     class TableProviderContext(ParserRuleContext):
-        __slots__ = 'parser'
+        __slots__ = "parser"
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
@@ -6715,22 +8330,18 @@ class SqlBaseParser ( Parser ):
             return self.getToken(SqlBaseParser.USING, 0)
 
         def qualifiedName(self):
-            return self.getTypedRuleContext(SqlBaseParser.QualifiedNameContext,0)
-
+            return self.getTypedRuleContext(SqlBaseParser.QualifiedNameContext, 0)
 
         def getRuleIndex(self):
             return SqlBaseParser.RULE_tableProvider
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterTableProvider" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterTableProvider"):
                 listener.enterTableProvider(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitTableProvider" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitTableProvider"):
                 listener.exitTableProvider(self)
-
-
-
 
     def tableProvider(self):
 
@@ -6750,40 +8361,37 @@ class SqlBaseParser ( Parser ):
             self.exitRule()
         return localctx
 
-
     class TablePropertyListContext(ParserRuleContext):
-        __slots__ = 'parser'
+        __slots__ = "parser"
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
-        def tableProperty(self, i:int=None):
+        def tableProperty(self, i: int = None):
             if i is None:
                 return self.getTypedRuleContexts(SqlBaseParser.TablePropertyContext)
             else:
-                return self.getTypedRuleContext(SqlBaseParser.TablePropertyContext,i)
-
+                return self.getTypedRuleContext(SqlBaseParser.TablePropertyContext, i)
 
         def getRuleIndex(self):
             return SqlBaseParser.RULE_tablePropertyList
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterTablePropertyList" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterTablePropertyList"):
                 listener.enterTablePropertyList(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitTablePropertyList" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitTablePropertyList"):
                 listener.exitTablePropertyList(self)
-
-
-
 
     def tablePropertyList(self):
 
         localctx = SqlBaseParser.TablePropertyListContext(self, self._ctx, self.state)
         self.enterRule(localctx, 40, self.RULE_tablePropertyList)
-        self._la = 0 # Token type
+        self._la = 0  # Token type
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 1072
@@ -6793,7 +8401,7 @@ class SqlBaseParser ( Parser ):
             self.state = 1078
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            while _la==SqlBaseParser.T__2:
+            while _la == SqlBaseParser.T__2:
                 self.state = 1074
                 self.match(SqlBaseParser.T__2)
                 self.state = 1075
@@ -6812,19 +8420,19 @@ class SqlBaseParser ( Parser ):
             self.exitRule()
         return localctx
 
-
     class TablePropertyContext(ParserRuleContext):
-        __slots__ = 'parser'
+        __slots__ = "parser"
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
-            self.key = None # TablePropertyKeyContext
-            self.value = None # Token
+            self.key = None  # TablePropertyKeyContext
+            self.value = None  # Token
 
         def tablePropertyKey(self):
-            return self.getTypedRuleContext(SqlBaseParser.TablePropertyKeyContext,0)
-
+            return self.getTypedRuleContext(SqlBaseParser.TablePropertyKeyContext, 0)
 
         def STRING(self):
             return self.getToken(SqlBaseParser.STRING, 0)
@@ -6835,22 +8443,19 @@ class SqlBaseParser ( Parser ):
         def getRuleIndex(self):
             return SqlBaseParser.RULE_tableProperty
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterTableProperty" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterTableProperty"):
                 listener.enterTableProperty(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitTableProperty" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitTableProperty"):
                 listener.exitTableProperty(self)
-
-
-
 
     def tableProperty(self):
 
         localctx = SqlBaseParser.TablePropertyContext(self, self._ctx, self.state)
         self.enterRule(localctx, 42, self.RULE_tableProperty)
-        self._la = 0 # Token type
+        self._la = 0  # Token type
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 1083
@@ -6858,18 +8463,16 @@ class SqlBaseParser ( Parser ):
             self.state = 1088
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if _la==SqlBaseParser.EQ or _la==SqlBaseParser.STRING:
+            if _la == SqlBaseParser.EQ or _la == SqlBaseParser.STRING:
                 self.state = 1085
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==SqlBaseParser.EQ:
+                if _la == SqlBaseParser.EQ:
                     self.state = 1084
                     self.match(SqlBaseParser.EQ)
 
-
                 self.state = 1087
                 localctx.value = self.match(SqlBaseParser.STRING)
-
 
         except RecognitionException as re:
             localctx.exception = re
@@ -6879,20 +8482,20 @@ class SqlBaseParser ( Parser ):
             self.exitRule()
         return localctx
 
-
     class TablePropertyKeyContext(ParserRuleContext):
-        __slots__ = 'parser'
+        __slots__ = "parser"
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
-        def identifier(self, i:int=None):
+        def identifier(self, i: int = None):
             if i is None:
                 return self.getTypedRuleContexts(SqlBaseParser.IdentifierContext)
             else:
-                return self.getTypedRuleContext(SqlBaseParser.IdentifierContext,i)
-
+                return self.getTypedRuleContext(SqlBaseParser.IdentifierContext, i)
 
         def STRING(self):
             return self.getToken(SqlBaseParser.STRING, 0)
@@ -6900,34 +8503,232 @@ class SqlBaseParser ( Parser ):
         def getRuleIndex(self):
             return SqlBaseParser.RULE_tablePropertyKey
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterTablePropertyKey" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterTablePropertyKey"):
                 listener.enterTablePropertyKey(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitTablePropertyKey" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitTablePropertyKey"):
                 listener.exitTablePropertyKey(self)
-
-
-
 
     def tablePropertyKey(self):
 
         localctx = SqlBaseParser.TablePropertyKeyContext(self, self._ctx, self.state)
         self.enterRule(localctx, 44, self.RULE_tablePropertyKey)
-        self._la = 0 # Token type
+        self._la = 0  # Token type
         try:
             self.state = 1099
             self._errHandler.sync(self)
             token = self._input.LA(1)
-            if token in [SqlBaseParser.SELECT, SqlBaseParser.FROM, SqlBaseParser.ADD, SqlBaseParser.AS, SqlBaseParser.ALL, SqlBaseParser.DISTINCT, SqlBaseParser.WHERE, SqlBaseParser.GROUP, SqlBaseParser.BY, SqlBaseParser.GROUPING, SqlBaseParser.SETS, SqlBaseParser.CUBE, SqlBaseParser.ROLLUP, SqlBaseParser.ORDER, SqlBaseParser.HAVING, SqlBaseParser.LIMIT, SqlBaseParser.AT, SqlBaseParser.OR, SqlBaseParser.AND, SqlBaseParser.IN, SqlBaseParser.NOT, SqlBaseParser.NO, SqlBaseParser.EXISTS, SqlBaseParser.BETWEEN, SqlBaseParser.LIKE, SqlBaseParser.RLIKE, SqlBaseParser.IS, SqlBaseParser.NULL, SqlBaseParser.TRUE, SqlBaseParser.FALSE, SqlBaseParser.NULLS, SqlBaseParser.ASC, SqlBaseParser.DESC, SqlBaseParser.FOR, SqlBaseParser.INTERVAL, SqlBaseParser.CASE, SqlBaseParser.WHEN, SqlBaseParser.THEN, SqlBaseParser.ELSE, SqlBaseParser.END, SqlBaseParser.JOIN, SqlBaseParser.CROSS, SqlBaseParser.OUTER, SqlBaseParser.INNER, SqlBaseParser.LEFT, SqlBaseParser.SEMI, SqlBaseParser.RIGHT, SqlBaseParser.FULL, SqlBaseParser.NATURAL, SqlBaseParser.ON, SqlBaseParser.LATERAL, SqlBaseParser.WINDOW, SqlBaseParser.OVER, SqlBaseParser.PARTITION, SqlBaseParser.RANGE, SqlBaseParser.ROWS, SqlBaseParser.UNBOUNDED, SqlBaseParser.PRECEDING, SqlBaseParser.FOLLOWING, SqlBaseParser.CURRENT, SqlBaseParser.ROW, SqlBaseParser.WITH, SqlBaseParser.VALUES, SqlBaseParser.CREATE, SqlBaseParser.TABLE, SqlBaseParser.VIEW, SqlBaseParser.REPLACE, SqlBaseParser.INSERT, SqlBaseParser.DELETE, SqlBaseParser.INTO, SqlBaseParser.DESCRIBE, SqlBaseParser.EXPLAIN, SqlBaseParser.FORMAT, SqlBaseParser.LOGICAL, SqlBaseParser.CODEGEN, SqlBaseParser.CAST, SqlBaseParser.SHOW, SqlBaseParser.TABLES, SqlBaseParser.COLUMNS, SqlBaseParser.COLUMN, SqlBaseParser.USE, SqlBaseParser.PARTITIONS, SqlBaseParser.FUNCTIONS, SqlBaseParser.DROP, SqlBaseParser.UNION, SqlBaseParser.EXCEPT, SqlBaseParser.INTERSECT, SqlBaseParser.TO, SqlBaseParser.TABLESAMPLE, SqlBaseParser.STRATIFY, SqlBaseParser.ALTER, SqlBaseParser.RENAME, SqlBaseParser.ARRAY, SqlBaseParser.MAP, SqlBaseParser.STRUCT, SqlBaseParser.COMMENT, SqlBaseParser.SET, SqlBaseParser.RESET, SqlBaseParser.DATA, SqlBaseParser.START, SqlBaseParser.TRANSACTION, SqlBaseParser.COMMIT, SqlBaseParser.ROLLBACK, SqlBaseParser.MACRO, SqlBaseParser.IF, SqlBaseParser.DIV, SqlBaseParser.PERCENTLIT, SqlBaseParser.BUCKET, SqlBaseParser.OUT, SqlBaseParser.OF, SqlBaseParser.SORT, SqlBaseParser.CLUSTER, SqlBaseParser.DISTRIBUTE, SqlBaseParser.OVERWRITE, SqlBaseParser.TRANSFORM, SqlBaseParser.REDUCE, SqlBaseParser.USING, SqlBaseParser.SERDE, SqlBaseParser.SERDEPROPERTIES, SqlBaseParser.RECORDREADER, SqlBaseParser.RECORDWRITER, SqlBaseParser.DELIMITED, SqlBaseParser.FIELDS, SqlBaseParser.TERMINATED, SqlBaseParser.COLLECTION, SqlBaseParser.ITEMS, SqlBaseParser.KEYS, SqlBaseParser.ESCAPED, SqlBaseParser.LINES, SqlBaseParser.SEPARATED, SqlBaseParser.FUNCTION, SqlBaseParser.EXTENDED, SqlBaseParser.REFRESH, SqlBaseParser.CLEAR, SqlBaseParser.CACHE, SqlBaseParser.UNCACHE, SqlBaseParser.LAZY, SqlBaseParser.FORMATTED, SqlBaseParser.TEMPORARY, SqlBaseParser.OPTIONS, SqlBaseParser.UNSET, SqlBaseParser.TBLPROPERTIES, SqlBaseParser.DBPROPERTIES, SqlBaseParser.BUCKETS, SqlBaseParser.SKEWED, SqlBaseParser.STORED, SqlBaseParser.DIRECTORIES, SqlBaseParser.LOCATION, SqlBaseParser.EXCHANGE, SqlBaseParser.ARCHIVE, SqlBaseParser.UNARCHIVE, SqlBaseParser.FILEFORMAT, SqlBaseParser.TOUCH, SqlBaseParser.COMPACT, SqlBaseParser.CONCATENATE, SqlBaseParser.CHANGE, SqlBaseParser.CASCADE, SqlBaseParser.RESTRICT, SqlBaseParser.CLUSTERED, SqlBaseParser.SORTED, SqlBaseParser.PURGE, SqlBaseParser.INPUTFORMAT, SqlBaseParser.OUTPUTFORMAT, SqlBaseParser.DATABASE, SqlBaseParser.DATABASES, SqlBaseParser.DFS, SqlBaseParser.TRUNCATE, SqlBaseParser.ANALYZE, SqlBaseParser.COMPUTE, SqlBaseParser.LIST, SqlBaseParser.STATISTICS, SqlBaseParser.PARTITIONED, SqlBaseParser.EXTERNAL, SqlBaseParser.DEFINED, SqlBaseParser.REVOKE, SqlBaseParser.GRANT, SqlBaseParser.LOCK, SqlBaseParser.UNLOCK, SqlBaseParser.MSCK, SqlBaseParser.REPAIR, SqlBaseParser.RECOVER, SqlBaseParser.EXPORT, SqlBaseParser.IMPORT, SqlBaseParser.LOAD, SqlBaseParser.ROLE, SqlBaseParser.ROLES, SqlBaseParser.COMPACTIONS, SqlBaseParser.PRINCIPALS, SqlBaseParser.TRANSACTIONS, SqlBaseParser.INDEX, SqlBaseParser.INDEXES, SqlBaseParser.LOCKS, SqlBaseParser.OPTION, SqlBaseParser.ANTI, SqlBaseParser.LOCAL, SqlBaseParser.INPATH, SqlBaseParser.CURRENT_DATE, SqlBaseParser.CURRENT_TIMESTAMP, SqlBaseParser.IDENTIFIER, SqlBaseParser.BACKQUOTED_IDENTIFIER]:
+            if token in [
+                SqlBaseParser.SELECT,
+                SqlBaseParser.FROM,
+                SqlBaseParser.ADD,
+                SqlBaseParser.AS,
+                SqlBaseParser.ALL,
+                SqlBaseParser.DISTINCT,
+                SqlBaseParser.WHERE,
+                SqlBaseParser.GROUP,
+                SqlBaseParser.BY,
+                SqlBaseParser.GROUPING,
+                SqlBaseParser.SETS,
+                SqlBaseParser.CUBE,
+                SqlBaseParser.ROLLUP,
+                SqlBaseParser.ORDER,
+                SqlBaseParser.HAVING,
+                SqlBaseParser.LIMIT,
+                SqlBaseParser.AT,
+                SqlBaseParser.OR,
+                SqlBaseParser.AND,
+                SqlBaseParser.IN,
+                SqlBaseParser.NOT,
+                SqlBaseParser.NO,
+                SqlBaseParser.EXISTS,
+                SqlBaseParser.BETWEEN,
+                SqlBaseParser.LIKE,
+                SqlBaseParser.RLIKE,
+                SqlBaseParser.IS,
+                SqlBaseParser.NULL,
+                SqlBaseParser.TRUE,
+                SqlBaseParser.FALSE,
+                SqlBaseParser.NULLS,
+                SqlBaseParser.ASC,
+                SqlBaseParser.DESC,
+                SqlBaseParser.FOR,
+                SqlBaseParser.INTERVAL,
+                SqlBaseParser.CASE,
+                SqlBaseParser.WHEN,
+                SqlBaseParser.THEN,
+                SqlBaseParser.ELSE,
+                SqlBaseParser.END,
+                SqlBaseParser.JOIN,
+                SqlBaseParser.CROSS,
+                SqlBaseParser.OUTER,
+                SqlBaseParser.INNER,
+                SqlBaseParser.LEFT,
+                SqlBaseParser.SEMI,
+                SqlBaseParser.RIGHT,
+                SqlBaseParser.FULL,
+                SqlBaseParser.NATURAL,
+                SqlBaseParser.ON,
+                SqlBaseParser.LATERAL,
+                SqlBaseParser.WINDOW,
+                SqlBaseParser.OVER,
+                SqlBaseParser.PARTITION,
+                SqlBaseParser.RANGE,
+                SqlBaseParser.ROWS,
+                SqlBaseParser.UNBOUNDED,
+                SqlBaseParser.PRECEDING,
+                SqlBaseParser.FOLLOWING,
+                SqlBaseParser.CURRENT,
+                SqlBaseParser.ROW,
+                SqlBaseParser.WITH,
+                SqlBaseParser.VALUES,
+                SqlBaseParser.CREATE,
+                SqlBaseParser.TABLE,
+                SqlBaseParser.VIEW,
+                SqlBaseParser.REPLACE,
+                SqlBaseParser.INSERT,
+                SqlBaseParser.DELETE,
+                SqlBaseParser.INTO,
+                SqlBaseParser.DESCRIBE,
+                SqlBaseParser.EXPLAIN,
+                SqlBaseParser.FORMAT,
+                SqlBaseParser.LOGICAL,
+                SqlBaseParser.CODEGEN,
+                SqlBaseParser.CAST,
+                SqlBaseParser.SHOW,
+                SqlBaseParser.TABLES,
+                SqlBaseParser.COLUMNS,
+                SqlBaseParser.COLUMN,
+                SqlBaseParser.USE,
+                SqlBaseParser.PARTITIONS,
+                SqlBaseParser.FUNCTIONS,
+                SqlBaseParser.DROP,
+                SqlBaseParser.UNION,
+                SqlBaseParser.EXCEPT,
+                SqlBaseParser.INTERSECT,
+                SqlBaseParser.TO,
+                SqlBaseParser.TABLESAMPLE,
+                SqlBaseParser.STRATIFY,
+                SqlBaseParser.ALTER,
+                SqlBaseParser.RENAME,
+                SqlBaseParser.ARRAY,
+                SqlBaseParser.MAP,
+                SqlBaseParser.STRUCT,
+                SqlBaseParser.COMMENT,
+                SqlBaseParser.SET,
+                SqlBaseParser.RESET,
+                SqlBaseParser.DATA,
+                SqlBaseParser.START,
+                SqlBaseParser.TRANSACTION,
+                SqlBaseParser.COMMIT,
+                SqlBaseParser.ROLLBACK,
+                SqlBaseParser.MACRO,
+                SqlBaseParser.IF,
+                SqlBaseParser.DIV,
+                SqlBaseParser.PERCENTLIT,
+                SqlBaseParser.BUCKET,
+                SqlBaseParser.OUT,
+                SqlBaseParser.OF,
+                SqlBaseParser.SORT,
+                SqlBaseParser.CLUSTER,
+                SqlBaseParser.DISTRIBUTE,
+                SqlBaseParser.OVERWRITE,
+                SqlBaseParser.TRANSFORM,
+                SqlBaseParser.REDUCE,
+                SqlBaseParser.USING,
+                SqlBaseParser.SERDE,
+                SqlBaseParser.SERDEPROPERTIES,
+                SqlBaseParser.RECORDREADER,
+                SqlBaseParser.RECORDWRITER,
+                SqlBaseParser.DELIMITED,
+                SqlBaseParser.FIELDS,
+                SqlBaseParser.TERMINATED,
+                SqlBaseParser.COLLECTION,
+                SqlBaseParser.ITEMS,
+                SqlBaseParser.KEYS,
+                SqlBaseParser.ESCAPED,
+                SqlBaseParser.LINES,
+                SqlBaseParser.SEPARATED,
+                SqlBaseParser.FUNCTION,
+                SqlBaseParser.EXTENDED,
+                SqlBaseParser.REFRESH,
+                SqlBaseParser.CLEAR,
+                SqlBaseParser.CACHE,
+                SqlBaseParser.UNCACHE,
+                SqlBaseParser.LAZY,
+                SqlBaseParser.FORMATTED,
+                SqlBaseParser.TEMPORARY,
+                SqlBaseParser.OPTIONS,
+                SqlBaseParser.UNSET,
+                SqlBaseParser.TBLPROPERTIES,
+                SqlBaseParser.DBPROPERTIES,
+                SqlBaseParser.BUCKETS,
+                SqlBaseParser.SKEWED,
+                SqlBaseParser.STORED,
+                SqlBaseParser.DIRECTORIES,
+                SqlBaseParser.LOCATION,
+                SqlBaseParser.EXCHANGE,
+                SqlBaseParser.ARCHIVE,
+                SqlBaseParser.UNARCHIVE,
+                SqlBaseParser.FILEFORMAT,
+                SqlBaseParser.TOUCH,
+                SqlBaseParser.COMPACT,
+                SqlBaseParser.CONCATENATE,
+                SqlBaseParser.CHANGE,
+                SqlBaseParser.CASCADE,
+                SqlBaseParser.RESTRICT,
+                SqlBaseParser.CLUSTERED,
+                SqlBaseParser.SORTED,
+                SqlBaseParser.PURGE,
+                SqlBaseParser.INPUTFORMAT,
+                SqlBaseParser.OUTPUTFORMAT,
+                SqlBaseParser.DATABASE,
+                SqlBaseParser.DATABASES,
+                SqlBaseParser.DFS,
+                SqlBaseParser.TRUNCATE,
+                SqlBaseParser.ANALYZE,
+                SqlBaseParser.COMPUTE,
+                SqlBaseParser.LIST,
+                SqlBaseParser.STATISTICS,
+                SqlBaseParser.PARTITIONED,
+                SqlBaseParser.EXTERNAL,
+                SqlBaseParser.DEFINED,
+                SqlBaseParser.REVOKE,
+                SqlBaseParser.GRANT,
+                SqlBaseParser.LOCK,
+                SqlBaseParser.UNLOCK,
+                SqlBaseParser.MSCK,
+                SqlBaseParser.REPAIR,
+                SqlBaseParser.RECOVER,
+                SqlBaseParser.EXPORT,
+                SqlBaseParser.IMPORT,
+                SqlBaseParser.LOAD,
+                SqlBaseParser.ROLE,
+                SqlBaseParser.ROLES,
+                SqlBaseParser.COMPACTIONS,
+                SqlBaseParser.PRINCIPALS,
+                SqlBaseParser.TRANSACTIONS,
+                SqlBaseParser.INDEX,
+                SqlBaseParser.INDEXES,
+                SqlBaseParser.LOCKS,
+                SqlBaseParser.OPTION,
+                SqlBaseParser.ANTI,
+                SqlBaseParser.LOCAL,
+                SqlBaseParser.INPATH,
+                SqlBaseParser.CURRENT_DATE,
+                SqlBaseParser.CURRENT_TIMESTAMP,
+                SqlBaseParser.IDENTIFIER,
+                SqlBaseParser.BACKQUOTED_IDENTIFIER,
+            ]:
                 self.enterOuterAlt(localctx, 1)
                 self.state = 1090
                 self.identifier()
                 self.state = 1095
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                while _la==SqlBaseParser.T__3:
+                while _la == SqlBaseParser.T__3:
                     self.state = 1091
                     self.match(SqlBaseParser.T__3)
                     self.state = 1092
@@ -6953,40 +8754,37 @@ class SqlBaseParser ( Parser ):
             self.exitRule()
         return localctx
 
-
     class ConstantListContext(ParserRuleContext):
-        __slots__ = 'parser'
+        __slots__ = "parser"
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
-        def constant(self, i:int=None):
+        def constant(self, i: int = None):
             if i is None:
                 return self.getTypedRuleContexts(SqlBaseParser.ConstantContext)
             else:
-                return self.getTypedRuleContext(SqlBaseParser.ConstantContext,i)
-
+                return self.getTypedRuleContext(SqlBaseParser.ConstantContext, i)
 
         def getRuleIndex(self):
             return SqlBaseParser.RULE_constantList
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterConstantList" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterConstantList"):
                 listener.enterConstantList(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitConstantList" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitConstantList"):
                 listener.exitConstantList(self)
-
-
-
 
     def constantList(self):
 
         localctx = SqlBaseParser.ConstantListContext(self, self._ctx, self.state)
         self.enterRule(localctx, 46, self.RULE_constantList)
-        self._la = 0 # Token type
+        self._la = 0  # Token type
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 1101
@@ -6996,7 +8794,7 @@ class SqlBaseParser ( Parser ):
             self.state = 1107
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            while _la==SqlBaseParser.T__2:
+            while _la == SqlBaseParser.T__2:
                 self.state = 1103
                 self.match(SqlBaseParser.T__2)
                 self.state = 1104
@@ -7015,40 +8813,37 @@ class SqlBaseParser ( Parser ):
             self.exitRule()
         return localctx
 
-
     class NestedConstantListContext(ParserRuleContext):
-        __slots__ = 'parser'
+        __slots__ = "parser"
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
-        def constantList(self, i:int=None):
+        def constantList(self, i: int = None):
             if i is None:
                 return self.getTypedRuleContexts(SqlBaseParser.ConstantListContext)
             else:
-                return self.getTypedRuleContext(SqlBaseParser.ConstantListContext,i)
-
+                return self.getTypedRuleContext(SqlBaseParser.ConstantListContext, i)
 
         def getRuleIndex(self):
             return SqlBaseParser.RULE_nestedConstantList
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterNestedConstantList" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterNestedConstantList"):
                 listener.enterNestedConstantList(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitNestedConstantList" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitNestedConstantList"):
                 listener.exitNestedConstantList(self)
-
-
-
 
     def nestedConstantList(self):
 
         localctx = SqlBaseParser.NestedConstantListContext(self, self._ctx, self.state)
         self.enterRule(localctx, 48, self.RULE_nestedConstantList)
-        self._la = 0 # Token type
+        self._la = 0  # Token type
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 1112
@@ -7058,7 +8853,7 @@ class SqlBaseParser ( Parser ):
             self.state = 1118
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            while _la==SqlBaseParser.T__2:
+            while _la == SqlBaseParser.T__2:
                 self.state = 1114
                 self.match(SqlBaseParser.T__2)
                 self.state = 1115
@@ -7077,11 +8872,12 @@ class SqlBaseParser ( Parser ):
             self.exitRule()
         return localctx
 
-
     class CreateFileFormatContext(ParserRuleContext):
-        __slots__ = 'parser'
+        __slots__ = "parser"
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
@@ -7092,29 +8888,24 @@ class SqlBaseParser ( Parser ):
             return self.getToken(SqlBaseParser.AS, 0)
 
         def fileFormat(self):
-            return self.getTypedRuleContext(SqlBaseParser.FileFormatContext,0)
-
+            return self.getTypedRuleContext(SqlBaseParser.FileFormatContext, 0)
 
         def BY(self):
             return self.getToken(SqlBaseParser.BY, 0)
 
         def storageHandler(self):
-            return self.getTypedRuleContext(SqlBaseParser.StorageHandlerContext,0)
-
+            return self.getTypedRuleContext(SqlBaseParser.StorageHandlerContext, 0)
 
         def getRuleIndex(self):
             return SqlBaseParser.RULE_createFileFormat
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterCreateFileFormat" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterCreateFileFormat"):
                 listener.enterCreateFileFormat(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitCreateFileFormat" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitCreateFileFormat"):
                 listener.exitCreateFileFormat(self)
-
-
-
 
     def createFileFormat(self):
 
@@ -7123,7 +8914,7 @@ class SqlBaseParser ( Parser ):
         try:
             self.state = 1129
             self._errHandler.sync(self)
-            la_ = self._interp.adaptivePredict(self._input,130,self._ctx)
+            la_ = self._interp.adaptivePredict(self._input, 130, self._ctx)
             if la_ == 1:
                 self.enterOuterAlt(localctx, 1)
                 self.state = 1123
@@ -7144,7 +8935,6 @@ class SqlBaseParser ( Parser ):
                 self.storageHandler()
                 pass
 
-
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)
@@ -7153,70 +8943,67 @@ class SqlBaseParser ( Parser ):
             self.exitRule()
         return localctx
 
-
     class FileFormatContext(ParserRuleContext):
-        __slots__ = 'parser'
+        __slots__ = "parser"
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
-
 
         def getRuleIndex(self):
             return SqlBaseParser.RULE_fileFormat
 
-     
-        def copyFrom(self, ctx:ParserRuleContext):
+        def copyFrom(self, ctx: ParserRuleContext):
             super().copyFrom(ctx)
 
-
-
     class TableFileFormatContext(FileFormatContext):
-
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a SqlBaseParser.FileFormatContext
+        def __init__(
+            self, parser, ctx: ParserRuleContext
+        ):  # actually a SqlBaseParser.FileFormatContext
             super().__init__(parser)
-            self.inFmt = None # Token
-            self.outFmt = None # Token
+            self.inFmt = None  # Token
+            self.outFmt = None  # Token
             self.copyFrom(ctx)
 
         def INPUTFORMAT(self):
             return self.getToken(SqlBaseParser.INPUTFORMAT, 0)
+
         def OUTPUTFORMAT(self):
             return self.getToken(SqlBaseParser.OUTPUTFORMAT, 0)
-        def STRING(self, i:int=None):
+
+        def STRING(self, i: int = None):
             if i is None:
                 return self.getTokens(SqlBaseParser.STRING)
             else:
                 return self.getToken(SqlBaseParser.STRING, i)
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterTableFileFormat" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterTableFileFormat"):
                 listener.enterTableFileFormat(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitTableFileFormat" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitTableFileFormat"):
                 listener.exitTableFileFormat(self)
 
-
     class GenericFileFormatContext(FileFormatContext):
-
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a SqlBaseParser.FileFormatContext
+        def __init__(
+            self, parser, ctx: ParserRuleContext
+        ):  # actually a SqlBaseParser.FileFormatContext
             super().__init__(parser)
             self.copyFrom(ctx)
 
         def identifier(self):
-            return self.getTypedRuleContext(SqlBaseParser.IdentifierContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.IdentifierContext, 0)
 
-
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterGenericFileFormat" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterGenericFileFormat"):
                 listener.enterGenericFileFormat(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitGenericFileFormat" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitGenericFileFormat"):
                 listener.exitGenericFileFormat(self)
-
-
 
     def fileFormat(self):
 
@@ -7225,7 +9012,7 @@ class SqlBaseParser ( Parser ):
         try:
             self.state = 1136
             self._errHandler.sync(self)
-            la_ = self._interp.adaptivePredict(self._input,131,self._ctx)
+            la_ = self._interp.adaptivePredict(self._input, 131, self._ctx)
             if la_ == 1:
                 localctx = SqlBaseParser.TableFileFormatContext(self, localctx)
                 self.enterOuterAlt(localctx, 1)
@@ -7246,7 +9033,6 @@ class SqlBaseParser ( Parser ):
                 self.identifier()
                 pass
 
-
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)
@@ -7255,11 +9041,12 @@ class SqlBaseParser ( Parser ):
             self.exitRule()
         return localctx
 
-
     class StorageHandlerContext(ParserRuleContext):
-        __slots__ = 'parser'
+        __slots__ = "parser"
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
@@ -7273,22 +9060,18 @@ class SqlBaseParser ( Parser ):
             return self.getToken(SqlBaseParser.SERDEPROPERTIES, 0)
 
         def tablePropertyList(self):
-            return self.getTypedRuleContext(SqlBaseParser.TablePropertyListContext,0)
-
+            return self.getTypedRuleContext(SqlBaseParser.TablePropertyListContext, 0)
 
         def getRuleIndex(self):
             return SqlBaseParser.RULE_storageHandler
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterStorageHandler" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterStorageHandler"):
                 listener.enterStorageHandler(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitStorageHandler" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitStorageHandler"):
                 listener.exitStorageHandler(self)
-
-
-
 
     def storageHandler(self):
 
@@ -7300,7 +9083,7 @@ class SqlBaseParser ( Parser ):
             self.match(SqlBaseParser.STRING)
             self.state = 1142
             self._errHandler.sync(self)
-            la_ = self._interp.adaptivePredict(self._input,132,self._ctx)
+            la_ = self._interp.adaptivePredict(self._input, 132, self._ctx)
             if la_ == 1:
                 self.state = 1139
                 self.match(SqlBaseParser.WITH)
@@ -7308,7 +9091,6 @@ class SqlBaseParser ( Parser ):
                 self.match(SqlBaseParser.SERDEPROPERTIES)
                 self.state = 1141
                 self.tablePropertyList()
-
 
         except RecognitionException as re:
             localctx.exception = re
@@ -7318,17 +9100,17 @@ class SqlBaseParser ( Parser ):
             self.exitRule()
         return localctx
 
-
     class ResourceContext(ParserRuleContext):
-        __slots__ = 'parser'
+        __slots__ = "parser"
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
         def identifier(self):
-            return self.getTypedRuleContext(SqlBaseParser.IdentifierContext,0)
-
+            return self.getTypedRuleContext(SqlBaseParser.IdentifierContext, 0)
 
         def STRING(self):
             return self.getToken(SqlBaseParser.STRING, 0)
@@ -7336,16 +9118,13 @@ class SqlBaseParser ( Parser ):
         def getRuleIndex(self):
             return SqlBaseParser.RULE_resource
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterResource" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterResource"):
                 listener.enterResource(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitResource" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitResource"):
                 listener.exitResource(self)
-
-
-
 
     def resource(self):
 
@@ -7365,94 +9144,91 @@ class SqlBaseParser ( Parser ):
             self.exitRule()
         return localctx
 
-
     class QueryNoWithContext(ParserRuleContext):
-        __slots__ = 'parser'
+        __slots__ = "parser"
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
-
 
         def getRuleIndex(self):
             return SqlBaseParser.RULE_queryNoWith
 
-     
-        def copyFrom(self, ctx:ParserRuleContext):
+        def copyFrom(self, ctx: ParserRuleContext):
             super().copyFrom(ctx)
 
-
-
     class SingleInsertQueryContext(QueryNoWithContext):
-
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a SqlBaseParser.QueryNoWithContext
+        def __init__(
+            self, parser, ctx: ParserRuleContext
+        ):  # actually a SqlBaseParser.QueryNoWithContext
             super().__init__(parser)
             self.copyFrom(ctx)
 
         def queryTerm(self):
-            return self.getTypedRuleContext(SqlBaseParser.QueryTermContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.QueryTermContext, 0)
 
         def queryOrganization(self):
-            return self.getTypedRuleContext(SqlBaseParser.QueryOrganizationContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.QueryOrganizationContext, 0)
 
         def insertInto(self):
-            return self.getTypedRuleContext(SqlBaseParser.InsertIntoContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.InsertIntoContext, 0)
 
-
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterSingleInsertQuery" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterSingleInsertQuery"):
                 listener.enterSingleInsertQuery(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitSingleInsertQuery" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitSingleInsertQuery"):
                 listener.exitSingleInsertQuery(self)
 
-
     class MultiInsertQueryContext(QueryNoWithContext):
-
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a SqlBaseParser.QueryNoWithContext
+        def __init__(
+            self, parser, ctx: ParserRuleContext
+        ):  # actually a SqlBaseParser.QueryNoWithContext
             super().__init__(parser)
             self.copyFrom(ctx)
 
         def fromClause(self):
-            return self.getTypedRuleContext(SqlBaseParser.FromClauseContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.FromClauseContext, 0)
 
-        def multiInsertQueryBody(self, i:int=None):
+        def multiInsertQueryBody(self, i: int = None):
             if i is None:
-                return self.getTypedRuleContexts(SqlBaseParser.MultiInsertQueryBodyContext)
+                return self.getTypedRuleContexts(
+                    SqlBaseParser.MultiInsertQueryBodyContext
+                )
             else:
-                return self.getTypedRuleContext(SqlBaseParser.MultiInsertQueryBodyContext,i)
+                return self.getTypedRuleContext(
+                    SqlBaseParser.MultiInsertQueryBodyContext, i
+                )
 
-
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterMultiInsertQuery" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterMultiInsertQuery"):
                 listener.enterMultiInsertQuery(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitMultiInsertQuery" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitMultiInsertQuery"):
                 listener.exitMultiInsertQuery(self)
-
-
 
     def queryNoWith(self):
 
         localctx = SqlBaseParser.QueryNoWithContext(self, self._ctx, self.state)
         self.enterRule(localctx, 58, self.RULE_queryNoWith)
-        self._la = 0 # Token type
+        self._la = 0  # Token type
         try:
             self.state = 1159
             self._errHandler.sync(self)
-            la_ = self._interp.adaptivePredict(self._input,135,self._ctx)
+            la_ = self._interp.adaptivePredict(self._input, 135, self._ctx)
             if la_ == 1:
                 localctx = SqlBaseParser.SingleInsertQueryContext(self, localctx)
                 self.enterOuterAlt(localctx, 1)
                 self.state = 1148
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==SqlBaseParser.INSERT:
+                if _la == SqlBaseParser.INSERT:
                     self.state = 1147
                     self.insertInto()
-
 
                 self.state = 1150
                 self.queryTerm(0)
@@ -7465,20 +9241,25 @@ class SqlBaseParser ( Parser ):
                 self.enterOuterAlt(localctx, 2)
                 self.state = 1153
                 self.fromClause()
-                self.state = 1155 
+                self.state = 1155
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
                 while True:
                     self.state = 1154
                     self.multiInsertQueryBody()
-                    self.state = 1157 
+                    self.state = 1157
                     self._errHandler.sync(self)
                     _la = self._input.LA(1)
-                    if not (_la==SqlBaseParser.SELECT or _la==SqlBaseParser.FROM or _la==SqlBaseParser.INSERT or _la==SqlBaseParser.MAP or _la==SqlBaseParser.REDUCE):
+                    if not (
+                        _la == SqlBaseParser.SELECT
+                        or _la == SqlBaseParser.FROM
+                        or _la == SqlBaseParser.INSERT
+                        or _la == SqlBaseParser.MAP
+                        or _la == SqlBaseParser.REDUCE
+                    ):
                         break
 
                 pass
-
 
         except RecognitionException as re:
             localctx.exception = re
@@ -7488,25 +9269,26 @@ class SqlBaseParser ( Parser ):
             self.exitRule()
         return localctx
 
-
     class QueryOrganizationContext(ParserRuleContext):
-        __slots__ = 'parser'
+        __slots__ = "parser"
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
-            self._sortItem = None # SortItemContext
-            self.order = list() # of SortItemContexts
-            self._expression = None # ExpressionContext
-            self.clusterBy = list() # of ExpressionContexts
-            self.distributeBy = list() # of ExpressionContexts
-            self.sort = list() # of SortItemContexts
-            self.limit = None # ExpressionContext
+            self._sortItem = None  # SortItemContext
+            self.order = list()  # of SortItemContexts
+            self._expression = None  # ExpressionContext
+            self.clusterBy = list()  # of ExpressionContexts
+            self.distributeBy = list()  # of ExpressionContexts
+            self.sort = list()  # of SortItemContexts
+            self.limit = None  # ExpressionContext
 
         def ORDER(self):
             return self.getToken(SqlBaseParser.ORDER, 0)
 
-        def BY(self, i:int=None):
+        def BY(self, i: int = None):
             if i is None:
                 return self.getTokens(SqlBaseParser.BY)
             else:
@@ -7522,51 +9304,45 @@ class SqlBaseParser ( Parser ):
             return self.getToken(SqlBaseParser.SORT, 0)
 
         def windows(self):
-            return self.getTypedRuleContext(SqlBaseParser.WindowsContext,0)
-
+            return self.getTypedRuleContext(SqlBaseParser.WindowsContext, 0)
 
         def LIMIT(self):
             return self.getToken(SqlBaseParser.LIMIT, 0)
 
-        def sortItem(self, i:int=None):
+        def sortItem(self, i: int = None):
             if i is None:
                 return self.getTypedRuleContexts(SqlBaseParser.SortItemContext)
             else:
-                return self.getTypedRuleContext(SqlBaseParser.SortItemContext,i)
+                return self.getTypedRuleContext(SqlBaseParser.SortItemContext, i)
 
-
-        def expression(self, i:int=None):
+        def expression(self, i: int = None):
             if i is None:
                 return self.getTypedRuleContexts(SqlBaseParser.ExpressionContext)
             else:
-                return self.getTypedRuleContext(SqlBaseParser.ExpressionContext,i)
-
+                return self.getTypedRuleContext(SqlBaseParser.ExpressionContext, i)
 
         def getRuleIndex(self):
             return SqlBaseParser.RULE_queryOrganization
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterQueryOrganization" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterQueryOrganization"):
                 listener.enterQueryOrganization(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitQueryOrganization" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitQueryOrganization"):
                 listener.exitQueryOrganization(self)
-
-
-
 
     def queryOrganization(self):
 
         localctx = SqlBaseParser.QueryOrganizationContext(self, self._ctx, self.state)
         self.enterRule(localctx, 60, self.RULE_queryOrganization)
-        self._la = 0 # Token type
+        self._la = 0  # Token type
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 1171
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if _la==SqlBaseParser.ORDER:
+            if _la == SqlBaseParser.ORDER:
                 self.state = 1161
                 self.match(SqlBaseParser.ORDER)
                 self.state = 1162
@@ -7577,7 +9353,7 @@ class SqlBaseParser ( Parser ):
                 self.state = 1168
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                while _la==SqlBaseParser.T__2:
+                while _la == SqlBaseParser.T__2:
                     self.state = 1164
                     self.match(SqlBaseParser.T__2)
                     self.state = 1165
@@ -7587,12 +9363,10 @@ class SqlBaseParser ( Parser ):
                     self._errHandler.sync(self)
                     _la = self._input.LA(1)
 
-
-
             self.state = 1183
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if _la==SqlBaseParser.CLUSTER:
+            if _la == SqlBaseParser.CLUSTER:
                 self.state = 1173
                 self.match(SqlBaseParser.CLUSTER)
                 self.state = 1174
@@ -7603,7 +9377,7 @@ class SqlBaseParser ( Parser ):
                 self.state = 1180
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                while _la==SqlBaseParser.T__2:
+                while _la == SqlBaseParser.T__2:
                     self.state = 1176
                     self.match(SqlBaseParser.T__2)
                     self.state = 1177
@@ -7613,12 +9387,10 @@ class SqlBaseParser ( Parser ):
                     self._errHandler.sync(self)
                     _la = self._input.LA(1)
 
-
-
             self.state = 1195
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if _la==SqlBaseParser.DISTRIBUTE:
+            if _la == SqlBaseParser.DISTRIBUTE:
                 self.state = 1185
                 self.match(SqlBaseParser.DISTRIBUTE)
                 self.state = 1186
@@ -7629,7 +9401,7 @@ class SqlBaseParser ( Parser ):
                 self.state = 1192
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                while _la==SqlBaseParser.T__2:
+                while _la == SqlBaseParser.T__2:
                     self.state = 1188
                     self.match(SqlBaseParser.T__2)
                     self.state = 1189
@@ -7639,12 +9411,10 @@ class SqlBaseParser ( Parser ):
                     self._errHandler.sync(self)
                     _la = self._input.LA(1)
 
-
-
             self.state = 1207
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if _la==SqlBaseParser.SORT:
+            if _la == SqlBaseParser.SORT:
                 self.state = 1197
                 self.match(SqlBaseParser.SORT)
                 self.state = 1198
@@ -7655,7 +9425,7 @@ class SqlBaseParser ( Parser ):
                 self.state = 1204
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                while _la==SqlBaseParser.T__2:
+                while _la == SqlBaseParser.T__2:
                     self.state = 1200
                     self.match(SqlBaseParser.T__2)
                     self.state = 1201
@@ -7665,25 +9435,21 @@ class SqlBaseParser ( Parser ):
                     self._errHandler.sync(self)
                     _la = self._input.LA(1)
 
-
-
             self.state = 1210
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if _la==SqlBaseParser.WINDOW:
+            if _la == SqlBaseParser.WINDOW:
                 self.state = 1209
                 self.windows()
-
 
             self.state = 1214
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if _la==SqlBaseParser.LIMIT:
+            if _la == SqlBaseParser.LIMIT:
                 self.state = 1212
                 self.match(SqlBaseParser.LIMIT)
                 self.state = 1213
                 localctx.limit = self.expression()
-
 
         except RecognitionException as re:
             localctx.exception = re
@@ -7693,54 +9459,50 @@ class SqlBaseParser ( Parser ):
             self.exitRule()
         return localctx
 
-
     class MultiInsertQueryBodyContext(ParserRuleContext):
-        __slots__ = 'parser'
+        __slots__ = "parser"
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
         def querySpecification(self):
-            return self.getTypedRuleContext(SqlBaseParser.QuerySpecificationContext,0)
-
+            return self.getTypedRuleContext(SqlBaseParser.QuerySpecificationContext, 0)
 
         def queryOrganization(self):
-            return self.getTypedRuleContext(SqlBaseParser.QueryOrganizationContext,0)
-
+            return self.getTypedRuleContext(SqlBaseParser.QueryOrganizationContext, 0)
 
         def insertInto(self):
-            return self.getTypedRuleContext(SqlBaseParser.InsertIntoContext,0)
-
+            return self.getTypedRuleContext(SqlBaseParser.InsertIntoContext, 0)
 
         def getRuleIndex(self):
             return SqlBaseParser.RULE_multiInsertQueryBody
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterMultiInsertQueryBody" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterMultiInsertQueryBody"):
                 listener.enterMultiInsertQueryBody(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitMultiInsertQueryBody" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitMultiInsertQueryBody"):
                 listener.exitMultiInsertQueryBody(self)
-
-
-
 
     def multiInsertQueryBody(self):
 
-        localctx = SqlBaseParser.MultiInsertQueryBodyContext(self, self._ctx, self.state)
+        localctx = SqlBaseParser.MultiInsertQueryBodyContext(
+            self, self._ctx, self.state
+        )
         self.enterRule(localctx, 62, self.RULE_multiInsertQueryBody)
-        self._la = 0 # Token type
+        self._la = 0  # Token type
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 1217
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if _la==SqlBaseParser.INSERT:
+            if _la == SqlBaseParser.INSERT:
                 self.state = 1216
                 self.insertInto()
-
 
             self.state = 1219
             self.querySpecification()
@@ -7754,85 +9516,83 @@ class SqlBaseParser ( Parser ):
             self.exitRule()
         return localctx
 
-
     class QueryTermContext(ParserRuleContext):
-        __slots__ = 'parser'
+        __slots__ = "parser"
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
-
 
         def getRuleIndex(self):
             return SqlBaseParser.RULE_queryTerm
 
-     
-        def copyFrom(self, ctx:ParserRuleContext):
+        def copyFrom(self, ctx: ParserRuleContext):
             super().copyFrom(ctx)
 
-
     class QueryTermDefaultContext(QueryTermContext):
-
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a SqlBaseParser.QueryTermContext
+        def __init__(
+            self, parser, ctx: ParserRuleContext
+        ):  # actually a SqlBaseParser.QueryTermContext
             super().__init__(parser)
             self.copyFrom(ctx)
 
         def queryPrimary(self):
-            return self.getTypedRuleContext(SqlBaseParser.QueryPrimaryContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.QueryPrimaryContext, 0)
 
-
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterQueryTermDefault" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterQueryTermDefault"):
                 listener.enterQueryTermDefault(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitQueryTermDefault" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitQueryTermDefault"):
                 listener.exitQueryTermDefault(self)
 
-
     class SetOperationContext(QueryTermContext):
-
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a SqlBaseParser.QueryTermContext
+        def __init__(
+            self, parser, ctx: ParserRuleContext
+        ):  # actually a SqlBaseParser.QueryTermContext
             super().__init__(parser)
-            self.left = None # QueryTermContext
-            self.operator = None # Token
-            self.right = None # QueryTermContext
+            self.left = None  # QueryTermContext
+            self.operator = None  # Token
+            self.right = None  # QueryTermContext
             self.copyFrom(ctx)
 
-        def queryTerm(self, i:int=None):
+        def queryTerm(self, i: int = None):
             if i is None:
                 return self.getTypedRuleContexts(SqlBaseParser.QueryTermContext)
             else:
-                return self.getTypedRuleContext(SqlBaseParser.QueryTermContext,i)
+                return self.getTypedRuleContext(SqlBaseParser.QueryTermContext, i)
 
         def INTERSECT(self):
             return self.getToken(SqlBaseParser.INTERSECT, 0)
+
         def UNION(self):
             return self.getToken(SqlBaseParser.UNION, 0)
+
         def EXCEPT(self):
             return self.getToken(SqlBaseParser.EXCEPT, 0)
+
         def setQuantifier(self):
-            return self.getTypedRuleContext(SqlBaseParser.SetQuantifierContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.SetQuantifierContext, 0)
 
-
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterSetOperation" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterSetOperation"):
                 listener.enterSetOperation(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitSetOperation" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitSetOperation"):
                 listener.exitSetOperation(self)
 
-
-
-    def queryTerm(self, _p:int=0):
+    def queryTerm(self, _p: int = 0):
         _parentctx = self._ctx
         _parentState = self.state
         localctx = SqlBaseParser.QueryTermContext(self, self._ctx, _parentState)
         _prevctx = localctx
         _startState = 64
         self.enterRecursionRule(localctx, 64, self.RULE_queryTerm, _p)
-        self._la = 0 # Token type
+        self._la = 0  # Token type
         try:
             self.enterOuterAlt(localctx, 1)
             localctx = SqlBaseParser.QueryTermDefaultContext(self, localctx)
@@ -7844,23 +9604,44 @@ class SqlBaseParser ( Parser ):
             self._ctx.stop = self._input.LT(-1)
             self.state = 1233
             self._errHandler.sync(self)
-            _alt = self._interp.adaptivePredict(self._input,148,self._ctx)
-            while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
-                if _alt==1:
+            _alt = self._interp.adaptivePredict(self._input, 148, self._ctx)
+            while _alt != 2 and _alt != ATN.INVALID_ALT_NUMBER:
+                if _alt == 1:
                     if self._parseListeners is not None:
                         self.triggerExitRuleEvent()
                     _prevctx = localctx
-                    localctx = SqlBaseParser.SetOperationContext(self, SqlBaseParser.QueryTermContext(self, _parentctx, _parentState))
+                    localctx = SqlBaseParser.SetOperationContext(
+                        self,
+                        SqlBaseParser.QueryTermContext(self, _parentctx, _parentState),
+                    )
                     localctx.left = _prevctx
-                    self.pushNewRecursionContext(localctx, _startState, self.RULE_queryTerm)
+                    self.pushNewRecursionContext(
+                        localctx, _startState, self.RULE_queryTerm
+                    )
                     self.state = 1225
                     if not self.precpred(self._ctx, 1):
                         from antlr4.error.Errors import FailedPredicateException
-                        raise FailedPredicateException(self, "self.precpred(self._ctx, 1)")
+
+                        raise FailedPredicateException(
+                            self, "self.precpred(self._ctx, 1)"
+                        )
                     self.state = 1226
                     localctx.operator = self._input.LT(1)
                     _la = self._input.LA(1)
-                    if not(((((_la - 92)) & ~0x3f) == 0 and ((1 << (_la - 92)) & ((1 << (SqlBaseParser.UNION - 92)) | (1 << (SqlBaseParser.EXCEPT - 92)) | (1 << (SqlBaseParser.INTERSECT - 92)))) != 0)):
+                    if not (
+                        (
+                            (((_la - 92)) & ~0x3F) == 0
+                            and (
+                                (1 << (_la - 92))
+                                & (
+                                    (1 << (SqlBaseParser.UNION - 92))
+                                    | (1 << (SqlBaseParser.EXCEPT - 92))
+                                    | (1 << (SqlBaseParser.INTERSECT - 92))
+                                )
+                            )
+                            != 0
+                        )
+                    ):
                         localctx.operator = self._errHandler.recoverInline(self)
                     else:
                         self._errHandler.reportMatch(self)
@@ -7868,16 +9649,15 @@ class SqlBaseParser ( Parser ):
                     self.state = 1228
                     self._errHandler.sync(self)
                     _la = self._input.LA(1)
-                    if _la==SqlBaseParser.ALL or _la==SqlBaseParser.DISTINCT:
+                    if _la == SqlBaseParser.ALL or _la == SqlBaseParser.DISTINCT:
                         self.state = 1227
                         self.setQuantifier()
 
-
                     self.state = 1230
-                    localctx.right = self.queryTerm(2) 
+                    localctx.right = self.queryTerm(2)
                 self.state = 1235
                 self._errHandler.sync(self)
-                _alt = self._interp.adaptivePredict(self._input,148,self._ctx)
+                _alt = self._interp.adaptivePredict(self._input, 148, self._ctx)
 
         except RecognitionException as re:
             localctx.exception = re
@@ -7887,102 +9667,95 @@ class SqlBaseParser ( Parser ):
             self.unrollRecursionContexts(_parentctx)
         return localctx
 
-
     class QueryPrimaryContext(ParserRuleContext):
-        __slots__ = 'parser'
+        __slots__ = "parser"
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
-
 
         def getRuleIndex(self):
             return SqlBaseParser.RULE_queryPrimary
 
-     
-        def copyFrom(self, ctx:ParserRuleContext):
+        def copyFrom(self, ctx: ParserRuleContext):
             super().copyFrom(ctx)
 
-
-
     class SubqueryContext(QueryPrimaryContext):
-
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a SqlBaseParser.QueryPrimaryContext
+        def __init__(
+            self, parser, ctx: ParserRuleContext
+        ):  # actually a SqlBaseParser.QueryPrimaryContext
             super().__init__(parser)
             self.copyFrom(ctx)
 
         def queryNoWith(self):
-            return self.getTypedRuleContext(SqlBaseParser.QueryNoWithContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.QueryNoWithContext, 0)
 
-
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterSubquery" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterSubquery"):
                 listener.enterSubquery(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitSubquery" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitSubquery"):
                 listener.exitSubquery(self)
 
-
     class QueryPrimaryDefaultContext(QueryPrimaryContext):
-
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a SqlBaseParser.QueryPrimaryContext
+        def __init__(
+            self, parser, ctx: ParserRuleContext
+        ):  # actually a SqlBaseParser.QueryPrimaryContext
             super().__init__(parser)
             self.copyFrom(ctx)
 
         def querySpecification(self):
-            return self.getTypedRuleContext(SqlBaseParser.QuerySpecificationContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.QuerySpecificationContext, 0)
 
-
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterQueryPrimaryDefault" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterQueryPrimaryDefault"):
                 listener.enterQueryPrimaryDefault(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitQueryPrimaryDefault" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitQueryPrimaryDefault"):
                 listener.exitQueryPrimaryDefault(self)
 
-
     class InlineTableDefault1Context(QueryPrimaryContext):
-
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a SqlBaseParser.QueryPrimaryContext
+        def __init__(
+            self, parser, ctx: ParserRuleContext
+        ):  # actually a SqlBaseParser.QueryPrimaryContext
             super().__init__(parser)
             self.copyFrom(ctx)
 
         def inlineTable(self):
-            return self.getTypedRuleContext(SqlBaseParser.InlineTableContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.InlineTableContext, 0)
 
-
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterInlineTableDefault1" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterInlineTableDefault1"):
                 listener.enterInlineTableDefault1(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitInlineTableDefault1" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitInlineTableDefault1"):
                 listener.exitInlineTableDefault1(self)
 
-
     class TableContext(QueryPrimaryContext):
-
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a SqlBaseParser.QueryPrimaryContext
+        def __init__(
+            self, parser, ctx: ParserRuleContext
+        ):  # actually a SqlBaseParser.QueryPrimaryContext
             super().__init__(parser)
             self.copyFrom(ctx)
 
         def TABLE(self):
             return self.getToken(SqlBaseParser.TABLE, 0)
+
         def tableIdentifier(self):
-            return self.getTypedRuleContext(SqlBaseParser.TableIdentifierContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.TableIdentifierContext, 0)
 
-
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterTable" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterTable"):
                 listener.enterTable(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitTable" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitTable"):
                 listener.exitTable(self)
-
-
 
     def queryPrimary(self):
 
@@ -7992,7 +9765,12 @@ class SqlBaseParser ( Parser ):
             self.state = 1244
             self._errHandler.sync(self)
             token = self._input.LA(1)
-            if token in [SqlBaseParser.SELECT, SqlBaseParser.FROM, SqlBaseParser.MAP, SqlBaseParser.REDUCE]:
+            if token in [
+                SqlBaseParser.SELECT,
+                SqlBaseParser.FROM,
+                SqlBaseParser.MAP,
+                SqlBaseParser.REDUCE,
+            ]:
                 localctx = SqlBaseParser.QueryPrimaryDefaultContext(self, localctx)
                 self.enterOuterAlt(localctx, 1)
                 self.state = 1236
@@ -8033,18 +9811,18 @@ class SqlBaseParser ( Parser ):
             self.exitRule()
         return localctx
 
-
     class SortItemContext(ParserRuleContext):
-        __slots__ = 'parser'
+        __slots__ = "parser"
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
-            self.ordering = None # Token
+            self.ordering = None  # Token
 
         def expression(self):
-            return self.getTypedRuleContext(SqlBaseParser.ExpressionContext,0)
-
+            return self.getTypedRuleContext(SqlBaseParser.ExpressionContext, 0)
 
         def ASC(self):
             return self.getToken(SqlBaseParser.ASC, 0)
@@ -8055,22 +9833,19 @@ class SqlBaseParser ( Parser ):
         def getRuleIndex(self):
             return SqlBaseParser.RULE_sortItem
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterSortItem" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterSortItem"):
                 listener.enterSortItem(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitSortItem" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitSortItem"):
                 listener.exitSortItem(self)
-
-
-
 
     def sortItem(self):
 
         localctx = SqlBaseParser.SortItemContext(self, self._ctx, self.state)
         self.enterRule(localctx, 68, self.RULE_sortItem)
-        self._la = 0 # Token type
+        self._la = 0  # Token type
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 1246
@@ -8078,16 +9853,15 @@ class SqlBaseParser ( Parser ):
             self.state = 1248
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if _la==SqlBaseParser.ASC or _la==SqlBaseParser.DESC:
+            if _la == SqlBaseParser.ASC or _la == SqlBaseParser.DESC:
                 self.state = 1247
                 localctx.ordering = self._input.LT(1)
                 _la = self._input.LA(1)
-                if not(_la==SqlBaseParser.ASC or _la==SqlBaseParser.DESC):
+                if not (_la == SqlBaseParser.ASC or _la == SqlBaseParser.DESC):
                     localctx.ordering = self._errHandler.recoverInline(self)
                 else:
                     self._errHandler.reportMatch(self)
                     self.consume()
-
 
         except RecognitionException as re:
             localctx.exception = re
@@ -8097,26 +9871,27 @@ class SqlBaseParser ( Parser ):
             self.exitRule()
         return localctx
 
-
     class QuerySpecificationContext(ParserRuleContext):
-        __slots__ = 'parser'
+        __slots__ = "parser"
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
-            self.kind = None # Token
-            self.inRowFormat = None # RowFormatContext
-            self.recordWriter = None # Token
-            self.script = None # Token
-            self.outRowFormat = None # RowFormatContext
-            self.recordReader = None # Token
-            self.where = None # BooleanExpressionContext
-            self.having = None # BooleanExpressionContext
+            self.kind = None  # Token
+            self.inRowFormat = None  # RowFormatContext
+            self.recordWriter = None  # Token
+            self.script = None  # Token
+            self.outRowFormat = None  # RowFormatContext
+            self.recordReader = None  # Token
+            self.where = None  # BooleanExpressionContext
+            self.having = None  # BooleanExpressionContext
 
         def USING(self):
             return self.getToken(SqlBaseParser.USING, 0)
 
-        def STRING(self, i:int=None):
+        def STRING(self, i: int = None):
             if i is None:
                 return self.getTokens(SqlBaseParser.STRING)
             else:
@@ -8132,8 +9907,7 @@ class SqlBaseParser ( Parser ):
             return self.getToken(SqlBaseParser.RECORDREADER, 0)
 
         def fromClause(self):
-            return self.getTypedRuleContext(SqlBaseParser.FromClauseContext,0)
-
+            return self.getTypedRuleContext(SqlBaseParser.FromClauseContext, 0)
 
         def WHERE(self):
             return self.getToken(SqlBaseParser.WHERE, 0)
@@ -8142,22 +9916,21 @@ class SqlBaseParser ( Parser ):
             return self.getToken(SqlBaseParser.SELECT, 0)
 
         def namedExpressionSeq(self):
-            return self.getTypedRuleContext(SqlBaseParser.NamedExpressionSeqContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.NamedExpressionSeqContext, 0)
 
-
-        def rowFormat(self, i:int=None):
+        def rowFormat(self, i: int = None):
             if i is None:
                 return self.getTypedRuleContexts(SqlBaseParser.RowFormatContext)
             else:
-                return self.getTypedRuleContext(SqlBaseParser.RowFormatContext,i)
+                return self.getTypedRuleContext(SqlBaseParser.RowFormatContext, i)
 
-
-        def booleanExpression(self, i:int=None):
+        def booleanExpression(self, i: int = None):
             if i is None:
                 return self.getTypedRuleContexts(SqlBaseParser.BooleanExpressionContext)
             else:
-                return self.getTypedRuleContext(SqlBaseParser.BooleanExpressionContext,i)
-
+                return self.getTypedRuleContext(
+                    SqlBaseParser.BooleanExpressionContext, i
+                )
 
         def TRANSFORM(self):
             return self.getToken(SqlBaseParser.TRANSFORM, 0)
@@ -8169,58 +9942,49 @@ class SqlBaseParser ( Parser ):
             return self.getToken(SqlBaseParser.REDUCE, 0)
 
         def identifierSeq(self):
-            return self.getTypedRuleContext(SqlBaseParser.IdentifierSeqContext,0)
-
+            return self.getTypedRuleContext(SqlBaseParser.IdentifierSeqContext, 0)
 
         def colTypeList(self):
-            return self.getTypedRuleContext(SqlBaseParser.ColTypeListContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.ColTypeListContext, 0)
 
-
-        def lateralView(self, i:int=None):
+        def lateralView(self, i: int = None):
             if i is None:
                 return self.getTypedRuleContexts(SqlBaseParser.LateralViewContext)
             else:
-                return self.getTypedRuleContext(SqlBaseParser.LateralViewContext,i)
-
+                return self.getTypedRuleContext(SqlBaseParser.LateralViewContext, i)
 
         def aggregation(self):
-            return self.getTypedRuleContext(SqlBaseParser.AggregationContext,0)
-
+            return self.getTypedRuleContext(SqlBaseParser.AggregationContext, 0)
 
         def HAVING(self):
             return self.getToken(SqlBaseParser.HAVING, 0)
 
         def windows(self):
-            return self.getTypedRuleContext(SqlBaseParser.WindowsContext,0)
-
+            return self.getTypedRuleContext(SqlBaseParser.WindowsContext, 0)
 
         def setQuantifier(self):
-            return self.getTypedRuleContext(SqlBaseParser.SetQuantifierContext,0)
-
+            return self.getTypedRuleContext(SqlBaseParser.SetQuantifierContext, 0)
 
         def getRuleIndex(self):
             return SqlBaseParser.RULE_querySpecification
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterQuerySpecification" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterQuerySpecification"):
                 listener.enterQuerySpecification(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitQuerySpecification" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitQuerySpecification"):
                 listener.exitQuerySpecification(self)
-
-
-
 
     def querySpecification(self):
 
         localctx = SqlBaseParser.QuerySpecificationContext(self, self._ctx, self.state)
         self.enterRule(localctx, 70, self.RULE_querySpecification)
-        self._la = 0 # Token type
+        self._la = 0  # Token type
         try:
             self.state = 1337
             self._errHandler.sync(self)
-            la_ = self._interp.adaptivePredict(self._input,171,self._ctx)
+            la_ = self._interp.adaptivePredict(self._input, 171, self._ctx)
             if la_ == 1:
                 self.enterOuterAlt(localctx, 1)
                 self.state = 1260
@@ -8256,20 +10020,18 @@ class SqlBaseParser ( Parser ):
                 self.state = 1263
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==SqlBaseParser.ROW:
+                if _la == SqlBaseParser.ROW:
                     self.state = 1262
                     localctx.inRowFormat = self.rowFormat()
-
 
                 self.state = 1267
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==SqlBaseParser.RECORDWRITER:
+                if _la == SqlBaseParser.RECORDWRITER:
                     self.state = 1265
                     self.match(SqlBaseParser.RECORDWRITER)
                     self.state = 1266
                     localctx.recordWriter = self.match(SqlBaseParser.STRING)
-
 
                 self.state = 1269
                 self.match(SqlBaseParser.USING)
@@ -8277,13 +10039,13 @@ class SqlBaseParser ( Parser ):
                 localctx.script = self.match(SqlBaseParser.STRING)
                 self.state = 1283
                 self._errHandler.sync(self)
-                la_ = self._interp.adaptivePredict(self._input,156,self._ctx)
+                la_ = self._interp.adaptivePredict(self._input, 156, self._ctx)
                 if la_ == 1:
                     self.state = 1271
                     self.match(SqlBaseParser.AS)
                     self.state = 1281
                     self._errHandler.sync(self)
-                    la_ = self._interp.adaptivePredict(self._input,155,self._ctx)
+                    la_ = self._interp.adaptivePredict(self._input, 155, self._ctx)
                     if la_ == 1:
                         self.state = 1272
                         self.identifierSeq()
@@ -8299,7 +10061,7 @@ class SqlBaseParser ( Parser ):
                         self.match(SqlBaseParser.T__0)
                         self.state = 1277
                         self._errHandler.sync(self)
-                        la_ = self._interp.adaptivePredict(self._input,154,self._ctx)
+                        la_ = self._interp.adaptivePredict(self._input, 154, self._ctx)
                         if la_ == 1:
                             self.state = 1275
                             self.identifierSeq()
@@ -8310,49 +10072,41 @@ class SqlBaseParser ( Parser ):
                             self.colTypeList()
                             pass
 
-
                         self.state = 1279
                         self.match(SqlBaseParser.T__1)
                         pass
 
-
-
-
                 self.state = 1286
                 self._errHandler.sync(self)
-                la_ = self._interp.adaptivePredict(self._input,157,self._ctx)
+                la_ = self._interp.adaptivePredict(self._input, 157, self._ctx)
                 if la_ == 1:
                     self.state = 1285
                     localctx.outRowFormat = self.rowFormat()
 
-
                 self.state = 1290
                 self._errHandler.sync(self)
-                la_ = self._interp.adaptivePredict(self._input,158,self._ctx)
+                la_ = self._interp.adaptivePredict(self._input, 158, self._ctx)
                 if la_ == 1:
                     self.state = 1288
                     self.match(SqlBaseParser.RECORDREADER)
                     self.state = 1289
                     localctx.recordReader = self.match(SqlBaseParser.STRING)
 
-
                 self.state = 1293
                 self._errHandler.sync(self)
-                la_ = self._interp.adaptivePredict(self._input,159,self._ctx)
+                la_ = self._interp.adaptivePredict(self._input, 159, self._ctx)
                 if la_ == 1:
                     self.state = 1292
                     self.fromClause()
 
-
                 self.state = 1297
                 self._errHandler.sync(self)
-                la_ = self._interp.adaptivePredict(self._input,160,self._ctx)
+                la_ = self._interp.adaptivePredict(self._input, 160, self._ctx)
                 if la_ == 1:
                     self.state = 1295
                     self.match(SqlBaseParser.WHERE)
                     self.state = 1296
                     localctx.where = self.booleanExpression(0)
-
 
                 pass
 
@@ -8366,21 +10120,19 @@ class SqlBaseParser ( Parser ):
                     localctx.kind = self.match(SqlBaseParser.SELECT)
                     self.state = 1301
                     self._errHandler.sync(self)
-                    la_ = self._interp.adaptivePredict(self._input,161,self._ctx)
+                    la_ = self._interp.adaptivePredict(self._input, 161, self._ctx)
                     if la_ == 1:
                         self.state = 1300
                         self.setQuantifier()
-
 
                     self.state = 1303
                     self.namedExpressionSeq()
                     self.state = 1305
                     self._errHandler.sync(self)
-                    la_ = self._interp.adaptivePredict(self._input,162,self._ctx)
+                    la_ = self._interp.adaptivePredict(self._input, 162, self._ctx)
                     if la_ == 1:
                         self.state = 1304
                         self.fromClause()
-
 
                     pass
                 elif token in [SqlBaseParser.FROM]:
@@ -8388,21 +10140,19 @@ class SqlBaseParser ( Parser ):
                     self.fromClause()
                     self.state = 1313
                     self._errHandler.sync(self)
-                    la_ = self._interp.adaptivePredict(self._input,164,self._ctx)
+                    la_ = self._interp.adaptivePredict(self._input, 164, self._ctx)
                     if la_ == 1:
                         self.state = 1308
                         localctx.kind = self.match(SqlBaseParser.SELECT)
                         self.state = 1310
                         self._errHandler.sync(self)
-                        la_ = self._interp.adaptivePredict(self._input,163,self._ctx)
+                        la_ = self._interp.adaptivePredict(self._input, 163, self._ctx)
                         if la_ == 1:
                             self.state = 1309
                             self.setQuantifier()
 
-
                         self.state = 1312
                         self.namedExpressionSeq()
-
 
                     pass
                 else:
@@ -8410,53 +10160,48 @@ class SqlBaseParser ( Parser ):
 
                 self.state = 1320
                 self._errHandler.sync(self)
-                _alt = self._interp.adaptivePredict(self._input,166,self._ctx)
-                while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
-                    if _alt==1:
+                _alt = self._interp.adaptivePredict(self._input, 166, self._ctx)
+                while _alt != 2 and _alt != ATN.INVALID_ALT_NUMBER:
+                    if _alt == 1:
                         self.state = 1317
-                        self.lateralView() 
+                        self.lateralView()
                     self.state = 1322
                     self._errHandler.sync(self)
-                    _alt = self._interp.adaptivePredict(self._input,166,self._ctx)
+                    _alt = self._interp.adaptivePredict(self._input, 166, self._ctx)
 
                 self.state = 1325
                 self._errHandler.sync(self)
-                la_ = self._interp.adaptivePredict(self._input,167,self._ctx)
+                la_ = self._interp.adaptivePredict(self._input, 167, self._ctx)
                 if la_ == 1:
                     self.state = 1323
                     self.match(SqlBaseParser.WHERE)
                     self.state = 1324
                     localctx.where = self.booleanExpression(0)
 
-
                 self.state = 1328
                 self._errHandler.sync(self)
-                la_ = self._interp.adaptivePredict(self._input,168,self._ctx)
+                la_ = self._interp.adaptivePredict(self._input, 168, self._ctx)
                 if la_ == 1:
                     self.state = 1327
                     self.aggregation()
 
-
                 self.state = 1332
                 self._errHandler.sync(self)
-                la_ = self._interp.adaptivePredict(self._input,169,self._ctx)
+                la_ = self._interp.adaptivePredict(self._input, 169, self._ctx)
                 if la_ == 1:
                     self.state = 1330
                     self.match(SqlBaseParser.HAVING)
                     self.state = 1331
                     localctx.having = self.booleanExpression(0)
 
-
                 self.state = 1335
                 self._errHandler.sync(self)
-                la_ = self._interp.adaptivePredict(self._input,170,self._ctx)
+                la_ = self._interp.adaptivePredict(self._input, 170, self._ctx)
                 if la_ == 1:
                     self.state = 1334
                     self.windows()
 
-
                 pass
-
 
         except RecognitionException as re:
             localctx.exception = re
@@ -8466,44 +10211,40 @@ class SqlBaseParser ( Parser ):
             self.exitRule()
         return localctx
 
-
     class FromClauseContext(ParserRuleContext):
-        __slots__ = 'parser'
+        __slots__ = "parser"
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
         def FROM(self):
             return self.getToken(SqlBaseParser.FROM, 0)
 
-        def relation(self, i:int=None):
+        def relation(self, i: int = None):
             if i is None:
                 return self.getTypedRuleContexts(SqlBaseParser.RelationContext)
             else:
-                return self.getTypedRuleContext(SqlBaseParser.RelationContext,i)
+                return self.getTypedRuleContext(SqlBaseParser.RelationContext, i)
 
-
-        def lateralView(self, i:int=None):
+        def lateralView(self, i: int = None):
             if i is None:
                 return self.getTypedRuleContexts(SqlBaseParser.LateralViewContext)
             else:
-                return self.getTypedRuleContext(SqlBaseParser.LateralViewContext,i)
-
+                return self.getTypedRuleContext(SqlBaseParser.LateralViewContext, i)
 
         def getRuleIndex(self):
             return SqlBaseParser.RULE_fromClause
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterFromClause" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterFromClause"):
                 listener.enterFromClause(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitFromClause" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitFromClause"):
                 listener.exitFromClause(self)
-
-
-
 
     def fromClause(self):
 
@@ -8517,27 +10258,27 @@ class SqlBaseParser ( Parser ):
             self.relation()
             self.state = 1345
             self._errHandler.sync(self)
-            _alt = self._interp.adaptivePredict(self._input,172,self._ctx)
-            while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
-                if _alt==1:
+            _alt = self._interp.adaptivePredict(self._input, 172, self._ctx)
+            while _alt != 2 and _alt != ATN.INVALID_ALT_NUMBER:
+                if _alt == 1:
                     self.state = 1341
                     self.match(SqlBaseParser.T__2)
                     self.state = 1342
-                    self.relation() 
+                    self.relation()
                 self.state = 1347
                 self._errHandler.sync(self)
-                _alt = self._interp.adaptivePredict(self._input,172,self._ctx)
+                _alt = self._interp.adaptivePredict(self._input, 172, self._ctx)
 
             self.state = 1351
             self._errHandler.sync(self)
-            _alt = self._interp.adaptivePredict(self._input,173,self._ctx)
-            while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
-                if _alt==1:
+            _alt = self._interp.adaptivePredict(self._input, 173, self._ctx)
+            while _alt != 2 and _alt != ATN.INVALID_ALT_NUMBER:
+                if _alt == 1:
                     self.state = 1348
-                    self.lateralView() 
+                    self.lateralView()
                 self.state = 1353
                 self._errHandler.sync(self)
-                _alt = self._interp.adaptivePredict(self._input,173,self._ctx)
+                _alt = self._interp.adaptivePredict(self._input, 173, self._ctx)
 
         except RecognitionException as re:
             localctx.exception = re
@@ -8547,16 +10288,17 @@ class SqlBaseParser ( Parser ):
             self.exitRule()
         return localctx
 
-
     class AggregationContext(ParserRuleContext):
-        __slots__ = 'parser'
+        __slots__ = "parser"
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
-            self._expression = None # ExpressionContext
-            self.groupingExpressions = list() # of ExpressionContexts
-            self.kind = None # Token
+            self._expression = None  # ExpressionContext
+            self.groupingExpressions = list()  # of ExpressionContexts
+            self.kind = None  # Token
 
         def GROUP(self):
             return self.getToken(SqlBaseParser.GROUP, 0)
@@ -8564,12 +10306,11 @@ class SqlBaseParser ( Parser ):
         def BY(self):
             return self.getToken(SqlBaseParser.BY, 0)
 
-        def expression(self, i:int=None):
+        def expression(self, i: int = None):
             if i is None:
                 return self.getTypedRuleContexts(SqlBaseParser.ExpressionContext)
             else:
-                return self.getTypedRuleContext(SqlBaseParser.ExpressionContext,i)
-
+                return self.getTypedRuleContext(SqlBaseParser.ExpressionContext, i)
 
         def WITH(self):
             return self.getToken(SqlBaseParser.WITH, 0)
@@ -8577,12 +10318,11 @@ class SqlBaseParser ( Parser ):
         def SETS(self):
             return self.getToken(SqlBaseParser.SETS, 0)
 
-        def groupingSet(self, i:int=None):
+        def groupingSet(self, i: int = None):
             if i is None:
                 return self.getTypedRuleContexts(SqlBaseParser.GroupingSetContext)
             else:
-                return self.getTypedRuleContext(SqlBaseParser.GroupingSetContext,i)
-
+                return self.getTypedRuleContext(SqlBaseParser.GroupingSetContext, i)
 
         def ROLLUP(self):
             return self.getToken(SqlBaseParser.ROLLUP, 0)
@@ -8596,22 +10336,19 @@ class SqlBaseParser ( Parser ):
         def getRuleIndex(self):
             return SqlBaseParser.RULE_aggregation
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterAggregation" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterAggregation"):
                 listener.enterAggregation(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitAggregation" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitAggregation"):
                 listener.exitAggregation(self)
-
-
-
 
     def aggregation(self):
 
         localctx = SqlBaseParser.AggregationContext(self, self._ctx, self.state)
         self.enterRule(localctx, 74, self.RULE_aggregation)
-        self._la = 0 # Token type
+        self._la = 0  # Token type
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 1354
@@ -8623,21 +10360,21 @@ class SqlBaseParser ( Parser ):
             localctx.groupingExpressions.append(localctx._expression)
             self.state = 1361
             self._errHandler.sync(self)
-            _alt = self._interp.adaptivePredict(self._input,174,self._ctx)
-            while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
-                if _alt==1:
+            _alt = self._interp.adaptivePredict(self._input, 174, self._ctx)
+            while _alt != 2 and _alt != ATN.INVALID_ALT_NUMBER:
+                if _alt == 1:
                     self.state = 1357
                     self.match(SqlBaseParser.T__2)
                     self.state = 1358
                     localctx._expression = self.expression()
-                    localctx.groupingExpressions.append(localctx._expression) 
+                    localctx.groupingExpressions.append(localctx._expression)
                 self.state = 1363
                 self._errHandler.sync(self)
-                _alt = self._interp.adaptivePredict(self._input,174,self._ctx)
+                _alt = self._interp.adaptivePredict(self._input, 174, self._ctx)
 
             self.state = 1381
             self._errHandler.sync(self)
-            la_ = self._interp.adaptivePredict(self._input,176,self._ctx)
+            la_ = self._interp.adaptivePredict(self._input, 176, self._ctx)
             if la_ == 1:
                 self.state = 1364
                 self.match(SqlBaseParser.WITH)
@@ -8662,7 +10399,7 @@ class SqlBaseParser ( Parser ):
                 self.state = 1376
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                while _la==SqlBaseParser.T__2:
+                while _la == SqlBaseParser.T__2:
                     self.state = 1372
                     self.match(SqlBaseParser.T__2)
                     self.state = 1373
@@ -8674,7 +10411,6 @@ class SqlBaseParser ( Parser ):
                 self.state = 1379
                 self.match(SqlBaseParser.T__1)
 
-
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)
@@ -8683,44 +10419,41 @@ class SqlBaseParser ( Parser ):
             self.exitRule()
         return localctx
 
-
     class GroupingSetContext(ParserRuleContext):
-        __slots__ = 'parser'
+        __slots__ = "parser"
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
-        def expression(self, i:int=None):
+        def expression(self, i: int = None):
             if i is None:
                 return self.getTypedRuleContexts(SqlBaseParser.ExpressionContext)
             else:
-                return self.getTypedRuleContext(SqlBaseParser.ExpressionContext,i)
-
+                return self.getTypedRuleContext(SqlBaseParser.ExpressionContext, i)
 
         def getRuleIndex(self):
             return SqlBaseParser.RULE_groupingSet
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterGroupingSet" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterGroupingSet"):
                 listener.enterGroupingSet(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitGroupingSet" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitGroupingSet"):
                 listener.exitGroupingSet(self)
-
-
-
 
     def groupingSet(self):
 
         localctx = SqlBaseParser.GroupingSetContext(self, self._ctx, self.state)
         self.enterRule(localctx, 76, self.RULE_groupingSet)
-        self._la = 0 # Token type
+        self._la = 0  # Token type
         try:
             self.state = 1396
             self._errHandler.sync(self)
-            la_ = self._interp.adaptivePredict(self._input,179,self._ctx)
+            la_ = self._interp.adaptivePredict(self._input, 179, self._ctx)
             if la_ == 1:
                 self.enterOuterAlt(localctx, 1)
                 self.state = 1383
@@ -8728,13 +10461,264 @@ class SqlBaseParser ( Parser ):
                 self.state = 1392
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if (((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << SqlBaseParser.T__0) | (1 << SqlBaseParser.SELECT) | (1 << SqlBaseParser.FROM) | (1 << SqlBaseParser.ADD) | (1 << SqlBaseParser.AS) | (1 << SqlBaseParser.ALL) | (1 << SqlBaseParser.DISTINCT) | (1 << SqlBaseParser.WHERE) | (1 << SqlBaseParser.GROUP) | (1 << SqlBaseParser.BY) | (1 << SqlBaseParser.GROUPING) | (1 << SqlBaseParser.SETS) | (1 << SqlBaseParser.CUBE) | (1 << SqlBaseParser.ROLLUP) | (1 << SqlBaseParser.ORDER) | (1 << SqlBaseParser.HAVING) | (1 << SqlBaseParser.LIMIT) | (1 << SqlBaseParser.AT) | (1 << SqlBaseParser.OR) | (1 << SqlBaseParser.AND) | (1 << SqlBaseParser.IN) | (1 << SqlBaseParser.NOT) | (1 << SqlBaseParser.NO) | (1 << SqlBaseParser.EXISTS) | (1 << SqlBaseParser.BETWEEN) | (1 << SqlBaseParser.LIKE) | (1 << SqlBaseParser.RLIKE) | (1 << SqlBaseParser.IS) | (1 << SqlBaseParser.NULL) | (1 << SqlBaseParser.TRUE) | (1 << SqlBaseParser.FALSE) | (1 << SqlBaseParser.NULLS) | (1 << SqlBaseParser.ASC) | (1 << SqlBaseParser.DESC) | (1 << SqlBaseParser.FOR) | (1 << SqlBaseParser.INTERVAL) | (1 << SqlBaseParser.CASE) | (1 << SqlBaseParser.WHEN) | (1 << SqlBaseParser.THEN) | (1 << SqlBaseParser.ELSE) | (1 << SqlBaseParser.END) | (1 << SqlBaseParser.JOIN) | (1 << SqlBaseParser.CROSS) | (1 << SqlBaseParser.OUTER) | (1 << SqlBaseParser.INNER) | (1 << SqlBaseParser.LEFT) | (1 << SqlBaseParser.SEMI) | (1 << SqlBaseParser.RIGHT) | (1 << SqlBaseParser.FULL) | (1 << SqlBaseParser.NATURAL) | (1 << SqlBaseParser.ON) | (1 << SqlBaseParser.LATERAL) | (1 << SqlBaseParser.WINDOW) | (1 << SqlBaseParser.OVER) | (1 << SqlBaseParser.PARTITION) | (1 << SqlBaseParser.RANGE) | (1 << SqlBaseParser.ROWS))) != 0) or ((((_la - 64)) & ~0x3f) == 0 and ((1 << (_la - 64)) & ((1 << (SqlBaseParser.UNBOUNDED - 64)) | (1 << (SqlBaseParser.PRECEDING - 64)) | (1 << (SqlBaseParser.FOLLOWING - 64)) | (1 << (SqlBaseParser.CURRENT - 64)) | (1 << (SqlBaseParser.ROW - 64)) | (1 << (SqlBaseParser.WITH - 64)) | (1 << (SqlBaseParser.VALUES - 64)) | (1 << (SqlBaseParser.CREATE - 64)) | (1 << (SqlBaseParser.TABLE - 64)) | (1 << (SqlBaseParser.VIEW - 64)) | (1 << (SqlBaseParser.REPLACE - 64)) | (1 << (SqlBaseParser.INSERT - 64)) | (1 << (SqlBaseParser.DELETE - 64)) | (1 << (SqlBaseParser.INTO - 64)) | (1 << (SqlBaseParser.DESCRIBE - 64)) | (1 << (SqlBaseParser.EXPLAIN - 64)) | (1 << (SqlBaseParser.FORMAT - 64)) | (1 << (SqlBaseParser.LOGICAL - 64)) | (1 << (SqlBaseParser.CODEGEN - 64)) | (1 << (SqlBaseParser.CAST - 64)) | (1 << (SqlBaseParser.SHOW - 64)) | (1 << (SqlBaseParser.TABLES - 64)) | (1 << (SqlBaseParser.COLUMNS - 64)) | (1 << (SqlBaseParser.COLUMN - 64)) | (1 << (SqlBaseParser.USE - 64)) | (1 << (SqlBaseParser.PARTITIONS - 64)) | (1 << (SqlBaseParser.FUNCTIONS - 64)) | (1 << (SqlBaseParser.DROP - 64)) | (1 << (SqlBaseParser.UNION - 64)) | (1 << (SqlBaseParser.EXCEPT - 64)) | (1 << (SqlBaseParser.INTERSECT - 64)) | (1 << (SqlBaseParser.TO - 64)) | (1 << (SqlBaseParser.TABLESAMPLE - 64)) | (1 << (SqlBaseParser.STRATIFY - 64)) | (1 << (SqlBaseParser.ALTER - 64)) | (1 << (SqlBaseParser.RENAME - 64)) | (1 << (SqlBaseParser.ARRAY - 64)) | (1 << (SqlBaseParser.MAP - 64)) | (1 << (SqlBaseParser.STRUCT - 64)) | (1 << (SqlBaseParser.COMMENT - 64)) | (1 << (SqlBaseParser.SET - 64)) | (1 << (SqlBaseParser.RESET - 64)) | (1 << (SqlBaseParser.DATA - 64)) | (1 << (SqlBaseParser.START - 64)) | (1 << (SqlBaseParser.TRANSACTION - 64)) | (1 << (SqlBaseParser.COMMIT - 64)) | (1 << (SqlBaseParser.ROLLBACK - 64)) | (1 << (SqlBaseParser.MACRO - 64)) | (1 << (SqlBaseParser.IF - 64)) | (1 << (SqlBaseParser.PLUS - 64)) | (1 << (SqlBaseParser.MINUS - 64)) | (1 << (SqlBaseParser.ASTERISK - 64)) | (1 << (SqlBaseParser.DIV - 64)) | (1 << (SqlBaseParser.TILDE - 64)))) != 0) or ((((_la - 131)) & ~0x3f) == 0 and ((1 << (_la - 131)) & ((1 << (SqlBaseParser.PERCENTLIT - 131)) | (1 << (SqlBaseParser.BUCKET - 131)) | (1 << (SqlBaseParser.OUT - 131)) | (1 << (SqlBaseParser.OF - 131)) | (1 << (SqlBaseParser.SORT - 131)) | (1 << (SqlBaseParser.CLUSTER - 131)) | (1 << (SqlBaseParser.DISTRIBUTE - 131)) | (1 << (SqlBaseParser.OVERWRITE - 131)) | (1 << (SqlBaseParser.TRANSFORM - 131)) | (1 << (SqlBaseParser.REDUCE - 131)) | (1 << (SqlBaseParser.USING - 131)) | (1 << (SqlBaseParser.SERDE - 131)) | (1 << (SqlBaseParser.SERDEPROPERTIES - 131)) | (1 << (SqlBaseParser.RECORDREADER - 131)) | (1 << (SqlBaseParser.RECORDWRITER - 131)) | (1 << (SqlBaseParser.DELIMITED - 131)) | (1 << (SqlBaseParser.FIELDS - 131)) | (1 << (SqlBaseParser.TERMINATED - 131)) | (1 << (SqlBaseParser.COLLECTION - 131)) | (1 << (SqlBaseParser.ITEMS - 131)) | (1 << (SqlBaseParser.KEYS - 131)) | (1 << (SqlBaseParser.ESCAPED - 131)) | (1 << (SqlBaseParser.LINES - 131)) | (1 << (SqlBaseParser.SEPARATED - 131)) | (1 << (SqlBaseParser.FUNCTION - 131)) | (1 << (SqlBaseParser.EXTENDED - 131)) | (1 << (SqlBaseParser.REFRESH - 131)) | (1 << (SqlBaseParser.CLEAR - 131)) | (1 << (SqlBaseParser.CACHE - 131)) | (1 << (SqlBaseParser.UNCACHE - 131)) | (1 << (SqlBaseParser.LAZY - 131)) | (1 << (SqlBaseParser.FORMATTED - 131)) | (1 << (SqlBaseParser.TEMPORARY - 131)) | (1 << (SqlBaseParser.OPTIONS - 131)) | (1 << (SqlBaseParser.UNSET - 131)) | (1 << (SqlBaseParser.TBLPROPERTIES - 131)) | (1 << (SqlBaseParser.DBPROPERTIES - 131)) | (1 << (SqlBaseParser.BUCKETS - 131)) | (1 << (SqlBaseParser.SKEWED - 131)) | (1 << (SqlBaseParser.STORED - 131)) | (1 << (SqlBaseParser.DIRECTORIES - 131)) | (1 << (SqlBaseParser.LOCATION - 131)) | (1 << (SqlBaseParser.EXCHANGE - 131)) | (1 << (SqlBaseParser.ARCHIVE - 131)) | (1 << (SqlBaseParser.UNARCHIVE - 131)) | (1 << (SqlBaseParser.FILEFORMAT - 131)) | (1 << (SqlBaseParser.TOUCH - 131)) | (1 << (SqlBaseParser.COMPACT - 131)) | (1 << (SqlBaseParser.CONCATENATE - 131)) | (1 << (SqlBaseParser.CHANGE - 131)) | (1 << (SqlBaseParser.CASCADE - 131)) | (1 << (SqlBaseParser.RESTRICT - 131)) | (1 << (SqlBaseParser.CLUSTERED - 131)) | (1 << (SqlBaseParser.SORTED - 131)) | (1 << (SqlBaseParser.PURGE - 131)) | (1 << (SqlBaseParser.INPUTFORMAT - 131)) | (1 << (SqlBaseParser.OUTPUTFORMAT - 131)) | (1 << (SqlBaseParser.DATABASE - 131)) | (1 << (SqlBaseParser.DATABASES - 131)) | (1 << (SqlBaseParser.DFS - 131)) | (1 << (SqlBaseParser.TRUNCATE - 131)) | (1 << (SqlBaseParser.ANALYZE - 131)) | (1 << (SqlBaseParser.COMPUTE - 131)) | (1 << (SqlBaseParser.LIST - 131)))) != 0) or ((((_la - 195)) & ~0x3f) == 0 and ((1 << (_la - 195)) & ((1 << (SqlBaseParser.STATISTICS - 195)) | (1 << (SqlBaseParser.PARTITIONED - 195)) | (1 << (SqlBaseParser.EXTERNAL - 195)) | (1 << (SqlBaseParser.DEFINED - 195)) | (1 << (SqlBaseParser.REVOKE - 195)) | (1 << (SqlBaseParser.GRANT - 195)) | (1 << (SqlBaseParser.LOCK - 195)) | (1 << (SqlBaseParser.UNLOCK - 195)) | (1 << (SqlBaseParser.MSCK - 195)) | (1 << (SqlBaseParser.REPAIR - 195)) | (1 << (SqlBaseParser.RECOVER - 195)) | (1 << (SqlBaseParser.EXPORT - 195)) | (1 << (SqlBaseParser.IMPORT - 195)) | (1 << (SqlBaseParser.LOAD - 195)) | (1 << (SqlBaseParser.ROLE - 195)) | (1 << (SqlBaseParser.ROLES - 195)) | (1 << (SqlBaseParser.COMPACTIONS - 195)) | (1 << (SqlBaseParser.PRINCIPALS - 195)) | (1 << (SqlBaseParser.TRANSACTIONS - 195)) | (1 << (SqlBaseParser.INDEX - 195)) | (1 << (SqlBaseParser.INDEXES - 195)) | (1 << (SqlBaseParser.LOCKS - 195)) | (1 << (SqlBaseParser.OPTION - 195)) | (1 << (SqlBaseParser.ANTI - 195)) | (1 << (SqlBaseParser.LOCAL - 195)) | (1 << (SqlBaseParser.INPATH - 195)) | (1 << (SqlBaseParser.CURRENT_DATE - 195)) | (1 << (SqlBaseParser.CURRENT_TIMESTAMP - 195)) | (1 << (SqlBaseParser.STRING - 195)) | (1 << (SqlBaseParser.BIGINT_LITERAL - 195)) | (1 << (SqlBaseParser.SMALLINT_LITERAL - 195)) | (1 << (SqlBaseParser.TINYINT_LITERAL - 195)) | (1 << (SqlBaseParser.INTEGER_VALUE - 195)) | (1 << (SqlBaseParser.DECIMAL_VALUE - 195)) | (1 << (SqlBaseParser.SCIENTIFIC_DECIMAL_VALUE - 195)) | (1 << (SqlBaseParser.DOUBLE_LITERAL - 195)) | (1 << (SqlBaseParser.BIGDECIMAL_LITERAL - 195)) | (1 << (SqlBaseParser.IDENTIFIER - 195)) | (1 << (SqlBaseParser.BACKQUOTED_IDENTIFIER - 195)))) != 0):
+                if (
+                    (
+                        ((_la) & ~0x3F) == 0
+                        and (
+                            (1 << _la)
+                            & (
+                                (1 << SqlBaseParser.T__0)
+                                | (1 << SqlBaseParser.SELECT)
+                                | (1 << SqlBaseParser.FROM)
+                                | (1 << SqlBaseParser.ADD)
+                                | (1 << SqlBaseParser.AS)
+                                | (1 << SqlBaseParser.ALL)
+                                | (1 << SqlBaseParser.DISTINCT)
+                                | (1 << SqlBaseParser.WHERE)
+                                | (1 << SqlBaseParser.GROUP)
+                                | (1 << SqlBaseParser.BY)
+                                | (1 << SqlBaseParser.GROUPING)
+                                | (1 << SqlBaseParser.SETS)
+                                | (1 << SqlBaseParser.CUBE)
+                                | (1 << SqlBaseParser.ROLLUP)
+                                | (1 << SqlBaseParser.ORDER)
+                                | (1 << SqlBaseParser.HAVING)
+                                | (1 << SqlBaseParser.LIMIT)
+                                | (1 << SqlBaseParser.AT)
+                                | (1 << SqlBaseParser.OR)
+                                | (1 << SqlBaseParser.AND)
+                                | (1 << SqlBaseParser.IN)
+                                | (1 << SqlBaseParser.NOT)
+                                | (1 << SqlBaseParser.NO)
+                                | (1 << SqlBaseParser.EXISTS)
+                                | (1 << SqlBaseParser.BETWEEN)
+                                | (1 << SqlBaseParser.LIKE)
+                                | (1 << SqlBaseParser.RLIKE)
+                                | (1 << SqlBaseParser.IS)
+                                | (1 << SqlBaseParser.NULL)
+                                | (1 << SqlBaseParser.TRUE)
+                                | (1 << SqlBaseParser.FALSE)
+                                | (1 << SqlBaseParser.NULLS)
+                                | (1 << SqlBaseParser.ASC)
+                                | (1 << SqlBaseParser.DESC)
+                                | (1 << SqlBaseParser.FOR)
+                                | (1 << SqlBaseParser.INTERVAL)
+                                | (1 << SqlBaseParser.CASE)
+                                | (1 << SqlBaseParser.WHEN)
+                                | (1 << SqlBaseParser.THEN)
+                                | (1 << SqlBaseParser.ELSE)
+                                | (1 << SqlBaseParser.END)
+                                | (1 << SqlBaseParser.JOIN)
+                                | (1 << SqlBaseParser.CROSS)
+                                | (1 << SqlBaseParser.OUTER)
+                                | (1 << SqlBaseParser.INNER)
+                                | (1 << SqlBaseParser.LEFT)
+                                | (1 << SqlBaseParser.SEMI)
+                                | (1 << SqlBaseParser.RIGHT)
+                                | (1 << SqlBaseParser.FULL)
+                                | (1 << SqlBaseParser.NATURAL)
+                                | (1 << SqlBaseParser.ON)
+                                | (1 << SqlBaseParser.LATERAL)
+                                | (1 << SqlBaseParser.WINDOW)
+                                | (1 << SqlBaseParser.OVER)
+                                | (1 << SqlBaseParser.PARTITION)
+                                | (1 << SqlBaseParser.RANGE)
+                                | (1 << SqlBaseParser.ROWS)
+                            )
+                        )
+                        != 0
+                    )
+                    or (
+                        (((_la - 64)) & ~0x3F) == 0
+                        and (
+                            (1 << (_la - 64))
+                            & (
+                                (1 << (SqlBaseParser.UNBOUNDED - 64))
+                                | (1 << (SqlBaseParser.PRECEDING - 64))
+                                | (1 << (SqlBaseParser.FOLLOWING - 64))
+                                | (1 << (SqlBaseParser.CURRENT - 64))
+                                | (1 << (SqlBaseParser.ROW - 64))
+                                | (1 << (SqlBaseParser.WITH - 64))
+                                | (1 << (SqlBaseParser.VALUES - 64))
+                                | (1 << (SqlBaseParser.CREATE - 64))
+                                | (1 << (SqlBaseParser.TABLE - 64))
+                                | (1 << (SqlBaseParser.VIEW - 64))
+                                | (1 << (SqlBaseParser.REPLACE - 64))
+                                | (1 << (SqlBaseParser.INSERT - 64))
+                                | (1 << (SqlBaseParser.DELETE - 64))
+                                | (1 << (SqlBaseParser.INTO - 64))
+                                | (1 << (SqlBaseParser.DESCRIBE - 64))
+                                | (1 << (SqlBaseParser.EXPLAIN - 64))
+                                | (1 << (SqlBaseParser.FORMAT - 64))
+                                | (1 << (SqlBaseParser.LOGICAL - 64))
+                                | (1 << (SqlBaseParser.CODEGEN - 64))
+                                | (1 << (SqlBaseParser.CAST - 64))
+                                | (1 << (SqlBaseParser.SHOW - 64))
+                                | (1 << (SqlBaseParser.TABLES - 64))
+                                | (1 << (SqlBaseParser.COLUMNS - 64))
+                                | (1 << (SqlBaseParser.COLUMN - 64))
+                                | (1 << (SqlBaseParser.USE - 64))
+                                | (1 << (SqlBaseParser.PARTITIONS - 64))
+                                | (1 << (SqlBaseParser.FUNCTIONS - 64))
+                                | (1 << (SqlBaseParser.DROP - 64))
+                                | (1 << (SqlBaseParser.UNION - 64))
+                                | (1 << (SqlBaseParser.EXCEPT - 64))
+                                | (1 << (SqlBaseParser.INTERSECT - 64))
+                                | (1 << (SqlBaseParser.TO - 64))
+                                | (1 << (SqlBaseParser.TABLESAMPLE - 64))
+                                | (1 << (SqlBaseParser.STRATIFY - 64))
+                                | (1 << (SqlBaseParser.ALTER - 64))
+                                | (1 << (SqlBaseParser.RENAME - 64))
+                                | (1 << (SqlBaseParser.ARRAY - 64))
+                                | (1 << (SqlBaseParser.MAP - 64))
+                                | (1 << (SqlBaseParser.STRUCT - 64))
+                                | (1 << (SqlBaseParser.COMMENT - 64))
+                                | (1 << (SqlBaseParser.SET - 64))
+                                | (1 << (SqlBaseParser.RESET - 64))
+                                | (1 << (SqlBaseParser.DATA - 64))
+                                | (1 << (SqlBaseParser.START - 64))
+                                | (1 << (SqlBaseParser.TRANSACTION - 64))
+                                | (1 << (SqlBaseParser.COMMIT - 64))
+                                | (1 << (SqlBaseParser.ROLLBACK - 64))
+                                | (1 << (SqlBaseParser.MACRO - 64))
+                                | (1 << (SqlBaseParser.IF - 64))
+                                | (1 << (SqlBaseParser.PLUS - 64))
+                                | (1 << (SqlBaseParser.MINUS - 64))
+                                | (1 << (SqlBaseParser.ASTERISK - 64))
+                                | (1 << (SqlBaseParser.DIV - 64))
+                                | (1 << (SqlBaseParser.TILDE - 64))
+                            )
+                        )
+                        != 0
+                    )
+                    or (
+                        (((_la - 131)) & ~0x3F) == 0
+                        and (
+                            (1 << (_la - 131))
+                            & (
+                                (1 << (SqlBaseParser.PERCENTLIT - 131))
+                                | (1 << (SqlBaseParser.BUCKET - 131))
+                                | (1 << (SqlBaseParser.OUT - 131))
+                                | (1 << (SqlBaseParser.OF - 131))
+                                | (1 << (SqlBaseParser.SORT - 131))
+                                | (1 << (SqlBaseParser.CLUSTER - 131))
+                                | (1 << (SqlBaseParser.DISTRIBUTE - 131))
+                                | (1 << (SqlBaseParser.OVERWRITE - 131))
+                                | (1 << (SqlBaseParser.TRANSFORM - 131))
+                                | (1 << (SqlBaseParser.REDUCE - 131))
+                                | (1 << (SqlBaseParser.USING - 131))
+                                | (1 << (SqlBaseParser.SERDE - 131))
+                                | (1 << (SqlBaseParser.SERDEPROPERTIES - 131))
+                                | (1 << (SqlBaseParser.RECORDREADER - 131))
+                                | (1 << (SqlBaseParser.RECORDWRITER - 131))
+                                | (1 << (SqlBaseParser.DELIMITED - 131))
+                                | (1 << (SqlBaseParser.FIELDS - 131))
+                                | (1 << (SqlBaseParser.TERMINATED - 131))
+                                | (1 << (SqlBaseParser.COLLECTION - 131))
+                                | (1 << (SqlBaseParser.ITEMS - 131))
+                                | (1 << (SqlBaseParser.KEYS - 131))
+                                | (1 << (SqlBaseParser.ESCAPED - 131))
+                                | (1 << (SqlBaseParser.LINES - 131))
+                                | (1 << (SqlBaseParser.SEPARATED - 131))
+                                | (1 << (SqlBaseParser.FUNCTION - 131))
+                                | (1 << (SqlBaseParser.EXTENDED - 131))
+                                | (1 << (SqlBaseParser.REFRESH - 131))
+                                | (1 << (SqlBaseParser.CLEAR - 131))
+                                | (1 << (SqlBaseParser.CACHE - 131))
+                                | (1 << (SqlBaseParser.UNCACHE - 131))
+                                | (1 << (SqlBaseParser.LAZY - 131))
+                                | (1 << (SqlBaseParser.FORMATTED - 131))
+                                | (1 << (SqlBaseParser.TEMPORARY - 131))
+                                | (1 << (SqlBaseParser.OPTIONS - 131))
+                                | (1 << (SqlBaseParser.UNSET - 131))
+                                | (1 << (SqlBaseParser.TBLPROPERTIES - 131))
+                                | (1 << (SqlBaseParser.DBPROPERTIES - 131))
+                                | (1 << (SqlBaseParser.BUCKETS - 131))
+                                | (1 << (SqlBaseParser.SKEWED - 131))
+                                | (1 << (SqlBaseParser.STORED - 131))
+                                | (1 << (SqlBaseParser.DIRECTORIES - 131))
+                                | (1 << (SqlBaseParser.LOCATION - 131))
+                                | (1 << (SqlBaseParser.EXCHANGE - 131))
+                                | (1 << (SqlBaseParser.ARCHIVE - 131))
+                                | (1 << (SqlBaseParser.UNARCHIVE - 131))
+                                | (1 << (SqlBaseParser.FILEFORMAT - 131))
+                                | (1 << (SqlBaseParser.TOUCH - 131))
+                                | (1 << (SqlBaseParser.COMPACT - 131))
+                                | (1 << (SqlBaseParser.CONCATENATE - 131))
+                                | (1 << (SqlBaseParser.CHANGE - 131))
+                                | (1 << (SqlBaseParser.CASCADE - 131))
+                                | (1 << (SqlBaseParser.RESTRICT - 131))
+                                | (1 << (SqlBaseParser.CLUSTERED - 131))
+                                | (1 << (SqlBaseParser.SORTED - 131))
+                                | (1 << (SqlBaseParser.PURGE - 131))
+                                | (1 << (SqlBaseParser.INPUTFORMAT - 131))
+                                | (1 << (SqlBaseParser.OUTPUTFORMAT - 131))
+                                | (1 << (SqlBaseParser.DATABASE - 131))
+                                | (1 << (SqlBaseParser.DATABASES - 131))
+                                | (1 << (SqlBaseParser.DFS - 131))
+                                | (1 << (SqlBaseParser.TRUNCATE - 131))
+                                | (1 << (SqlBaseParser.ANALYZE - 131))
+                                | (1 << (SqlBaseParser.COMPUTE - 131))
+                                | (1 << (SqlBaseParser.LIST - 131))
+                            )
+                        )
+                        != 0
+                    )
+                    or (
+                        (((_la - 195)) & ~0x3F) == 0
+                        and (
+                            (1 << (_la - 195))
+                            & (
+                                (1 << (SqlBaseParser.STATISTICS - 195))
+                                | (1 << (SqlBaseParser.PARTITIONED - 195))
+                                | (1 << (SqlBaseParser.EXTERNAL - 195))
+                                | (1 << (SqlBaseParser.DEFINED - 195))
+                                | (1 << (SqlBaseParser.REVOKE - 195))
+                                | (1 << (SqlBaseParser.GRANT - 195))
+                                | (1 << (SqlBaseParser.LOCK - 195))
+                                | (1 << (SqlBaseParser.UNLOCK - 195))
+                                | (1 << (SqlBaseParser.MSCK - 195))
+                                | (1 << (SqlBaseParser.REPAIR - 195))
+                                | (1 << (SqlBaseParser.RECOVER - 195))
+                                | (1 << (SqlBaseParser.EXPORT - 195))
+                                | (1 << (SqlBaseParser.IMPORT - 195))
+                                | (1 << (SqlBaseParser.LOAD - 195))
+                                | (1 << (SqlBaseParser.ROLE - 195))
+                                | (1 << (SqlBaseParser.ROLES - 195))
+                                | (1 << (SqlBaseParser.COMPACTIONS - 195))
+                                | (1 << (SqlBaseParser.PRINCIPALS - 195))
+                                | (1 << (SqlBaseParser.TRANSACTIONS - 195))
+                                | (1 << (SqlBaseParser.INDEX - 195))
+                                | (1 << (SqlBaseParser.INDEXES - 195))
+                                | (1 << (SqlBaseParser.LOCKS - 195))
+                                | (1 << (SqlBaseParser.OPTION - 195))
+                                | (1 << (SqlBaseParser.ANTI - 195))
+                                | (1 << (SqlBaseParser.LOCAL - 195))
+                                | (1 << (SqlBaseParser.INPATH - 195))
+                                | (1 << (SqlBaseParser.CURRENT_DATE - 195))
+                                | (1 << (SqlBaseParser.CURRENT_TIMESTAMP - 195))
+                                | (1 << (SqlBaseParser.STRING - 195))
+                                | (1 << (SqlBaseParser.BIGINT_LITERAL - 195))
+                                | (1 << (SqlBaseParser.SMALLINT_LITERAL - 195))
+                                | (1 << (SqlBaseParser.TINYINT_LITERAL - 195))
+                                | (1 << (SqlBaseParser.INTEGER_VALUE - 195))
+                                | (1 << (SqlBaseParser.DECIMAL_VALUE - 195))
+                                | (1 << (SqlBaseParser.SCIENTIFIC_DECIMAL_VALUE - 195))
+                                | (1 << (SqlBaseParser.DOUBLE_LITERAL - 195))
+                                | (1 << (SqlBaseParser.BIGDECIMAL_LITERAL - 195))
+                                | (1 << (SqlBaseParser.IDENTIFIER - 195))
+                                | (1 << (SqlBaseParser.BACKQUOTED_IDENTIFIER - 195))
+                            )
+                        )
+                        != 0
+                    )
+                ):
                     self.state = 1384
                     self.expression()
                     self.state = 1389
                     self._errHandler.sync(self)
                     _la = self._input.LA(1)
-                    while _la==SqlBaseParser.T__2:
+                    while _la == SqlBaseParser.T__2:
                         self.state = 1385
                         self.match(SqlBaseParser.T__2)
                         self.state = 1386
@@ -8742,8 +10726,6 @@ class SqlBaseParser ( Parser ):
                         self.state = 1391
                         self._errHandler.sync(self)
                         _la = self._input.LA(1)
-
-
 
                 self.state = 1394
                 self.match(SqlBaseParser.T__1)
@@ -8755,7 +10737,6 @@ class SqlBaseParser ( Parser ):
                 self.expression()
                 pass
 
-
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)
@@ -8764,16 +10745,17 @@ class SqlBaseParser ( Parser ):
             self.exitRule()
         return localctx
 
-
     class LateralViewContext(ParserRuleContext):
-        __slots__ = 'parser'
+        __slots__ = "parser"
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
-            self.tblName = None # IdentifierContext
-            self._identifier = None # IdentifierContext
-            self.colName = list() # of IdentifierContexts
+            self.tblName = None  # IdentifierContext
+            self._identifier = None  # IdentifierContext
+            self.colName = list()  # of IdentifierContexts
 
         def LATERAL(self):
             return self.getToken(SqlBaseParser.LATERAL, 0)
@@ -8782,25 +10764,22 @@ class SqlBaseParser ( Parser ):
             return self.getToken(SqlBaseParser.VIEW, 0)
 
         def qualifiedName(self):
-            return self.getTypedRuleContext(SqlBaseParser.QualifiedNameContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.QualifiedNameContext, 0)
 
-
-        def identifier(self, i:int=None):
+        def identifier(self, i: int = None):
             if i is None:
                 return self.getTypedRuleContexts(SqlBaseParser.IdentifierContext)
             else:
-                return self.getTypedRuleContext(SqlBaseParser.IdentifierContext,i)
-
+                return self.getTypedRuleContext(SqlBaseParser.IdentifierContext, i)
 
         def OUTER(self):
             return self.getToken(SqlBaseParser.OUTER, 0)
 
-        def expression(self, i:int=None):
+        def expression(self, i: int = None):
             if i is None:
                 return self.getTypedRuleContexts(SqlBaseParser.ExpressionContext)
             else:
-                return self.getTypedRuleContext(SqlBaseParser.ExpressionContext,i)
-
+                return self.getTypedRuleContext(SqlBaseParser.ExpressionContext, i)
 
         def AS(self):
             return self.getToken(SqlBaseParser.AS, 0)
@@ -8808,22 +10787,19 @@ class SqlBaseParser ( Parser ):
         def getRuleIndex(self):
             return SqlBaseParser.RULE_lateralView
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterLateralView" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterLateralView"):
                 listener.enterLateralView(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitLateralView" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitLateralView"):
                 listener.exitLateralView(self)
-
-
-
 
     def lateralView(self):
 
         localctx = SqlBaseParser.LateralViewContext(self, self._ctx, self.state)
         self.enterRule(localctx, 78, self.RULE_lateralView)
-        self._la = 0 # Token type
+        self._la = 0  # Token type
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 1398
@@ -8832,11 +10808,10 @@ class SqlBaseParser ( Parser ):
             self.match(SqlBaseParser.VIEW)
             self.state = 1401
             self._errHandler.sync(self)
-            la_ = self._interp.adaptivePredict(self._input,180,self._ctx)
+            la_ = self._interp.adaptivePredict(self._input, 180, self._ctx)
             if la_ == 1:
                 self.state = 1400
                 self.match(SqlBaseParser.OUTER)
-
 
             self.state = 1403
             self.qualifiedName()
@@ -8845,13 +10820,264 @@ class SqlBaseParser ( Parser ):
             self.state = 1413
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if (((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << SqlBaseParser.T__0) | (1 << SqlBaseParser.SELECT) | (1 << SqlBaseParser.FROM) | (1 << SqlBaseParser.ADD) | (1 << SqlBaseParser.AS) | (1 << SqlBaseParser.ALL) | (1 << SqlBaseParser.DISTINCT) | (1 << SqlBaseParser.WHERE) | (1 << SqlBaseParser.GROUP) | (1 << SqlBaseParser.BY) | (1 << SqlBaseParser.GROUPING) | (1 << SqlBaseParser.SETS) | (1 << SqlBaseParser.CUBE) | (1 << SqlBaseParser.ROLLUP) | (1 << SqlBaseParser.ORDER) | (1 << SqlBaseParser.HAVING) | (1 << SqlBaseParser.LIMIT) | (1 << SqlBaseParser.AT) | (1 << SqlBaseParser.OR) | (1 << SqlBaseParser.AND) | (1 << SqlBaseParser.IN) | (1 << SqlBaseParser.NOT) | (1 << SqlBaseParser.NO) | (1 << SqlBaseParser.EXISTS) | (1 << SqlBaseParser.BETWEEN) | (1 << SqlBaseParser.LIKE) | (1 << SqlBaseParser.RLIKE) | (1 << SqlBaseParser.IS) | (1 << SqlBaseParser.NULL) | (1 << SqlBaseParser.TRUE) | (1 << SqlBaseParser.FALSE) | (1 << SqlBaseParser.NULLS) | (1 << SqlBaseParser.ASC) | (1 << SqlBaseParser.DESC) | (1 << SqlBaseParser.FOR) | (1 << SqlBaseParser.INTERVAL) | (1 << SqlBaseParser.CASE) | (1 << SqlBaseParser.WHEN) | (1 << SqlBaseParser.THEN) | (1 << SqlBaseParser.ELSE) | (1 << SqlBaseParser.END) | (1 << SqlBaseParser.JOIN) | (1 << SqlBaseParser.CROSS) | (1 << SqlBaseParser.OUTER) | (1 << SqlBaseParser.INNER) | (1 << SqlBaseParser.LEFT) | (1 << SqlBaseParser.SEMI) | (1 << SqlBaseParser.RIGHT) | (1 << SqlBaseParser.FULL) | (1 << SqlBaseParser.NATURAL) | (1 << SqlBaseParser.ON) | (1 << SqlBaseParser.LATERAL) | (1 << SqlBaseParser.WINDOW) | (1 << SqlBaseParser.OVER) | (1 << SqlBaseParser.PARTITION) | (1 << SqlBaseParser.RANGE) | (1 << SqlBaseParser.ROWS))) != 0) or ((((_la - 64)) & ~0x3f) == 0 and ((1 << (_la - 64)) & ((1 << (SqlBaseParser.UNBOUNDED - 64)) | (1 << (SqlBaseParser.PRECEDING - 64)) | (1 << (SqlBaseParser.FOLLOWING - 64)) | (1 << (SqlBaseParser.CURRENT - 64)) | (1 << (SqlBaseParser.ROW - 64)) | (1 << (SqlBaseParser.WITH - 64)) | (1 << (SqlBaseParser.VALUES - 64)) | (1 << (SqlBaseParser.CREATE - 64)) | (1 << (SqlBaseParser.TABLE - 64)) | (1 << (SqlBaseParser.VIEW - 64)) | (1 << (SqlBaseParser.REPLACE - 64)) | (1 << (SqlBaseParser.INSERT - 64)) | (1 << (SqlBaseParser.DELETE - 64)) | (1 << (SqlBaseParser.INTO - 64)) | (1 << (SqlBaseParser.DESCRIBE - 64)) | (1 << (SqlBaseParser.EXPLAIN - 64)) | (1 << (SqlBaseParser.FORMAT - 64)) | (1 << (SqlBaseParser.LOGICAL - 64)) | (1 << (SqlBaseParser.CODEGEN - 64)) | (1 << (SqlBaseParser.CAST - 64)) | (1 << (SqlBaseParser.SHOW - 64)) | (1 << (SqlBaseParser.TABLES - 64)) | (1 << (SqlBaseParser.COLUMNS - 64)) | (1 << (SqlBaseParser.COLUMN - 64)) | (1 << (SqlBaseParser.USE - 64)) | (1 << (SqlBaseParser.PARTITIONS - 64)) | (1 << (SqlBaseParser.FUNCTIONS - 64)) | (1 << (SqlBaseParser.DROP - 64)) | (1 << (SqlBaseParser.UNION - 64)) | (1 << (SqlBaseParser.EXCEPT - 64)) | (1 << (SqlBaseParser.INTERSECT - 64)) | (1 << (SqlBaseParser.TO - 64)) | (1 << (SqlBaseParser.TABLESAMPLE - 64)) | (1 << (SqlBaseParser.STRATIFY - 64)) | (1 << (SqlBaseParser.ALTER - 64)) | (1 << (SqlBaseParser.RENAME - 64)) | (1 << (SqlBaseParser.ARRAY - 64)) | (1 << (SqlBaseParser.MAP - 64)) | (1 << (SqlBaseParser.STRUCT - 64)) | (1 << (SqlBaseParser.COMMENT - 64)) | (1 << (SqlBaseParser.SET - 64)) | (1 << (SqlBaseParser.RESET - 64)) | (1 << (SqlBaseParser.DATA - 64)) | (1 << (SqlBaseParser.START - 64)) | (1 << (SqlBaseParser.TRANSACTION - 64)) | (1 << (SqlBaseParser.COMMIT - 64)) | (1 << (SqlBaseParser.ROLLBACK - 64)) | (1 << (SqlBaseParser.MACRO - 64)) | (1 << (SqlBaseParser.IF - 64)) | (1 << (SqlBaseParser.PLUS - 64)) | (1 << (SqlBaseParser.MINUS - 64)) | (1 << (SqlBaseParser.ASTERISK - 64)) | (1 << (SqlBaseParser.DIV - 64)) | (1 << (SqlBaseParser.TILDE - 64)))) != 0) or ((((_la - 131)) & ~0x3f) == 0 and ((1 << (_la - 131)) & ((1 << (SqlBaseParser.PERCENTLIT - 131)) | (1 << (SqlBaseParser.BUCKET - 131)) | (1 << (SqlBaseParser.OUT - 131)) | (1 << (SqlBaseParser.OF - 131)) | (1 << (SqlBaseParser.SORT - 131)) | (1 << (SqlBaseParser.CLUSTER - 131)) | (1 << (SqlBaseParser.DISTRIBUTE - 131)) | (1 << (SqlBaseParser.OVERWRITE - 131)) | (1 << (SqlBaseParser.TRANSFORM - 131)) | (1 << (SqlBaseParser.REDUCE - 131)) | (1 << (SqlBaseParser.USING - 131)) | (1 << (SqlBaseParser.SERDE - 131)) | (1 << (SqlBaseParser.SERDEPROPERTIES - 131)) | (1 << (SqlBaseParser.RECORDREADER - 131)) | (1 << (SqlBaseParser.RECORDWRITER - 131)) | (1 << (SqlBaseParser.DELIMITED - 131)) | (1 << (SqlBaseParser.FIELDS - 131)) | (1 << (SqlBaseParser.TERMINATED - 131)) | (1 << (SqlBaseParser.COLLECTION - 131)) | (1 << (SqlBaseParser.ITEMS - 131)) | (1 << (SqlBaseParser.KEYS - 131)) | (1 << (SqlBaseParser.ESCAPED - 131)) | (1 << (SqlBaseParser.LINES - 131)) | (1 << (SqlBaseParser.SEPARATED - 131)) | (1 << (SqlBaseParser.FUNCTION - 131)) | (1 << (SqlBaseParser.EXTENDED - 131)) | (1 << (SqlBaseParser.REFRESH - 131)) | (1 << (SqlBaseParser.CLEAR - 131)) | (1 << (SqlBaseParser.CACHE - 131)) | (1 << (SqlBaseParser.UNCACHE - 131)) | (1 << (SqlBaseParser.LAZY - 131)) | (1 << (SqlBaseParser.FORMATTED - 131)) | (1 << (SqlBaseParser.TEMPORARY - 131)) | (1 << (SqlBaseParser.OPTIONS - 131)) | (1 << (SqlBaseParser.UNSET - 131)) | (1 << (SqlBaseParser.TBLPROPERTIES - 131)) | (1 << (SqlBaseParser.DBPROPERTIES - 131)) | (1 << (SqlBaseParser.BUCKETS - 131)) | (1 << (SqlBaseParser.SKEWED - 131)) | (1 << (SqlBaseParser.STORED - 131)) | (1 << (SqlBaseParser.DIRECTORIES - 131)) | (1 << (SqlBaseParser.LOCATION - 131)) | (1 << (SqlBaseParser.EXCHANGE - 131)) | (1 << (SqlBaseParser.ARCHIVE - 131)) | (1 << (SqlBaseParser.UNARCHIVE - 131)) | (1 << (SqlBaseParser.FILEFORMAT - 131)) | (1 << (SqlBaseParser.TOUCH - 131)) | (1 << (SqlBaseParser.COMPACT - 131)) | (1 << (SqlBaseParser.CONCATENATE - 131)) | (1 << (SqlBaseParser.CHANGE - 131)) | (1 << (SqlBaseParser.CASCADE - 131)) | (1 << (SqlBaseParser.RESTRICT - 131)) | (1 << (SqlBaseParser.CLUSTERED - 131)) | (1 << (SqlBaseParser.SORTED - 131)) | (1 << (SqlBaseParser.PURGE - 131)) | (1 << (SqlBaseParser.INPUTFORMAT - 131)) | (1 << (SqlBaseParser.OUTPUTFORMAT - 131)) | (1 << (SqlBaseParser.DATABASE - 131)) | (1 << (SqlBaseParser.DATABASES - 131)) | (1 << (SqlBaseParser.DFS - 131)) | (1 << (SqlBaseParser.TRUNCATE - 131)) | (1 << (SqlBaseParser.ANALYZE - 131)) | (1 << (SqlBaseParser.COMPUTE - 131)) | (1 << (SqlBaseParser.LIST - 131)))) != 0) or ((((_la - 195)) & ~0x3f) == 0 and ((1 << (_la - 195)) & ((1 << (SqlBaseParser.STATISTICS - 195)) | (1 << (SqlBaseParser.PARTITIONED - 195)) | (1 << (SqlBaseParser.EXTERNAL - 195)) | (1 << (SqlBaseParser.DEFINED - 195)) | (1 << (SqlBaseParser.REVOKE - 195)) | (1 << (SqlBaseParser.GRANT - 195)) | (1 << (SqlBaseParser.LOCK - 195)) | (1 << (SqlBaseParser.UNLOCK - 195)) | (1 << (SqlBaseParser.MSCK - 195)) | (1 << (SqlBaseParser.REPAIR - 195)) | (1 << (SqlBaseParser.RECOVER - 195)) | (1 << (SqlBaseParser.EXPORT - 195)) | (1 << (SqlBaseParser.IMPORT - 195)) | (1 << (SqlBaseParser.LOAD - 195)) | (1 << (SqlBaseParser.ROLE - 195)) | (1 << (SqlBaseParser.ROLES - 195)) | (1 << (SqlBaseParser.COMPACTIONS - 195)) | (1 << (SqlBaseParser.PRINCIPALS - 195)) | (1 << (SqlBaseParser.TRANSACTIONS - 195)) | (1 << (SqlBaseParser.INDEX - 195)) | (1 << (SqlBaseParser.INDEXES - 195)) | (1 << (SqlBaseParser.LOCKS - 195)) | (1 << (SqlBaseParser.OPTION - 195)) | (1 << (SqlBaseParser.ANTI - 195)) | (1 << (SqlBaseParser.LOCAL - 195)) | (1 << (SqlBaseParser.INPATH - 195)) | (1 << (SqlBaseParser.CURRENT_DATE - 195)) | (1 << (SqlBaseParser.CURRENT_TIMESTAMP - 195)) | (1 << (SqlBaseParser.STRING - 195)) | (1 << (SqlBaseParser.BIGINT_LITERAL - 195)) | (1 << (SqlBaseParser.SMALLINT_LITERAL - 195)) | (1 << (SqlBaseParser.TINYINT_LITERAL - 195)) | (1 << (SqlBaseParser.INTEGER_VALUE - 195)) | (1 << (SqlBaseParser.DECIMAL_VALUE - 195)) | (1 << (SqlBaseParser.SCIENTIFIC_DECIMAL_VALUE - 195)) | (1 << (SqlBaseParser.DOUBLE_LITERAL - 195)) | (1 << (SqlBaseParser.BIGDECIMAL_LITERAL - 195)) | (1 << (SqlBaseParser.IDENTIFIER - 195)) | (1 << (SqlBaseParser.BACKQUOTED_IDENTIFIER - 195)))) != 0):
+            if (
+                (
+                    ((_la) & ~0x3F) == 0
+                    and (
+                        (1 << _la)
+                        & (
+                            (1 << SqlBaseParser.T__0)
+                            | (1 << SqlBaseParser.SELECT)
+                            | (1 << SqlBaseParser.FROM)
+                            | (1 << SqlBaseParser.ADD)
+                            | (1 << SqlBaseParser.AS)
+                            | (1 << SqlBaseParser.ALL)
+                            | (1 << SqlBaseParser.DISTINCT)
+                            | (1 << SqlBaseParser.WHERE)
+                            | (1 << SqlBaseParser.GROUP)
+                            | (1 << SqlBaseParser.BY)
+                            | (1 << SqlBaseParser.GROUPING)
+                            | (1 << SqlBaseParser.SETS)
+                            | (1 << SqlBaseParser.CUBE)
+                            | (1 << SqlBaseParser.ROLLUP)
+                            | (1 << SqlBaseParser.ORDER)
+                            | (1 << SqlBaseParser.HAVING)
+                            | (1 << SqlBaseParser.LIMIT)
+                            | (1 << SqlBaseParser.AT)
+                            | (1 << SqlBaseParser.OR)
+                            | (1 << SqlBaseParser.AND)
+                            | (1 << SqlBaseParser.IN)
+                            | (1 << SqlBaseParser.NOT)
+                            | (1 << SqlBaseParser.NO)
+                            | (1 << SqlBaseParser.EXISTS)
+                            | (1 << SqlBaseParser.BETWEEN)
+                            | (1 << SqlBaseParser.LIKE)
+                            | (1 << SqlBaseParser.RLIKE)
+                            | (1 << SqlBaseParser.IS)
+                            | (1 << SqlBaseParser.NULL)
+                            | (1 << SqlBaseParser.TRUE)
+                            | (1 << SqlBaseParser.FALSE)
+                            | (1 << SqlBaseParser.NULLS)
+                            | (1 << SqlBaseParser.ASC)
+                            | (1 << SqlBaseParser.DESC)
+                            | (1 << SqlBaseParser.FOR)
+                            | (1 << SqlBaseParser.INTERVAL)
+                            | (1 << SqlBaseParser.CASE)
+                            | (1 << SqlBaseParser.WHEN)
+                            | (1 << SqlBaseParser.THEN)
+                            | (1 << SqlBaseParser.ELSE)
+                            | (1 << SqlBaseParser.END)
+                            | (1 << SqlBaseParser.JOIN)
+                            | (1 << SqlBaseParser.CROSS)
+                            | (1 << SqlBaseParser.OUTER)
+                            | (1 << SqlBaseParser.INNER)
+                            | (1 << SqlBaseParser.LEFT)
+                            | (1 << SqlBaseParser.SEMI)
+                            | (1 << SqlBaseParser.RIGHT)
+                            | (1 << SqlBaseParser.FULL)
+                            | (1 << SqlBaseParser.NATURAL)
+                            | (1 << SqlBaseParser.ON)
+                            | (1 << SqlBaseParser.LATERAL)
+                            | (1 << SqlBaseParser.WINDOW)
+                            | (1 << SqlBaseParser.OVER)
+                            | (1 << SqlBaseParser.PARTITION)
+                            | (1 << SqlBaseParser.RANGE)
+                            | (1 << SqlBaseParser.ROWS)
+                        )
+                    )
+                    != 0
+                )
+                or (
+                    (((_la - 64)) & ~0x3F) == 0
+                    and (
+                        (1 << (_la - 64))
+                        & (
+                            (1 << (SqlBaseParser.UNBOUNDED - 64))
+                            | (1 << (SqlBaseParser.PRECEDING - 64))
+                            | (1 << (SqlBaseParser.FOLLOWING - 64))
+                            | (1 << (SqlBaseParser.CURRENT - 64))
+                            | (1 << (SqlBaseParser.ROW - 64))
+                            | (1 << (SqlBaseParser.WITH - 64))
+                            | (1 << (SqlBaseParser.VALUES - 64))
+                            | (1 << (SqlBaseParser.CREATE - 64))
+                            | (1 << (SqlBaseParser.TABLE - 64))
+                            | (1 << (SqlBaseParser.VIEW - 64))
+                            | (1 << (SqlBaseParser.REPLACE - 64))
+                            | (1 << (SqlBaseParser.INSERT - 64))
+                            | (1 << (SqlBaseParser.DELETE - 64))
+                            | (1 << (SqlBaseParser.INTO - 64))
+                            | (1 << (SqlBaseParser.DESCRIBE - 64))
+                            | (1 << (SqlBaseParser.EXPLAIN - 64))
+                            | (1 << (SqlBaseParser.FORMAT - 64))
+                            | (1 << (SqlBaseParser.LOGICAL - 64))
+                            | (1 << (SqlBaseParser.CODEGEN - 64))
+                            | (1 << (SqlBaseParser.CAST - 64))
+                            | (1 << (SqlBaseParser.SHOW - 64))
+                            | (1 << (SqlBaseParser.TABLES - 64))
+                            | (1 << (SqlBaseParser.COLUMNS - 64))
+                            | (1 << (SqlBaseParser.COLUMN - 64))
+                            | (1 << (SqlBaseParser.USE - 64))
+                            | (1 << (SqlBaseParser.PARTITIONS - 64))
+                            | (1 << (SqlBaseParser.FUNCTIONS - 64))
+                            | (1 << (SqlBaseParser.DROP - 64))
+                            | (1 << (SqlBaseParser.UNION - 64))
+                            | (1 << (SqlBaseParser.EXCEPT - 64))
+                            | (1 << (SqlBaseParser.INTERSECT - 64))
+                            | (1 << (SqlBaseParser.TO - 64))
+                            | (1 << (SqlBaseParser.TABLESAMPLE - 64))
+                            | (1 << (SqlBaseParser.STRATIFY - 64))
+                            | (1 << (SqlBaseParser.ALTER - 64))
+                            | (1 << (SqlBaseParser.RENAME - 64))
+                            | (1 << (SqlBaseParser.ARRAY - 64))
+                            | (1 << (SqlBaseParser.MAP - 64))
+                            | (1 << (SqlBaseParser.STRUCT - 64))
+                            | (1 << (SqlBaseParser.COMMENT - 64))
+                            | (1 << (SqlBaseParser.SET - 64))
+                            | (1 << (SqlBaseParser.RESET - 64))
+                            | (1 << (SqlBaseParser.DATA - 64))
+                            | (1 << (SqlBaseParser.START - 64))
+                            | (1 << (SqlBaseParser.TRANSACTION - 64))
+                            | (1 << (SqlBaseParser.COMMIT - 64))
+                            | (1 << (SqlBaseParser.ROLLBACK - 64))
+                            | (1 << (SqlBaseParser.MACRO - 64))
+                            | (1 << (SqlBaseParser.IF - 64))
+                            | (1 << (SqlBaseParser.PLUS - 64))
+                            | (1 << (SqlBaseParser.MINUS - 64))
+                            | (1 << (SqlBaseParser.ASTERISK - 64))
+                            | (1 << (SqlBaseParser.DIV - 64))
+                            | (1 << (SqlBaseParser.TILDE - 64))
+                        )
+                    )
+                    != 0
+                )
+                or (
+                    (((_la - 131)) & ~0x3F) == 0
+                    and (
+                        (1 << (_la - 131))
+                        & (
+                            (1 << (SqlBaseParser.PERCENTLIT - 131))
+                            | (1 << (SqlBaseParser.BUCKET - 131))
+                            | (1 << (SqlBaseParser.OUT - 131))
+                            | (1 << (SqlBaseParser.OF - 131))
+                            | (1 << (SqlBaseParser.SORT - 131))
+                            | (1 << (SqlBaseParser.CLUSTER - 131))
+                            | (1 << (SqlBaseParser.DISTRIBUTE - 131))
+                            | (1 << (SqlBaseParser.OVERWRITE - 131))
+                            | (1 << (SqlBaseParser.TRANSFORM - 131))
+                            | (1 << (SqlBaseParser.REDUCE - 131))
+                            | (1 << (SqlBaseParser.USING - 131))
+                            | (1 << (SqlBaseParser.SERDE - 131))
+                            | (1 << (SqlBaseParser.SERDEPROPERTIES - 131))
+                            | (1 << (SqlBaseParser.RECORDREADER - 131))
+                            | (1 << (SqlBaseParser.RECORDWRITER - 131))
+                            | (1 << (SqlBaseParser.DELIMITED - 131))
+                            | (1 << (SqlBaseParser.FIELDS - 131))
+                            | (1 << (SqlBaseParser.TERMINATED - 131))
+                            | (1 << (SqlBaseParser.COLLECTION - 131))
+                            | (1 << (SqlBaseParser.ITEMS - 131))
+                            | (1 << (SqlBaseParser.KEYS - 131))
+                            | (1 << (SqlBaseParser.ESCAPED - 131))
+                            | (1 << (SqlBaseParser.LINES - 131))
+                            | (1 << (SqlBaseParser.SEPARATED - 131))
+                            | (1 << (SqlBaseParser.FUNCTION - 131))
+                            | (1 << (SqlBaseParser.EXTENDED - 131))
+                            | (1 << (SqlBaseParser.REFRESH - 131))
+                            | (1 << (SqlBaseParser.CLEAR - 131))
+                            | (1 << (SqlBaseParser.CACHE - 131))
+                            | (1 << (SqlBaseParser.UNCACHE - 131))
+                            | (1 << (SqlBaseParser.LAZY - 131))
+                            | (1 << (SqlBaseParser.FORMATTED - 131))
+                            | (1 << (SqlBaseParser.TEMPORARY - 131))
+                            | (1 << (SqlBaseParser.OPTIONS - 131))
+                            | (1 << (SqlBaseParser.UNSET - 131))
+                            | (1 << (SqlBaseParser.TBLPROPERTIES - 131))
+                            | (1 << (SqlBaseParser.DBPROPERTIES - 131))
+                            | (1 << (SqlBaseParser.BUCKETS - 131))
+                            | (1 << (SqlBaseParser.SKEWED - 131))
+                            | (1 << (SqlBaseParser.STORED - 131))
+                            | (1 << (SqlBaseParser.DIRECTORIES - 131))
+                            | (1 << (SqlBaseParser.LOCATION - 131))
+                            | (1 << (SqlBaseParser.EXCHANGE - 131))
+                            | (1 << (SqlBaseParser.ARCHIVE - 131))
+                            | (1 << (SqlBaseParser.UNARCHIVE - 131))
+                            | (1 << (SqlBaseParser.FILEFORMAT - 131))
+                            | (1 << (SqlBaseParser.TOUCH - 131))
+                            | (1 << (SqlBaseParser.COMPACT - 131))
+                            | (1 << (SqlBaseParser.CONCATENATE - 131))
+                            | (1 << (SqlBaseParser.CHANGE - 131))
+                            | (1 << (SqlBaseParser.CASCADE - 131))
+                            | (1 << (SqlBaseParser.RESTRICT - 131))
+                            | (1 << (SqlBaseParser.CLUSTERED - 131))
+                            | (1 << (SqlBaseParser.SORTED - 131))
+                            | (1 << (SqlBaseParser.PURGE - 131))
+                            | (1 << (SqlBaseParser.INPUTFORMAT - 131))
+                            | (1 << (SqlBaseParser.OUTPUTFORMAT - 131))
+                            | (1 << (SqlBaseParser.DATABASE - 131))
+                            | (1 << (SqlBaseParser.DATABASES - 131))
+                            | (1 << (SqlBaseParser.DFS - 131))
+                            | (1 << (SqlBaseParser.TRUNCATE - 131))
+                            | (1 << (SqlBaseParser.ANALYZE - 131))
+                            | (1 << (SqlBaseParser.COMPUTE - 131))
+                            | (1 << (SqlBaseParser.LIST - 131))
+                        )
+                    )
+                    != 0
+                )
+                or (
+                    (((_la - 195)) & ~0x3F) == 0
+                    and (
+                        (1 << (_la - 195))
+                        & (
+                            (1 << (SqlBaseParser.STATISTICS - 195))
+                            | (1 << (SqlBaseParser.PARTITIONED - 195))
+                            | (1 << (SqlBaseParser.EXTERNAL - 195))
+                            | (1 << (SqlBaseParser.DEFINED - 195))
+                            | (1 << (SqlBaseParser.REVOKE - 195))
+                            | (1 << (SqlBaseParser.GRANT - 195))
+                            | (1 << (SqlBaseParser.LOCK - 195))
+                            | (1 << (SqlBaseParser.UNLOCK - 195))
+                            | (1 << (SqlBaseParser.MSCK - 195))
+                            | (1 << (SqlBaseParser.REPAIR - 195))
+                            | (1 << (SqlBaseParser.RECOVER - 195))
+                            | (1 << (SqlBaseParser.EXPORT - 195))
+                            | (1 << (SqlBaseParser.IMPORT - 195))
+                            | (1 << (SqlBaseParser.LOAD - 195))
+                            | (1 << (SqlBaseParser.ROLE - 195))
+                            | (1 << (SqlBaseParser.ROLES - 195))
+                            | (1 << (SqlBaseParser.COMPACTIONS - 195))
+                            | (1 << (SqlBaseParser.PRINCIPALS - 195))
+                            | (1 << (SqlBaseParser.TRANSACTIONS - 195))
+                            | (1 << (SqlBaseParser.INDEX - 195))
+                            | (1 << (SqlBaseParser.INDEXES - 195))
+                            | (1 << (SqlBaseParser.LOCKS - 195))
+                            | (1 << (SqlBaseParser.OPTION - 195))
+                            | (1 << (SqlBaseParser.ANTI - 195))
+                            | (1 << (SqlBaseParser.LOCAL - 195))
+                            | (1 << (SqlBaseParser.INPATH - 195))
+                            | (1 << (SqlBaseParser.CURRENT_DATE - 195))
+                            | (1 << (SqlBaseParser.CURRENT_TIMESTAMP - 195))
+                            | (1 << (SqlBaseParser.STRING - 195))
+                            | (1 << (SqlBaseParser.BIGINT_LITERAL - 195))
+                            | (1 << (SqlBaseParser.SMALLINT_LITERAL - 195))
+                            | (1 << (SqlBaseParser.TINYINT_LITERAL - 195))
+                            | (1 << (SqlBaseParser.INTEGER_VALUE - 195))
+                            | (1 << (SqlBaseParser.DECIMAL_VALUE - 195))
+                            | (1 << (SqlBaseParser.SCIENTIFIC_DECIMAL_VALUE - 195))
+                            | (1 << (SqlBaseParser.DOUBLE_LITERAL - 195))
+                            | (1 << (SqlBaseParser.BIGDECIMAL_LITERAL - 195))
+                            | (1 << (SqlBaseParser.IDENTIFIER - 195))
+                            | (1 << (SqlBaseParser.BACKQUOTED_IDENTIFIER - 195))
+                        )
+                    )
+                    != 0
+                )
+            ):
                 self.state = 1405
                 self.expression()
                 self.state = 1410
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                while _la==SqlBaseParser.T__2:
+                while _la == SqlBaseParser.T__2:
                     self.state = 1406
                     self.match(SqlBaseParser.T__2)
                     self.state = 1407
@@ -8860,42 +11086,37 @@ class SqlBaseParser ( Parser ):
                     self._errHandler.sync(self)
                     _la = self._input.LA(1)
 
-
-
             self.state = 1415
             self.match(SqlBaseParser.T__1)
             self.state = 1416
             localctx.tblName = self.identifier()
             self.state = 1428
             self._errHandler.sync(self)
-            la_ = self._interp.adaptivePredict(self._input,185,self._ctx)
+            la_ = self._interp.adaptivePredict(self._input, 185, self._ctx)
             if la_ == 1:
                 self.state = 1418
                 self._errHandler.sync(self)
-                la_ = self._interp.adaptivePredict(self._input,183,self._ctx)
+                la_ = self._interp.adaptivePredict(self._input, 183, self._ctx)
                 if la_ == 1:
                     self.state = 1417
                     self.match(SqlBaseParser.AS)
-
 
                 self.state = 1420
                 localctx._identifier = self.identifier()
                 localctx.colName.append(localctx._identifier)
                 self.state = 1425
                 self._errHandler.sync(self)
-                _alt = self._interp.adaptivePredict(self._input,184,self._ctx)
-                while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
-                    if _alt==1:
+                _alt = self._interp.adaptivePredict(self._input, 184, self._ctx)
+                while _alt != 2 and _alt != ATN.INVALID_ALT_NUMBER:
+                    if _alt == 1:
                         self.state = 1421
                         self.match(SqlBaseParser.T__2)
                         self.state = 1422
                         localctx._identifier = self.identifier()
-                        localctx.colName.append(localctx._identifier) 
+                        localctx.colName.append(localctx._identifier)
                     self.state = 1427
                     self._errHandler.sync(self)
-                    _alt = self._interp.adaptivePredict(self._input,184,self._ctx)
-
-
+                    _alt = self._interp.adaptivePredict(self._input, 184, self._ctx)
 
         except RecognitionException as re:
             localctx.exception = re
@@ -8905,11 +11126,12 @@ class SqlBaseParser ( Parser ):
             self.exitRule()
         return localctx
 
-
     class SetQuantifierContext(ParserRuleContext):
-        __slots__ = 'parser'
+        __slots__ = "parser"
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
@@ -8922,27 +11144,24 @@ class SqlBaseParser ( Parser ):
         def getRuleIndex(self):
             return SqlBaseParser.RULE_setQuantifier
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterSetQuantifier" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterSetQuantifier"):
                 listener.enterSetQuantifier(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitSetQuantifier" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitSetQuantifier"):
                 listener.exitSetQuantifier(self)
-
-
-
 
     def setQuantifier(self):
 
         localctx = SqlBaseParser.SetQuantifierContext(self, self._ctx, self.state)
         self.enterRule(localctx, 80, self.RULE_setQuantifier)
-        self._la = 0 # Token type
+        self._la = 0  # Token type
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 1430
             _la = self._input.LA(1)
-            if not(_la==SqlBaseParser.ALL or _la==SqlBaseParser.DISTINCT):
+            if not (_la == SqlBaseParser.ALL or _la == SqlBaseParser.DISTINCT):
                 self._errHandler.recoverInline(self)
             else:
                 self._errHandler.reportMatch(self)
@@ -8955,38 +11174,34 @@ class SqlBaseParser ( Parser ):
             self.exitRule()
         return localctx
 
-
     class RelationContext(ParserRuleContext):
-        __slots__ = 'parser'
+        __slots__ = "parser"
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
         def relationPrimary(self):
-            return self.getTypedRuleContext(SqlBaseParser.RelationPrimaryContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.RelationPrimaryContext, 0)
 
-
-        def joinRelation(self, i:int=None):
+        def joinRelation(self, i: int = None):
             if i is None:
                 return self.getTypedRuleContexts(SqlBaseParser.JoinRelationContext)
             else:
-                return self.getTypedRuleContext(SqlBaseParser.JoinRelationContext,i)
-
+                return self.getTypedRuleContext(SqlBaseParser.JoinRelationContext, i)
 
         def getRuleIndex(self):
             return SqlBaseParser.RULE_relation
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterRelation" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterRelation"):
                 listener.enterRelation(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitRelation" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitRelation"):
                 listener.exitRelation(self)
-
-
-
 
     def relation(self):
 
@@ -8998,14 +11213,14 @@ class SqlBaseParser ( Parser ):
             self.relationPrimary()
             self.state = 1436
             self._errHandler.sync(self)
-            _alt = self._interp.adaptivePredict(self._input,186,self._ctx)
-            while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
-                if _alt==1:
+            _alt = self._interp.adaptivePredict(self._input, 186, self._ctx)
+            while _alt != 2 and _alt != ATN.INVALID_ALT_NUMBER:
+                if _alt == 1:
                     self.state = 1433
-                    self.joinRelation() 
+                    self.joinRelation()
                 self.state = 1438
                 self._errHandler.sync(self)
-                _alt = self._interp.adaptivePredict(self._input,186,self._ctx)
+                _alt = self._interp.adaptivePredict(self._input, 186, self._ctx)
 
         except RecognitionException as re:
             localctx.exception = re
@@ -9015,32 +11230,30 @@ class SqlBaseParser ( Parser ):
             self.exitRule()
         return localctx
 
-
     class JoinRelationContext(ParserRuleContext):
-        __slots__ = 'parser'
+        __slots__ = "parser"
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
-            self.right = None # RelationPrimaryContext
+            self.right = None  # RelationPrimaryContext
 
         def JOIN(self):
             return self.getToken(SqlBaseParser.JOIN, 0)
 
         def relationPrimary(self):
-            return self.getTypedRuleContext(SqlBaseParser.RelationPrimaryContext,0)
-
+            return self.getTypedRuleContext(SqlBaseParser.RelationPrimaryContext, 0)
 
         def CROSS(self):
             return self.getToken(SqlBaseParser.CROSS, 0)
 
         def joinType(self):
-            return self.getTypedRuleContext(SqlBaseParser.JoinTypeContext,0)
-
+            return self.getTypedRuleContext(SqlBaseParser.JoinTypeContext, 0)
 
         def joinCriteria(self):
-            return self.getTypedRuleContext(SqlBaseParser.JoinCriteriaContext,0)
-
+            return self.getTypedRuleContext(SqlBaseParser.JoinCriteriaContext, 0)
 
         def NATURAL(self):
             return self.getToken(SqlBaseParser.NATURAL, 0)
@@ -9048,16 +11261,13 @@ class SqlBaseParser ( Parser ):
         def getRuleIndex(self):
             return SqlBaseParser.RULE_joinRelation
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterJoinRelation" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterJoinRelation"):
                 listener.enterJoinRelation(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitJoinRelation" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitJoinRelation"):
                 listener.exitJoinRelation(self)
-
-
-
 
     def joinRelation(self):
 
@@ -9067,7 +11277,15 @@ class SqlBaseParser ( Parser ):
             self.state = 1453
             self._errHandler.sync(self)
             token = self._input.LA(1)
-            if token in [SqlBaseParser.JOIN, SqlBaseParser.CROSS, SqlBaseParser.INNER, SqlBaseParser.LEFT, SqlBaseParser.RIGHT, SqlBaseParser.FULL, SqlBaseParser.ANTI]:
+            if token in [
+                SqlBaseParser.JOIN,
+                SqlBaseParser.CROSS,
+                SqlBaseParser.INNER,
+                SqlBaseParser.LEFT,
+                SqlBaseParser.RIGHT,
+                SqlBaseParser.FULL,
+                SqlBaseParser.ANTI,
+            ]:
                 self.enterOuterAlt(localctx, 1)
                 self.state = 1441
                 self._errHandler.sync(self)
@@ -9076,7 +11294,14 @@ class SqlBaseParser ( Parser ):
                     self.state = 1439
                     self.match(SqlBaseParser.CROSS)
                     pass
-                elif token in [SqlBaseParser.JOIN, SqlBaseParser.INNER, SqlBaseParser.LEFT, SqlBaseParser.RIGHT, SqlBaseParser.FULL, SqlBaseParser.ANTI]:
+                elif token in [
+                    SqlBaseParser.JOIN,
+                    SqlBaseParser.INNER,
+                    SqlBaseParser.LEFT,
+                    SqlBaseParser.RIGHT,
+                    SqlBaseParser.FULL,
+                    SqlBaseParser.ANTI,
+                ]:
                     self.state = 1440
                     self.joinType()
                     pass
@@ -9089,11 +11314,10 @@ class SqlBaseParser ( Parser ):
                 localctx.right = self.relationPrimary()
                 self.state = 1446
                 self._errHandler.sync(self)
-                la_ = self._interp.adaptivePredict(self._input,188,self._ctx)
+                la_ = self._interp.adaptivePredict(self._input, 188, self._ctx)
                 if la_ == 1:
                     self.state = 1445
                     self.joinCriteria()
-
 
                 pass
             elif token in [SqlBaseParser.NATURAL]:
@@ -9118,11 +11342,12 @@ class SqlBaseParser ( Parser ):
             self.exitRule()
         return localctx
 
-
     class JoinTypeContext(ParserRuleContext):
-        __slots__ = 'parser'
+        __slots__ = "parser"
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
@@ -9150,35 +11375,31 @@ class SqlBaseParser ( Parser ):
         def getRuleIndex(self):
             return SqlBaseParser.RULE_joinType
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterJoinType" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterJoinType"):
                 listener.enterJoinType(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitJoinType" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitJoinType"):
                 listener.exitJoinType(self)
-
-
-
 
     def joinType(self):
 
         localctx = SqlBaseParser.JoinTypeContext(self, self._ctx, self.state)
         self.enterRule(localctx, 86, self.RULE_joinType)
-        self._la = 0 # Token type
+        self._la = 0  # Token type
         try:
             self.state = 1476
             self._errHandler.sync(self)
-            la_ = self._interp.adaptivePredict(self._input,195,self._ctx)
+            la_ = self._interp.adaptivePredict(self._input, 195, self._ctx)
             if la_ == 1:
                 self.enterOuterAlt(localctx, 1)
                 self.state = 1456
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==SqlBaseParser.INNER:
+                if _la == SqlBaseParser.INNER:
                     self.state = 1455
                     self.match(SqlBaseParser.INNER)
-
 
                 pass
 
@@ -9189,10 +11410,9 @@ class SqlBaseParser ( Parser ):
                 self.state = 1460
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==SqlBaseParser.OUTER:
+                if _la == SqlBaseParser.OUTER:
                     self.state = 1459
                     self.match(SqlBaseParser.OUTER)
-
 
                 pass
 
@@ -9211,10 +11431,9 @@ class SqlBaseParser ( Parser ):
                 self.state = 1466
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==SqlBaseParser.OUTER:
+                if _la == SqlBaseParser.OUTER:
                     self.state = 1465
                     self.match(SqlBaseParser.OUTER)
-
 
                 pass
 
@@ -9225,10 +11444,9 @@ class SqlBaseParser ( Parser ):
                 self.state = 1470
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==SqlBaseParser.OUTER:
+                if _la == SqlBaseParser.OUTER:
                     self.state = 1469
                     self.match(SqlBaseParser.OUTER)
-
 
                 pass
 
@@ -9237,15 +11455,13 @@ class SqlBaseParser ( Parser ):
                 self.state = 1473
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==SqlBaseParser.LEFT:
+                if _la == SqlBaseParser.LEFT:
                     self.state = 1472
                     self.match(SqlBaseParser.LEFT)
-
 
                 self.state = 1475
                 self.match(SqlBaseParser.ANTI)
                 pass
-
 
         except RecognitionException as re:
             localctx.exception = re
@@ -9255,11 +11471,12 @@ class SqlBaseParser ( Parser ):
             self.exitRule()
         return localctx
 
-
     class JoinCriteriaContext(ParserRuleContext):
-        __slots__ = 'parser'
+        __slots__ = "parser"
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
@@ -9267,38 +11484,33 @@ class SqlBaseParser ( Parser ):
             return self.getToken(SqlBaseParser.ON, 0)
 
         def booleanExpression(self):
-            return self.getTypedRuleContext(SqlBaseParser.BooleanExpressionContext,0)
-
+            return self.getTypedRuleContext(SqlBaseParser.BooleanExpressionContext, 0)
 
         def USING(self):
             return self.getToken(SqlBaseParser.USING, 0)
 
-        def identifier(self, i:int=None):
+        def identifier(self, i: int = None):
             if i is None:
                 return self.getTypedRuleContexts(SqlBaseParser.IdentifierContext)
             else:
-                return self.getTypedRuleContext(SqlBaseParser.IdentifierContext,i)
-
+                return self.getTypedRuleContext(SqlBaseParser.IdentifierContext, i)
 
         def getRuleIndex(self):
             return SqlBaseParser.RULE_joinCriteria
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterJoinCriteria" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterJoinCriteria"):
                 listener.enterJoinCriteria(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitJoinCriteria" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitJoinCriteria"):
                 listener.exitJoinCriteria(self)
-
-
-
 
     def joinCriteria(self):
 
         localctx = SqlBaseParser.JoinCriteriaContext(self, self._ctx, self.state)
         self.enterRule(localctx, 88, self.RULE_joinCriteria)
-        self._la = 0 # Token type
+        self._la = 0  # Token type
         try:
             self.state = 1492
             self._errHandler.sync(self)
@@ -9321,7 +11533,7 @@ class SqlBaseParser ( Parser ):
                 self.state = 1487
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                while _la==SqlBaseParser.T__2:
+                while _la == SqlBaseParser.T__2:
                     self.state = 1483
                     self.match(SqlBaseParser.T__2)
                     self.state = 1484
@@ -9344,17 +11556,18 @@ class SqlBaseParser ( Parser ):
             self.exitRule()
         return localctx
 
-
     class SampleContext(ParserRuleContext):
-        __slots__ = 'parser'
+        __slots__ = "parser"
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
-            self.percentage = None # Token
-            self.sampleType = None # Token
-            self.numerator = None # Token
-            self.denominator = None # Token
+            self.percentage = None  # Token
+            self.sampleType = None  # Token
+            self.numerator = None  # Token
+            self.denominator = None  # Token
 
         def TABLESAMPLE(self):
             return self.getToken(SqlBaseParser.TABLESAMPLE, 0)
@@ -9363,8 +11576,7 @@ class SqlBaseParser ( Parser ):
             return self.getToken(SqlBaseParser.BYTELENGTH_LITERAL, 0)
 
         def expression(self):
-            return self.getTypedRuleContext(SqlBaseParser.ExpressionContext,0)
-
+            return self.getTypedRuleContext(SqlBaseParser.ExpressionContext, 0)
 
         def OUT(self):
             return self.getToken(SqlBaseParser.OUT, 0)
@@ -9381,7 +11593,7 @@ class SqlBaseParser ( Parser ):
         def BUCKET(self):
             return self.getToken(SqlBaseParser.BUCKET, 0)
 
-        def INTEGER_VALUE(self, i:int=None):
+        def INTEGER_VALUE(self, i: int = None):
             if i is None:
                 return self.getTokens(SqlBaseParser.INTEGER_VALUE)
             else:
@@ -9394,32 +11606,27 @@ class SqlBaseParser ( Parser ):
             return self.getToken(SqlBaseParser.ON, 0)
 
         def identifier(self):
-            return self.getTypedRuleContext(SqlBaseParser.IdentifierContext,0)
-
+            return self.getTypedRuleContext(SqlBaseParser.IdentifierContext, 0)
 
         def qualifiedName(self):
-            return self.getTypedRuleContext(SqlBaseParser.QualifiedNameContext,0)
-
+            return self.getTypedRuleContext(SqlBaseParser.QualifiedNameContext, 0)
 
         def getRuleIndex(self):
             return SqlBaseParser.RULE_sample
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterSample" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterSample"):
                 listener.enterSample(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitSample" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitSample"):
                 listener.exitSample(self)
-
-
-
 
     def sample(self):
 
         localctx = SqlBaseParser.SampleContext(self, self._ctx, self.state)
         self.enterRule(localctx, 90, self.RULE_sample)
-        self._la = 0 # Token type
+        self._la = 0  # Token type
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 1494
@@ -9428,12 +11635,15 @@ class SqlBaseParser ( Parser ):
             self.match(SqlBaseParser.T__0)
             self.state = 1517
             self._errHandler.sync(self)
-            la_ = self._interp.adaptivePredict(self._input,200,self._ctx)
+            la_ = self._interp.adaptivePredict(self._input, 200, self._ctx)
             if la_ == 1:
                 self.state = 1496
                 localctx.percentage = self._input.LT(1)
                 _la = self._input.LA(1)
-                if not(_la==SqlBaseParser.INTEGER_VALUE or _la==SqlBaseParser.DECIMAL_VALUE):
+                if not (
+                    _la == SqlBaseParser.INTEGER_VALUE
+                    or _la == SqlBaseParser.DECIMAL_VALUE
+                ):
                     localctx.percentage = self._errHandler.recoverInline(self)
                 else:
                     self._errHandler.reportMatch(self)
@@ -9468,12 +11678,12 @@ class SqlBaseParser ( Parser ):
                 self.state = 1515
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==SqlBaseParser.ON:
+                if _la == SqlBaseParser.ON:
                     self.state = 1507
                     self.match(SqlBaseParser.ON)
                     self.state = 1513
                     self._errHandler.sync(self)
-                    la_ = self._interp.adaptivePredict(self._input,198,self._ctx)
+                    la_ = self._interp.adaptivePredict(self._input, 198, self._ctx)
                     if la_ == 1:
                         self.state = 1508
                         self.identifier()
@@ -9488,11 +11698,7 @@ class SqlBaseParser ( Parser ):
                         self.match(SqlBaseParser.T__1)
                         pass
 
-
-
-
                 pass
-
 
             self.state = 1519
             self.match(SqlBaseParser.T__1)
@@ -9504,31 +11710,28 @@ class SqlBaseParser ( Parser ):
             self.exitRule()
         return localctx
 
-
     class IdentifierListContext(ParserRuleContext):
-        __slots__ = 'parser'
+        __slots__ = "parser"
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
         def identifierSeq(self):
-            return self.getTypedRuleContext(SqlBaseParser.IdentifierSeqContext,0)
-
+            return self.getTypedRuleContext(SqlBaseParser.IdentifierSeqContext, 0)
 
         def getRuleIndex(self):
             return SqlBaseParser.RULE_identifierList
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterIdentifierList" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterIdentifierList"):
                 listener.enterIdentifierList(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitIdentifierList" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitIdentifierList"):
                 listener.exitIdentifierList(self)
-
-
-
 
     def identifierList(self):
 
@@ -9550,34 +11753,31 @@ class SqlBaseParser ( Parser ):
             self.exitRule()
         return localctx
 
-
     class IdentifierSeqContext(ParserRuleContext):
-        __slots__ = 'parser'
+        __slots__ = "parser"
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
-        def identifier(self, i:int=None):
+        def identifier(self, i: int = None):
             if i is None:
                 return self.getTypedRuleContexts(SqlBaseParser.IdentifierContext)
             else:
-                return self.getTypedRuleContext(SqlBaseParser.IdentifierContext,i)
-
+                return self.getTypedRuleContext(SqlBaseParser.IdentifierContext, i)
 
         def getRuleIndex(self):
             return SqlBaseParser.RULE_identifierSeq
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterIdentifierSeq" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterIdentifierSeq"):
                 listener.enterIdentifierSeq(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitIdentifierSeq" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitIdentifierSeq"):
                 listener.exitIdentifierSeq(self)
-
-
-
 
     def identifierSeq(self):
 
@@ -9589,16 +11789,16 @@ class SqlBaseParser ( Parser ):
             self.identifier()
             self.state = 1530
             self._errHandler.sync(self)
-            _alt = self._interp.adaptivePredict(self._input,201,self._ctx)
-            while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
-                if _alt==1:
+            _alt = self._interp.adaptivePredict(self._input, 201, self._ctx)
+            while _alt != 2 and _alt != ATN.INVALID_ALT_NUMBER:
+                if _alt == 1:
                     self.state = 1526
                     self.match(SqlBaseParser.T__2)
                     self.state = 1527
-                    self.identifier() 
+                    self.identifier()
                 self.state = 1532
                 self._errHandler.sync(self)
-                _alt = self._interp.adaptivePredict(self._input,201,self._ctx)
+                _alt = self._interp.adaptivePredict(self._input, 201, self._ctx)
 
         except RecognitionException as re:
             localctx.exception = re
@@ -9608,40 +11808,41 @@ class SqlBaseParser ( Parser ):
             self.exitRule()
         return localctx
 
-
     class OrderedIdentifierListContext(ParserRuleContext):
-        __slots__ = 'parser'
+        __slots__ = "parser"
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
-        def orderedIdentifier(self, i:int=None):
+        def orderedIdentifier(self, i: int = None):
             if i is None:
                 return self.getTypedRuleContexts(SqlBaseParser.OrderedIdentifierContext)
             else:
-                return self.getTypedRuleContext(SqlBaseParser.OrderedIdentifierContext,i)
-
+                return self.getTypedRuleContext(
+                    SqlBaseParser.OrderedIdentifierContext, i
+                )
 
         def getRuleIndex(self):
             return SqlBaseParser.RULE_orderedIdentifierList
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterOrderedIdentifierList" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterOrderedIdentifierList"):
                 listener.enterOrderedIdentifierList(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitOrderedIdentifierList" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitOrderedIdentifierList"):
                 listener.exitOrderedIdentifierList(self)
-
-
-
 
     def orderedIdentifierList(self):
 
-        localctx = SqlBaseParser.OrderedIdentifierListContext(self, self._ctx, self.state)
+        localctx = SqlBaseParser.OrderedIdentifierListContext(
+            self, self._ctx, self.state
+        )
         self.enterRule(localctx, 96, self.RULE_orderedIdentifierList)
-        self._la = 0 # Token type
+        self._la = 0  # Token type
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 1533
@@ -9651,7 +11852,7 @@ class SqlBaseParser ( Parser ):
             self.state = 1539
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            while _la==SqlBaseParser.T__2:
+            while _la == SqlBaseParser.T__2:
                 self.state = 1535
                 self.match(SqlBaseParser.T__2)
                 self.state = 1536
@@ -9670,18 +11871,18 @@ class SqlBaseParser ( Parser ):
             self.exitRule()
         return localctx
 
-
     class OrderedIdentifierContext(ParserRuleContext):
-        __slots__ = 'parser'
+        __slots__ = "parser"
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
-            self.ordering = None # Token
+            self.ordering = None  # Token
 
         def identifier(self):
-            return self.getTypedRuleContext(SqlBaseParser.IdentifierContext,0)
-
+            return self.getTypedRuleContext(SqlBaseParser.IdentifierContext, 0)
 
         def ASC(self):
             return self.getToken(SqlBaseParser.ASC, 0)
@@ -9692,22 +11893,19 @@ class SqlBaseParser ( Parser ):
         def getRuleIndex(self):
             return SqlBaseParser.RULE_orderedIdentifier
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterOrderedIdentifier" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterOrderedIdentifier"):
                 listener.enterOrderedIdentifier(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitOrderedIdentifier" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitOrderedIdentifier"):
                 listener.exitOrderedIdentifier(self)
-
-
-
 
     def orderedIdentifier(self):
 
         localctx = SqlBaseParser.OrderedIdentifierContext(self, self._ctx, self.state)
         self.enterRule(localctx, 98, self.RULE_orderedIdentifier)
-        self._la = 0 # Token type
+        self._la = 0  # Token type
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 1544
@@ -9715,16 +11913,15 @@ class SqlBaseParser ( Parser ):
             self.state = 1546
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if _la==SqlBaseParser.ASC or _la==SqlBaseParser.DESC:
+            if _la == SqlBaseParser.ASC or _la == SqlBaseParser.DESC:
                 self.state = 1545
                 localctx.ordering = self._input.LT(1)
                 _la = self._input.LA(1)
-                if not(_la==SqlBaseParser.ASC or _la==SqlBaseParser.DESC):
+                if not (_la == SqlBaseParser.ASC or _la == SqlBaseParser.DESC):
                     localctx.ordering = self._errHandler.recoverInline(self)
                 else:
                     self._errHandler.reportMatch(self)
                     self.consume()
-
 
         except RecognitionException as re:
             localctx.exception = re
@@ -9734,40 +11931,41 @@ class SqlBaseParser ( Parser ):
             self.exitRule()
         return localctx
 
-
     class IdentifierCommentListContext(ParserRuleContext):
-        __slots__ = 'parser'
+        __slots__ = "parser"
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
-        def identifierComment(self, i:int=None):
+        def identifierComment(self, i: int = None):
             if i is None:
                 return self.getTypedRuleContexts(SqlBaseParser.IdentifierCommentContext)
             else:
-                return self.getTypedRuleContext(SqlBaseParser.IdentifierCommentContext,i)
-
+                return self.getTypedRuleContext(
+                    SqlBaseParser.IdentifierCommentContext, i
+                )
 
         def getRuleIndex(self):
             return SqlBaseParser.RULE_identifierCommentList
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterIdentifierCommentList" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterIdentifierCommentList"):
                 listener.enterIdentifierCommentList(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitIdentifierCommentList" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitIdentifierCommentList"):
                 listener.exitIdentifierCommentList(self)
-
-
-
 
     def identifierCommentList(self):
 
-        localctx = SqlBaseParser.IdentifierCommentListContext(self, self._ctx, self.state)
+        localctx = SqlBaseParser.IdentifierCommentListContext(
+            self, self._ctx, self.state
+        )
         self.enterRule(localctx, 100, self.RULE_identifierCommentList)
-        self._la = 0 # Token type
+        self._la = 0  # Token type
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 1548
@@ -9777,7 +11975,7 @@ class SqlBaseParser ( Parser ):
             self.state = 1554
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            while _la==SqlBaseParser.T__2:
+            while _la == SqlBaseParser.T__2:
                 self.state = 1550
                 self.match(SqlBaseParser.T__2)
                 self.state = 1551
@@ -9796,17 +11994,17 @@ class SqlBaseParser ( Parser ):
             self.exitRule()
         return localctx
 
-
     class IdentifierCommentContext(ParserRuleContext):
-        __slots__ = 'parser'
+        __slots__ = "parser"
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
         def identifier(self):
-            return self.getTypedRuleContext(SqlBaseParser.IdentifierContext,0)
-
+            return self.getTypedRuleContext(SqlBaseParser.IdentifierContext, 0)
 
         def COMMENT(self):
             return self.getToken(SqlBaseParser.COMMENT, 0)
@@ -9817,22 +12015,19 @@ class SqlBaseParser ( Parser ):
         def getRuleIndex(self):
             return SqlBaseParser.RULE_identifierComment
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterIdentifierComment" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterIdentifierComment"):
                 listener.enterIdentifierComment(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitIdentifierComment" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitIdentifierComment"):
                 listener.exitIdentifierComment(self)
-
-
-
 
     def identifierComment(self):
 
         localctx = SqlBaseParser.IdentifierCommentContext(self, self._ctx, self.state)
         self.enterRule(localctx, 102, self.RULE_identifierComment)
-        self._la = 0 # Token type
+        self._la = 0  # Token type
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 1559
@@ -9840,12 +12035,11 @@ class SqlBaseParser ( Parser ):
             self.state = 1562
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if _la==SqlBaseParser.COMMENT:
+            if _la == SqlBaseParser.COMMENT:
                 self.state = 1560
                 self.match(SqlBaseParser.COMMENT)
                 self.state = 1561
                 self.match(SqlBaseParser.STRING)
-
 
         except RecognitionException as re:
             localctx.exception = re
@@ -9855,159 +12049,153 @@ class SqlBaseParser ( Parser ):
             self.exitRule()
         return localctx
 
-
     class RelationPrimaryContext(ParserRuleContext):
-        __slots__ = 'parser'
+        __slots__ = "parser"
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
-
 
         def getRuleIndex(self):
             return SqlBaseParser.RULE_relationPrimary
 
-     
-        def copyFrom(self, ctx:ParserRuleContext):
+        def copyFrom(self, ctx: ParserRuleContext):
             super().copyFrom(ctx)
 
-
-
     class TableValuedFunctionContext(RelationPrimaryContext):
-
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a SqlBaseParser.RelationPrimaryContext
+        def __init__(
+            self, parser, ctx: ParserRuleContext
+        ):  # actually a SqlBaseParser.RelationPrimaryContext
             super().__init__(parser)
             self.copyFrom(ctx)
 
         def identifier(self):
-            return self.getTypedRuleContext(SqlBaseParser.IdentifierContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.IdentifierContext, 0)
 
-        def expression(self, i:int=None):
+        def expression(self, i: int = None):
             if i is None:
                 return self.getTypedRuleContexts(SqlBaseParser.ExpressionContext)
             else:
-                return self.getTypedRuleContext(SqlBaseParser.ExpressionContext,i)
+                return self.getTypedRuleContext(SqlBaseParser.ExpressionContext, i)
 
-
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterTableValuedFunction" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterTableValuedFunction"):
                 listener.enterTableValuedFunction(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitTableValuedFunction" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitTableValuedFunction"):
                 listener.exitTableValuedFunction(self)
 
-
     class InlineTableDefault2Context(RelationPrimaryContext):
-
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a SqlBaseParser.RelationPrimaryContext
+        def __init__(
+            self, parser, ctx: ParserRuleContext
+        ):  # actually a SqlBaseParser.RelationPrimaryContext
             super().__init__(parser)
             self.copyFrom(ctx)
 
         def inlineTable(self):
-            return self.getTypedRuleContext(SqlBaseParser.InlineTableContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.InlineTableContext, 0)
 
-
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterInlineTableDefault2" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterInlineTableDefault2"):
                 listener.enterInlineTableDefault2(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitInlineTableDefault2" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitInlineTableDefault2"):
                 listener.exitInlineTableDefault2(self)
 
-
     class AliasedRelationContext(RelationPrimaryContext):
-
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a SqlBaseParser.RelationPrimaryContext
+        def __init__(
+            self, parser, ctx: ParserRuleContext
+        ):  # actually a SqlBaseParser.RelationPrimaryContext
             super().__init__(parser)
             self.copyFrom(ctx)
 
         def relation(self):
-            return self.getTypedRuleContext(SqlBaseParser.RelationContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.RelationContext, 0)
 
         def sample(self):
-            return self.getTypedRuleContext(SqlBaseParser.SampleContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.SampleContext, 0)
 
         def strictIdentifier(self):
-            return self.getTypedRuleContext(SqlBaseParser.StrictIdentifierContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.StrictIdentifierContext, 0)
 
         def AS(self):
             return self.getToken(SqlBaseParser.AS, 0)
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterAliasedRelation" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterAliasedRelation"):
                 listener.enterAliasedRelation(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitAliasedRelation" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitAliasedRelation"):
                 listener.exitAliasedRelation(self)
 
-
     class AliasedQueryContext(RelationPrimaryContext):
-
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a SqlBaseParser.RelationPrimaryContext
+        def __init__(
+            self, parser, ctx: ParserRuleContext
+        ):  # actually a SqlBaseParser.RelationPrimaryContext
             super().__init__(parser)
             self.copyFrom(ctx)
 
         def queryNoWith(self):
-            return self.getTypedRuleContext(SqlBaseParser.QueryNoWithContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.QueryNoWithContext, 0)
 
         def sample(self):
-            return self.getTypedRuleContext(SqlBaseParser.SampleContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.SampleContext, 0)
 
         def strictIdentifier(self):
-            return self.getTypedRuleContext(SqlBaseParser.StrictIdentifierContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.StrictIdentifierContext, 0)
 
         def AS(self):
             return self.getToken(SqlBaseParser.AS, 0)
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterAliasedQuery" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterAliasedQuery"):
                 listener.enterAliasedQuery(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitAliasedQuery" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitAliasedQuery"):
                 listener.exitAliasedQuery(self)
 
-
     class TableNameContext(RelationPrimaryContext):
-
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a SqlBaseParser.RelationPrimaryContext
+        def __init__(
+            self, parser, ctx: ParserRuleContext
+        ):  # actually a SqlBaseParser.RelationPrimaryContext
             super().__init__(parser)
             self.copyFrom(ctx)
 
         def tableIdentifier(self):
-            return self.getTypedRuleContext(SqlBaseParser.TableIdentifierContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.TableIdentifierContext, 0)
 
         def sample(self):
-            return self.getTypedRuleContext(SqlBaseParser.SampleContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.SampleContext, 0)
 
         def strictIdentifier(self):
-            return self.getTypedRuleContext(SqlBaseParser.StrictIdentifierContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.StrictIdentifierContext, 0)
 
         def AS(self):
             return self.getToken(SqlBaseParser.AS, 0)
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterTableName" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterTableName"):
                 listener.enterTableName(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitTableName" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitTableName"):
                 listener.exitTableName(self)
-
-
 
     def relationPrimary(self):
 
         localctx = SqlBaseParser.RelationPrimaryContext(self, self._ctx, self.state)
         self.enterRule(localctx, 104, self.RULE_relationPrimary)
-        self._la = 0 # Token type
+        self._la = 0  # Token type
         try:
             self.state = 1613
             self._errHandler.sync(self)
-            la_ = self._interp.adaptivePredict(self._input,217,self._ctx)
+            la_ = self._interp.adaptivePredict(self._input, 217, self._ctx)
             if la_ == 1:
                 localctx = SqlBaseParser.TableNameContext(self, localctx)
                 self.enterOuterAlt(localctx, 1)
@@ -10015,27 +12203,24 @@ class SqlBaseParser ( Parser ):
                 self.tableIdentifier()
                 self.state = 1566
                 self._errHandler.sync(self)
-                la_ = self._interp.adaptivePredict(self._input,206,self._ctx)
+                la_ = self._interp.adaptivePredict(self._input, 206, self._ctx)
                 if la_ == 1:
                     self.state = 1565
                     self.sample()
 
-
                 self.state = 1572
                 self._errHandler.sync(self)
-                la_ = self._interp.adaptivePredict(self._input,208,self._ctx)
+                la_ = self._interp.adaptivePredict(self._input, 208, self._ctx)
                 if la_ == 1:
                     self.state = 1569
                     self._errHandler.sync(self)
-                    la_ = self._interp.adaptivePredict(self._input,207,self._ctx)
+                    la_ = self._interp.adaptivePredict(self._input, 207, self._ctx)
                     if la_ == 1:
                         self.state = 1568
                         self.match(SqlBaseParser.AS)
 
-
                     self.state = 1571
                     self.strictIdentifier()
-
 
                 pass
 
@@ -10050,27 +12235,24 @@ class SqlBaseParser ( Parser ):
                 self.match(SqlBaseParser.T__1)
                 self.state = 1578
                 self._errHandler.sync(self)
-                la_ = self._interp.adaptivePredict(self._input,209,self._ctx)
+                la_ = self._interp.adaptivePredict(self._input, 209, self._ctx)
                 if la_ == 1:
                     self.state = 1577
                     self.sample()
 
-
                 self.state = 1584
                 self._errHandler.sync(self)
-                la_ = self._interp.adaptivePredict(self._input,211,self._ctx)
+                la_ = self._interp.adaptivePredict(self._input, 211, self._ctx)
                 if la_ == 1:
                     self.state = 1581
                     self._errHandler.sync(self)
-                    la_ = self._interp.adaptivePredict(self._input,210,self._ctx)
+                    la_ = self._interp.adaptivePredict(self._input, 210, self._ctx)
                     if la_ == 1:
                         self.state = 1580
                         self.match(SqlBaseParser.AS)
 
-
                     self.state = 1583
                     self.strictIdentifier()
-
 
                 pass
 
@@ -10085,27 +12267,24 @@ class SqlBaseParser ( Parser ):
                 self.match(SqlBaseParser.T__1)
                 self.state = 1590
                 self._errHandler.sync(self)
-                la_ = self._interp.adaptivePredict(self._input,212,self._ctx)
+                la_ = self._interp.adaptivePredict(self._input, 212, self._ctx)
                 if la_ == 1:
                     self.state = 1589
                     self.sample()
 
-
                 self.state = 1596
                 self._errHandler.sync(self)
-                la_ = self._interp.adaptivePredict(self._input,214,self._ctx)
+                la_ = self._interp.adaptivePredict(self._input, 214, self._ctx)
                 if la_ == 1:
                     self.state = 1593
                     self._errHandler.sync(self)
-                    la_ = self._interp.adaptivePredict(self._input,213,self._ctx)
+                    la_ = self._interp.adaptivePredict(self._input, 213, self._ctx)
                     if la_ == 1:
                         self.state = 1592
                         self.match(SqlBaseParser.AS)
 
-
                     self.state = 1595
                     self.strictIdentifier()
-
 
                 pass
 
@@ -10126,13 +12305,264 @@ class SqlBaseParser ( Parser ):
                 self.state = 1609
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if (((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << SqlBaseParser.T__0) | (1 << SqlBaseParser.SELECT) | (1 << SqlBaseParser.FROM) | (1 << SqlBaseParser.ADD) | (1 << SqlBaseParser.AS) | (1 << SqlBaseParser.ALL) | (1 << SqlBaseParser.DISTINCT) | (1 << SqlBaseParser.WHERE) | (1 << SqlBaseParser.GROUP) | (1 << SqlBaseParser.BY) | (1 << SqlBaseParser.GROUPING) | (1 << SqlBaseParser.SETS) | (1 << SqlBaseParser.CUBE) | (1 << SqlBaseParser.ROLLUP) | (1 << SqlBaseParser.ORDER) | (1 << SqlBaseParser.HAVING) | (1 << SqlBaseParser.LIMIT) | (1 << SqlBaseParser.AT) | (1 << SqlBaseParser.OR) | (1 << SqlBaseParser.AND) | (1 << SqlBaseParser.IN) | (1 << SqlBaseParser.NOT) | (1 << SqlBaseParser.NO) | (1 << SqlBaseParser.EXISTS) | (1 << SqlBaseParser.BETWEEN) | (1 << SqlBaseParser.LIKE) | (1 << SqlBaseParser.RLIKE) | (1 << SqlBaseParser.IS) | (1 << SqlBaseParser.NULL) | (1 << SqlBaseParser.TRUE) | (1 << SqlBaseParser.FALSE) | (1 << SqlBaseParser.NULLS) | (1 << SqlBaseParser.ASC) | (1 << SqlBaseParser.DESC) | (1 << SqlBaseParser.FOR) | (1 << SqlBaseParser.INTERVAL) | (1 << SqlBaseParser.CASE) | (1 << SqlBaseParser.WHEN) | (1 << SqlBaseParser.THEN) | (1 << SqlBaseParser.ELSE) | (1 << SqlBaseParser.END) | (1 << SqlBaseParser.JOIN) | (1 << SqlBaseParser.CROSS) | (1 << SqlBaseParser.OUTER) | (1 << SqlBaseParser.INNER) | (1 << SqlBaseParser.LEFT) | (1 << SqlBaseParser.SEMI) | (1 << SqlBaseParser.RIGHT) | (1 << SqlBaseParser.FULL) | (1 << SqlBaseParser.NATURAL) | (1 << SqlBaseParser.ON) | (1 << SqlBaseParser.LATERAL) | (1 << SqlBaseParser.WINDOW) | (1 << SqlBaseParser.OVER) | (1 << SqlBaseParser.PARTITION) | (1 << SqlBaseParser.RANGE) | (1 << SqlBaseParser.ROWS))) != 0) or ((((_la - 64)) & ~0x3f) == 0 and ((1 << (_la - 64)) & ((1 << (SqlBaseParser.UNBOUNDED - 64)) | (1 << (SqlBaseParser.PRECEDING - 64)) | (1 << (SqlBaseParser.FOLLOWING - 64)) | (1 << (SqlBaseParser.CURRENT - 64)) | (1 << (SqlBaseParser.ROW - 64)) | (1 << (SqlBaseParser.WITH - 64)) | (1 << (SqlBaseParser.VALUES - 64)) | (1 << (SqlBaseParser.CREATE - 64)) | (1 << (SqlBaseParser.TABLE - 64)) | (1 << (SqlBaseParser.VIEW - 64)) | (1 << (SqlBaseParser.REPLACE - 64)) | (1 << (SqlBaseParser.INSERT - 64)) | (1 << (SqlBaseParser.DELETE - 64)) | (1 << (SqlBaseParser.INTO - 64)) | (1 << (SqlBaseParser.DESCRIBE - 64)) | (1 << (SqlBaseParser.EXPLAIN - 64)) | (1 << (SqlBaseParser.FORMAT - 64)) | (1 << (SqlBaseParser.LOGICAL - 64)) | (1 << (SqlBaseParser.CODEGEN - 64)) | (1 << (SqlBaseParser.CAST - 64)) | (1 << (SqlBaseParser.SHOW - 64)) | (1 << (SqlBaseParser.TABLES - 64)) | (1 << (SqlBaseParser.COLUMNS - 64)) | (1 << (SqlBaseParser.COLUMN - 64)) | (1 << (SqlBaseParser.USE - 64)) | (1 << (SqlBaseParser.PARTITIONS - 64)) | (1 << (SqlBaseParser.FUNCTIONS - 64)) | (1 << (SqlBaseParser.DROP - 64)) | (1 << (SqlBaseParser.UNION - 64)) | (1 << (SqlBaseParser.EXCEPT - 64)) | (1 << (SqlBaseParser.INTERSECT - 64)) | (1 << (SqlBaseParser.TO - 64)) | (1 << (SqlBaseParser.TABLESAMPLE - 64)) | (1 << (SqlBaseParser.STRATIFY - 64)) | (1 << (SqlBaseParser.ALTER - 64)) | (1 << (SqlBaseParser.RENAME - 64)) | (1 << (SqlBaseParser.ARRAY - 64)) | (1 << (SqlBaseParser.MAP - 64)) | (1 << (SqlBaseParser.STRUCT - 64)) | (1 << (SqlBaseParser.COMMENT - 64)) | (1 << (SqlBaseParser.SET - 64)) | (1 << (SqlBaseParser.RESET - 64)) | (1 << (SqlBaseParser.DATA - 64)) | (1 << (SqlBaseParser.START - 64)) | (1 << (SqlBaseParser.TRANSACTION - 64)) | (1 << (SqlBaseParser.COMMIT - 64)) | (1 << (SqlBaseParser.ROLLBACK - 64)) | (1 << (SqlBaseParser.MACRO - 64)) | (1 << (SqlBaseParser.IF - 64)) | (1 << (SqlBaseParser.PLUS - 64)) | (1 << (SqlBaseParser.MINUS - 64)) | (1 << (SqlBaseParser.ASTERISK - 64)) | (1 << (SqlBaseParser.DIV - 64)) | (1 << (SqlBaseParser.TILDE - 64)))) != 0) or ((((_la - 131)) & ~0x3f) == 0 and ((1 << (_la - 131)) & ((1 << (SqlBaseParser.PERCENTLIT - 131)) | (1 << (SqlBaseParser.BUCKET - 131)) | (1 << (SqlBaseParser.OUT - 131)) | (1 << (SqlBaseParser.OF - 131)) | (1 << (SqlBaseParser.SORT - 131)) | (1 << (SqlBaseParser.CLUSTER - 131)) | (1 << (SqlBaseParser.DISTRIBUTE - 131)) | (1 << (SqlBaseParser.OVERWRITE - 131)) | (1 << (SqlBaseParser.TRANSFORM - 131)) | (1 << (SqlBaseParser.REDUCE - 131)) | (1 << (SqlBaseParser.USING - 131)) | (1 << (SqlBaseParser.SERDE - 131)) | (1 << (SqlBaseParser.SERDEPROPERTIES - 131)) | (1 << (SqlBaseParser.RECORDREADER - 131)) | (1 << (SqlBaseParser.RECORDWRITER - 131)) | (1 << (SqlBaseParser.DELIMITED - 131)) | (1 << (SqlBaseParser.FIELDS - 131)) | (1 << (SqlBaseParser.TERMINATED - 131)) | (1 << (SqlBaseParser.COLLECTION - 131)) | (1 << (SqlBaseParser.ITEMS - 131)) | (1 << (SqlBaseParser.KEYS - 131)) | (1 << (SqlBaseParser.ESCAPED - 131)) | (1 << (SqlBaseParser.LINES - 131)) | (1 << (SqlBaseParser.SEPARATED - 131)) | (1 << (SqlBaseParser.FUNCTION - 131)) | (1 << (SqlBaseParser.EXTENDED - 131)) | (1 << (SqlBaseParser.REFRESH - 131)) | (1 << (SqlBaseParser.CLEAR - 131)) | (1 << (SqlBaseParser.CACHE - 131)) | (1 << (SqlBaseParser.UNCACHE - 131)) | (1 << (SqlBaseParser.LAZY - 131)) | (1 << (SqlBaseParser.FORMATTED - 131)) | (1 << (SqlBaseParser.TEMPORARY - 131)) | (1 << (SqlBaseParser.OPTIONS - 131)) | (1 << (SqlBaseParser.UNSET - 131)) | (1 << (SqlBaseParser.TBLPROPERTIES - 131)) | (1 << (SqlBaseParser.DBPROPERTIES - 131)) | (1 << (SqlBaseParser.BUCKETS - 131)) | (1 << (SqlBaseParser.SKEWED - 131)) | (1 << (SqlBaseParser.STORED - 131)) | (1 << (SqlBaseParser.DIRECTORIES - 131)) | (1 << (SqlBaseParser.LOCATION - 131)) | (1 << (SqlBaseParser.EXCHANGE - 131)) | (1 << (SqlBaseParser.ARCHIVE - 131)) | (1 << (SqlBaseParser.UNARCHIVE - 131)) | (1 << (SqlBaseParser.FILEFORMAT - 131)) | (1 << (SqlBaseParser.TOUCH - 131)) | (1 << (SqlBaseParser.COMPACT - 131)) | (1 << (SqlBaseParser.CONCATENATE - 131)) | (1 << (SqlBaseParser.CHANGE - 131)) | (1 << (SqlBaseParser.CASCADE - 131)) | (1 << (SqlBaseParser.RESTRICT - 131)) | (1 << (SqlBaseParser.CLUSTERED - 131)) | (1 << (SqlBaseParser.SORTED - 131)) | (1 << (SqlBaseParser.PURGE - 131)) | (1 << (SqlBaseParser.INPUTFORMAT - 131)) | (1 << (SqlBaseParser.OUTPUTFORMAT - 131)) | (1 << (SqlBaseParser.DATABASE - 131)) | (1 << (SqlBaseParser.DATABASES - 131)) | (1 << (SqlBaseParser.DFS - 131)) | (1 << (SqlBaseParser.TRUNCATE - 131)) | (1 << (SqlBaseParser.ANALYZE - 131)) | (1 << (SqlBaseParser.COMPUTE - 131)) | (1 << (SqlBaseParser.LIST - 131)))) != 0) or ((((_la - 195)) & ~0x3f) == 0 and ((1 << (_la - 195)) & ((1 << (SqlBaseParser.STATISTICS - 195)) | (1 << (SqlBaseParser.PARTITIONED - 195)) | (1 << (SqlBaseParser.EXTERNAL - 195)) | (1 << (SqlBaseParser.DEFINED - 195)) | (1 << (SqlBaseParser.REVOKE - 195)) | (1 << (SqlBaseParser.GRANT - 195)) | (1 << (SqlBaseParser.LOCK - 195)) | (1 << (SqlBaseParser.UNLOCK - 195)) | (1 << (SqlBaseParser.MSCK - 195)) | (1 << (SqlBaseParser.REPAIR - 195)) | (1 << (SqlBaseParser.RECOVER - 195)) | (1 << (SqlBaseParser.EXPORT - 195)) | (1 << (SqlBaseParser.IMPORT - 195)) | (1 << (SqlBaseParser.LOAD - 195)) | (1 << (SqlBaseParser.ROLE - 195)) | (1 << (SqlBaseParser.ROLES - 195)) | (1 << (SqlBaseParser.COMPACTIONS - 195)) | (1 << (SqlBaseParser.PRINCIPALS - 195)) | (1 << (SqlBaseParser.TRANSACTIONS - 195)) | (1 << (SqlBaseParser.INDEX - 195)) | (1 << (SqlBaseParser.INDEXES - 195)) | (1 << (SqlBaseParser.LOCKS - 195)) | (1 << (SqlBaseParser.OPTION - 195)) | (1 << (SqlBaseParser.ANTI - 195)) | (1 << (SqlBaseParser.LOCAL - 195)) | (1 << (SqlBaseParser.INPATH - 195)) | (1 << (SqlBaseParser.CURRENT_DATE - 195)) | (1 << (SqlBaseParser.CURRENT_TIMESTAMP - 195)) | (1 << (SqlBaseParser.STRING - 195)) | (1 << (SqlBaseParser.BIGINT_LITERAL - 195)) | (1 << (SqlBaseParser.SMALLINT_LITERAL - 195)) | (1 << (SqlBaseParser.TINYINT_LITERAL - 195)) | (1 << (SqlBaseParser.INTEGER_VALUE - 195)) | (1 << (SqlBaseParser.DECIMAL_VALUE - 195)) | (1 << (SqlBaseParser.SCIENTIFIC_DECIMAL_VALUE - 195)) | (1 << (SqlBaseParser.DOUBLE_LITERAL - 195)) | (1 << (SqlBaseParser.BIGDECIMAL_LITERAL - 195)) | (1 << (SqlBaseParser.IDENTIFIER - 195)) | (1 << (SqlBaseParser.BACKQUOTED_IDENTIFIER - 195)))) != 0):
+                if (
+                    (
+                        ((_la) & ~0x3F) == 0
+                        and (
+                            (1 << _la)
+                            & (
+                                (1 << SqlBaseParser.T__0)
+                                | (1 << SqlBaseParser.SELECT)
+                                | (1 << SqlBaseParser.FROM)
+                                | (1 << SqlBaseParser.ADD)
+                                | (1 << SqlBaseParser.AS)
+                                | (1 << SqlBaseParser.ALL)
+                                | (1 << SqlBaseParser.DISTINCT)
+                                | (1 << SqlBaseParser.WHERE)
+                                | (1 << SqlBaseParser.GROUP)
+                                | (1 << SqlBaseParser.BY)
+                                | (1 << SqlBaseParser.GROUPING)
+                                | (1 << SqlBaseParser.SETS)
+                                | (1 << SqlBaseParser.CUBE)
+                                | (1 << SqlBaseParser.ROLLUP)
+                                | (1 << SqlBaseParser.ORDER)
+                                | (1 << SqlBaseParser.HAVING)
+                                | (1 << SqlBaseParser.LIMIT)
+                                | (1 << SqlBaseParser.AT)
+                                | (1 << SqlBaseParser.OR)
+                                | (1 << SqlBaseParser.AND)
+                                | (1 << SqlBaseParser.IN)
+                                | (1 << SqlBaseParser.NOT)
+                                | (1 << SqlBaseParser.NO)
+                                | (1 << SqlBaseParser.EXISTS)
+                                | (1 << SqlBaseParser.BETWEEN)
+                                | (1 << SqlBaseParser.LIKE)
+                                | (1 << SqlBaseParser.RLIKE)
+                                | (1 << SqlBaseParser.IS)
+                                | (1 << SqlBaseParser.NULL)
+                                | (1 << SqlBaseParser.TRUE)
+                                | (1 << SqlBaseParser.FALSE)
+                                | (1 << SqlBaseParser.NULLS)
+                                | (1 << SqlBaseParser.ASC)
+                                | (1 << SqlBaseParser.DESC)
+                                | (1 << SqlBaseParser.FOR)
+                                | (1 << SqlBaseParser.INTERVAL)
+                                | (1 << SqlBaseParser.CASE)
+                                | (1 << SqlBaseParser.WHEN)
+                                | (1 << SqlBaseParser.THEN)
+                                | (1 << SqlBaseParser.ELSE)
+                                | (1 << SqlBaseParser.END)
+                                | (1 << SqlBaseParser.JOIN)
+                                | (1 << SqlBaseParser.CROSS)
+                                | (1 << SqlBaseParser.OUTER)
+                                | (1 << SqlBaseParser.INNER)
+                                | (1 << SqlBaseParser.LEFT)
+                                | (1 << SqlBaseParser.SEMI)
+                                | (1 << SqlBaseParser.RIGHT)
+                                | (1 << SqlBaseParser.FULL)
+                                | (1 << SqlBaseParser.NATURAL)
+                                | (1 << SqlBaseParser.ON)
+                                | (1 << SqlBaseParser.LATERAL)
+                                | (1 << SqlBaseParser.WINDOW)
+                                | (1 << SqlBaseParser.OVER)
+                                | (1 << SqlBaseParser.PARTITION)
+                                | (1 << SqlBaseParser.RANGE)
+                                | (1 << SqlBaseParser.ROWS)
+                            )
+                        )
+                        != 0
+                    )
+                    or (
+                        (((_la - 64)) & ~0x3F) == 0
+                        and (
+                            (1 << (_la - 64))
+                            & (
+                                (1 << (SqlBaseParser.UNBOUNDED - 64))
+                                | (1 << (SqlBaseParser.PRECEDING - 64))
+                                | (1 << (SqlBaseParser.FOLLOWING - 64))
+                                | (1 << (SqlBaseParser.CURRENT - 64))
+                                | (1 << (SqlBaseParser.ROW - 64))
+                                | (1 << (SqlBaseParser.WITH - 64))
+                                | (1 << (SqlBaseParser.VALUES - 64))
+                                | (1 << (SqlBaseParser.CREATE - 64))
+                                | (1 << (SqlBaseParser.TABLE - 64))
+                                | (1 << (SqlBaseParser.VIEW - 64))
+                                | (1 << (SqlBaseParser.REPLACE - 64))
+                                | (1 << (SqlBaseParser.INSERT - 64))
+                                | (1 << (SqlBaseParser.DELETE - 64))
+                                | (1 << (SqlBaseParser.INTO - 64))
+                                | (1 << (SqlBaseParser.DESCRIBE - 64))
+                                | (1 << (SqlBaseParser.EXPLAIN - 64))
+                                | (1 << (SqlBaseParser.FORMAT - 64))
+                                | (1 << (SqlBaseParser.LOGICAL - 64))
+                                | (1 << (SqlBaseParser.CODEGEN - 64))
+                                | (1 << (SqlBaseParser.CAST - 64))
+                                | (1 << (SqlBaseParser.SHOW - 64))
+                                | (1 << (SqlBaseParser.TABLES - 64))
+                                | (1 << (SqlBaseParser.COLUMNS - 64))
+                                | (1 << (SqlBaseParser.COLUMN - 64))
+                                | (1 << (SqlBaseParser.USE - 64))
+                                | (1 << (SqlBaseParser.PARTITIONS - 64))
+                                | (1 << (SqlBaseParser.FUNCTIONS - 64))
+                                | (1 << (SqlBaseParser.DROP - 64))
+                                | (1 << (SqlBaseParser.UNION - 64))
+                                | (1 << (SqlBaseParser.EXCEPT - 64))
+                                | (1 << (SqlBaseParser.INTERSECT - 64))
+                                | (1 << (SqlBaseParser.TO - 64))
+                                | (1 << (SqlBaseParser.TABLESAMPLE - 64))
+                                | (1 << (SqlBaseParser.STRATIFY - 64))
+                                | (1 << (SqlBaseParser.ALTER - 64))
+                                | (1 << (SqlBaseParser.RENAME - 64))
+                                | (1 << (SqlBaseParser.ARRAY - 64))
+                                | (1 << (SqlBaseParser.MAP - 64))
+                                | (1 << (SqlBaseParser.STRUCT - 64))
+                                | (1 << (SqlBaseParser.COMMENT - 64))
+                                | (1 << (SqlBaseParser.SET - 64))
+                                | (1 << (SqlBaseParser.RESET - 64))
+                                | (1 << (SqlBaseParser.DATA - 64))
+                                | (1 << (SqlBaseParser.START - 64))
+                                | (1 << (SqlBaseParser.TRANSACTION - 64))
+                                | (1 << (SqlBaseParser.COMMIT - 64))
+                                | (1 << (SqlBaseParser.ROLLBACK - 64))
+                                | (1 << (SqlBaseParser.MACRO - 64))
+                                | (1 << (SqlBaseParser.IF - 64))
+                                | (1 << (SqlBaseParser.PLUS - 64))
+                                | (1 << (SqlBaseParser.MINUS - 64))
+                                | (1 << (SqlBaseParser.ASTERISK - 64))
+                                | (1 << (SqlBaseParser.DIV - 64))
+                                | (1 << (SqlBaseParser.TILDE - 64))
+                            )
+                        )
+                        != 0
+                    )
+                    or (
+                        (((_la - 131)) & ~0x3F) == 0
+                        and (
+                            (1 << (_la - 131))
+                            & (
+                                (1 << (SqlBaseParser.PERCENTLIT - 131))
+                                | (1 << (SqlBaseParser.BUCKET - 131))
+                                | (1 << (SqlBaseParser.OUT - 131))
+                                | (1 << (SqlBaseParser.OF - 131))
+                                | (1 << (SqlBaseParser.SORT - 131))
+                                | (1 << (SqlBaseParser.CLUSTER - 131))
+                                | (1 << (SqlBaseParser.DISTRIBUTE - 131))
+                                | (1 << (SqlBaseParser.OVERWRITE - 131))
+                                | (1 << (SqlBaseParser.TRANSFORM - 131))
+                                | (1 << (SqlBaseParser.REDUCE - 131))
+                                | (1 << (SqlBaseParser.USING - 131))
+                                | (1 << (SqlBaseParser.SERDE - 131))
+                                | (1 << (SqlBaseParser.SERDEPROPERTIES - 131))
+                                | (1 << (SqlBaseParser.RECORDREADER - 131))
+                                | (1 << (SqlBaseParser.RECORDWRITER - 131))
+                                | (1 << (SqlBaseParser.DELIMITED - 131))
+                                | (1 << (SqlBaseParser.FIELDS - 131))
+                                | (1 << (SqlBaseParser.TERMINATED - 131))
+                                | (1 << (SqlBaseParser.COLLECTION - 131))
+                                | (1 << (SqlBaseParser.ITEMS - 131))
+                                | (1 << (SqlBaseParser.KEYS - 131))
+                                | (1 << (SqlBaseParser.ESCAPED - 131))
+                                | (1 << (SqlBaseParser.LINES - 131))
+                                | (1 << (SqlBaseParser.SEPARATED - 131))
+                                | (1 << (SqlBaseParser.FUNCTION - 131))
+                                | (1 << (SqlBaseParser.EXTENDED - 131))
+                                | (1 << (SqlBaseParser.REFRESH - 131))
+                                | (1 << (SqlBaseParser.CLEAR - 131))
+                                | (1 << (SqlBaseParser.CACHE - 131))
+                                | (1 << (SqlBaseParser.UNCACHE - 131))
+                                | (1 << (SqlBaseParser.LAZY - 131))
+                                | (1 << (SqlBaseParser.FORMATTED - 131))
+                                | (1 << (SqlBaseParser.TEMPORARY - 131))
+                                | (1 << (SqlBaseParser.OPTIONS - 131))
+                                | (1 << (SqlBaseParser.UNSET - 131))
+                                | (1 << (SqlBaseParser.TBLPROPERTIES - 131))
+                                | (1 << (SqlBaseParser.DBPROPERTIES - 131))
+                                | (1 << (SqlBaseParser.BUCKETS - 131))
+                                | (1 << (SqlBaseParser.SKEWED - 131))
+                                | (1 << (SqlBaseParser.STORED - 131))
+                                | (1 << (SqlBaseParser.DIRECTORIES - 131))
+                                | (1 << (SqlBaseParser.LOCATION - 131))
+                                | (1 << (SqlBaseParser.EXCHANGE - 131))
+                                | (1 << (SqlBaseParser.ARCHIVE - 131))
+                                | (1 << (SqlBaseParser.UNARCHIVE - 131))
+                                | (1 << (SqlBaseParser.FILEFORMAT - 131))
+                                | (1 << (SqlBaseParser.TOUCH - 131))
+                                | (1 << (SqlBaseParser.COMPACT - 131))
+                                | (1 << (SqlBaseParser.CONCATENATE - 131))
+                                | (1 << (SqlBaseParser.CHANGE - 131))
+                                | (1 << (SqlBaseParser.CASCADE - 131))
+                                | (1 << (SqlBaseParser.RESTRICT - 131))
+                                | (1 << (SqlBaseParser.CLUSTERED - 131))
+                                | (1 << (SqlBaseParser.SORTED - 131))
+                                | (1 << (SqlBaseParser.PURGE - 131))
+                                | (1 << (SqlBaseParser.INPUTFORMAT - 131))
+                                | (1 << (SqlBaseParser.OUTPUTFORMAT - 131))
+                                | (1 << (SqlBaseParser.DATABASE - 131))
+                                | (1 << (SqlBaseParser.DATABASES - 131))
+                                | (1 << (SqlBaseParser.DFS - 131))
+                                | (1 << (SqlBaseParser.TRUNCATE - 131))
+                                | (1 << (SqlBaseParser.ANALYZE - 131))
+                                | (1 << (SqlBaseParser.COMPUTE - 131))
+                                | (1 << (SqlBaseParser.LIST - 131))
+                            )
+                        )
+                        != 0
+                    )
+                    or (
+                        (((_la - 195)) & ~0x3F) == 0
+                        and (
+                            (1 << (_la - 195))
+                            & (
+                                (1 << (SqlBaseParser.STATISTICS - 195))
+                                | (1 << (SqlBaseParser.PARTITIONED - 195))
+                                | (1 << (SqlBaseParser.EXTERNAL - 195))
+                                | (1 << (SqlBaseParser.DEFINED - 195))
+                                | (1 << (SqlBaseParser.REVOKE - 195))
+                                | (1 << (SqlBaseParser.GRANT - 195))
+                                | (1 << (SqlBaseParser.LOCK - 195))
+                                | (1 << (SqlBaseParser.UNLOCK - 195))
+                                | (1 << (SqlBaseParser.MSCK - 195))
+                                | (1 << (SqlBaseParser.REPAIR - 195))
+                                | (1 << (SqlBaseParser.RECOVER - 195))
+                                | (1 << (SqlBaseParser.EXPORT - 195))
+                                | (1 << (SqlBaseParser.IMPORT - 195))
+                                | (1 << (SqlBaseParser.LOAD - 195))
+                                | (1 << (SqlBaseParser.ROLE - 195))
+                                | (1 << (SqlBaseParser.ROLES - 195))
+                                | (1 << (SqlBaseParser.COMPACTIONS - 195))
+                                | (1 << (SqlBaseParser.PRINCIPALS - 195))
+                                | (1 << (SqlBaseParser.TRANSACTIONS - 195))
+                                | (1 << (SqlBaseParser.INDEX - 195))
+                                | (1 << (SqlBaseParser.INDEXES - 195))
+                                | (1 << (SqlBaseParser.LOCKS - 195))
+                                | (1 << (SqlBaseParser.OPTION - 195))
+                                | (1 << (SqlBaseParser.ANTI - 195))
+                                | (1 << (SqlBaseParser.LOCAL - 195))
+                                | (1 << (SqlBaseParser.INPATH - 195))
+                                | (1 << (SqlBaseParser.CURRENT_DATE - 195))
+                                | (1 << (SqlBaseParser.CURRENT_TIMESTAMP - 195))
+                                | (1 << (SqlBaseParser.STRING - 195))
+                                | (1 << (SqlBaseParser.BIGINT_LITERAL - 195))
+                                | (1 << (SqlBaseParser.SMALLINT_LITERAL - 195))
+                                | (1 << (SqlBaseParser.TINYINT_LITERAL - 195))
+                                | (1 << (SqlBaseParser.INTEGER_VALUE - 195))
+                                | (1 << (SqlBaseParser.DECIMAL_VALUE - 195))
+                                | (1 << (SqlBaseParser.SCIENTIFIC_DECIMAL_VALUE - 195))
+                                | (1 << (SqlBaseParser.DOUBLE_LITERAL - 195))
+                                | (1 << (SqlBaseParser.BIGDECIMAL_LITERAL - 195))
+                                | (1 << (SqlBaseParser.IDENTIFIER - 195))
+                                | (1 << (SqlBaseParser.BACKQUOTED_IDENTIFIER - 195))
+                            )
+                        )
+                        != 0
+                    )
+                ):
                     self.state = 1601
                     self.expression()
                     self.state = 1606
                     self._errHandler.sync(self)
                     _la = self._input.LA(1)
-                    while _la==SqlBaseParser.T__2:
+                    while _la == SqlBaseParser.T__2:
                         self.state = 1602
                         self.match(SqlBaseParser.T__2)
                         self.state = 1603
@@ -10141,12 +12571,9 @@ class SqlBaseParser ( Parser ):
                         self._errHandler.sync(self)
                         _la = self._input.LA(1)
 
-
-
                 self.state = 1611
                 self.match(SqlBaseParser.T__1)
                 pass
-
 
         except RecognitionException as re:
             localctx.exception = re
@@ -10156,48 +12583,43 @@ class SqlBaseParser ( Parser ):
             self.exitRule()
         return localctx
 
-
     class InlineTableContext(ParserRuleContext):
-        __slots__ = 'parser'
+        __slots__ = "parser"
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
         def VALUES(self):
             return self.getToken(SqlBaseParser.VALUES, 0)
 
-        def expression(self, i:int=None):
+        def expression(self, i: int = None):
             if i is None:
                 return self.getTypedRuleContexts(SqlBaseParser.ExpressionContext)
             else:
-                return self.getTypedRuleContext(SqlBaseParser.ExpressionContext,i)
-
+                return self.getTypedRuleContext(SqlBaseParser.ExpressionContext, i)
 
         def identifier(self):
-            return self.getTypedRuleContext(SqlBaseParser.IdentifierContext,0)
-
+            return self.getTypedRuleContext(SqlBaseParser.IdentifierContext, 0)
 
         def AS(self):
             return self.getToken(SqlBaseParser.AS, 0)
 
         def identifierList(self):
-            return self.getTypedRuleContext(SqlBaseParser.IdentifierListContext,0)
-
+            return self.getTypedRuleContext(SqlBaseParser.IdentifierListContext, 0)
 
         def getRuleIndex(self):
             return SqlBaseParser.RULE_inlineTable
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterInlineTable" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterInlineTable"):
                 listener.enterInlineTable(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitInlineTable" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitInlineTable"):
                 listener.exitInlineTable(self)
-
-
-
 
     def inlineTable(self):
 
@@ -10211,40 +12633,36 @@ class SqlBaseParser ( Parser ):
             self.expression()
             self.state = 1621
             self._errHandler.sync(self)
-            _alt = self._interp.adaptivePredict(self._input,218,self._ctx)
-            while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
-                if _alt==1:
+            _alt = self._interp.adaptivePredict(self._input, 218, self._ctx)
+            while _alt != 2 and _alt != ATN.INVALID_ALT_NUMBER:
+                if _alt == 1:
                     self.state = 1617
                     self.match(SqlBaseParser.T__2)
                     self.state = 1618
-                    self.expression() 
+                    self.expression()
                 self.state = 1623
                 self._errHandler.sync(self)
-                _alt = self._interp.adaptivePredict(self._input,218,self._ctx)
+                _alt = self._interp.adaptivePredict(self._input, 218, self._ctx)
 
             self.state = 1631
             self._errHandler.sync(self)
-            la_ = self._interp.adaptivePredict(self._input,221,self._ctx)
+            la_ = self._interp.adaptivePredict(self._input, 221, self._ctx)
             if la_ == 1:
                 self.state = 1625
                 self._errHandler.sync(self)
-                la_ = self._interp.adaptivePredict(self._input,219,self._ctx)
+                la_ = self._interp.adaptivePredict(self._input, 219, self._ctx)
                 if la_ == 1:
                     self.state = 1624
                     self.match(SqlBaseParser.AS)
-
 
                 self.state = 1627
                 self.identifier()
                 self.state = 1629
                 self._errHandler.sync(self)
-                la_ = self._interp.adaptivePredict(self._input,220,self._ctx)
+                la_ = self._interp.adaptivePredict(self._input, 220, self._ctx)
                 if la_ == 1:
                     self.state = 1628
                     self.identifierList()
-
-
-
 
         except RecognitionException as re:
             localctx.exception = re
@@ -10254,120 +12672,136 @@ class SqlBaseParser ( Parser ):
             self.exitRule()
         return localctx
 
-
     class RowFormatContext(ParserRuleContext):
-        __slots__ = 'parser'
+        __slots__ = "parser"
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
-
 
         def getRuleIndex(self):
             return SqlBaseParser.RULE_rowFormat
 
-     
-        def copyFrom(self, ctx:ParserRuleContext):
+        def copyFrom(self, ctx: ParserRuleContext):
             super().copyFrom(ctx)
 
-
-
     class RowFormatSerdeContext(RowFormatContext):
-
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a SqlBaseParser.RowFormatContext
+        def __init__(
+            self, parser, ctx: ParserRuleContext
+        ):  # actually a SqlBaseParser.RowFormatContext
             super().__init__(parser)
-            self.name = None # Token
-            self.props = None # TablePropertyListContext
+            self.name = None  # Token
+            self.props = None  # TablePropertyListContext
             self.copyFrom(ctx)
 
         def ROW(self):
             return self.getToken(SqlBaseParser.ROW, 0)
+
         def FORMAT(self):
             return self.getToken(SqlBaseParser.FORMAT, 0)
+
         def SERDE(self):
             return self.getToken(SqlBaseParser.SERDE, 0)
+
         def STRING(self):
             return self.getToken(SqlBaseParser.STRING, 0)
+
         def WITH(self):
             return self.getToken(SqlBaseParser.WITH, 0)
+
         def SERDEPROPERTIES(self):
             return self.getToken(SqlBaseParser.SERDEPROPERTIES, 0)
+
         def tablePropertyList(self):
-            return self.getTypedRuleContext(SqlBaseParser.TablePropertyListContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.TablePropertyListContext, 0)
 
-
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterRowFormatSerde" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterRowFormatSerde"):
                 listener.enterRowFormatSerde(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitRowFormatSerde" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitRowFormatSerde"):
                 listener.exitRowFormatSerde(self)
 
-
     class RowFormatDelimitedContext(RowFormatContext):
-
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a SqlBaseParser.RowFormatContext
+        def __init__(
+            self, parser, ctx: ParserRuleContext
+        ):  # actually a SqlBaseParser.RowFormatContext
             super().__init__(parser)
-            self.fieldsTerminatedBy = None # Token
-            self.escapedBy = None # Token
-            self.collectionItemsTerminatedBy = None # Token
-            self.keysTerminatedBy = None # Token
-            self.linesSeparatedBy = None # Token
-            self.nullDefinedAs = None # Token
+            self.fieldsTerminatedBy = None  # Token
+            self.escapedBy = None  # Token
+            self.collectionItemsTerminatedBy = None  # Token
+            self.keysTerminatedBy = None  # Token
+            self.linesSeparatedBy = None  # Token
+            self.nullDefinedAs = None  # Token
             self.copyFrom(ctx)
 
         def ROW(self):
             return self.getToken(SqlBaseParser.ROW, 0)
+
         def FORMAT(self):
             return self.getToken(SqlBaseParser.FORMAT, 0)
+
         def DELIMITED(self):
             return self.getToken(SqlBaseParser.DELIMITED, 0)
+
         def FIELDS(self):
             return self.getToken(SqlBaseParser.FIELDS, 0)
-        def TERMINATED(self, i:int=None):
+
+        def TERMINATED(self, i: int = None):
             if i is None:
                 return self.getTokens(SqlBaseParser.TERMINATED)
             else:
                 return self.getToken(SqlBaseParser.TERMINATED, i)
-        def BY(self, i:int=None):
+
+        def BY(self, i: int = None):
             if i is None:
                 return self.getTokens(SqlBaseParser.BY)
             else:
                 return self.getToken(SqlBaseParser.BY, i)
+
         def COLLECTION(self):
             return self.getToken(SqlBaseParser.COLLECTION, 0)
+
         def ITEMS(self):
             return self.getToken(SqlBaseParser.ITEMS, 0)
+
         def MAP(self):
             return self.getToken(SqlBaseParser.MAP, 0)
+
         def KEYS(self):
             return self.getToken(SqlBaseParser.KEYS, 0)
+
         def LINES(self):
             return self.getToken(SqlBaseParser.LINES, 0)
+
         def NULL(self):
             return self.getToken(SqlBaseParser.NULL, 0)
+
         def DEFINED(self):
             return self.getToken(SqlBaseParser.DEFINED, 0)
+
         def AS(self):
             return self.getToken(SqlBaseParser.AS, 0)
-        def STRING(self, i:int=None):
+
+        def STRING(self, i: int = None):
             if i is None:
                 return self.getTokens(SqlBaseParser.STRING)
             else:
                 return self.getToken(SqlBaseParser.STRING, i)
+
         def ESCAPED(self):
             return self.getToken(SqlBaseParser.ESCAPED, 0)
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterRowFormatDelimited" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterRowFormatDelimited"):
                 listener.enterRowFormatDelimited(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitRowFormatDelimited" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitRowFormatDelimited"):
                 listener.exitRowFormatDelimited(self)
-
-
 
     def rowFormat(self):
 
@@ -10376,7 +12810,7 @@ class SqlBaseParser ( Parser ):
         try:
             self.state = 1682
             self._errHandler.sync(self)
-            la_ = self._interp.adaptivePredict(self._input,229,self._ctx)
+            la_ = self._interp.adaptivePredict(self._input, 229, self._ctx)
             if la_ == 1:
                 localctx = SqlBaseParser.RowFormatSerdeContext(self, localctx)
                 self.enterOuterAlt(localctx, 1)
@@ -10390,7 +12824,7 @@ class SqlBaseParser ( Parser ):
                 localctx.name = self.match(SqlBaseParser.STRING)
                 self.state = 1640
                 self._errHandler.sync(self)
-                la_ = self._interp.adaptivePredict(self._input,222,self._ctx)
+                la_ = self._interp.adaptivePredict(self._input, 222, self._ctx)
                 if la_ == 1:
                     self.state = 1637
                     self.match(SqlBaseParser.WITH)
@@ -10398,7 +12832,6 @@ class SqlBaseParser ( Parser ):
                     self.match(SqlBaseParser.SERDEPROPERTIES)
                     self.state = 1639
                     localctx.props = self.tablePropertyList()
-
 
                 pass
 
@@ -10413,7 +12846,7 @@ class SqlBaseParser ( Parser ):
                 self.match(SqlBaseParser.DELIMITED)
                 self.state = 1654
                 self._errHandler.sync(self)
-                la_ = self._interp.adaptivePredict(self._input,224,self._ctx)
+                la_ = self._interp.adaptivePredict(self._input, 224, self._ctx)
                 if la_ == 1:
                     self.state = 1645
                     self.match(SqlBaseParser.FIELDS)
@@ -10425,7 +12858,7 @@ class SqlBaseParser ( Parser ):
                     localctx.fieldsTerminatedBy = self.match(SqlBaseParser.STRING)
                     self.state = 1652
                     self._errHandler.sync(self)
-                    la_ = self._interp.adaptivePredict(self._input,223,self._ctx)
+                    la_ = self._interp.adaptivePredict(self._input, 223, self._ctx)
                     if la_ == 1:
                         self.state = 1649
                         self.match(SqlBaseParser.ESCAPED)
@@ -10434,12 +12867,9 @@ class SqlBaseParser ( Parser ):
                         self.state = 1651
                         localctx.escapedBy = self.match(SqlBaseParser.STRING)
 
-
-
-
                 self.state = 1661
                 self._errHandler.sync(self)
-                la_ = self._interp.adaptivePredict(self._input,225,self._ctx)
+                la_ = self._interp.adaptivePredict(self._input, 225, self._ctx)
                 if la_ == 1:
                     self.state = 1656
                     self.match(SqlBaseParser.COLLECTION)
@@ -10450,12 +12880,13 @@ class SqlBaseParser ( Parser ):
                     self.state = 1659
                     self.match(SqlBaseParser.BY)
                     self.state = 1660
-                    localctx.collectionItemsTerminatedBy = self.match(SqlBaseParser.STRING)
-
+                    localctx.collectionItemsTerminatedBy = self.match(
+                        SqlBaseParser.STRING
+                    )
 
                 self.state = 1668
                 self._errHandler.sync(self)
-                la_ = self._interp.adaptivePredict(self._input,226,self._ctx)
+                la_ = self._interp.adaptivePredict(self._input, 226, self._ctx)
                 if la_ == 1:
                     self.state = 1663
                     self.match(SqlBaseParser.MAP)
@@ -10468,10 +12899,9 @@ class SqlBaseParser ( Parser ):
                     self.state = 1667
                     localctx.keysTerminatedBy = self.match(SqlBaseParser.STRING)
 
-
                 self.state = 1674
                 self._errHandler.sync(self)
-                la_ = self._interp.adaptivePredict(self._input,227,self._ctx)
+                la_ = self._interp.adaptivePredict(self._input, 227, self._ctx)
                 if la_ == 1:
                     self.state = 1670
                     self.match(SqlBaseParser.LINES)
@@ -10482,10 +12912,9 @@ class SqlBaseParser ( Parser ):
                     self.state = 1673
                     localctx.linesSeparatedBy = self.match(SqlBaseParser.STRING)
 
-
                 self.state = 1680
                 self._errHandler.sync(self)
-                la_ = self._interp.adaptivePredict(self._input,228,self._ctx)
+                la_ = self._interp.adaptivePredict(self._input, 228, self._ctx)
                 if la_ == 1:
                     self.state = 1676
                     self.match(SqlBaseParser.NULL)
@@ -10496,9 +12925,7 @@ class SqlBaseParser ( Parser ):
                     self.state = 1679
                     localctx.nullDefinedAs = self.match(SqlBaseParser.STRING)
 
-
                 pass
-
 
         except RecognitionException as re:
             localctx.exception = re
@@ -10508,36 +12935,33 @@ class SqlBaseParser ( Parser ):
             self.exitRule()
         return localctx
 
-
     class TableIdentifierContext(ParserRuleContext):
-        __slots__ = 'parser'
+        __slots__ = "parser"
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
-            self.db = None # IdentifierContext
-            self.table = None # IdentifierContext
+            self.db = None  # IdentifierContext
+            self.table = None  # IdentifierContext
 
-        def identifier(self, i:int=None):
+        def identifier(self, i: int = None):
             if i is None:
                 return self.getTypedRuleContexts(SqlBaseParser.IdentifierContext)
             else:
-                return self.getTypedRuleContext(SqlBaseParser.IdentifierContext,i)
-
+                return self.getTypedRuleContext(SqlBaseParser.IdentifierContext, i)
 
         def getRuleIndex(self):
             return SqlBaseParser.RULE_tableIdentifier
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterTableIdentifier" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterTableIdentifier"):
                 listener.enterTableIdentifier(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitTableIdentifier" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitTableIdentifier"):
                 listener.exitTableIdentifier(self)
-
-
-
 
     def tableIdentifier(self):
 
@@ -10547,13 +12971,12 @@ class SqlBaseParser ( Parser ):
             self.enterOuterAlt(localctx, 1)
             self.state = 1687
             self._errHandler.sync(self)
-            la_ = self._interp.adaptivePredict(self._input,230,self._ctx)
+            la_ = self._interp.adaptivePredict(self._input, 230, self._ctx)
             if la_ == 1:
                 self.state = 1684
                 localctx.db = self.identifier()
                 self.state = 1685
                 self.match(SqlBaseParser.T__3)
-
 
             self.state = 1689
             localctx.table = self.identifier()
@@ -10565,25 +12988,23 @@ class SqlBaseParser ( Parser ):
             self.exitRule()
         return localctx
 
-
     class NamedExpressionContext(ParserRuleContext):
-        __slots__ = 'parser'
+        __slots__ = "parser"
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
         def expression(self):
-            return self.getTypedRuleContext(SqlBaseParser.ExpressionContext,0)
-
+            return self.getTypedRuleContext(SqlBaseParser.ExpressionContext, 0)
 
         def identifier(self):
-            return self.getTypedRuleContext(SqlBaseParser.IdentifierContext,0)
-
+            return self.getTypedRuleContext(SqlBaseParser.IdentifierContext, 0)
 
         def identifierList(self):
-            return self.getTypedRuleContext(SqlBaseParser.IdentifierListContext,0)
-
+            return self.getTypedRuleContext(SqlBaseParser.IdentifierListContext, 0)
 
         def AS(self):
             return self.getToken(SqlBaseParser.AS, 0)
@@ -10591,16 +13012,13 @@ class SqlBaseParser ( Parser ):
         def getRuleIndex(self):
             return SqlBaseParser.RULE_namedExpression
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterNamedExpression" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterNamedExpression"):
                 listener.enterNamedExpression(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitNamedExpression" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitNamedExpression"):
                 listener.exitNamedExpression(self)
-
-
-
 
     def namedExpression(self):
 
@@ -10612,20 +13030,220 @@ class SqlBaseParser ( Parser ):
             self.expression()
             self.state = 1699
             self._errHandler.sync(self)
-            la_ = self._interp.adaptivePredict(self._input,233,self._ctx)
+            la_ = self._interp.adaptivePredict(self._input, 233, self._ctx)
             if la_ == 1:
                 self.state = 1693
                 self._errHandler.sync(self)
-                la_ = self._interp.adaptivePredict(self._input,231,self._ctx)
+                la_ = self._interp.adaptivePredict(self._input, 231, self._ctx)
                 if la_ == 1:
                     self.state = 1692
                     self.match(SqlBaseParser.AS)
 
-
                 self.state = 1697
                 self._errHandler.sync(self)
                 token = self._input.LA(1)
-                if token in [SqlBaseParser.SELECT, SqlBaseParser.FROM, SqlBaseParser.ADD, SqlBaseParser.AS, SqlBaseParser.ALL, SqlBaseParser.DISTINCT, SqlBaseParser.WHERE, SqlBaseParser.GROUP, SqlBaseParser.BY, SqlBaseParser.GROUPING, SqlBaseParser.SETS, SqlBaseParser.CUBE, SqlBaseParser.ROLLUP, SqlBaseParser.ORDER, SqlBaseParser.HAVING, SqlBaseParser.LIMIT, SqlBaseParser.AT, SqlBaseParser.OR, SqlBaseParser.AND, SqlBaseParser.IN, SqlBaseParser.NOT, SqlBaseParser.NO, SqlBaseParser.EXISTS, SqlBaseParser.BETWEEN, SqlBaseParser.LIKE, SqlBaseParser.RLIKE, SqlBaseParser.IS, SqlBaseParser.NULL, SqlBaseParser.TRUE, SqlBaseParser.FALSE, SqlBaseParser.NULLS, SqlBaseParser.ASC, SqlBaseParser.DESC, SqlBaseParser.FOR, SqlBaseParser.INTERVAL, SqlBaseParser.CASE, SqlBaseParser.WHEN, SqlBaseParser.THEN, SqlBaseParser.ELSE, SqlBaseParser.END, SqlBaseParser.JOIN, SqlBaseParser.CROSS, SqlBaseParser.OUTER, SqlBaseParser.INNER, SqlBaseParser.LEFT, SqlBaseParser.SEMI, SqlBaseParser.RIGHT, SqlBaseParser.FULL, SqlBaseParser.NATURAL, SqlBaseParser.ON, SqlBaseParser.LATERAL, SqlBaseParser.WINDOW, SqlBaseParser.OVER, SqlBaseParser.PARTITION, SqlBaseParser.RANGE, SqlBaseParser.ROWS, SqlBaseParser.UNBOUNDED, SqlBaseParser.PRECEDING, SqlBaseParser.FOLLOWING, SqlBaseParser.CURRENT, SqlBaseParser.ROW, SqlBaseParser.WITH, SqlBaseParser.VALUES, SqlBaseParser.CREATE, SqlBaseParser.TABLE, SqlBaseParser.VIEW, SqlBaseParser.REPLACE, SqlBaseParser.INSERT, SqlBaseParser.DELETE, SqlBaseParser.INTO, SqlBaseParser.DESCRIBE, SqlBaseParser.EXPLAIN, SqlBaseParser.FORMAT, SqlBaseParser.LOGICAL, SqlBaseParser.CODEGEN, SqlBaseParser.CAST, SqlBaseParser.SHOW, SqlBaseParser.TABLES, SqlBaseParser.COLUMNS, SqlBaseParser.COLUMN, SqlBaseParser.USE, SqlBaseParser.PARTITIONS, SqlBaseParser.FUNCTIONS, SqlBaseParser.DROP, SqlBaseParser.UNION, SqlBaseParser.EXCEPT, SqlBaseParser.INTERSECT, SqlBaseParser.TO, SqlBaseParser.TABLESAMPLE, SqlBaseParser.STRATIFY, SqlBaseParser.ALTER, SqlBaseParser.RENAME, SqlBaseParser.ARRAY, SqlBaseParser.MAP, SqlBaseParser.STRUCT, SqlBaseParser.COMMENT, SqlBaseParser.SET, SqlBaseParser.RESET, SqlBaseParser.DATA, SqlBaseParser.START, SqlBaseParser.TRANSACTION, SqlBaseParser.COMMIT, SqlBaseParser.ROLLBACK, SqlBaseParser.MACRO, SqlBaseParser.IF, SqlBaseParser.DIV, SqlBaseParser.PERCENTLIT, SqlBaseParser.BUCKET, SqlBaseParser.OUT, SqlBaseParser.OF, SqlBaseParser.SORT, SqlBaseParser.CLUSTER, SqlBaseParser.DISTRIBUTE, SqlBaseParser.OVERWRITE, SqlBaseParser.TRANSFORM, SqlBaseParser.REDUCE, SqlBaseParser.USING, SqlBaseParser.SERDE, SqlBaseParser.SERDEPROPERTIES, SqlBaseParser.RECORDREADER, SqlBaseParser.RECORDWRITER, SqlBaseParser.DELIMITED, SqlBaseParser.FIELDS, SqlBaseParser.TERMINATED, SqlBaseParser.COLLECTION, SqlBaseParser.ITEMS, SqlBaseParser.KEYS, SqlBaseParser.ESCAPED, SqlBaseParser.LINES, SqlBaseParser.SEPARATED, SqlBaseParser.FUNCTION, SqlBaseParser.EXTENDED, SqlBaseParser.REFRESH, SqlBaseParser.CLEAR, SqlBaseParser.CACHE, SqlBaseParser.UNCACHE, SqlBaseParser.LAZY, SqlBaseParser.FORMATTED, SqlBaseParser.TEMPORARY, SqlBaseParser.OPTIONS, SqlBaseParser.UNSET, SqlBaseParser.TBLPROPERTIES, SqlBaseParser.DBPROPERTIES, SqlBaseParser.BUCKETS, SqlBaseParser.SKEWED, SqlBaseParser.STORED, SqlBaseParser.DIRECTORIES, SqlBaseParser.LOCATION, SqlBaseParser.EXCHANGE, SqlBaseParser.ARCHIVE, SqlBaseParser.UNARCHIVE, SqlBaseParser.FILEFORMAT, SqlBaseParser.TOUCH, SqlBaseParser.COMPACT, SqlBaseParser.CONCATENATE, SqlBaseParser.CHANGE, SqlBaseParser.CASCADE, SqlBaseParser.RESTRICT, SqlBaseParser.CLUSTERED, SqlBaseParser.SORTED, SqlBaseParser.PURGE, SqlBaseParser.INPUTFORMAT, SqlBaseParser.OUTPUTFORMAT, SqlBaseParser.DATABASE, SqlBaseParser.DATABASES, SqlBaseParser.DFS, SqlBaseParser.TRUNCATE, SqlBaseParser.ANALYZE, SqlBaseParser.COMPUTE, SqlBaseParser.LIST, SqlBaseParser.STATISTICS, SqlBaseParser.PARTITIONED, SqlBaseParser.EXTERNAL, SqlBaseParser.DEFINED, SqlBaseParser.REVOKE, SqlBaseParser.GRANT, SqlBaseParser.LOCK, SqlBaseParser.UNLOCK, SqlBaseParser.MSCK, SqlBaseParser.REPAIR, SqlBaseParser.RECOVER, SqlBaseParser.EXPORT, SqlBaseParser.IMPORT, SqlBaseParser.LOAD, SqlBaseParser.ROLE, SqlBaseParser.ROLES, SqlBaseParser.COMPACTIONS, SqlBaseParser.PRINCIPALS, SqlBaseParser.TRANSACTIONS, SqlBaseParser.INDEX, SqlBaseParser.INDEXES, SqlBaseParser.LOCKS, SqlBaseParser.OPTION, SqlBaseParser.ANTI, SqlBaseParser.LOCAL, SqlBaseParser.INPATH, SqlBaseParser.CURRENT_DATE, SqlBaseParser.CURRENT_TIMESTAMP, SqlBaseParser.IDENTIFIER, SqlBaseParser.BACKQUOTED_IDENTIFIER]:
+                if token in [
+                    SqlBaseParser.SELECT,
+                    SqlBaseParser.FROM,
+                    SqlBaseParser.ADD,
+                    SqlBaseParser.AS,
+                    SqlBaseParser.ALL,
+                    SqlBaseParser.DISTINCT,
+                    SqlBaseParser.WHERE,
+                    SqlBaseParser.GROUP,
+                    SqlBaseParser.BY,
+                    SqlBaseParser.GROUPING,
+                    SqlBaseParser.SETS,
+                    SqlBaseParser.CUBE,
+                    SqlBaseParser.ROLLUP,
+                    SqlBaseParser.ORDER,
+                    SqlBaseParser.HAVING,
+                    SqlBaseParser.LIMIT,
+                    SqlBaseParser.AT,
+                    SqlBaseParser.OR,
+                    SqlBaseParser.AND,
+                    SqlBaseParser.IN,
+                    SqlBaseParser.NOT,
+                    SqlBaseParser.NO,
+                    SqlBaseParser.EXISTS,
+                    SqlBaseParser.BETWEEN,
+                    SqlBaseParser.LIKE,
+                    SqlBaseParser.RLIKE,
+                    SqlBaseParser.IS,
+                    SqlBaseParser.NULL,
+                    SqlBaseParser.TRUE,
+                    SqlBaseParser.FALSE,
+                    SqlBaseParser.NULLS,
+                    SqlBaseParser.ASC,
+                    SqlBaseParser.DESC,
+                    SqlBaseParser.FOR,
+                    SqlBaseParser.INTERVAL,
+                    SqlBaseParser.CASE,
+                    SqlBaseParser.WHEN,
+                    SqlBaseParser.THEN,
+                    SqlBaseParser.ELSE,
+                    SqlBaseParser.END,
+                    SqlBaseParser.JOIN,
+                    SqlBaseParser.CROSS,
+                    SqlBaseParser.OUTER,
+                    SqlBaseParser.INNER,
+                    SqlBaseParser.LEFT,
+                    SqlBaseParser.SEMI,
+                    SqlBaseParser.RIGHT,
+                    SqlBaseParser.FULL,
+                    SqlBaseParser.NATURAL,
+                    SqlBaseParser.ON,
+                    SqlBaseParser.LATERAL,
+                    SqlBaseParser.WINDOW,
+                    SqlBaseParser.OVER,
+                    SqlBaseParser.PARTITION,
+                    SqlBaseParser.RANGE,
+                    SqlBaseParser.ROWS,
+                    SqlBaseParser.UNBOUNDED,
+                    SqlBaseParser.PRECEDING,
+                    SqlBaseParser.FOLLOWING,
+                    SqlBaseParser.CURRENT,
+                    SqlBaseParser.ROW,
+                    SqlBaseParser.WITH,
+                    SqlBaseParser.VALUES,
+                    SqlBaseParser.CREATE,
+                    SqlBaseParser.TABLE,
+                    SqlBaseParser.VIEW,
+                    SqlBaseParser.REPLACE,
+                    SqlBaseParser.INSERT,
+                    SqlBaseParser.DELETE,
+                    SqlBaseParser.INTO,
+                    SqlBaseParser.DESCRIBE,
+                    SqlBaseParser.EXPLAIN,
+                    SqlBaseParser.FORMAT,
+                    SqlBaseParser.LOGICAL,
+                    SqlBaseParser.CODEGEN,
+                    SqlBaseParser.CAST,
+                    SqlBaseParser.SHOW,
+                    SqlBaseParser.TABLES,
+                    SqlBaseParser.COLUMNS,
+                    SqlBaseParser.COLUMN,
+                    SqlBaseParser.USE,
+                    SqlBaseParser.PARTITIONS,
+                    SqlBaseParser.FUNCTIONS,
+                    SqlBaseParser.DROP,
+                    SqlBaseParser.UNION,
+                    SqlBaseParser.EXCEPT,
+                    SqlBaseParser.INTERSECT,
+                    SqlBaseParser.TO,
+                    SqlBaseParser.TABLESAMPLE,
+                    SqlBaseParser.STRATIFY,
+                    SqlBaseParser.ALTER,
+                    SqlBaseParser.RENAME,
+                    SqlBaseParser.ARRAY,
+                    SqlBaseParser.MAP,
+                    SqlBaseParser.STRUCT,
+                    SqlBaseParser.COMMENT,
+                    SqlBaseParser.SET,
+                    SqlBaseParser.RESET,
+                    SqlBaseParser.DATA,
+                    SqlBaseParser.START,
+                    SqlBaseParser.TRANSACTION,
+                    SqlBaseParser.COMMIT,
+                    SqlBaseParser.ROLLBACK,
+                    SqlBaseParser.MACRO,
+                    SqlBaseParser.IF,
+                    SqlBaseParser.DIV,
+                    SqlBaseParser.PERCENTLIT,
+                    SqlBaseParser.BUCKET,
+                    SqlBaseParser.OUT,
+                    SqlBaseParser.OF,
+                    SqlBaseParser.SORT,
+                    SqlBaseParser.CLUSTER,
+                    SqlBaseParser.DISTRIBUTE,
+                    SqlBaseParser.OVERWRITE,
+                    SqlBaseParser.TRANSFORM,
+                    SqlBaseParser.REDUCE,
+                    SqlBaseParser.USING,
+                    SqlBaseParser.SERDE,
+                    SqlBaseParser.SERDEPROPERTIES,
+                    SqlBaseParser.RECORDREADER,
+                    SqlBaseParser.RECORDWRITER,
+                    SqlBaseParser.DELIMITED,
+                    SqlBaseParser.FIELDS,
+                    SqlBaseParser.TERMINATED,
+                    SqlBaseParser.COLLECTION,
+                    SqlBaseParser.ITEMS,
+                    SqlBaseParser.KEYS,
+                    SqlBaseParser.ESCAPED,
+                    SqlBaseParser.LINES,
+                    SqlBaseParser.SEPARATED,
+                    SqlBaseParser.FUNCTION,
+                    SqlBaseParser.EXTENDED,
+                    SqlBaseParser.REFRESH,
+                    SqlBaseParser.CLEAR,
+                    SqlBaseParser.CACHE,
+                    SqlBaseParser.UNCACHE,
+                    SqlBaseParser.LAZY,
+                    SqlBaseParser.FORMATTED,
+                    SqlBaseParser.TEMPORARY,
+                    SqlBaseParser.OPTIONS,
+                    SqlBaseParser.UNSET,
+                    SqlBaseParser.TBLPROPERTIES,
+                    SqlBaseParser.DBPROPERTIES,
+                    SqlBaseParser.BUCKETS,
+                    SqlBaseParser.SKEWED,
+                    SqlBaseParser.STORED,
+                    SqlBaseParser.DIRECTORIES,
+                    SqlBaseParser.LOCATION,
+                    SqlBaseParser.EXCHANGE,
+                    SqlBaseParser.ARCHIVE,
+                    SqlBaseParser.UNARCHIVE,
+                    SqlBaseParser.FILEFORMAT,
+                    SqlBaseParser.TOUCH,
+                    SqlBaseParser.COMPACT,
+                    SqlBaseParser.CONCATENATE,
+                    SqlBaseParser.CHANGE,
+                    SqlBaseParser.CASCADE,
+                    SqlBaseParser.RESTRICT,
+                    SqlBaseParser.CLUSTERED,
+                    SqlBaseParser.SORTED,
+                    SqlBaseParser.PURGE,
+                    SqlBaseParser.INPUTFORMAT,
+                    SqlBaseParser.OUTPUTFORMAT,
+                    SqlBaseParser.DATABASE,
+                    SqlBaseParser.DATABASES,
+                    SqlBaseParser.DFS,
+                    SqlBaseParser.TRUNCATE,
+                    SqlBaseParser.ANALYZE,
+                    SqlBaseParser.COMPUTE,
+                    SqlBaseParser.LIST,
+                    SqlBaseParser.STATISTICS,
+                    SqlBaseParser.PARTITIONED,
+                    SqlBaseParser.EXTERNAL,
+                    SqlBaseParser.DEFINED,
+                    SqlBaseParser.REVOKE,
+                    SqlBaseParser.GRANT,
+                    SqlBaseParser.LOCK,
+                    SqlBaseParser.UNLOCK,
+                    SqlBaseParser.MSCK,
+                    SqlBaseParser.REPAIR,
+                    SqlBaseParser.RECOVER,
+                    SqlBaseParser.EXPORT,
+                    SqlBaseParser.IMPORT,
+                    SqlBaseParser.LOAD,
+                    SqlBaseParser.ROLE,
+                    SqlBaseParser.ROLES,
+                    SqlBaseParser.COMPACTIONS,
+                    SqlBaseParser.PRINCIPALS,
+                    SqlBaseParser.TRANSACTIONS,
+                    SqlBaseParser.INDEX,
+                    SqlBaseParser.INDEXES,
+                    SqlBaseParser.LOCKS,
+                    SqlBaseParser.OPTION,
+                    SqlBaseParser.ANTI,
+                    SqlBaseParser.LOCAL,
+                    SqlBaseParser.INPATH,
+                    SqlBaseParser.CURRENT_DATE,
+                    SqlBaseParser.CURRENT_TIMESTAMP,
+                    SqlBaseParser.IDENTIFIER,
+                    SqlBaseParser.BACKQUOTED_IDENTIFIER,
+                ]:
                     self.state = 1695
                     self.identifier()
                     pass
@@ -10636,8 +13254,6 @@ class SqlBaseParser ( Parser ):
                 else:
                     raise NoViableAltException(self)
 
-
-
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)
@@ -10646,34 +13262,31 @@ class SqlBaseParser ( Parser ):
             self.exitRule()
         return localctx
 
-
     class NamedExpressionSeqContext(ParserRuleContext):
-        __slots__ = 'parser'
+        __slots__ = "parser"
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
-        def namedExpression(self, i:int=None):
+        def namedExpression(self, i: int = None):
             if i is None:
                 return self.getTypedRuleContexts(SqlBaseParser.NamedExpressionContext)
             else:
-                return self.getTypedRuleContext(SqlBaseParser.NamedExpressionContext,i)
-
+                return self.getTypedRuleContext(SqlBaseParser.NamedExpressionContext, i)
 
         def getRuleIndex(self):
             return SqlBaseParser.RULE_namedExpressionSeq
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterNamedExpressionSeq" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterNamedExpressionSeq"):
                 listener.enterNamedExpressionSeq(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitNamedExpressionSeq" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitNamedExpressionSeq"):
                 listener.exitNamedExpressionSeq(self)
-
-
-
 
     def namedExpressionSeq(self):
 
@@ -10685,16 +13298,16 @@ class SqlBaseParser ( Parser ):
             self.namedExpression()
             self.state = 1706
             self._errHandler.sync(self)
-            _alt = self._interp.adaptivePredict(self._input,234,self._ctx)
-            while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
-                if _alt==1:
+            _alt = self._interp.adaptivePredict(self._input, 234, self._ctx)
+            while _alt != 2 and _alt != ATN.INVALID_ALT_NUMBER:
+                if _alt == 1:
                     self.state = 1702
                     self.match(SqlBaseParser.T__2)
                     self.state = 1703
-                    self.namedExpression() 
+                    self.namedExpression()
                 self.state = 1708
                 self._errHandler.sync(self)
-                _alt = self._interp.adaptivePredict(self._input,234,self._ctx)
+                _alt = self._interp.adaptivePredict(self._input, 234, self._ctx)
 
         except RecognitionException as re:
             localctx.exception = re
@@ -10704,31 +13317,28 @@ class SqlBaseParser ( Parser ):
             self.exitRule()
         return localctx
 
-
     class ExpressionContext(ParserRuleContext):
-        __slots__ = 'parser'
+        __slots__ = "parser"
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
         def booleanExpression(self):
-            return self.getTypedRuleContext(SqlBaseParser.BooleanExpressionContext,0)
-
+            return self.getTypedRuleContext(SqlBaseParser.BooleanExpressionContext, 0)
 
         def getRuleIndex(self):
             return SqlBaseParser.RULE_expression
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterExpression" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterExpression"):
                 listener.enterExpression(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitExpression" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitExpression"):
                 listener.exitExpression(self)
-
-
-
 
     def expression(self):
 
@@ -10746,115 +13356,114 @@ class SqlBaseParser ( Parser ):
             self.exitRule()
         return localctx
 
-
     class BooleanExpressionContext(ParserRuleContext):
-        __slots__ = 'parser'
+        __slots__ = "parser"
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
-
 
         def getRuleIndex(self):
             return SqlBaseParser.RULE_booleanExpression
 
-     
-        def copyFrom(self, ctx:ParserRuleContext):
+        def copyFrom(self, ctx: ParserRuleContext):
             super().copyFrom(ctx)
 
-
     class LogicalNotContext(BooleanExpressionContext):
-
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a SqlBaseParser.BooleanExpressionContext
+        def __init__(
+            self, parser, ctx: ParserRuleContext
+        ):  # actually a SqlBaseParser.BooleanExpressionContext
             super().__init__(parser)
             self.copyFrom(ctx)
 
         def NOT(self):
             return self.getToken(SqlBaseParser.NOT, 0)
+
         def booleanExpression(self):
-            return self.getTypedRuleContext(SqlBaseParser.BooleanExpressionContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.BooleanExpressionContext, 0)
 
-
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterLogicalNot" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterLogicalNot"):
                 listener.enterLogicalNot(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitLogicalNot" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitLogicalNot"):
                 listener.exitLogicalNot(self)
 
-
     class BooleanDefaultContext(BooleanExpressionContext):
-
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a SqlBaseParser.BooleanExpressionContext
+        def __init__(
+            self, parser, ctx: ParserRuleContext
+        ):  # actually a SqlBaseParser.BooleanExpressionContext
             super().__init__(parser)
             self.copyFrom(ctx)
 
         def predicated(self):
-            return self.getTypedRuleContext(SqlBaseParser.PredicatedContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.PredicatedContext, 0)
 
-
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterBooleanDefault" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterBooleanDefault"):
                 listener.enterBooleanDefault(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitBooleanDefault" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitBooleanDefault"):
                 listener.exitBooleanDefault(self)
 
-
     class ExistsContext(BooleanExpressionContext):
-
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a SqlBaseParser.BooleanExpressionContext
+        def __init__(
+            self, parser, ctx: ParserRuleContext
+        ):  # actually a SqlBaseParser.BooleanExpressionContext
             super().__init__(parser)
             self.copyFrom(ctx)
 
         def EXISTS(self):
             return self.getToken(SqlBaseParser.EXISTS, 0)
+
         def query(self):
-            return self.getTypedRuleContext(SqlBaseParser.QueryContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.QueryContext, 0)
 
-
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterExists" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterExists"):
                 listener.enterExists(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitExists" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitExists"):
                 listener.exitExists(self)
 
-
     class LogicalBinaryContext(BooleanExpressionContext):
-
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a SqlBaseParser.BooleanExpressionContext
+        def __init__(
+            self, parser, ctx: ParserRuleContext
+        ):  # actually a SqlBaseParser.BooleanExpressionContext
             super().__init__(parser)
-            self.left = None # BooleanExpressionContext
-            self.operator = None # Token
-            self.right = None # BooleanExpressionContext
+            self.left = None  # BooleanExpressionContext
+            self.operator = None  # Token
+            self.right = None  # BooleanExpressionContext
             self.copyFrom(ctx)
 
-        def booleanExpression(self, i:int=None):
+        def booleanExpression(self, i: int = None):
             if i is None:
                 return self.getTypedRuleContexts(SqlBaseParser.BooleanExpressionContext)
             else:
-                return self.getTypedRuleContext(SqlBaseParser.BooleanExpressionContext,i)
+                return self.getTypedRuleContext(
+                    SqlBaseParser.BooleanExpressionContext, i
+                )
 
         def AND(self):
             return self.getToken(SqlBaseParser.AND, 0)
+
         def OR(self):
             return self.getToken(SqlBaseParser.OR, 0)
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterLogicalBinary" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterLogicalBinary"):
                 listener.enterLogicalBinary(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitLogicalBinary" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitLogicalBinary"):
                 listener.exitLogicalBinary(self)
 
-
-
-    def booleanExpression(self, _p:int=0):
+    def booleanExpression(self, _p: int = 0):
         _parentctx = self._ctx
         _parentState = self.state
         localctx = SqlBaseParser.BooleanExpressionContext(self, self._ctx, _parentState)
@@ -10865,7 +13474,7 @@ class SqlBaseParser ( Parser ):
             self.enterOuterAlt(localctx, 1)
             self.state = 1720
             self._errHandler.sync(self)
-            la_ = self._interp.adaptivePredict(self._input,235,self._ctx)
+            la_ = self._interp.adaptivePredict(self._input, 235, self._ctx)
             if la_ == 1:
                 localctx = SqlBaseParser.LogicalNotContext(self, localctx)
                 self._ctx = localctx
@@ -10899,27 +13508,36 @@ class SqlBaseParser ( Parser ):
                 self.match(SqlBaseParser.T__1)
                 pass
 
-
             self._ctx.stop = self._input.LT(-1)
             self.state = 1730
             self._errHandler.sync(self)
-            _alt = self._interp.adaptivePredict(self._input,237,self._ctx)
-            while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
-                if _alt==1:
+            _alt = self._interp.adaptivePredict(self._input, 237, self._ctx)
+            while _alt != 2 and _alt != ATN.INVALID_ALT_NUMBER:
+                if _alt == 1:
                     if self._parseListeners is not None:
                         self.triggerExitRuleEvent()
                     _prevctx = localctx
                     self.state = 1728
                     self._errHandler.sync(self)
-                    la_ = self._interp.adaptivePredict(self._input,236,self._ctx)
+                    la_ = self._interp.adaptivePredict(self._input, 236, self._ctx)
                     if la_ == 1:
-                        localctx = SqlBaseParser.LogicalBinaryContext(self, SqlBaseParser.BooleanExpressionContext(self, _parentctx, _parentState))
+                        localctx = SqlBaseParser.LogicalBinaryContext(
+                            self,
+                            SqlBaseParser.BooleanExpressionContext(
+                                self, _parentctx, _parentState
+                            ),
+                        )
                         localctx.left = _prevctx
-                        self.pushNewRecursionContext(localctx, _startState, self.RULE_booleanExpression)
+                        self.pushNewRecursionContext(
+                            localctx, _startState, self.RULE_booleanExpression
+                        )
                         self.state = 1722
                         if not self.precpred(self._ctx, 3):
                             from antlr4.error.Errors import FailedPredicateException
-                            raise FailedPredicateException(self, "self.precpred(self._ctx, 3)")
+
+                            raise FailedPredicateException(
+                                self, "self.precpred(self._ctx, 3)"
+                            )
                         self.state = 1723
                         localctx.operator = self.match(SqlBaseParser.AND)
                         self.state = 1724
@@ -10927,23 +13545,32 @@ class SqlBaseParser ( Parser ):
                         pass
 
                     elif la_ == 2:
-                        localctx = SqlBaseParser.LogicalBinaryContext(self, SqlBaseParser.BooleanExpressionContext(self, _parentctx, _parentState))
+                        localctx = SqlBaseParser.LogicalBinaryContext(
+                            self,
+                            SqlBaseParser.BooleanExpressionContext(
+                                self, _parentctx, _parentState
+                            ),
+                        )
                         localctx.left = _prevctx
-                        self.pushNewRecursionContext(localctx, _startState, self.RULE_booleanExpression)
+                        self.pushNewRecursionContext(
+                            localctx, _startState, self.RULE_booleanExpression
+                        )
                         self.state = 1725
                         if not self.precpred(self._ctx, 2):
                             from antlr4.error.Errors import FailedPredicateException
-                            raise FailedPredicateException(self, "self.precpred(self._ctx, 2)")
+
+                            raise FailedPredicateException(
+                                self, "self.precpred(self._ctx, 2)"
+                            )
                         self.state = 1726
                         localctx.operator = self.match(SqlBaseParser.OR)
                         self.state = 1727
                         localctx.right = self.booleanExpression(3)
                         pass
 
-             
                 self.state = 1732
                 self._errHandler.sync(self)
-                _alt = self._interp.adaptivePredict(self._input,237,self._ctx)
+                _alt = self._interp.adaptivePredict(self._input, 237, self._ctx)
 
         except RecognitionException as re:
             localctx.exception = re
@@ -10953,35 +13580,31 @@ class SqlBaseParser ( Parser ):
             self.unrollRecursionContexts(_parentctx)
         return localctx
 
-
     class PredicatedContext(ParserRuleContext):
-        __slots__ = 'parser'
+        __slots__ = "parser"
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
         def valueExpression(self):
-            return self.getTypedRuleContext(SqlBaseParser.ValueExpressionContext,0)
-
+            return self.getTypedRuleContext(SqlBaseParser.ValueExpressionContext, 0)
 
         def predicate(self):
-            return self.getTypedRuleContext(SqlBaseParser.PredicateContext,0)
-
+            return self.getTypedRuleContext(SqlBaseParser.PredicateContext, 0)
 
         def getRuleIndex(self):
             return SqlBaseParser.RULE_predicated
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterPredicated" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterPredicated"):
                 listener.enterPredicated(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitPredicated" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitPredicated"):
                 listener.exitPredicated(self)
-
-
-
 
     def predicated(self):
 
@@ -10993,11 +13616,10 @@ class SqlBaseParser ( Parser ):
             self.valueExpression(0)
             self.state = 1735
             self._errHandler.sync(self)
-            la_ = self._interp.adaptivePredict(self._input,238,self._ctx)
+            la_ = self._interp.adaptivePredict(self._input, 238, self._ctx)
             if la_ == 1:
                 self.state = 1734
                 self.predicate()
-
 
         except RecognitionException as re:
             localctx.exception = re
@@ -11007,17 +13629,18 @@ class SqlBaseParser ( Parser ):
             self.exitRule()
         return localctx
 
-
     class PredicateContext(ParserRuleContext):
-        __slots__ = 'parser'
+        __slots__ = "parser"
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
-            self.kind = None # Token
-            self.lower = None # ValueExpressionContext
-            self.upper = None # ValueExpressionContext
-            self.pattern = None # ValueExpressionContext
+            self.kind = None  # Token
+            self.lower = None  # ValueExpressionContext
+            self.upper = None  # ValueExpressionContext
+            self.pattern = None  # ValueExpressionContext
 
         def AND(self):
             return self.getToken(SqlBaseParser.AND, 0)
@@ -11025,29 +13648,26 @@ class SqlBaseParser ( Parser ):
         def BETWEEN(self):
             return self.getToken(SqlBaseParser.BETWEEN, 0)
 
-        def valueExpression(self, i:int=None):
+        def valueExpression(self, i: int = None):
             if i is None:
                 return self.getTypedRuleContexts(SqlBaseParser.ValueExpressionContext)
             else:
-                return self.getTypedRuleContext(SqlBaseParser.ValueExpressionContext,i)
-
+                return self.getTypedRuleContext(SqlBaseParser.ValueExpressionContext, i)
 
         def NOT(self):
             return self.getToken(SqlBaseParser.NOT, 0)
 
-        def expression(self, i:int=None):
+        def expression(self, i: int = None):
             if i is None:
                 return self.getTypedRuleContexts(SqlBaseParser.ExpressionContext)
             else:
-                return self.getTypedRuleContext(SqlBaseParser.ExpressionContext,i)
-
+                return self.getTypedRuleContext(SqlBaseParser.ExpressionContext, i)
 
         def IN(self):
             return self.getToken(SqlBaseParser.IN, 0)
 
         def query(self):
-            return self.getTypedRuleContext(SqlBaseParser.QueryContext,0)
-
+            return self.getTypedRuleContext(SqlBaseParser.QueryContext, 0)
 
         def RLIKE(self):
             return self.getToken(SqlBaseParser.RLIKE, 0)
@@ -11064,35 +13684,31 @@ class SqlBaseParser ( Parser ):
         def getRuleIndex(self):
             return SqlBaseParser.RULE_predicate
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterPredicate" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterPredicate"):
                 listener.enterPredicate(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitPredicate" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitPredicate"):
                 listener.exitPredicate(self)
-
-
-
 
     def predicate(self):
 
         localctx = SqlBaseParser.PredicateContext(self, self._ctx, self.state)
         self.enterRule(localctx, 122, self.RULE_predicate)
-        self._la = 0 # Token type
+        self._la = 0  # Token type
         try:
             self.state = 1778
             self._errHandler.sync(self)
-            la_ = self._interp.adaptivePredict(self._input,245,self._ctx)
+            la_ = self._interp.adaptivePredict(self._input, 245, self._ctx)
             if la_ == 1:
                 self.enterOuterAlt(localctx, 1)
                 self.state = 1738
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==SqlBaseParser.NOT:
+                if _la == SqlBaseParser.NOT:
                     self.state = 1737
                     self.match(SqlBaseParser.NOT)
-
 
                 self.state = 1740
                 localctx.kind = self.match(SqlBaseParser.BETWEEN)
@@ -11109,10 +13725,9 @@ class SqlBaseParser ( Parser ):
                 self.state = 1746
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==SqlBaseParser.NOT:
+                if _la == SqlBaseParser.NOT:
                     self.state = 1745
                     self.match(SqlBaseParser.NOT)
-
 
                 self.state = 1748
                 localctx.kind = self.match(SqlBaseParser.IN)
@@ -11123,7 +13738,7 @@ class SqlBaseParser ( Parser ):
                 self.state = 1755
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                while _la==SqlBaseParser.T__2:
+                while _la == SqlBaseParser.T__2:
                     self.state = 1751
                     self.match(SqlBaseParser.T__2)
                     self.state = 1752
@@ -11141,10 +13756,9 @@ class SqlBaseParser ( Parser ):
                 self.state = 1761
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==SqlBaseParser.NOT:
+                if _la == SqlBaseParser.NOT:
                     self.state = 1760
                     self.match(SqlBaseParser.NOT)
-
 
                 self.state = 1763
                 localctx.kind = self.match(SqlBaseParser.IN)
@@ -11161,15 +13775,14 @@ class SqlBaseParser ( Parser ):
                 self.state = 1769
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==SqlBaseParser.NOT:
+                if _la == SqlBaseParser.NOT:
                     self.state = 1768
                     self.match(SqlBaseParser.NOT)
-
 
                 self.state = 1771
                 localctx.kind = self._input.LT(1)
                 _la = self._input.LA(1)
-                if not(_la==SqlBaseParser.LIKE or _la==SqlBaseParser.RLIKE):
+                if not (_la == SqlBaseParser.LIKE or _la == SqlBaseParser.RLIKE):
                     localctx.kind = self._errHandler.recoverInline(self)
                 else:
                     self._errHandler.reportMatch(self)
@@ -11185,15 +13798,13 @@ class SqlBaseParser ( Parser ):
                 self.state = 1775
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==SqlBaseParser.NOT:
+                if _la == SqlBaseParser.NOT:
                     self.state = 1774
                     self.match(SqlBaseParser.NOT)
-
 
                 self.state = 1777
                 localctx.kind = self.match(SqlBaseParser.NULL)
                 pass
-
 
         except RecognitionException as re:
             localctx.exception = re
@@ -11203,152 +13814,157 @@ class SqlBaseParser ( Parser ):
             self.exitRule()
         return localctx
 
-
     class ValueExpressionContext(ParserRuleContext):
-        __slots__ = 'parser'
+        __slots__ = "parser"
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
-
 
         def getRuleIndex(self):
             return SqlBaseParser.RULE_valueExpression
 
-     
-        def copyFrom(self, ctx:ParserRuleContext):
+        def copyFrom(self, ctx: ParserRuleContext):
             super().copyFrom(ctx)
 
-
     class ValueExpressionDefaultContext(ValueExpressionContext):
-
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a SqlBaseParser.ValueExpressionContext
+        def __init__(
+            self, parser, ctx: ParserRuleContext
+        ):  # actually a SqlBaseParser.ValueExpressionContext
             super().__init__(parser)
             self.copyFrom(ctx)
 
         def primaryExpression(self):
-            return self.getTypedRuleContext(SqlBaseParser.PrimaryExpressionContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.PrimaryExpressionContext, 0)
 
-
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterValueExpressionDefault" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterValueExpressionDefault"):
                 listener.enterValueExpressionDefault(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitValueExpressionDefault" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitValueExpressionDefault"):
                 listener.exitValueExpressionDefault(self)
 
-
     class ComparisonContext(ValueExpressionContext):
-
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a SqlBaseParser.ValueExpressionContext
+        def __init__(
+            self, parser, ctx: ParserRuleContext
+        ):  # actually a SqlBaseParser.ValueExpressionContext
             super().__init__(parser)
-            self.left = None # ValueExpressionContext
-            self.right = None # ValueExpressionContext
+            self.left = None  # ValueExpressionContext
+            self.right = None  # ValueExpressionContext
             self.copyFrom(ctx)
 
         def comparisonOperator(self):
-            return self.getTypedRuleContext(SqlBaseParser.ComparisonOperatorContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.ComparisonOperatorContext, 0)
 
-        def valueExpression(self, i:int=None):
+        def valueExpression(self, i: int = None):
             if i is None:
                 return self.getTypedRuleContexts(SqlBaseParser.ValueExpressionContext)
             else:
-                return self.getTypedRuleContext(SqlBaseParser.ValueExpressionContext,i)
+                return self.getTypedRuleContext(SqlBaseParser.ValueExpressionContext, i)
 
-
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterComparison" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterComparison"):
                 listener.enterComparison(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitComparison" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitComparison"):
                 listener.exitComparison(self)
 
-
     class ArithmeticBinaryContext(ValueExpressionContext):
-
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a SqlBaseParser.ValueExpressionContext
+        def __init__(
+            self, parser, ctx: ParserRuleContext
+        ):  # actually a SqlBaseParser.ValueExpressionContext
             super().__init__(parser)
-            self.left = None # ValueExpressionContext
-            self.operator = None # Token
-            self.right = None # ValueExpressionContext
+            self.left = None  # ValueExpressionContext
+            self.operator = None  # Token
+            self.right = None  # ValueExpressionContext
             self.copyFrom(ctx)
 
-        def valueExpression(self, i:int=None):
+        def valueExpression(self, i: int = None):
             if i is None:
                 return self.getTypedRuleContexts(SqlBaseParser.ValueExpressionContext)
             else:
-                return self.getTypedRuleContext(SqlBaseParser.ValueExpressionContext,i)
+                return self.getTypedRuleContext(SqlBaseParser.ValueExpressionContext, i)
 
         def ASTERISK(self):
             return self.getToken(SqlBaseParser.ASTERISK, 0)
+
         def SLASH(self):
             return self.getToken(SqlBaseParser.SLASH, 0)
+
         def PERCENT(self):
             return self.getToken(SqlBaseParser.PERCENT, 0)
+
         def DIV(self):
             return self.getToken(SqlBaseParser.DIV, 0)
+
         def PLUS(self):
             return self.getToken(SqlBaseParser.PLUS, 0)
+
         def MINUS(self):
             return self.getToken(SqlBaseParser.MINUS, 0)
+
         def AMPERSAND(self):
             return self.getToken(SqlBaseParser.AMPERSAND, 0)
+
         def HAT(self):
             return self.getToken(SqlBaseParser.HAT, 0)
+
         def PIPE(self):
             return self.getToken(SqlBaseParser.PIPE, 0)
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterArithmeticBinary" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterArithmeticBinary"):
                 listener.enterArithmeticBinary(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitArithmeticBinary" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitArithmeticBinary"):
                 listener.exitArithmeticBinary(self)
 
-
     class ArithmeticUnaryContext(ValueExpressionContext):
-
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a SqlBaseParser.ValueExpressionContext
+        def __init__(
+            self, parser, ctx: ParserRuleContext
+        ):  # actually a SqlBaseParser.ValueExpressionContext
             super().__init__(parser)
-            self.operator = None # Token
+            self.operator = None  # Token
             self.copyFrom(ctx)
 
         def valueExpression(self):
-            return self.getTypedRuleContext(SqlBaseParser.ValueExpressionContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.ValueExpressionContext, 0)
 
         def MINUS(self):
             return self.getToken(SqlBaseParser.MINUS, 0)
+
         def PLUS(self):
             return self.getToken(SqlBaseParser.PLUS, 0)
+
         def TILDE(self):
             return self.getToken(SqlBaseParser.TILDE, 0)
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterArithmeticUnary" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterArithmeticUnary"):
                 listener.enterArithmeticUnary(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitArithmeticUnary" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitArithmeticUnary"):
                 listener.exitArithmeticUnary(self)
 
-
-
-    def valueExpression(self, _p:int=0):
+    def valueExpression(self, _p: int = 0):
         _parentctx = self._ctx
         _parentState = self.state
         localctx = SqlBaseParser.ValueExpressionContext(self, self._ctx, _parentState)
         _prevctx = localctx
         _startState = 124
         self.enterRecursionRule(localctx, 124, self.RULE_valueExpression, _p)
-        self._la = 0 # Token type
+        self._la = 0  # Token type
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 1784
             self._errHandler.sync(self)
-            la_ = self._interp.adaptivePredict(self._input,246,self._ctx)
+            la_ = self._interp.adaptivePredict(self._input, 246, self._ctx)
             if la_ == 1:
                 localctx = SqlBaseParser.ValueExpressionDefaultContext(self, localctx)
                 self._ctx = localctx
@@ -11365,7 +13981,20 @@ class SqlBaseParser ( Parser ):
                 self.state = 1782
                 localctx.operator = self._input.LT(1)
                 _la = self._input.LA(1)
-                if not(((((_la - 121)) & ~0x3f) == 0 and ((1 << (_la - 121)) & ((1 << (SqlBaseParser.PLUS - 121)) | (1 << (SqlBaseParser.MINUS - 121)) | (1 << (SqlBaseParser.TILDE - 121)))) != 0)):
+                if not (
+                    (
+                        (((_la - 121)) & ~0x3F) == 0
+                        and (
+                            (1 << (_la - 121))
+                            & (
+                                (1 << (SqlBaseParser.PLUS - 121))
+                                | (1 << (SqlBaseParser.MINUS - 121))
+                                | (1 << (SqlBaseParser.TILDE - 121))
+                            )
+                        )
+                        != 0
+                    )
+                ):
                     localctx.operator = self._errHandler.recoverInline(self)
                 else:
                     self._errHandler.reportMatch(self)
@@ -11374,31 +14003,54 @@ class SqlBaseParser ( Parser ):
                 self.valueExpression(7)
                 pass
 
-
             self._ctx.stop = self._input.LT(-1)
             self.state = 1807
             self._errHandler.sync(self)
-            _alt = self._interp.adaptivePredict(self._input,248,self._ctx)
-            while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
-                if _alt==1:
+            _alt = self._interp.adaptivePredict(self._input, 248, self._ctx)
+            while _alt != 2 and _alt != ATN.INVALID_ALT_NUMBER:
+                if _alt == 1:
                     if self._parseListeners is not None:
                         self.triggerExitRuleEvent()
                     _prevctx = localctx
                     self.state = 1805
                     self._errHandler.sync(self)
-                    la_ = self._interp.adaptivePredict(self._input,247,self._ctx)
+                    la_ = self._interp.adaptivePredict(self._input, 247, self._ctx)
                     if la_ == 1:
-                        localctx = SqlBaseParser.ArithmeticBinaryContext(self, SqlBaseParser.ValueExpressionContext(self, _parentctx, _parentState))
+                        localctx = SqlBaseParser.ArithmeticBinaryContext(
+                            self,
+                            SqlBaseParser.ValueExpressionContext(
+                                self, _parentctx, _parentState
+                            ),
+                        )
                         localctx.left = _prevctx
-                        self.pushNewRecursionContext(localctx, _startState, self.RULE_valueExpression)
+                        self.pushNewRecursionContext(
+                            localctx, _startState, self.RULE_valueExpression
+                        )
                         self.state = 1786
                         if not self.precpred(self._ctx, 6):
                             from antlr4.error.Errors import FailedPredicateException
-                            raise FailedPredicateException(self, "self.precpred(self._ctx, 6)")
+
+                            raise FailedPredicateException(
+                                self, "self.precpred(self._ctx, 6)"
+                            )
                         self.state = 1787
                         localctx.operator = self._input.LT(1)
                         _la = self._input.LA(1)
-                        if not(((((_la - 123)) & ~0x3f) == 0 and ((1 << (_la - 123)) & ((1 << (SqlBaseParser.ASTERISK - 123)) | (1 << (SqlBaseParser.SLASH - 123)) | (1 << (SqlBaseParser.PERCENT - 123)) | (1 << (SqlBaseParser.DIV - 123)))) != 0)):
+                        if not (
+                            (
+                                (((_la - 123)) & ~0x3F) == 0
+                                and (
+                                    (1 << (_la - 123))
+                                    & (
+                                        (1 << (SqlBaseParser.ASTERISK - 123))
+                                        | (1 << (SqlBaseParser.SLASH - 123))
+                                        | (1 << (SqlBaseParser.PERCENT - 123))
+                                        | (1 << (SqlBaseParser.DIV - 123))
+                                    )
+                                )
+                                != 0
+                            )
+                        ):
                             localctx.operator = self._errHandler.recoverInline(self)
                         else:
                             self._errHandler.reportMatch(self)
@@ -11408,17 +14060,29 @@ class SqlBaseParser ( Parser ):
                         pass
 
                     elif la_ == 2:
-                        localctx = SqlBaseParser.ArithmeticBinaryContext(self, SqlBaseParser.ValueExpressionContext(self, _parentctx, _parentState))
+                        localctx = SqlBaseParser.ArithmeticBinaryContext(
+                            self,
+                            SqlBaseParser.ValueExpressionContext(
+                                self, _parentctx, _parentState
+                            ),
+                        )
                         localctx.left = _prevctx
-                        self.pushNewRecursionContext(localctx, _startState, self.RULE_valueExpression)
+                        self.pushNewRecursionContext(
+                            localctx, _startState, self.RULE_valueExpression
+                        )
                         self.state = 1789
                         if not self.precpred(self._ctx, 5):
                             from antlr4.error.Errors import FailedPredicateException
-                            raise FailedPredicateException(self, "self.precpred(self._ctx, 5)")
+
+                            raise FailedPredicateException(
+                                self, "self.precpred(self._ctx, 5)"
+                            )
                         self.state = 1790
                         localctx.operator = self._input.LT(1)
                         _la = self._input.LA(1)
-                        if not(_la==SqlBaseParser.PLUS or _la==SqlBaseParser.MINUS):
+                        if not (
+                            _la == SqlBaseParser.PLUS or _la == SqlBaseParser.MINUS
+                        ):
                             localctx.operator = self._errHandler.recoverInline(self)
                         else:
                             self._errHandler.reportMatch(self)
@@ -11428,13 +14092,23 @@ class SqlBaseParser ( Parser ):
                         pass
 
                     elif la_ == 3:
-                        localctx = SqlBaseParser.ArithmeticBinaryContext(self, SqlBaseParser.ValueExpressionContext(self, _parentctx, _parentState))
+                        localctx = SqlBaseParser.ArithmeticBinaryContext(
+                            self,
+                            SqlBaseParser.ValueExpressionContext(
+                                self, _parentctx, _parentState
+                            ),
+                        )
                         localctx.left = _prevctx
-                        self.pushNewRecursionContext(localctx, _startState, self.RULE_valueExpression)
+                        self.pushNewRecursionContext(
+                            localctx, _startState, self.RULE_valueExpression
+                        )
                         self.state = 1792
                         if not self.precpred(self._ctx, 4):
                             from antlr4.error.Errors import FailedPredicateException
-                            raise FailedPredicateException(self, "self.precpred(self._ctx, 4)")
+
+                            raise FailedPredicateException(
+                                self, "self.precpred(self._ctx, 4)"
+                            )
                         self.state = 1793
                         localctx.operator = self.match(SqlBaseParser.AMPERSAND)
                         self.state = 1794
@@ -11442,13 +14116,23 @@ class SqlBaseParser ( Parser ):
                         pass
 
                     elif la_ == 4:
-                        localctx = SqlBaseParser.ArithmeticBinaryContext(self, SqlBaseParser.ValueExpressionContext(self, _parentctx, _parentState))
+                        localctx = SqlBaseParser.ArithmeticBinaryContext(
+                            self,
+                            SqlBaseParser.ValueExpressionContext(
+                                self, _parentctx, _parentState
+                            ),
+                        )
                         localctx.left = _prevctx
-                        self.pushNewRecursionContext(localctx, _startState, self.RULE_valueExpression)
+                        self.pushNewRecursionContext(
+                            localctx, _startState, self.RULE_valueExpression
+                        )
                         self.state = 1795
                         if not self.precpred(self._ctx, 3):
                             from antlr4.error.Errors import FailedPredicateException
-                            raise FailedPredicateException(self, "self.precpred(self._ctx, 3)")
+
+                            raise FailedPredicateException(
+                                self, "self.precpred(self._ctx, 3)"
+                            )
                         self.state = 1796
                         localctx.operator = self.match(SqlBaseParser.HAT)
                         self.state = 1797
@@ -11456,13 +14140,23 @@ class SqlBaseParser ( Parser ):
                         pass
 
                     elif la_ == 5:
-                        localctx = SqlBaseParser.ArithmeticBinaryContext(self, SqlBaseParser.ValueExpressionContext(self, _parentctx, _parentState))
+                        localctx = SqlBaseParser.ArithmeticBinaryContext(
+                            self,
+                            SqlBaseParser.ValueExpressionContext(
+                                self, _parentctx, _parentState
+                            ),
+                        )
                         localctx.left = _prevctx
-                        self.pushNewRecursionContext(localctx, _startState, self.RULE_valueExpression)
+                        self.pushNewRecursionContext(
+                            localctx, _startState, self.RULE_valueExpression
+                        )
                         self.state = 1798
                         if not self.precpred(self._ctx, 2):
                             from antlr4.error.Errors import FailedPredicateException
-                            raise FailedPredicateException(self, "self.precpred(self._ctx, 2)")
+
+                            raise FailedPredicateException(
+                                self, "self.precpred(self._ctx, 2)"
+                            )
                         self.state = 1799
                         localctx.operator = self.match(SqlBaseParser.PIPE)
                         self.state = 1800
@@ -11470,23 +14164,32 @@ class SqlBaseParser ( Parser ):
                         pass
 
                     elif la_ == 6:
-                        localctx = SqlBaseParser.ComparisonContext(self, SqlBaseParser.ValueExpressionContext(self, _parentctx, _parentState))
+                        localctx = SqlBaseParser.ComparisonContext(
+                            self,
+                            SqlBaseParser.ValueExpressionContext(
+                                self, _parentctx, _parentState
+                            ),
+                        )
                         localctx.left = _prevctx
-                        self.pushNewRecursionContext(localctx, _startState, self.RULE_valueExpression)
+                        self.pushNewRecursionContext(
+                            localctx, _startState, self.RULE_valueExpression
+                        )
                         self.state = 1801
                         if not self.precpred(self._ctx, 1):
                             from antlr4.error.Errors import FailedPredicateException
-                            raise FailedPredicateException(self, "self.precpred(self._ctx, 1)")
+
+                            raise FailedPredicateException(
+                                self, "self.precpred(self._ctx, 1)"
+                            )
                         self.state = 1802
                         self.comparisonOperator()
                         self.state = 1803
                         localctx.right = self.valueExpression(2)
                         pass
 
-             
                 self.state = 1809
                 self._errHandler.sync(self)
-                _alt = self._interp.adaptivePredict(self._input,248,self._ctx)
+                _alt = self._interp.adaptivePredict(self._input, 248, self._ctx)
 
         except RecognitionException as re:
             localctx.exception = re
@@ -11496,352 +14199,348 @@ class SqlBaseParser ( Parser ):
             self.unrollRecursionContexts(_parentctx)
         return localctx
 
-
     class PrimaryExpressionContext(ParserRuleContext):
-        __slots__ = 'parser'
+        __slots__ = "parser"
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
-
 
         def getRuleIndex(self):
             return SqlBaseParser.RULE_primaryExpression
 
-     
-        def copyFrom(self, ctx:ParserRuleContext):
+        def copyFrom(self, ctx: ParserRuleContext):
             super().copyFrom(ctx)
 
-
     class DereferenceContext(PrimaryExpressionContext):
-
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a SqlBaseParser.PrimaryExpressionContext
+        def __init__(
+            self, parser, ctx: ParserRuleContext
+        ):  # actually a SqlBaseParser.PrimaryExpressionContext
             super().__init__(parser)
-            self.base = None # PrimaryExpressionContext
-            self.fieldName = None # IdentifierContext
+            self.base = None  # PrimaryExpressionContext
+            self.fieldName = None  # IdentifierContext
             self.copyFrom(ctx)
 
         def primaryExpression(self):
-            return self.getTypedRuleContext(SqlBaseParser.PrimaryExpressionContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.PrimaryExpressionContext, 0)
 
         def identifier(self):
-            return self.getTypedRuleContext(SqlBaseParser.IdentifierContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.IdentifierContext, 0)
 
-
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterDereference" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterDereference"):
                 listener.enterDereference(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitDereference" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitDereference"):
                 listener.exitDereference(self)
 
-
     class SimpleCaseContext(PrimaryExpressionContext):
-
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a SqlBaseParser.PrimaryExpressionContext
+        def __init__(
+            self, parser, ctx: ParserRuleContext
+        ):  # actually a SqlBaseParser.PrimaryExpressionContext
             super().__init__(parser)
-            self.value = None # ExpressionContext
-            self.elseExpression = None # ExpressionContext
+            self.value = None  # ExpressionContext
+            self.elseExpression = None  # ExpressionContext
             self.copyFrom(ctx)
 
         def CASE(self):
             return self.getToken(SqlBaseParser.CASE, 0)
+
         def END(self):
             return self.getToken(SqlBaseParser.END, 0)
-        def expression(self, i:int=None):
+
+        def expression(self, i: int = None):
             if i is None:
                 return self.getTypedRuleContexts(SqlBaseParser.ExpressionContext)
             else:
-                return self.getTypedRuleContext(SqlBaseParser.ExpressionContext,i)
+                return self.getTypedRuleContext(SqlBaseParser.ExpressionContext, i)
 
-        def whenClause(self, i:int=None):
+        def whenClause(self, i: int = None):
             if i is None:
                 return self.getTypedRuleContexts(SqlBaseParser.WhenClauseContext)
             else:
-                return self.getTypedRuleContext(SqlBaseParser.WhenClauseContext,i)
+                return self.getTypedRuleContext(SqlBaseParser.WhenClauseContext, i)
 
         def ELSE(self):
             return self.getToken(SqlBaseParser.ELSE, 0)
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterSimpleCase" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterSimpleCase"):
                 listener.enterSimpleCase(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitSimpleCase" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitSimpleCase"):
                 listener.exitSimpleCase(self)
 
-
     class ColumnReferenceContext(PrimaryExpressionContext):
-
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a SqlBaseParser.PrimaryExpressionContext
+        def __init__(
+            self, parser, ctx: ParserRuleContext
+        ):  # actually a SqlBaseParser.PrimaryExpressionContext
             super().__init__(parser)
             self.copyFrom(ctx)
 
         def identifier(self):
-            return self.getTypedRuleContext(SqlBaseParser.IdentifierContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.IdentifierContext, 0)
 
-
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterColumnReference" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterColumnReference"):
                 listener.enterColumnReference(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitColumnReference" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitColumnReference"):
                 listener.exitColumnReference(self)
 
-
     class RowConstructorContext(PrimaryExpressionContext):
-
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a SqlBaseParser.PrimaryExpressionContext
+        def __init__(
+            self, parser, ctx: ParserRuleContext
+        ):  # actually a SqlBaseParser.PrimaryExpressionContext
             super().__init__(parser)
             self.copyFrom(ctx)
 
-        def expression(self, i:int=None):
+        def expression(self, i: int = None):
             if i is None:
                 return self.getTypedRuleContexts(SqlBaseParser.ExpressionContext)
             else:
-                return self.getTypedRuleContext(SqlBaseParser.ExpressionContext,i)
+                return self.getTypedRuleContext(SqlBaseParser.ExpressionContext, i)
 
-
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterRowConstructor" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterRowConstructor"):
                 listener.enterRowConstructor(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitRowConstructor" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitRowConstructor"):
                 listener.exitRowConstructor(self)
 
-
     class StarContext(PrimaryExpressionContext):
-
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a SqlBaseParser.PrimaryExpressionContext
+        def __init__(
+            self, parser, ctx: ParserRuleContext
+        ):  # actually a SqlBaseParser.PrimaryExpressionContext
             super().__init__(parser)
             self.copyFrom(ctx)
 
         def ASTERISK(self):
             return self.getToken(SqlBaseParser.ASTERISK, 0)
+
         def qualifiedName(self):
-            return self.getTypedRuleContext(SqlBaseParser.QualifiedNameContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.QualifiedNameContext, 0)
 
-
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterStar" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterStar"):
                 listener.enterStar(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitStar" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitStar"):
                 listener.exitStar(self)
 
-
     class SubscriptContext(PrimaryExpressionContext):
-
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a SqlBaseParser.PrimaryExpressionContext
+        def __init__(
+            self, parser, ctx: ParserRuleContext
+        ):  # actually a SqlBaseParser.PrimaryExpressionContext
             super().__init__(parser)
-            self.value = None # PrimaryExpressionContext
-            self.index = None # ValueExpressionContext
+            self.value = None  # PrimaryExpressionContext
+            self.index = None  # ValueExpressionContext
             self.copyFrom(ctx)
 
         def primaryExpression(self):
-            return self.getTypedRuleContext(SqlBaseParser.PrimaryExpressionContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.PrimaryExpressionContext, 0)
 
         def valueExpression(self):
-            return self.getTypedRuleContext(SqlBaseParser.ValueExpressionContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.ValueExpressionContext, 0)
 
-
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterSubscript" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterSubscript"):
                 listener.enterSubscript(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitSubscript" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitSubscript"):
                 listener.exitSubscript(self)
 
-
     class TimeFunctionCallContext(PrimaryExpressionContext):
-
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a SqlBaseParser.PrimaryExpressionContext
+        def __init__(
+            self, parser, ctx: ParserRuleContext
+        ):  # actually a SqlBaseParser.PrimaryExpressionContext
             super().__init__(parser)
-            self.name = None # Token
+            self.name = None  # Token
             self.copyFrom(ctx)
 
         def CURRENT_DATE(self):
             return self.getToken(SqlBaseParser.CURRENT_DATE, 0)
+
         def CURRENT_TIMESTAMP(self):
             return self.getToken(SqlBaseParser.CURRENT_TIMESTAMP, 0)
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterTimeFunctionCall" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterTimeFunctionCall"):
                 listener.enterTimeFunctionCall(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitTimeFunctionCall" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitTimeFunctionCall"):
                 listener.exitTimeFunctionCall(self)
 
-
     class SubqueryExpressionContext(PrimaryExpressionContext):
-
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a SqlBaseParser.PrimaryExpressionContext
+        def __init__(
+            self, parser, ctx: ParserRuleContext
+        ):  # actually a SqlBaseParser.PrimaryExpressionContext
             super().__init__(parser)
             self.copyFrom(ctx)
 
         def query(self):
-            return self.getTypedRuleContext(SqlBaseParser.QueryContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.QueryContext, 0)
 
-
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterSubqueryExpression" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterSubqueryExpression"):
                 listener.enterSubqueryExpression(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitSubqueryExpression" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitSubqueryExpression"):
                 listener.exitSubqueryExpression(self)
 
-
     class CastContext(PrimaryExpressionContext):
-
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a SqlBaseParser.PrimaryExpressionContext
+        def __init__(
+            self, parser, ctx: ParserRuleContext
+        ):  # actually a SqlBaseParser.PrimaryExpressionContext
             super().__init__(parser)
             self.copyFrom(ctx)
 
         def CAST(self):
             return self.getToken(SqlBaseParser.CAST, 0)
+
         def expression(self):
-            return self.getTypedRuleContext(SqlBaseParser.ExpressionContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.ExpressionContext, 0)
 
         def AS(self):
             return self.getToken(SqlBaseParser.AS, 0)
+
         def dataType(self):
-            return self.getTypedRuleContext(SqlBaseParser.DataTypeContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.DataTypeContext, 0)
 
-
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterCast" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterCast"):
                 listener.enterCast(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitCast" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitCast"):
                 listener.exitCast(self)
 
-
     class ConstantDefaultContext(PrimaryExpressionContext):
-
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a SqlBaseParser.PrimaryExpressionContext
+        def __init__(
+            self, parser, ctx: ParserRuleContext
+        ):  # actually a SqlBaseParser.PrimaryExpressionContext
             super().__init__(parser)
             self.copyFrom(ctx)
 
         def constant(self):
-            return self.getTypedRuleContext(SqlBaseParser.ConstantContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.ConstantContext, 0)
 
-
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterConstantDefault" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterConstantDefault"):
                 listener.enterConstantDefault(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitConstantDefault" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitConstantDefault"):
                 listener.exitConstantDefault(self)
 
-
     class ParenthesizedExpressionContext(PrimaryExpressionContext):
-
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a SqlBaseParser.PrimaryExpressionContext
+        def __init__(
+            self, parser, ctx: ParserRuleContext
+        ):  # actually a SqlBaseParser.PrimaryExpressionContext
             super().__init__(parser)
             self.copyFrom(ctx)
 
         def expression(self):
-            return self.getTypedRuleContext(SqlBaseParser.ExpressionContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.ExpressionContext, 0)
 
-
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterParenthesizedExpression" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterParenthesizedExpression"):
                 listener.enterParenthesizedExpression(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitParenthesizedExpression" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitParenthesizedExpression"):
                 listener.exitParenthesizedExpression(self)
 
-
     class FunctionCallContext(PrimaryExpressionContext):
-
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a SqlBaseParser.PrimaryExpressionContext
+        def __init__(
+            self, parser, ctx: ParserRuleContext
+        ):  # actually a SqlBaseParser.PrimaryExpressionContext
             super().__init__(parser)
             self.copyFrom(ctx)
 
         def qualifiedName(self):
-            return self.getTypedRuleContext(SqlBaseParser.QualifiedNameContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.QualifiedNameContext, 0)
 
-        def expression(self, i:int=None):
+        def expression(self, i: int = None):
             if i is None:
                 return self.getTypedRuleContexts(SqlBaseParser.ExpressionContext)
             else:
-                return self.getTypedRuleContext(SqlBaseParser.ExpressionContext,i)
+                return self.getTypedRuleContext(SqlBaseParser.ExpressionContext, i)
 
         def OVER(self):
             return self.getToken(SqlBaseParser.OVER, 0)
+
         def windowSpec(self):
-            return self.getTypedRuleContext(SqlBaseParser.WindowSpecContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.WindowSpecContext, 0)
 
         def setQuantifier(self):
-            return self.getTypedRuleContext(SqlBaseParser.SetQuantifierContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.SetQuantifierContext, 0)
 
-
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterFunctionCall" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterFunctionCall"):
                 listener.enterFunctionCall(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitFunctionCall" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitFunctionCall"):
                 listener.exitFunctionCall(self)
 
-
     class SearchedCaseContext(PrimaryExpressionContext):
-
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a SqlBaseParser.PrimaryExpressionContext
+        def __init__(
+            self, parser, ctx: ParserRuleContext
+        ):  # actually a SqlBaseParser.PrimaryExpressionContext
             super().__init__(parser)
-            self.elseExpression = None # ExpressionContext
+            self.elseExpression = None  # ExpressionContext
             self.copyFrom(ctx)
 
         def CASE(self):
             return self.getToken(SqlBaseParser.CASE, 0)
+
         def END(self):
             return self.getToken(SqlBaseParser.END, 0)
-        def whenClause(self, i:int=None):
+
+        def whenClause(self, i: int = None):
             if i is None:
                 return self.getTypedRuleContexts(SqlBaseParser.WhenClauseContext)
             else:
-                return self.getTypedRuleContext(SqlBaseParser.WhenClauseContext,i)
+                return self.getTypedRuleContext(SqlBaseParser.WhenClauseContext, i)
 
         def ELSE(self):
             return self.getToken(SqlBaseParser.ELSE, 0)
+
         def expression(self):
-            return self.getTypedRuleContext(SqlBaseParser.ExpressionContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.ExpressionContext, 0)
 
-
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterSearchedCase" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterSearchedCase"):
                 listener.enterSearchedCase(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitSearchedCase" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitSearchedCase"):
                 listener.exitSearchedCase(self)
 
-
-
-    def primaryExpression(self, _p:int=0):
+    def primaryExpression(self, _p: int = 0):
         _parentctx = self._ctx
         _parentState = self.state
         localctx = SqlBaseParser.PrimaryExpressionContext(self, self._ctx, _parentState)
         _prevctx = localctx
         _startState = 126
         self.enterRecursionRule(localctx, 126, self.RULE_primaryExpression, _p)
-        self._la = 0 # Token type
+        self._la = 0  # Token type
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 1889
             self._errHandler.sync(self)
-            la_ = self._interp.adaptivePredict(self._input,258,self._ctx)
+            la_ = self._interp.adaptivePredict(self._input, 258, self._ctx)
             if la_ == 1:
                 localctx = SqlBaseParser.TimeFunctionCallContext(self, localctx)
                 self._ctx = localctx
@@ -11850,7 +14549,10 @@ class SqlBaseParser ( Parser ):
                 self.state = 1811
                 localctx.name = self._input.LT(1)
                 _la = self._input.LA(1)
-                if not(_la==SqlBaseParser.CURRENT_DATE or _la==SqlBaseParser.CURRENT_TIMESTAMP):
+                if not (
+                    _la == SqlBaseParser.CURRENT_DATE
+                    or _la == SqlBaseParser.CURRENT_TIMESTAMP
+                ):
                     localctx.name = self._errHandler.recoverInline(self)
                 else:
                     self._errHandler.reportMatch(self)
@@ -11863,27 +14565,26 @@ class SqlBaseParser ( Parser ):
                 _prevctx = localctx
                 self.state = 1812
                 self.match(SqlBaseParser.CASE)
-                self.state = 1814 
+                self.state = 1814
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
                 while True:
                     self.state = 1813
                     self.whenClause()
-                    self.state = 1816 
+                    self.state = 1816
                     self._errHandler.sync(self)
                     _la = self._input.LA(1)
-                    if not (_la==SqlBaseParser.WHEN):
+                    if not (_la == SqlBaseParser.WHEN):
                         break
 
                 self.state = 1820
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==SqlBaseParser.ELSE:
+                if _la == SqlBaseParser.ELSE:
                     self.state = 1818
                     self.match(SqlBaseParser.ELSE)
                     self.state = 1819
                     localctx.elseExpression = self.expression()
-
 
                 self.state = 1822
                 self.match(SqlBaseParser.END)
@@ -11897,27 +14598,26 @@ class SqlBaseParser ( Parser ):
                 self.match(SqlBaseParser.CASE)
                 self.state = 1825
                 localctx.value = self.expression()
-                self.state = 1827 
+                self.state = 1827
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
                 while True:
                     self.state = 1826
                     self.whenClause()
-                    self.state = 1829 
+                    self.state = 1829
                     self._errHandler.sync(self)
                     _la = self._input.LA(1)
-                    if not (_la==SqlBaseParser.WHEN):
+                    if not (_la == SqlBaseParser.WHEN):
                         break
 
                 self.state = 1833
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==SqlBaseParser.ELSE:
+                if _la == SqlBaseParser.ELSE:
                     self.state = 1831
                     self.match(SqlBaseParser.ELSE)
                     self.state = 1832
                     localctx.elseExpression = self.expression()
-
 
                 self.state = 1835
                 self.match(SqlBaseParser.END)
@@ -11977,7 +14677,7 @@ class SqlBaseParser ( Parser ):
                 self.match(SqlBaseParser.T__0)
                 self.state = 1851
                 self.expression()
-                self.state = 1854 
+                self.state = 1854
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
                 while True:
@@ -11985,10 +14685,10 @@ class SqlBaseParser ( Parser ):
                     self.match(SqlBaseParser.T__2)
                     self.state = 1853
                     self.expression()
-                    self.state = 1856 
+                    self.state = 1856
                     self._errHandler.sync(self)
                     _la = self._input.LA(1)
-                    if not (_la==SqlBaseParser.T__2):
+                    if not (_la == SqlBaseParser.T__2):
                         break
 
                 self.state = 1858
@@ -12018,21 +14718,271 @@ class SqlBaseParser ( Parser ):
                 self.state = 1877
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if (((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << SqlBaseParser.T__0) | (1 << SqlBaseParser.SELECT) | (1 << SqlBaseParser.FROM) | (1 << SqlBaseParser.ADD) | (1 << SqlBaseParser.AS) | (1 << SqlBaseParser.ALL) | (1 << SqlBaseParser.DISTINCT) | (1 << SqlBaseParser.WHERE) | (1 << SqlBaseParser.GROUP) | (1 << SqlBaseParser.BY) | (1 << SqlBaseParser.GROUPING) | (1 << SqlBaseParser.SETS) | (1 << SqlBaseParser.CUBE) | (1 << SqlBaseParser.ROLLUP) | (1 << SqlBaseParser.ORDER) | (1 << SqlBaseParser.HAVING) | (1 << SqlBaseParser.LIMIT) | (1 << SqlBaseParser.AT) | (1 << SqlBaseParser.OR) | (1 << SqlBaseParser.AND) | (1 << SqlBaseParser.IN) | (1 << SqlBaseParser.NOT) | (1 << SqlBaseParser.NO) | (1 << SqlBaseParser.EXISTS) | (1 << SqlBaseParser.BETWEEN) | (1 << SqlBaseParser.LIKE) | (1 << SqlBaseParser.RLIKE) | (1 << SqlBaseParser.IS) | (1 << SqlBaseParser.NULL) | (1 << SqlBaseParser.TRUE) | (1 << SqlBaseParser.FALSE) | (1 << SqlBaseParser.NULLS) | (1 << SqlBaseParser.ASC) | (1 << SqlBaseParser.DESC) | (1 << SqlBaseParser.FOR) | (1 << SqlBaseParser.INTERVAL) | (1 << SqlBaseParser.CASE) | (1 << SqlBaseParser.WHEN) | (1 << SqlBaseParser.THEN) | (1 << SqlBaseParser.ELSE) | (1 << SqlBaseParser.END) | (1 << SqlBaseParser.JOIN) | (1 << SqlBaseParser.CROSS) | (1 << SqlBaseParser.OUTER) | (1 << SqlBaseParser.INNER) | (1 << SqlBaseParser.LEFT) | (1 << SqlBaseParser.SEMI) | (1 << SqlBaseParser.RIGHT) | (1 << SqlBaseParser.FULL) | (1 << SqlBaseParser.NATURAL) | (1 << SqlBaseParser.ON) | (1 << SqlBaseParser.LATERAL) | (1 << SqlBaseParser.WINDOW) | (1 << SqlBaseParser.OVER) | (1 << SqlBaseParser.PARTITION) | (1 << SqlBaseParser.RANGE) | (1 << SqlBaseParser.ROWS))) != 0) or ((((_la - 64)) & ~0x3f) == 0 and ((1 << (_la - 64)) & ((1 << (SqlBaseParser.UNBOUNDED - 64)) | (1 << (SqlBaseParser.PRECEDING - 64)) | (1 << (SqlBaseParser.FOLLOWING - 64)) | (1 << (SqlBaseParser.CURRENT - 64)) | (1 << (SqlBaseParser.ROW - 64)) | (1 << (SqlBaseParser.WITH - 64)) | (1 << (SqlBaseParser.VALUES - 64)) | (1 << (SqlBaseParser.CREATE - 64)) | (1 << (SqlBaseParser.TABLE - 64)) | (1 << (SqlBaseParser.VIEW - 64)) | (1 << (SqlBaseParser.REPLACE - 64)) | (1 << (SqlBaseParser.INSERT - 64)) | (1 << (SqlBaseParser.DELETE - 64)) | (1 << (SqlBaseParser.INTO - 64)) | (1 << (SqlBaseParser.DESCRIBE - 64)) | (1 << (SqlBaseParser.EXPLAIN - 64)) | (1 << (SqlBaseParser.FORMAT - 64)) | (1 << (SqlBaseParser.LOGICAL - 64)) | (1 << (SqlBaseParser.CODEGEN - 64)) | (1 << (SqlBaseParser.CAST - 64)) | (1 << (SqlBaseParser.SHOW - 64)) | (1 << (SqlBaseParser.TABLES - 64)) | (1 << (SqlBaseParser.COLUMNS - 64)) | (1 << (SqlBaseParser.COLUMN - 64)) | (1 << (SqlBaseParser.USE - 64)) | (1 << (SqlBaseParser.PARTITIONS - 64)) | (1 << (SqlBaseParser.FUNCTIONS - 64)) | (1 << (SqlBaseParser.DROP - 64)) | (1 << (SqlBaseParser.UNION - 64)) | (1 << (SqlBaseParser.EXCEPT - 64)) | (1 << (SqlBaseParser.INTERSECT - 64)) | (1 << (SqlBaseParser.TO - 64)) | (1 << (SqlBaseParser.TABLESAMPLE - 64)) | (1 << (SqlBaseParser.STRATIFY - 64)) | (1 << (SqlBaseParser.ALTER - 64)) | (1 << (SqlBaseParser.RENAME - 64)) | (1 << (SqlBaseParser.ARRAY - 64)) | (1 << (SqlBaseParser.MAP - 64)) | (1 << (SqlBaseParser.STRUCT - 64)) | (1 << (SqlBaseParser.COMMENT - 64)) | (1 << (SqlBaseParser.SET - 64)) | (1 << (SqlBaseParser.RESET - 64)) | (1 << (SqlBaseParser.DATA - 64)) | (1 << (SqlBaseParser.START - 64)) | (1 << (SqlBaseParser.TRANSACTION - 64)) | (1 << (SqlBaseParser.COMMIT - 64)) | (1 << (SqlBaseParser.ROLLBACK - 64)) | (1 << (SqlBaseParser.MACRO - 64)) | (1 << (SqlBaseParser.IF - 64)) | (1 << (SqlBaseParser.PLUS - 64)) | (1 << (SqlBaseParser.MINUS - 64)) | (1 << (SqlBaseParser.ASTERISK - 64)) | (1 << (SqlBaseParser.DIV - 64)) | (1 << (SqlBaseParser.TILDE - 64)))) != 0) or ((((_la - 131)) & ~0x3f) == 0 and ((1 << (_la - 131)) & ((1 << (SqlBaseParser.PERCENTLIT - 131)) | (1 << (SqlBaseParser.BUCKET - 131)) | (1 << (SqlBaseParser.OUT - 131)) | (1 << (SqlBaseParser.OF - 131)) | (1 << (SqlBaseParser.SORT - 131)) | (1 << (SqlBaseParser.CLUSTER - 131)) | (1 << (SqlBaseParser.DISTRIBUTE - 131)) | (1 << (SqlBaseParser.OVERWRITE - 131)) | (1 << (SqlBaseParser.TRANSFORM - 131)) | (1 << (SqlBaseParser.REDUCE - 131)) | (1 << (SqlBaseParser.USING - 131)) | (1 << (SqlBaseParser.SERDE - 131)) | (1 << (SqlBaseParser.SERDEPROPERTIES - 131)) | (1 << (SqlBaseParser.RECORDREADER - 131)) | (1 << (SqlBaseParser.RECORDWRITER - 131)) | (1 << (SqlBaseParser.DELIMITED - 131)) | (1 << (SqlBaseParser.FIELDS - 131)) | (1 << (SqlBaseParser.TERMINATED - 131)) | (1 << (SqlBaseParser.COLLECTION - 131)) | (1 << (SqlBaseParser.ITEMS - 131)) | (1 << (SqlBaseParser.KEYS - 131)) | (1 << (SqlBaseParser.ESCAPED - 131)) | (1 << (SqlBaseParser.LINES - 131)) | (1 << (SqlBaseParser.SEPARATED - 131)) | (1 << (SqlBaseParser.FUNCTION - 131)) | (1 << (SqlBaseParser.EXTENDED - 131)) | (1 << (SqlBaseParser.REFRESH - 131)) | (1 << (SqlBaseParser.CLEAR - 131)) | (1 << (SqlBaseParser.CACHE - 131)) | (1 << (SqlBaseParser.UNCACHE - 131)) | (1 << (SqlBaseParser.LAZY - 131)) | (1 << (SqlBaseParser.FORMATTED - 131)) | (1 << (SqlBaseParser.TEMPORARY - 131)) | (1 << (SqlBaseParser.OPTIONS - 131)) | (1 << (SqlBaseParser.UNSET - 131)) | (1 << (SqlBaseParser.TBLPROPERTIES - 131)) | (1 << (SqlBaseParser.DBPROPERTIES - 131)) | (1 << (SqlBaseParser.BUCKETS - 131)) | (1 << (SqlBaseParser.SKEWED - 131)) | (1 << (SqlBaseParser.STORED - 131)) | (1 << (SqlBaseParser.DIRECTORIES - 131)) | (1 << (SqlBaseParser.LOCATION - 131)) | (1 << (SqlBaseParser.EXCHANGE - 131)) | (1 << (SqlBaseParser.ARCHIVE - 131)) | (1 << (SqlBaseParser.UNARCHIVE - 131)) | (1 << (SqlBaseParser.FILEFORMAT - 131)) | (1 << (SqlBaseParser.TOUCH - 131)) | (1 << (SqlBaseParser.COMPACT - 131)) | (1 << (SqlBaseParser.CONCATENATE - 131)) | (1 << (SqlBaseParser.CHANGE - 131)) | (1 << (SqlBaseParser.CASCADE - 131)) | (1 << (SqlBaseParser.RESTRICT - 131)) | (1 << (SqlBaseParser.CLUSTERED - 131)) | (1 << (SqlBaseParser.SORTED - 131)) | (1 << (SqlBaseParser.PURGE - 131)) | (1 << (SqlBaseParser.INPUTFORMAT - 131)) | (1 << (SqlBaseParser.OUTPUTFORMAT - 131)) | (1 << (SqlBaseParser.DATABASE - 131)) | (1 << (SqlBaseParser.DATABASES - 131)) | (1 << (SqlBaseParser.DFS - 131)) | (1 << (SqlBaseParser.TRUNCATE - 131)) | (1 << (SqlBaseParser.ANALYZE - 131)) | (1 << (SqlBaseParser.COMPUTE - 131)) | (1 << (SqlBaseParser.LIST - 131)))) != 0) or ((((_la - 195)) & ~0x3f) == 0 and ((1 << (_la - 195)) & ((1 << (SqlBaseParser.STATISTICS - 195)) | (1 << (SqlBaseParser.PARTITIONED - 195)) | (1 << (SqlBaseParser.EXTERNAL - 195)) | (1 << (SqlBaseParser.DEFINED - 195)) | (1 << (SqlBaseParser.REVOKE - 195)) | (1 << (SqlBaseParser.GRANT - 195)) | (1 << (SqlBaseParser.LOCK - 195)) | (1 << (SqlBaseParser.UNLOCK - 195)) | (1 << (SqlBaseParser.MSCK - 195)) | (1 << (SqlBaseParser.REPAIR - 195)) | (1 << (SqlBaseParser.RECOVER - 195)) | (1 << (SqlBaseParser.EXPORT - 195)) | (1 << (SqlBaseParser.IMPORT - 195)) | (1 << (SqlBaseParser.LOAD - 195)) | (1 << (SqlBaseParser.ROLE - 195)) | (1 << (SqlBaseParser.ROLES - 195)) | (1 << (SqlBaseParser.COMPACTIONS - 195)) | (1 << (SqlBaseParser.PRINCIPALS - 195)) | (1 << (SqlBaseParser.TRANSACTIONS - 195)) | (1 << (SqlBaseParser.INDEX - 195)) | (1 << (SqlBaseParser.INDEXES - 195)) | (1 << (SqlBaseParser.LOCKS - 195)) | (1 << (SqlBaseParser.OPTION - 195)) | (1 << (SqlBaseParser.ANTI - 195)) | (1 << (SqlBaseParser.LOCAL - 195)) | (1 << (SqlBaseParser.INPATH - 195)) | (1 << (SqlBaseParser.CURRENT_DATE - 195)) | (1 << (SqlBaseParser.CURRENT_TIMESTAMP - 195)) | (1 << (SqlBaseParser.STRING - 195)) | (1 << (SqlBaseParser.BIGINT_LITERAL - 195)) | (1 << (SqlBaseParser.SMALLINT_LITERAL - 195)) | (1 << (SqlBaseParser.TINYINT_LITERAL - 195)) | (1 << (SqlBaseParser.INTEGER_VALUE - 195)) | (1 << (SqlBaseParser.DECIMAL_VALUE - 195)) | (1 << (SqlBaseParser.SCIENTIFIC_DECIMAL_VALUE - 195)) | (1 << (SqlBaseParser.DOUBLE_LITERAL - 195)) | (1 << (SqlBaseParser.BIGDECIMAL_LITERAL - 195)) | (1 << (SqlBaseParser.IDENTIFIER - 195)) | (1 << (SqlBaseParser.BACKQUOTED_IDENTIFIER - 195)))) != 0):
+                if (
+                    (
+                        ((_la) & ~0x3F) == 0
+                        and (
+                            (1 << _la)
+                            & (
+                                (1 << SqlBaseParser.T__0)
+                                | (1 << SqlBaseParser.SELECT)
+                                | (1 << SqlBaseParser.FROM)
+                                | (1 << SqlBaseParser.ADD)
+                                | (1 << SqlBaseParser.AS)
+                                | (1 << SqlBaseParser.ALL)
+                                | (1 << SqlBaseParser.DISTINCT)
+                                | (1 << SqlBaseParser.WHERE)
+                                | (1 << SqlBaseParser.GROUP)
+                                | (1 << SqlBaseParser.BY)
+                                | (1 << SqlBaseParser.GROUPING)
+                                | (1 << SqlBaseParser.SETS)
+                                | (1 << SqlBaseParser.CUBE)
+                                | (1 << SqlBaseParser.ROLLUP)
+                                | (1 << SqlBaseParser.ORDER)
+                                | (1 << SqlBaseParser.HAVING)
+                                | (1 << SqlBaseParser.LIMIT)
+                                | (1 << SqlBaseParser.AT)
+                                | (1 << SqlBaseParser.OR)
+                                | (1 << SqlBaseParser.AND)
+                                | (1 << SqlBaseParser.IN)
+                                | (1 << SqlBaseParser.NOT)
+                                | (1 << SqlBaseParser.NO)
+                                | (1 << SqlBaseParser.EXISTS)
+                                | (1 << SqlBaseParser.BETWEEN)
+                                | (1 << SqlBaseParser.LIKE)
+                                | (1 << SqlBaseParser.RLIKE)
+                                | (1 << SqlBaseParser.IS)
+                                | (1 << SqlBaseParser.NULL)
+                                | (1 << SqlBaseParser.TRUE)
+                                | (1 << SqlBaseParser.FALSE)
+                                | (1 << SqlBaseParser.NULLS)
+                                | (1 << SqlBaseParser.ASC)
+                                | (1 << SqlBaseParser.DESC)
+                                | (1 << SqlBaseParser.FOR)
+                                | (1 << SqlBaseParser.INTERVAL)
+                                | (1 << SqlBaseParser.CASE)
+                                | (1 << SqlBaseParser.WHEN)
+                                | (1 << SqlBaseParser.THEN)
+                                | (1 << SqlBaseParser.ELSE)
+                                | (1 << SqlBaseParser.END)
+                                | (1 << SqlBaseParser.JOIN)
+                                | (1 << SqlBaseParser.CROSS)
+                                | (1 << SqlBaseParser.OUTER)
+                                | (1 << SqlBaseParser.INNER)
+                                | (1 << SqlBaseParser.LEFT)
+                                | (1 << SqlBaseParser.SEMI)
+                                | (1 << SqlBaseParser.RIGHT)
+                                | (1 << SqlBaseParser.FULL)
+                                | (1 << SqlBaseParser.NATURAL)
+                                | (1 << SqlBaseParser.ON)
+                                | (1 << SqlBaseParser.LATERAL)
+                                | (1 << SqlBaseParser.WINDOW)
+                                | (1 << SqlBaseParser.OVER)
+                                | (1 << SqlBaseParser.PARTITION)
+                                | (1 << SqlBaseParser.RANGE)
+                                | (1 << SqlBaseParser.ROWS)
+                            )
+                        )
+                        != 0
+                    )
+                    or (
+                        (((_la - 64)) & ~0x3F) == 0
+                        and (
+                            (1 << (_la - 64))
+                            & (
+                                (1 << (SqlBaseParser.UNBOUNDED - 64))
+                                | (1 << (SqlBaseParser.PRECEDING - 64))
+                                | (1 << (SqlBaseParser.FOLLOWING - 64))
+                                | (1 << (SqlBaseParser.CURRENT - 64))
+                                | (1 << (SqlBaseParser.ROW - 64))
+                                | (1 << (SqlBaseParser.WITH - 64))
+                                | (1 << (SqlBaseParser.VALUES - 64))
+                                | (1 << (SqlBaseParser.CREATE - 64))
+                                | (1 << (SqlBaseParser.TABLE - 64))
+                                | (1 << (SqlBaseParser.VIEW - 64))
+                                | (1 << (SqlBaseParser.REPLACE - 64))
+                                | (1 << (SqlBaseParser.INSERT - 64))
+                                | (1 << (SqlBaseParser.DELETE - 64))
+                                | (1 << (SqlBaseParser.INTO - 64))
+                                | (1 << (SqlBaseParser.DESCRIBE - 64))
+                                | (1 << (SqlBaseParser.EXPLAIN - 64))
+                                | (1 << (SqlBaseParser.FORMAT - 64))
+                                | (1 << (SqlBaseParser.LOGICAL - 64))
+                                | (1 << (SqlBaseParser.CODEGEN - 64))
+                                | (1 << (SqlBaseParser.CAST - 64))
+                                | (1 << (SqlBaseParser.SHOW - 64))
+                                | (1 << (SqlBaseParser.TABLES - 64))
+                                | (1 << (SqlBaseParser.COLUMNS - 64))
+                                | (1 << (SqlBaseParser.COLUMN - 64))
+                                | (1 << (SqlBaseParser.USE - 64))
+                                | (1 << (SqlBaseParser.PARTITIONS - 64))
+                                | (1 << (SqlBaseParser.FUNCTIONS - 64))
+                                | (1 << (SqlBaseParser.DROP - 64))
+                                | (1 << (SqlBaseParser.UNION - 64))
+                                | (1 << (SqlBaseParser.EXCEPT - 64))
+                                | (1 << (SqlBaseParser.INTERSECT - 64))
+                                | (1 << (SqlBaseParser.TO - 64))
+                                | (1 << (SqlBaseParser.TABLESAMPLE - 64))
+                                | (1 << (SqlBaseParser.STRATIFY - 64))
+                                | (1 << (SqlBaseParser.ALTER - 64))
+                                | (1 << (SqlBaseParser.RENAME - 64))
+                                | (1 << (SqlBaseParser.ARRAY - 64))
+                                | (1 << (SqlBaseParser.MAP - 64))
+                                | (1 << (SqlBaseParser.STRUCT - 64))
+                                | (1 << (SqlBaseParser.COMMENT - 64))
+                                | (1 << (SqlBaseParser.SET - 64))
+                                | (1 << (SqlBaseParser.RESET - 64))
+                                | (1 << (SqlBaseParser.DATA - 64))
+                                | (1 << (SqlBaseParser.START - 64))
+                                | (1 << (SqlBaseParser.TRANSACTION - 64))
+                                | (1 << (SqlBaseParser.COMMIT - 64))
+                                | (1 << (SqlBaseParser.ROLLBACK - 64))
+                                | (1 << (SqlBaseParser.MACRO - 64))
+                                | (1 << (SqlBaseParser.IF - 64))
+                                | (1 << (SqlBaseParser.PLUS - 64))
+                                | (1 << (SqlBaseParser.MINUS - 64))
+                                | (1 << (SqlBaseParser.ASTERISK - 64))
+                                | (1 << (SqlBaseParser.DIV - 64))
+                                | (1 << (SqlBaseParser.TILDE - 64))
+                            )
+                        )
+                        != 0
+                    )
+                    or (
+                        (((_la - 131)) & ~0x3F) == 0
+                        and (
+                            (1 << (_la - 131))
+                            & (
+                                (1 << (SqlBaseParser.PERCENTLIT - 131))
+                                | (1 << (SqlBaseParser.BUCKET - 131))
+                                | (1 << (SqlBaseParser.OUT - 131))
+                                | (1 << (SqlBaseParser.OF - 131))
+                                | (1 << (SqlBaseParser.SORT - 131))
+                                | (1 << (SqlBaseParser.CLUSTER - 131))
+                                | (1 << (SqlBaseParser.DISTRIBUTE - 131))
+                                | (1 << (SqlBaseParser.OVERWRITE - 131))
+                                | (1 << (SqlBaseParser.TRANSFORM - 131))
+                                | (1 << (SqlBaseParser.REDUCE - 131))
+                                | (1 << (SqlBaseParser.USING - 131))
+                                | (1 << (SqlBaseParser.SERDE - 131))
+                                | (1 << (SqlBaseParser.SERDEPROPERTIES - 131))
+                                | (1 << (SqlBaseParser.RECORDREADER - 131))
+                                | (1 << (SqlBaseParser.RECORDWRITER - 131))
+                                | (1 << (SqlBaseParser.DELIMITED - 131))
+                                | (1 << (SqlBaseParser.FIELDS - 131))
+                                | (1 << (SqlBaseParser.TERMINATED - 131))
+                                | (1 << (SqlBaseParser.COLLECTION - 131))
+                                | (1 << (SqlBaseParser.ITEMS - 131))
+                                | (1 << (SqlBaseParser.KEYS - 131))
+                                | (1 << (SqlBaseParser.ESCAPED - 131))
+                                | (1 << (SqlBaseParser.LINES - 131))
+                                | (1 << (SqlBaseParser.SEPARATED - 131))
+                                | (1 << (SqlBaseParser.FUNCTION - 131))
+                                | (1 << (SqlBaseParser.EXTENDED - 131))
+                                | (1 << (SqlBaseParser.REFRESH - 131))
+                                | (1 << (SqlBaseParser.CLEAR - 131))
+                                | (1 << (SqlBaseParser.CACHE - 131))
+                                | (1 << (SqlBaseParser.UNCACHE - 131))
+                                | (1 << (SqlBaseParser.LAZY - 131))
+                                | (1 << (SqlBaseParser.FORMATTED - 131))
+                                | (1 << (SqlBaseParser.TEMPORARY - 131))
+                                | (1 << (SqlBaseParser.OPTIONS - 131))
+                                | (1 << (SqlBaseParser.UNSET - 131))
+                                | (1 << (SqlBaseParser.TBLPROPERTIES - 131))
+                                | (1 << (SqlBaseParser.DBPROPERTIES - 131))
+                                | (1 << (SqlBaseParser.BUCKETS - 131))
+                                | (1 << (SqlBaseParser.SKEWED - 131))
+                                | (1 << (SqlBaseParser.STORED - 131))
+                                | (1 << (SqlBaseParser.DIRECTORIES - 131))
+                                | (1 << (SqlBaseParser.LOCATION - 131))
+                                | (1 << (SqlBaseParser.EXCHANGE - 131))
+                                | (1 << (SqlBaseParser.ARCHIVE - 131))
+                                | (1 << (SqlBaseParser.UNARCHIVE - 131))
+                                | (1 << (SqlBaseParser.FILEFORMAT - 131))
+                                | (1 << (SqlBaseParser.TOUCH - 131))
+                                | (1 << (SqlBaseParser.COMPACT - 131))
+                                | (1 << (SqlBaseParser.CONCATENATE - 131))
+                                | (1 << (SqlBaseParser.CHANGE - 131))
+                                | (1 << (SqlBaseParser.CASCADE - 131))
+                                | (1 << (SqlBaseParser.RESTRICT - 131))
+                                | (1 << (SqlBaseParser.CLUSTERED - 131))
+                                | (1 << (SqlBaseParser.SORTED - 131))
+                                | (1 << (SqlBaseParser.PURGE - 131))
+                                | (1 << (SqlBaseParser.INPUTFORMAT - 131))
+                                | (1 << (SqlBaseParser.OUTPUTFORMAT - 131))
+                                | (1 << (SqlBaseParser.DATABASE - 131))
+                                | (1 << (SqlBaseParser.DATABASES - 131))
+                                | (1 << (SqlBaseParser.DFS - 131))
+                                | (1 << (SqlBaseParser.TRUNCATE - 131))
+                                | (1 << (SqlBaseParser.ANALYZE - 131))
+                                | (1 << (SqlBaseParser.COMPUTE - 131))
+                                | (1 << (SqlBaseParser.LIST - 131))
+                            )
+                        )
+                        != 0
+                    )
+                    or (
+                        (((_la - 195)) & ~0x3F) == 0
+                        and (
+                            (1 << (_la - 195))
+                            & (
+                                (1 << (SqlBaseParser.STATISTICS - 195))
+                                | (1 << (SqlBaseParser.PARTITIONED - 195))
+                                | (1 << (SqlBaseParser.EXTERNAL - 195))
+                                | (1 << (SqlBaseParser.DEFINED - 195))
+                                | (1 << (SqlBaseParser.REVOKE - 195))
+                                | (1 << (SqlBaseParser.GRANT - 195))
+                                | (1 << (SqlBaseParser.LOCK - 195))
+                                | (1 << (SqlBaseParser.UNLOCK - 195))
+                                | (1 << (SqlBaseParser.MSCK - 195))
+                                | (1 << (SqlBaseParser.REPAIR - 195))
+                                | (1 << (SqlBaseParser.RECOVER - 195))
+                                | (1 << (SqlBaseParser.EXPORT - 195))
+                                | (1 << (SqlBaseParser.IMPORT - 195))
+                                | (1 << (SqlBaseParser.LOAD - 195))
+                                | (1 << (SqlBaseParser.ROLE - 195))
+                                | (1 << (SqlBaseParser.ROLES - 195))
+                                | (1 << (SqlBaseParser.COMPACTIONS - 195))
+                                | (1 << (SqlBaseParser.PRINCIPALS - 195))
+                                | (1 << (SqlBaseParser.TRANSACTIONS - 195))
+                                | (1 << (SqlBaseParser.INDEX - 195))
+                                | (1 << (SqlBaseParser.INDEXES - 195))
+                                | (1 << (SqlBaseParser.LOCKS - 195))
+                                | (1 << (SqlBaseParser.OPTION - 195))
+                                | (1 << (SqlBaseParser.ANTI - 195))
+                                | (1 << (SqlBaseParser.LOCAL - 195))
+                                | (1 << (SqlBaseParser.INPATH - 195))
+                                | (1 << (SqlBaseParser.CURRENT_DATE - 195))
+                                | (1 << (SqlBaseParser.CURRENT_TIMESTAMP - 195))
+                                | (1 << (SqlBaseParser.STRING - 195))
+                                | (1 << (SqlBaseParser.BIGINT_LITERAL - 195))
+                                | (1 << (SqlBaseParser.SMALLINT_LITERAL - 195))
+                                | (1 << (SqlBaseParser.TINYINT_LITERAL - 195))
+                                | (1 << (SqlBaseParser.INTEGER_VALUE - 195))
+                                | (1 << (SqlBaseParser.DECIMAL_VALUE - 195))
+                                | (1 << (SqlBaseParser.SCIENTIFIC_DECIMAL_VALUE - 195))
+                                | (1 << (SqlBaseParser.DOUBLE_LITERAL - 195))
+                                | (1 << (SqlBaseParser.BIGDECIMAL_LITERAL - 195))
+                                | (1 << (SqlBaseParser.IDENTIFIER - 195))
+                                | (1 << (SqlBaseParser.BACKQUOTED_IDENTIFIER - 195))
+                            )
+                        )
+                        != 0
+                    )
+                ):
                     self.state = 1867
                     self._errHandler.sync(self)
-                    la_ = self._interp.adaptivePredict(self._input,254,self._ctx)
+                    la_ = self._interp.adaptivePredict(self._input, 254, self._ctx)
                     if la_ == 1:
                         self.state = 1866
                         self.setQuantifier()
-
 
                     self.state = 1869
                     self.expression()
                     self.state = 1874
                     self._errHandler.sync(self)
                     _la = self._input.LA(1)
-                    while _la==SqlBaseParser.T__2:
+                    while _la == SqlBaseParser.T__2:
                         self.state = 1870
                         self.match(SqlBaseParser.T__2)
                         self.state = 1871
@@ -12041,19 +14991,16 @@ class SqlBaseParser ( Parser ):
                         self._errHandler.sync(self)
                         _la = self._input.LA(1)
 
-
-
                 self.state = 1879
                 self.match(SqlBaseParser.T__1)
                 self.state = 1882
                 self._errHandler.sync(self)
-                la_ = self._interp.adaptivePredict(self._input,257,self._ctx)
+                la_ = self._interp.adaptivePredict(self._input, 257, self._ctx)
                 if la_ == 1:
                     self.state = 1880
                     self.match(SqlBaseParser.OVER)
                     self.state = 1881
                     self.windowSpec()
-
 
                 pass
 
@@ -12077,27 +15024,36 @@ class SqlBaseParser ( Parser ):
                 self.match(SqlBaseParser.T__1)
                 pass
 
-
             self._ctx.stop = self._input.LT(-1)
             self.state = 1901
             self._errHandler.sync(self)
-            _alt = self._interp.adaptivePredict(self._input,260,self._ctx)
-            while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
-                if _alt==1:
+            _alt = self._interp.adaptivePredict(self._input, 260, self._ctx)
+            while _alt != 2 and _alt != ATN.INVALID_ALT_NUMBER:
+                if _alt == 1:
                     if self._parseListeners is not None:
                         self.triggerExitRuleEvent()
                     _prevctx = localctx
                     self.state = 1899
                     self._errHandler.sync(self)
-                    la_ = self._interp.adaptivePredict(self._input,259,self._ctx)
+                    la_ = self._interp.adaptivePredict(self._input, 259, self._ctx)
                     if la_ == 1:
-                        localctx = SqlBaseParser.SubscriptContext(self, SqlBaseParser.PrimaryExpressionContext(self, _parentctx, _parentState))
+                        localctx = SqlBaseParser.SubscriptContext(
+                            self,
+                            SqlBaseParser.PrimaryExpressionContext(
+                                self, _parentctx, _parentState
+                            ),
+                        )
                         localctx.value = _prevctx
-                        self.pushNewRecursionContext(localctx, _startState, self.RULE_primaryExpression)
+                        self.pushNewRecursionContext(
+                            localctx, _startState, self.RULE_primaryExpression
+                        )
                         self.state = 1891
                         if not self.precpred(self._ctx, 4):
                             from antlr4.error.Errors import FailedPredicateException
-                            raise FailedPredicateException(self, "self.precpred(self._ctx, 4)")
+
+                            raise FailedPredicateException(
+                                self, "self.precpred(self._ctx, 4)"
+                            )
                         self.state = 1892
                         self.match(SqlBaseParser.T__4)
                         self.state = 1893
@@ -12107,23 +15063,32 @@ class SqlBaseParser ( Parser ):
                         pass
 
                     elif la_ == 2:
-                        localctx = SqlBaseParser.DereferenceContext(self, SqlBaseParser.PrimaryExpressionContext(self, _parentctx, _parentState))
+                        localctx = SqlBaseParser.DereferenceContext(
+                            self,
+                            SqlBaseParser.PrimaryExpressionContext(
+                                self, _parentctx, _parentState
+                            ),
+                        )
                         localctx.base = _prevctx
-                        self.pushNewRecursionContext(localctx, _startState, self.RULE_primaryExpression)
+                        self.pushNewRecursionContext(
+                            localctx, _startState, self.RULE_primaryExpression
+                        )
                         self.state = 1896
                         if not self.precpred(self._ctx, 2):
                             from antlr4.error.Errors import FailedPredicateException
-                            raise FailedPredicateException(self, "self.precpred(self._ctx, 2)")
+
+                            raise FailedPredicateException(
+                                self, "self.precpred(self._ctx, 2)"
+                            )
                         self.state = 1897
                         self.match(SqlBaseParser.T__3)
                         self.state = 1898
                         localctx.fieldName = self.identifier()
                         pass
 
-             
                 self.state = 1903
                 self._errHandler.sync(self)
-                _alt = self._interp.adaptivePredict(self._input,260,self._ctx)
+                _alt = self._interp.adaptivePredict(self._input, 260, self._ctx)
 
         except RecognitionException as re:
             localctx.exception = re
@@ -12133,141 +15098,134 @@ class SqlBaseParser ( Parser ):
             self.unrollRecursionContexts(_parentctx)
         return localctx
 
-
     class ConstantContext(ParserRuleContext):
-        __slots__ = 'parser'
+        __slots__ = "parser"
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
-
 
         def getRuleIndex(self):
             return SqlBaseParser.RULE_constant
 
-     
-        def copyFrom(self, ctx:ParserRuleContext):
+        def copyFrom(self, ctx: ParserRuleContext):
             super().copyFrom(ctx)
 
-
-
     class NullLiteralContext(ConstantContext):
-
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a SqlBaseParser.ConstantContext
+        def __init__(
+            self, parser, ctx: ParserRuleContext
+        ):  # actually a SqlBaseParser.ConstantContext
             super().__init__(parser)
             self.copyFrom(ctx)
 
         def NULL(self):
             return self.getToken(SqlBaseParser.NULL, 0)
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterNullLiteral" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterNullLiteral"):
                 listener.enterNullLiteral(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitNullLiteral" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitNullLiteral"):
                 listener.exitNullLiteral(self)
 
-
     class StringLiteralContext(ConstantContext):
-
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a SqlBaseParser.ConstantContext
+        def __init__(
+            self, parser, ctx: ParserRuleContext
+        ):  # actually a SqlBaseParser.ConstantContext
             super().__init__(parser)
             self.copyFrom(ctx)
 
-        def STRING(self, i:int=None):
+        def STRING(self, i: int = None):
             if i is None:
                 return self.getTokens(SqlBaseParser.STRING)
             else:
                 return self.getToken(SqlBaseParser.STRING, i)
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterStringLiteral" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterStringLiteral"):
                 listener.enterStringLiteral(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitStringLiteral" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitStringLiteral"):
                 listener.exitStringLiteral(self)
 
-
     class TypeConstructorContext(ConstantContext):
-
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a SqlBaseParser.ConstantContext
+        def __init__(
+            self, parser, ctx: ParserRuleContext
+        ):  # actually a SqlBaseParser.ConstantContext
             super().__init__(parser)
             self.copyFrom(ctx)
 
         def identifier(self):
-            return self.getTypedRuleContext(SqlBaseParser.IdentifierContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.IdentifierContext, 0)
 
         def STRING(self):
             return self.getToken(SqlBaseParser.STRING, 0)
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterTypeConstructor" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterTypeConstructor"):
                 listener.enterTypeConstructor(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitTypeConstructor" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitTypeConstructor"):
                 listener.exitTypeConstructor(self)
 
-
     class IntervalLiteralContext(ConstantContext):
-
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a SqlBaseParser.ConstantContext
+        def __init__(
+            self, parser, ctx: ParserRuleContext
+        ):  # actually a SqlBaseParser.ConstantContext
             super().__init__(parser)
             self.copyFrom(ctx)
 
         def interval(self):
-            return self.getTypedRuleContext(SqlBaseParser.IntervalContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.IntervalContext, 0)
 
-
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterIntervalLiteral" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterIntervalLiteral"):
                 listener.enterIntervalLiteral(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitIntervalLiteral" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitIntervalLiteral"):
                 listener.exitIntervalLiteral(self)
 
-
     class NumericLiteralContext(ConstantContext):
-
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a SqlBaseParser.ConstantContext
+        def __init__(
+            self, parser, ctx: ParserRuleContext
+        ):  # actually a SqlBaseParser.ConstantContext
             super().__init__(parser)
             self.copyFrom(ctx)
 
         def number(self):
-            return self.getTypedRuleContext(SqlBaseParser.NumberContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.NumberContext, 0)
 
-
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterNumericLiteral" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterNumericLiteral"):
                 listener.enterNumericLiteral(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitNumericLiteral" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitNumericLiteral"):
                 listener.exitNumericLiteral(self)
 
-
     class BooleanLiteralContext(ConstantContext):
-
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a SqlBaseParser.ConstantContext
+        def __init__(
+            self, parser, ctx: ParserRuleContext
+        ):  # actually a SqlBaseParser.ConstantContext
             super().__init__(parser)
             self.copyFrom(ctx)
 
         def booleanValue(self):
-            return self.getTypedRuleContext(SqlBaseParser.BooleanValueContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.BooleanValueContext, 0)
 
-
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterBooleanLiteral" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterBooleanLiteral"):
                 listener.enterBooleanLiteral(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitBooleanLiteral" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitBooleanLiteral"):
                 listener.exitBooleanLiteral(self)
-
-
 
     def constant(self):
 
@@ -12276,7 +15234,7 @@ class SqlBaseParser ( Parser ):
         try:
             self.state = 1916
             self._errHandler.sync(self)
-            la_ = self._interp.adaptivePredict(self._input,262,self._ctx)
+            la_ = self._interp.adaptivePredict(self._input, 262, self._ctx)
             if la_ == 1:
                 localctx = SqlBaseParser.NullLiteralContext(self, localctx)
                 self.enterOuterAlt(localctx, 1)
@@ -12317,22 +15275,21 @@ class SqlBaseParser ( Parser ):
             elif la_ == 6:
                 localctx = SqlBaseParser.StringLiteralContext(self, localctx)
                 self.enterOuterAlt(localctx, 6)
-                self.state = 1912 
+                self.state = 1912
                 self._errHandler.sync(self)
                 _alt = 1
-                while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
+                while _alt != 2 and _alt != ATN.INVALID_ALT_NUMBER:
                     if _alt == 1:
                         self.state = 1911
                         self.match(SqlBaseParser.STRING)
 
                     else:
                         raise NoViableAltException(self)
-                    self.state = 1914 
+                    self.state = 1914
                     self._errHandler.sync(self)
-                    _alt = self._interp.adaptivePredict(self._input,261,self._ctx)
+                    _alt = self._interp.adaptivePredict(self._input, 261, self._ctx)
 
                 pass
-
 
         except RecognitionException as re:
             localctx.exception = re
@@ -12342,11 +15299,12 @@ class SqlBaseParser ( Parser ):
             self.exitRule()
         return localctx
 
-
     class ComparisonOperatorContext(ParserRuleContext):
-        __slots__ = 'parser'
+        __slots__ = "parser"
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
@@ -12377,27 +15335,42 @@ class SqlBaseParser ( Parser ):
         def getRuleIndex(self):
             return SqlBaseParser.RULE_comparisonOperator
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterComparisonOperator" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterComparisonOperator"):
                 listener.enterComparisonOperator(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitComparisonOperator" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitComparisonOperator"):
                 listener.exitComparisonOperator(self)
-
-
-
 
     def comparisonOperator(self):
 
         localctx = SqlBaseParser.ComparisonOperatorContext(self, self._ctx, self.state)
         self.enterRule(localctx, 130, self.RULE_comparisonOperator)
-        self._la = 0 # Token type
+        self._la = 0  # Token type
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 1918
             _la = self._input.LA(1)
-            if not(((((_la - 113)) & ~0x3f) == 0 and ((1 << (_la - 113)) & ((1 << (SqlBaseParser.EQ - 113)) | (1 << (SqlBaseParser.NSEQ - 113)) | (1 << (SqlBaseParser.NEQ - 113)) | (1 << (SqlBaseParser.NEQJ - 113)) | (1 << (SqlBaseParser.LT - 113)) | (1 << (SqlBaseParser.LTE - 113)) | (1 << (SqlBaseParser.GT - 113)) | (1 << (SqlBaseParser.GTE - 113)))) != 0)):
+            if not (
+                (
+                    (((_la - 113)) & ~0x3F) == 0
+                    and (
+                        (1 << (_la - 113))
+                        & (
+                            (1 << (SqlBaseParser.EQ - 113))
+                            | (1 << (SqlBaseParser.NSEQ - 113))
+                            | (1 << (SqlBaseParser.NEQ - 113))
+                            | (1 << (SqlBaseParser.NEQJ - 113))
+                            | (1 << (SqlBaseParser.LT - 113))
+                            | (1 << (SqlBaseParser.LTE - 113))
+                            | (1 << (SqlBaseParser.GT - 113))
+                            | (1 << (SqlBaseParser.GTE - 113))
+                        )
+                    )
+                    != 0
+                )
+            ):
                 self._errHandler.recoverInline(self)
             else:
                 self._errHandler.reportMatch(self)
@@ -12410,11 +15383,12 @@ class SqlBaseParser ( Parser ):
             self.exitRule()
         return localctx
 
-
     class ArithmeticOperatorContext(ParserRuleContext):
-        __slots__ = 'parser'
+        __slots__ = "parser"
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
@@ -12451,27 +15425,44 @@ class SqlBaseParser ( Parser ):
         def getRuleIndex(self):
             return SqlBaseParser.RULE_arithmeticOperator
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterArithmeticOperator" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterArithmeticOperator"):
                 listener.enterArithmeticOperator(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitArithmeticOperator" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitArithmeticOperator"):
                 listener.exitArithmeticOperator(self)
-
-
-
 
     def arithmeticOperator(self):
 
         localctx = SqlBaseParser.ArithmeticOperatorContext(self, self._ctx, self.state)
         self.enterRule(localctx, 132, self.RULE_arithmeticOperator)
-        self._la = 0 # Token type
+        self._la = 0  # Token type
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 1920
             _la = self._input.LA(1)
-            if not(((((_la - 121)) & ~0x3f) == 0 and ((1 << (_la - 121)) & ((1 << (SqlBaseParser.PLUS - 121)) | (1 << (SqlBaseParser.MINUS - 121)) | (1 << (SqlBaseParser.ASTERISK - 121)) | (1 << (SqlBaseParser.SLASH - 121)) | (1 << (SqlBaseParser.PERCENT - 121)) | (1 << (SqlBaseParser.DIV - 121)) | (1 << (SqlBaseParser.TILDE - 121)) | (1 << (SqlBaseParser.AMPERSAND - 121)) | (1 << (SqlBaseParser.PIPE - 121)) | (1 << (SqlBaseParser.HAT - 121)))) != 0)):
+            if not (
+                (
+                    (((_la - 121)) & ~0x3F) == 0
+                    and (
+                        (1 << (_la - 121))
+                        & (
+                            (1 << (SqlBaseParser.PLUS - 121))
+                            | (1 << (SqlBaseParser.MINUS - 121))
+                            | (1 << (SqlBaseParser.ASTERISK - 121))
+                            | (1 << (SqlBaseParser.SLASH - 121))
+                            | (1 << (SqlBaseParser.PERCENT - 121))
+                            | (1 << (SqlBaseParser.DIV - 121))
+                            | (1 << (SqlBaseParser.TILDE - 121))
+                            | (1 << (SqlBaseParser.AMPERSAND - 121))
+                            | (1 << (SqlBaseParser.PIPE - 121))
+                            | (1 << (SqlBaseParser.HAT - 121))
+                        )
+                    )
+                    != 0
+                )
+            ):
                 self._errHandler.recoverInline(self)
             else:
                 self._errHandler.reportMatch(self)
@@ -12484,11 +15475,12 @@ class SqlBaseParser ( Parser ):
             self.exitRule()
         return localctx
 
-
     class PredicateOperatorContext(ParserRuleContext):
-        __slots__ = 'parser'
+        __slots__ = "parser"
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
@@ -12507,27 +15499,38 @@ class SqlBaseParser ( Parser ):
         def getRuleIndex(self):
             return SqlBaseParser.RULE_predicateOperator
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterPredicateOperator" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterPredicateOperator"):
                 listener.enterPredicateOperator(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitPredicateOperator" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitPredicateOperator"):
                 listener.exitPredicateOperator(self)
-
-
-
 
     def predicateOperator(self):
 
         localctx = SqlBaseParser.PredicateOperatorContext(self, self._ctx, self.state)
         self.enterRule(localctx, 134, self.RULE_predicateOperator)
-        self._la = 0 # Token type
+        self._la = 0  # Token type
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 1922
             _la = self._input.LA(1)
-            if not((((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << SqlBaseParser.OR) | (1 << SqlBaseParser.AND) | (1 << SqlBaseParser.IN) | (1 << SqlBaseParser.NOT))) != 0)):
+            if not (
+                (
+                    ((_la) & ~0x3F) == 0
+                    and (
+                        (1 << _la)
+                        & (
+                            (1 << SqlBaseParser.OR)
+                            | (1 << SqlBaseParser.AND)
+                            | (1 << SqlBaseParser.IN)
+                            | (1 << SqlBaseParser.NOT)
+                        )
+                    )
+                    != 0
+                )
+            ):
                 self._errHandler.recoverInline(self)
             else:
                 self._errHandler.reportMatch(self)
@@ -12540,11 +15543,12 @@ class SqlBaseParser ( Parser ):
             self.exitRule()
         return localctx
 
-
     class BooleanValueContext(ParserRuleContext):
-        __slots__ = 'parser'
+        __slots__ = "parser"
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
@@ -12557,27 +15561,24 @@ class SqlBaseParser ( Parser ):
         def getRuleIndex(self):
             return SqlBaseParser.RULE_booleanValue
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterBooleanValue" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterBooleanValue"):
                 listener.enterBooleanValue(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitBooleanValue" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitBooleanValue"):
                 listener.exitBooleanValue(self)
-
-
-
 
     def booleanValue(self):
 
         localctx = SqlBaseParser.BooleanValueContext(self, self._ctx, self.state)
         self.enterRule(localctx, 136, self.RULE_booleanValue)
-        self._la = 0 # Token type
+        self._la = 0  # Token type
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 1924
             _la = self._input.LA(1)
-            if not(_la==SqlBaseParser.TRUE or _la==SqlBaseParser.FALSE):
+            if not (_la == SqlBaseParser.TRUE or _la == SqlBaseParser.FALSE):
                 self._errHandler.recoverInline(self)
             else:
                 self._errHandler.reportMatch(self)
@@ -12590,37 +15591,34 @@ class SqlBaseParser ( Parser ):
             self.exitRule()
         return localctx
 
-
     class IntervalContext(ParserRuleContext):
-        __slots__ = 'parser'
+        __slots__ = "parser"
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
         def INTERVAL(self):
             return self.getToken(SqlBaseParser.INTERVAL, 0)
 
-        def intervalField(self, i:int=None):
+        def intervalField(self, i: int = None):
             if i is None:
                 return self.getTypedRuleContexts(SqlBaseParser.IntervalFieldContext)
             else:
-                return self.getTypedRuleContext(SqlBaseParser.IntervalFieldContext,i)
-
+                return self.getTypedRuleContext(SqlBaseParser.IntervalFieldContext, i)
 
         def getRuleIndex(self):
             return SqlBaseParser.RULE_interval
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterInterval" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterInterval"):
                 listener.enterInterval(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitInterval" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitInterval"):
                 listener.exitInterval(self)
-
-
-
 
     def interval(self):
 
@@ -12632,14 +15630,14 @@ class SqlBaseParser ( Parser ):
             self.match(SqlBaseParser.INTERVAL)
             self.state = 1930
             self._errHandler.sync(self)
-            _alt = self._interp.adaptivePredict(self._input,263,self._ctx)
-            while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
-                if _alt==1:
+            _alt = self._interp.adaptivePredict(self._input, 263, self._ctx)
+            while _alt != 2 and _alt != ATN.INVALID_ALT_NUMBER:
+                if _alt == 1:
                     self.state = 1927
-                    self.intervalField() 
+                    self.intervalField()
                 self.state = 1932
                 self._errHandler.sync(self)
-                _alt = self._interp.adaptivePredict(self._input,263,self._ctx)
+                _alt = self._interp.adaptivePredict(self._input, 263, self._ctx)
 
         except RecognitionException as re:
             localctx.exception = re
@@ -12649,27 +15647,26 @@ class SqlBaseParser ( Parser ):
             self.exitRule()
         return localctx
 
-
     class IntervalFieldContext(ParserRuleContext):
-        __slots__ = 'parser'
+        __slots__ = "parser"
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
-            self.value = None # IntervalValueContext
-            self.unit = None # IdentifierContext
-            self.to = None # IdentifierContext
+            self.value = None  # IntervalValueContext
+            self.unit = None  # IdentifierContext
+            self.to = None  # IdentifierContext
 
         def intervalValue(self):
-            return self.getTypedRuleContext(SqlBaseParser.IntervalValueContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.IntervalValueContext, 0)
 
-
-        def identifier(self, i:int=None):
+        def identifier(self, i: int = None):
             if i is None:
                 return self.getTypedRuleContexts(SqlBaseParser.IdentifierContext)
             else:
-                return self.getTypedRuleContext(SqlBaseParser.IdentifierContext,i)
-
+                return self.getTypedRuleContext(SqlBaseParser.IdentifierContext, i)
 
         def TO(self):
             return self.getToken(SqlBaseParser.TO, 0)
@@ -12677,16 +15674,13 @@ class SqlBaseParser ( Parser ):
         def getRuleIndex(self):
             return SqlBaseParser.RULE_intervalField
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterIntervalField" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterIntervalField"):
                 listener.enterIntervalField(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitIntervalField" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitIntervalField"):
                 listener.exitIntervalField(self)
-
-
-
 
     def intervalField(self):
 
@@ -12700,13 +15694,12 @@ class SqlBaseParser ( Parser ):
             localctx.unit = self.identifier()
             self.state = 1937
             self._errHandler.sync(self)
-            la_ = self._interp.adaptivePredict(self._input,264,self._ctx)
+            la_ = self._interp.adaptivePredict(self._input, 264, self._ctx)
             if la_ == 1:
                 self.state = 1935
                 self.match(SqlBaseParser.TO)
                 self.state = 1936
                 localctx.to = self.identifier()
-
 
         except RecognitionException as re:
             localctx.exception = re
@@ -12716,11 +15709,12 @@ class SqlBaseParser ( Parser ):
             self.exitRule()
         return localctx
 
-
     class IntervalValueContext(ParserRuleContext):
-        __slots__ = 'parser'
+        __slots__ = "parser"
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
@@ -12742,44 +15736,48 @@ class SqlBaseParser ( Parser ):
         def getRuleIndex(self):
             return SqlBaseParser.RULE_intervalValue
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterIntervalValue" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterIntervalValue"):
                 listener.enterIntervalValue(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitIntervalValue" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitIntervalValue"):
                 listener.exitIntervalValue(self)
-
-
-
 
     def intervalValue(self):
 
         localctx = SqlBaseParser.IntervalValueContext(self, self._ctx, self.state)
         self.enterRule(localctx, 142, self.RULE_intervalValue)
-        self._la = 0 # Token type
+        self._la = 0  # Token type
         try:
             self.state = 1944
             self._errHandler.sync(self)
             token = self._input.LA(1)
-            if token in [SqlBaseParser.PLUS, SqlBaseParser.MINUS, SqlBaseParser.INTEGER_VALUE, SqlBaseParser.DECIMAL_VALUE]:
+            if token in [
+                SqlBaseParser.PLUS,
+                SqlBaseParser.MINUS,
+                SqlBaseParser.INTEGER_VALUE,
+                SqlBaseParser.DECIMAL_VALUE,
+            ]:
                 self.enterOuterAlt(localctx, 1)
                 self.state = 1940
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==SqlBaseParser.PLUS or _la==SqlBaseParser.MINUS:
+                if _la == SqlBaseParser.PLUS or _la == SqlBaseParser.MINUS:
                     self.state = 1939
                     _la = self._input.LA(1)
-                    if not(_la==SqlBaseParser.PLUS or _la==SqlBaseParser.MINUS):
+                    if not (_la == SqlBaseParser.PLUS or _la == SqlBaseParser.MINUS):
                         self._errHandler.recoverInline(self)
                     else:
                         self._errHandler.reportMatch(self)
                         self.consume()
 
-
                 self.state = 1942
                 _la = self._input.LA(1)
-                if not(_la==SqlBaseParser.INTEGER_VALUE or _la==SqlBaseParser.DECIMAL_VALUE):
+                if not (
+                    _la == SqlBaseParser.INTEGER_VALUE
+                    or _la == SqlBaseParser.DECIMAL_VALUE
+                ):
                     self._errHandler.recoverInline(self)
                 else:
                     self._errHandler.reportMatch(self)
@@ -12801,101 +15799,102 @@ class SqlBaseParser ( Parser ):
             self.exitRule()
         return localctx
 
-
     class DataTypeContext(ParserRuleContext):
-        __slots__ = 'parser'
+        __slots__ = "parser"
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
-
 
         def getRuleIndex(self):
             return SqlBaseParser.RULE_dataType
 
-     
-        def copyFrom(self, ctx:ParserRuleContext):
+        def copyFrom(self, ctx: ParserRuleContext):
             super().copyFrom(ctx)
 
-
-
     class ComplexDataTypeContext(DataTypeContext):
-
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a SqlBaseParser.DataTypeContext
+        def __init__(
+            self, parser, ctx: ParserRuleContext
+        ):  # actually a SqlBaseParser.DataTypeContext
             super().__init__(parser)
-            self.complex = None # Token
+            self.complex_ = None  # Token
             self.copyFrom(ctx)
 
         def LT(self):
             return self.getToken(SqlBaseParser.LT, 0)
-        def dataType(self, i:int=None):
+
+        def dataType(self, i: int = None):
             if i is None:
                 return self.getTypedRuleContexts(SqlBaseParser.DataTypeContext)
             else:
-                return self.getTypedRuleContext(SqlBaseParser.DataTypeContext,i)
+                return self.getTypedRuleContext(SqlBaseParser.DataTypeContext, i)
 
         def GT(self):
             return self.getToken(SqlBaseParser.GT, 0)
+
         def ARRAY(self):
             return self.getToken(SqlBaseParser.ARRAY, 0)
+
         def MAP(self):
             return self.getToken(SqlBaseParser.MAP, 0)
+
         def STRUCT(self):
             return self.getToken(SqlBaseParser.STRUCT, 0)
+
         def NEQ(self):
             return self.getToken(SqlBaseParser.NEQ, 0)
+
         def colTypeList(self):
-            return self.getTypedRuleContext(SqlBaseParser.ColTypeListContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.ColTypeListContext, 0)
 
-
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterComplexDataType" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterComplexDataType"):
                 listener.enterComplexDataType(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitComplexDataType" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitComplexDataType"):
                 listener.exitComplexDataType(self)
 
-
     class PrimitiveDataTypeContext(DataTypeContext):
-
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a SqlBaseParser.DataTypeContext
+        def __init__(
+            self, parser, ctx: ParserRuleContext
+        ):  # actually a SqlBaseParser.DataTypeContext
             super().__init__(parser)
             self.copyFrom(ctx)
 
         def identifier(self):
-            return self.getTypedRuleContext(SqlBaseParser.IdentifierContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.IdentifierContext, 0)
 
-        def INTEGER_VALUE(self, i:int=None):
+        def INTEGER_VALUE(self, i: int = None):
             if i is None:
                 return self.getTokens(SqlBaseParser.INTEGER_VALUE)
             else:
                 return self.getToken(SqlBaseParser.INTEGER_VALUE, i)
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterPrimitiveDataType" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterPrimitiveDataType"):
                 listener.enterPrimitiveDataType(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitPrimitiveDataType" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitPrimitiveDataType"):
                 listener.exitPrimitiveDataType(self)
-
-
 
     def dataType(self):
 
         localctx = SqlBaseParser.DataTypeContext(self, self._ctx, self.state)
         self.enterRule(localctx, 144, self.RULE_dataType)
-        self._la = 0 # Token type
+        self._la = 0  # Token type
         try:
             self.state = 1980
             self._errHandler.sync(self)
-            la_ = self._interp.adaptivePredict(self._input,271,self._ctx)
+            la_ = self._interp.adaptivePredict(self._input, 271, self._ctx)
             if la_ == 1:
                 localctx = SqlBaseParser.ComplexDataTypeContext(self, localctx)
                 self.enterOuterAlt(localctx, 1)
                 self.state = 1946
-                localctx.complex = self.match(SqlBaseParser.ARRAY)
+                localctx.complex_ = self.match(SqlBaseParser.ARRAY)
                 self.state = 1947
                 self.match(SqlBaseParser.LT)
                 self.state = 1948
@@ -12908,7 +15907,7 @@ class SqlBaseParser ( Parser ):
                 localctx = SqlBaseParser.ComplexDataTypeContext(self, localctx)
                 self.enterOuterAlt(localctx, 2)
                 self.state = 1951
-                localctx.complex = self.match(SqlBaseParser.MAP)
+                localctx.complex_ = self.match(SqlBaseParser.MAP)
                 self.state = 1952
                 self.match(SqlBaseParser.LT)
                 self.state = 1953
@@ -12925,7 +15924,7 @@ class SqlBaseParser ( Parser ):
                 localctx = SqlBaseParser.ComplexDataTypeContext(self, localctx)
                 self.enterOuterAlt(localctx, 3)
                 self.state = 1958
-                localctx.complex = self.match(SqlBaseParser.STRUCT)
+                localctx.complex_ = self.match(SqlBaseParser.STRUCT)
                 self.state = 1965
                 self._errHandler.sync(self)
                 token = self._input.LA(1)
@@ -12935,10 +15934,246 @@ class SqlBaseParser ( Parser ):
                     self.state = 1961
                     self._errHandler.sync(self)
                     _la = self._input.LA(1)
-                    if (((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << SqlBaseParser.SELECT) | (1 << SqlBaseParser.FROM) | (1 << SqlBaseParser.ADD) | (1 << SqlBaseParser.AS) | (1 << SqlBaseParser.ALL) | (1 << SqlBaseParser.DISTINCT) | (1 << SqlBaseParser.WHERE) | (1 << SqlBaseParser.GROUP) | (1 << SqlBaseParser.BY) | (1 << SqlBaseParser.GROUPING) | (1 << SqlBaseParser.SETS) | (1 << SqlBaseParser.CUBE) | (1 << SqlBaseParser.ROLLUP) | (1 << SqlBaseParser.ORDER) | (1 << SqlBaseParser.HAVING) | (1 << SqlBaseParser.LIMIT) | (1 << SqlBaseParser.AT) | (1 << SqlBaseParser.OR) | (1 << SqlBaseParser.AND) | (1 << SqlBaseParser.IN) | (1 << SqlBaseParser.NOT) | (1 << SqlBaseParser.NO) | (1 << SqlBaseParser.EXISTS) | (1 << SqlBaseParser.BETWEEN) | (1 << SqlBaseParser.LIKE) | (1 << SqlBaseParser.RLIKE) | (1 << SqlBaseParser.IS) | (1 << SqlBaseParser.NULL) | (1 << SqlBaseParser.TRUE) | (1 << SqlBaseParser.FALSE) | (1 << SqlBaseParser.NULLS) | (1 << SqlBaseParser.ASC) | (1 << SqlBaseParser.DESC) | (1 << SqlBaseParser.FOR) | (1 << SqlBaseParser.INTERVAL) | (1 << SqlBaseParser.CASE) | (1 << SqlBaseParser.WHEN) | (1 << SqlBaseParser.THEN) | (1 << SqlBaseParser.ELSE) | (1 << SqlBaseParser.END) | (1 << SqlBaseParser.JOIN) | (1 << SqlBaseParser.CROSS) | (1 << SqlBaseParser.OUTER) | (1 << SqlBaseParser.INNER) | (1 << SqlBaseParser.LEFT) | (1 << SqlBaseParser.SEMI) | (1 << SqlBaseParser.RIGHT) | (1 << SqlBaseParser.FULL) | (1 << SqlBaseParser.NATURAL) | (1 << SqlBaseParser.ON) | (1 << SqlBaseParser.LATERAL) | (1 << SqlBaseParser.WINDOW) | (1 << SqlBaseParser.OVER) | (1 << SqlBaseParser.PARTITION) | (1 << SqlBaseParser.RANGE) | (1 << SqlBaseParser.ROWS))) != 0) or ((((_la - 64)) & ~0x3f) == 0 and ((1 << (_la - 64)) & ((1 << (SqlBaseParser.UNBOUNDED - 64)) | (1 << (SqlBaseParser.PRECEDING - 64)) | (1 << (SqlBaseParser.FOLLOWING - 64)) | (1 << (SqlBaseParser.CURRENT - 64)) | (1 << (SqlBaseParser.ROW - 64)) | (1 << (SqlBaseParser.WITH - 64)) | (1 << (SqlBaseParser.VALUES - 64)) | (1 << (SqlBaseParser.CREATE - 64)) | (1 << (SqlBaseParser.TABLE - 64)) | (1 << (SqlBaseParser.VIEW - 64)) | (1 << (SqlBaseParser.REPLACE - 64)) | (1 << (SqlBaseParser.INSERT - 64)) | (1 << (SqlBaseParser.DELETE - 64)) | (1 << (SqlBaseParser.INTO - 64)) | (1 << (SqlBaseParser.DESCRIBE - 64)) | (1 << (SqlBaseParser.EXPLAIN - 64)) | (1 << (SqlBaseParser.FORMAT - 64)) | (1 << (SqlBaseParser.LOGICAL - 64)) | (1 << (SqlBaseParser.CODEGEN - 64)) | (1 << (SqlBaseParser.CAST - 64)) | (1 << (SqlBaseParser.SHOW - 64)) | (1 << (SqlBaseParser.TABLES - 64)) | (1 << (SqlBaseParser.COLUMNS - 64)) | (1 << (SqlBaseParser.COLUMN - 64)) | (1 << (SqlBaseParser.USE - 64)) | (1 << (SqlBaseParser.PARTITIONS - 64)) | (1 << (SqlBaseParser.FUNCTIONS - 64)) | (1 << (SqlBaseParser.DROP - 64)) | (1 << (SqlBaseParser.UNION - 64)) | (1 << (SqlBaseParser.EXCEPT - 64)) | (1 << (SqlBaseParser.INTERSECT - 64)) | (1 << (SqlBaseParser.TO - 64)) | (1 << (SqlBaseParser.TABLESAMPLE - 64)) | (1 << (SqlBaseParser.STRATIFY - 64)) | (1 << (SqlBaseParser.ALTER - 64)) | (1 << (SqlBaseParser.RENAME - 64)) | (1 << (SqlBaseParser.ARRAY - 64)) | (1 << (SqlBaseParser.MAP - 64)) | (1 << (SqlBaseParser.STRUCT - 64)) | (1 << (SqlBaseParser.COMMENT - 64)) | (1 << (SqlBaseParser.SET - 64)) | (1 << (SqlBaseParser.RESET - 64)) | (1 << (SqlBaseParser.DATA - 64)) | (1 << (SqlBaseParser.START - 64)) | (1 << (SqlBaseParser.TRANSACTION - 64)) | (1 << (SqlBaseParser.COMMIT - 64)) | (1 << (SqlBaseParser.ROLLBACK - 64)) | (1 << (SqlBaseParser.MACRO - 64)) | (1 << (SqlBaseParser.IF - 64)) | (1 << (SqlBaseParser.DIV - 64)))) != 0) or ((((_la - 131)) & ~0x3f) == 0 and ((1 << (_la - 131)) & ((1 << (SqlBaseParser.PERCENTLIT - 131)) | (1 << (SqlBaseParser.BUCKET - 131)) | (1 << (SqlBaseParser.OUT - 131)) | (1 << (SqlBaseParser.OF - 131)) | (1 << (SqlBaseParser.SORT - 131)) | (1 << (SqlBaseParser.CLUSTER - 131)) | (1 << (SqlBaseParser.DISTRIBUTE - 131)) | (1 << (SqlBaseParser.OVERWRITE - 131)) | (1 << (SqlBaseParser.TRANSFORM - 131)) | (1 << (SqlBaseParser.REDUCE - 131)) | (1 << (SqlBaseParser.USING - 131)) | (1 << (SqlBaseParser.SERDE - 131)) | (1 << (SqlBaseParser.SERDEPROPERTIES - 131)) | (1 << (SqlBaseParser.RECORDREADER - 131)) | (1 << (SqlBaseParser.RECORDWRITER - 131)) | (1 << (SqlBaseParser.DELIMITED - 131)) | (1 << (SqlBaseParser.FIELDS - 131)) | (1 << (SqlBaseParser.TERMINATED - 131)) | (1 << (SqlBaseParser.COLLECTION - 131)) | (1 << (SqlBaseParser.ITEMS - 131)) | (1 << (SqlBaseParser.KEYS - 131)) | (1 << (SqlBaseParser.ESCAPED - 131)) | (1 << (SqlBaseParser.LINES - 131)) | (1 << (SqlBaseParser.SEPARATED - 131)) | (1 << (SqlBaseParser.FUNCTION - 131)) | (1 << (SqlBaseParser.EXTENDED - 131)) | (1 << (SqlBaseParser.REFRESH - 131)) | (1 << (SqlBaseParser.CLEAR - 131)) | (1 << (SqlBaseParser.CACHE - 131)) | (1 << (SqlBaseParser.UNCACHE - 131)) | (1 << (SqlBaseParser.LAZY - 131)) | (1 << (SqlBaseParser.FORMATTED - 131)) | (1 << (SqlBaseParser.TEMPORARY - 131)) | (1 << (SqlBaseParser.OPTIONS - 131)) | (1 << (SqlBaseParser.UNSET - 131)) | (1 << (SqlBaseParser.TBLPROPERTIES - 131)) | (1 << (SqlBaseParser.DBPROPERTIES - 131)) | (1 << (SqlBaseParser.BUCKETS - 131)) | (1 << (SqlBaseParser.SKEWED - 131)) | (1 << (SqlBaseParser.STORED - 131)) | (1 << (SqlBaseParser.DIRECTORIES - 131)) | (1 << (SqlBaseParser.LOCATION - 131)) | (1 << (SqlBaseParser.EXCHANGE - 131)) | (1 << (SqlBaseParser.ARCHIVE - 131)) | (1 << (SqlBaseParser.UNARCHIVE - 131)) | (1 << (SqlBaseParser.FILEFORMAT - 131)) | (1 << (SqlBaseParser.TOUCH - 131)) | (1 << (SqlBaseParser.COMPACT - 131)) | (1 << (SqlBaseParser.CONCATENATE - 131)) | (1 << (SqlBaseParser.CHANGE - 131)) | (1 << (SqlBaseParser.CASCADE - 131)) | (1 << (SqlBaseParser.RESTRICT - 131)) | (1 << (SqlBaseParser.CLUSTERED - 131)) | (1 << (SqlBaseParser.SORTED - 131)) | (1 << (SqlBaseParser.PURGE - 131)) | (1 << (SqlBaseParser.INPUTFORMAT - 131)) | (1 << (SqlBaseParser.OUTPUTFORMAT - 131)) | (1 << (SqlBaseParser.DATABASE - 131)) | (1 << (SqlBaseParser.DATABASES - 131)) | (1 << (SqlBaseParser.DFS - 131)) | (1 << (SqlBaseParser.TRUNCATE - 131)) | (1 << (SqlBaseParser.ANALYZE - 131)) | (1 << (SqlBaseParser.COMPUTE - 131)) | (1 << (SqlBaseParser.LIST - 131)))) != 0) or ((((_la - 195)) & ~0x3f) == 0 and ((1 << (_la - 195)) & ((1 << (SqlBaseParser.STATISTICS - 195)) | (1 << (SqlBaseParser.PARTITIONED - 195)) | (1 << (SqlBaseParser.EXTERNAL - 195)) | (1 << (SqlBaseParser.DEFINED - 195)) | (1 << (SqlBaseParser.REVOKE - 195)) | (1 << (SqlBaseParser.GRANT - 195)) | (1 << (SqlBaseParser.LOCK - 195)) | (1 << (SqlBaseParser.UNLOCK - 195)) | (1 << (SqlBaseParser.MSCK - 195)) | (1 << (SqlBaseParser.REPAIR - 195)) | (1 << (SqlBaseParser.RECOVER - 195)) | (1 << (SqlBaseParser.EXPORT - 195)) | (1 << (SqlBaseParser.IMPORT - 195)) | (1 << (SqlBaseParser.LOAD - 195)) | (1 << (SqlBaseParser.ROLE - 195)) | (1 << (SqlBaseParser.ROLES - 195)) | (1 << (SqlBaseParser.COMPACTIONS - 195)) | (1 << (SqlBaseParser.PRINCIPALS - 195)) | (1 << (SqlBaseParser.TRANSACTIONS - 195)) | (1 << (SqlBaseParser.INDEX - 195)) | (1 << (SqlBaseParser.INDEXES - 195)) | (1 << (SqlBaseParser.LOCKS - 195)) | (1 << (SqlBaseParser.OPTION - 195)) | (1 << (SqlBaseParser.ANTI - 195)) | (1 << (SqlBaseParser.LOCAL - 195)) | (1 << (SqlBaseParser.INPATH - 195)) | (1 << (SqlBaseParser.CURRENT_DATE - 195)) | (1 << (SqlBaseParser.CURRENT_TIMESTAMP - 195)) | (1 << (SqlBaseParser.IDENTIFIER - 195)) | (1 << (SqlBaseParser.BACKQUOTED_IDENTIFIER - 195)))) != 0):
+                    if (
+                        (
+                            ((_la) & ~0x3F) == 0
+                            and (
+                                (1 << _la)
+                                & (
+                                    (1 << SqlBaseParser.SELECT)
+                                    | (1 << SqlBaseParser.FROM)
+                                    | (1 << SqlBaseParser.ADD)
+                                    | (1 << SqlBaseParser.AS)
+                                    | (1 << SqlBaseParser.ALL)
+                                    | (1 << SqlBaseParser.DISTINCT)
+                                    | (1 << SqlBaseParser.WHERE)
+                                    | (1 << SqlBaseParser.GROUP)
+                                    | (1 << SqlBaseParser.BY)
+                                    | (1 << SqlBaseParser.GROUPING)
+                                    | (1 << SqlBaseParser.SETS)
+                                    | (1 << SqlBaseParser.CUBE)
+                                    | (1 << SqlBaseParser.ROLLUP)
+                                    | (1 << SqlBaseParser.ORDER)
+                                    | (1 << SqlBaseParser.HAVING)
+                                    | (1 << SqlBaseParser.LIMIT)
+                                    | (1 << SqlBaseParser.AT)
+                                    | (1 << SqlBaseParser.OR)
+                                    | (1 << SqlBaseParser.AND)
+                                    | (1 << SqlBaseParser.IN)
+                                    | (1 << SqlBaseParser.NOT)
+                                    | (1 << SqlBaseParser.NO)
+                                    | (1 << SqlBaseParser.EXISTS)
+                                    | (1 << SqlBaseParser.BETWEEN)
+                                    | (1 << SqlBaseParser.LIKE)
+                                    | (1 << SqlBaseParser.RLIKE)
+                                    | (1 << SqlBaseParser.IS)
+                                    | (1 << SqlBaseParser.NULL)
+                                    | (1 << SqlBaseParser.TRUE)
+                                    | (1 << SqlBaseParser.FALSE)
+                                    | (1 << SqlBaseParser.NULLS)
+                                    | (1 << SqlBaseParser.ASC)
+                                    | (1 << SqlBaseParser.DESC)
+                                    | (1 << SqlBaseParser.FOR)
+                                    | (1 << SqlBaseParser.INTERVAL)
+                                    | (1 << SqlBaseParser.CASE)
+                                    | (1 << SqlBaseParser.WHEN)
+                                    | (1 << SqlBaseParser.THEN)
+                                    | (1 << SqlBaseParser.ELSE)
+                                    | (1 << SqlBaseParser.END)
+                                    | (1 << SqlBaseParser.JOIN)
+                                    | (1 << SqlBaseParser.CROSS)
+                                    | (1 << SqlBaseParser.OUTER)
+                                    | (1 << SqlBaseParser.INNER)
+                                    | (1 << SqlBaseParser.LEFT)
+                                    | (1 << SqlBaseParser.SEMI)
+                                    | (1 << SqlBaseParser.RIGHT)
+                                    | (1 << SqlBaseParser.FULL)
+                                    | (1 << SqlBaseParser.NATURAL)
+                                    | (1 << SqlBaseParser.ON)
+                                    | (1 << SqlBaseParser.LATERAL)
+                                    | (1 << SqlBaseParser.WINDOW)
+                                    | (1 << SqlBaseParser.OVER)
+                                    | (1 << SqlBaseParser.PARTITION)
+                                    | (1 << SqlBaseParser.RANGE)
+                                    | (1 << SqlBaseParser.ROWS)
+                                )
+                            )
+                            != 0
+                        )
+                        or (
+                            (((_la - 64)) & ~0x3F) == 0
+                            and (
+                                (1 << (_la - 64))
+                                & (
+                                    (1 << (SqlBaseParser.UNBOUNDED - 64))
+                                    | (1 << (SqlBaseParser.PRECEDING - 64))
+                                    | (1 << (SqlBaseParser.FOLLOWING - 64))
+                                    | (1 << (SqlBaseParser.CURRENT - 64))
+                                    | (1 << (SqlBaseParser.ROW - 64))
+                                    | (1 << (SqlBaseParser.WITH - 64))
+                                    | (1 << (SqlBaseParser.VALUES - 64))
+                                    | (1 << (SqlBaseParser.CREATE - 64))
+                                    | (1 << (SqlBaseParser.TABLE - 64))
+                                    | (1 << (SqlBaseParser.VIEW - 64))
+                                    | (1 << (SqlBaseParser.REPLACE - 64))
+                                    | (1 << (SqlBaseParser.INSERT - 64))
+                                    | (1 << (SqlBaseParser.DELETE - 64))
+                                    | (1 << (SqlBaseParser.INTO - 64))
+                                    | (1 << (SqlBaseParser.DESCRIBE - 64))
+                                    | (1 << (SqlBaseParser.EXPLAIN - 64))
+                                    | (1 << (SqlBaseParser.FORMAT - 64))
+                                    | (1 << (SqlBaseParser.LOGICAL - 64))
+                                    | (1 << (SqlBaseParser.CODEGEN - 64))
+                                    | (1 << (SqlBaseParser.CAST - 64))
+                                    | (1 << (SqlBaseParser.SHOW - 64))
+                                    | (1 << (SqlBaseParser.TABLES - 64))
+                                    | (1 << (SqlBaseParser.COLUMNS - 64))
+                                    | (1 << (SqlBaseParser.COLUMN - 64))
+                                    | (1 << (SqlBaseParser.USE - 64))
+                                    | (1 << (SqlBaseParser.PARTITIONS - 64))
+                                    | (1 << (SqlBaseParser.FUNCTIONS - 64))
+                                    | (1 << (SqlBaseParser.DROP - 64))
+                                    | (1 << (SqlBaseParser.UNION - 64))
+                                    | (1 << (SqlBaseParser.EXCEPT - 64))
+                                    | (1 << (SqlBaseParser.INTERSECT - 64))
+                                    | (1 << (SqlBaseParser.TO - 64))
+                                    | (1 << (SqlBaseParser.TABLESAMPLE - 64))
+                                    | (1 << (SqlBaseParser.STRATIFY - 64))
+                                    | (1 << (SqlBaseParser.ALTER - 64))
+                                    | (1 << (SqlBaseParser.RENAME - 64))
+                                    | (1 << (SqlBaseParser.ARRAY - 64))
+                                    | (1 << (SqlBaseParser.MAP - 64))
+                                    | (1 << (SqlBaseParser.STRUCT - 64))
+                                    | (1 << (SqlBaseParser.COMMENT - 64))
+                                    | (1 << (SqlBaseParser.SET - 64))
+                                    | (1 << (SqlBaseParser.RESET - 64))
+                                    | (1 << (SqlBaseParser.DATA - 64))
+                                    | (1 << (SqlBaseParser.START - 64))
+                                    | (1 << (SqlBaseParser.TRANSACTION - 64))
+                                    | (1 << (SqlBaseParser.COMMIT - 64))
+                                    | (1 << (SqlBaseParser.ROLLBACK - 64))
+                                    | (1 << (SqlBaseParser.MACRO - 64))
+                                    | (1 << (SqlBaseParser.IF - 64))
+                                    | (1 << (SqlBaseParser.DIV - 64))
+                                )
+                            )
+                            != 0
+                        )
+                        or (
+                            (((_la - 131)) & ~0x3F) == 0
+                            and (
+                                (1 << (_la - 131))
+                                & (
+                                    (1 << (SqlBaseParser.PERCENTLIT - 131))
+                                    | (1 << (SqlBaseParser.BUCKET - 131))
+                                    | (1 << (SqlBaseParser.OUT - 131))
+                                    | (1 << (SqlBaseParser.OF - 131))
+                                    | (1 << (SqlBaseParser.SORT - 131))
+                                    | (1 << (SqlBaseParser.CLUSTER - 131))
+                                    | (1 << (SqlBaseParser.DISTRIBUTE - 131))
+                                    | (1 << (SqlBaseParser.OVERWRITE - 131))
+                                    | (1 << (SqlBaseParser.TRANSFORM - 131))
+                                    | (1 << (SqlBaseParser.REDUCE - 131))
+                                    | (1 << (SqlBaseParser.USING - 131))
+                                    | (1 << (SqlBaseParser.SERDE - 131))
+                                    | (1 << (SqlBaseParser.SERDEPROPERTIES - 131))
+                                    | (1 << (SqlBaseParser.RECORDREADER - 131))
+                                    | (1 << (SqlBaseParser.RECORDWRITER - 131))
+                                    | (1 << (SqlBaseParser.DELIMITED - 131))
+                                    | (1 << (SqlBaseParser.FIELDS - 131))
+                                    | (1 << (SqlBaseParser.TERMINATED - 131))
+                                    | (1 << (SqlBaseParser.COLLECTION - 131))
+                                    | (1 << (SqlBaseParser.ITEMS - 131))
+                                    | (1 << (SqlBaseParser.KEYS - 131))
+                                    | (1 << (SqlBaseParser.ESCAPED - 131))
+                                    | (1 << (SqlBaseParser.LINES - 131))
+                                    | (1 << (SqlBaseParser.SEPARATED - 131))
+                                    | (1 << (SqlBaseParser.FUNCTION - 131))
+                                    | (1 << (SqlBaseParser.EXTENDED - 131))
+                                    | (1 << (SqlBaseParser.REFRESH - 131))
+                                    | (1 << (SqlBaseParser.CLEAR - 131))
+                                    | (1 << (SqlBaseParser.CACHE - 131))
+                                    | (1 << (SqlBaseParser.UNCACHE - 131))
+                                    | (1 << (SqlBaseParser.LAZY - 131))
+                                    | (1 << (SqlBaseParser.FORMATTED - 131))
+                                    | (1 << (SqlBaseParser.TEMPORARY - 131))
+                                    | (1 << (SqlBaseParser.OPTIONS - 131))
+                                    | (1 << (SqlBaseParser.UNSET - 131))
+                                    | (1 << (SqlBaseParser.TBLPROPERTIES - 131))
+                                    | (1 << (SqlBaseParser.DBPROPERTIES - 131))
+                                    | (1 << (SqlBaseParser.BUCKETS - 131))
+                                    | (1 << (SqlBaseParser.SKEWED - 131))
+                                    | (1 << (SqlBaseParser.STORED - 131))
+                                    | (1 << (SqlBaseParser.DIRECTORIES - 131))
+                                    | (1 << (SqlBaseParser.LOCATION - 131))
+                                    | (1 << (SqlBaseParser.EXCHANGE - 131))
+                                    | (1 << (SqlBaseParser.ARCHIVE - 131))
+                                    | (1 << (SqlBaseParser.UNARCHIVE - 131))
+                                    | (1 << (SqlBaseParser.FILEFORMAT - 131))
+                                    | (1 << (SqlBaseParser.TOUCH - 131))
+                                    | (1 << (SqlBaseParser.COMPACT - 131))
+                                    | (1 << (SqlBaseParser.CONCATENATE - 131))
+                                    | (1 << (SqlBaseParser.CHANGE - 131))
+                                    | (1 << (SqlBaseParser.CASCADE - 131))
+                                    | (1 << (SqlBaseParser.RESTRICT - 131))
+                                    | (1 << (SqlBaseParser.CLUSTERED - 131))
+                                    | (1 << (SqlBaseParser.SORTED - 131))
+                                    | (1 << (SqlBaseParser.PURGE - 131))
+                                    | (1 << (SqlBaseParser.INPUTFORMAT - 131))
+                                    | (1 << (SqlBaseParser.OUTPUTFORMAT - 131))
+                                    | (1 << (SqlBaseParser.DATABASE - 131))
+                                    | (1 << (SqlBaseParser.DATABASES - 131))
+                                    | (1 << (SqlBaseParser.DFS - 131))
+                                    | (1 << (SqlBaseParser.TRUNCATE - 131))
+                                    | (1 << (SqlBaseParser.ANALYZE - 131))
+                                    | (1 << (SqlBaseParser.COMPUTE - 131))
+                                    | (1 << (SqlBaseParser.LIST - 131))
+                                )
+                            )
+                            != 0
+                        )
+                        or (
+                            (((_la - 195)) & ~0x3F) == 0
+                            and (
+                                (1 << (_la - 195))
+                                & (
+                                    (1 << (SqlBaseParser.STATISTICS - 195))
+                                    | (1 << (SqlBaseParser.PARTITIONED - 195))
+                                    | (1 << (SqlBaseParser.EXTERNAL - 195))
+                                    | (1 << (SqlBaseParser.DEFINED - 195))
+                                    | (1 << (SqlBaseParser.REVOKE - 195))
+                                    | (1 << (SqlBaseParser.GRANT - 195))
+                                    | (1 << (SqlBaseParser.LOCK - 195))
+                                    | (1 << (SqlBaseParser.UNLOCK - 195))
+                                    | (1 << (SqlBaseParser.MSCK - 195))
+                                    | (1 << (SqlBaseParser.REPAIR - 195))
+                                    | (1 << (SqlBaseParser.RECOVER - 195))
+                                    | (1 << (SqlBaseParser.EXPORT - 195))
+                                    | (1 << (SqlBaseParser.IMPORT - 195))
+                                    | (1 << (SqlBaseParser.LOAD - 195))
+                                    | (1 << (SqlBaseParser.ROLE - 195))
+                                    | (1 << (SqlBaseParser.ROLES - 195))
+                                    | (1 << (SqlBaseParser.COMPACTIONS - 195))
+                                    | (1 << (SqlBaseParser.PRINCIPALS - 195))
+                                    | (1 << (SqlBaseParser.TRANSACTIONS - 195))
+                                    | (1 << (SqlBaseParser.INDEX - 195))
+                                    | (1 << (SqlBaseParser.INDEXES - 195))
+                                    | (1 << (SqlBaseParser.LOCKS - 195))
+                                    | (1 << (SqlBaseParser.OPTION - 195))
+                                    | (1 << (SqlBaseParser.ANTI - 195))
+                                    | (1 << (SqlBaseParser.LOCAL - 195))
+                                    | (1 << (SqlBaseParser.INPATH - 195))
+                                    | (1 << (SqlBaseParser.CURRENT_DATE - 195))
+                                    | (1 << (SqlBaseParser.CURRENT_TIMESTAMP - 195))
+                                    | (1 << (SqlBaseParser.IDENTIFIER - 195))
+                                    | (1 << (SqlBaseParser.BACKQUOTED_IDENTIFIER - 195))
+                                )
+                            )
+                            != 0
+                        )
+                    ):
                         self.state = 1960
                         self.colTypeList()
-
 
                     self.state = 1963
                     self.match(SqlBaseParser.GT)
@@ -12959,7 +16194,7 @@ class SqlBaseParser ( Parser ):
                 self.identifier()
                 self.state = 1978
                 self._errHandler.sync(self)
-                la_ = self._interp.adaptivePredict(self._input,270,self._ctx)
+                la_ = self._interp.adaptivePredict(self._input, 270, self._ctx)
                 if la_ == 1:
                     self.state = 1968
                     self.match(SqlBaseParser.T__0)
@@ -12968,7 +16203,7 @@ class SqlBaseParser ( Parser ):
                     self.state = 1974
                     self._errHandler.sync(self)
                     _la = self._input.LA(1)
-                    while _la==SqlBaseParser.T__2:
+                    while _la == SqlBaseParser.T__2:
                         self.state = 1970
                         self.match(SqlBaseParser.T__2)
                         self.state = 1971
@@ -12980,9 +16215,7 @@ class SqlBaseParser ( Parser ):
                     self.state = 1977
                     self.match(SqlBaseParser.T__1)
 
-
                 pass
-
 
         except RecognitionException as re:
             localctx.exception = re
@@ -12992,34 +16225,31 @@ class SqlBaseParser ( Parser ):
             self.exitRule()
         return localctx
 
-
     class ColTypeListContext(ParserRuleContext):
-        __slots__ = 'parser'
+        __slots__ = "parser"
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
-        def colType(self, i:int=None):
+        def colType(self, i: int = None):
             if i is None:
                 return self.getTypedRuleContexts(SqlBaseParser.ColTypeContext)
             else:
-                return self.getTypedRuleContext(SqlBaseParser.ColTypeContext,i)
-
+                return self.getTypedRuleContext(SqlBaseParser.ColTypeContext, i)
 
         def getRuleIndex(self):
             return SqlBaseParser.RULE_colTypeList
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterColTypeList" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterColTypeList"):
                 listener.enterColTypeList(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitColTypeList" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitColTypeList"):
                 listener.exitColTypeList(self)
-
-
-
 
     def colTypeList(self):
 
@@ -13031,16 +16261,16 @@ class SqlBaseParser ( Parser ):
             self.colType()
             self.state = 1987
             self._errHandler.sync(self)
-            _alt = self._interp.adaptivePredict(self._input,272,self._ctx)
-            while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
-                if _alt==1:
+            _alt = self._interp.adaptivePredict(self._input, 272, self._ctx)
+            while _alt != 2 and _alt != ATN.INVALID_ALT_NUMBER:
+                if _alt == 1:
                     self.state = 1983
                     self.match(SqlBaseParser.T__2)
                     self.state = 1984
-                    self.colType() 
+                    self.colType()
                 self.state = 1989
                 self._errHandler.sync(self)
-                _alt = self._interp.adaptivePredict(self._input,272,self._ctx)
+                _alt = self._interp.adaptivePredict(self._input, 272, self._ctx)
 
         except RecognitionException as re:
             localctx.exception = re
@@ -13050,21 +16280,20 @@ class SqlBaseParser ( Parser ):
             self.exitRule()
         return localctx
 
-
     class ColTypeContext(ParserRuleContext):
-        __slots__ = 'parser'
+        __slots__ = "parser"
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
         def identifier(self):
-            return self.getTypedRuleContext(SqlBaseParser.IdentifierContext,0)
-
+            return self.getTypedRuleContext(SqlBaseParser.IdentifierContext, 0)
 
         def dataType(self):
-            return self.getTypedRuleContext(SqlBaseParser.DataTypeContext,0)
-
+            return self.getTypedRuleContext(SqlBaseParser.DataTypeContext, 0)
 
         def COMMENT(self):
             return self.getToken(SqlBaseParser.COMMENT, 0)
@@ -13075,22 +16304,19 @@ class SqlBaseParser ( Parser ):
         def getRuleIndex(self):
             return SqlBaseParser.RULE_colType
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterColType" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterColType"):
                 listener.enterColType(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitColType" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitColType"):
                 listener.exitColType(self)
-
-
-
 
     def colType(self):
 
         localctx = SqlBaseParser.ColTypeContext(self, self._ctx, self.state)
         self.enterRule(localctx, 148, self.RULE_colType)
-        self._la = 0 # Token type
+        self._la = 0  # Token type
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 1990
@@ -13098,22 +16324,20 @@ class SqlBaseParser ( Parser ):
             self.state = 1992
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if _la==SqlBaseParser.T__6:
+            if _la == SqlBaseParser.T__6:
                 self.state = 1991
                 self.match(SqlBaseParser.T__6)
-
 
             self.state = 1994
             self.dataType()
             self.state = 1997
             self._errHandler.sync(self)
-            la_ = self._interp.adaptivePredict(self._input,274,self._ctx)
+            la_ = self._interp.adaptivePredict(self._input, 274, self._ctx)
             if la_ == 1:
                 self.state = 1995
                 self.match(SqlBaseParser.COMMENT)
                 self.state = 1996
                 self.match(SqlBaseParser.STRING)
-
 
         except RecognitionException as re:
             localctx.exception = re
@@ -13123,15 +16347,16 @@ class SqlBaseParser ( Parser ):
             self.exitRule()
         return localctx
 
-
     class WhenClauseContext(ParserRuleContext):
-        __slots__ = 'parser'
+        __slots__ = "parser"
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
-            self.condition = None # ExpressionContext
-            self.result = None # ExpressionContext
+            self.condition = None  # ExpressionContext
+            self.result = None  # ExpressionContext
 
         def WHEN(self):
             return self.getToken(SqlBaseParser.WHEN, 0)
@@ -13139,26 +16364,22 @@ class SqlBaseParser ( Parser ):
         def THEN(self):
             return self.getToken(SqlBaseParser.THEN, 0)
 
-        def expression(self, i:int=None):
+        def expression(self, i: int = None):
             if i is None:
                 return self.getTypedRuleContexts(SqlBaseParser.ExpressionContext)
             else:
-                return self.getTypedRuleContext(SqlBaseParser.ExpressionContext,i)
-
+                return self.getTypedRuleContext(SqlBaseParser.ExpressionContext, i)
 
         def getRuleIndex(self):
             return SqlBaseParser.RULE_whenClause
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterWhenClause" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterWhenClause"):
                 listener.enterWhenClause(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitWhenClause" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitWhenClause"):
                 listener.exitWhenClause(self)
-
-
-
 
     def whenClause(self):
 
@@ -13182,37 +16403,34 @@ class SqlBaseParser ( Parser ):
             self.exitRule()
         return localctx
 
-
     class WindowsContext(ParserRuleContext):
-        __slots__ = 'parser'
+        __slots__ = "parser"
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
         def WINDOW(self):
             return self.getToken(SqlBaseParser.WINDOW, 0)
 
-        def namedWindow(self, i:int=None):
+        def namedWindow(self, i: int = None):
             if i is None:
                 return self.getTypedRuleContexts(SqlBaseParser.NamedWindowContext)
             else:
-                return self.getTypedRuleContext(SqlBaseParser.NamedWindowContext,i)
-
+                return self.getTypedRuleContext(SqlBaseParser.NamedWindowContext, i)
 
         def getRuleIndex(self):
             return SqlBaseParser.RULE_windows
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterWindows" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterWindows"):
                 listener.enterWindows(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitWindows" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitWindows"):
                 listener.exitWindows(self)
-
-
-
 
     def windows(self):
 
@@ -13226,16 +16444,16 @@ class SqlBaseParser ( Parser ):
             self.namedWindow()
             self.state = 2010
             self._errHandler.sync(self)
-            _alt = self._interp.adaptivePredict(self._input,275,self._ctx)
-            while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
-                if _alt==1:
+            _alt = self._interp.adaptivePredict(self._input, 275, self._ctx)
+            while _alt != 2 and _alt != ATN.INVALID_ALT_NUMBER:
+                if _alt == 1:
                     self.state = 2006
                     self.match(SqlBaseParser.T__2)
                     self.state = 2007
-                    self.namedWindow() 
+                    self.namedWindow()
                 self.state = 2012
                 self._errHandler.sync(self)
-                _alt = self._interp.adaptivePredict(self._input,275,self._ctx)
+                _alt = self._interp.adaptivePredict(self._input, 275, self._ctx)
 
         except RecognitionException as re:
             localctx.exception = re
@@ -13245,38 +16463,34 @@ class SqlBaseParser ( Parser ):
             self.exitRule()
         return localctx
 
-
     class NamedWindowContext(ParserRuleContext):
-        __slots__ = 'parser'
+        __slots__ = "parser"
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
         def identifier(self):
-            return self.getTypedRuleContext(SqlBaseParser.IdentifierContext,0)
-
+            return self.getTypedRuleContext(SqlBaseParser.IdentifierContext, 0)
 
         def AS(self):
             return self.getToken(SqlBaseParser.AS, 0)
 
         def windowSpec(self):
-            return self.getTypedRuleContext(SqlBaseParser.WindowSpecContext,0)
-
+            return self.getTypedRuleContext(SqlBaseParser.WindowSpecContext, 0)
 
         def getRuleIndex(self):
             return SqlBaseParser.RULE_namedWindow
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterNamedWindow" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterNamedWindow"):
                 listener.enterNamedWindow(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitNamedWindow" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitNamedWindow"):
                 listener.exitNamedWindow(self)
-
-
-
 
     def namedWindow(self):
 
@@ -13298,103 +16512,304 @@ class SqlBaseParser ( Parser ):
             self.exitRule()
         return localctx
 
-
     class WindowSpecContext(ParserRuleContext):
-        __slots__ = 'parser'
+        __slots__ = "parser"
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
-
 
         def getRuleIndex(self):
             return SqlBaseParser.RULE_windowSpec
 
-     
-        def copyFrom(self, ctx:ParserRuleContext):
+        def copyFrom(self, ctx: ParserRuleContext):
             super().copyFrom(ctx)
 
-
-
     class WindowRefContext(WindowSpecContext):
-
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a SqlBaseParser.WindowSpecContext
+        def __init__(
+            self, parser, ctx: ParserRuleContext
+        ):  # actually a SqlBaseParser.WindowSpecContext
             super().__init__(parser)
-            self.name = None # IdentifierContext
+            self.name = None  # IdentifierContext
             self.copyFrom(ctx)
 
         def identifier(self):
-            return self.getTypedRuleContext(SqlBaseParser.IdentifierContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.IdentifierContext, 0)
 
-
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterWindowRef" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterWindowRef"):
                 listener.enterWindowRef(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitWindowRef" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitWindowRef"):
                 listener.exitWindowRef(self)
 
-
     class WindowDefContext(WindowSpecContext):
-
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a SqlBaseParser.WindowSpecContext
+        def __init__(
+            self, parser, ctx: ParserRuleContext
+        ):  # actually a SqlBaseParser.WindowSpecContext
             super().__init__(parser)
-            self._expression = None # ExpressionContext
-            self.partition = list() # of ExpressionContexts
+            self._expression = None  # ExpressionContext
+            self.partition = list()  # of ExpressionContexts
             self.copyFrom(ctx)
 
         def CLUSTER(self):
             return self.getToken(SqlBaseParser.CLUSTER, 0)
-        def BY(self, i:int=None):
+
+        def BY(self, i: int = None):
             if i is None:
                 return self.getTokens(SqlBaseParser.BY)
             else:
                 return self.getToken(SqlBaseParser.BY, i)
-        def expression(self, i:int=None):
+
+        def expression(self, i: int = None):
             if i is None:
                 return self.getTypedRuleContexts(SqlBaseParser.ExpressionContext)
             else:
-                return self.getTypedRuleContext(SqlBaseParser.ExpressionContext,i)
+                return self.getTypedRuleContext(SqlBaseParser.ExpressionContext, i)
 
         def windowFrame(self):
-            return self.getTypedRuleContext(SqlBaseParser.WindowFrameContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.WindowFrameContext, 0)
 
-        def sortItem(self, i:int=None):
+        def sortItem(self, i: int = None):
             if i is None:
                 return self.getTypedRuleContexts(SqlBaseParser.SortItemContext)
             else:
-                return self.getTypedRuleContext(SqlBaseParser.SortItemContext,i)
+                return self.getTypedRuleContext(SqlBaseParser.SortItemContext, i)
 
         def PARTITION(self):
             return self.getToken(SqlBaseParser.PARTITION, 0)
+
         def DISTRIBUTE(self):
             return self.getToken(SqlBaseParser.DISTRIBUTE, 0)
+
         def ORDER(self):
             return self.getToken(SqlBaseParser.ORDER, 0)
+
         def SORT(self):
             return self.getToken(SqlBaseParser.SORT, 0)
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterWindowDef" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterWindowDef"):
                 listener.enterWindowDef(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitWindowDef" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitWindowDef"):
                 listener.exitWindowDef(self)
-
-
 
     def windowSpec(self):
 
         localctx = SqlBaseParser.WindowSpecContext(self, self._ctx, self.state)
         self.enterRule(localctx, 156, self.RULE_windowSpec)
-        self._la = 0 # Token type
+        self._la = 0  # Token type
         try:
             self.state = 2059
             self._errHandler.sync(self)
             token = self._input.LA(1)
-            if token in [SqlBaseParser.SELECT, SqlBaseParser.FROM, SqlBaseParser.ADD, SqlBaseParser.AS, SqlBaseParser.ALL, SqlBaseParser.DISTINCT, SqlBaseParser.WHERE, SqlBaseParser.GROUP, SqlBaseParser.BY, SqlBaseParser.GROUPING, SqlBaseParser.SETS, SqlBaseParser.CUBE, SqlBaseParser.ROLLUP, SqlBaseParser.ORDER, SqlBaseParser.HAVING, SqlBaseParser.LIMIT, SqlBaseParser.AT, SqlBaseParser.OR, SqlBaseParser.AND, SqlBaseParser.IN, SqlBaseParser.NOT, SqlBaseParser.NO, SqlBaseParser.EXISTS, SqlBaseParser.BETWEEN, SqlBaseParser.LIKE, SqlBaseParser.RLIKE, SqlBaseParser.IS, SqlBaseParser.NULL, SqlBaseParser.TRUE, SqlBaseParser.FALSE, SqlBaseParser.NULLS, SqlBaseParser.ASC, SqlBaseParser.DESC, SqlBaseParser.FOR, SqlBaseParser.INTERVAL, SqlBaseParser.CASE, SqlBaseParser.WHEN, SqlBaseParser.THEN, SqlBaseParser.ELSE, SqlBaseParser.END, SqlBaseParser.JOIN, SqlBaseParser.CROSS, SqlBaseParser.OUTER, SqlBaseParser.INNER, SqlBaseParser.LEFT, SqlBaseParser.SEMI, SqlBaseParser.RIGHT, SqlBaseParser.FULL, SqlBaseParser.NATURAL, SqlBaseParser.ON, SqlBaseParser.LATERAL, SqlBaseParser.WINDOW, SqlBaseParser.OVER, SqlBaseParser.PARTITION, SqlBaseParser.RANGE, SqlBaseParser.ROWS, SqlBaseParser.UNBOUNDED, SqlBaseParser.PRECEDING, SqlBaseParser.FOLLOWING, SqlBaseParser.CURRENT, SqlBaseParser.ROW, SqlBaseParser.WITH, SqlBaseParser.VALUES, SqlBaseParser.CREATE, SqlBaseParser.TABLE, SqlBaseParser.VIEW, SqlBaseParser.REPLACE, SqlBaseParser.INSERT, SqlBaseParser.DELETE, SqlBaseParser.INTO, SqlBaseParser.DESCRIBE, SqlBaseParser.EXPLAIN, SqlBaseParser.FORMAT, SqlBaseParser.LOGICAL, SqlBaseParser.CODEGEN, SqlBaseParser.CAST, SqlBaseParser.SHOW, SqlBaseParser.TABLES, SqlBaseParser.COLUMNS, SqlBaseParser.COLUMN, SqlBaseParser.USE, SqlBaseParser.PARTITIONS, SqlBaseParser.FUNCTIONS, SqlBaseParser.DROP, SqlBaseParser.UNION, SqlBaseParser.EXCEPT, SqlBaseParser.INTERSECT, SqlBaseParser.TO, SqlBaseParser.TABLESAMPLE, SqlBaseParser.STRATIFY, SqlBaseParser.ALTER, SqlBaseParser.RENAME, SqlBaseParser.ARRAY, SqlBaseParser.MAP, SqlBaseParser.STRUCT, SqlBaseParser.COMMENT, SqlBaseParser.SET, SqlBaseParser.RESET, SqlBaseParser.DATA, SqlBaseParser.START, SqlBaseParser.TRANSACTION, SqlBaseParser.COMMIT, SqlBaseParser.ROLLBACK, SqlBaseParser.MACRO, SqlBaseParser.IF, SqlBaseParser.DIV, SqlBaseParser.PERCENTLIT, SqlBaseParser.BUCKET, SqlBaseParser.OUT, SqlBaseParser.OF, SqlBaseParser.SORT, SqlBaseParser.CLUSTER, SqlBaseParser.DISTRIBUTE, SqlBaseParser.OVERWRITE, SqlBaseParser.TRANSFORM, SqlBaseParser.REDUCE, SqlBaseParser.USING, SqlBaseParser.SERDE, SqlBaseParser.SERDEPROPERTIES, SqlBaseParser.RECORDREADER, SqlBaseParser.RECORDWRITER, SqlBaseParser.DELIMITED, SqlBaseParser.FIELDS, SqlBaseParser.TERMINATED, SqlBaseParser.COLLECTION, SqlBaseParser.ITEMS, SqlBaseParser.KEYS, SqlBaseParser.ESCAPED, SqlBaseParser.LINES, SqlBaseParser.SEPARATED, SqlBaseParser.FUNCTION, SqlBaseParser.EXTENDED, SqlBaseParser.REFRESH, SqlBaseParser.CLEAR, SqlBaseParser.CACHE, SqlBaseParser.UNCACHE, SqlBaseParser.LAZY, SqlBaseParser.FORMATTED, SqlBaseParser.TEMPORARY, SqlBaseParser.OPTIONS, SqlBaseParser.UNSET, SqlBaseParser.TBLPROPERTIES, SqlBaseParser.DBPROPERTIES, SqlBaseParser.BUCKETS, SqlBaseParser.SKEWED, SqlBaseParser.STORED, SqlBaseParser.DIRECTORIES, SqlBaseParser.LOCATION, SqlBaseParser.EXCHANGE, SqlBaseParser.ARCHIVE, SqlBaseParser.UNARCHIVE, SqlBaseParser.FILEFORMAT, SqlBaseParser.TOUCH, SqlBaseParser.COMPACT, SqlBaseParser.CONCATENATE, SqlBaseParser.CHANGE, SqlBaseParser.CASCADE, SqlBaseParser.RESTRICT, SqlBaseParser.CLUSTERED, SqlBaseParser.SORTED, SqlBaseParser.PURGE, SqlBaseParser.INPUTFORMAT, SqlBaseParser.OUTPUTFORMAT, SqlBaseParser.DATABASE, SqlBaseParser.DATABASES, SqlBaseParser.DFS, SqlBaseParser.TRUNCATE, SqlBaseParser.ANALYZE, SqlBaseParser.COMPUTE, SqlBaseParser.LIST, SqlBaseParser.STATISTICS, SqlBaseParser.PARTITIONED, SqlBaseParser.EXTERNAL, SqlBaseParser.DEFINED, SqlBaseParser.REVOKE, SqlBaseParser.GRANT, SqlBaseParser.LOCK, SqlBaseParser.UNLOCK, SqlBaseParser.MSCK, SqlBaseParser.REPAIR, SqlBaseParser.RECOVER, SqlBaseParser.EXPORT, SqlBaseParser.IMPORT, SqlBaseParser.LOAD, SqlBaseParser.ROLE, SqlBaseParser.ROLES, SqlBaseParser.COMPACTIONS, SqlBaseParser.PRINCIPALS, SqlBaseParser.TRANSACTIONS, SqlBaseParser.INDEX, SqlBaseParser.INDEXES, SqlBaseParser.LOCKS, SqlBaseParser.OPTION, SqlBaseParser.ANTI, SqlBaseParser.LOCAL, SqlBaseParser.INPATH, SqlBaseParser.CURRENT_DATE, SqlBaseParser.CURRENT_TIMESTAMP, SqlBaseParser.IDENTIFIER, SqlBaseParser.BACKQUOTED_IDENTIFIER]:
+            if token in [
+                SqlBaseParser.SELECT,
+                SqlBaseParser.FROM,
+                SqlBaseParser.ADD,
+                SqlBaseParser.AS,
+                SqlBaseParser.ALL,
+                SqlBaseParser.DISTINCT,
+                SqlBaseParser.WHERE,
+                SqlBaseParser.GROUP,
+                SqlBaseParser.BY,
+                SqlBaseParser.GROUPING,
+                SqlBaseParser.SETS,
+                SqlBaseParser.CUBE,
+                SqlBaseParser.ROLLUP,
+                SqlBaseParser.ORDER,
+                SqlBaseParser.HAVING,
+                SqlBaseParser.LIMIT,
+                SqlBaseParser.AT,
+                SqlBaseParser.OR,
+                SqlBaseParser.AND,
+                SqlBaseParser.IN,
+                SqlBaseParser.NOT,
+                SqlBaseParser.NO,
+                SqlBaseParser.EXISTS,
+                SqlBaseParser.BETWEEN,
+                SqlBaseParser.LIKE,
+                SqlBaseParser.RLIKE,
+                SqlBaseParser.IS,
+                SqlBaseParser.NULL,
+                SqlBaseParser.TRUE,
+                SqlBaseParser.FALSE,
+                SqlBaseParser.NULLS,
+                SqlBaseParser.ASC,
+                SqlBaseParser.DESC,
+                SqlBaseParser.FOR,
+                SqlBaseParser.INTERVAL,
+                SqlBaseParser.CASE,
+                SqlBaseParser.WHEN,
+                SqlBaseParser.THEN,
+                SqlBaseParser.ELSE,
+                SqlBaseParser.END,
+                SqlBaseParser.JOIN,
+                SqlBaseParser.CROSS,
+                SqlBaseParser.OUTER,
+                SqlBaseParser.INNER,
+                SqlBaseParser.LEFT,
+                SqlBaseParser.SEMI,
+                SqlBaseParser.RIGHT,
+                SqlBaseParser.FULL,
+                SqlBaseParser.NATURAL,
+                SqlBaseParser.ON,
+                SqlBaseParser.LATERAL,
+                SqlBaseParser.WINDOW,
+                SqlBaseParser.OVER,
+                SqlBaseParser.PARTITION,
+                SqlBaseParser.RANGE,
+                SqlBaseParser.ROWS,
+                SqlBaseParser.UNBOUNDED,
+                SqlBaseParser.PRECEDING,
+                SqlBaseParser.FOLLOWING,
+                SqlBaseParser.CURRENT,
+                SqlBaseParser.ROW,
+                SqlBaseParser.WITH,
+                SqlBaseParser.VALUES,
+                SqlBaseParser.CREATE,
+                SqlBaseParser.TABLE,
+                SqlBaseParser.VIEW,
+                SqlBaseParser.REPLACE,
+                SqlBaseParser.INSERT,
+                SqlBaseParser.DELETE,
+                SqlBaseParser.INTO,
+                SqlBaseParser.DESCRIBE,
+                SqlBaseParser.EXPLAIN,
+                SqlBaseParser.FORMAT,
+                SqlBaseParser.LOGICAL,
+                SqlBaseParser.CODEGEN,
+                SqlBaseParser.CAST,
+                SqlBaseParser.SHOW,
+                SqlBaseParser.TABLES,
+                SqlBaseParser.COLUMNS,
+                SqlBaseParser.COLUMN,
+                SqlBaseParser.USE,
+                SqlBaseParser.PARTITIONS,
+                SqlBaseParser.FUNCTIONS,
+                SqlBaseParser.DROP,
+                SqlBaseParser.UNION,
+                SqlBaseParser.EXCEPT,
+                SqlBaseParser.INTERSECT,
+                SqlBaseParser.TO,
+                SqlBaseParser.TABLESAMPLE,
+                SqlBaseParser.STRATIFY,
+                SqlBaseParser.ALTER,
+                SqlBaseParser.RENAME,
+                SqlBaseParser.ARRAY,
+                SqlBaseParser.MAP,
+                SqlBaseParser.STRUCT,
+                SqlBaseParser.COMMENT,
+                SqlBaseParser.SET,
+                SqlBaseParser.RESET,
+                SqlBaseParser.DATA,
+                SqlBaseParser.START,
+                SqlBaseParser.TRANSACTION,
+                SqlBaseParser.COMMIT,
+                SqlBaseParser.ROLLBACK,
+                SqlBaseParser.MACRO,
+                SqlBaseParser.IF,
+                SqlBaseParser.DIV,
+                SqlBaseParser.PERCENTLIT,
+                SqlBaseParser.BUCKET,
+                SqlBaseParser.OUT,
+                SqlBaseParser.OF,
+                SqlBaseParser.SORT,
+                SqlBaseParser.CLUSTER,
+                SqlBaseParser.DISTRIBUTE,
+                SqlBaseParser.OVERWRITE,
+                SqlBaseParser.TRANSFORM,
+                SqlBaseParser.REDUCE,
+                SqlBaseParser.USING,
+                SqlBaseParser.SERDE,
+                SqlBaseParser.SERDEPROPERTIES,
+                SqlBaseParser.RECORDREADER,
+                SqlBaseParser.RECORDWRITER,
+                SqlBaseParser.DELIMITED,
+                SqlBaseParser.FIELDS,
+                SqlBaseParser.TERMINATED,
+                SqlBaseParser.COLLECTION,
+                SqlBaseParser.ITEMS,
+                SqlBaseParser.KEYS,
+                SqlBaseParser.ESCAPED,
+                SqlBaseParser.LINES,
+                SqlBaseParser.SEPARATED,
+                SqlBaseParser.FUNCTION,
+                SqlBaseParser.EXTENDED,
+                SqlBaseParser.REFRESH,
+                SqlBaseParser.CLEAR,
+                SqlBaseParser.CACHE,
+                SqlBaseParser.UNCACHE,
+                SqlBaseParser.LAZY,
+                SqlBaseParser.FORMATTED,
+                SqlBaseParser.TEMPORARY,
+                SqlBaseParser.OPTIONS,
+                SqlBaseParser.UNSET,
+                SqlBaseParser.TBLPROPERTIES,
+                SqlBaseParser.DBPROPERTIES,
+                SqlBaseParser.BUCKETS,
+                SqlBaseParser.SKEWED,
+                SqlBaseParser.STORED,
+                SqlBaseParser.DIRECTORIES,
+                SqlBaseParser.LOCATION,
+                SqlBaseParser.EXCHANGE,
+                SqlBaseParser.ARCHIVE,
+                SqlBaseParser.UNARCHIVE,
+                SqlBaseParser.FILEFORMAT,
+                SqlBaseParser.TOUCH,
+                SqlBaseParser.COMPACT,
+                SqlBaseParser.CONCATENATE,
+                SqlBaseParser.CHANGE,
+                SqlBaseParser.CASCADE,
+                SqlBaseParser.RESTRICT,
+                SqlBaseParser.CLUSTERED,
+                SqlBaseParser.SORTED,
+                SqlBaseParser.PURGE,
+                SqlBaseParser.INPUTFORMAT,
+                SqlBaseParser.OUTPUTFORMAT,
+                SqlBaseParser.DATABASE,
+                SqlBaseParser.DATABASES,
+                SqlBaseParser.DFS,
+                SqlBaseParser.TRUNCATE,
+                SqlBaseParser.ANALYZE,
+                SqlBaseParser.COMPUTE,
+                SqlBaseParser.LIST,
+                SqlBaseParser.STATISTICS,
+                SqlBaseParser.PARTITIONED,
+                SqlBaseParser.EXTERNAL,
+                SqlBaseParser.DEFINED,
+                SqlBaseParser.REVOKE,
+                SqlBaseParser.GRANT,
+                SqlBaseParser.LOCK,
+                SqlBaseParser.UNLOCK,
+                SqlBaseParser.MSCK,
+                SqlBaseParser.REPAIR,
+                SqlBaseParser.RECOVER,
+                SqlBaseParser.EXPORT,
+                SqlBaseParser.IMPORT,
+                SqlBaseParser.LOAD,
+                SqlBaseParser.ROLE,
+                SqlBaseParser.ROLES,
+                SqlBaseParser.COMPACTIONS,
+                SqlBaseParser.PRINCIPALS,
+                SqlBaseParser.TRANSACTIONS,
+                SqlBaseParser.INDEX,
+                SqlBaseParser.INDEXES,
+                SqlBaseParser.LOCKS,
+                SqlBaseParser.OPTION,
+                SqlBaseParser.ANTI,
+                SqlBaseParser.LOCAL,
+                SqlBaseParser.INPATH,
+                SqlBaseParser.CURRENT_DATE,
+                SqlBaseParser.CURRENT_TIMESTAMP,
+                SqlBaseParser.IDENTIFIER,
+                SqlBaseParser.BACKQUOTED_IDENTIFIER,
+            ]:
                 localctx = SqlBaseParser.WindowRefContext(self, localctx)
                 self.enterOuterAlt(localctx, 1)
                 self.state = 2017
@@ -13419,7 +16834,7 @@ class SqlBaseParser ( Parser ):
                     self.state = 2026
                     self._errHandler.sync(self)
                     _la = self._input.LA(1)
-                    while _la==SqlBaseParser.T__2:
+                    while _la == SqlBaseParser.T__2:
                         self.state = 2022
                         self.match(SqlBaseParser.T__2)
                         self.state = 2023
@@ -13430,14 +16845,28 @@ class SqlBaseParser ( Parser ):
                         _la = self._input.LA(1)
 
                     pass
-                elif token in [SqlBaseParser.T__1, SqlBaseParser.ORDER, SqlBaseParser.PARTITION, SqlBaseParser.RANGE, SqlBaseParser.ROWS, SqlBaseParser.SORT, SqlBaseParser.DISTRIBUTE]:
+                elif token in [
+                    SqlBaseParser.T__1,
+                    SqlBaseParser.ORDER,
+                    SqlBaseParser.PARTITION,
+                    SqlBaseParser.RANGE,
+                    SqlBaseParser.ROWS,
+                    SqlBaseParser.SORT,
+                    SqlBaseParser.DISTRIBUTE,
+                ]:
                     self.state = 2039
                     self._errHandler.sync(self)
                     _la = self._input.LA(1)
-                    if _la==SqlBaseParser.PARTITION or _la==SqlBaseParser.DISTRIBUTE:
+                    if (
+                        _la == SqlBaseParser.PARTITION
+                        or _la == SqlBaseParser.DISTRIBUTE
+                    ):
                         self.state = 2029
                         _la = self._input.LA(1)
-                        if not(_la==SqlBaseParser.PARTITION or _la==SqlBaseParser.DISTRIBUTE):
+                        if not (
+                            _la == SqlBaseParser.PARTITION
+                            or _la == SqlBaseParser.DISTRIBUTE
+                        ):
                             self._errHandler.recoverInline(self)
                         else:
                             self._errHandler.reportMatch(self)
@@ -13450,7 +16879,7 @@ class SqlBaseParser ( Parser ):
                         self.state = 2036
                         self._errHandler.sync(self)
                         _la = self._input.LA(1)
-                        while _la==SqlBaseParser.T__2:
+                        while _la == SqlBaseParser.T__2:
                             self.state = 2032
                             self.match(SqlBaseParser.T__2)
                             self.state = 2033
@@ -13460,15 +16889,15 @@ class SqlBaseParser ( Parser ):
                             self._errHandler.sync(self)
                             _la = self._input.LA(1)
 
-
-
                     self.state = 2051
                     self._errHandler.sync(self)
                     _la = self._input.LA(1)
-                    if _la==SqlBaseParser.ORDER or _la==SqlBaseParser.SORT:
+                    if _la == SqlBaseParser.ORDER or _la == SqlBaseParser.SORT:
                         self.state = 2041
                         _la = self._input.LA(1)
-                        if not(_la==SqlBaseParser.ORDER or _la==SqlBaseParser.SORT):
+                        if not (
+                            _la == SqlBaseParser.ORDER or _la == SqlBaseParser.SORT
+                        ):
                             self._errHandler.recoverInline(self)
                         else:
                             self._errHandler.reportMatch(self)
@@ -13480,7 +16909,7 @@ class SqlBaseParser ( Parser ):
                         self.state = 2048
                         self._errHandler.sync(self)
                         _la = self._input.LA(1)
-                        while _la==SqlBaseParser.T__2:
+                        while _la == SqlBaseParser.T__2:
                             self.state = 2044
                             self.match(SqlBaseParser.T__2)
                             self.state = 2045
@@ -13489,8 +16918,6 @@ class SqlBaseParser ( Parser ):
                             self._errHandler.sync(self)
                             _la = self._input.LA(1)
 
-
-
                     pass
                 else:
                     raise NoViableAltException(self)
@@ -13498,10 +16925,9 @@ class SqlBaseParser ( Parser ):
                 self.state = 2056
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==SqlBaseParser.RANGE or _la==SqlBaseParser.ROWS:
+                if _la == SqlBaseParser.RANGE or _la == SqlBaseParser.ROWS:
                     self.state = 2055
                     self.windowFrame()
-
 
                 self.state = 2058
                 self.match(SqlBaseParser.T__1)
@@ -13517,26 +16943,26 @@ class SqlBaseParser ( Parser ):
             self.exitRule()
         return localctx
 
-
     class WindowFrameContext(ParserRuleContext):
-        __slots__ = 'parser'
+        __slots__ = "parser"
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
-            self.frameType = None # Token
-            self.start = None # FrameBoundContext
-            self.end = None # FrameBoundContext
+            self.frameType = None  # Token
+            self.start = None  # FrameBoundContext
+            self.end = None  # FrameBoundContext
 
         def RANGE(self):
             return self.getToken(SqlBaseParser.RANGE, 0)
 
-        def frameBound(self, i:int=None):
+        def frameBound(self, i: int = None):
             if i is None:
                 return self.getTypedRuleContexts(SqlBaseParser.FrameBoundContext)
             else:
-                return self.getTypedRuleContext(SqlBaseParser.FrameBoundContext,i)
-
+                return self.getTypedRuleContext(SqlBaseParser.FrameBoundContext, i)
 
         def ROWS(self):
             return self.getToken(SqlBaseParser.ROWS, 0)
@@ -13550,16 +16976,13 @@ class SqlBaseParser ( Parser ):
         def getRuleIndex(self):
             return SqlBaseParser.RULE_windowFrame
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterWindowFrame" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterWindowFrame"):
                 listener.enterWindowFrame(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitWindowFrame" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitWindowFrame"):
                 listener.exitWindowFrame(self)
-
-
-
 
     def windowFrame(self):
 
@@ -13568,7 +16991,7 @@ class SqlBaseParser ( Parser ):
         try:
             self.state = 2077
             self._errHandler.sync(self)
-            la_ = self._interp.adaptivePredict(self._input,284,self._ctx)
+            la_ = self._interp.adaptivePredict(self._input, 284, self._ctx)
             if la_ == 1:
                 self.enterOuterAlt(localctx, 1)
                 self.state = 2061
@@ -13613,7 +17036,6 @@ class SqlBaseParser ( Parser ):
                 localctx.end = self.frameBound()
                 pass
 
-
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)
@@ -13622,14 +17044,15 @@ class SqlBaseParser ( Parser ):
             self.exitRule()
         return localctx
 
-
     class FrameBoundContext(ParserRuleContext):
-        __slots__ = 'parser'
+        __slots__ = "parser"
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
-            self.boundType = None # Token
+            self.boundType = None  # Token
 
         def UNBOUNDED(self):
             return self.getToken(SqlBaseParser.UNBOUNDED, 0)
@@ -13647,32 +17070,28 @@ class SqlBaseParser ( Parser ):
             return self.getToken(SqlBaseParser.CURRENT, 0)
 
         def expression(self):
-            return self.getTypedRuleContext(SqlBaseParser.ExpressionContext,0)
-
+            return self.getTypedRuleContext(SqlBaseParser.ExpressionContext, 0)
 
         def getRuleIndex(self):
             return SqlBaseParser.RULE_frameBound
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterFrameBound" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterFrameBound"):
                 listener.enterFrameBound(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitFrameBound" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitFrameBound"):
                 listener.exitFrameBound(self)
-
-
-
 
     def frameBound(self):
 
         localctx = SqlBaseParser.FrameBoundContext(self, self._ctx, self.state)
         self.enterRule(localctx, 160, self.RULE_frameBound)
-        self._la = 0 # Token type
+        self._la = 0  # Token type
         try:
             self.state = 2086
             self._errHandler.sync(self)
-            la_ = self._interp.adaptivePredict(self._input,285,self._ctx)
+            la_ = self._interp.adaptivePredict(self._input, 285, self._ctx)
             if la_ == 1:
                 self.enterOuterAlt(localctx, 1)
                 self.state = 2079
@@ -13680,7 +17099,9 @@ class SqlBaseParser ( Parser ):
                 self.state = 2080
                 localctx.boundType = self._input.LT(1)
                 _la = self._input.LA(1)
-                if not(_la==SqlBaseParser.PRECEDING or _la==SqlBaseParser.FOLLOWING):
+                if not (
+                    _la == SqlBaseParser.PRECEDING or _la == SqlBaseParser.FOLLOWING
+                ):
                     localctx.boundType = self._errHandler.recoverInline(self)
                 else:
                     self._errHandler.reportMatch(self)
@@ -13702,13 +17123,14 @@ class SqlBaseParser ( Parser ):
                 self.state = 2084
                 localctx.boundType = self._input.LT(1)
                 _la = self._input.LA(1)
-                if not(_la==SqlBaseParser.PRECEDING or _la==SqlBaseParser.FOLLOWING):
+                if not (
+                    _la == SqlBaseParser.PRECEDING or _la == SqlBaseParser.FOLLOWING
+                ):
                     localctx.boundType = self._errHandler.recoverInline(self)
                 else:
                     self._errHandler.reportMatch(self)
                     self.consume()
                 pass
-
 
         except RecognitionException as re:
             localctx.exception = re
@@ -13718,34 +17140,31 @@ class SqlBaseParser ( Parser ):
             self.exitRule()
         return localctx
 
-
     class QualifiedNameContext(ParserRuleContext):
-        __slots__ = 'parser'
+        __slots__ = "parser"
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
-        def identifier(self, i:int=None):
+        def identifier(self, i: int = None):
             if i is None:
                 return self.getTypedRuleContexts(SqlBaseParser.IdentifierContext)
             else:
-                return self.getTypedRuleContext(SqlBaseParser.IdentifierContext,i)
-
+                return self.getTypedRuleContext(SqlBaseParser.IdentifierContext, i)
 
         def getRuleIndex(self):
             return SqlBaseParser.RULE_qualifiedName
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterQualifiedName" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterQualifiedName"):
                 listener.enterQualifiedName(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitQualifiedName" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitQualifiedName"):
                 listener.exitQualifiedName(self)
-
-
-
 
     def qualifiedName(self):
 
@@ -13757,16 +17176,16 @@ class SqlBaseParser ( Parser ):
             self.identifier()
             self.state = 2093
             self._errHandler.sync(self)
-            _alt = self._interp.adaptivePredict(self._input,286,self._ctx)
-            while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
-                if _alt==1:
+            _alt = self._interp.adaptivePredict(self._input, 286, self._ctx)
+            while _alt != 2 and _alt != ATN.INVALID_ALT_NUMBER:
+                if _alt == 1:
                     self.state = 2089
                     self.match(SqlBaseParser.T__3)
                     self.state = 2090
-                    self.identifier() 
+                    self.identifier()
                 self.state = 2095
                 self._errHandler.sync(self)
-                _alt = self._interp.adaptivePredict(self._input,286,self._ctx)
+                _alt = self._interp.adaptivePredict(self._input, 286, self._ctx)
 
         except RecognitionException as re:
             localctx.exception = re
@@ -13776,17 +17195,17 @@ class SqlBaseParser ( Parser ):
             self.exitRule()
         return localctx
 
-
     class IdentifierContext(ParserRuleContext):
-        __slots__ = 'parser'
+        __slots__ = "parser"
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
         def strictIdentifier(self):
-            return self.getTypedRuleContext(SqlBaseParser.StrictIdentifierContext,0)
-
+            return self.getTypedRuleContext(SqlBaseParser.StrictIdentifierContext, 0)
 
         def ANTI(self):
             return self.getToken(SqlBaseParser.ANTI, 0)
@@ -13830,16 +17249,13 @@ class SqlBaseParser ( Parser ):
         def getRuleIndex(self):
             return SqlBaseParser.RULE_identifier
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterIdentifier" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterIdentifier"):
                 listener.enterIdentifier(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitIdentifier" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitIdentifier"):
                 listener.exitIdentifier(self)
-
-
-
 
     def identifier(self):
 
@@ -13849,7 +17265,195 @@ class SqlBaseParser ( Parser ):
             self.state = 2110
             self._errHandler.sync(self)
             token = self._input.LA(1)
-            if token in [SqlBaseParser.SELECT, SqlBaseParser.FROM, SqlBaseParser.ADD, SqlBaseParser.AS, SqlBaseParser.ALL, SqlBaseParser.DISTINCT, SqlBaseParser.WHERE, SqlBaseParser.GROUP, SqlBaseParser.BY, SqlBaseParser.GROUPING, SqlBaseParser.SETS, SqlBaseParser.CUBE, SqlBaseParser.ROLLUP, SqlBaseParser.ORDER, SqlBaseParser.HAVING, SqlBaseParser.LIMIT, SqlBaseParser.AT, SqlBaseParser.OR, SqlBaseParser.AND, SqlBaseParser.IN, SqlBaseParser.NOT, SqlBaseParser.NO, SqlBaseParser.EXISTS, SqlBaseParser.BETWEEN, SqlBaseParser.LIKE, SqlBaseParser.RLIKE, SqlBaseParser.IS, SqlBaseParser.NULL, SqlBaseParser.TRUE, SqlBaseParser.FALSE, SqlBaseParser.NULLS, SqlBaseParser.ASC, SqlBaseParser.DESC, SqlBaseParser.FOR, SqlBaseParser.INTERVAL, SqlBaseParser.CASE, SqlBaseParser.WHEN, SqlBaseParser.THEN, SqlBaseParser.ELSE, SqlBaseParser.END, SqlBaseParser.OUTER, SqlBaseParser.LATERAL, SqlBaseParser.WINDOW, SqlBaseParser.OVER, SqlBaseParser.PARTITION, SqlBaseParser.RANGE, SqlBaseParser.ROWS, SqlBaseParser.UNBOUNDED, SqlBaseParser.PRECEDING, SqlBaseParser.FOLLOWING, SqlBaseParser.CURRENT, SqlBaseParser.ROW, SqlBaseParser.WITH, SqlBaseParser.VALUES, SqlBaseParser.CREATE, SqlBaseParser.TABLE, SqlBaseParser.VIEW, SqlBaseParser.REPLACE, SqlBaseParser.INSERT, SqlBaseParser.DELETE, SqlBaseParser.INTO, SqlBaseParser.DESCRIBE, SqlBaseParser.EXPLAIN, SqlBaseParser.FORMAT, SqlBaseParser.LOGICAL, SqlBaseParser.CODEGEN, SqlBaseParser.CAST, SqlBaseParser.SHOW, SqlBaseParser.TABLES, SqlBaseParser.COLUMNS, SqlBaseParser.COLUMN, SqlBaseParser.USE, SqlBaseParser.PARTITIONS, SqlBaseParser.FUNCTIONS, SqlBaseParser.DROP, SqlBaseParser.TO, SqlBaseParser.TABLESAMPLE, SqlBaseParser.STRATIFY, SqlBaseParser.ALTER, SqlBaseParser.RENAME, SqlBaseParser.ARRAY, SqlBaseParser.MAP, SqlBaseParser.STRUCT, SqlBaseParser.COMMENT, SqlBaseParser.SET, SqlBaseParser.RESET, SqlBaseParser.DATA, SqlBaseParser.START, SqlBaseParser.TRANSACTION, SqlBaseParser.COMMIT, SqlBaseParser.ROLLBACK, SqlBaseParser.MACRO, SqlBaseParser.IF, SqlBaseParser.DIV, SqlBaseParser.PERCENTLIT, SqlBaseParser.BUCKET, SqlBaseParser.OUT, SqlBaseParser.OF, SqlBaseParser.SORT, SqlBaseParser.CLUSTER, SqlBaseParser.DISTRIBUTE, SqlBaseParser.OVERWRITE, SqlBaseParser.TRANSFORM, SqlBaseParser.REDUCE, SqlBaseParser.USING, SqlBaseParser.SERDE, SqlBaseParser.SERDEPROPERTIES, SqlBaseParser.RECORDREADER, SqlBaseParser.RECORDWRITER, SqlBaseParser.DELIMITED, SqlBaseParser.FIELDS, SqlBaseParser.TERMINATED, SqlBaseParser.COLLECTION, SqlBaseParser.ITEMS, SqlBaseParser.KEYS, SqlBaseParser.ESCAPED, SqlBaseParser.LINES, SqlBaseParser.SEPARATED, SqlBaseParser.FUNCTION, SqlBaseParser.EXTENDED, SqlBaseParser.REFRESH, SqlBaseParser.CLEAR, SqlBaseParser.CACHE, SqlBaseParser.UNCACHE, SqlBaseParser.LAZY, SqlBaseParser.FORMATTED, SqlBaseParser.TEMPORARY, SqlBaseParser.OPTIONS, SqlBaseParser.UNSET, SqlBaseParser.TBLPROPERTIES, SqlBaseParser.DBPROPERTIES, SqlBaseParser.BUCKETS, SqlBaseParser.SKEWED, SqlBaseParser.STORED, SqlBaseParser.DIRECTORIES, SqlBaseParser.LOCATION, SqlBaseParser.EXCHANGE, SqlBaseParser.ARCHIVE, SqlBaseParser.UNARCHIVE, SqlBaseParser.FILEFORMAT, SqlBaseParser.TOUCH, SqlBaseParser.COMPACT, SqlBaseParser.CONCATENATE, SqlBaseParser.CHANGE, SqlBaseParser.CASCADE, SqlBaseParser.RESTRICT, SqlBaseParser.CLUSTERED, SqlBaseParser.SORTED, SqlBaseParser.PURGE, SqlBaseParser.INPUTFORMAT, SqlBaseParser.OUTPUTFORMAT, SqlBaseParser.DATABASE, SqlBaseParser.DATABASES, SqlBaseParser.DFS, SqlBaseParser.TRUNCATE, SqlBaseParser.ANALYZE, SqlBaseParser.COMPUTE, SqlBaseParser.LIST, SqlBaseParser.STATISTICS, SqlBaseParser.PARTITIONED, SqlBaseParser.EXTERNAL, SqlBaseParser.DEFINED, SqlBaseParser.REVOKE, SqlBaseParser.GRANT, SqlBaseParser.LOCK, SqlBaseParser.UNLOCK, SqlBaseParser.MSCK, SqlBaseParser.REPAIR, SqlBaseParser.RECOVER, SqlBaseParser.EXPORT, SqlBaseParser.IMPORT, SqlBaseParser.LOAD, SqlBaseParser.ROLE, SqlBaseParser.ROLES, SqlBaseParser.COMPACTIONS, SqlBaseParser.PRINCIPALS, SqlBaseParser.TRANSACTIONS, SqlBaseParser.INDEX, SqlBaseParser.INDEXES, SqlBaseParser.LOCKS, SqlBaseParser.OPTION, SqlBaseParser.LOCAL, SqlBaseParser.INPATH, SqlBaseParser.CURRENT_DATE, SqlBaseParser.CURRENT_TIMESTAMP, SqlBaseParser.IDENTIFIER, SqlBaseParser.BACKQUOTED_IDENTIFIER]:
+            if token in [
+                SqlBaseParser.SELECT,
+                SqlBaseParser.FROM,
+                SqlBaseParser.ADD,
+                SqlBaseParser.AS,
+                SqlBaseParser.ALL,
+                SqlBaseParser.DISTINCT,
+                SqlBaseParser.WHERE,
+                SqlBaseParser.GROUP,
+                SqlBaseParser.BY,
+                SqlBaseParser.GROUPING,
+                SqlBaseParser.SETS,
+                SqlBaseParser.CUBE,
+                SqlBaseParser.ROLLUP,
+                SqlBaseParser.ORDER,
+                SqlBaseParser.HAVING,
+                SqlBaseParser.LIMIT,
+                SqlBaseParser.AT,
+                SqlBaseParser.OR,
+                SqlBaseParser.AND,
+                SqlBaseParser.IN,
+                SqlBaseParser.NOT,
+                SqlBaseParser.NO,
+                SqlBaseParser.EXISTS,
+                SqlBaseParser.BETWEEN,
+                SqlBaseParser.LIKE,
+                SqlBaseParser.RLIKE,
+                SqlBaseParser.IS,
+                SqlBaseParser.NULL,
+                SqlBaseParser.TRUE,
+                SqlBaseParser.FALSE,
+                SqlBaseParser.NULLS,
+                SqlBaseParser.ASC,
+                SqlBaseParser.DESC,
+                SqlBaseParser.FOR,
+                SqlBaseParser.INTERVAL,
+                SqlBaseParser.CASE,
+                SqlBaseParser.WHEN,
+                SqlBaseParser.THEN,
+                SqlBaseParser.ELSE,
+                SqlBaseParser.END,
+                SqlBaseParser.OUTER,
+                SqlBaseParser.LATERAL,
+                SqlBaseParser.WINDOW,
+                SqlBaseParser.OVER,
+                SqlBaseParser.PARTITION,
+                SqlBaseParser.RANGE,
+                SqlBaseParser.ROWS,
+                SqlBaseParser.UNBOUNDED,
+                SqlBaseParser.PRECEDING,
+                SqlBaseParser.FOLLOWING,
+                SqlBaseParser.CURRENT,
+                SqlBaseParser.ROW,
+                SqlBaseParser.WITH,
+                SqlBaseParser.VALUES,
+                SqlBaseParser.CREATE,
+                SqlBaseParser.TABLE,
+                SqlBaseParser.VIEW,
+                SqlBaseParser.REPLACE,
+                SqlBaseParser.INSERT,
+                SqlBaseParser.DELETE,
+                SqlBaseParser.INTO,
+                SqlBaseParser.DESCRIBE,
+                SqlBaseParser.EXPLAIN,
+                SqlBaseParser.FORMAT,
+                SqlBaseParser.LOGICAL,
+                SqlBaseParser.CODEGEN,
+                SqlBaseParser.CAST,
+                SqlBaseParser.SHOW,
+                SqlBaseParser.TABLES,
+                SqlBaseParser.COLUMNS,
+                SqlBaseParser.COLUMN,
+                SqlBaseParser.USE,
+                SqlBaseParser.PARTITIONS,
+                SqlBaseParser.FUNCTIONS,
+                SqlBaseParser.DROP,
+                SqlBaseParser.TO,
+                SqlBaseParser.TABLESAMPLE,
+                SqlBaseParser.STRATIFY,
+                SqlBaseParser.ALTER,
+                SqlBaseParser.RENAME,
+                SqlBaseParser.ARRAY,
+                SqlBaseParser.MAP,
+                SqlBaseParser.STRUCT,
+                SqlBaseParser.COMMENT,
+                SqlBaseParser.SET,
+                SqlBaseParser.RESET,
+                SqlBaseParser.DATA,
+                SqlBaseParser.START,
+                SqlBaseParser.TRANSACTION,
+                SqlBaseParser.COMMIT,
+                SqlBaseParser.ROLLBACK,
+                SqlBaseParser.MACRO,
+                SqlBaseParser.IF,
+                SqlBaseParser.DIV,
+                SqlBaseParser.PERCENTLIT,
+                SqlBaseParser.BUCKET,
+                SqlBaseParser.OUT,
+                SqlBaseParser.OF,
+                SqlBaseParser.SORT,
+                SqlBaseParser.CLUSTER,
+                SqlBaseParser.DISTRIBUTE,
+                SqlBaseParser.OVERWRITE,
+                SqlBaseParser.TRANSFORM,
+                SqlBaseParser.REDUCE,
+                SqlBaseParser.USING,
+                SqlBaseParser.SERDE,
+                SqlBaseParser.SERDEPROPERTIES,
+                SqlBaseParser.RECORDREADER,
+                SqlBaseParser.RECORDWRITER,
+                SqlBaseParser.DELIMITED,
+                SqlBaseParser.FIELDS,
+                SqlBaseParser.TERMINATED,
+                SqlBaseParser.COLLECTION,
+                SqlBaseParser.ITEMS,
+                SqlBaseParser.KEYS,
+                SqlBaseParser.ESCAPED,
+                SqlBaseParser.LINES,
+                SqlBaseParser.SEPARATED,
+                SqlBaseParser.FUNCTION,
+                SqlBaseParser.EXTENDED,
+                SqlBaseParser.REFRESH,
+                SqlBaseParser.CLEAR,
+                SqlBaseParser.CACHE,
+                SqlBaseParser.UNCACHE,
+                SqlBaseParser.LAZY,
+                SqlBaseParser.FORMATTED,
+                SqlBaseParser.TEMPORARY,
+                SqlBaseParser.OPTIONS,
+                SqlBaseParser.UNSET,
+                SqlBaseParser.TBLPROPERTIES,
+                SqlBaseParser.DBPROPERTIES,
+                SqlBaseParser.BUCKETS,
+                SqlBaseParser.SKEWED,
+                SqlBaseParser.STORED,
+                SqlBaseParser.DIRECTORIES,
+                SqlBaseParser.LOCATION,
+                SqlBaseParser.EXCHANGE,
+                SqlBaseParser.ARCHIVE,
+                SqlBaseParser.UNARCHIVE,
+                SqlBaseParser.FILEFORMAT,
+                SqlBaseParser.TOUCH,
+                SqlBaseParser.COMPACT,
+                SqlBaseParser.CONCATENATE,
+                SqlBaseParser.CHANGE,
+                SqlBaseParser.CASCADE,
+                SqlBaseParser.RESTRICT,
+                SqlBaseParser.CLUSTERED,
+                SqlBaseParser.SORTED,
+                SqlBaseParser.PURGE,
+                SqlBaseParser.INPUTFORMAT,
+                SqlBaseParser.OUTPUTFORMAT,
+                SqlBaseParser.DATABASE,
+                SqlBaseParser.DATABASES,
+                SqlBaseParser.DFS,
+                SqlBaseParser.TRUNCATE,
+                SqlBaseParser.ANALYZE,
+                SqlBaseParser.COMPUTE,
+                SqlBaseParser.LIST,
+                SqlBaseParser.STATISTICS,
+                SqlBaseParser.PARTITIONED,
+                SqlBaseParser.EXTERNAL,
+                SqlBaseParser.DEFINED,
+                SqlBaseParser.REVOKE,
+                SqlBaseParser.GRANT,
+                SqlBaseParser.LOCK,
+                SqlBaseParser.UNLOCK,
+                SqlBaseParser.MSCK,
+                SqlBaseParser.REPAIR,
+                SqlBaseParser.RECOVER,
+                SqlBaseParser.EXPORT,
+                SqlBaseParser.IMPORT,
+                SqlBaseParser.LOAD,
+                SqlBaseParser.ROLE,
+                SqlBaseParser.ROLES,
+                SqlBaseParser.COMPACTIONS,
+                SqlBaseParser.PRINCIPALS,
+                SqlBaseParser.TRANSACTIONS,
+                SqlBaseParser.INDEX,
+                SqlBaseParser.INDEXES,
+                SqlBaseParser.LOCKS,
+                SqlBaseParser.OPTION,
+                SqlBaseParser.LOCAL,
+                SqlBaseParser.INPATH,
+                SqlBaseParser.CURRENT_DATE,
+                SqlBaseParser.CURRENT_TIMESTAMP,
+                SqlBaseParser.IDENTIFIER,
+                SqlBaseParser.BACKQUOTED_IDENTIFIER,
+            ]:
                 self.enterOuterAlt(localctx, 1)
                 self.state = 2096
                 self.strictIdentifier()
@@ -13930,64 +17534,59 @@ class SqlBaseParser ( Parser ):
             self.exitRule()
         return localctx
 
-
     class StrictIdentifierContext(ParserRuleContext):
-        __slots__ = 'parser'
+        __slots__ = "parser"
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
-
 
         def getRuleIndex(self):
             return SqlBaseParser.RULE_strictIdentifier
 
-     
-        def copyFrom(self, ctx:ParserRuleContext):
+        def copyFrom(self, ctx: ParserRuleContext):
             super().copyFrom(ctx)
 
-
-
     class QuotedIdentifierAlternativeContext(StrictIdentifierContext):
-
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a SqlBaseParser.StrictIdentifierContext
+        def __init__(
+            self, parser, ctx: ParserRuleContext
+        ):  # actually a SqlBaseParser.StrictIdentifierContext
             super().__init__(parser)
             self.copyFrom(ctx)
 
         def quotedIdentifier(self):
-            return self.getTypedRuleContext(SqlBaseParser.QuotedIdentifierContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.QuotedIdentifierContext, 0)
 
-
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterQuotedIdentifierAlternative" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterQuotedIdentifierAlternative"):
                 listener.enterQuotedIdentifierAlternative(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitQuotedIdentifierAlternative" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitQuotedIdentifierAlternative"):
                 listener.exitQuotedIdentifierAlternative(self)
 
-
     class UnquotedIdentifierContext(StrictIdentifierContext):
-
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a SqlBaseParser.StrictIdentifierContext
+        def __init__(
+            self, parser, ctx: ParserRuleContext
+        ):  # actually a SqlBaseParser.StrictIdentifierContext
             super().__init__(parser)
             self.copyFrom(ctx)
 
         def IDENTIFIER(self):
             return self.getToken(SqlBaseParser.IDENTIFIER, 0)
+
         def nonReserved(self):
-            return self.getTypedRuleContext(SqlBaseParser.NonReservedContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.NonReservedContext, 0)
 
-
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterUnquotedIdentifier" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterUnquotedIdentifier"):
                 listener.enterUnquotedIdentifier(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitUnquotedIdentifier" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitUnquotedIdentifier"):
                 listener.exitUnquotedIdentifier(self)
-
-
 
     def strictIdentifier(self):
 
@@ -14004,12 +17603,200 @@ class SqlBaseParser ( Parser ):
                 self.match(SqlBaseParser.IDENTIFIER)
                 pass
             elif token in [SqlBaseParser.BACKQUOTED_IDENTIFIER]:
-                localctx = SqlBaseParser.QuotedIdentifierAlternativeContext(self, localctx)
+                localctx = SqlBaseParser.QuotedIdentifierAlternativeContext(
+                    self, localctx
+                )
                 self.enterOuterAlt(localctx, 2)
                 self.state = 2113
                 self.quotedIdentifier()
                 pass
-            elif token in [SqlBaseParser.SELECT, SqlBaseParser.FROM, SqlBaseParser.ADD, SqlBaseParser.AS, SqlBaseParser.ALL, SqlBaseParser.DISTINCT, SqlBaseParser.WHERE, SqlBaseParser.GROUP, SqlBaseParser.BY, SqlBaseParser.GROUPING, SqlBaseParser.SETS, SqlBaseParser.CUBE, SqlBaseParser.ROLLUP, SqlBaseParser.ORDER, SqlBaseParser.HAVING, SqlBaseParser.LIMIT, SqlBaseParser.AT, SqlBaseParser.OR, SqlBaseParser.AND, SqlBaseParser.IN, SqlBaseParser.NOT, SqlBaseParser.NO, SqlBaseParser.EXISTS, SqlBaseParser.BETWEEN, SqlBaseParser.LIKE, SqlBaseParser.RLIKE, SqlBaseParser.IS, SqlBaseParser.NULL, SqlBaseParser.TRUE, SqlBaseParser.FALSE, SqlBaseParser.NULLS, SqlBaseParser.ASC, SqlBaseParser.DESC, SqlBaseParser.FOR, SqlBaseParser.INTERVAL, SqlBaseParser.CASE, SqlBaseParser.WHEN, SqlBaseParser.THEN, SqlBaseParser.ELSE, SqlBaseParser.END, SqlBaseParser.OUTER, SqlBaseParser.LATERAL, SqlBaseParser.WINDOW, SqlBaseParser.OVER, SqlBaseParser.PARTITION, SqlBaseParser.RANGE, SqlBaseParser.ROWS, SqlBaseParser.UNBOUNDED, SqlBaseParser.PRECEDING, SqlBaseParser.FOLLOWING, SqlBaseParser.CURRENT, SqlBaseParser.ROW, SqlBaseParser.WITH, SqlBaseParser.VALUES, SqlBaseParser.CREATE, SqlBaseParser.TABLE, SqlBaseParser.VIEW, SqlBaseParser.REPLACE, SqlBaseParser.INSERT, SqlBaseParser.DELETE, SqlBaseParser.INTO, SqlBaseParser.DESCRIBE, SqlBaseParser.EXPLAIN, SqlBaseParser.FORMAT, SqlBaseParser.LOGICAL, SqlBaseParser.CODEGEN, SqlBaseParser.CAST, SqlBaseParser.SHOW, SqlBaseParser.TABLES, SqlBaseParser.COLUMNS, SqlBaseParser.COLUMN, SqlBaseParser.USE, SqlBaseParser.PARTITIONS, SqlBaseParser.FUNCTIONS, SqlBaseParser.DROP, SqlBaseParser.TO, SqlBaseParser.TABLESAMPLE, SqlBaseParser.STRATIFY, SqlBaseParser.ALTER, SqlBaseParser.RENAME, SqlBaseParser.ARRAY, SqlBaseParser.MAP, SqlBaseParser.STRUCT, SqlBaseParser.COMMENT, SqlBaseParser.SET, SqlBaseParser.RESET, SqlBaseParser.DATA, SqlBaseParser.START, SqlBaseParser.TRANSACTION, SqlBaseParser.COMMIT, SqlBaseParser.ROLLBACK, SqlBaseParser.MACRO, SqlBaseParser.IF, SqlBaseParser.DIV, SqlBaseParser.PERCENTLIT, SqlBaseParser.BUCKET, SqlBaseParser.OUT, SqlBaseParser.OF, SqlBaseParser.SORT, SqlBaseParser.CLUSTER, SqlBaseParser.DISTRIBUTE, SqlBaseParser.OVERWRITE, SqlBaseParser.TRANSFORM, SqlBaseParser.REDUCE, SqlBaseParser.USING, SqlBaseParser.SERDE, SqlBaseParser.SERDEPROPERTIES, SqlBaseParser.RECORDREADER, SqlBaseParser.RECORDWRITER, SqlBaseParser.DELIMITED, SqlBaseParser.FIELDS, SqlBaseParser.TERMINATED, SqlBaseParser.COLLECTION, SqlBaseParser.ITEMS, SqlBaseParser.KEYS, SqlBaseParser.ESCAPED, SqlBaseParser.LINES, SqlBaseParser.SEPARATED, SqlBaseParser.FUNCTION, SqlBaseParser.EXTENDED, SqlBaseParser.REFRESH, SqlBaseParser.CLEAR, SqlBaseParser.CACHE, SqlBaseParser.UNCACHE, SqlBaseParser.LAZY, SqlBaseParser.FORMATTED, SqlBaseParser.TEMPORARY, SqlBaseParser.OPTIONS, SqlBaseParser.UNSET, SqlBaseParser.TBLPROPERTIES, SqlBaseParser.DBPROPERTIES, SqlBaseParser.BUCKETS, SqlBaseParser.SKEWED, SqlBaseParser.STORED, SqlBaseParser.DIRECTORIES, SqlBaseParser.LOCATION, SqlBaseParser.EXCHANGE, SqlBaseParser.ARCHIVE, SqlBaseParser.UNARCHIVE, SqlBaseParser.FILEFORMAT, SqlBaseParser.TOUCH, SqlBaseParser.COMPACT, SqlBaseParser.CONCATENATE, SqlBaseParser.CHANGE, SqlBaseParser.CASCADE, SqlBaseParser.RESTRICT, SqlBaseParser.CLUSTERED, SqlBaseParser.SORTED, SqlBaseParser.PURGE, SqlBaseParser.INPUTFORMAT, SqlBaseParser.OUTPUTFORMAT, SqlBaseParser.DATABASE, SqlBaseParser.DATABASES, SqlBaseParser.DFS, SqlBaseParser.TRUNCATE, SqlBaseParser.ANALYZE, SqlBaseParser.COMPUTE, SqlBaseParser.LIST, SqlBaseParser.STATISTICS, SqlBaseParser.PARTITIONED, SqlBaseParser.EXTERNAL, SqlBaseParser.DEFINED, SqlBaseParser.REVOKE, SqlBaseParser.GRANT, SqlBaseParser.LOCK, SqlBaseParser.UNLOCK, SqlBaseParser.MSCK, SqlBaseParser.REPAIR, SqlBaseParser.RECOVER, SqlBaseParser.EXPORT, SqlBaseParser.IMPORT, SqlBaseParser.LOAD, SqlBaseParser.ROLE, SqlBaseParser.ROLES, SqlBaseParser.COMPACTIONS, SqlBaseParser.PRINCIPALS, SqlBaseParser.TRANSACTIONS, SqlBaseParser.INDEX, SqlBaseParser.INDEXES, SqlBaseParser.LOCKS, SqlBaseParser.OPTION, SqlBaseParser.LOCAL, SqlBaseParser.INPATH, SqlBaseParser.CURRENT_DATE, SqlBaseParser.CURRENT_TIMESTAMP]:
+            elif token in [
+                SqlBaseParser.SELECT,
+                SqlBaseParser.FROM,
+                SqlBaseParser.ADD,
+                SqlBaseParser.AS,
+                SqlBaseParser.ALL,
+                SqlBaseParser.DISTINCT,
+                SqlBaseParser.WHERE,
+                SqlBaseParser.GROUP,
+                SqlBaseParser.BY,
+                SqlBaseParser.GROUPING,
+                SqlBaseParser.SETS,
+                SqlBaseParser.CUBE,
+                SqlBaseParser.ROLLUP,
+                SqlBaseParser.ORDER,
+                SqlBaseParser.HAVING,
+                SqlBaseParser.LIMIT,
+                SqlBaseParser.AT,
+                SqlBaseParser.OR,
+                SqlBaseParser.AND,
+                SqlBaseParser.IN,
+                SqlBaseParser.NOT,
+                SqlBaseParser.NO,
+                SqlBaseParser.EXISTS,
+                SqlBaseParser.BETWEEN,
+                SqlBaseParser.LIKE,
+                SqlBaseParser.RLIKE,
+                SqlBaseParser.IS,
+                SqlBaseParser.NULL,
+                SqlBaseParser.TRUE,
+                SqlBaseParser.FALSE,
+                SqlBaseParser.NULLS,
+                SqlBaseParser.ASC,
+                SqlBaseParser.DESC,
+                SqlBaseParser.FOR,
+                SqlBaseParser.INTERVAL,
+                SqlBaseParser.CASE,
+                SqlBaseParser.WHEN,
+                SqlBaseParser.THEN,
+                SqlBaseParser.ELSE,
+                SqlBaseParser.END,
+                SqlBaseParser.OUTER,
+                SqlBaseParser.LATERAL,
+                SqlBaseParser.WINDOW,
+                SqlBaseParser.OVER,
+                SqlBaseParser.PARTITION,
+                SqlBaseParser.RANGE,
+                SqlBaseParser.ROWS,
+                SqlBaseParser.UNBOUNDED,
+                SqlBaseParser.PRECEDING,
+                SqlBaseParser.FOLLOWING,
+                SqlBaseParser.CURRENT,
+                SqlBaseParser.ROW,
+                SqlBaseParser.WITH,
+                SqlBaseParser.VALUES,
+                SqlBaseParser.CREATE,
+                SqlBaseParser.TABLE,
+                SqlBaseParser.VIEW,
+                SqlBaseParser.REPLACE,
+                SqlBaseParser.INSERT,
+                SqlBaseParser.DELETE,
+                SqlBaseParser.INTO,
+                SqlBaseParser.DESCRIBE,
+                SqlBaseParser.EXPLAIN,
+                SqlBaseParser.FORMAT,
+                SqlBaseParser.LOGICAL,
+                SqlBaseParser.CODEGEN,
+                SqlBaseParser.CAST,
+                SqlBaseParser.SHOW,
+                SqlBaseParser.TABLES,
+                SqlBaseParser.COLUMNS,
+                SqlBaseParser.COLUMN,
+                SqlBaseParser.USE,
+                SqlBaseParser.PARTITIONS,
+                SqlBaseParser.FUNCTIONS,
+                SqlBaseParser.DROP,
+                SqlBaseParser.TO,
+                SqlBaseParser.TABLESAMPLE,
+                SqlBaseParser.STRATIFY,
+                SqlBaseParser.ALTER,
+                SqlBaseParser.RENAME,
+                SqlBaseParser.ARRAY,
+                SqlBaseParser.MAP,
+                SqlBaseParser.STRUCT,
+                SqlBaseParser.COMMENT,
+                SqlBaseParser.SET,
+                SqlBaseParser.RESET,
+                SqlBaseParser.DATA,
+                SqlBaseParser.START,
+                SqlBaseParser.TRANSACTION,
+                SqlBaseParser.COMMIT,
+                SqlBaseParser.ROLLBACK,
+                SqlBaseParser.MACRO,
+                SqlBaseParser.IF,
+                SqlBaseParser.DIV,
+                SqlBaseParser.PERCENTLIT,
+                SqlBaseParser.BUCKET,
+                SqlBaseParser.OUT,
+                SqlBaseParser.OF,
+                SqlBaseParser.SORT,
+                SqlBaseParser.CLUSTER,
+                SqlBaseParser.DISTRIBUTE,
+                SqlBaseParser.OVERWRITE,
+                SqlBaseParser.TRANSFORM,
+                SqlBaseParser.REDUCE,
+                SqlBaseParser.USING,
+                SqlBaseParser.SERDE,
+                SqlBaseParser.SERDEPROPERTIES,
+                SqlBaseParser.RECORDREADER,
+                SqlBaseParser.RECORDWRITER,
+                SqlBaseParser.DELIMITED,
+                SqlBaseParser.FIELDS,
+                SqlBaseParser.TERMINATED,
+                SqlBaseParser.COLLECTION,
+                SqlBaseParser.ITEMS,
+                SqlBaseParser.KEYS,
+                SqlBaseParser.ESCAPED,
+                SqlBaseParser.LINES,
+                SqlBaseParser.SEPARATED,
+                SqlBaseParser.FUNCTION,
+                SqlBaseParser.EXTENDED,
+                SqlBaseParser.REFRESH,
+                SqlBaseParser.CLEAR,
+                SqlBaseParser.CACHE,
+                SqlBaseParser.UNCACHE,
+                SqlBaseParser.LAZY,
+                SqlBaseParser.FORMATTED,
+                SqlBaseParser.TEMPORARY,
+                SqlBaseParser.OPTIONS,
+                SqlBaseParser.UNSET,
+                SqlBaseParser.TBLPROPERTIES,
+                SqlBaseParser.DBPROPERTIES,
+                SqlBaseParser.BUCKETS,
+                SqlBaseParser.SKEWED,
+                SqlBaseParser.STORED,
+                SqlBaseParser.DIRECTORIES,
+                SqlBaseParser.LOCATION,
+                SqlBaseParser.EXCHANGE,
+                SqlBaseParser.ARCHIVE,
+                SqlBaseParser.UNARCHIVE,
+                SqlBaseParser.FILEFORMAT,
+                SqlBaseParser.TOUCH,
+                SqlBaseParser.COMPACT,
+                SqlBaseParser.CONCATENATE,
+                SqlBaseParser.CHANGE,
+                SqlBaseParser.CASCADE,
+                SqlBaseParser.RESTRICT,
+                SqlBaseParser.CLUSTERED,
+                SqlBaseParser.SORTED,
+                SqlBaseParser.PURGE,
+                SqlBaseParser.INPUTFORMAT,
+                SqlBaseParser.OUTPUTFORMAT,
+                SqlBaseParser.DATABASE,
+                SqlBaseParser.DATABASES,
+                SqlBaseParser.DFS,
+                SqlBaseParser.TRUNCATE,
+                SqlBaseParser.ANALYZE,
+                SqlBaseParser.COMPUTE,
+                SqlBaseParser.LIST,
+                SqlBaseParser.STATISTICS,
+                SqlBaseParser.PARTITIONED,
+                SqlBaseParser.EXTERNAL,
+                SqlBaseParser.DEFINED,
+                SqlBaseParser.REVOKE,
+                SqlBaseParser.GRANT,
+                SqlBaseParser.LOCK,
+                SqlBaseParser.UNLOCK,
+                SqlBaseParser.MSCK,
+                SqlBaseParser.REPAIR,
+                SqlBaseParser.RECOVER,
+                SqlBaseParser.EXPORT,
+                SqlBaseParser.IMPORT,
+                SqlBaseParser.LOAD,
+                SqlBaseParser.ROLE,
+                SqlBaseParser.ROLES,
+                SqlBaseParser.COMPACTIONS,
+                SqlBaseParser.PRINCIPALS,
+                SqlBaseParser.TRANSACTIONS,
+                SqlBaseParser.INDEX,
+                SqlBaseParser.INDEXES,
+                SqlBaseParser.LOCKS,
+                SqlBaseParser.OPTION,
+                SqlBaseParser.LOCAL,
+                SqlBaseParser.INPATH,
+                SqlBaseParser.CURRENT_DATE,
+                SqlBaseParser.CURRENT_TIMESTAMP,
+            ]:
                 localctx = SqlBaseParser.UnquotedIdentifierContext(self, localctx)
                 self.enterOuterAlt(localctx, 3)
                 self.state = 2114
@@ -14026,11 +17813,12 @@ class SqlBaseParser ( Parser ):
             self.exitRule()
         return localctx
 
-
     class QuotedIdentifierContext(ParserRuleContext):
-        __slots__ = 'parser'
+        __slots__ = "parser"
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
@@ -14040,16 +17828,13 @@ class SqlBaseParser ( Parser ):
         def getRuleIndex(self):
             return SqlBaseParser.RULE_quotedIdentifier
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterQuotedIdentifier" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterQuotedIdentifier"):
                 listener.enterQuotedIdentifier(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitQuotedIdentifier" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitQuotedIdentifier"):
                 listener.exitQuotedIdentifier(self)
-
-
-
 
     def quotedIdentifier(self):
 
@@ -14067,204 +17852,207 @@ class SqlBaseParser ( Parser ):
             self.exitRule()
         return localctx
 
-
     class NumberContext(ParserRuleContext):
-        __slots__ = 'parser'
+        __slots__ = "parser"
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
-
 
         def getRuleIndex(self):
             return SqlBaseParser.RULE_number
 
-     
-        def copyFrom(self, ctx:ParserRuleContext):
+        def copyFrom(self, ctx: ParserRuleContext):
             super().copyFrom(ctx)
 
-
-
     class DecimalLiteralContext(NumberContext):
-
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a SqlBaseParser.NumberContext
+        def __init__(
+            self, parser, ctx: ParserRuleContext
+        ):  # actually a SqlBaseParser.NumberContext
             super().__init__(parser)
             self.copyFrom(ctx)
 
         def DECIMAL_VALUE(self):
             return self.getToken(SqlBaseParser.DECIMAL_VALUE, 0)
+
         def MINUS(self):
             return self.getToken(SqlBaseParser.MINUS, 0)
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterDecimalLiteral" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterDecimalLiteral"):
                 listener.enterDecimalLiteral(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitDecimalLiteral" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitDecimalLiteral"):
                 listener.exitDecimalLiteral(self)
 
-
     class BigIntLiteralContext(NumberContext):
-
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a SqlBaseParser.NumberContext
+        def __init__(
+            self, parser, ctx: ParserRuleContext
+        ):  # actually a SqlBaseParser.NumberContext
             super().__init__(parser)
             self.copyFrom(ctx)
 
         def BIGINT_LITERAL(self):
             return self.getToken(SqlBaseParser.BIGINT_LITERAL, 0)
+
         def MINUS(self):
             return self.getToken(SqlBaseParser.MINUS, 0)
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterBigIntLiteral" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterBigIntLiteral"):
                 listener.enterBigIntLiteral(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitBigIntLiteral" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitBigIntLiteral"):
                 listener.exitBigIntLiteral(self)
 
-
     class TinyIntLiteralContext(NumberContext):
-
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a SqlBaseParser.NumberContext
+        def __init__(
+            self, parser, ctx: ParserRuleContext
+        ):  # actually a SqlBaseParser.NumberContext
             super().__init__(parser)
             self.copyFrom(ctx)
 
         def TINYINT_LITERAL(self):
             return self.getToken(SqlBaseParser.TINYINT_LITERAL, 0)
+
         def MINUS(self):
             return self.getToken(SqlBaseParser.MINUS, 0)
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterTinyIntLiteral" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterTinyIntLiteral"):
                 listener.enterTinyIntLiteral(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitTinyIntLiteral" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitTinyIntLiteral"):
                 listener.exitTinyIntLiteral(self)
 
-
     class BigDecimalLiteralContext(NumberContext):
-
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a SqlBaseParser.NumberContext
+        def __init__(
+            self, parser, ctx: ParserRuleContext
+        ):  # actually a SqlBaseParser.NumberContext
             super().__init__(parser)
             self.copyFrom(ctx)
 
         def BIGDECIMAL_LITERAL(self):
             return self.getToken(SqlBaseParser.BIGDECIMAL_LITERAL, 0)
+
         def MINUS(self):
             return self.getToken(SqlBaseParser.MINUS, 0)
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterBigDecimalLiteral" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterBigDecimalLiteral"):
                 listener.enterBigDecimalLiteral(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitBigDecimalLiteral" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitBigDecimalLiteral"):
                 listener.exitBigDecimalLiteral(self)
 
-
     class DoubleLiteralContext(NumberContext):
-
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a SqlBaseParser.NumberContext
+        def __init__(
+            self, parser, ctx: ParserRuleContext
+        ):  # actually a SqlBaseParser.NumberContext
             super().__init__(parser)
             self.copyFrom(ctx)
 
         def DOUBLE_LITERAL(self):
             return self.getToken(SqlBaseParser.DOUBLE_LITERAL, 0)
+
         def MINUS(self):
             return self.getToken(SqlBaseParser.MINUS, 0)
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterDoubleLiteral" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterDoubleLiteral"):
                 listener.enterDoubleLiteral(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitDoubleLiteral" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitDoubleLiteral"):
                 listener.exitDoubleLiteral(self)
 
-
     class IntegerLiteralContext(NumberContext):
-
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a SqlBaseParser.NumberContext
+        def __init__(
+            self, parser, ctx: ParserRuleContext
+        ):  # actually a SqlBaseParser.NumberContext
             super().__init__(parser)
             self.copyFrom(ctx)
 
         def INTEGER_VALUE(self):
             return self.getToken(SqlBaseParser.INTEGER_VALUE, 0)
+
         def MINUS(self):
             return self.getToken(SqlBaseParser.MINUS, 0)
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterIntegerLiteral" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterIntegerLiteral"):
                 listener.enterIntegerLiteral(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitIntegerLiteral" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitIntegerLiteral"):
                 listener.exitIntegerLiteral(self)
 
-
     class SmallIntLiteralContext(NumberContext):
-
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a SqlBaseParser.NumberContext
+        def __init__(
+            self, parser, ctx: ParserRuleContext
+        ):  # actually a SqlBaseParser.NumberContext
             super().__init__(parser)
             self.copyFrom(ctx)
 
         def SMALLINT_LITERAL(self):
             return self.getToken(SqlBaseParser.SMALLINT_LITERAL, 0)
+
         def MINUS(self):
             return self.getToken(SqlBaseParser.MINUS, 0)
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterSmallIntLiteral" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterSmallIntLiteral"):
                 listener.enterSmallIntLiteral(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitSmallIntLiteral" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitSmallIntLiteral"):
                 listener.exitSmallIntLiteral(self)
 
-
     class ScientificDecimalLiteralContext(NumberContext):
-
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a SqlBaseParser.NumberContext
+        def __init__(
+            self, parser, ctx: ParserRuleContext
+        ):  # actually a SqlBaseParser.NumberContext
             super().__init__(parser)
             self.copyFrom(ctx)
 
         def SCIENTIFIC_DECIMAL_VALUE(self):
             return self.getToken(SqlBaseParser.SCIENTIFIC_DECIMAL_VALUE, 0)
+
         def MINUS(self):
             return self.getToken(SqlBaseParser.MINUS, 0)
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterScientificDecimalLiteral" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterScientificDecimalLiteral"):
                 listener.enterScientificDecimalLiteral(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitScientificDecimalLiteral" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitScientificDecimalLiteral"):
                 listener.exitScientificDecimalLiteral(self)
-
-
 
     def number(self):
 
         localctx = SqlBaseParser.NumberContext(self, self._ctx, self.state)
         self.enterRule(localctx, 170, self.RULE_number)
-        self._la = 0 # Token type
+        self._la = 0  # Token type
         try:
             self.state = 2151
             self._errHandler.sync(self)
-            la_ = self._interp.adaptivePredict(self._input,297,self._ctx)
+            la_ = self._interp.adaptivePredict(self._input, 297, self._ctx)
             if la_ == 1:
                 localctx = SqlBaseParser.DecimalLiteralContext(self, localctx)
                 self.enterOuterAlt(localctx, 1)
                 self.state = 2120
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==SqlBaseParser.MINUS:
+                if _la == SqlBaseParser.MINUS:
                     self.state = 2119
                     self.match(SqlBaseParser.MINUS)
-
 
                 self.state = 2122
                 self.match(SqlBaseParser.DECIMAL_VALUE)
@@ -14276,10 +18064,9 @@ class SqlBaseParser ( Parser ):
                 self.state = 2124
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==SqlBaseParser.MINUS:
+                if _la == SqlBaseParser.MINUS:
                     self.state = 2123
                     self.match(SqlBaseParser.MINUS)
-
 
                 self.state = 2126
                 self.match(SqlBaseParser.SCIENTIFIC_DECIMAL_VALUE)
@@ -14291,10 +18078,9 @@ class SqlBaseParser ( Parser ):
                 self.state = 2128
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==SqlBaseParser.MINUS:
+                if _la == SqlBaseParser.MINUS:
                     self.state = 2127
                     self.match(SqlBaseParser.MINUS)
-
 
                 self.state = 2130
                 self.match(SqlBaseParser.INTEGER_VALUE)
@@ -14306,10 +18092,9 @@ class SqlBaseParser ( Parser ):
                 self.state = 2132
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==SqlBaseParser.MINUS:
+                if _la == SqlBaseParser.MINUS:
                     self.state = 2131
                     self.match(SqlBaseParser.MINUS)
-
 
                 self.state = 2134
                 self.match(SqlBaseParser.BIGINT_LITERAL)
@@ -14321,10 +18106,9 @@ class SqlBaseParser ( Parser ):
                 self.state = 2136
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==SqlBaseParser.MINUS:
+                if _la == SqlBaseParser.MINUS:
                     self.state = 2135
                     self.match(SqlBaseParser.MINUS)
-
 
                 self.state = 2138
                 self.match(SqlBaseParser.SMALLINT_LITERAL)
@@ -14336,10 +18120,9 @@ class SqlBaseParser ( Parser ):
                 self.state = 2140
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==SqlBaseParser.MINUS:
+                if _la == SqlBaseParser.MINUS:
                     self.state = 2139
                     self.match(SqlBaseParser.MINUS)
-
 
                 self.state = 2142
                 self.match(SqlBaseParser.TINYINT_LITERAL)
@@ -14351,10 +18134,9 @@ class SqlBaseParser ( Parser ):
                 self.state = 2144
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==SqlBaseParser.MINUS:
+                if _la == SqlBaseParser.MINUS:
                     self.state = 2143
                     self.match(SqlBaseParser.MINUS)
-
 
                 self.state = 2146
                 self.match(SqlBaseParser.DOUBLE_LITERAL)
@@ -14366,15 +18148,13 @@ class SqlBaseParser ( Parser ):
                 self.state = 2148
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==SqlBaseParser.MINUS:
+                if _la == SqlBaseParser.MINUS:
                     self.state = 2147
                     self.match(SqlBaseParser.MINUS)
-
 
                 self.state = 2150
                 self.match(SqlBaseParser.BIGDECIMAL_LITERAL)
                 pass
-
 
         except RecognitionException as re:
             localctx.exception = re
@@ -14384,11 +18164,12 @@ class SqlBaseParser ( Parser ):
             self.exitRule()
         return localctx
 
-
     class NonReservedContext(ParserRuleContext):
-        __slots__ = 'parser'
+        __slots__ = "parser"
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
@@ -14950,27 +18731,246 @@ class SqlBaseParser ( Parser ):
         def getRuleIndex(self):
             return SqlBaseParser.RULE_nonReserved
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterNonReserved" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterNonReserved"):
                 listener.enterNonReserved(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitNonReserved" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitNonReserved"):
                 listener.exitNonReserved(self)
-
-
-
 
     def nonReserved(self):
 
         localctx = SqlBaseParser.NonReservedContext(self, self._ctx, self.state)
         self.enterRule(localctx, 172, self.RULE_nonReserved)
-        self._la = 0 # Token type
+        self._la = 0  # Token type
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 2153
             _la = self._input.LA(1)
-            if not((((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << SqlBaseParser.SELECT) | (1 << SqlBaseParser.FROM) | (1 << SqlBaseParser.ADD) | (1 << SqlBaseParser.AS) | (1 << SqlBaseParser.ALL) | (1 << SqlBaseParser.DISTINCT) | (1 << SqlBaseParser.WHERE) | (1 << SqlBaseParser.GROUP) | (1 << SqlBaseParser.BY) | (1 << SqlBaseParser.GROUPING) | (1 << SqlBaseParser.SETS) | (1 << SqlBaseParser.CUBE) | (1 << SqlBaseParser.ROLLUP) | (1 << SqlBaseParser.ORDER) | (1 << SqlBaseParser.HAVING) | (1 << SqlBaseParser.LIMIT) | (1 << SqlBaseParser.AT) | (1 << SqlBaseParser.OR) | (1 << SqlBaseParser.AND) | (1 << SqlBaseParser.IN) | (1 << SqlBaseParser.NOT) | (1 << SqlBaseParser.NO) | (1 << SqlBaseParser.EXISTS) | (1 << SqlBaseParser.BETWEEN) | (1 << SqlBaseParser.LIKE) | (1 << SqlBaseParser.RLIKE) | (1 << SqlBaseParser.IS) | (1 << SqlBaseParser.NULL) | (1 << SqlBaseParser.TRUE) | (1 << SqlBaseParser.FALSE) | (1 << SqlBaseParser.NULLS) | (1 << SqlBaseParser.ASC) | (1 << SqlBaseParser.DESC) | (1 << SqlBaseParser.FOR) | (1 << SqlBaseParser.INTERVAL) | (1 << SqlBaseParser.CASE) | (1 << SqlBaseParser.WHEN) | (1 << SqlBaseParser.THEN) | (1 << SqlBaseParser.ELSE) | (1 << SqlBaseParser.END) | (1 << SqlBaseParser.OUTER) | (1 << SqlBaseParser.LATERAL) | (1 << SqlBaseParser.WINDOW) | (1 << SqlBaseParser.OVER) | (1 << SqlBaseParser.PARTITION) | (1 << SqlBaseParser.RANGE) | (1 << SqlBaseParser.ROWS))) != 0) or ((((_la - 64)) & ~0x3f) == 0 and ((1 << (_la - 64)) & ((1 << (SqlBaseParser.UNBOUNDED - 64)) | (1 << (SqlBaseParser.PRECEDING - 64)) | (1 << (SqlBaseParser.FOLLOWING - 64)) | (1 << (SqlBaseParser.CURRENT - 64)) | (1 << (SqlBaseParser.ROW - 64)) | (1 << (SqlBaseParser.WITH - 64)) | (1 << (SqlBaseParser.VALUES - 64)) | (1 << (SqlBaseParser.CREATE - 64)) | (1 << (SqlBaseParser.TABLE - 64)) | (1 << (SqlBaseParser.VIEW - 64)) | (1 << (SqlBaseParser.REPLACE - 64)) | (1 << (SqlBaseParser.INSERT - 64)) | (1 << (SqlBaseParser.DELETE - 64)) | (1 << (SqlBaseParser.INTO - 64)) | (1 << (SqlBaseParser.DESCRIBE - 64)) | (1 << (SqlBaseParser.EXPLAIN - 64)) | (1 << (SqlBaseParser.FORMAT - 64)) | (1 << (SqlBaseParser.LOGICAL - 64)) | (1 << (SqlBaseParser.CODEGEN - 64)) | (1 << (SqlBaseParser.CAST - 64)) | (1 << (SqlBaseParser.SHOW - 64)) | (1 << (SqlBaseParser.TABLES - 64)) | (1 << (SqlBaseParser.COLUMNS - 64)) | (1 << (SqlBaseParser.COLUMN - 64)) | (1 << (SqlBaseParser.USE - 64)) | (1 << (SqlBaseParser.PARTITIONS - 64)) | (1 << (SqlBaseParser.FUNCTIONS - 64)) | (1 << (SqlBaseParser.DROP - 64)) | (1 << (SqlBaseParser.TO - 64)) | (1 << (SqlBaseParser.TABLESAMPLE - 64)) | (1 << (SqlBaseParser.STRATIFY - 64)) | (1 << (SqlBaseParser.ALTER - 64)) | (1 << (SqlBaseParser.RENAME - 64)) | (1 << (SqlBaseParser.ARRAY - 64)) | (1 << (SqlBaseParser.MAP - 64)) | (1 << (SqlBaseParser.STRUCT - 64)) | (1 << (SqlBaseParser.COMMENT - 64)) | (1 << (SqlBaseParser.SET - 64)) | (1 << (SqlBaseParser.RESET - 64)) | (1 << (SqlBaseParser.DATA - 64)) | (1 << (SqlBaseParser.START - 64)) | (1 << (SqlBaseParser.TRANSACTION - 64)) | (1 << (SqlBaseParser.COMMIT - 64)) | (1 << (SqlBaseParser.ROLLBACK - 64)) | (1 << (SqlBaseParser.MACRO - 64)) | (1 << (SqlBaseParser.IF - 64)) | (1 << (SqlBaseParser.DIV - 64)))) != 0) or ((((_la - 131)) & ~0x3f) == 0 and ((1 << (_la - 131)) & ((1 << (SqlBaseParser.PERCENTLIT - 131)) | (1 << (SqlBaseParser.BUCKET - 131)) | (1 << (SqlBaseParser.OUT - 131)) | (1 << (SqlBaseParser.OF - 131)) | (1 << (SqlBaseParser.SORT - 131)) | (1 << (SqlBaseParser.CLUSTER - 131)) | (1 << (SqlBaseParser.DISTRIBUTE - 131)) | (1 << (SqlBaseParser.OVERWRITE - 131)) | (1 << (SqlBaseParser.TRANSFORM - 131)) | (1 << (SqlBaseParser.REDUCE - 131)) | (1 << (SqlBaseParser.USING - 131)) | (1 << (SqlBaseParser.SERDE - 131)) | (1 << (SqlBaseParser.SERDEPROPERTIES - 131)) | (1 << (SqlBaseParser.RECORDREADER - 131)) | (1 << (SqlBaseParser.RECORDWRITER - 131)) | (1 << (SqlBaseParser.DELIMITED - 131)) | (1 << (SqlBaseParser.FIELDS - 131)) | (1 << (SqlBaseParser.TERMINATED - 131)) | (1 << (SqlBaseParser.COLLECTION - 131)) | (1 << (SqlBaseParser.ITEMS - 131)) | (1 << (SqlBaseParser.KEYS - 131)) | (1 << (SqlBaseParser.ESCAPED - 131)) | (1 << (SqlBaseParser.LINES - 131)) | (1 << (SqlBaseParser.SEPARATED - 131)) | (1 << (SqlBaseParser.FUNCTION - 131)) | (1 << (SqlBaseParser.EXTENDED - 131)) | (1 << (SqlBaseParser.REFRESH - 131)) | (1 << (SqlBaseParser.CLEAR - 131)) | (1 << (SqlBaseParser.CACHE - 131)) | (1 << (SqlBaseParser.UNCACHE - 131)) | (1 << (SqlBaseParser.LAZY - 131)) | (1 << (SqlBaseParser.FORMATTED - 131)) | (1 << (SqlBaseParser.TEMPORARY - 131)) | (1 << (SqlBaseParser.OPTIONS - 131)) | (1 << (SqlBaseParser.UNSET - 131)) | (1 << (SqlBaseParser.TBLPROPERTIES - 131)) | (1 << (SqlBaseParser.DBPROPERTIES - 131)) | (1 << (SqlBaseParser.BUCKETS - 131)) | (1 << (SqlBaseParser.SKEWED - 131)) | (1 << (SqlBaseParser.STORED - 131)) | (1 << (SqlBaseParser.DIRECTORIES - 131)) | (1 << (SqlBaseParser.LOCATION - 131)) | (1 << (SqlBaseParser.EXCHANGE - 131)) | (1 << (SqlBaseParser.ARCHIVE - 131)) | (1 << (SqlBaseParser.UNARCHIVE - 131)) | (1 << (SqlBaseParser.FILEFORMAT - 131)) | (1 << (SqlBaseParser.TOUCH - 131)) | (1 << (SqlBaseParser.COMPACT - 131)) | (1 << (SqlBaseParser.CONCATENATE - 131)) | (1 << (SqlBaseParser.CHANGE - 131)) | (1 << (SqlBaseParser.CASCADE - 131)) | (1 << (SqlBaseParser.RESTRICT - 131)) | (1 << (SqlBaseParser.CLUSTERED - 131)) | (1 << (SqlBaseParser.SORTED - 131)) | (1 << (SqlBaseParser.PURGE - 131)) | (1 << (SqlBaseParser.INPUTFORMAT - 131)) | (1 << (SqlBaseParser.OUTPUTFORMAT - 131)) | (1 << (SqlBaseParser.DATABASE - 131)) | (1 << (SqlBaseParser.DATABASES - 131)) | (1 << (SqlBaseParser.DFS - 131)) | (1 << (SqlBaseParser.TRUNCATE - 131)) | (1 << (SqlBaseParser.ANALYZE - 131)) | (1 << (SqlBaseParser.COMPUTE - 131)) | (1 << (SqlBaseParser.LIST - 131)))) != 0) or ((((_la - 195)) & ~0x3f) == 0 and ((1 << (_la - 195)) & ((1 << (SqlBaseParser.STATISTICS - 195)) | (1 << (SqlBaseParser.PARTITIONED - 195)) | (1 << (SqlBaseParser.EXTERNAL - 195)) | (1 << (SqlBaseParser.DEFINED - 195)) | (1 << (SqlBaseParser.REVOKE - 195)) | (1 << (SqlBaseParser.GRANT - 195)) | (1 << (SqlBaseParser.LOCK - 195)) | (1 << (SqlBaseParser.UNLOCK - 195)) | (1 << (SqlBaseParser.MSCK - 195)) | (1 << (SqlBaseParser.REPAIR - 195)) | (1 << (SqlBaseParser.RECOVER - 195)) | (1 << (SqlBaseParser.EXPORT - 195)) | (1 << (SqlBaseParser.IMPORT - 195)) | (1 << (SqlBaseParser.LOAD - 195)) | (1 << (SqlBaseParser.ROLE - 195)) | (1 << (SqlBaseParser.ROLES - 195)) | (1 << (SqlBaseParser.COMPACTIONS - 195)) | (1 << (SqlBaseParser.PRINCIPALS - 195)) | (1 << (SqlBaseParser.TRANSACTIONS - 195)) | (1 << (SqlBaseParser.INDEX - 195)) | (1 << (SqlBaseParser.INDEXES - 195)) | (1 << (SqlBaseParser.LOCKS - 195)) | (1 << (SqlBaseParser.OPTION - 195)) | (1 << (SqlBaseParser.LOCAL - 195)) | (1 << (SqlBaseParser.INPATH - 195)) | (1 << (SqlBaseParser.CURRENT_DATE - 195)) | (1 << (SqlBaseParser.CURRENT_TIMESTAMP - 195)))) != 0)):
+            if not (
+                (
+                    ((_la) & ~0x3F) == 0
+                    and (
+                        (1 << _la)
+                        & (
+                            (1 << SqlBaseParser.SELECT)
+                            | (1 << SqlBaseParser.FROM)
+                            | (1 << SqlBaseParser.ADD)
+                            | (1 << SqlBaseParser.AS)
+                            | (1 << SqlBaseParser.ALL)
+                            | (1 << SqlBaseParser.DISTINCT)
+                            | (1 << SqlBaseParser.WHERE)
+                            | (1 << SqlBaseParser.GROUP)
+                            | (1 << SqlBaseParser.BY)
+                            | (1 << SqlBaseParser.GROUPING)
+                            | (1 << SqlBaseParser.SETS)
+                            | (1 << SqlBaseParser.CUBE)
+                            | (1 << SqlBaseParser.ROLLUP)
+                            | (1 << SqlBaseParser.ORDER)
+                            | (1 << SqlBaseParser.HAVING)
+                            | (1 << SqlBaseParser.LIMIT)
+                            | (1 << SqlBaseParser.AT)
+                            | (1 << SqlBaseParser.OR)
+                            | (1 << SqlBaseParser.AND)
+                            | (1 << SqlBaseParser.IN)
+                            | (1 << SqlBaseParser.NOT)
+                            | (1 << SqlBaseParser.NO)
+                            | (1 << SqlBaseParser.EXISTS)
+                            | (1 << SqlBaseParser.BETWEEN)
+                            | (1 << SqlBaseParser.LIKE)
+                            | (1 << SqlBaseParser.RLIKE)
+                            | (1 << SqlBaseParser.IS)
+                            | (1 << SqlBaseParser.NULL)
+                            | (1 << SqlBaseParser.TRUE)
+                            | (1 << SqlBaseParser.FALSE)
+                            | (1 << SqlBaseParser.NULLS)
+                            | (1 << SqlBaseParser.ASC)
+                            | (1 << SqlBaseParser.DESC)
+                            | (1 << SqlBaseParser.FOR)
+                            | (1 << SqlBaseParser.INTERVAL)
+                            | (1 << SqlBaseParser.CASE)
+                            | (1 << SqlBaseParser.WHEN)
+                            | (1 << SqlBaseParser.THEN)
+                            | (1 << SqlBaseParser.ELSE)
+                            | (1 << SqlBaseParser.END)
+                            | (1 << SqlBaseParser.OUTER)
+                            | (1 << SqlBaseParser.LATERAL)
+                            | (1 << SqlBaseParser.WINDOW)
+                            | (1 << SqlBaseParser.OVER)
+                            | (1 << SqlBaseParser.PARTITION)
+                            | (1 << SqlBaseParser.RANGE)
+                            | (1 << SqlBaseParser.ROWS)
+                        )
+                    )
+                    != 0
+                )
+                or (
+                    (((_la - 64)) & ~0x3F) == 0
+                    and (
+                        (1 << (_la - 64))
+                        & (
+                            (1 << (SqlBaseParser.UNBOUNDED - 64))
+                            | (1 << (SqlBaseParser.PRECEDING - 64))
+                            | (1 << (SqlBaseParser.FOLLOWING - 64))
+                            | (1 << (SqlBaseParser.CURRENT - 64))
+                            | (1 << (SqlBaseParser.ROW - 64))
+                            | (1 << (SqlBaseParser.WITH - 64))
+                            | (1 << (SqlBaseParser.VALUES - 64))
+                            | (1 << (SqlBaseParser.CREATE - 64))
+                            | (1 << (SqlBaseParser.TABLE - 64))
+                            | (1 << (SqlBaseParser.VIEW - 64))
+                            | (1 << (SqlBaseParser.REPLACE - 64))
+                            | (1 << (SqlBaseParser.INSERT - 64))
+                            | (1 << (SqlBaseParser.DELETE - 64))
+                            | (1 << (SqlBaseParser.INTO - 64))
+                            | (1 << (SqlBaseParser.DESCRIBE - 64))
+                            | (1 << (SqlBaseParser.EXPLAIN - 64))
+                            | (1 << (SqlBaseParser.FORMAT - 64))
+                            | (1 << (SqlBaseParser.LOGICAL - 64))
+                            | (1 << (SqlBaseParser.CODEGEN - 64))
+                            | (1 << (SqlBaseParser.CAST - 64))
+                            | (1 << (SqlBaseParser.SHOW - 64))
+                            | (1 << (SqlBaseParser.TABLES - 64))
+                            | (1 << (SqlBaseParser.COLUMNS - 64))
+                            | (1 << (SqlBaseParser.COLUMN - 64))
+                            | (1 << (SqlBaseParser.USE - 64))
+                            | (1 << (SqlBaseParser.PARTITIONS - 64))
+                            | (1 << (SqlBaseParser.FUNCTIONS - 64))
+                            | (1 << (SqlBaseParser.DROP - 64))
+                            | (1 << (SqlBaseParser.TO - 64))
+                            | (1 << (SqlBaseParser.TABLESAMPLE - 64))
+                            | (1 << (SqlBaseParser.STRATIFY - 64))
+                            | (1 << (SqlBaseParser.ALTER - 64))
+                            | (1 << (SqlBaseParser.RENAME - 64))
+                            | (1 << (SqlBaseParser.ARRAY - 64))
+                            | (1 << (SqlBaseParser.MAP - 64))
+                            | (1 << (SqlBaseParser.STRUCT - 64))
+                            | (1 << (SqlBaseParser.COMMENT - 64))
+                            | (1 << (SqlBaseParser.SET - 64))
+                            | (1 << (SqlBaseParser.RESET - 64))
+                            | (1 << (SqlBaseParser.DATA - 64))
+                            | (1 << (SqlBaseParser.START - 64))
+                            | (1 << (SqlBaseParser.TRANSACTION - 64))
+                            | (1 << (SqlBaseParser.COMMIT - 64))
+                            | (1 << (SqlBaseParser.ROLLBACK - 64))
+                            | (1 << (SqlBaseParser.MACRO - 64))
+                            | (1 << (SqlBaseParser.IF - 64))
+                            | (1 << (SqlBaseParser.DIV - 64))
+                        )
+                    )
+                    != 0
+                )
+                or (
+                    (((_la - 131)) & ~0x3F) == 0
+                    and (
+                        (1 << (_la - 131))
+                        & (
+                            (1 << (SqlBaseParser.PERCENTLIT - 131))
+                            | (1 << (SqlBaseParser.BUCKET - 131))
+                            | (1 << (SqlBaseParser.OUT - 131))
+                            | (1 << (SqlBaseParser.OF - 131))
+                            | (1 << (SqlBaseParser.SORT - 131))
+                            | (1 << (SqlBaseParser.CLUSTER - 131))
+                            | (1 << (SqlBaseParser.DISTRIBUTE - 131))
+                            | (1 << (SqlBaseParser.OVERWRITE - 131))
+                            | (1 << (SqlBaseParser.TRANSFORM - 131))
+                            | (1 << (SqlBaseParser.REDUCE - 131))
+                            | (1 << (SqlBaseParser.USING - 131))
+                            | (1 << (SqlBaseParser.SERDE - 131))
+                            | (1 << (SqlBaseParser.SERDEPROPERTIES - 131))
+                            | (1 << (SqlBaseParser.RECORDREADER - 131))
+                            | (1 << (SqlBaseParser.RECORDWRITER - 131))
+                            | (1 << (SqlBaseParser.DELIMITED - 131))
+                            | (1 << (SqlBaseParser.FIELDS - 131))
+                            | (1 << (SqlBaseParser.TERMINATED - 131))
+                            | (1 << (SqlBaseParser.COLLECTION - 131))
+                            | (1 << (SqlBaseParser.ITEMS - 131))
+                            | (1 << (SqlBaseParser.KEYS - 131))
+                            | (1 << (SqlBaseParser.ESCAPED - 131))
+                            | (1 << (SqlBaseParser.LINES - 131))
+                            | (1 << (SqlBaseParser.SEPARATED - 131))
+                            | (1 << (SqlBaseParser.FUNCTION - 131))
+                            | (1 << (SqlBaseParser.EXTENDED - 131))
+                            | (1 << (SqlBaseParser.REFRESH - 131))
+                            | (1 << (SqlBaseParser.CLEAR - 131))
+                            | (1 << (SqlBaseParser.CACHE - 131))
+                            | (1 << (SqlBaseParser.UNCACHE - 131))
+                            | (1 << (SqlBaseParser.LAZY - 131))
+                            | (1 << (SqlBaseParser.FORMATTED - 131))
+                            | (1 << (SqlBaseParser.TEMPORARY - 131))
+                            | (1 << (SqlBaseParser.OPTIONS - 131))
+                            | (1 << (SqlBaseParser.UNSET - 131))
+                            | (1 << (SqlBaseParser.TBLPROPERTIES - 131))
+                            | (1 << (SqlBaseParser.DBPROPERTIES - 131))
+                            | (1 << (SqlBaseParser.BUCKETS - 131))
+                            | (1 << (SqlBaseParser.SKEWED - 131))
+                            | (1 << (SqlBaseParser.STORED - 131))
+                            | (1 << (SqlBaseParser.DIRECTORIES - 131))
+                            | (1 << (SqlBaseParser.LOCATION - 131))
+                            | (1 << (SqlBaseParser.EXCHANGE - 131))
+                            | (1 << (SqlBaseParser.ARCHIVE - 131))
+                            | (1 << (SqlBaseParser.UNARCHIVE - 131))
+                            | (1 << (SqlBaseParser.FILEFORMAT - 131))
+                            | (1 << (SqlBaseParser.TOUCH - 131))
+                            | (1 << (SqlBaseParser.COMPACT - 131))
+                            | (1 << (SqlBaseParser.CONCATENATE - 131))
+                            | (1 << (SqlBaseParser.CHANGE - 131))
+                            | (1 << (SqlBaseParser.CASCADE - 131))
+                            | (1 << (SqlBaseParser.RESTRICT - 131))
+                            | (1 << (SqlBaseParser.CLUSTERED - 131))
+                            | (1 << (SqlBaseParser.SORTED - 131))
+                            | (1 << (SqlBaseParser.PURGE - 131))
+                            | (1 << (SqlBaseParser.INPUTFORMAT - 131))
+                            | (1 << (SqlBaseParser.OUTPUTFORMAT - 131))
+                            | (1 << (SqlBaseParser.DATABASE - 131))
+                            | (1 << (SqlBaseParser.DATABASES - 131))
+                            | (1 << (SqlBaseParser.DFS - 131))
+                            | (1 << (SqlBaseParser.TRUNCATE - 131))
+                            | (1 << (SqlBaseParser.ANALYZE - 131))
+                            | (1 << (SqlBaseParser.COMPUTE - 131))
+                            | (1 << (SqlBaseParser.LIST - 131))
+                        )
+                    )
+                    != 0
+                )
+                or (
+                    (((_la - 195)) & ~0x3F) == 0
+                    and (
+                        (1 << (_la - 195))
+                        & (
+                            (1 << (SqlBaseParser.STATISTICS - 195))
+                            | (1 << (SqlBaseParser.PARTITIONED - 195))
+                            | (1 << (SqlBaseParser.EXTERNAL - 195))
+                            | (1 << (SqlBaseParser.DEFINED - 195))
+                            | (1 << (SqlBaseParser.REVOKE - 195))
+                            | (1 << (SqlBaseParser.GRANT - 195))
+                            | (1 << (SqlBaseParser.LOCK - 195))
+                            | (1 << (SqlBaseParser.UNLOCK - 195))
+                            | (1 << (SqlBaseParser.MSCK - 195))
+                            | (1 << (SqlBaseParser.REPAIR - 195))
+                            | (1 << (SqlBaseParser.RECOVER - 195))
+                            | (1 << (SqlBaseParser.EXPORT - 195))
+                            | (1 << (SqlBaseParser.IMPORT - 195))
+                            | (1 << (SqlBaseParser.LOAD - 195))
+                            | (1 << (SqlBaseParser.ROLE - 195))
+                            | (1 << (SqlBaseParser.ROLES - 195))
+                            | (1 << (SqlBaseParser.COMPACTIONS - 195))
+                            | (1 << (SqlBaseParser.PRINCIPALS - 195))
+                            | (1 << (SqlBaseParser.TRANSACTIONS - 195))
+                            | (1 << (SqlBaseParser.INDEX - 195))
+                            | (1 << (SqlBaseParser.INDEXES - 195))
+                            | (1 << (SqlBaseParser.LOCKS - 195))
+                            | (1 << (SqlBaseParser.OPTION - 195))
+                            | (1 << (SqlBaseParser.LOCAL - 195))
+                            | (1 << (SqlBaseParser.INPATH - 195))
+                            | (1 << (SqlBaseParser.CURRENT_DATE - 195))
+                            | (1 << (SqlBaseParser.CURRENT_TIMESTAMP - 195))
+                        )
+                    )
+                    != 0
+                )
+            ):
                 self._errHandler.recoverInline(self)
             else:
                 self._errHandler.reportMatch(self)
@@ -14983,9 +18983,7 @@ class SqlBaseParser ( Parser ):
             self.exitRule()
         return localctx
 
-
-
-    def sempred(self, localctx:RuleContext, ruleIndex:int, predIndex:int):
+    def sempred(self, localctx: RuleContext, ruleIndex: int, predIndex: int):
         if self._predicates == None:
             self._predicates = dict()
         self._predicates[32] = self.queryTerm_sempred
@@ -14998,54 +18996,43 @@ class SqlBaseParser ( Parser ):
         else:
             return pred(localctx, predIndex)
 
-    def queryTerm_sempred(self, localctx:QueryTermContext, predIndex:int):
-            if predIndex == 0:
-                return self.precpred(self._ctx, 1)
-         
+    def queryTerm_sempred(self, localctx: QueryTermContext, predIndex: int):
+        if predIndex == 0:
+            return self.precpred(self._ctx, 1)
 
-    def booleanExpression_sempred(self, localctx:BooleanExpressionContext, predIndex:int):
-            if predIndex == 1:
-                return self.precpred(self._ctx, 3)
-         
+    def booleanExpression_sempred(
+        self, localctx: BooleanExpressionContext, predIndex: int
+    ):
+        if predIndex == 1:
+            return self.precpred(self._ctx, 3)
 
-            if predIndex == 2:
-                return self.precpred(self._ctx, 2)
-         
+        if predIndex == 2:
+            return self.precpred(self._ctx, 2)
 
-    def valueExpression_sempred(self, localctx:ValueExpressionContext, predIndex:int):
-            if predIndex == 3:
-                return self.precpred(self._ctx, 6)
-         
+    def valueExpression_sempred(self, localctx: ValueExpressionContext, predIndex: int):
+        if predIndex == 3:
+            return self.precpred(self._ctx, 6)
 
-            if predIndex == 4:
-                return self.precpred(self._ctx, 5)
-         
+        if predIndex == 4:
+            return self.precpred(self._ctx, 5)
 
-            if predIndex == 5:
-                return self.precpred(self._ctx, 4)
-         
+        if predIndex == 5:
+            return self.precpred(self._ctx, 4)
 
-            if predIndex == 6:
-                return self.precpred(self._ctx, 3)
-         
+        if predIndex == 6:
+            return self.precpred(self._ctx, 3)
 
-            if predIndex == 7:
-                return self.precpred(self._ctx, 2)
-         
+        if predIndex == 7:
+            return self.precpred(self._ctx, 2)
 
-            if predIndex == 8:
-                return self.precpred(self._ctx, 1)
-         
+        if predIndex == 8:
+            return self.precpred(self._ctx, 1)
 
-    def primaryExpression_sempred(self, localctx:PrimaryExpressionContext, predIndex:int):
-            if predIndex == 9:
-                return self.precpred(self._ctx, 4)
-         
+    def primaryExpression_sempred(
+        self, localctx: PrimaryExpressionContext, predIndex: int
+    ):
+        if predIndex == 9:
+            return self.precpred(self._ctx, 4)
 
-            if predIndex == 10:
-                return self.precpred(self._ctx, 2)
-         
-
-
-
-
+        if predIndex == 10:
+            return self.precpred(self._ctx, 2)

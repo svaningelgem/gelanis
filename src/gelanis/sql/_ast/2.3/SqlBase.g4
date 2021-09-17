@@ -17,19 +17,19 @@
 grammar SqlBase;
 
 @members {
-  """
-  Verify whether current token is a valid decimal token (which contains dot).
-  Returns true if the character that follows the token is not a digit or letter or underscore.
+"""
+Verify whether current token is a valid decimal token (which contains dot).
+Returns true if the character that follows the token is not a digit or letter or underscore.
 
-  For example:
-  For char stream "2.3", "2." is not a valid decimal token, because it is followed by digit '3'.
-  For char stream "2.3_", "2.3" is not a valid decimal token, because it is followed by '_'.
-  For char stream "2.3W", "2.3" is not a valid decimal token, because it is followed by 'W'.
-  For char stream "12.0D 34.E2+0.12 "  12.0D is a valid decimal token because it is followed
-  by a space. 34.E2 is a valid decimal token because it is followed by symbol '+'
-  which is not a digit or letter or underscore.
-  """
-  def isValidDecimal(self): 
+For example:
+For char stream "2.3", "2." is not a valid decimal token, because it is followed by digit '3'.
+For char stream "2.3_", "2.3" is not a valid decimal token, because it is followed by '_'.
+For char stream "2.3W", "2.3" is not a valid decimal token, because it is followed by 'W'.
+For char stream "12.0D 34.E2+0.12 "  12.0D is a valid decimal token because it is followed
+by a space. 34.E2 is a valid decimal token because it is followed by symbol '+'
+which is not a digit or letter or underscore.
+"""
+def isValidDecimal(self): 
     nextChar = self._input.LA(1)
     return not ('A' <= nextChar <= 'Z' or '0' <= nextChar <= '9' or nextChar == '_')
 
@@ -91,7 +91,7 @@ statement
         (identifier | FOR COLUMNS identifierSeq)?                      #analyze
     | ALTER TABLE tableIdentifier
         ADD COLUMNS '(' columns=colTypeList ')'                        #addTableColumns
-    | ALTER (TABLE | VIEW) from=tableIdentifier
+    | ALTER (TABLE | VIEW) from_=tableIdentifier
         RENAME TO to=tableIdentifier                                   #renameTable
     | ALTER (TABLE | VIEW) tableIdentifier
         SET TBLPROPERTIES tablePropertyList                            #setTableProperties
@@ -108,7 +108,7 @@ statement
     | ALTER VIEW tableIdentifier ADD (IF NOT EXISTS)?
         partitionSpec+                                                 #addTablePartition
     | ALTER TABLE tableIdentifier
-        from=partitionSpec RENAME TO to=partitionSpec                  #renameTablePartition
+        from_=partitionSpec RENAME TO to=partitionSpec                  #renameTablePartition
     | ALTER TABLE tableIdentifier
         DROP (IF EXISTS)? partitionSpec (',' partitionSpec)* PURGE?    #dropTablePartitions
     | ALTER VIEW tableIdentifier
@@ -569,7 +569,7 @@ primaryExpression
     | STRUCT '(' (argument+=namedExpression (',' argument+=namedExpression)*)? ')'             #struct
     | FIRST '(' expression (IGNORE NULLS)? ')'                                                 #first
     | LAST '(' expression (IGNORE NULLS)? ')'                                                  #last
-    | POSITION '(' substr=valueExpression IN str=valueExpression ')'                           #position
+    | POSITION '(' substr=valueExpression IN str_=valueExpression ')'                           #position
     | constant                                                                                 #constantDefault
     | ASTERISK                                                                                 #star
     | qualifiedName '.' ASTERISK                                                               #star
@@ -628,9 +628,9 @@ colPosition
     ;
 
 dataType
-    : complex=ARRAY '<' dataType '>'                            #complexDataType
-    | complex=MAP '<' dataType ',' dataType '>'                 #complexDataType
-    | complex=STRUCT ('<' complexColTypeList? '>' | NEQ)        #complexDataType
+    : complex_=ARRAY '<' dataType '>'                            #complexDataType
+    | complex_=MAP '<' dataType ',' dataType '>'                 #complexDataType
+    | complex_=STRUCT ('<' complexColTypeList? '>' | NEQ)        #complexDataType
     | identifier ('(' INTEGER_VALUE (',' INTEGER_VALUE)* ')')?  #primitiveDataType
     ;
 
@@ -1005,17 +1005,17 @@ INTEGER_VALUE
 
 DECIMAL_VALUE
     : DIGIT+ EXPONENT
-    | DECIMAL_DIGITS EXPONENT? {isValidDecimal()}?
+    | DECIMAL_DIGITS EXPONENT? {self.isValidDecimal()}?
     ;
 
 DOUBLE_LITERAL
     : DIGIT+ EXPONENT? 'D'
-    | DECIMAL_DIGITS EXPONENT? 'D' {isValidDecimal()}?
+    | DECIMAL_DIGITS EXPONENT? 'D' {self.isValidDecimal()}?
     ;
 
 BIGDECIMAL_LITERAL
     : DIGIT+ EXPONENT? 'BD'
-    | DECIMAL_DIGITS EXPONENT? 'BD' {isValidDecimal()}?
+    | DECIMAL_DIGITS EXPONENT? 'BD' {self.isValidDecimal()}?
     ;
 
 IDENTIFIER

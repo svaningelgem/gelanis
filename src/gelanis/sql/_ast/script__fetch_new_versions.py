@@ -3,14 +3,19 @@ import logging
 import os
 import re
 import subprocess
+import warnings
 from collections import namedtuple
 from datetime import datetime, timedelta
 from pathlib import Path
 
 import requests
+from urllib3.exceptions import InsecureRequestWarning
+
+warnings.simplefilter(action='ignore', category=InsecureRequestWarning)
 
 logging.basicConfig(format='[%(asctime)s] [%(levelname)s] (%(name)s) %(message)s', level=logging.INFO)
 logger = logging.getLogger(__name__)
+logger.setLevel(logging.DEBUG)
 
 local_dir = Path(__file__).parent
 antlr_jar_path = max(local_dir.glob('antlr-*.jar'))
@@ -50,15 +55,16 @@ def _convert_java_docstring_into_python(txt: str) -> str:
         removed_stars = []
 
         for line in in_between.split('\n'):
+            line = line.lstrip()
             if line.strip() == '*':  # For a line with nothing else on it.
                 removed_stars.append('')
             else:
-                removed_stars.append(line.replace(' * ', '', 1))
+                removed_stars.append(line.replace('* ', '', 1))
 
-        removed_stars = '\n'.join(removed_stars)
-        return '"""' + everything.replace(in_between, removed_stars)[3:-3] + '"""'
+        removed_stars = ('\n'.join(removed_stars)).strip()
+        return '\n"""\n' + removed_stars + '\n"""\n'
 
-    return re.sub(r'/\*\*(.*?)\*/', convert_one_string, txt, flags=re.MULTILINE|re.DOTALL)
+    return re.sub(r'\s*/\*\*(.*?)\*/\s*', convert_one_string, txt, flags=re.MULTILINE|re.DOTALL)
 
 
 def _convert_functions(members):
@@ -130,6 +136,19 @@ def _convert_members(whole_file, start, stop='\n}\n'):
     return whole_file.replace(members_original, members_booleans_adjusted)
 
 
+def _replace_python_keywords(txt: str) -> str:
+    return re.sub(r'\b(from|str|input|len|complex)\b', r'\1_', txt)
+
+
+def _replace_invalid_sequences(txt: str) -> str:
+    txt = txt.replace("'\\\"'", "'\"'") # '\"' -> '"'
+    txt = txt.replace('{!', '{not self.')
+    txt = re.sub(r'{(\w+)', r'{self.\1', txt)
+    txt = txt.replace('{self.not self.', '{not self.')
+    txt = txt.replace('{not self.not self.', '{self.')
+    return txt
+
+
 for file in local_dir.rglob('SqlBase.g4'):
     logger.info(f'- {file}')
 
@@ -141,8 +160,13 @@ for file in local_dir.rglob('SqlBase.g4'):
     except ValueError:
         whole_file = _convert_members(whole_file, '@parser::members {')
         whole_file = _convert_members(whole_file, '@lexer::members {')
+
+    logger.debug("Fixing some warnings in the g4 file")
+    whole_file = _replace_python_keywords(whole_file)
+    whole_file = _replace_invalid_sequences(whole_file)
     file.write_text(whole_file, encoding='utf8')
 
+    logger.debug("Converting into python files")
     os.chdir(file.parent)
     subprocess.call([
         'java',
@@ -153,6 +177,10 @@ for file in local_dir.rglob('SqlBase.g4'):
         '-Dlanguage=Python3',
         'SqlBase.g4',
     ])
+
+    logger.debug("Re-formatting the resulting files.")
+    subprocess.call(['black', str(file.parent) + '/*.py'])
+
 
 os.chdir(original_dir)
 

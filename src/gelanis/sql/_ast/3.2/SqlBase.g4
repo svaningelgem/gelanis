@@ -17,50 +17,47 @@
 grammar SqlBase;
 
 @parser::members {
-  """
-  When false, INTERSECT is given the greater precedence over the other set
-  operations (UNION, EXCEPT and MINUS) as per the SQL standard.
-  """
-  legacy_setops_precedence_enabled = False
-
-  """
-  When false, a literal with an exponent would be converted into
-  double type rather than decimal type.
-  """
-  legacy_exponent_literal_as_decimal_enabled = False
-
-  """
-  When true, the behavior of keywords follows ANSI SQL standard.
-  """
-  SQL_standard_keyword_behavior = False
+"""
+When false, INTERSECT is given the greater precedence over the other set
+operations (UNION, EXCEPT and MINUS) as per the SQL standard.
+"""
+legacy_setops_precedence_enabled = False
+"""
+When false, a literal with an exponent would be converted into
+double type rather than decimal type.
+"""
+legacy_exponent_literal_as_decimal_enabled = False
+"""
+When true, the behavior of keywords follows ANSI SQL standard.
+"""
+SQL_standard_keyword_behavior = False
 }
 
 @lexer::members {
-  """
-  Verify whether current token is a valid decimal token (which contains dot).
-  Returns true if the character that follows the token is not a digit or letter or underscore.
+"""
+Verify whether current token is a valid decimal token (which contains dot).
+Returns true if the character that follows the token is not a digit or letter or underscore.
 
-  For example:
-  For char stream "2.3", "2." is not a valid decimal token, because it is followed by digit '3'.
-  For char stream "2.3_", "2.3" is not a valid decimal token, because it is followed by '_'.
-  For char stream "2.3W", "2.3" is not a valid decimal token, because it is followed by 'W'.
-  For char stream "12.0D 34.E2+0.12 "  12.0D is a valid decimal token because it is followed
-  by a space. 34.E2 is a valid decimal token because it is followed by symbol '+'
-  which is not a digit or letter or underscore.
-  """
-  def isValidDecimal(self): 
+For example:
+For char stream "2.3", "2." is not a valid decimal token, because it is followed by digit '3'.
+For char stream "2.3_", "2.3" is not a valid decimal token, because it is followed by '_'.
+For char stream "2.3W", "2.3" is not a valid decimal token, because it is followed by 'W'.
+For char stream "12.0D 34.E2+0.12 "  12.0D is a valid decimal token because it is followed
+by a space. 34.E2 is a valid decimal token because it is followed by symbol '+'
+which is not a digit or letter or underscore.
+"""
+def isValidDecimal(self): 
     nextChar = self._input.LA(1)
     return not ('A' <= nextChar <= 'Z' or '0' <= nextChar <= '9' or nextChar == '_')
 
+"""
+This method will be called when we see '/*' and try to match it as a bracketed comment.
+If the next character is '+', it should be parsed as hint later, and we cannot match
+it as a bracketed comment.
 
-  """
-  This method will be called when we see '/*' and try to match it as a bracketed comment.
-  If the next character is '+', it should be parsed as hint later, and we cannot match
-  it as a bracketed comment.
-
-  Returns true if the next character is '+'.
-  """
-  def isHint(self): 
+Returns true if the next character is '+'.
+"""
+def isHint(self): 
     nextChar = self._input.LA(1);
     return nextChar == '+'
 
@@ -135,13 +132,13 @@ statement
         '(' columns=qualifiedColTypeWithPositionList ')'               #addTableColumns
     | ALTER TABLE table=multipartIdentifier
         RENAME COLUMN
-        from=multipartIdentifier TO to=errorCapturingIdentifier        #renameTableColumn
+        from_=multipartIdentifier TO to=errorCapturingIdentifier        #renameTableColumn
     | ALTER TABLE multipartIdentifier
         DROP (COLUMN | COLUMNS)
         '(' columns=multipartIdentifierList ')'                        #dropTableColumns
     | ALTER TABLE multipartIdentifier
         DROP (COLUMN | COLUMNS) columns=multipartIdentifierList        #dropTableColumns
-    | ALTER (TABLE | VIEW) from=multipartIdentifier
+    | ALTER (TABLE | VIEW) from_=multipartIdentifier
         RENAME TO to=multipartIdentifier                               #renameTable
     | ALTER (TABLE | VIEW) multipartIdentifier
         SET TBLPROPERTIES tablePropertyList                            #setTableProperties
@@ -163,7 +160,7 @@ statement
     | ALTER (TABLE | VIEW) multipartIdentifier ADD (IF NOT EXISTS)?
         partitionSpecLocation+                                         #addTablePartition
     | ALTER TABLE multipartIdentifier
-        from=partitionSpec RENAME TO to=partitionSpec                  #renameTablePartition
+        from_=partitionSpec RENAME TO to=partitionSpec                  #renameTablePartition
     | ALTER (TABLE | VIEW) multipartIdentifier
         DROP (IF EXISTS)? partitionSpec (',' partitionSpec)* PURGE?    #dropTablePartitions
     | ALTER TABLE multipartIdentifier
@@ -460,11 +457,11 @@ multiInsertQueryBody
 
 queryTerm
     : queryPrimary                                                                       #queryTermDefault
-    | left=queryTerm {legacy_setops_precedence_enabled}?
+    | left=queryTerm {self.legacy_setops_precedence_enabled}?
         operator=(INTERSECT | UNION | EXCEPT | SETMINUS) setQuantifier? right=queryTerm  #setOperation
-    | left=queryTerm {!legacy_setops_precedence_enabled}?
+    | left=queryTerm {not self.legacy_setops_precedence_enabled}?
         operator=INTERSECT setQuantifier? right=queryTerm                                #setOperation
-    | left=queryTerm {!legacy_setops_precedence_enabled}?
+    | left=queryTerm {not self.legacy_setops_precedence_enabled}?
         operator=(UNION | EXCEPT | SETMINUS) setQuantifier? right=queryTerm              #setOperation
     ;
 
@@ -814,7 +811,7 @@ primaryExpression
     | STRUCT '(' (argument+=namedExpression (',' argument+=namedExpression)*)? ')'             #struct
     | FIRST '(' expression (IGNORE NULLS)? ')'                                                 #first
     | LAST '(' expression (IGNORE NULLS)? ')'                                                  #last
-    | POSITION '(' substr=valueExpression IN str=valueExpression ')'                           #position
+    | POSITION '(' substr=valueExpression IN str_=valueExpression ')'                           #position
     | constant                                                                                 #constantDefault
     | ASTERISK                                                                                 #star
     | qualifiedName '.' ASTERISK                                                               #star
@@ -830,11 +827,11 @@ primaryExpression
     | base=primaryExpression '.' fieldName=identifier                                          #dereference
     | '(' expression ')'                                                                       #parenthesizedExpression
     | EXTRACT '(' field=identifier FROM source=valueExpression ')'                             #extract
-    | (SUBSTR | SUBSTRING) '(' str=valueExpression (FROM | ',') pos=valueExpression
-      ((FOR | ',') len=valueExpression)? ')'                                                   #substring
+    | (SUBSTR | SUBSTRING) '(' str_=valueExpression (FROM | ',') pos=valueExpression
+      ((FOR | ',') len_=valueExpression)? ')'                                                   #substring
     | TRIM '(' trimOption=(BOTH | LEADING | TRAILING)? (trimStr=valueExpression)?
        FROM srcStr=valueExpression ')'                                                         #trim
-    | OVERLAY '(' input=valueExpression PLACING replace=valueExpression
+    | OVERLAY '(' input_=valueExpression PLACING replace=valueExpression
       FROM position=valueExpression (FOR length=valueExpression)? ')'                          #overlay
     ;
 
@@ -880,7 +877,7 @@ errorCapturingUnitToUnitInterval
     ;
 
 unitToUnitInterval
-    : value=intervalValue from=identifier TO to=identifier
+    : value=intervalValue from_=identifier TO to=identifier
     ;
 
 intervalValue
@@ -892,11 +889,11 @@ colPosition
     ;
 
 dataType
-    : complex=ARRAY '<' dataType '>'                            #complexDataType
-    | complex=MAP '<' dataType ',' dataType '>'                 #complexDataType
-    | complex=STRUCT ('<' complexColTypeList? '>' | NEQ)        #complexDataType
-    | INTERVAL from=(YEAR | MONTH) (TO to=MONTH)?               #yearMonthIntervalDataType
-    | INTERVAL from=(DAY | HOUR | MINUTE | SECOND)
+    : complex_=ARRAY '<' dataType '>'                            #complexDataType
+    | complex_=MAP '<' dataType ',' dataType '>'                 #complexDataType
+    | complex_=STRUCT ('<' complexColTypeList? '>' | NEQ)        #complexDataType
+    | INTERVAL from_=(YEAR | MONTH) (TO to=MONTH)?               #yearMonthIntervalDataType
+    | INTERVAL from_=(DAY | HOUR | MINUTE | SECOND)
       (TO to=(HOUR | MINUTE | SECOND))?                         #dayTimeIntervalDataType
     | identifier ('(' INTEGER_VALUE (',' INTEGER_VALUE)* ')')?  #primitiveDataType
     ;
@@ -991,14 +988,14 @@ errorCapturingIdentifierExtra
 
 identifier
     : strictIdentifier
-    | {!SQL_standard_keyword_behavior}? strictNonReserved
+    | {not self.SQL_standard_keyword_behavior}? strictNonReserved
     ;
 
 strictIdentifier
     : IDENTIFIER              #unquotedIdentifier
     | quotedIdentifier        #quotedIdentifierAlternative
-    | {SQL_standard_keyword_behavior}? ansiNonReserved #unquotedIdentifier
-    | {!SQL_standard_keyword_behavior}? nonReserved    #unquotedIdentifier
+    | {self.SQL_standard_keyword_behavior}? ansiNonReserved #unquotedIdentifier
+    | {not self.SQL_standard_keyword_behavior}? nonReserved    #unquotedIdentifier
     ;
 
 quotedIdentifier
@@ -1006,9 +1003,9 @@ quotedIdentifier
     ;
 
 number
-    : {!legacy_exponent_literal_as_decimal_enabled}? MINUS? EXPONENT_VALUE #exponentLiteral
-    | {!legacy_exponent_literal_as_decimal_enabled}? MINUS? DECIMAL_VALUE  #decimalLiteral
-    | {legacy_exponent_literal_as_decimal_enabled}? MINUS? (EXPONENT_VALUE | DECIMAL_VALUE) #legacyDecimalLiteral
+    : {not self.legacy_exponent_literal_as_decimal_enabled}? MINUS? EXPONENT_VALUE #exponentLiteral
+    | {not self.legacy_exponent_literal_as_decimal_enabled}? MINUS? DECIMAL_VALUE  #decimalLiteral
+    | {self.legacy_exponent_literal_as_decimal_enabled}? MINUS? (EXPONENT_VALUE | DECIMAL_VALUE) #legacyDecimalLiteral
     | MINUS? INTEGER_VALUE            #integerLiteral
     | MINUS? BIGINT_LITERAL           #bigIntLiteral
     | MINUS? SMALLINT_LITERAL         #smallIntLiteral
@@ -1816,26 +1813,26 @@ INTEGER_VALUE
 
 EXPONENT_VALUE
     : DIGIT+ EXPONENT
-    | DECIMAL_DIGITS EXPONENT {isValidDecimal()}?
+    | DECIMAL_DIGITS EXPONENT {self.isValidDecimal()}?
     ;
 
 DECIMAL_VALUE
-    : DECIMAL_DIGITS {isValidDecimal()}?
+    : DECIMAL_DIGITS {self.isValidDecimal()}?
     ;
 
 FLOAT_LITERAL
     : DIGIT+ EXPONENT? 'F'
-    | DECIMAL_DIGITS EXPONENT? 'F' {isValidDecimal()}?
+    | DECIMAL_DIGITS EXPONENT? 'F' {self.isValidDecimal()}?
     ;
 
 DOUBLE_LITERAL
     : DIGIT+ EXPONENT? 'D'
-    | DECIMAL_DIGITS EXPONENT? 'D' {isValidDecimal()}?
+    | DECIMAL_DIGITS EXPONENT? 'D' {self.isValidDecimal()}?
     ;
 
 BIGDECIMAL_LITERAL
     : DIGIT+ EXPONENT? 'BD'
-    | DECIMAL_DIGITS EXPONENT? 'BD' {isValidDecimal()}?
+    | DECIMAL_DIGITS EXPONENT? 'BD' {self.isValidDecimal()}?
     ;
 
 IDENTIFIER
@@ -1868,7 +1865,7 @@ SIMPLE_COMMENT
     ;
 
 BRACKETED_COMMENT
-    : '/*' {!isHint()}? (BRACKETED_COMMENT|.)*? '*/' -> channel(HIDDEN)
+    : '/*' {not self.isHint()}? (BRACKETED_COMMENT|.)*? '*/' -> channel(HIDDEN)
     ;
 
 WS

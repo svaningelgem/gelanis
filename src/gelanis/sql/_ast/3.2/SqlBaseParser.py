@@ -3,10 +3,11 @@
 from antlr4 import *
 from io import StringIO
 import sys
+
 if sys.version_info[1] > 5:
-	from typing import TextIO
+    from typing import TextIO
 else:
-	from typing.io import TextIO
+    from typing.io import TextIO
 
 
 def serializedATN():
@@ -17,8 +18,8 @@ def serializedATN():
         buf.write("\t\16\4\17\t\17\4\20\t\20\4\21\t\21\4\22\t\22\4\23\t\23")
         buf.write("\4\24\t\24\4\25\t\25\4\26\t\26\4\27\t\27\4\30\t\30\4\31")
         buf.write("\t\31\4\32\t\32\4\33\t\33\4\34\t\34\4\35\t\35\4\36\t\36")
-        buf.write("\4\37\t\37\4 \t \4!\t!\4\"\t\"\4#\t#\4$\t$\4%\t%\4&\t")
-        buf.write("&\4\'\t\'\4(\t(\4)\t)\4*\t*\4+\t+\4,\t,\4-\t-\4.\t.\4")
+        buf.write('\4\37\t\37\4 \t \4!\t!\4"\t"\4#\t#\4$\t$\4%\t%\4&\t')
+        buf.write("&\4'\t'\4(\t(\4)\t)\4*\t*\4+\t+\4,\t,\4-\t-\4.\t.\4")
         buf.write("/\t/\4\60\t\60\4\61\t\61\4\62\t\62\4\63\t\63\4\64\t\64")
         buf.write("\4\65\t\65\4\66\t\66\4\67\t\67\48\t8\49\t9\4:\t:\4;\t")
         buf.write(";\4<\t<\4=\t=\4>\t>\4?\t?\4@\t@\4A\tA\4B\tB\4C\tC\4D\t")
@@ -143,11 +144,11 @@ def serializedATN():
         buf.write("\36\u0595\13\36\3\37\3\37\3\37\3\37\7\37\u059b\n\37\f")
         buf.write("\37\16\37\u059e\13\37\3\37\3\37\3 \3 \5 \u05a4\n \3 \5")
         buf.write(" \u05a7\n \3!\3!\3!\7!\u05ac\n!\f!\16!\u05af\13!\3!\5")
-        buf.write("!\u05b2\n!\3\"\3\"\3\"\3\"\5\"\u05b8\n\"\3#\3#\3#\3#\7")
+        buf.write('!\u05b2\n!\3"\3"\3"\3"\5"\u05b8\n"\3#\3#\3#\3#\7')
         buf.write("#\u05be\n#\f#\16#\u05c1\13#\3#\3#\3$\3$\3$\3$\7$\u05c9")
         buf.write("\n$\f$\16$\u05cc\13$\3$\3$\3%\3%\3%\3%\3%\3%\5%\u05d6")
-        buf.write("\n%\3&\3&\3&\3&\3&\5&\u05dd\n&\3\'\3\'\3\'\3\'\5\'\u05e3")
-        buf.write("\n\'\3(\3(\3(\3)\3)\3)\3)\3)\3)\6)\u05ee\n)\r)\16)\u05ef")
+        buf.write("\n%\3&\3&\3&\3&\3&\5&\u05dd\n&\3'\3'\3'\3'\5'\u05e3")
+        buf.write("\n'\3(\3(\3(\3)\3)\3)\3)\3)\3)\6)\u05ee\n)\r)\16)\u05ef")
         buf.write("\3)\3)\3)\3)\3)\5)\u05f7\n)\3)\3)\3)\3)\3)\5)\u05fe\n")
         buf.write(")\3)\3)\3)\3)\3)\3)\3)\3)\3)\3)\5)\u060a\n)\3)\3)\3)\3")
         buf.write(")\7)\u0610\n)\f)\16)\u0613\13)\3)\7)\u0616\n)\f)\16)\u0619")
@@ -300,7 +301,7 @@ def serializedATN():
         buf.write("\3\u008d\5\u008d\u0c40\n\u008d\3\u008e\3\u008e\3\u008f")
         buf.write("\3\u008f\3\u0090\3\u0090\3\u0090\13\u038f\u03d0\u03d8")
         buf.write("\u03e9\u03f7\u0400\u0409\u0412\u0419\6V\u00cc\u00d0\u00d2")
-        buf.write("\u0091\2\4\6\b\n\f\16\20\22\24\26\30\32\34\36 \"$&(*,")
+        buf.write('\u0091\2\4\6\b\n\f\16\20\22\24\26\30\32\34\36 "$&(*,')
         buf.write(".\60\62\64\668:<>@BDFHJLNPRTVXZ\\^`bdfhjlnprtvxz|~\u0080")
         buf.write("\u0082\u0084\u0086\u0088\u008a\u008c\u008e\u0090\u0092")
         buf.write("\u0094\u0096\u0098\u009a\u009c\u009e\u00a0\u00a2\u00a4")
@@ -311,7 +312,7 @@ def serializedATN():
         buf.write("\u00ee\u00f0\u00f2\u00f4\u00f6\u00f8\u00fa\u00fc\u00fe")
         buf.write("\u0100\u0102\u0104\u0106\u0108\u010a\u010c\u010e\u0110")
         buf.write("\u0112\u0114\u0116\u0118\u011a\u011c\u011e\2\65\4\2CC")
-        buf.write("\u00b7\u00b7\4\2\"\"\u00c6\u00c6\4\2BB\u0099\u0099\4\2")
+        buf.write('\u00b7\u00b7\4\2""\u00c6\u00c6\4\2BB\u0099\u0099\4\2')
         buf.write("ggtt\3\2-.\4\2\u00e8\u00e8\u0108\u0108\4\2\21\21%%\7\2")
         buf.write("**\66\66YYff\u0090\u0090\3\2GH\4\2YYff\4\2\u009d\u009d")
         buf.write("\u0122\u0122\5\2\16\16OO\u00e7\u00e7\4\2\16\16\u008a\u008a")
@@ -330,7 +331,7 @@ def serializedATN():
         buf.write("\5\2pp\u0095\u0095\u00d0\u00d0\4\2MM\u00ad\u00ad\4\2\u00a5")
         buf.write("\u00a5\u00de\u00de\4\2bb\u00b4\u00b4\3\2\u0127\u0128\4")
         buf.write("\2OO\u00d8\u00d8\63\2\16\17\21\22\24\24\26\27\31\32\34")
-        buf.write("\34\36\"%%\'*,,.\64\66\669:?KMOSSU[^^`befiknnpsuvxz||")
+        buf.write("\34\36\"%%'*,,.\64\66\669:?KMOSSU[^^`befiknnpsuvxz||")
         buf.write("\177\177\u0081\u0082\u0084\u0084\u0087\u0099\u009b\u009b")
         buf.write("\u009e\u009f\u00a2\u00a3\u00a6\u00a6\u00a8\u00a9\u00ab")
         buf.write("\u00b4\u00b6\u00be\u00c0\u00c7\u00c9\u00d1\u00d3\u00d6")
@@ -346,7 +347,7 @@ def serializedATN():
         buf.write("\u0135\3\2\2\2\16\u0138\3\2\2\2\20\u041c\3\2\2\2\22\u041e")
         buf.write("\3\2\2\2\24\u0420\3\2\2\2\26\u04ca\3\2\2\2\30\u04cc\3")
         buf.write("\2\2\2\32\u04dd\3\2\2\2\34\u04e3\3\2\2\2\36\u04ef\3\2")
-        buf.write("\2\2 \u04fc\3\2\2\2\"\u04ff\3\2\2\2$\u0503\3\2\2\2&\u0545")
+        buf.write('\2\2 \u04fc\3\2\2\2"\u04ff\3\2\2\2$\u0503\3\2\2\2&\u0545')
         buf.write("\3\2\2\2(\u0547\3\2\2\2*\u054b\3\2\2\2,\u0557\3\2\2\2")
         buf.write(".\u055c\3\2\2\2\60\u0563\3\2\2\2\62\u0565\3\2\2\2\64\u056d")
         buf.write("\3\2\2\2\66\u0576\3\2\2\28\u0581\3\2\2\2:\u0593\3\2\2")
@@ -406,7 +407,7 @@ def serializedATN():
         buf.write("\5\u00b6\\\2\u0145\u0146\7\67\2\2\u0146\u014a\5.\30\2")
         buf.write("\u0147\u0148\7q\2\2\u0148\u0149\7\u009c\2\2\u0149\u014b")
         buf.write("\7V\2\2\u014a\u0147\3\2\2\2\u014a\u014b\3\2\2\2\u014b")
-        buf.write("\u014c\3\2\2\2\u014c\u0154\5\u00b6\\\2\u014d\u0153\5\"")
+        buf.write('\u014c\3\2\2\2\u014c\u0154\5\u00b6\\\2\u014d\u0153\5"')
         buf.write("\22\2\u014e\u0153\5 \21\2\u014f\u0150\7\u010d\2\2\u0150")
         buf.write("\u0151\t\2\2\2\u0151\u0153\5<\37\2\u0152\u014d\3\2\2\2")
         buf.write("\u0152\u014e\3\2\2\2\u0152\u014f\3\2\2\2\u0153\u0156\3")
@@ -561,7 +562,7 @@ def serializedATN():
         buf.write("\2\u02a5\u02a2\3\2\2\2\u02a5\u02a6\3\2\2\2\u02a6\u02a7")
         buf.write("\3\2\2\2\u02a7\u02a9\5\u00b6\\\2\u02a8\u02aa\5\u00a6T")
         buf.write("\2\u02a9\u02a8\3\2\2\2\u02a9\u02aa\3\2\2\2\u02aa\u02b3")
-        buf.write("\3\2\2\2\u02ab\u02b2\5\"\22\2\u02ac\u02ad\7\u00ae\2\2")
+        buf.write('\3\2\2\2\u02ab\u02b2\5"\22\2\u02ac\u02ad\7\u00ae\2\2')
         buf.write("\u02ad\u02ae\7\u00a0\2\2\u02ae\u02b2\5\u009eP\2\u02af")
         buf.write("\u02b0\7\u00eb\2\2\u02b0\u02b2\5<\37\2\u02b1\u02ab\3\2")
         buf.write("\2\2\u02b1\u02ac\3\2\2\2\u02b1\u02af\3\2\2\2\u02b2\u02b5")
@@ -677,7 +678,7 @@ def serializedATN():
         buf.write("\u00fd\2\2\u03a5\u03a8\7\u00e8\2\2\u03a6\u03a7\7q\2\2")
         buf.write("\u03a7\u03a9\7V\2\2\u03a8\u03a6\3\2\2\2\u03a8\u03a9\3")
         buf.write("\2\2\2\u03a9\u03aa\3\2\2\2\u03aa\u041d\5\u00b6\\\2\u03ab")
-        buf.write("\u03ac\7\'\2\2\u03ac\u041d\7!\2\2\u03ad\u03ae\7\u008b")
+        buf.write("\u03ac\7'\2\2\u03ac\u041d\7!\2\2\u03ad\u03ae\7\u008b")
         buf.write("\2\2\u03ae\u03b0\7@\2\2\u03af\u03b1\7\u008c\2\2\u03b0")
         buf.write("\u03af\3\2\2\2\u03b0\u03b1\3\2\2\2\u03b1\u03b2\3\2\2\2")
         buf.write("\u03b2\u03b3\7x\2\2\u03b3\u03b5\7\u0122\2\2\u03b4\u03b6")
@@ -897,7 +898,7 @@ def serializedATN():
         buf.write("\u0543\58\35\2\u0541\u0542\7\u00a3\2\2\u0542\u0544\5<")
         buf.write("\37\2\u0543\u0541\3\2\2\2\u0543\u0544\3\2\2\2\u0544\u0546")
         buf.write("\3\2\2\2\u0545\u0508\3\2\2\2\u0545\u0519\3\2\2\2\u0545")
-        buf.write("\u052a\3\2\2\2\u0545\u0537\3\2\2\2\u0546\'\3\2\2\2\u0547")
+        buf.write("\u052a\3\2\2\2\u0545\u0537\3\2\2\2\u0546'\3\2\2\2\u0547")
         buf.write("\u0549\5*\26\2\u0548\u054a\5 \21\2\u0549\u0548\3\2\2\2")
         buf.write("\u0549\u054a\3\2\2\2\u054a)\3\2\2\2\u054b\u054c\7\u00ad")
         buf.write("\2\2\u054c\u054d\7\4\2\2\u054d\u0552\5,\27\2\u054e\u054f")
@@ -929,7 +930,7 @@ def serializedATN():
         buf.write("\u0586\u0587\7\u00ae\2\2\u0587\u0588\7 \2\2\u0588\u0592")
         buf.write("\5\u00c0a\2\u0589\u0592\5\36\20\2\u058a\u0592\5\34\17")
         buf.write("\2\u058b\u0592\5\u00b2Z\2\u058c\u0592\5H%\2\u058d\u0592")
-        buf.write("\5 \21\2\u058e\u0592\5\"\22\2\u058f\u0590\7\u00eb\2\2")
+        buf.write('\5 \21\2\u058e\u0592\5"\22\2\u058f\u0590\7\u00eb\2\2')
         buf.write("\u0590\u0592\5<\37\2\u0591\u0584\3\2\2\2\u0591\u0586\3")
         buf.write("\2\2\2\u0591\u0589\3\2\2\2\u0591\u058a\3\2\2\2\u0591\u058b")
         buf.write("\3\2\2\2\u0591\u058c\3\2\2\2\u0591\u058d\3\2\2\2\u0591")
@@ -941,7 +942,7 @@ def serializedATN():
         buf.write("\u059d\3\2\2\2\u059d\u059f\3\2\2\2\u059e\u059c\3\2\2\2")
         buf.write("\u059f\u05a0\7\5\2\2\u05a0=\3\2\2\2\u05a1\u05a6\5@!\2")
         buf.write("\u05a2\u05a4\7\u0110\2\2\u05a3\u05a2\3\2\2\2\u05a3\u05a4")
-        buf.write("\3\2\2\2\u05a4\u05a5\3\2\2\2\u05a5\u05a7\5B\"\2\u05a6")
+        buf.write('\3\2\2\2\u05a4\u05a5\3\2\2\2\u05a5\u05a7\5B"\2\u05a6')
         buf.write("\u05a3\3\2\2\2\u05a6\u05a7\3\2\2\2\u05a7?\3\2\2\2\u05a8")
         buf.write("\u05ad\5\u0110\u0089\2\u05a9\u05aa\7\7\2\2\u05aa\u05ac")
         buf.write("\5\u0110\u0089\2\u05ab\u05a9\3\2\2\2\u05ac\u05af\3\2\2")
@@ -962,7 +963,7 @@ def serializedATN():
         buf.write("\u05ca\3\2\2\2\u05cd\u05ce\7\5\2\2\u05ceG\3\2\2\2\u05cf")
         buf.write("\u05d0\7\u00e2\2\2\u05d0\u05d1\7\30\2\2\u05d1\u05d6\5")
         buf.write("J&\2\u05d2\u05d3\7\u00e2\2\2\u05d3\u05d4\7 \2\2\u05d4")
-        buf.write("\u05d6\5L\'\2\u05d5\u05cf\3\2\2\2\u05d5\u05d2\3\2\2\2")
+        buf.write("\u05d6\5L'\2\u05d5\u05cf\3\2\2\2\u05d5\u05d2\3\2\2\2")
         buf.write("\u05d6I\3\2\2\2\u05d7\u05d8\7y\2\2\u05d8\u05d9\7\u0122")
         buf.write("\2\2\u05d9\u05da\7\u00a8\2\2\u05da\u05dd\7\u0122\2\2\u05db")
         buf.write("\u05dd\5\u0110\u0089\2\u05dc\u05d7\3\2\2\2\u05dc\u05db")
@@ -1291,7 +1292,7 @@ def serializedATN():
         buf.write("U\2\u08ad\u08ab\3\2\2\2\u08ae\u08b1\3\2\2\2\u08af\u08ad")
         buf.write("\3\2\2\2\u08af\u08b0\3\2\2\2\u08b0\u08b2\3\2\2\2\u08b1")
         buf.write("\u08af\3\2\2\2\u08b2\u08b3\7\5\2\2\u08b3\u00a7\3\2\2\2")
-        buf.write("\u08b4\u08b6\5\u0110\u0089\2\u08b5\u08b7\5\"\22\2\u08b6")
+        buf.write('\u08b4\u08b6\5\u0110\u0089\2\u08b5\u08b7\5"\22\2\u08b6')
         buf.write("\u08b5\3\2\2\2\u08b6\u08b7\3\2\2\2\u08b7\u00a9\3\2\2\2")
         buf.write("\u08b8\u08ba\5\u00b6\\\2\u08b9\u08bb\5\u009aN\2\u08ba")
         buf.write("\u08b9\3\2\2\2\u08ba\u08bb\3\2\2\2\u08bb\u08bc\3\2\2\2")
@@ -1516,7 +1517,7 @@ def serializedATN():
         buf.write("\u0089\2\u0aa3\u0aa4\7g\2\2\u0aa4\u0aa5\5\u00d0i\2\u0aa5")
         buf.write("\u0aa6\7\5\2\2\u0aa6\u0acc\3\2\2\2\u0aa7\u0aa8\t \2\2")
         buf.write("\u0aa8\u0aa9\7\4\2\2\u0aa9\u0aaa\5\u00d0i\2\u0aaa\u0aab")
-        buf.write("\t!\2\2\u0aab\u0aae\5\u00d0i\2\u0aac\u0aad\t\"\2\2\u0aad")
+        buf.write('\t!\2\2\u0aab\u0aae\5\u00d0i\2\u0aac\u0aad\t"\2\2\u0aad')
         buf.write("\u0aaf\5\u00d0i\2\u0aae\u0aac\3\2\2\2\u0aae\u0aaf\3\2")
         buf.write("\2\2\u0aaf\u0ab0\3\2\2\2\u0ab0\u0ab1\7\5\2\2\u0ab1\u0acc")
         buf.write("\3\2\2\2\u0ab2\u0ab3\7\u00f6\2\2\u0ab3\u0ab5\7\4\2\2\u0ab4")
@@ -1554,7 +1555,7 @@ def serializedATN():
         buf.write("\3\2\2\2\u0ae6\u0ae2\3\2\2\2\u0ae7\u00d5\3\2\2\2\u0ae8")
         buf.write("\u0ae9\t$\2\2\u0ae9\u00d7\3\2\2\2\u0aea\u0aeb\t%\2\2\u0aeb")
         buf.write("\u00d9\3\2\2\2\u0aec\u0aed\t&\2\2\u0aed\u00db\3\2\2\2")
-        buf.write("\u0aee\u0aef\t\'\2\2\u0aef\u00dd\3\2\2\2\u0af0\u0af3\7")
+        buf.write("\u0aee\u0aef\t'\2\2\u0aef\u00dd\3\2\2\2\u0af0\u0af3\7")
         buf.write("|\2\2\u0af1\u0af4\5\u00e0q\2\u0af2\u0af4\5\u00e4s\2\u0af3")
         buf.write("\u0af1\3\2\2\2\u0af3\u0af2\3\2\2\2\u0af3\u0af4\3\2\2\2")
         buf.write("\u0af4\u00df\3\2\2\2\u0af5\u0af7\5\u00e2r\2\u0af6\u0af8")
@@ -1601,7 +1602,7 @@ def serializedATN():
         buf.write("\2\2\2\u0b4c\u0b4d\5\u00b6\\\2\u0b4d\u0b50\5\u00ecw\2")
         buf.write("\u0b4e\u0b4f\7\u009c\2\2\u0b4f\u0b51\7\u009d\2\2\u0b50")
         buf.write("\u0b4e\3\2\2\2\u0b50\u0b51\3\2\2\2\u0b51\u0b53\3\2\2\2")
-        buf.write("\u0b52\u0b54\5\"\22\2\u0b53\u0b52\3\2\2\2\u0b53\u0b54")
+        buf.write('\u0b52\u0b54\5"\22\2\u0b53\u0b52\3\2\2\2\u0b53\u0b54')
         buf.write("\3\2\2\2\u0b54\u0b56\3\2\2\2\u0b55\u0b57\5\u00eav\2\u0b56")
         buf.write("\u0b55\3\2\2\2\u0b56\u0b57\3\2\2\2\u0b57\u00f1\3\2\2\2")
         buf.write("\u0b58\u0b5d\5\u00f4{\2\u0b59\u0b5a\7\6\2\2\u0b5a\u0b5c")
@@ -1610,7 +1611,7 @@ def serializedATN():
         buf.write("\u0b5f\u0b5d\3\2\2\2\u0b60\u0b61\5\u010c\u0087\2\u0b61")
         buf.write("\u0b64\5\u00ecw\2\u0b62\u0b63\7\u009c\2\2\u0b63\u0b65")
         buf.write("\7\u009d\2\2\u0b64\u0b62\3\2\2\2\u0b64\u0b65\3\2\2\2\u0b65")
-        buf.write("\u0b67\3\2\2\2\u0b66\u0b68\5\"\22\2\u0b67\u0b66\3\2\2")
+        buf.write('\u0b67\3\2\2\2\u0b66\u0b68\5"\22\2\u0b67\u0b66\3\2\2')
         buf.write("\2\u0b67\u0b68\3\2\2\2\u0b68\u00f5\3\2\2\2\u0b69\u0b6e")
         buf.write("\5\u00f8}\2\u0b6a\u0b6b\7\6\2\2\u0b6b\u0b6d\5\u00f8}\2")
         buf.write("\u0b6c\u0b6a\3\2\2\2\u0b6d\u0b70\3\2\2\2\u0b6e\u0b6c\3")
@@ -1619,7 +1620,7 @@ def serializedATN():
         buf.write("\2\u0b73\u0b72\3\2\2\2\u0b73\u0b74\3\2\2\2\u0b74\u0b75")
         buf.write("\3\2\2\2\u0b75\u0b78\5\u00ecw\2\u0b76\u0b77\7\u009c\2")
         buf.write("\2\u0b77\u0b79\7\u009d\2\2\u0b78\u0b76\3\2\2\2\u0b78\u0b79")
-        buf.write("\3\2\2\2\u0b79\u0b7b\3\2\2\2\u0b7a\u0b7c\5\"\22\2\u0b7b")
+        buf.write('\3\2\2\2\u0b79\u0b7b\3\2\2\2\u0b7a\u0b7c\5"\22\2\u0b7b')
         buf.write("\u0b7a\3\2\2\2\u0b7b\u0b7c\3\2\2\2\u0b7c\u00f9\3\2\2\2")
         buf.write("\u0b7d\u0b7e\7\u010a\2\2\u0b7e\u0b7f\5\u00c8e\2\u0b7f")
         buf.write("\u0b80\7\u00ee\2\2\u0b80\u0b81\5\u00c8e\2\u0b81\u00fb")
@@ -1714,7 +1715,7 @@ def serializedATN():
         buf.write("\2\2\2\u0c36\u0c27\3\2\2\2\u0c36\u0c2b\3\2\2\2\u0c36\u0c2f")
         buf.write("\3\2\2\2\u0c36\u0c33\3\2\2\2\u0c37\u0117\3\2\2\2\u0c38")
         buf.write("\u0c39\7\u00fa\2\2\u0c39\u0c40\5\u00ecw\2\u0c3a\u0c40")
-        buf.write("\5\"\22\2\u0c3b\u0c40\5\u00eav\2\u0c3c\u0c3d\t\61\2\2")
+        buf.write('\5"\22\2\u0c3b\u0c40\5\u00eav\2\u0c3c\u0c3d\t\61\2\2')
         buf.write("\u0c3d\u0c3e\7\u009c\2\2\u0c3e\u0c40\7\u009d\2\2\u0c3f")
         buf.write("\u0c38\3\2\2\2\u0c3f\u0c3a\3\2\2\2\u0c3f\u0c3b\3\2\2\2")
         buf.write("\u0c3f\u0c3c\3\2\2\2\u0c40\u0119\3\2\2\2\u0c41\u0c42\t")
@@ -1770,137 +1771,613 @@ def serializedATN():
         return buf.getvalue()
 
 
-class SqlBaseParser ( Parser ):
+class SqlBaseParser(Parser):
 
     grammarFileName = "SqlBase.g4"
 
     atn = ATNDeserializer().deserialize(serializedATN())
 
-    decisionsToDFA = [ DFA(ds, i) for i, ds in enumerate(atn.decisionToState) ]
+    decisionsToDFA = [DFA(ds, i) for i, ds in enumerate(atn.decisionToState)]
 
     sharedContextCache = PredictionContextCache()
 
-    literalNames = [ "<INVALID>", "';'", "'('", "')'", "','", "'.'", "'/*+'", 
-                     "'*/'", "'->'", "'['", "']'", "':'", "'ADD'", "'AFTER'", 
-                     "'ALL'", "'ALTER'", "'ANALYZE'", "'AND'", "'ANTI'", 
-                     "'ANY'", "'ARCHIVE'", "'ARRAY'", "'AS'", "'ASC'", "'AT'", 
-                     "'AUTHORIZATION'", "'BETWEEN'", "'BOTH'", "'BUCKET'", 
-                     "'BUCKETS'", "'BY'", "'CACHE'", "'CASCADE'", "'CASE'", 
-                     "'CAST'", "'CHANGE'", "'CHECK'", "'CLEAR'", "'CLUSTER'", 
-                     "'CLUSTERED'", "'CODEGEN'", "'COLLATE'", "'COLLECTION'", 
-                     "'COLUMN'", "'COLUMNS'", "'COMMENT'", "'COMMIT'", "'COMPACT'", 
-                     "'COMPACTIONS'", "'COMPUTE'", "'CONCATENATE'", "'CONSTRAINT'", 
-                     "'COST'", "'CREATE'", "'CROSS'", "'CUBE'", "'CURRENT'", 
-                     "'CURRENT_DATE'", "'CURRENT_TIME'", "'CURRENT_TIMESTAMP'", 
-                     "'CURRENT_USER'", "'DAY'", "'DATA'", "'DATABASE'", 
-                     "<INVALID>", "'DBPROPERTIES'", "'DEFINED'", "'DELETE'", 
-                     "'DELIMITED'", "'DESC'", "'DESCRIBE'", "'DFS'", "'DIRECTORIES'", 
-                     "'DIRECTORY'", "'DISTINCT'", "'DISTRIBUTE'", "'DIV'", 
-                     "'DROP'", "'ELSE'", "'END'", "'ESCAPE'", "'ESCAPED'", 
-                     "'EXCEPT'", "'EXCHANGE'", "'EXISTS'", "'EXPLAIN'", 
-                     "'EXPORT'", "'EXTENDED'", "'EXTERNAL'", "'EXTRACT'", 
-                     "'FALSE'", "'FETCH'", "'FIELDS'", "'FILTER'", "'FILEFORMAT'", 
-                     "'FIRST'", "'FOLLOWING'", "'FOR'", "'FOREIGN'", "'FORMAT'", 
-                     "'FORMATTED'", "'FROM'", "'FULL'", "'FUNCTION'", "'FUNCTIONS'", 
-                     "'GLOBAL'", "'GRANT'", "'GROUP'", "'GROUPING'", "'HAVING'", 
-                     "'HOUR'", "'IF'", "'IGNORE'", "'IMPORT'", "'IN'", "'INDEX'", 
-                     "'INDEXES'", "'INNER'", "'INPATH'", "'INPUTFORMAT'", 
-                     "'INSERT'", "'INTERSECT'", "'INTERVAL'", "'INTO'", 
-                     "'IS'", "'ITEMS'", "'JOIN'", "'KEYS'", "'LAST'", "'LATERAL'", 
-                     "'LAZY'", "'LEADING'", "'LEFT'", "'LIKE'", "'LIMIT'", 
-                     "'LINES'", "'LIST'", "'LOAD'", "'LOCAL'", "'LOCATION'", 
-                     "'LOCK'", "'LOCKS'", "'LOGICAL'", "'MACRO'", "'MAP'", 
-                     "'MATCHED'", "'MERGE'", "'MINUTE'", "'MONTH'", "'MSCK'", 
-                     "'NAMESPACE'", "'NAMESPACES'", "'NATURAL'", "'NO'", 
-                     "<INVALID>", "'NULL'", "'NULLS'", "'OF'", "'ON'", "'ONLY'", 
-                     "'OPTION'", "'OPTIONS'", "'OR'", "'ORDER'", "'OUT'", 
-                     "'OUTER'", "'OUTPUTFORMAT'", "'OVER'", "'OVERLAPS'", 
-                     "'OVERLAY'", "'OVERWRITE'", "'PARTITION'", "'PARTITIONED'", 
-                     "'PARTITIONS'", "'PERCENT'", "'PIVOT'", "'PLACING'", 
-                     "'POSITION'", "'PRECEDING'", "'PRIMARY'", "'PRINCIPALS'", 
-                     "'PROPERTIES'", "'PURGE'", "'QUERY'", "'RANGE'", "'RECORDREADER'", 
-                     "'RECORDWRITER'", "'RECOVER'", "'REDUCE'", "'REFERENCES'", 
-                     "'REFRESH'", "'RENAME'", "'REPAIR'", "'REPLACE'", "'RESET'", 
-                     "'RESPECT'", "'RESTRICT'", "'REVOKE'", "'RIGHT'", "<INVALID>", 
-                     "'ROLE'", "'ROLES'", "'ROLLBACK'", "'ROLLUP'", "'ROW'", 
-                     "'ROWS'", "'SECOND'", "'SCHEMA'", "'SELECT'", "'SEMI'", 
-                     "'SEPARATED'", "'SERDE'", "'SERDEPROPERTIES'", "'SESSION_USER'", 
-                     "'SET'", "'MINUS'", "'SETS'", "'SHOW'", "'SKEWED'", 
-                     "'SOME'", "'SORT'", "'SORTED'", "'START'", "'STATISTICS'", 
-                     "'STORED'", "'STRATIFY'", "'STRUCT'", "'SUBSTR'", "'SUBSTRING'", 
-                     "'SYNC'", "'TABLE'", "'TABLES'", "'TABLESAMPLE'", "'TBLPROPERTIES'", 
-                     "<INVALID>", "'TERMINATED'", "'THEN'", "'TIME'", "'TO'", 
-                     "'TOUCH'", "'TRAILING'", "'TRANSACTION'", "'TRANSACTIONS'", 
-                     "'TRANSFORM'", "'TRIM'", "'TRUE'", "'TRUNCATE'", "'TRY_CAST'", 
-                     "'TYPE'", "'UNARCHIVE'", "'UNBOUNDED'", "'UNCACHE'", 
-                     "'UNION'", "'UNIQUE'", "'UNKNOWN'", "'UNLOCK'", "'UNSET'", 
-                     "'UPDATE'", "'USE'", "'USER'", "'USING'", "'VALUES'", 
-                     "'VIEW'", "'VIEWS'", "'WHEN'", "'WHERE'", "'WINDOW'", 
-                     "'WITH'", "'YEAR'", "'ZONE'", "<INVALID>", "'<=>'", 
-                     "'<>'", "'!='", "'<'", "<INVALID>", "'>'", "<INVALID>", 
-                     "'+'", "'-'", "'*'", "'/'", "'%'", "'~'", "'&'", "'|'", 
-                     "'||'", "'^'" ]
+    literalNames = [
+        "<INVALID>",
+        "';'",
+        "'('",
+        "')'",
+        "','",
+        "'.'",
+        "'/*+'",
+        "'*/'",
+        "'->'",
+        "'['",
+        "']'",
+        "':'",
+        "'ADD'",
+        "'AFTER'",
+        "'ALL'",
+        "'ALTER'",
+        "'ANALYZE'",
+        "'AND'",
+        "'ANTI'",
+        "'ANY'",
+        "'ARCHIVE'",
+        "'ARRAY'",
+        "'AS'",
+        "'ASC'",
+        "'AT'",
+        "'AUTHORIZATION'",
+        "'BETWEEN'",
+        "'BOTH'",
+        "'BUCKET'",
+        "'BUCKETS'",
+        "'BY'",
+        "'CACHE'",
+        "'CASCADE'",
+        "'CASE'",
+        "'CAST'",
+        "'CHANGE'",
+        "'CHECK'",
+        "'CLEAR'",
+        "'CLUSTER'",
+        "'CLUSTERED'",
+        "'CODEGEN'",
+        "'COLLATE'",
+        "'COLLECTION'",
+        "'COLUMN'",
+        "'COLUMNS'",
+        "'COMMENT'",
+        "'COMMIT'",
+        "'COMPACT'",
+        "'COMPACTIONS'",
+        "'COMPUTE'",
+        "'CONCATENATE'",
+        "'CONSTRAINT'",
+        "'COST'",
+        "'CREATE'",
+        "'CROSS'",
+        "'CUBE'",
+        "'CURRENT'",
+        "'CURRENT_DATE'",
+        "'CURRENT_TIME'",
+        "'CURRENT_TIMESTAMP'",
+        "'CURRENT_USER'",
+        "'DAY'",
+        "'DATA'",
+        "'DATABASE'",
+        "<INVALID>",
+        "'DBPROPERTIES'",
+        "'DEFINED'",
+        "'DELETE'",
+        "'DELIMITED'",
+        "'DESC'",
+        "'DESCRIBE'",
+        "'DFS'",
+        "'DIRECTORIES'",
+        "'DIRECTORY'",
+        "'DISTINCT'",
+        "'DISTRIBUTE'",
+        "'DIV'",
+        "'DROP'",
+        "'ELSE'",
+        "'END'",
+        "'ESCAPE'",
+        "'ESCAPED'",
+        "'EXCEPT'",
+        "'EXCHANGE'",
+        "'EXISTS'",
+        "'EXPLAIN'",
+        "'EXPORT'",
+        "'EXTENDED'",
+        "'EXTERNAL'",
+        "'EXTRACT'",
+        "'FALSE'",
+        "'FETCH'",
+        "'FIELDS'",
+        "'FILTER'",
+        "'FILEFORMAT'",
+        "'FIRST'",
+        "'FOLLOWING'",
+        "'FOR'",
+        "'FOREIGN'",
+        "'FORMAT'",
+        "'FORMATTED'",
+        "'FROM'",
+        "'FULL'",
+        "'FUNCTION'",
+        "'FUNCTIONS'",
+        "'GLOBAL'",
+        "'GRANT'",
+        "'GROUP'",
+        "'GROUPING'",
+        "'HAVING'",
+        "'HOUR'",
+        "'IF'",
+        "'IGNORE'",
+        "'IMPORT'",
+        "'IN'",
+        "'INDEX'",
+        "'INDEXES'",
+        "'INNER'",
+        "'INPATH'",
+        "'INPUTFORMAT'",
+        "'INSERT'",
+        "'INTERSECT'",
+        "'INTERVAL'",
+        "'INTO'",
+        "'IS'",
+        "'ITEMS'",
+        "'JOIN'",
+        "'KEYS'",
+        "'LAST'",
+        "'LATERAL'",
+        "'LAZY'",
+        "'LEADING'",
+        "'LEFT'",
+        "'LIKE'",
+        "'LIMIT'",
+        "'LINES'",
+        "'LIST'",
+        "'LOAD'",
+        "'LOCAL'",
+        "'LOCATION'",
+        "'LOCK'",
+        "'LOCKS'",
+        "'LOGICAL'",
+        "'MACRO'",
+        "'MAP'",
+        "'MATCHED'",
+        "'MERGE'",
+        "'MINUTE'",
+        "'MONTH'",
+        "'MSCK'",
+        "'NAMESPACE'",
+        "'NAMESPACES'",
+        "'NATURAL'",
+        "'NO'",
+        "<INVALID>",
+        "'NULL'",
+        "'NULLS'",
+        "'OF'",
+        "'ON'",
+        "'ONLY'",
+        "'OPTION'",
+        "'OPTIONS'",
+        "'OR'",
+        "'ORDER'",
+        "'OUT'",
+        "'OUTER'",
+        "'OUTPUTFORMAT'",
+        "'OVER'",
+        "'OVERLAPS'",
+        "'OVERLAY'",
+        "'OVERWRITE'",
+        "'PARTITION'",
+        "'PARTITIONED'",
+        "'PARTITIONS'",
+        "'PERCENT'",
+        "'PIVOT'",
+        "'PLACING'",
+        "'POSITION'",
+        "'PRECEDING'",
+        "'PRIMARY'",
+        "'PRINCIPALS'",
+        "'PROPERTIES'",
+        "'PURGE'",
+        "'QUERY'",
+        "'RANGE'",
+        "'RECORDREADER'",
+        "'RECORDWRITER'",
+        "'RECOVER'",
+        "'REDUCE'",
+        "'REFERENCES'",
+        "'REFRESH'",
+        "'RENAME'",
+        "'REPAIR'",
+        "'REPLACE'",
+        "'RESET'",
+        "'RESPECT'",
+        "'RESTRICT'",
+        "'REVOKE'",
+        "'RIGHT'",
+        "<INVALID>",
+        "'ROLE'",
+        "'ROLES'",
+        "'ROLLBACK'",
+        "'ROLLUP'",
+        "'ROW'",
+        "'ROWS'",
+        "'SECOND'",
+        "'SCHEMA'",
+        "'SELECT'",
+        "'SEMI'",
+        "'SEPARATED'",
+        "'SERDE'",
+        "'SERDEPROPERTIES'",
+        "'SESSION_USER'",
+        "'SET'",
+        "'MINUS'",
+        "'SETS'",
+        "'SHOW'",
+        "'SKEWED'",
+        "'SOME'",
+        "'SORT'",
+        "'SORTED'",
+        "'START'",
+        "'STATISTICS'",
+        "'STORED'",
+        "'STRATIFY'",
+        "'STRUCT'",
+        "'SUBSTR'",
+        "'SUBSTRING'",
+        "'SYNC'",
+        "'TABLE'",
+        "'TABLES'",
+        "'TABLESAMPLE'",
+        "'TBLPROPERTIES'",
+        "<INVALID>",
+        "'TERMINATED'",
+        "'THEN'",
+        "'TIME'",
+        "'TO'",
+        "'TOUCH'",
+        "'TRAILING'",
+        "'TRANSACTION'",
+        "'TRANSACTIONS'",
+        "'TRANSFORM'",
+        "'TRIM'",
+        "'TRUE'",
+        "'TRUNCATE'",
+        "'TRY_CAST'",
+        "'TYPE'",
+        "'UNARCHIVE'",
+        "'UNBOUNDED'",
+        "'UNCACHE'",
+        "'UNION'",
+        "'UNIQUE'",
+        "'UNKNOWN'",
+        "'UNLOCK'",
+        "'UNSET'",
+        "'UPDATE'",
+        "'USE'",
+        "'USER'",
+        "'USING'",
+        "'VALUES'",
+        "'VIEW'",
+        "'VIEWS'",
+        "'WHEN'",
+        "'WHERE'",
+        "'WINDOW'",
+        "'WITH'",
+        "'YEAR'",
+        "'ZONE'",
+        "<INVALID>",
+        "'<=>'",
+        "'<>'",
+        "'!='",
+        "'<'",
+        "<INVALID>",
+        "'>'",
+        "<INVALID>",
+        "'+'",
+        "'-'",
+        "'*'",
+        "'/'",
+        "'%'",
+        "'~'",
+        "'&'",
+        "'|'",
+        "'||'",
+        "'^'",
+    ]
 
-    symbolicNames = [ "<INVALID>", "<INVALID>", "<INVALID>", "<INVALID>", 
-                      "<INVALID>", "<INVALID>", "<INVALID>", "<INVALID>", 
-                      "<INVALID>", "<INVALID>", "<INVALID>", "<INVALID>", 
-                      "ADD", "AFTER", "ALL", "ALTER", "ANALYZE", "AND", 
-                      "ANTI", "ANY", "ARCHIVE", "ARRAY", "AS", "ASC", "AT", 
-                      "AUTHORIZATION", "BETWEEN", "BOTH", "BUCKET", "BUCKETS", 
-                      "BY", "CACHE", "CASCADE", "CASE", "CAST", "CHANGE", 
-                      "CHECK", "CLEAR", "CLUSTER", "CLUSTERED", "CODEGEN", 
-                      "COLLATE", "COLLECTION", "COLUMN", "COLUMNS", "COMMENT", 
-                      "COMMIT", "COMPACT", "COMPACTIONS", "COMPUTE", "CONCATENATE", 
-                      "CONSTRAINT", "COST", "CREATE", "CROSS", "CUBE", "CURRENT", 
-                      "CURRENT_DATE", "CURRENT_TIME", "CURRENT_TIMESTAMP", 
-                      "CURRENT_USER", "DAY", "DATA", "DATABASE", "DATABASES", 
-                      "DBPROPERTIES", "DEFINED", "DELETE", "DELIMITED", 
-                      "DESC", "DESCRIBE", "DFS", "DIRECTORIES", "DIRECTORY", 
-                      "DISTINCT", "DISTRIBUTE", "DIV", "DROP", "ELSE", "END", 
-                      "ESCAPE", "ESCAPED", "EXCEPT", "EXCHANGE", "EXISTS", 
-                      "EXPLAIN", "EXPORT", "EXTENDED", "EXTERNAL", "EXTRACT", 
-                      "FALSE", "FETCH", "FIELDS", "FILTER", "FILEFORMAT", 
-                      "FIRST", "FOLLOWING", "FOR", "FOREIGN", "FORMAT", 
-                      "FORMATTED", "FROM", "FULL", "FUNCTION", "FUNCTIONS", 
-                      "GLOBAL", "GRANT", "GROUP", "GROUPING", "HAVING", 
-                      "HOUR", "IF", "IGNORE", "IMPORT", "IN", "INDEX", "INDEXES", 
-                      "INNER", "INPATH", "INPUTFORMAT", "INSERT", "INTERSECT", 
-                      "INTERVAL", "INTO", "IS", "ITEMS", "JOIN", "KEYS", 
-                      "LAST", "LATERAL", "LAZY", "LEADING", "LEFT", "LIKE", 
-                      "LIMIT", "LINES", "LIST", "LOAD", "LOCAL", "LOCATION", 
-                      "LOCK", "LOCKS", "LOGICAL", "MACRO", "MAP", "MATCHED", 
-                      "MERGE", "MINUTE", "MONTH", "MSCK", "NAMESPACE", "NAMESPACES", 
-                      "NATURAL", "NO", "NOT", "NULL", "NULLS", "OF", "ON", 
-                      "ONLY", "OPTION", "OPTIONS", "OR", "ORDER", "OUT", 
-                      "OUTER", "OUTPUTFORMAT", "OVER", "OVERLAPS", "OVERLAY", 
-                      "OVERWRITE", "PARTITION", "PARTITIONED", "PARTITIONS", 
-                      "PERCENTLIT", "PIVOT", "PLACING", "POSITION", "PRECEDING", 
-                      "PRIMARY", "PRINCIPALS", "PROPERTIES", "PURGE", "QUERY", 
-                      "RANGE", "RECORDREADER", "RECORDWRITER", "RECOVER", 
-                      "REDUCE", "REFERENCES", "REFRESH", "RENAME", "REPAIR", 
-                      "REPLACE", "RESET", "RESPECT", "RESTRICT", "REVOKE", 
-                      "RIGHT", "RLIKE", "ROLE", "ROLES", "ROLLBACK", "ROLLUP", 
-                      "ROW", "ROWS", "SECOND", "SCHEMA", "SELECT", "SEMI", 
-                      "SEPARATED", "SERDE", "SERDEPROPERTIES", "SESSION_USER", 
-                      "SET", "SETMINUS", "SETS", "SHOW", "SKEWED", "SOME", 
-                      "SORT", "SORTED", "START", "STATISTICS", "STORED", 
-                      "STRATIFY", "STRUCT", "SUBSTR", "SUBSTRING", "SYNC", 
-                      "TABLE", "TABLES", "TABLESAMPLE", "TBLPROPERTIES", 
-                      "TEMPORARY", "TERMINATED", "THEN", "TIME", "TO", "TOUCH", 
-                      "TRAILING", "TRANSACTION", "TRANSACTIONS", "TRANSFORM", 
-                      "TRIM", "TRUE", "TRUNCATE", "TRY_CAST", "TYPE", "UNARCHIVE", 
-                      "UNBOUNDED", "UNCACHE", "UNION", "UNIQUE", "UNKNOWN", 
-                      "UNLOCK", "UNSET", "UPDATE", "USE", "USER", "USING", 
-                      "VALUES", "VIEW", "VIEWS", "WHEN", "WHERE", "WINDOW", 
-                      "WITH", "YEAR", "ZONE", "EQ", "NSEQ", "NEQ", "NEQJ", 
-                      "LT", "LTE", "GT", "GTE", "PLUS", "MINUS", "ASTERISK", 
-                      "SLASH", "PERCENT", "TILDE", "AMPERSAND", "PIPE", 
-                      "CONCAT_PIPE", "HAT", "STRING", "BIGINT_LITERAL", 
-                      "SMALLINT_LITERAL", "TINYINT_LITERAL", "INTEGER_VALUE", 
-                      "EXPONENT_VALUE", "DECIMAL_VALUE", "FLOAT_LITERAL", 
-                      "DOUBLE_LITERAL", "BIGDECIMAL_LITERAL", "IDENTIFIER", 
-                      "BACKQUOTED_IDENTIFIER", "SIMPLE_COMMENT", "BRACKETED_COMMENT", 
-                      "WS", "UNRECOGNIZED" ]
+    symbolicNames = [
+        "<INVALID>",
+        "<INVALID>",
+        "<INVALID>",
+        "<INVALID>",
+        "<INVALID>",
+        "<INVALID>",
+        "<INVALID>",
+        "<INVALID>",
+        "<INVALID>",
+        "<INVALID>",
+        "<INVALID>",
+        "<INVALID>",
+        "ADD",
+        "AFTER",
+        "ALL",
+        "ALTER",
+        "ANALYZE",
+        "AND",
+        "ANTI",
+        "ANY",
+        "ARCHIVE",
+        "ARRAY",
+        "AS",
+        "ASC",
+        "AT",
+        "AUTHORIZATION",
+        "BETWEEN",
+        "BOTH",
+        "BUCKET",
+        "BUCKETS",
+        "BY",
+        "CACHE",
+        "CASCADE",
+        "CASE",
+        "CAST",
+        "CHANGE",
+        "CHECK",
+        "CLEAR",
+        "CLUSTER",
+        "CLUSTERED",
+        "CODEGEN",
+        "COLLATE",
+        "COLLECTION",
+        "COLUMN",
+        "COLUMNS",
+        "COMMENT",
+        "COMMIT",
+        "COMPACT",
+        "COMPACTIONS",
+        "COMPUTE",
+        "CONCATENATE",
+        "CONSTRAINT",
+        "COST",
+        "CREATE",
+        "CROSS",
+        "CUBE",
+        "CURRENT",
+        "CURRENT_DATE",
+        "CURRENT_TIME",
+        "CURRENT_TIMESTAMP",
+        "CURRENT_USER",
+        "DAY",
+        "DATA",
+        "DATABASE",
+        "DATABASES",
+        "DBPROPERTIES",
+        "DEFINED",
+        "DELETE",
+        "DELIMITED",
+        "DESC",
+        "DESCRIBE",
+        "DFS",
+        "DIRECTORIES",
+        "DIRECTORY",
+        "DISTINCT",
+        "DISTRIBUTE",
+        "DIV",
+        "DROP",
+        "ELSE",
+        "END",
+        "ESCAPE",
+        "ESCAPED",
+        "EXCEPT",
+        "EXCHANGE",
+        "EXISTS",
+        "EXPLAIN",
+        "EXPORT",
+        "EXTENDED",
+        "EXTERNAL",
+        "EXTRACT",
+        "FALSE",
+        "FETCH",
+        "FIELDS",
+        "FILTER",
+        "FILEFORMAT",
+        "FIRST",
+        "FOLLOWING",
+        "FOR",
+        "FOREIGN",
+        "FORMAT",
+        "FORMATTED",
+        "FROM",
+        "FULL",
+        "FUNCTION",
+        "FUNCTIONS",
+        "GLOBAL",
+        "GRANT",
+        "GROUP",
+        "GROUPING",
+        "HAVING",
+        "HOUR",
+        "IF",
+        "IGNORE",
+        "IMPORT",
+        "IN",
+        "INDEX",
+        "INDEXES",
+        "INNER",
+        "INPATH",
+        "INPUTFORMAT",
+        "INSERT",
+        "INTERSECT",
+        "INTERVAL",
+        "INTO",
+        "IS",
+        "ITEMS",
+        "JOIN",
+        "KEYS",
+        "LAST",
+        "LATERAL",
+        "LAZY",
+        "LEADING",
+        "LEFT",
+        "LIKE",
+        "LIMIT",
+        "LINES",
+        "LIST",
+        "LOAD",
+        "LOCAL",
+        "LOCATION",
+        "LOCK",
+        "LOCKS",
+        "LOGICAL",
+        "MACRO",
+        "MAP",
+        "MATCHED",
+        "MERGE",
+        "MINUTE",
+        "MONTH",
+        "MSCK",
+        "NAMESPACE",
+        "NAMESPACES",
+        "NATURAL",
+        "NO",
+        "NOT",
+        "NULL",
+        "NULLS",
+        "OF",
+        "ON",
+        "ONLY",
+        "OPTION",
+        "OPTIONS",
+        "OR",
+        "ORDER",
+        "OUT",
+        "OUTER",
+        "OUTPUTFORMAT",
+        "OVER",
+        "OVERLAPS",
+        "OVERLAY",
+        "OVERWRITE",
+        "PARTITION",
+        "PARTITIONED",
+        "PARTITIONS",
+        "PERCENTLIT",
+        "PIVOT",
+        "PLACING",
+        "POSITION",
+        "PRECEDING",
+        "PRIMARY",
+        "PRINCIPALS",
+        "PROPERTIES",
+        "PURGE",
+        "QUERY",
+        "RANGE",
+        "RECORDREADER",
+        "RECORDWRITER",
+        "RECOVER",
+        "REDUCE",
+        "REFERENCES",
+        "REFRESH",
+        "RENAME",
+        "REPAIR",
+        "REPLACE",
+        "RESET",
+        "RESPECT",
+        "RESTRICT",
+        "REVOKE",
+        "RIGHT",
+        "RLIKE",
+        "ROLE",
+        "ROLES",
+        "ROLLBACK",
+        "ROLLUP",
+        "ROW",
+        "ROWS",
+        "SECOND",
+        "SCHEMA",
+        "SELECT",
+        "SEMI",
+        "SEPARATED",
+        "SERDE",
+        "SERDEPROPERTIES",
+        "SESSION_USER",
+        "SET",
+        "SETMINUS",
+        "SETS",
+        "SHOW",
+        "SKEWED",
+        "SOME",
+        "SORT",
+        "SORTED",
+        "START",
+        "STATISTICS",
+        "STORED",
+        "STRATIFY",
+        "STRUCT",
+        "SUBSTR",
+        "SUBSTRING",
+        "SYNC",
+        "TABLE",
+        "TABLES",
+        "TABLESAMPLE",
+        "TBLPROPERTIES",
+        "TEMPORARY",
+        "TERMINATED",
+        "THEN",
+        "TIME",
+        "TO",
+        "TOUCH",
+        "TRAILING",
+        "TRANSACTION",
+        "TRANSACTIONS",
+        "TRANSFORM",
+        "TRIM",
+        "TRUE",
+        "TRUNCATE",
+        "TRY_CAST",
+        "TYPE",
+        "UNARCHIVE",
+        "UNBOUNDED",
+        "UNCACHE",
+        "UNION",
+        "UNIQUE",
+        "UNKNOWN",
+        "UNLOCK",
+        "UNSET",
+        "UPDATE",
+        "USE",
+        "USER",
+        "USING",
+        "VALUES",
+        "VIEW",
+        "VIEWS",
+        "WHEN",
+        "WHERE",
+        "WINDOW",
+        "WITH",
+        "YEAR",
+        "ZONE",
+        "EQ",
+        "NSEQ",
+        "NEQ",
+        "NEQJ",
+        "LT",
+        "LTE",
+        "GT",
+        "GTE",
+        "PLUS",
+        "MINUS",
+        "ASTERISK",
+        "SLASH",
+        "PERCENT",
+        "TILDE",
+        "AMPERSAND",
+        "PIPE",
+        "CONCAT_PIPE",
+        "HAT",
+        "STRING",
+        "BIGINT_LITERAL",
+        "SMALLINT_LITERAL",
+        "TINYINT_LITERAL",
+        "INTEGER_VALUE",
+        "EXPONENT_VALUE",
+        "DECIMAL_VALUE",
+        "FLOAT_LITERAL",
+        "DOUBLE_LITERAL",
+        "BIGDECIMAL_LITERAL",
+        "IDENTIFIER",
+        "BACKQUOTED_IDENTIFIER",
+        "SIMPLE_COMMENT",
+        "BRACKETED_COMMENT",
+        "WS",
+        "UNRECOGNIZED",
+    ]
 
     RULE_singleStatement = 0
     RULE_singleExpression = 1
@@ -2046,392 +2523,491 @@ class SqlBaseParser ( Parser ):
     RULE_strictNonReserved = 141
     RULE_nonReserved = 142
 
-    ruleNames =  [ "singleStatement", "singleExpression", "singleTableIdentifier", 
-                   "singleMultipartIdentifier", "singleFunctionIdentifier", 
-                   "singleDataType", "singleTableSchema", "statement", "configKey", 
-                   "configValue", "unsupportedHiveNativeCommands", "createTableHeader", 
-                   "replaceTableHeader", "bucketSpec", "skewSpec", "locationSpec", 
-                   "commentSpec", "query", "insertInto", "partitionSpecLocation", 
-                   "partitionSpec", "partitionVal", "namespace", "describeFuncName", 
-                   "describeColName", "ctes", "namedQuery", "tableProvider", 
-                   "createTableClauses", "tablePropertyList", "tableProperty", 
-                   "tablePropertyKey", "tablePropertyValue", "constantList", 
-                   "nestedConstantList", "createFileFormat", "fileFormat", 
-                   "storageHandler", "resource", "dmlStatementNoWith", "queryOrganization", 
-                   "multiInsertQueryBody", "queryTerm", "queryPrimary", 
-                   "sortItem", "fromStatement", "fromStatementBody", "querySpecification", 
-                   "transformClause", "selectClause", "setClause", "matchedClause", 
-                   "notMatchedClause", "matchedAction", "notMatchedAction", 
-                   "assignmentList", "assignment", "whereClause", "havingClause", 
-                   "hint", "hintStatement", "fromClause", "aggregationClause", 
-                   "groupByClause", "groupingAnalytics", "groupingElement", 
-                   "groupingSet", "pivotClause", "pivotColumn", "pivotValue", 
-                   "lateralView", "setQuantifier", "relation", "joinRelation", 
-                   "joinType", "joinCriteria", "sample", "sampleMethod", 
-                   "identifierList", "identifierSeq", "orderedIdentifierList", 
-                   "orderedIdentifier", "identifierCommentList", "identifierComment", 
-                   "relationPrimary", "inlineTable", "functionTable", "tableAlias", 
-                   "rowFormat", "multipartIdentifierList", "multipartIdentifier", 
-                   "tableIdentifier", "functionIdentifier", "namedExpression", 
-                   "namedExpressionSeq", "partitionFieldList", "partitionField", 
-                   "transform", "transformArgument", "expression", "expressionSeq", 
-                   "booleanExpression", "predicate", "valueExpression", 
-                   "primaryExpression", "constant", "comparisonOperator", 
-                   "arithmeticOperator", "predicateOperator", "booleanValue", 
-                   "interval", "errorCapturingMultiUnitsInterval", "multiUnitsInterval", 
-                   "errorCapturingUnitToUnitInterval", "unitToUnitInterval", 
-                   "intervalValue", "colPosition", "dataType", "qualifiedColTypeWithPositionList", 
-                   "qualifiedColTypeWithPosition", "colTypeList", "colType", 
-                   "complexColTypeList", "complexColType", "whenClause", 
-                   "windowClause", "namedWindow", "windowSpec", "windowFrame", 
-                   "frameBound", "qualifiedNameList", "functionName", "qualifiedName", 
-                   "errorCapturingIdentifier", "errorCapturingIdentifierExtra", 
-                   "identifier", "strictIdentifier", "quotedIdentifier", 
-                   "number", "alterColumnAction", "ansiNonReserved", "strictNonReserved", 
-                   "nonReserved" ]
+    ruleNames = [
+        "singleStatement",
+        "singleExpression",
+        "singleTableIdentifier",
+        "singleMultipartIdentifier",
+        "singleFunctionIdentifier",
+        "singleDataType",
+        "singleTableSchema",
+        "statement",
+        "configKey",
+        "configValue",
+        "unsupportedHiveNativeCommands",
+        "createTableHeader",
+        "replaceTableHeader",
+        "bucketSpec",
+        "skewSpec",
+        "locationSpec",
+        "commentSpec",
+        "query",
+        "insertInto",
+        "partitionSpecLocation",
+        "partitionSpec",
+        "partitionVal",
+        "namespace",
+        "describeFuncName",
+        "describeColName",
+        "ctes",
+        "namedQuery",
+        "tableProvider",
+        "createTableClauses",
+        "tablePropertyList",
+        "tableProperty",
+        "tablePropertyKey",
+        "tablePropertyValue",
+        "constantList",
+        "nestedConstantList",
+        "createFileFormat",
+        "fileFormat",
+        "storageHandler",
+        "resource",
+        "dmlStatementNoWith",
+        "queryOrganization",
+        "multiInsertQueryBody",
+        "queryTerm",
+        "queryPrimary",
+        "sortItem",
+        "fromStatement",
+        "fromStatementBody",
+        "querySpecification",
+        "transformClause",
+        "selectClause",
+        "setClause",
+        "matchedClause",
+        "notMatchedClause",
+        "matchedAction",
+        "notMatchedAction",
+        "assignmentList",
+        "assignment",
+        "whereClause",
+        "havingClause",
+        "hint",
+        "hintStatement",
+        "fromClause",
+        "aggregationClause",
+        "groupByClause",
+        "groupingAnalytics",
+        "groupingElement",
+        "groupingSet",
+        "pivotClause",
+        "pivotColumn",
+        "pivotValue",
+        "lateralView",
+        "setQuantifier",
+        "relation",
+        "joinRelation",
+        "joinType",
+        "joinCriteria",
+        "sample",
+        "sampleMethod",
+        "identifierList",
+        "identifierSeq",
+        "orderedIdentifierList",
+        "orderedIdentifier",
+        "identifierCommentList",
+        "identifierComment",
+        "relationPrimary",
+        "inlineTable",
+        "functionTable",
+        "tableAlias",
+        "rowFormat",
+        "multipartIdentifierList",
+        "multipartIdentifier",
+        "tableIdentifier",
+        "functionIdentifier",
+        "namedExpression",
+        "namedExpressionSeq",
+        "partitionFieldList",
+        "partitionField",
+        "transform",
+        "transformArgument",
+        "expression",
+        "expressionSeq",
+        "booleanExpression",
+        "predicate",
+        "valueExpression",
+        "primaryExpression",
+        "constant",
+        "comparisonOperator",
+        "arithmeticOperator",
+        "predicateOperator",
+        "booleanValue",
+        "interval",
+        "errorCapturingMultiUnitsInterval",
+        "multiUnitsInterval",
+        "errorCapturingUnitToUnitInterval",
+        "unitToUnitInterval",
+        "intervalValue",
+        "colPosition",
+        "dataType",
+        "qualifiedColTypeWithPositionList",
+        "qualifiedColTypeWithPosition",
+        "colTypeList",
+        "colType",
+        "complexColTypeList",
+        "complexColType",
+        "whenClause",
+        "windowClause",
+        "namedWindow",
+        "windowSpec",
+        "windowFrame",
+        "frameBound",
+        "qualifiedNameList",
+        "functionName",
+        "qualifiedName",
+        "errorCapturingIdentifier",
+        "errorCapturingIdentifierExtra",
+        "identifier",
+        "strictIdentifier",
+        "quotedIdentifier",
+        "number",
+        "alterColumnAction",
+        "ansiNonReserved",
+        "strictNonReserved",
+        "nonReserved",
+    ]
 
     EOF = Token.EOF
-    T__0=1
-    T__1=2
-    T__2=3
-    T__3=4
-    T__4=5
-    T__5=6
-    T__6=7
-    T__7=8
-    T__8=9
-    T__9=10
-    T__10=11
-    ADD=12
-    AFTER=13
-    ALL=14
-    ALTER=15
-    ANALYZE=16
-    AND=17
-    ANTI=18
-    ANY=19
-    ARCHIVE=20
-    ARRAY=21
-    AS=22
-    ASC=23
-    AT=24
-    AUTHORIZATION=25
-    BETWEEN=26
-    BOTH=27
-    BUCKET=28
-    BUCKETS=29
-    BY=30
-    CACHE=31
-    CASCADE=32
-    CASE=33
-    CAST=34
-    CHANGE=35
-    CHECK=36
-    CLEAR=37
-    CLUSTER=38
-    CLUSTERED=39
-    CODEGEN=40
-    COLLATE=41
-    COLLECTION=42
-    COLUMN=43
-    COLUMNS=44
-    COMMENT=45
-    COMMIT=46
-    COMPACT=47
-    COMPACTIONS=48
-    COMPUTE=49
-    CONCATENATE=50
-    CONSTRAINT=51
-    COST=52
-    CREATE=53
-    CROSS=54
-    CUBE=55
-    CURRENT=56
-    CURRENT_DATE=57
-    CURRENT_TIME=58
-    CURRENT_TIMESTAMP=59
-    CURRENT_USER=60
-    DAY=61
-    DATA=62
-    DATABASE=63
-    DATABASES=64
-    DBPROPERTIES=65
-    DEFINED=66
-    DELETE=67
-    DELIMITED=68
-    DESC=69
-    DESCRIBE=70
-    DFS=71
-    DIRECTORIES=72
-    DIRECTORY=73
-    DISTINCT=74
-    DISTRIBUTE=75
-    DIV=76
-    DROP=77
-    ELSE=78
-    END=79
-    ESCAPE=80
-    ESCAPED=81
-    EXCEPT=82
-    EXCHANGE=83
-    EXISTS=84
-    EXPLAIN=85
-    EXPORT=86
-    EXTENDED=87
-    EXTERNAL=88
-    EXTRACT=89
-    FALSE=90
-    FETCH=91
-    FIELDS=92
-    FILTER=93
-    FILEFORMAT=94
-    FIRST=95
-    FOLLOWING=96
-    FOR=97
-    FOREIGN=98
-    FORMAT=99
-    FORMATTED=100
-    FROM=101
-    FULL=102
-    FUNCTION=103
-    FUNCTIONS=104
-    GLOBAL=105
-    GRANT=106
-    GROUP=107
-    GROUPING=108
-    HAVING=109
-    HOUR=110
-    IF=111
-    IGNORE=112
-    IMPORT=113
-    IN=114
-    INDEX=115
-    INDEXES=116
-    INNER=117
-    INPATH=118
-    INPUTFORMAT=119
-    INSERT=120
-    INTERSECT=121
-    INTERVAL=122
-    INTO=123
-    IS=124
-    ITEMS=125
-    JOIN=126
-    KEYS=127
-    LAST=128
-    LATERAL=129
-    LAZY=130
-    LEADING=131
-    LEFT=132
-    LIKE=133
-    LIMIT=134
-    LINES=135
-    LIST=136
-    LOAD=137
-    LOCAL=138
-    LOCATION=139
-    LOCK=140
-    LOCKS=141
-    LOGICAL=142
-    MACRO=143
-    MAP=144
-    MATCHED=145
-    MERGE=146
-    MINUTE=147
-    MONTH=148
-    MSCK=149
-    NAMESPACE=150
-    NAMESPACES=151
-    NATURAL=152
-    NO=153
-    NOT=154
-    NULL=155
-    NULLS=156
-    OF=157
-    ON=158
-    ONLY=159
-    OPTION=160
-    OPTIONS=161
-    OR=162
-    ORDER=163
-    OUT=164
-    OUTER=165
-    OUTPUTFORMAT=166
-    OVER=167
-    OVERLAPS=168
-    OVERLAY=169
-    OVERWRITE=170
-    PARTITION=171
-    PARTITIONED=172
-    PARTITIONS=173
-    PERCENTLIT=174
-    PIVOT=175
-    PLACING=176
-    POSITION=177
-    PRECEDING=178
-    PRIMARY=179
-    PRINCIPALS=180
-    PROPERTIES=181
-    PURGE=182
-    QUERY=183
-    RANGE=184
-    RECORDREADER=185
-    RECORDWRITER=186
-    RECOVER=187
-    REDUCE=188
-    REFERENCES=189
-    REFRESH=190
-    RENAME=191
-    REPAIR=192
-    REPLACE=193
-    RESET=194
-    RESPECT=195
-    RESTRICT=196
-    REVOKE=197
-    RIGHT=198
-    RLIKE=199
-    ROLE=200
-    ROLES=201
-    ROLLBACK=202
-    ROLLUP=203
-    ROW=204
-    ROWS=205
-    SECOND=206
-    SCHEMA=207
-    SELECT=208
-    SEMI=209
-    SEPARATED=210
-    SERDE=211
-    SERDEPROPERTIES=212
-    SESSION_USER=213
-    SET=214
-    SETMINUS=215
-    SETS=216
-    SHOW=217
-    SKEWED=218
-    SOME=219
-    SORT=220
-    SORTED=221
-    START=222
-    STATISTICS=223
-    STORED=224
-    STRATIFY=225
-    STRUCT=226
-    SUBSTR=227
-    SUBSTRING=228
-    SYNC=229
-    TABLE=230
-    TABLES=231
-    TABLESAMPLE=232
-    TBLPROPERTIES=233
-    TEMPORARY=234
-    TERMINATED=235
-    THEN=236
-    TIME=237
-    TO=238
-    TOUCH=239
-    TRAILING=240
-    TRANSACTION=241
-    TRANSACTIONS=242
-    TRANSFORM=243
-    TRIM=244
-    TRUE=245
-    TRUNCATE=246
-    TRY_CAST=247
-    TYPE=248
-    UNARCHIVE=249
-    UNBOUNDED=250
-    UNCACHE=251
-    UNION=252
-    UNIQUE=253
-    UNKNOWN=254
-    UNLOCK=255
-    UNSET=256
-    UPDATE=257
-    USE=258
-    USER=259
-    USING=260
-    VALUES=261
-    VIEW=262
-    VIEWS=263
-    WHEN=264
-    WHERE=265
-    WINDOW=266
-    WITH=267
-    YEAR=268
-    ZONE=269
-    EQ=270
-    NSEQ=271
-    NEQ=272
-    NEQJ=273
-    LT=274
-    LTE=275
-    GT=276
-    GTE=277
-    PLUS=278
-    MINUS=279
-    ASTERISK=280
-    SLASH=281
-    PERCENT=282
-    TILDE=283
-    AMPERSAND=284
-    PIPE=285
-    CONCAT_PIPE=286
-    HAT=287
-    STRING=288
-    BIGINT_LITERAL=289
-    SMALLINT_LITERAL=290
-    TINYINT_LITERAL=291
-    INTEGER_VALUE=292
-    EXPONENT_VALUE=293
-    DECIMAL_VALUE=294
-    FLOAT_LITERAL=295
-    DOUBLE_LITERAL=296
-    BIGDECIMAL_LITERAL=297
-    IDENTIFIER=298
-    BACKQUOTED_IDENTIFIER=299
-    SIMPLE_COMMENT=300
-    BRACKETED_COMMENT=301
-    WS=302
-    UNRECOGNIZED=303
+    T__0 = 1
+    T__1 = 2
+    T__2 = 3
+    T__3 = 4
+    T__4 = 5
+    T__5 = 6
+    T__6 = 7
+    T__7 = 8
+    T__8 = 9
+    T__9 = 10
+    T__10 = 11
+    ADD = 12
+    AFTER = 13
+    ALL = 14
+    ALTER = 15
+    ANALYZE = 16
+    AND = 17
+    ANTI = 18
+    ANY = 19
+    ARCHIVE = 20
+    ARRAY = 21
+    AS = 22
+    ASC = 23
+    AT = 24
+    AUTHORIZATION = 25
+    BETWEEN = 26
+    BOTH = 27
+    BUCKET = 28
+    BUCKETS = 29
+    BY = 30
+    CACHE = 31
+    CASCADE = 32
+    CASE = 33
+    CAST = 34
+    CHANGE = 35
+    CHECK = 36
+    CLEAR = 37
+    CLUSTER = 38
+    CLUSTERED = 39
+    CODEGEN = 40
+    COLLATE = 41
+    COLLECTION = 42
+    COLUMN = 43
+    COLUMNS = 44
+    COMMENT = 45
+    COMMIT = 46
+    COMPACT = 47
+    COMPACTIONS = 48
+    COMPUTE = 49
+    CONCATENATE = 50
+    CONSTRAINT = 51
+    COST = 52
+    CREATE = 53
+    CROSS = 54
+    CUBE = 55
+    CURRENT = 56
+    CURRENT_DATE = 57
+    CURRENT_TIME = 58
+    CURRENT_TIMESTAMP = 59
+    CURRENT_USER = 60
+    DAY = 61
+    DATA = 62
+    DATABASE = 63
+    DATABASES = 64
+    DBPROPERTIES = 65
+    DEFINED = 66
+    DELETE = 67
+    DELIMITED = 68
+    DESC = 69
+    DESCRIBE = 70
+    DFS = 71
+    DIRECTORIES = 72
+    DIRECTORY = 73
+    DISTINCT = 74
+    DISTRIBUTE = 75
+    DIV = 76
+    DROP = 77
+    ELSE = 78
+    END = 79
+    ESCAPE = 80
+    ESCAPED = 81
+    EXCEPT = 82
+    EXCHANGE = 83
+    EXISTS = 84
+    EXPLAIN = 85
+    EXPORT = 86
+    EXTENDED = 87
+    EXTERNAL = 88
+    EXTRACT = 89
+    FALSE = 90
+    FETCH = 91
+    FIELDS = 92
+    FILTER = 93
+    FILEFORMAT = 94
+    FIRST = 95
+    FOLLOWING = 96
+    FOR = 97
+    FOREIGN = 98
+    FORMAT = 99
+    FORMATTED = 100
+    FROM = 101
+    FULL = 102
+    FUNCTION = 103
+    FUNCTIONS = 104
+    GLOBAL = 105
+    GRANT = 106
+    GROUP = 107
+    GROUPING = 108
+    HAVING = 109
+    HOUR = 110
+    IF = 111
+    IGNORE = 112
+    IMPORT = 113
+    IN = 114
+    INDEX = 115
+    INDEXES = 116
+    INNER = 117
+    INPATH = 118
+    INPUTFORMAT = 119
+    INSERT = 120
+    INTERSECT = 121
+    INTERVAL = 122
+    INTO = 123
+    IS = 124
+    ITEMS = 125
+    JOIN = 126
+    KEYS = 127
+    LAST = 128
+    LATERAL = 129
+    LAZY = 130
+    LEADING = 131
+    LEFT = 132
+    LIKE = 133
+    LIMIT = 134
+    LINES = 135
+    LIST = 136
+    LOAD = 137
+    LOCAL = 138
+    LOCATION = 139
+    LOCK = 140
+    LOCKS = 141
+    LOGICAL = 142
+    MACRO = 143
+    MAP = 144
+    MATCHED = 145
+    MERGE = 146
+    MINUTE = 147
+    MONTH = 148
+    MSCK = 149
+    NAMESPACE = 150
+    NAMESPACES = 151
+    NATURAL = 152
+    NO = 153
+    NOT = 154
+    NULL = 155
+    NULLS = 156
+    OF = 157
+    ON = 158
+    ONLY = 159
+    OPTION = 160
+    OPTIONS = 161
+    OR = 162
+    ORDER = 163
+    OUT = 164
+    OUTER = 165
+    OUTPUTFORMAT = 166
+    OVER = 167
+    OVERLAPS = 168
+    OVERLAY = 169
+    OVERWRITE = 170
+    PARTITION = 171
+    PARTITIONED = 172
+    PARTITIONS = 173
+    PERCENTLIT = 174
+    PIVOT = 175
+    PLACING = 176
+    POSITION = 177
+    PRECEDING = 178
+    PRIMARY = 179
+    PRINCIPALS = 180
+    PROPERTIES = 181
+    PURGE = 182
+    QUERY = 183
+    RANGE = 184
+    RECORDREADER = 185
+    RECORDWRITER = 186
+    RECOVER = 187
+    REDUCE = 188
+    REFERENCES = 189
+    REFRESH = 190
+    RENAME = 191
+    REPAIR = 192
+    REPLACE = 193
+    RESET = 194
+    RESPECT = 195
+    RESTRICT = 196
+    REVOKE = 197
+    RIGHT = 198
+    RLIKE = 199
+    ROLE = 200
+    ROLES = 201
+    ROLLBACK = 202
+    ROLLUP = 203
+    ROW = 204
+    ROWS = 205
+    SECOND = 206
+    SCHEMA = 207
+    SELECT = 208
+    SEMI = 209
+    SEPARATED = 210
+    SERDE = 211
+    SERDEPROPERTIES = 212
+    SESSION_USER = 213
+    SET = 214
+    SETMINUS = 215
+    SETS = 216
+    SHOW = 217
+    SKEWED = 218
+    SOME = 219
+    SORT = 220
+    SORTED = 221
+    START = 222
+    STATISTICS = 223
+    STORED = 224
+    STRATIFY = 225
+    STRUCT = 226
+    SUBSTR = 227
+    SUBSTRING = 228
+    SYNC = 229
+    TABLE = 230
+    TABLES = 231
+    TABLESAMPLE = 232
+    TBLPROPERTIES = 233
+    TEMPORARY = 234
+    TERMINATED = 235
+    THEN = 236
+    TIME = 237
+    TO = 238
+    TOUCH = 239
+    TRAILING = 240
+    TRANSACTION = 241
+    TRANSACTIONS = 242
+    TRANSFORM = 243
+    TRIM = 244
+    TRUE = 245
+    TRUNCATE = 246
+    TRY_CAST = 247
+    TYPE = 248
+    UNARCHIVE = 249
+    UNBOUNDED = 250
+    UNCACHE = 251
+    UNION = 252
+    UNIQUE = 253
+    UNKNOWN = 254
+    UNLOCK = 255
+    UNSET = 256
+    UPDATE = 257
+    USE = 258
+    USER = 259
+    USING = 260
+    VALUES = 261
+    VIEW = 262
+    VIEWS = 263
+    WHEN = 264
+    WHERE = 265
+    WINDOW = 266
+    WITH = 267
+    YEAR = 268
+    ZONE = 269
+    EQ = 270
+    NSEQ = 271
+    NEQ = 272
+    NEQJ = 273
+    LT = 274
+    LTE = 275
+    GT = 276
+    GTE = 277
+    PLUS = 278
+    MINUS = 279
+    ASTERISK = 280
+    SLASH = 281
+    PERCENT = 282
+    TILDE = 283
+    AMPERSAND = 284
+    PIPE = 285
+    CONCAT_PIPE = 286
+    HAT = 287
+    STRING = 288
+    BIGINT_LITERAL = 289
+    SMALLINT_LITERAL = 290
+    TINYINT_LITERAL = 291
+    INTEGER_VALUE = 292
+    EXPONENT_VALUE = 293
+    DECIMAL_VALUE = 294
+    FLOAT_LITERAL = 295
+    DOUBLE_LITERAL = 296
+    BIGDECIMAL_LITERAL = 297
+    IDENTIFIER = 298
+    BACKQUOTED_IDENTIFIER = 299
+    SIMPLE_COMMENT = 300
+    BRACKETED_COMMENT = 301
+    WS = 302
+    UNRECOGNIZED = 303
 
-    def __init__(self, input:TokenStream, output:TextIO = sys.stdout):
+    def __init__(self, input: TokenStream, output: TextIO = sys.stdout):
         super().__init__(input, output)
         self.checkVersion("4.9.2")
-        self._interp = ParserATNSimulator(self, self.atn, self.decisionsToDFA, self.sharedContextCache)
+        self._interp = ParserATNSimulator(
+            self, self.atn, self.decisionsToDFA, self.sharedContextCache
+        )
         self._predicates = None
 
-
-
-      """
-      When false, INTERSECT is given the greater precedence over the other set
-      operations (UNION, EXCEPT and MINUS) as per the SQL standard.
-      """
-      legacy_setops_precedence_enabled = False
-
-      """
-      When false, a literal with an exponent would be converted into
-      double type rather than decimal type.
-      """
-      legacy_exponent_literal_as_decimal_enabled = False
-
-      """
-      When true, the behavior of keywords follows ANSI SQL standard.
-      """
-      SQL_standard_keyword_behavior = False
-
-
+    """
+    When false, INTERSECT is given the greater precedence over the other set
+    operations (UNION, EXCEPT and MINUS) as per the SQL standard.
+    """
+    legacy_setops_precedence_enabled = False
+    """
+    When false, a literal with an exponent would be converted into
+    double type rather than decimal type.
+    """
+    legacy_exponent_literal_as_decimal_enabled = False
+    """
+    When true, the behavior of keywords follows ANSI SQL standard.
+    """
+    SQL_standard_keyword_behavior = False
 
     class SingleStatementContext(ParserRuleContext):
-        __slots__ = 'parser'
+        __slots__ = "parser"
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
         def statement(self):
-            return self.getTypedRuleContext(SqlBaseParser.StatementContext,0)
-
+            return self.getTypedRuleContext(SqlBaseParser.StatementContext, 0)
 
         def EOF(self):
             return self.getToken(SqlBaseParser.EOF, 0)
@@ -2439,22 +3015,19 @@ class SqlBaseParser ( Parser ):
         def getRuleIndex(self):
             return SqlBaseParser.RULE_singleStatement
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterSingleStatement" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterSingleStatement"):
                 listener.enterSingleStatement(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitSingleStatement" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitSingleStatement"):
                 listener.exitSingleStatement(self)
-
-
-
 
     def singleStatement(self):
 
         localctx = SqlBaseParser.SingleStatementContext(self, self._ctx, self.state)
         self.enterRule(localctx, 0, self.RULE_singleStatement)
-        self._la = 0 # Token type
+        self._la = 0  # Token type
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 286
@@ -2462,7 +3035,7 @@ class SqlBaseParser ( Parser ):
             self.state = 290
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            while _la==SqlBaseParser.T__0:
+            while _la == SqlBaseParser.T__0:
                 self.state = 287
                 self.match(SqlBaseParser.T__0)
                 self.state = 292
@@ -2479,17 +3052,17 @@ class SqlBaseParser ( Parser ):
             self.exitRule()
         return localctx
 
-
     class SingleExpressionContext(ParserRuleContext):
-        __slots__ = 'parser'
+        __slots__ = "parser"
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
         def namedExpression(self):
-            return self.getTypedRuleContext(SqlBaseParser.NamedExpressionContext,0)
-
+            return self.getTypedRuleContext(SqlBaseParser.NamedExpressionContext, 0)
 
         def EOF(self):
             return self.getToken(SqlBaseParser.EOF, 0)
@@ -2497,16 +3070,13 @@ class SqlBaseParser ( Parser ):
         def getRuleIndex(self):
             return SqlBaseParser.RULE_singleExpression
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterSingleExpression" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterSingleExpression"):
                 listener.enterSingleExpression(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitSingleExpression" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitSingleExpression"):
                 listener.exitSingleExpression(self)
-
-
-
 
     def singleExpression(self):
 
@@ -2526,17 +3096,17 @@ class SqlBaseParser ( Parser ):
             self.exitRule()
         return localctx
 
-
     class SingleTableIdentifierContext(ParserRuleContext):
-        __slots__ = 'parser'
+        __slots__ = "parser"
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
         def tableIdentifier(self):
-            return self.getTypedRuleContext(SqlBaseParser.TableIdentifierContext,0)
-
+            return self.getTypedRuleContext(SqlBaseParser.TableIdentifierContext, 0)
 
         def EOF(self):
             return self.getToken(SqlBaseParser.EOF, 0)
@@ -2544,20 +3114,19 @@ class SqlBaseParser ( Parser ):
         def getRuleIndex(self):
             return SqlBaseParser.RULE_singleTableIdentifier
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterSingleTableIdentifier" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterSingleTableIdentifier"):
                 listener.enterSingleTableIdentifier(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitSingleTableIdentifier" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitSingleTableIdentifier"):
                 listener.exitSingleTableIdentifier(self)
-
-
-
 
     def singleTableIdentifier(self):
 
-        localctx = SqlBaseParser.SingleTableIdentifierContext(self, self._ctx, self.state)
+        localctx = SqlBaseParser.SingleTableIdentifierContext(
+            self, self._ctx, self.state
+        )
         self.enterRule(localctx, 4, self.RULE_singleTableIdentifier)
         try:
             self.enterOuterAlt(localctx, 1)
@@ -2573,17 +3142,17 @@ class SqlBaseParser ( Parser ):
             self.exitRule()
         return localctx
 
-
     class SingleMultipartIdentifierContext(ParserRuleContext):
-        __slots__ = 'parser'
+        __slots__ = "parser"
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
         def multipartIdentifier(self):
-            return self.getTypedRuleContext(SqlBaseParser.MultipartIdentifierContext,0)
-
+            return self.getTypedRuleContext(SqlBaseParser.MultipartIdentifierContext, 0)
 
         def EOF(self):
             return self.getToken(SqlBaseParser.EOF, 0)
@@ -2591,20 +3160,19 @@ class SqlBaseParser ( Parser ):
         def getRuleIndex(self):
             return SqlBaseParser.RULE_singleMultipartIdentifier
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterSingleMultipartIdentifier" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterSingleMultipartIdentifier"):
                 listener.enterSingleMultipartIdentifier(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitSingleMultipartIdentifier" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitSingleMultipartIdentifier"):
                 listener.exitSingleMultipartIdentifier(self)
-
-
-
 
     def singleMultipartIdentifier(self):
 
-        localctx = SqlBaseParser.SingleMultipartIdentifierContext(self, self._ctx, self.state)
+        localctx = SqlBaseParser.SingleMultipartIdentifierContext(
+            self, self._ctx, self.state
+        )
         self.enterRule(localctx, 6, self.RULE_singleMultipartIdentifier)
         try:
             self.enterOuterAlt(localctx, 1)
@@ -2620,17 +3188,17 @@ class SqlBaseParser ( Parser ):
             self.exitRule()
         return localctx
 
-
     class SingleFunctionIdentifierContext(ParserRuleContext):
-        __slots__ = 'parser'
+        __slots__ = "parser"
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
         def functionIdentifier(self):
-            return self.getTypedRuleContext(SqlBaseParser.FunctionIdentifierContext,0)
-
+            return self.getTypedRuleContext(SqlBaseParser.FunctionIdentifierContext, 0)
 
         def EOF(self):
             return self.getToken(SqlBaseParser.EOF, 0)
@@ -2638,20 +3206,19 @@ class SqlBaseParser ( Parser ):
         def getRuleIndex(self):
             return SqlBaseParser.RULE_singleFunctionIdentifier
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterSingleFunctionIdentifier" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterSingleFunctionIdentifier"):
                 listener.enterSingleFunctionIdentifier(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitSingleFunctionIdentifier" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitSingleFunctionIdentifier"):
                 listener.exitSingleFunctionIdentifier(self)
-
-
-
 
     def singleFunctionIdentifier(self):
 
-        localctx = SqlBaseParser.SingleFunctionIdentifierContext(self, self._ctx, self.state)
+        localctx = SqlBaseParser.SingleFunctionIdentifierContext(
+            self, self._ctx, self.state
+        )
         self.enterRule(localctx, 8, self.RULE_singleFunctionIdentifier)
         try:
             self.enterOuterAlt(localctx, 1)
@@ -2667,17 +3234,17 @@ class SqlBaseParser ( Parser ):
             self.exitRule()
         return localctx
 
-
     class SingleDataTypeContext(ParserRuleContext):
-        __slots__ = 'parser'
+        __slots__ = "parser"
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
         def dataType(self):
-            return self.getTypedRuleContext(SqlBaseParser.DataTypeContext,0)
-
+            return self.getTypedRuleContext(SqlBaseParser.DataTypeContext, 0)
 
         def EOF(self):
             return self.getToken(SqlBaseParser.EOF, 0)
@@ -2685,16 +3252,13 @@ class SqlBaseParser ( Parser ):
         def getRuleIndex(self):
             return SqlBaseParser.RULE_singleDataType
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterSingleDataType" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterSingleDataType"):
                 listener.enterSingleDataType(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitSingleDataType" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitSingleDataType"):
                 listener.exitSingleDataType(self)
-
-
-
 
     def singleDataType(self):
 
@@ -2714,17 +3278,17 @@ class SqlBaseParser ( Parser ):
             self.exitRule()
         return localctx
 
-
     class SingleTableSchemaContext(ParserRuleContext):
-        __slots__ = 'parser'
+        __slots__ = "parser"
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
         def colTypeList(self):
-            return self.getTypedRuleContext(SqlBaseParser.ColTypeListContext,0)
-
+            return self.getTypedRuleContext(SqlBaseParser.ColTypeListContext, 0)
 
         def EOF(self):
             return self.getToken(SqlBaseParser.EOF, 0)
@@ -2732,16 +3296,13 @@ class SqlBaseParser ( Parser ):
         def getRuleIndex(self):
             return SqlBaseParser.RULE_singleTableSchema
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterSingleTableSchema" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterSingleTableSchema"):
                 listener.enterSingleTableSchema(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitSingleTableSchema" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitSingleTableSchema"):
                 listener.exitSingleTableSchema(self)
-
-
-
 
     def singleTableSchema(self):
 
@@ -2761,2210 +3322,2475 @@ class SqlBaseParser ( Parser ):
             self.exitRule()
         return localctx
 
-
     class StatementContext(ParserRuleContext):
-        __slots__ = 'parser'
+        __slots__ = "parser"
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
-
 
         def getRuleIndex(self):
             return SqlBaseParser.RULE_statement
 
-     
-        def copyFrom(self, ctx:ParserRuleContext):
+        def copyFrom(self, ctx: ParserRuleContext):
             super().copyFrom(ctx)
 
-
-
     class ExplainContext(StatementContext):
-
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a SqlBaseParser.StatementContext
+        def __init__(
+            self, parser, ctx: ParserRuleContext
+        ):  # actually a SqlBaseParser.StatementContext
             super().__init__(parser)
             self.copyFrom(ctx)
 
         def EXPLAIN(self):
             return self.getToken(SqlBaseParser.EXPLAIN, 0)
+
         def statement(self):
-            return self.getTypedRuleContext(SqlBaseParser.StatementContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.StatementContext, 0)
 
         def LOGICAL(self):
             return self.getToken(SqlBaseParser.LOGICAL, 0)
+
         def FORMATTED(self):
             return self.getToken(SqlBaseParser.FORMATTED, 0)
+
         def EXTENDED(self):
             return self.getToken(SqlBaseParser.EXTENDED, 0)
+
         def CODEGEN(self):
             return self.getToken(SqlBaseParser.CODEGEN, 0)
+
         def COST(self):
             return self.getToken(SqlBaseParser.COST, 0)
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterExplain" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterExplain"):
                 listener.enterExplain(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitExplain" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitExplain"):
                 listener.exitExplain(self)
 
-
     class ResetConfigurationContext(StatementContext):
-
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a SqlBaseParser.StatementContext
+        def __init__(
+            self, parser, ctx: ParserRuleContext
+        ):  # actually a SqlBaseParser.StatementContext
             super().__init__(parser)
             self.copyFrom(ctx)
 
         def RESET(self):
             return self.getToken(SqlBaseParser.RESET, 0)
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterResetConfiguration" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterResetConfiguration"):
                 listener.enterResetConfiguration(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitResetConfiguration" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitResetConfiguration"):
                 listener.exitResetConfiguration(self)
 
-
     class AlterViewQueryContext(StatementContext):
-
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a SqlBaseParser.StatementContext
+        def __init__(
+            self, parser, ctx: ParserRuleContext
+        ):  # actually a SqlBaseParser.StatementContext
             super().__init__(parser)
             self.copyFrom(ctx)
 
         def ALTER(self):
             return self.getToken(SqlBaseParser.ALTER, 0)
+
         def VIEW(self):
             return self.getToken(SqlBaseParser.VIEW, 0)
+
         def multipartIdentifier(self):
-            return self.getTypedRuleContext(SqlBaseParser.MultipartIdentifierContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.MultipartIdentifierContext, 0)
 
         def query(self):
-            return self.getTypedRuleContext(SqlBaseParser.QueryContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.QueryContext, 0)
 
         def AS(self):
             return self.getToken(SqlBaseParser.AS, 0)
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterAlterViewQuery" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterAlterViewQuery"):
                 listener.enterAlterViewQuery(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitAlterViewQuery" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitAlterViewQuery"):
                 listener.exitAlterViewQuery(self)
 
-
     class UseContext(StatementContext):
-
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a SqlBaseParser.StatementContext
+        def __init__(
+            self, parser, ctx: ParserRuleContext
+        ):  # actually a SqlBaseParser.StatementContext
             super().__init__(parser)
             self.copyFrom(ctx)
 
         def USE(self):
             return self.getToken(SqlBaseParser.USE, 0)
+
         def multipartIdentifier(self):
-            return self.getTypedRuleContext(SqlBaseParser.MultipartIdentifierContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.MultipartIdentifierContext, 0)
 
         def NAMESPACE(self):
             return self.getToken(SqlBaseParser.NAMESPACE, 0)
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterUse" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterUse"):
                 listener.enterUse(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitUse" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitUse"):
                 listener.exitUse(self)
 
-
     class DropNamespaceContext(StatementContext):
-
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a SqlBaseParser.StatementContext
+        def __init__(
+            self, parser, ctx: ParserRuleContext
+        ):  # actually a SqlBaseParser.StatementContext
             super().__init__(parser)
             self.copyFrom(ctx)
 
         def DROP(self):
             return self.getToken(SqlBaseParser.DROP, 0)
+
         def namespace(self):
-            return self.getTypedRuleContext(SqlBaseParser.NamespaceContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.NamespaceContext, 0)
 
         def multipartIdentifier(self):
-            return self.getTypedRuleContext(SqlBaseParser.MultipartIdentifierContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.MultipartIdentifierContext, 0)
 
         def IF(self):
             return self.getToken(SqlBaseParser.IF, 0)
+
         def EXISTS(self):
             return self.getToken(SqlBaseParser.EXISTS, 0)
+
         def RESTRICT(self):
             return self.getToken(SqlBaseParser.RESTRICT, 0)
+
         def CASCADE(self):
             return self.getToken(SqlBaseParser.CASCADE, 0)
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterDropNamespace" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterDropNamespace"):
                 listener.enterDropNamespace(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitDropNamespace" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitDropNamespace"):
                 listener.exitDropNamespace(self)
 
-
     class CreateTempViewUsingContext(StatementContext):
-
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a SqlBaseParser.StatementContext
+        def __init__(
+            self, parser, ctx: ParserRuleContext
+        ):  # actually a SqlBaseParser.StatementContext
             super().__init__(parser)
             self.copyFrom(ctx)
 
         def CREATE(self):
             return self.getToken(SqlBaseParser.CREATE, 0)
+
         def TEMPORARY(self):
             return self.getToken(SqlBaseParser.TEMPORARY, 0)
+
         def VIEW(self):
             return self.getToken(SqlBaseParser.VIEW, 0)
+
         def tableIdentifier(self):
-            return self.getTypedRuleContext(SqlBaseParser.TableIdentifierContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.TableIdentifierContext, 0)
 
         def tableProvider(self):
-            return self.getTypedRuleContext(SqlBaseParser.TableProviderContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.TableProviderContext, 0)
 
         def OR(self):
             return self.getToken(SqlBaseParser.OR, 0)
+
         def REPLACE(self):
             return self.getToken(SqlBaseParser.REPLACE, 0)
+
         def GLOBAL(self):
             return self.getToken(SqlBaseParser.GLOBAL, 0)
+
         def colTypeList(self):
-            return self.getTypedRuleContext(SqlBaseParser.ColTypeListContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.ColTypeListContext, 0)
 
         def OPTIONS(self):
             return self.getToken(SqlBaseParser.OPTIONS, 0)
+
         def tablePropertyList(self):
-            return self.getTypedRuleContext(SqlBaseParser.TablePropertyListContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.TablePropertyListContext, 0)
 
-
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterCreateTempViewUsing" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterCreateTempViewUsing"):
                 listener.enterCreateTempViewUsing(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitCreateTempViewUsing" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitCreateTempViewUsing"):
                 listener.exitCreateTempViewUsing(self)
 
-
     class RenameTableContext(StatementContext):
-
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a SqlBaseParser.StatementContext
+        def __init__(
+            self, parser, ctx: ParserRuleContext
+        ):  # actually a SqlBaseParser.StatementContext
             super().__init__(parser)
-            self.from = None # MultipartIdentifierContext
-            self.to = None # MultipartIdentifierContext
+            self.from_ = None  # MultipartIdentifierContext
+            self.to = None  # MultipartIdentifierContext
             self.copyFrom(ctx)
 
         def ALTER(self):
             return self.getToken(SqlBaseParser.ALTER, 0)
+
         def RENAME(self):
             return self.getToken(SqlBaseParser.RENAME, 0)
+
         def TO(self):
             return self.getToken(SqlBaseParser.TO, 0)
+
         def TABLE(self):
             return self.getToken(SqlBaseParser.TABLE, 0)
+
         def VIEW(self):
             return self.getToken(SqlBaseParser.VIEW, 0)
-        def multipartIdentifier(self, i:int=None):
+
+        def multipartIdentifier(self, i: int = None):
             if i is None:
-                return self.getTypedRuleContexts(SqlBaseParser.MultipartIdentifierContext)
+                return self.getTypedRuleContexts(
+                    SqlBaseParser.MultipartIdentifierContext
+                )
             else:
-                return self.getTypedRuleContext(SqlBaseParser.MultipartIdentifierContext,i)
+                return self.getTypedRuleContext(
+                    SqlBaseParser.MultipartIdentifierContext, i
+                )
 
-
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterRenameTable" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterRenameTable"):
                 listener.enterRenameTable(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitRenameTable" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitRenameTable"):
                 listener.exitRenameTable(self)
 
-
     class FailNativeCommandContext(StatementContext):
-
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a SqlBaseParser.StatementContext
+        def __init__(
+            self, parser, ctx: ParserRuleContext
+        ):  # actually a SqlBaseParser.StatementContext
             super().__init__(parser)
             self.copyFrom(ctx)
 
         def SET(self):
             return self.getToken(SqlBaseParser.SET, 0)
+
         def ROLE(self):
             return self.getToken(SqlBaseParser.ROLE, 0)
+
         def unsupportedHiveNativeCommands(self):
-            return self.getTypedRuleContext(SqlBaseParser.UnsupportedHiveNativeCommandsContext,0)
+            return self.getTypedRuleContext(
+                SqlBaseParser.UnsupportedHiveNativeCommandsContext, 0
+            )
 
-
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterFailNativeCommand" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterFailNativeCommand"):
                 listener.enterFailNativeCommand(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitFailNativeCommand" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitFailNativeCommand"):
                 listener.exitFailNativeCommand(self)
 
-
     class ClearCacheContext(StatementContext):
-
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a SqlBaseParser.StatementContext
+        def __init__(
+            self, parser, ctx: ParserRuleContext
+        ):  # actually a SqlBaseParser.StatementContext
             super().__init__(parser)
             self.copyFrom(ctx)
 
         def CLEAR(self):
             return self.getToken(SqlBaseParser.CLEAR, 0)
+
         def CACHE(self):
             return self.getToken(SqlBaseParser.CACHE, 0)
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterClearCache" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterClearCache"):
                 listener.enterClearCache(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitClearCache" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitClearCache"):
                 listener.exitClearCache(self)
 
-
     class DropViewContext(StatementContext):
-
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a SqlBaseParser.StatementContext
+        def __init__(
+            self, parser, ctx: ParserRuleContext
+        ):  # actually a SqlBaseParser.StatementContext
             super().__init__(parser)
             self.copyFrom(ctx)
 
         def DROP(self):
             return self.getToken(SqlBaseParser.DROP, 0)
+
         def VIEW(self):
             return self.getToken(SqlBaseParser.VIEW, 0)
+
         def multipartIdentifier(self):
-            return self.getTypedRuleContext(SqlBaseParser.MultipartIdentifierContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.MultipartIdentifierContext, 0)
 
         def IF(self):
             return self.getToken(SqlBaseParser.IF, 0)
+
         def EXISTS(self):
             return self.getToken(SqlBaseParser.EXISTS, 0)
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterDropView" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterDropView"):
                 listener.enterDropView(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitDropView" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitDropView"):
                 listener.exitDropView(self)
 
-
     class ShowTablesContext(StatementContext):
-
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a SqlBaseParser.StatementContext
+        def __init__(
+            self, parser, ctx: ParserRuleContext
+        ):  # actually a SqlBaseParser.StatementContext
             super().__init__(parser)
-            self.pattern = None # Token
+            self.pattern = None  # Token
             self.copyFrom(ctx)
 
         def SHOW(self):
             return self.getToken(SqlBaseParser.SHOW, 0)
+
         def TABLES(self):
             return self.getToken(SqlBaseParser.TABLES, 0)
+
         def multipartIdentifier(self):
-            return self.getTypedRuleContext(SqlBaseParser.MultipartIdentifierContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.MultipartIdentifierContext, 0)
 
         def FROM(self):
             return self.getToken(SqlBaseParser.FROM, 0)
+
         def IN(self):
             return self.getToken(SqlBaseParser.IN, 0)
+
         def STRING(self):
             return self.getToken(SqlBaseParser.STRING, 0)
+
         def LIKE(self):
             return self.getToken(SqlBaseParser.LIKE, 0)
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterShowTables" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterShowTables"):
                 listener.enterShowTables(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitShowTables" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitShowTables"):
                 listener.exitShowTables(self)
 
-
     class RecoverPartitionsContext(StatementContext):
-
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a SqlBaseParser.StatementContext
+        def __init__(
+            self, parser, ctx: ParserRuleContext
+        ):  # actually a SqlBaseParser.StatementContext
             super().__init__(parser)
             self.copyFrom(ctx)
 
         def ALTER(self):
             return self.getToken(SqlBaseParser.ALTER, 0)
+
         def TABLE(self):
             return self.getToken(SqlBaseParser.TABLE, 0)
+
         def multipartIdentifier(self):
-            return self.getTypedRuleContext(SqlBaseParser.MultipartIdentifierContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.MultipartIdentifierContext, 0)
 
         def RECOVER(self):
             return self.getToken(SqlBaseParser.RECOVER, 0)
+
         def PARTITIONS(self):
             return self.getToken(SqlBaseParser.PARTITIONS, 0)
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterRecoverPartitions" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterRecoverPartitions"):
                 listener.enterRecoverPartitions(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitRecoverPartitions" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitRecoverPartitions"):
                 listener.exitRecoverPartitions(self)
 
-
     class ShowCurrentNamespaceContext(StatementContext):
-
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a SqlBaseParser.StatementContext
+        def __init__(
+            self, parser, ctx: ParserRuleContext
+        ):  # actually a SqlBaseParser.StatementContext
             super().__init__(parser)
             self.copyFrom(ctx)
 
         def SHOW(self):
             return self.getToken(SqlBaseParser.SHOW, 0)
+
         def CURRENT(self):
             return self.getToken(SqlBaseParser.CURRENT, 0)
+
         def NAMESPACE(self):
             return self.getToken(SqlBaseParser.NAMESPACE, 0)
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterShowCurrentNamespace" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterShowCurrentNamespace"):
                 listener.enterShowCurrentNamespace(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitShowCurrentNamespace" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitShowCurrentNamespace"):
                 listener.exitShowCurrentNamespace(self)
 
-
     class RenameTablePartitionContext(StatementContext):
-
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a SqlBaseParser.StatementContext
+        def __init__(
+            self, parser, ctx: ParserRuleContext
+        ):  # actually a SqlBaseParser.StatementContext
             super().__init__(parser)
-            self.from = None # PartitionSpecContext
-            self.to = None # PartitionSpecContext
+            self.from_ = None  # PartitionSpecContext
+            self.to = None  # PartitionSpecContext
             self.copyFrom(ctx)
 
         def ALTER(self):
             return self.getToken(SqlBaseParser.ALTER, 0)
+
         def TABLE(self):
             return self.getToken(SqlBaseParser.TABLE, 0)
+
         def multipartIdentifier(self):
-            return self.getTypedRuleContext(SqlBaseParser.MultipartIdentifierContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.MultipartIdentifierContext, 0)
 
         def RENAME(self):
             return self.getToken(SqlBaseParser.RENAME, 0)
+
         def TO(self):
             return self.getToken(SqlBaseParser.TO, 0)
-        def partitionSpec(self, i:int=None):
+
+        def partitionSpec(self, i: int = None):
             if i is None:
                 return self.getTypedRuleContexts(SqlBaseParser.PartitionSpecContext)
             else:
-                return self.getTypedRuleContext(SqlBaseParser.PartitionSpecContext,i)
+                return self.getTypedRuleContext(SqlBaseParser.PartitionSpecContext, i)
 
-
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterRenameTablePartition" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterRenameTablePartition"):
                 listener.enterRenameTablePartition(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitRenameTablePartition" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitRenameTablePartition"):
                 listener.exitRenameTablePartition(self)
 
-
     class RepairTableContext(StatementContext):
-
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a SqlBaseParser.StatementContext
+        def __init__(
+            self, parser, ctx: ParserRuleContext
+        ):  # actually a SqlBaseParser.StatementContext
             super().__init__(parser)
-            self.option = None # Token
+            self.option = None  # Token
             self.copyFrom(ctx)
 
         def MSCK(self):
             return self.getToken(SqlBaseParser.MSCK, 0)
+
         def REPAIR(self):
             return self.getToken(SqlBaseParser.REPAIR, 0)
+
         def TABLE(self):
             return self.getToken(SqlBaseParser.TABLE, 0)
+
         def multipartIdentifier(self):
-            return self.getTypedRuleContext(SqlBaseParser.MultipartIdentifierContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.MultipartIdentifierContext, 0)
 
         def PARTITIONS(self):
             return self.getToken(SqlBaseParser.PARTITIONS, 0)
+
         def ADD(self):
             return self.getToken(SqlBaseParser.ADD, 0)
+
         def DROP(self):
             return self.getToken(SqlBaseParser.DROP, 0)
+
         def SYNC(self):
             return self.getToken(SqlBaseParser.SYNC, 0)
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterRepairTable" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterRepairTable"):
                 listener.enterRepairTable(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitRepairTable" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitRepairTable"):
                 listener.exitRepairTable(self)
 
-
     class RefreshResourceContext(StatementContext):
-
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a SqlBaseParser.StatementContext
+        def __init__(
+            self, parser, ctx: ParserRuleContext
+        ):  # actually a SqlBaseParser.StatementContext
             super().__init__(parser)
             self.copyFrom(ctx)
 
         def REFRESH(self):
             return self.getToken(SqlBaseParser.REFRESH, 0)
+
         def STRING(self):
             return self.getToken(SqlBaseParser.STRING, 0)
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterRefreshResource" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterRefreshResource"):
                 listener.enterRefreshResource(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitRefreshResource" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitRefreshResource"):
                 listener.exitRefreshResource(self)
 
-
     class ShowCreateTableContext(StatementContext):
-
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a SqlBaseParser.StatementContext
+        def __init__(
+            self, parser, ctx: ParserRuleContext
+        ):  # actually a SqlBaseParser.StatementContext
             super().__init__(parser)
             self.copyFrom(ctx)
 
         def SHOW(self):
             return self.getToken(SqlBaseParser.SHOW, 0)
+
         def CREATE(self):
             return self.getToken(SqlBaseParser.CREATE, 0)
+
         def TABLE(self):
             return self.getToken(SqlBaseParser.TABLE, 0)
+
         def multipartIdentifier(self):
-            return self.getTypedRuleContext(SqlBaseParser.MultipartIdentifierContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.MultipartIdentifierContext, 0)
 
         def AS(self):
             return self.getToken(SqlBaseParser.AS, 0)
+
         def SERDE(self):
             return self.getToken(SqlBaseParser.SERDE, 0)
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterShowCreateTable" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterShowCreateTable"):
                 listener.enterShowCreateTable(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitShowCreateTable" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitShowCreateTable"):
                 listener.exitShowCreateTable(self)
 
-
     class ShowNamespacesContext(StatementContext):
-
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a SqlBaseParser.StatementContext
+        def __init__(
+            self, parser, ctx: ParserRuleContext
+        ):  # actually a SqlBaseParser.StatementContext
             super().__init__(parser)
-            self.pattern = None # Token
+            self.pattern = None  # Token
             self.copyFrom(ctx)
 
         def SHOW(self):
             return self.getToken(SqlBaseParser.SHOW, 0)
+
         def DATABASES(self):
             return self.getToken(SqlBaseParser.DATABASES, 0)
+
         def NAMESPACES(self):
             return self.getToken(SqlBaseParser.NAMESPACES, 0)
+
         def multipartIdentifier(self):
-            return self.getTypedRuleContext(SqlBaseParser.MultipartIdentifierContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.MultipartIdentifierContext, 0)
 
         def FROM(self):
             return self.getToken(SqlBaseParser.FROM, 0)
+
         def IN(self):
             return self.getToken(SqlBaseParser.IN, 0)
+
         def STRING(self):
             return self.getToken(SqlBaseParser.STRING, 0)
+
         def LIKE(self):
             return self.getToken(SqlBaseParser.LIKE, 0)
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterShowNamespaces" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterShowNamespaces"):
                 listener.enterShowNamespaces(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitShowNamespaces" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitShowNamespaces"):
                 listener.exitShowNamespaces(self)
 
-
     class ShowColumnsContext(StatementContext):
-
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a SqlBaseParser.StatementContext
+        def __init__(
+            self, parser, ctx: ParserRuleContext
+        ):  # actually a SqlBaseParser.StatementContext
             super().__init__(parser)
-            self.table = None # MultipartIdentifierContext
-            self.ns = None # MultipartIdentifierContext
+            self.table = None  # MultipartIdentifierContext
+            self.ns = None  # MultipartIdentifierContext
             self.copyFrom(ctx)
 
         def SHOW(self):
             return self.getToken(SqlBaseParser.SHOW, 0)
+
         def COLUMNS(self):
             return self.getToken(SqlBaseParser.COLUMNS, 0)
-        def FROM(self, i:int=None):
+
+        def FROM(self, i: int = None):
             if i is None:
                 return self.getTokens(SqlBaseParser.FROM)
             else:
                 return self.getToken(SqlBaseParser.FROM, i)
-        def IN(self, i:int=None):
+
+        def IN(self, i: int = None):
             if i is None:
                 return self.getTokens(SqlBaseParser.IN)
             else:
                 return self.getToken(SqlBaseParser.IN, i)
-        def multipartIdentifier(self, i:int=None):
+
+        def multipartIdentifier(self, i: int = None):
             if i is None:
-                return self.getTypedRuleContexts(SqlBaseParser.MultipartIdentifierContext)
+                return self.getTypedRuleContexts(
+                    SqlBaseParser.MultipartIdentifierContext
+                )
             else:
-                return self.getTypedRuleContext(SqlBaseParser.MultipartIdentifierContext,i)
+                return self.getTypedRuleContext(
+                    SqlBaseParser.MultipartIdentifierContext, i
+                )
 
-
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterShowColumns" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterShowColumns"):
                 listener.enterShowColumns(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitShowColumns" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitShowColumns"):
                 listener.exitShowColumns(self)
 
-
     class ReplaceTableContext(StatementContext):
-
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a SqlBaseParser.StatementContext
+        def __init__(
+            self, parser, ctx: ParserRuleContext
+        ):  # actually a SqlBaseParser.StatementContext
             super().__init__(parser)
             self.copyFrom(ctx)
 
         def replaceTableHeader(self):
-            return self.getTypedRuleContext(SqlBaseParser.ReplaceTableHeaderContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.ReplaceTableHeaderContext, 0)
 
         def createTableClauses(self):
-            return self.getTypedRuleContext(SqlBaseParser.CreateTableClausesContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.CreateTableClausesContext, 0)
 
         def colTypeList(self):
-            return self.getTypedRuleContext(SqlBaseParser.ColTypeListContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.ColTypeListContext, 0)
 
         def tableProvider(self):
-            return self.getTypedRuleContext(SqlBaseParser.TableProviderContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.TableProviderContext, 0)
 
         def query(self):
-            return self.getTypedRuleContext(SqlBaseParser.QueryContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.QueryContext, 0)
 
         def AS(self):
             return self.getToken(SqlBaseParser.AS, 0)
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterReplaceTable" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterReplaceTable"):
                 listener.enterReplaceTable(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitReplaceTable" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitReplaceTable"):
                 listener.exitReplaceTable(self)
 
-
     class AnalyzeTablesContext(StatementContext):
-
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a SqlBaseParser.StatementContext
+        def __init__(
+            self, parser, ctx: ParserRuleContext
+        ):  # actually a SqlBaseParser.StatementContext
             super().__init__(parser)
             self.copyFrom(ctx)
 
         def ANALYZE(self):
             return self.getToken(SqlBaseParser.ANALYZE, 0)
+
         def TABLES(self):
             return self.getToken(SqlBaseParser.TABLES, 0)
+
         def COMPUTE(self):
             return self.getToken(SqlBaseParser.COMPUTE, 0)
+
         def STATISTICS(self):
             return self.getToken(SqlBaseParser.STATISTICS, 0)
+
         def multipartIdentifier(self):
-            return self.getTypedRuleContext(SqlBaseParser.MultipartIdentifierContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.MultipartIdentifierContext, 0)
 
         def identifier(self):
-            return self.getTypedRuleContext(SqlBaseParser.IdentifierContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.IdentifierContext, 0)
 
         def FROM(self):
             return self.getToken(SqlBaseParser.FROM, 0)
+
         def IN(self):
             return self.getToken(SqlBaseParser.IN, 0)
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterAnalyzeTables" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterAnalyzeTables"):
                 listener.enterAnalyzeTables(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitAnalyzeTables" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitAnalyzeTables"):
                 listener.exitAnalyzeTables(self)
 
-
     class AddTablePartitionContext(StatementContext):
-
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a SqlBaseParser.StatementContext
+        def __init__(
+            self, parser, ctx: ParserRuleContext
+        ):  # actually a SqlBaseParser.StatementContext
             super().__init__(parser)
             self.copyFrom(ctx)
 
         def ALTER(self):
             return self.getToken(SqlBaseParser.ALTER, 0)
+
         def multipartIdentifier(self):
-            return self.getTypedRuleContext(SqlBaseParser.MultipartIdentifierContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.MultipartIdentifierContext, 0)
 
         def ADD(self):
             return self.getToken(SqlBaseParser.ADD, 0)
+
         def TABLE(self):
             return self.getToken(SqlBaseParser.TABLE, 0)
+
         def VIEW(self):
             return self.getToken(SqlBaseParser.VIEW, 0)
+
         def IF(self):
             return self.getToken(SqlBaseParser.IF, 0)
+
         def NOT(self):
             return self.getToken(SqlBaseParser.NOT, 0)
+
         def EXISTS(self):
             return self.getToken(SqlBaseParser.EXISTS, 0)
-        def partitionSpecLocation(self, i:int=None):
+
+        def partitionSpecLocation(self, i: int = None):
             if i is None:
-                return self.getTypedRuleContexts(SqlBaseParser.PartitionSpecLocationContext)
+                return self.getTypedRuleContexts(
+                    SqlBaseParser.PartitionSpecLocationContext
+                )
             else:
-                return self.getTypedRuleContext(SqlBaseParser.PartitionSpecLocationContext,i)
+                return self.getTypedRuleContext(
+                    SqlBaseParser.PartitionSpecLocationContext, i
+                )
 
-
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterAddTablePartition" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterAddTablePartition"):
                 listener.enterAddTablePartition(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitAddTablePartition" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitAddTablePartition"):
                 listener.exitAddTablePartition(self)
 
-
     class SetNamespaceLocationContext(StatementContext):
-
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a SqlBaseParser.StatementContext
+        def __init__(
+            self, parser, ctx: ParserRuleContext
+        ):  # actually a SqlBaseParser.StatementContext
             super().__init__(parser)
             self.copyFrom(ctx)
 
         def ALTER(self):
             return self.getToken(SqlBaseParser.ALTER, 0)
+
         def namespace(self):
-            return self.getTypedRuleContext(SqlBaseParser.NamespaceContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.NamespaceContext, 0)
 
         def multipartIdentifier(self):
-            return self.getTypedRuleContext(SqlBaseParser.MultipartIdentifierContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.MultipartIdentifierContext, 0)
 
         def SET(self):
             return self.getToken(SqlBaseParser.SET, 0)
+
         def locationSpec(self):
-            return self.getTypedRuleContext(SqlBaseParser.LocationSpecContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.LocationSpecContext, 0)
 
-
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterSetNamespaceLocation" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterSetNamespaceLocation"):
                 listener.enterSetNamespaceLocation(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitSetNamespaceLocation" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitSetNamespaceLocation"):
                 listener.exitSetNamespaceLocation(self)
 
-
     class RefreshTableContext(StatementContext):
-
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a SqlBaseParser.StatementContext
+        def __init__(
+            self, parser, ctx: ParserRuleContext
+        ):  # actually a SqlBaseParser.StatementContext
             super().__init__(parser)
             self.copyFrom(ctx)
 
         def REFRESH(self):
             return self.getToken(SqlBaseParser.REFRESH, 0)
+
         def TABLE(self):
             return self.getToken(SqlBaseParser.TABLE, 0)
+
         def multipartIdentifier(self):
-            return self.getTypedRuleContext(SqlBaseParser.MultipartIdentifierContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.MultipartIdentifierContext, 0)
 
-
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterRefreshTable" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterRefreshTable"):
                 listener.enterRefreshTable(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitRefreshTable" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitRefreshTable"):
                 listener.exitRefreshTable(self)
 
-
     class SetNamespacePropertiesContext(StatementContext):
-
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a SqlBaseParser.StatementContext
+        def __init__(
+            self, parser, ctx: ParserRuleContext
+        ):  # actually a SqlBaseParser.StatementContext
             super().__init__(parser)
             self.copyFrom(ctx)
 
         def ALTER(self):
             return self.getToken(SqlBaseParser.ALTER, 0)
+
         def namespace(self):
-            return self.getTypedRuleContext(SqlBaseParser.NamespaceContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.NamespaceContext, 0)
 
         def multipartIdentifier(self):
-            return self.getTypedRuleContext(SqlBaseParser.MultipartIdentifierContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.MultipartIdentifierContext, 0)
 
         def SET(self):
             return self.getToken(SqlBaseParser.SET, 0)
+
         def tablePropertyList(self):
-            return self.getTypedRuleContext(SqlBaseParser.TablePropertyListContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.TablePropertyListContext, 0)
 
         def DBPROPERTIES(self):
             return self.getToken(SqlBaseParser.DBPROPERTIES, 0)
+
         def PROPERTIES(self):
             return self.getToken(SqlBaseParser.PROPERTIES, 0)
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterSetNamespaceProperties" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterSetNamespaceProperties"):
                 listener.enterSetNamespaceProperties(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitSetNamespaceProperties" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitSetNamespaceProperties"):
                 listener.exitSetNamespaceProperties(self)
 
-
     class ManageResourceContext(StatementContext):
-
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a SqlBaseParser.StatementContext
+        def __init__(
+            self, parser, ctx: ParserRuleContext
+        ):  # actually a SqlBaseParser.StatementContext
             super().__init__(parser)
-            self.op = None # Token
+            self.op = None  # Token
             self.copyFrom(ctx)
 
         def identifier(self):
-            return self.getTypedRuleContext(SqlBaseParser.IdentifierContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.IdentifierContext, 0)
 
         def ADD(self):
             return self.getToken(SqlBaseParser.ADD, 0)
+
         def LIST(self):
             return self.getToken(SqlBaseParser.LIST, 0)
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterManageResource" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterManageResource"):
                 listener.enterManageResource(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitManageResource" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitManageResource"):
                 listener.exitManageResource(self)
 
-
     class SetQuotedConfigurationContext(StatementContext):
-
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a SqlBaseParser.StatementContext
+        def __init__(
+            self, parser, ctx: ParserRuleContext
+        ):  # actually a SqlBaseParser.StatementContext
             super().__init__(parser)
             self.copyFrom(ctx)
 
         def SET(self):
             return self.getToken(SqlBaseParser.SET, 0)
+
         def configKey(self):
-            return self.getTypedRuleContext(SqlBaseParser.ConfigKeyContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.ConfigKeyContext, 0)
 
         def EQ(self):
             return self.getToken(SqlBaseParser.EQ, 0)
+
         def configValue(self):
-            return self.getTypedRuleContext(SqlBaseParser.ConfigValueContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.ConfigValueContext, 0)
 
-
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterSetQuotedConfiguration" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterSetQuotedConfiguration"):
                 listener.enterSetQuotedConfiguration(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitSetQuotedConfiguration" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitSetQuotedConfiguration"):
                 listener.exitSetQuotedConfiguration(self)
 
-
     class AnalyzeContext(StatementContext):
-
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a SqlBaseParser.StatementContext
+        def __init__(
+            self, parser, ctx: ParserRuleContext
+        ):  # actually a SqlBaseParser.StatementContext
             super().__init__(parser)
             self.copyFrom(ctx)
 
         def ANALYZE(self):
             return self.getToken(SqlBaseParser.ANALYZE, 0)
+
         def TABLE(self):
             return self.getToken(SqlBaseParser.TABLE, 0)
+
         def multipartIdentifier(self):
-            return self.getTypedRuleContext(SqlBaseParser.MultipartIdentifierContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.MultipartIdentifierContext, 0)
 
         def COMPUTE(self):
             return self.getToken(SqlBaseParser.COMPUTE, 0)
+
         def STATISTICS(self):
             return self.getToken(SqlBaseParser.STATISTICS, 0)
+
         def partitionSpec(self):
-            return self.getTypedRuleContext(SqlBaseParser.PartitionSpecContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.PartitionSpecContext, 0)
 
         def identifier(self):
-            return self.getTypedRuleContext(SqlBaseParser.IdentifierContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.IdentifierContext, 0)
 
         def FOR(self):
             return self.getToken(SqlBaseParser.FOR, 0)
+
         def COLUMNS(self):
             return self.getToken(SqlBaseParser.COLUMNS, 0)
+
         def identifierSeq(self):
-            return self.getTypedRuleContext(SqlBaseParser.IdentifierSeqContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.IdentifierSeqContext, 0)
 
         def ALL(self):
             return self.getToken(SqlBaseParser.ALL, 0)
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterAnalyze" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterAnalyze"):
                 listener.enterAnalyze(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitAnalyze" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitAnalyze"):
                 listener.exitAnalyze(self)
 
-
     class CreateFunctionContext(StatementContext):
-
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a SqlBaseParser.StatementContext
+        def __init__(
+            self, parser, ctx: ParserRuleContext
+        ):  # actually a SqlBaseParser.StatementContext
             super().__init__(parser)
-            self.className = None # Token
+            self.className = None  # Token
             self.copyFrom(ctx)
 
         def CREATE(self):
             return self.getToken(SqlBaseParser.CREATE, 0)
+
         def FUNCTION(self):
             return self.getToken(SqlBaseParser.FUNCTION, 0)
+
         def multipartIdentifier(self):
-            return self.getTypedRuleContext(SqlBaseParser.MultipartIdentifierContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.MultipartIdentifierContext, 0)
 
         def AS(self):
             return self.getToken(SqlBaseParser.AS, 0)
+
         def STRING(self):
             return self.getToken(SqlBaseParser.STRING, 0)
+
         def OR(self):
             return self.getToken(SqlBaseParser.OR, 0)
+
         def REPLACE(self):
             return self.getToken(SqlBaseParser.REPLACE, 0)
+
         def TEMPORARY(self):
             return self.getToken(SqlBaseParser.TEMPORARY, 0)
+
         def IF(self):
             return self.getToken(SqlBaseParser.IF, 0)
+
         def NOT(self):
             return self.getToken(SqlBaseParser.NOT, 0)
+
         def EXISTS(self):
             return self.getToken(SqlBaseParser.EXISTS, 0)
+
         def USING(self):
             return self.getToken(SqlBaseParser.USING, 0)
-        def resource(self, i:int=None):
+
+        def resource(self, i: int = None):
             if i is None:
                 return self.getTypedRuleContexts(SqlBaseParser.ResourceContext)
             else:
-                return self.getTypedRuleContext(SqlBaseParser.ResourceContext,i)
+                return self.getTypedRuleContext(SqlBaseParser.ResourceContext, i)
 
-
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterCreateFunction" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterCreateFunction"):
                 listener.enterCreateFunction(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitCreateFunction" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitCreateFunction"):
                 listener.exitCreateFunction(self)
 
-
     class HiveReplaceColumnsContext(StatementContext):
-
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a SqlBaseParser.StatementContext
+        def __init__(
+            self, parser, ctx: ParserRuleContext
+        ):  # actually a SqlBaseParser.StatementContext
             super().__init__(parser)
-            self.table = None # MultipartIdentifierContext
-            self.columns = None # QualifiedColTypeWithPositionListContext
+            self.table = None  # MultipartIdentifierContext
+            self.columns = None  # QualifiedColTypeWithPositionListContext
             self.copyFrom(ctx)
 
         def ALTER(self):
             return self.getToken(SqlBaseParser.ALTER, 0)
+
         def TABLE(self):
             return self.getToken(SqlBaseParser.TABLE, 0)
+
         def REPLACE(self):
             return self.getToken(SqlBaseParser.REPLACE, 0)
+
         def COLUMNS(self):
             return self.getToken(SqlBaseParser.COLUMNS, 0)
+
         def multipartIdentifier(self):
-            return self.getTypedRuleContext(SqlBaseParser.MultipartIdentifierContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.MultipartIdentifierContext, 0)
 
         def qualifiedColTypeWithPositionList(self):
-            return self.getTypedRuleContext(SqlBaseParser.QualifiedColTypeWithPositionListContext,0)
+            return self.getTypedRuleContext(
+                SqlBaseParser.QualifiedColTypeWithPositionListContext, 0
+            )
 
         def partitionSpec(self):
-            return self.getTypedRuleContext(SqlBaseParser.PartitionSpecContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.PartitionSpecContext, 0)
 
-
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterHiveReplaceColumns" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterHiveReplaceColumns"):
                 listener.enterHiveReplaceColumns(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitHiveReplaceColumns" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitHiveReplaceColumns"):
                 listener.exitHiveReplaceColumns(self)
 
-
     class CommentNamespaceContext(StatementContext):
-
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a SqlBaseParser.StatementContext
+        def __init__(
+            self, parser, ctx: ParserRuleContext
+        ):  # actually a SqlBaseParser.StatementContext
             super().__init__(parser)
-            self.comment = None # Token
+            self.comment = None  # Token
             self.copyFrom(ctx)
 
         def COMMENT(self):
             return self.getToken(SqlBaseParser.COMMENT, 0)
+
         def ON(self):
             return self.getToken(SqlBaseParser.ON, 0)
+
         def namespace(self):
-            return self.getTypedRuleContext(SqlBaseParser.NamespaceContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.NamespaceContext, 0)
 
         def multipartIdentifier(self):
-            return self.getTypedRuleContext(SqlBaseParser.MultipartIdentifierContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.MultipartIdentifierContext, 0)
 
         def IS(self):
             return self.getToken(SqlBaseParser.IS, 0)
+
         def STRING(self):
             return self.getToken(SqlBaseParser.STRING, 0)
+
         def NULL(self):
             return self.getToken(SqlBaseParser.NULL, 0)
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterCommentNamespace" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterCommentNamespace"):
                 listener.enterCommentNamespace(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitCommentNamespace" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitCommentNamespace"):
                 listener.exitCommentNamespace(self)
 
-
     class ResetQuotedConfigurationContext(StatementContext):
-
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a SqlBaseParser.StatementContext
+        def __init__(
+            self, parser, ctx: ParserRuleContext
+        ):  # actually a SqlBaseParser.StatementContext
             super().__init__(parser)
             self.copyFrom(ctx)
 
         def RESET(self):
             return self.getToken(SqlBaseParser.RESET, 0)
+
         def configKey(self):
-            return self.getTypedRuleContext(SqlBaseParser.ConfigKeyContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.ConfigKeyContext, 0)
 
-
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterResetQuotedConfiguration" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterResetQuotedConfiguration"):
                 listener.enterResetQuotedConfiguration(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitResetQuotedConfiguration" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitResetQuotedConfiguration"):
                 listener.exitResetQuotedConfiguration(self)
 
-
     class CreateTableContext(StatementContext):
-
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a SqlBaseParser.StatementContext
+        def __init__(
+            self, parser, ctx: ParserRuleContext
+        ):  # actually a SqlBaseParser.StatementContext
             super().__init__(parser)
             self.copyFrom(ctx)
 
         def createTableHeader(self):
-            return self.getTypedRuleContext(SqlBaseParser.CreateTableHeaderContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.CreateTableHeaderContext, 0)
 
         def createTableClauses(self):
-            return self.getTypedRuleContext(SqlBaseParser.CreateTableClausesContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.CreateTableClausesContext, 0)
 
         def colTypeList(self):
-            return self.getTypedRuleContext(SqlBaseParser.ColTypeListContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.ColTypeListContext, 0)
 
         def tableProvider(self):
-            return self.getTypedRuleContext(SqlBaseParser.TableProviderContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.TableProviderContext, 0)
 
         def query(self):
-            return self.getTypedRuleContext(SqlBaseParser.QueryContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.QueryContext, 0)
 
         def AS(self):
             return self.getToken(SqlBaseParser.AS, 0)
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterCreateTable" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterCreateTable"):
                 listener.enterCreateTable(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitCreateTable" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitCreateTable"):
                 listener.exitCreateTable(self)
 
-
     class DmlStatementContext(StatementContext):
-
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a SqlBaseParser.StatementContext
+        def __init__(
+            self, parser, ctx: ParserRuleContext
+        ):  # actually a SqlBaseParser.StatementContext
             super().__init__(parser)
             self.copyFrom(ctx)
 
         def dmlStatementNoWith(self):
-            return self.getTypedRuleContext(SqlBaseParser.DmlStatementNoWithContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.DmlStatementNoWithContext, 0)
 
         def ctes(self):
-            return self.getTypedRuleContext(SqlBaseParser.CtesContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.CtesContext, 0)
 
-
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterDmlStatement" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterDmlStatement"):
                 listener.enterDmlStatement(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitDmlStatement" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitDmlStatement"):
                 listener.exitDmlStatement(self)
 
-
     class CreateTableLikeContext(StatementContext):
-
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a SqlBaseParser.StatementContext
+        def __init__(
+            self, parser, ctx: ParserRuleContext
+        ):  # actually a SqlBaseParser.StatementContext
             super().__init__(parser)
-            self.target = None # TableIdentifierContext
-            self.source = None # TableIdentifierContext
-            self.tableProps = None # TablePropertyListContext
+            self.target = None  # TableIdentifierContext
+            self.source = None  # TableIdentifierContext
+            self.tableProps = None  # TablePropertyListContext
             self.copyFrom(ctx)
 
         def CREATE(self):
             return self.getToken(SqlBaseParser.CREATE, 0)
+
         def TABLE(self):
             return self.getToken(SqlBaseParser.TABLE, 0)
+
         def LIKE(self):
             return self.getToken(SqlBaseParser.LIKE, 0)
-        def tableIdentifier(self, i:int=None):
+
+        def tableIdentifier(self, i: int = None):
             if i is None:
                 return self.getTypedRuleContexts(SqlBaseParser.TableIdentifierContext)
             else:
-                return self.getTypedRuleContext(SqlBaseParser.TableIdentifierContext,i)
+                return self.getTypedRuleContext(SqlBaseParser.TableIdentifierContext, i)
 
         def IF(self):
             return self.getToken(SqlBaseParser.IF, 0)
+
         def NOT(self):
             return self.getToken(SqlBaseParser.NOT, 0)
+
         def EXISTS(self):
             return self.getToken(SqlBaseParser.EXISTS, 0)
-        def tableProvider(self, i:int=None):
+
+        def tableProvider(self, i: int = None):
             if i is None:
                 return self.getTypedRuleContexts(SqlBaseParser.TableProviderContext)
             else:
-                return self.getTypedRuleContext(SqlBaseParser.TableProviderContext,i)
+                return self.getTypedRuleContext(SqlBaseParser.TableProviderContext, i)
 
-        def rowFormat(self, i:int=None):
+        def rowFormat(self, i: int = None):
             if i is None:
                 return self.getTypedRuleContexts(SqlBaseParser.RowFormatContext)
             else:
-                return self.getTypedRuleContext(SqlBaseParser.RowFormatContext,i)
+                return self.getTypedRuleContext(SqlBaseParser.RowFormatContext, i)
 
-        def createFileFormat(self, i:int=None):
+        def createFileFormat(self, i: int = None):
             if i is None:
                 return self.getTypedRuleContexts(SqlBaseParser.CreateFileFormatContext)
             else:
-                return self.getTypedRuleContext(SqlBaseParser.CreateFileFormatContext,i)
+                return self.getTypedRuleContext(
+                    SqlBaseParser.CreateFileFormatContext, i
+                )
 
-        def locationSpec(self, i:int=None):
+        def locationSpec(self, i: int = None):
             if i is None:
                 return self.getTypedRuleContexts(SqlBaseParser.LocationSpecContext)
             else:
-                return self.getTypedRuleContext(SqlBaseParser.LocationSpecContext,i)
+                return self.getTypedRuleContext(SqlBaseParser.LocationSpecContext, i)
 
-        def TBLPROPERTIES(self, i:int=None):
+        def TBLPROPERTIES(self, i: int = None):
             if i is None:
                 return self.getTokens(SqlBaseParser.TBLPROPERTIES)
             else:
                 return self.getToken(SqlBaseParser.TBLPROPERTIES, i)
-        def tablePropertyList(self, i:int=None):
+
+        def tablePropertyList(self, i: int = None):
             if i is None:
                 return self.getTypedRuleContexts(SqlBaseParser.TablePropertyListContext)
             else:
-                return self.getTypedRuleContext(SqlBaseParser.TablePropertyListContext,i)
+                return self.getTypedRuleContext(
+                    SqlBaseParser.TablePropertyListContext, i
+                )
 
-
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterCreateTableLike" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterCreateTableLike"):
                 listener.enterCreateTableLike(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitCreateTableLike" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitCreateTableLike"):
                 listener.exitCreateTableLike(self)
 
-
     class UncacheTableContext(StatementContext):
-
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a SqlBaseParser.StatementContext
+        def __init__(
+            self, parser, ctx: ParserRuleContext
+        ):  # actually a SqlBaseParser.StatementContext
             super().__init__(parser)
             self.copyFrom(ctx)
 
         def UNCACHE(self):
             return self.getToken(SqlBaseParser.UNCACHE, 0)
+
         def TABLE(self):
             return self.getToken(SqlBaseParser.TABLE, 0)
+
         def multipartIdentifier(self):
-            return self.getTypedRuleContext(SqlBaseParser.MultipartIdentifierContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.MultipartIdentifierContext, 0)
 
         def IF(self):
             return self.getToken(SqlBaseParser.IF, 0)
+
         def EXISTS(self):
             return self.getToken(SqlBaseParser.EXISTS, 0)
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterUncacheTable" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterUncacheTable"):
                 listener.enterUncacheTable(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitUncacheTable" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitUncacheTable"):
                 listener.exitUncacheTable(self)
 
-
     class DropFunctionContext(StatementContext):
-
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a SqlBaseParser.StatementContext
+        def __init__(
+            self, parser, ctx: ParserRuleContext
+        ):  # actually a SqlBaseParser.StatementContext
             super().__init__(parser)
             self.copyFrom(ctx)
 
         def DROP(self):
             return self.getToken(SqlBaseParser.DROP, 0)
+
         def FUNCTION(self):
             return self.getToken(SqlBaseParser.FUNCTION, 0)
+
         def multipartIdentifier(self):
-            return self.getTypedRuleContext(SqlBaseParser.MultipartIdentifierContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.MultipartIdentifierContext, 0)
 
         def TEMPORARY(self):
             return self.getToken(SqlBaseParser.TEMPORARY, 0)
+
         def IF(self):
             return self.getToken(SqlBaseParser.IF, 0)
+
         def EXISTS(self):
             return self.getToken(SqlBaseParser.EXISTS, 0)
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterDropFunction" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterDropFunction"):
                 listener.enterDropFunction(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitDropFunction" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitDropFunction"):
                 listener.exitDropFunction(self)
 
-
     class DescribeRelationContext(StatementContext):
-
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a SqlBaseParser.StatementContext
+        def __init__(
+            self, parser, ctx: ParserRuleContext
+        ):  # actually a SqlBaseParser.StatementContext
             super().__init__(parser)
-            self.option = None # Token
+            self.option = None  # Token
             self.copyFrom(ctx)
 
         def multipartIdentifier(self):
-            return self.getTypedRuleContext(SqlBaseParser.MultipartIdentifierContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.MultipartIdentifierContext, 0)
 
         def DESC(self):
             return self.getToken(SqlBaseParser.DESC, 0)
+
         def DESCRIBE(self):
             return self.getToken(SqlBaseParser.DESCRIBE, 0)
+
         def TABLE(self):
             return self.getToken(SqlBaseParser.TABLE, 0)
+
         def partitionSpec(self):
-            return self.getTypedRuleContext(SqlBaseParser.PartitionSpecContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.PartitionSpecContext, 0)
 
         def describeColName(self):
-            return self.getTypedRuleContext(SqlBaseParser.DescribeColNameContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.DescribeColNameContext, 0)
 
         def EXTENDED(self):
             return self.getToken(SqlBaseParser.EXTENDED, 0)
+
         def FORMATTED(self):
             return self.getToken(SqlBaseParser.FORMATTED, 0)
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterDescribeRelation" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterDescribeRelation"):
                 listener.enterDescribeRelation(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitDescribeRelation" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitDescribeRelation"):
                 listener.exitDescribeRelation(self)
 
-
     class LoadDataContext(StatementContext):
-
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a SqlBaseParser.StatementContext
+        def __init__(
+            self, parser, ctx: ParserRuleContext
+        ):  # actually a SqlBaseParser.StatementContext
             super().__init__(parser)
-            self.path = None # Token
+            self.path = None  # Token
             self.copyFrom(ctx)
 
         def LOAD(self):
             return self.getToken(SqlBaseParser.LOAD, 0)
+
         def DATA(self):
             return self.getToken(SqlBaseParser.DATA, 0)
+
         def INPATH(self):
             return self.getToken(SqlBaseParser.INPATH, 0)
+
         def INTO(self):
             return self.getToken(SqlBaseParser.INTO, 0)
+
         def TABLE(self):
             return self.getToken(SqlBaseParser.TABLE, 0)
+
         def multipartIdentifier(self):
-            return self.getTypedRuleContext(SqlBaseParser.MultipartIdentifierContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.MultipartIdentifierContext, 0)
 
         def STRING(self):
             return self.getToken(SqlBaseParser.STRING, 0)
+
         def LOCAL(self):
             return self.getToken(SqlBaseParser.LOCAL, 0)
+
         def OVERWRITE(self):
             return self.getToken(SqlBaseParser.OVERWRITE, 0)
+
         def partitionSpec(self):
-            return self.getTypedRuleContext(SqlBaseParser.PartitionSpecContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.PartitionSpecContext, 0)
 
-
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterLoadData" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterLoadData"):
                 listener.enterLoadData(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitLoadData" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitLoadData"):
                 listener.exitLoadData(self)
 
-
     class ShowPartitionsContext(StatementContext):
-
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a SqlBaseParser.StatementContext
+        def __init__(
+            self, parser, ctx: ParserRuleContext
+        ):  # actually a SqlBaseParser.StatementContext
             super().__init__(parser)
             self.copyFrom(ctx)
 
         def SHOW(self):
             return self.getToken(SqlBaseParser.SHOW, 0)
+
         def PARTITIONS(self):
             return self.getToken(SqlBaseParser.PARTITIONS, 0)
+
         def multipartIdentifier(self):
-            return self.getTypedRuleContext(SqlBaseParser.MultipartIdentifierContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.MultipartIdentifierContext, 0)
 
         def partitionSpec(self):
-            return self.getTypedRuleContext(SqlBaseParser.PartitionSpecContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.PartitionSpecContext, 0)
 
-
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterShowPartitions" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterShowPartitions"):
                 listener.enterShowPartitions(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitShowPartitions" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitShowPartitions"):
                 listener.exitShowPartitions(self)
 
-
     class DescribeFunctionContext(StatementContext):
-
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a SqlBaseParser.StatementContext
+        def __init__(
+            self, parser, ctx: ParserRuleContext
+        ):  # actually a SqlBaseParser.StatementContext
             super().__init__(parser)
             self.copyFrom(ctx)
 
         def FUNCTION(self):
             return self.getToken(SqlBaseParser.FUNCTION, 0)
+
         def describeFuncName(self):
-            return self.getTypedRuleContext(SqlBaseParser.DescribeFuncNameContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.DescribeFuncNameContext, 0)
 
         def DESC(self):
             return self.getToken(SqlBaseParser.DESC, 0)
+
         def DESCRIBE(self):
             return self.getToken(SqlBaseParser.DESCRIBE, 0)
+
         def EXTENDED(self):
             return self.getToken(SqlBaseParser.EXTENDED, 0)
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterDescribeFunction" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterDescribeFunction"):
                 listener.enterDescribeFunction(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitDescribeFunction" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitDescribeFunction"):
                 listener.exitDescribeFunction(self)
 
-
     class RenameTableColumnContext(StatementContext):
-
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a SqlBaseParser.StatementContext
+        def __init__(
+            self, parser, ctx: ParserRuleContext
+        ):  # actually a SqlBaseParser.StatementContext
             super().__init__(parser)
-            self.table = None # MultipartIdentifierContext
-            self.from = None # MultipartIdentifierContext
-            self.to = None # ErrorCapturingIdentifierContext
+            self.table = None  # MultipartIdentifierContext
+            self.from_ = None  # MultipartIdentifierContext
+            self.to = None  # ErrorCapturingIdentifierContext
             self.copyFrom(ctx)
 
         def ALTER(self):
             return self.getToken(SqlBaseParser.ALTER, 0)
+
         def TABLE(self):
             return self.getToken(SqlBaseParser.TABLE, 0)
+
         def RENAME(self):
             return self.getToken(SqlBaseParser.RENAME, 0)
+
         def COLUMN(self):
             return self.getToken(SqlBaseParser.COLUMN, 0)
+
         def TO(self):
             return self.getToken(SqlBaseParser.TO, 0)
-        def multipartIdentifier(self, i:int=None):
+
+        def multipartIdentifier(self, i: int = None):
             if i is None:
-                return self.getTypedRuleContexts(SqlBaseParser.MultipartIdentifierContext)
+                return self.getTypedRuleContexts(
+                    SqlBaseParser.MultipartIdentifierContext
+                )
             else:
-                return self.getTypedRuleContext(SqlBaseParser.MultipartIdentifierContext,i)
+                return self.getTypedRuleContext(
+                    SqlBaseParser.MultipartIdentifierContext, i
+                )
 
         def errorCapturingIdentifier(self):
-            return self.getTypedRuleContext(SqlBaseParser.ErrorCapturingIdentifierContext,0)
+            return self.getTypedRuleContext(
+                SqlBaseParser.ErrorCapturingIdentifierContext, 0
+            )
 
-
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterRenameTableColumn" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterRenameTableColumn"):
                 listener.enterRenameTableColumn(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitRenameTableColumn" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitRenameTableColumn"):
                 listener.exitRenameTableColumn(self)
 
-
     class StatementDefaultContext(StatementContext):
-
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a SqlBaseParser.StatementContext
+        def __init__(
+            self, parser, ctx: ParserRuleContext
+        ):  # actually a SqlBaseParser.StatementContext
             super().__init__(parser)
             self.copyFrom(ctx)
 
         def query(self):
-            return self.getTypedRuleContext(SqlBaseParser.QueryContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.QueryContext, 0)
 
-
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterStatementDefault" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterStatementDefault"):
                 listener.enterStatementDefault(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitStatementDefault" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitStatementDefault"):
                 listener.exitStatementDefault(self)
 
-
     class HiveChangeColumnContext(StatementContext):
-
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a SqlBaseParser.StatementContext
+        def __init__(
+            self, parser, ctx: ParserRuleContext
+        ):  # actually a SqlBaseParser.StatementContext
             super().__init__(parser)
-            self.table = None # MultipartIdentifierContext
-            self.colName = None # MultipartIdentifierContext
+            self.table = None  # MultipartIdentifierContext
+            self.colName = None  # MultipartIdentifierContext
             self.copyFrom(ctx)
 
         def ALTER(self):
             return self.getToken(SqlBaseParser.ALTER, 0)
+
         def TABLE(self):
             return self.getToken(SqlBaseParser.TABLE, 0)
+
         def CHANGE(self):
             return self.getToken(SqlBaseParser.CHANGE, 0)
-        def colType(self):
-            return self.getTypedRuleContext(SqlBaseParser.ColTypeContext,0)
 
-        def multipartIdentifier(self, i:int=None):
+        def colType(self):
+            return self.getTypedRuleContext(SqlBaseParser.ColTypeContext, 0)
+
+        def multipartIdentifier(self, i: int = None):
             if i is None:
-                return self.getTypedRuleContexts(SqlBaseParser.MultipartIdentifierContext)
+                return self.getTypedRuleContexts(
+                    SqlBaseParser.MultipartIdentifierContext
+                )
             else:
-                return self.getTypedRuleContext(SqlBaseParser.MultipartIdentifierContext,i)
+                return self.getTypedRuleContext(
+                    SqlBaseParser.MultipartIdentifierContext, i
+                )
 
         def partitionSpec(self):
-            return self.getTypedRuleContext(SqlBaseParser.PartitionSpecContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.PartitionSpecContext, 0)
 
         def COLUMN(self):
             return self.getToken(SqlBaseParser.COLUMN, 0)
+
         def colPosition(self):
-            return self.getTypedRuleContext(SqlBaseParser.ColPositionContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.ColPositionContext, 0)
 
-
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterHiveChangeColumn" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterHiveChangeColumn"):
                 listener.enterHiveChangeColumn(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitHiveChangeColumn" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitHiveChangeColumn"):
                 listener.exitHiveChangeColumn(self)
 
-
     class SetTimeZoneContext(StatementContext):
-
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a SqlBaseParser.StatementContext
+        def __init__(
+            self, parser, ctx: ParserRuleContext
+        ):  # actually a SqlBaseParser.StatementContext
             super().__init__(parser)
-            self.timezone = None # Token
+            self.timezone = None  # Token
             self.copyFrom(ctx)
 
         def SET(self):
             return self.getToken(SqlBaseParser.SET, 0)
+
         def TIME(self):
             return self.getToken(SqlBaseParser.TIME, 0)
+
         def ZONE(self):
             return self.getToken(SqlBaseParser.ZONE, 0)
+
         def interval(self):
-            return self.getTypedRuleContext(SqlBaseParser.IntervalContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.IntervalContext, 0)
 
         def STRING(self):
             return self.getToken(SqlBaseParser.STRING, 0)
+
         def LOCAL(self):
             return self.getToken(SqlBaseParser.LOCAL, 0)
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterSetTimeZone" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterSetTimeZone"):
                 listener.enterSetTimeZone(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitSetTimeZone" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitSetTimeZone"):
                 listener.exitSetTimeZone(self)
 
-
     class DescribeQueryContext(StatementContext):
-
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a SqlBaseParser.StatementContext
+        def __init__(
+            self, parser, ctx: ParserRuleContext
+        ):  # actually a SqlBaseParser.StatementContext
             super().__init__(parser)
             self.copyFrom(ctx)
 
         def query(self):
-            return self.getTypedRuleContext(SqlBaseParser.QueryContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.QueryContext, 0)
 
         def DESC(self):
             return self.getToken(SqlBaseParser.DESC, 0)
+
         def DESCRIBE(self):
             return self.getToken(SqlBaseParser.DESCRIBE, 0)
+
         def QUERY(self):
             return self.getToken(SqlBaseParser.QUERY, 0)
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterDescribeQuery" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterDescribeQuery"):
                 listener.enterDescribeQuery(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitDescribeQuery" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitDescribeQuery"):
                 listener.exitDescribeQuery(self)
 
-
     class TruncateTableContext(StatementContext):
-
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a SqlBaseParser.StatementContext
+        def __init__(
+            self, parser, ctx: ParserRuleContext
+        ):  # actually a SqlBaseParser.StatementContext
             super().__init__(parser)
             self.copyFrom(ctx)
 
         def TRUNCATE(self):
             return self.getToken(SqlBaseParser.TRUNCATE, 0)
+
         def TABLE(self):
             return self.getToken(SqlBaseParser.TABLE, 0)
+
         def multipartIdentifier(self):
-            return self.getTypedRuleContext(SqlBaseParser.MultipartIdentifierContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.MultipartIdentifierContext, 0)
 
         def partitionSpec(self):
-            return self.getTypedRuleContext(SqlBaseParser.PartitionSpecContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.PartitionSpecContext, 0)
 
-
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterTruncateTable" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterTruncateTable"):
                 listener.enterTruncateTable(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitTruncateTable" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitTruncateTable"):
                 listener.exitTruncateTable(self)
 
-
     class SetTableSerDeContext(StatementContext):
-
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a SqlBaseParser.StatementContext
+        def __init__(
+            self, parser, ctx: ParserRuleContext
+        ):  # actually a SqlBaseParser.StatementContext
             super().__init__(parser)
             self.copyFrom(ctx)
 
         def ALTER(self):
             return self.getToken(SqlBaseParser.ALTER, 0)
+
         def TABLE(self):
             return self.getToken(SqlBaseParser.TABLE, 0)
+
         def multipartIdentifier(self):
-            return self.getTypedRuleContext(SqlBaseParser.MultipartIdentifierContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.MultipartIdentifierContext, 0)
 
         def SET(self):
             return self.getToken(SqlBaseParser.SET, 0)
+
         def SERDE(self):
             return self.getToken(SqlBaseParser.SERDE, 0)
+
         def STRING(self):
             return self.getToken(SqlBaseParser.STRING, 0)
+
         def partitionSpec(self):
-            return self.getTypedRuleContext(SqlBaseParser.PartitionSpecContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.PartitionSpecContext, 0)
 
         def WITH(self):
             return self.getToken(SqlBaseParser.WITH, 0)
+
         def SERDEPROPERTIES(self):
             return self.getToken(SqlBaseParser.SERDEPROPERTIES, 0)
+
         def tablePropertyList(self):
-            return self.getTypedRuleContext(SqlBaseParser.TablePropertyListContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.TablePropertyListContext, 0)
 
-
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterSetTableSerDe" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterSetTableSerDe"):
                 listener.enterSetTableSerDe(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitSetTableSerDe" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitSetTableSerDe"):
                 listener.exitSetTableSerDe(self)
 
-
     class CreateViewContext(StatementContext):
-
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a SqlBaseParser.StatementContext
+        def __init__(
+            self, parser, ctx: ParserRuleContext
+        ):  # actually a SqlBaseParser.StatementContext
             super().__init__(parser)
             self.copyFrom(ctx)
 
         def CREATE(self):
             return self.getToken(SqlBaseParser.CREATE, 0)
+
         def VIEW(self):
             return self.getToken(SqlBaseParser.VIEW, 0)
+
         def multipartIdentifier(self):
-            return self.getTypedRuleContext(SqlBaseParser.MultipartIdentifierContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.MultipartIdentifierContext, 0)
 
         def AS(self):
             return self.getToken(SqlBaseParser.AS, 0)
+
         def query(self):
-            return self.getTypedRuleContext(SqlBaseParser.QueryContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.QueryContext, 0)
 
         def OR(self):
             return self.getToken(SqlBaseParser.OR, 0)
+
         def REPLACE(self):
             return self.getToken(SqlBaseParser.REPLACE, 0)
+
         def TEMPORARY(self):
             return self.getToken(SqlBaseParser.TEMPORARY, 0)
+
         def IF(self):
             return self.getToken(SqlBaseParser.IF, 0)
+
         def NOT(self):
             return self.getToken(SqlBaseParser.NOT, 0)
+
         def EXISTS(self):
             return self.getToken(SqlBaseParser.EXISTS, 0)
-        def identifierCommentList(self):
-            return self.getTypedRuleContext(SqlBaseParser.IdentifierCommentListContext,0)
 
-        def commentSpec(self, i:int=None):
+        def identifierCommentList(self):
+            return self.getTypedRuleContext(
+                SqlBaseParser.IdentifierCommentListContext, 0
+            )
+
+        def commentSpec(self, i: int = None):
             if i is None:
                 return self.getTypedRuleContexts(SqlBaseParser.CommentSpecContext)
             else:
-                return self.getTypedRuleContext(SqlBaseParser.CommentSpecContext,i)
+                return self.getTypedRuleContext(SqlBaseParser.CommentSpecContext, i)
 
-        def PARTITIONED(self, i:int=None):
+        def PARTITIONED(self, i: int = None):
             if i is None:
                 return self.getTokens(SqlBaseParser.PARTITIONED)
             else:
                 return self.getToken(SqlBaseParser.PARTITIONED, i)
-        def ON(self, i:int=None):
+
+        def ON(self, i: int = None):
             if i is None:
                 return self.getTokens(SqlBaseParser.ON)
             else:
                 return self.getToken(SqlBaseParser.ON, i)
-        def identifierList(self, i:int=None):
+
+        def identifierList(self, i: int = None):
             if i is None:
                 return self.getTypedRuleContexts(SqlBaseParser.IdentifierListContext)
             else:
-                return self.getTypedRuleContext(SqlBaseParser.IdentifierListContext,i)
+                return self.getTypedRuleContext(SqlBaseParser.IdentifierListContext, i)
 
-        def TBLPROPERTIES(self, i:int=None):
+        def TBLPROPERTIES(self, i: int = None):
             if i is None:
                 return self.getTokens(SqlBaseParser.TBLPROPERTIES)
             else:
                 return self.getToken(SqlBaseParser.TBLPROPERTIES, i)
-        def tablePropertyList(self, i:int=None):
+
+        def tablePropertyList(self, i: int = None):
             if i is None:
                 return self.getTypedRuleContexts(SqlBaseParser.TablePropertyListContext)
             else:
-                return self.getTypedRuleContext(SqlBaseParser.TablePropertyListContext,i)
+                return self.getTypedRuleContext(
+                    SqlBaseParser.TablePropertyListContext, i
+                )
 
         def GLOBAL(self):
             return self.getToken(SqlBaseParser.GLOBAL, 0)
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterCreateView" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterCreateView"):
                 listener.enterCreateView(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitCreateView" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitCreateView"):
                 listener.exitCreateView(self)
 
-
     class DropTablePartitionsContext(StatementContext):
-
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a SqlBaseParser.StatementContext
+        def __init__(
+            self, parser, ctx: ParserRuleContext
+        ):  # actually a SqlBaseParser.StatementContext
             super().__init__(parser)
             self.copyFrom(ctx)
 
         def ALTER(self):
             return self.getToken(SqlBaseParser.ALTER, 0)
+
         def multipartIdentifier(self):
-            return self.getTypedRuleContext(SqlBaseParser.MultipartIdentifierContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.MultipartIdentifierContext, 0)
 
         def DROP(self):
             return self.getToken(SqlBaseParser.DROP, 0)
-        def partitionSpec(self, i:int=None):
+
+        def partitionSpec(self, i: int = None):
             if i is None:
                 return self.getTypedRuleContexts(SqlBaseParser.PartitionSpecContext)
             else:
-                return self.getTypedRuleContext(SqlBaseParser.PartitionSpecContext,i)
+                return self.getTypedRuleContext(SqlBaseParser.PartitionSpecContext, i)
 
         def TABLE(self):
             return self.getToken(SqlBaseParser.TABLE, 0)
+
         def VIEW(self):
             return self.getToken(SqlBaseParser.VIEW, 0)
+
         def IF(self):
             return self.getToken(SqlBaseParser.IF, 0)
+
         def EXISTS(self):
             return self.getToken(SqlBaseParser.EXISTS, 0)
+
         def PURGE(self):
             return self.getToken(SqlBaseParser.PURGE, 0)
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterDropTablePartitions" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterDropTablePartitions"):
                 listener.enterDropTablePartitions(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitDropTablePartitions" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitDropTablePartitions"):
                 listener.exitDropTablePartitions(self)
 
-
     class SetConfigurationContext(StatementContext):
-
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a SqlBaseParser.StatementContext
+        def __init__(
+            self, parser, ctx: ParserRuleContext
+        ):  # actually a SqlBaseParser.StatementContext
             super().__init__(parser)
             self.copyFrom(ctx)
 
         def SET(self):
             return self.getToken(SqlBaseParser.SET, 0)
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterSetConfiguration" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterSetConfiguration"):
                 listener.enterSetConfiguration(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitSetConfiguration" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitSetConfiguration"):
                 listener.exitSetConfiguration(self)
 
-
     class DropTableContext(StatementContext):
-
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a SqlBaseParser.StatementContext
+        def __init__(
+            self, parser, ctx: ParserRuleContext
+        ):  # actually a SqlBaseParser.StatementContext
             super().__init__(parser)
             self.copyFrom(ctx)
 
         def DROP(self):
             return self.getToken(SqlBaseParser.DROP, 0)
+
         def TABLE(self):
             return self.getToken(SqlBaseParser.TABLE, 0)
+
         def multipartIdentifier(self):
-            return self.getTypedRuleContext(SqlBaseParser.MultipartIdentifierContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.MultipartIdentifierContext, 0)
 
         def IF(self):
             return self.getToken(SqlBaseParser.IF, 0)
+
         def EXISTS(self):
             return self.getToken(SqlBaseParser.EXISTS, 0)
+
         def PURGE(self):
             return self.getToken(SqlBaseParser.PURGE, 0)
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterDropTable" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterDropTable"):
                 listener.enterDropTable(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitDropTable" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitDropTable"):
                 listener.exitDropTable(self)
 
-
     class ShowTableExtendedContext(StatementContext):
-
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a SqlBaseParser.StatementContext
+        def __init__(
+            self, parser, ctx: ParserRuleContext
+        ):  # actually a SqlBaseParser.StatementContext
             super().__init__(parser)
-            self.ns = None # MultipartIdentifierContext
-            self.pattern = None # Token
+            self.ns = None  # MultipartIdentifierContext
+            self.pattern = None  # Token
             self.copyFrom(ctx)
 
         def SHOW(self):
             return self.getToken(SqlBaseParser.SHOW, 0)
+
         def TABLE(self):
             return self.getToken(SqlBaseParser.TABLE, 0)
+
         def EXTENDED(self):
             return self.getToken(SqlBaseParser.EXTENDED, 0)
+
         def LIKE(self):
             return self.getToken(SqlBaseParser.LIKE, 0)
+
         def STRING(self):
             return self.getToken(SqlBaseParser.STRING, 0)
+
         def partitionSpec(self):
-            return self.getTypedRuleContext(SqlBaseParser.PartitionSpecContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.PartitionSpecContext, 0)
 
         def FROM(self):
             return self.getToken(SqlBaseParser.FROM, 0)
+
         def IN(self):
             return self.getToken(SqlBaseParser.IN, 0)
+
         def multipartIdentifier(self):
-            return self.getTypedRuleContext(SqlBaseParser.MultipartIdentifierContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.MultipartIdentifierContext, 0)
 
-
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterShowTableExtended" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterShowTableExtended"):
                 listener.enterShowTableExtended(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitShowTableExtended" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitShowTableExtended"):
                 listener.exitShowTableExtended(self)
 
-
     class DescribeNamespaceContext(StatementContext):
-
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a SqlBaseParser.StatementContext
+        def __init__(
+            self, parser, ctx: ParserRuleContext
+        ):  # actually a SqlBaseParser.StatementContext
             super().__init__(parser)
             self.copyFrom(ctx)
 
         def namespace(self):
-            return self.getTypedRuleContext(SqlBaseParser.NamespaceContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.NamespaceContext, 0)
 
         def multipartIdentifier(self):
-            return self.getTypedRuleContext(SqlBaseParser.MultipartIdentifierContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.MultipartIdentifierContext, 0)
 
         def DESC(self):
             return self.getToken(SqlBaseParser.DESC, 0)
+
         def DESCRIBE(self):
             return self.getToken(SqlBaseParser.DESCRIBE, 0)
+
         def EXTENDED(self):
             return self.getToken(SqlBaseParser.EXTENDED, 0)
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterDescribeNamespace" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterDescribeNamespace"):
                 listener.enterDescribeNamespace(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitDescribeNamespace" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitDescribeNamespace"):
                 listener.exitDescribeNamespace(self)
 
-
     class AlterTableAlterColumnContext(StatementContext):
-
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a SqlBaseParser.StatementContext
+        def __init__(
+            self, parser, ctx: ParserRuleContext
+        ):  # actually a SqlBaseParser.StatementContext
             super().__init__(parser)
-            self.table = None # MultipartIdentifierContext
-            self.column = None # MultipartIdentifierContext
+            self.table = None  # MultipartIdentifierContext
+            self.column = None  # MultipartIdentifierContext
             self.copyFrom(ctx)
 
-        def ALTER(self, i:int=None):
+        def ALTER(self, i: int = None):
             if i is None:
                 return self.getTokens(SqlBaseParser.ALTER)
             else:
                 return self.getToken(SqlBaseParser.ALTER, i)
+
         def TABLE(self):
             return self.getToken(SqlBaseParser.TABLE, 0)
-        def multipartIdentifier(self, i:int=None):
+
+        def multipartIdentifier(self, i: int = None):
             if i is None:
-                return self.getTypedRuleContexts(SqlBaseParser.MultipartIdentifierContext)
+                return self.getTypedRuleContexts(
+                    SqlBaseParser.MultipartIdentifierContext
+                )
             else:
-                return self.getTypedRuleContext(SqlBaseParser.MultipartIdentifierContext,i)
+                return self.getTypedRuleContext(
+                    SqlBaseParser.MultipartIdentifierContext, i
+                )
 
         def CHANGE(self):
             return self.getToken(SqlBaseParser.CHANGE, 0)
+
         def COLUMN(self):
             return self.getToken(SqlBaseParser.COLUMN, 0)
+
         def alterColumnAction(self):
-            return self.getTypedRuleContext(SqlBaseParser.AlterColumnActionContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.AlterColumnActionContext, 0)
 
-
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterAlterTableAlterColumn" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterAlterTableAlterColumn"):
                 listener.enterAlterTableAlterColumn(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitAlterTableAlterColumn" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitAlterTableAlterColumn"):
                 listener.exitAlterTableAlterColumn(self)
 
-
     class RefreshFunctionContext(StatementContext):
-
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a SqlBaseParser.StatementContext
+        def __init__(
+            self, parser, ctx: ParserRuleContext
+        ):  # actually a SqlBaseParser.StatementContext
             super().__init__(parser)
             self.copyFrom(ctx)
 
         def REFRESH(self):
             return self.getToken(SqlBaseParser.REFRESH, 0)
+
         def FUNCTION(self):
             return self.getToken(SqlBaseParser.FUNCTION, 0)
+
         def multipartIdentifier(self):
-            return self.getTypedRuleContext(SqlBaseParser.MultipartIdentifierContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.MultipartIdentifierContext, 0)
 
-
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterRefreshFunction" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterRefreshFunction"):
                 listener.enterRefreshFunction(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitRefreshFunction" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitRefreshFunction"):
                 listener.exitRefreshFunction(self)
 
-
     class CommentTableContext(StatementContext):
-
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a SqlBaseParser.StatementContext
+        def __init__(
+            self, parser, ctx: ParserRuleContext
+        ):  # actually a SqlBaseParser.StatementContext
             super().__init__(parser)
-            self.comment = None # Token
+            self.comment = None  # Token
             self.copyFrom(ctx)
 
         def COMMENT(self):
             return self.getToken(SqlBaseParser.COMMENT, 0)
+
         def ON(self):
             return self.getToken(SqlBaseParser.ON, 0)
+
         def TABLE(self):
             return self.getToken(SqlBaseParser.TABLE, 0)
+
         def multipartIdentifier(self):
-            return self.getTypedRuleContext(SqlBaseParser.MultipartIdentifierContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.MultipartIdentifierContext, 0)
 
         def IS(self):
             return self.getToken(SqlBaseParser.IS, 0)
+
         def STRING(self):
             return self.getToken(SqlBaseParser.STRING, 0)
+
         def NULL(self):
             return self.getToken(SqlBaseParser.NULL, 0)
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterCommentTable" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterCommentTable"):
                 listener.enterCommentTable(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitCommentTable" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitCommentTable"):
                 listener.exitCommentTable(self)
 
-
     class CreateNamespaceContext(StatementContext):
-
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a SqlBaseParser.StatementContext
+        def __init__(
+            self, parser, ctx: ParserRuleContext
+        ):  # actually a SqlBaseParser.StatementContext
             super().__init__(parser)
             self.copyFrom(ctx)
 
         def CREATE(self):
             return self.getToken(SqlBaseParser.CREATE, 0)
+
         def namespace(self):
-            return self.getTypedRuleContext(SqlBaseParser.NamespaceContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.NamespaceContext, 0)
 
         def multipartIdentifier(self):
-            return self.getTypedRuleContext(SqlBaseParser.MultipartIdentifierContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.MultipartIdentifierContext, 0)
 
         def IF(self):
             return self.getToken(SqlBaseParser.IF, 0)
+
         def NOT(self):
             return self.getToken(SqlBaseParser.NOT, 0)
+
         def EXISTS(self):
             return self.getToken(SqlBaseParser.EXISTS, 0)
-        def commentSpec(self, i:int=None):
+
+        def commentSpec(self, i: int = None):
             if i is None:
                 return self.getTypedRuleContexts(SqlBaseParser.CommentSpecContext)
             else:
-                return self.getTypedRuleContext(SqlBaseParser.CommentSpecContext,i)
+                return self.getTypedRuleContext(SqlBaseParser.CommentSpecContext, i)
 
-        def locationSpec(self, i:int=None):
+        def locationSpec(self, i: int = None):
             if i is None:
                 return self.getTypedRuleContexts(SqlBaseParser.LocationSpecContext)
             else:
-                return self.getTypedRuleContext(SqlBaseParser.LocationSpecContext,i)
+                return self.getTypedRuleContext(SqlBaseParser.LocationSpecContext, i)
 
-        def WITH(self, i:int=None):
+        def WITH(self, i: int = None):
             if i is None:
                 return self.getTokens(SqlBaseParser.WITH)
             else:
                 return self.getToken(SqlBaseParser.WITH, i)
-        def tablePropertyList(self, i:int=None):
+
+        def tablePropertyList(self, i: int = None):
             if i is None:
                 return self.getTypedRuleContexts(SqlBaseParser.TablePropertyListContext)
             else:
-                return self.getTypedRuleContext(SqlBaseParser.TablePropertyListContext,i)
+                return self.getTypedRuleContext(
+                    SqlBaseParser.TablePropertyListContext, i
+                )
 
-        def DBPROPERTIES(self, i:int=None):
+        def DBPROPERTIES(self, i: int = None):
             if i is None:
                 return self.getTokens(SqlBaseParser.DBPROPERTIES)
             else:
                 return self.getToken(SqlBaseParser.DBPROPERTIES, i)
-        def PROPERTIES(self, i:int=None):
+
+        def PROPERTIES(self, i: int = None):
             if i is None:
                 return self.getTokens(SqlBaseParser.PROPERTIES)
             else:
                 return self.getToken(SqlBaseParser.PROPERTIES, i)
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterCreateNamespace" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterCreateNamespace"):
                 listener.enterCreateNamespace(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitCreateNamespace" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitCreateNamespace"):
                 listener.exitCreateNamespace(self)
 
-
     class ShowTblPropertiesContext(StatementContext):
-
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a SqlBaseParser.StatementContext
+        def __init__(
+            self, parser, ctx: ParserRuleContext
+        ):  # actually a SqlBaseParser.StatementContext
             super().__init__(parser)
-            self.table = None # MultipartIdentifierContext
-            self.key = None # TablePropertyKeyContext
+            self.table = None  # MultipartIdentifierContext
+            self.key = None  # TablePropertyKeyContext
             self.copyFrom(ctx)
 
         def SHOW(self):
             return self.getToken(SqlBaseParser.SHOW, 0)
+
         def TBLPROPERTIES(self):
             return self.getToken(SqlBaseParser.TBLPROPERTIES, 0)
+
         def multipartIdentifier(self):
-            return self.getTypedRuleContext(SqlBaseParser.MultipartIdentifierContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.MultipartIdentifierContext, 0)
 
         def tablePropertyKey(self):
-            return self.getTypedRuleContext(SqlBaseParser.TablePropertyKeyContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.TablePropertyKeyContext, 0)
 
-
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterShowTblProperties" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterShowTblProperties"):
                 listener.enterShowTblProperties(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitShowTblProperties" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitShowTblProperties"):
                 listener.exitShowTblProperties(self)
 
-
     class UnsetTablePropertiesContext(StatementContext):
-
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a SqlBaseParser.StatementContext
+        def __init__(
+            self, parser, ctx: ParserRuleContext
+        ):  # actually a SqlBaseParser.StatementContext
             super().__init__(parser)
             self.copyFrom(ctx)
 
         def ALTER(self):
             return self.getToken(SqlBaseParser.ALTER, 0)
+
         def multipartIdentifier(self):
-            return self.getTypedRuleContext(SqlBaseParser.MultipartIdentifierContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.MultipartIdentifierContext, 0)
 
         def UNSET(self):
             return self.getToken(SqlBaseParser.UNSET, 0)
+
         def TBLPROPERTIES(self):
             return self.getToken(SqlBaseParser.TBLPROPERTIES, 0)
+
         def tablePropertyList(self):
-            return self.getTypedRuleContext(SqlBaseParser.TablePropertyListContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.TablePropertyListContext, 0)
 
         def TABLE(self):
             return self.getToken(SqlBaseParser.TABLE, 0)
+
         def VIEW(self):
             return self.getToken(SqlBaseParser.VIEW, 0)
+
         def IF(self):
             return self.getToken(SqlBaseParser.IF, 0)
+
         def EXISTS(self):
             return self.getToken(SqlBaseParser.EXISTS, 0)
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterUnsetTableProperties" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterUnsetTableProperties"):
                 listener.enterUnsetTableProperties(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitUnsetTableProperties" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitUnsetTableProperties"):
                 listener.exitUnsetTableProperties(self)
 
-
     class SetTableLocationContext(StatementContext):
-
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a SqlBaseParser.StatementContext
+        def __init__(
+            self, parser, ctx: ParserRuleContext
+        ):  # actually a SqlBaseParser.StatementContext
             super().__init__(parser)
             self.copyFrom(ctx)
 
         def ALTER(self):
             return self.getToken(SqlBaseParser.ALTER, 0)
+
         def TABLE(self):
             return self.getToken(SqlBaseParser.TABLE, 0)
+
         def multipartIdentifier(self):
-            return self.getTypedRuleContext(SqlBaseParser.MultipartIdentifierContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.MultipartIdentifierContext, 0)
 
         def SET(self):
             return self.getToken(SqlBaseParser.SET, 0)
+
         def locationSpec(self):
-            return self.getTypedRuleContext(SqlBaseParser.LocationSpecContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.LocationSpecContext, 0)
 
         def partitionSpec(self):
-            return self.getTypedRuleContext(SqlBaseParser.PartitionSpecContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.PartitionSpecContext, 0)
 
-
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterSetTableLocation" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterSetTableLocation"):
                 listener.enterSetTableLocation(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitSetTableLocation" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitSetTableLocation"):
                 listener.exitSetTableLocation(self)
 
-
     class DropTableColumnsContext(StatementContext):
-
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a SqlBaseParser.StatementContext
+        def __init__(
+            self, parser, ctx: ParserRuleContext
+        ):  # actually a SqlBaseParser.StatementContext
             super().__init__(parser)
-            self.columns = None # MultipartIdentifierListContext
+            self.columns = None  # MultipartIdentifierListContext
             self.copyFrom(ctx)
 
         def ALTER(self):
             return self.getToken(SqlBaseParser.ALTER, 0)
+
         def TABLE(self):
             return self.getToken(SqlBaseParser.TABLE, 0)
+
         def multipartIdentifier(self):
-            return self.getTypedRuleContext(SqlBaseParser.MultipartIdentifierContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.MultipartIdentifierContext, 0)
 
         def DROP(self):
             return self.getToken(SqlBaseParser.DROP, 0)
+
         def COLUMN(self):
             return self.getToken(SqlBaseParser.COLUMN, 0)
+
         def COLUMNS(self):
             return self.getToken(SqlBaseParser.COLUMNS, 0)
+
         def multipartIdentifierList(self):
-            return self.getTypedRuleContext(SqlBaseParser.MultipartIdentifierListContext,0)
+            return self.getTypedRuleContext(
+                SqlBaseParser.MultipartIdentifierListContext, 0
+            )
 
-
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterDropTableColumns" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterDropTableColumns"):
                 listener.enterDropTableColumns(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitDropTableColumns" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitDropTableColumns"):
                 listener.exitDropTableColumns(self)
 
-
     class ShowViewsContext(StatementContext):
-
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a SqlBaseParser.StatementContext
+        def __init__(
+            self, parser, ctx: ParserRuleContext
+        ):  # actually a SqlBaseParser.StatementContext
             super().__init__(parser)
-            self.pattern = None # Token
+            self.pattern = None  # Token
             self.copyFrom(ctx)
 
         def SHOW(self):
             return self.getToken(SqlBaseParser.SHOW, 0)
+
         def VIEWS(self):
             return self.getToken(SqlBaseParser.VIEWS, 0)
+
         def multipartIdentifier(self):
-            return self.getTypedRuleContext(SqlBaseParser.MultipartIdentifierContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.MultipartIdentifierContext, 0)
 
         def FROM(self):
             return self.getToken(SqlBaseParser.FROM, 0)
+
         def IN(self):
             return self.getToken(SqlBaseParser.IN, 0)
+
         def STRING(self):
             return self.getToken(SqlBaseParser.STRING, 0)
+
         def LIKE(self):
             return self.getToken(SqlBaseParser.LIKE, 0)
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterShowViews" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterShowViews"):
                 listener.enterShowViews(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitShowViews" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitShowViews"):
                 listener.exitShowViews(self)
 
-
     class ShowFunctionsContext(StatementContext):
-
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a SqlBaseParser.StatementContext
+        def __init__(
+            self, parser, ctx: ParserRuleContext
+        ):  # actually a SqlBaseParser.StatementContext
             super().__init__(parser)
-            self.pattern = None # Token
+            self.pattern = None  # Token
             self.copyFrom(ctx)
 
         def SHOW(self):
             return self.getToken(SqlBaseParser.SHOW, 0)
+
         def FUNCTIONS(self):
             return self.getToken(SqlBaseParser.FUNCTIONS, 0)
+
         def identifier(self):
-            return self.getTypedRuleContext(SqlBaseParser.IdentifierContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.IdentifierContext, 0)
 
         def multipartIdentifier(self):
-            return self.getTypedRuleContext(SqlBaseParser.MultipartIdentifierContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.MultipartIdentifierContext, 0)
 
         def LIKE(self):
             return self.getToken(SqlBaseParser.LIKE, 0)
+
         def STRING(self):
             return self.getToken(SqlBaseParser.STRING, 0)
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterShowFunctions" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterShowFunctions"):
                 listener.enterShowFunctions(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitShowFunctions" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitShowFunctions"):
                 listener.exitShowFunctions(self)
 
-
     class CacheTableContext(StatementContext):
-
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a SqlBaseParser.StatementContext
+        def __init__(
+            self, parser, ctx: ParserRuleContext
+        ):  # actually a SqlBaseParser.StatementContext
             super().__init__(parser)
-            self.options = None # TablePropertyListContext
+            self.options = None  # TablePropertyListContext
             self.copyFrom(ctx)
 
         def CACHE(self):
             return self.getToken(SqlBaseParser.CACHE, 0)
+
         def TABLE(self):
             return self.getToken(SqlBaseParser.TABLE, 0)
+
         def multipartIdentifier(self):
-            return self.getTypedRuleContext(SqlBaseParser.MultipartIdentifierContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.MultipartIdentifierContext, 0)
 
         def LAZY(self):
             return self.getToken(SqlBaseParser.LAZY, 0)
+
         def OPTIONS(self):
             return self.getToken(SqlBaseParser.OPTIONS, 0)
+
         def query(self):
-            return self.getTypedRuleContext(SqlBaseParser.QueryContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.QueryContext, 0)
 
         def tablePropertyList(self):
-            return self.getTypedRuleContext(SqlBaseParser.TablePropertyListContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.TablePropertyListContext, 0)
 
         def AS(self):
             return self.getToken(SqlBaseParser.AS, 0)
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterCacheTable" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterCacheTable"):
                 listener.enterCacheTable(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitCacheTable" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitCacheTable"):
                 listener.exitCacheTable(self)
 
-
     class AddTableColumnsContext(StatementContext):
-
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a SqlBaseParser.StatementContext
+        def __init__(
+            self, parser, ctx: ParserRuleContext
+        ):  # actually a SqlBaseParser.StatementContext
             super().__init__(parser)
-            self.columns = None # QualifiedColTypeWithPositionListContext
+            self.columns = None  # QualifiedColTypeWithPositionListContext
             self.copyFrom(ctx)
 
         def ALTER(self):
             return self.getToken(SqlBaseParser.ALTER, 0)
+
         def TABLE(self):
             return self.getToken(SqlBaseParser.TABLE, 0)
+
         def multipartIdentifier(self):
-            return self.getTypedRuleContext(SqlBaseParser.MultipartIdentifierContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.MultipartIdentifierContext, 0)
 
         def ADD(self):
             return self.getToken(SqlBaseParser.ADD, 0)
+
         def COLUMN(self):
             return self.getToken(SqlBaseParser.COLUMN, 0)
+
         def COLUMNS(self):
             return self.getToken(SqlBaseParser.COLUMNS, 0)
+
         def qualifiedColTypeWithPositionList(self):
-            return self.getTypedRuleContext(SqlBaseParser.QualifiedColTypeWithPositionListContext,0)
+            return self.getTypedRuleContext(
+                SqlBaseParser.QualifiedColTypeWithPositionListContext, 0
+            )
 
-
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterAddTableColumns" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterAddTableColumns"):
                 listener.enterAddTableColumns(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitAddTableColumns" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitAddTableColumns"):
                 listener.exitAddTableColumns(self)
 
-
     class SetTablePropertiesContext(StatementContext):
-
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a SqlBaseParser.StatementContext
+        def __init__(
+            self, parser, ctx: ParserRuleContext
+        ):  # actually a SqlBaseParser.StatementContext
             super().__init__(parser)
             self.copyFrom(ctx)
 
         def ALTER(self):
             return self.getToken(SqlBaseParser.ALTER, 0)
+
         def multipartIdentifier(self):
-            return self.getTypedRuleContext(SqlBaseParser.MultipartIdentifierContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.MultipartIdentifierContext, 0)
 
         def SET(self):
             return self.getToken(SqlBaseParser.SET, 0)
+
         def TBLPROPERTIES(self):
             return self.getToken(SqlBaseParser.TBLPROPERTIES, 0)
+
         def tablePropertyList(self):
-            return self.getTypedRuleContext(SqlBaseParser.TablePropertyListContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.TablePropertyListContext, 0)
 
         def TABLE(self):
             return self.getToken(SqlBaseParser.TABLE, 0)
+
         def VIEW(self):
             return self.getToken(SqlBaseParser.VIEW, 0)
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterSetTableProperties" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterSetTableProperties"):
                 listener.enterSetTableProperties(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitSetTableProperties" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitSetTableProperties"):
                 listener.exitSetTableProperties(self)
-
-
 
     def statement(self):
 
         localctx = SqlBaseParser.StatementContext(self, self._ctx, self.state)
         self.enterRule(localctx, 14, self.RULE_statement)
-        self._la = 0 # Token type
+        self._la = 0  # Token type
         try:
             self.state = 1050
             self._errHandler.sync(self)
-            la_ = self._interp.adaptivePredict(self._input,109,self._ctx)
+            la_ = self._interp.adaptivePredict(self._input, 109, self._ctx)
             if la_ == 1:
                 localctx = SqlBaseParser.StatementDefaultContext(self, localctx)
                 self.enterOuterAlt(localctx, 1)
@@ -4978,10 +5804,9 @@ class SqlBaseParser ( Parser ):
                 self.state = 315
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==SqlBaseParser.WITH:
+                if _la == SqlBaseParser.WITH:
                     self.state = 314
                     self.ctes()
-
 
                 self.state = 317
                 self.dmlStatementNoWith()
@@ -4994,11 +5819,10 @@ class SqlBaseParser ( Parser ):
                 self.match(SqlBaseParser.USE)
                 self.state = 320
                 self._errHandler.sync(self)
-                la_ = self._interp.adaptivePredict(self._input,2,self._ctx)
+                la_ = self._interp.adaptivePredict(self._input, 2, self._ctx)
                 if la_ == 1:
                     self.state = 319
                     self.match(SqlBaseParser.NAMESPACE)
-
 
                 self.state = 322
                 self.multipartIdentifier()
@@ -5013,7 +5837,7 @@ class SqlBaseParser ( Parser ):
                 self.namespace()
                 self.state = 328
                 self._errHandler.sync(self)
-                la_ = self._interp.adaptivePredict(self._input,3,self._ctx)
+                la_ = self._interp.adaptivePredict(self._input, 3, self._ctx)
                 if la_ == 1:
                     self.state = 325
                     self.match(SqlBaseParser.IF)
@@ -5022,13 +5846,16 @@ class SqlBaseParser ( Parser ):
                     self.state = 327
                     self.match(SqlBaseParser.EXISTS)
 
-
                 self.state = 330
                 self.multipartIdentifier()
                 self.state = 338
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                while _la==SqlBaseParser.COMMENT or _la==SqlBaseParser.LOCATION or _la==SqlBaseParser.WITH:
+                while (
+                    _la == SqlBaseParser.COMMENT
+                    or _la == SqlBaseParser.LOCATION
+                    or _la == SqlBaseParser.WITH
+                ):
                     self.state = 336
                     self._errHandler.sync(self)
                     token = self._input.LA(1)
@@ -5045,7 +5872,10 @@ class SqlBaseParser ( Parser ):
                         self.match(SqlBaseParser.WITH)
                         self.state = 334
                         _la = self._input.LA(1)
-                        if not(_la==SqlBaseParser.DBPROPERTIES or _la==SqlBaseParser.PROPERTIES):
+                        if not (
+                            _la == SqlBaseParser.DBPROPERTIES
+                            or _la == SqlBaseParser.PROPERTIES
+                        ):
                             self._errHandler.recoverInline(self)
                         else:
                             self._errHandler.reportMatch(self)
@@ -5075,7 +5905,9 @@ class SqlBaseParser ( Parser ):
                 self.match(SqlBaseParser.SET)
                 self.state = 345
                 _la = self._input.LA(1)
-                if not(_la==SqlBaseParser.DBPROPERTIES or _la==SqlBaseParser.PROPERTIES):
+                if not (
+                    _la == SqlBaseParser.DBPROPERTIES or _la == SqlBaseParser.PROPERTIES
+                ):
                     self._errHandler.recoverInline(self)
                 else:
                     self._errHandler.reportMatch(self)
@@ -5108,28 +5940,28 @@ class SqlBaseParser ( Parser ):
                 self.namespace()
                 self.state = 358
                 self._errHandler.sync(self)
-                la_ = self._interp.adaptivePredict(self._input,6,self._ctx)
+                la_ = self._interp.adaptivePredict(self._input, 6, self._ctx)
                 if la_ == 1:
                     self.state = 356
                     self.match(SqlBaseParser.IF)
                     self.state = 357
                     self.match(SqlBaseParser.EXISTS)
 
-
                 self.state = 360
                 self.multipartIdentifier()
                 self.state = 362
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==SqlBaseParser.CASCADE or _la==SqlBaseParser.RESTRICT:
+                if _la == SqlBaseParser.CASCADE or _la == SqlBaseParser.RESTRICT:
                     self.state = 361
                     _la = self._input.LA(1)
-                    if not(_la==SqlBaseParser.CASCADE or _la==SqlBaseParser.RESTRICT):
+                    if not (
+                        _la == SqlBaseParser.CASCADE or _la == SqlBaseParser.RESTRICT
+                    ):
                         self._errHandler.recoverInline(self)
                     else:
                         self._errHandler.reportMatch(self)
                         self.consume()
-
 
                 pass
 
@@ -5140,7 +5972,9 @@ class SqlBaseParser ( Parser ):
                 self.match(SqlBaseParser.SHOW)
                 self.state = 365
                 _la = self._input.LA(1)
-                if not(_la==SqlBaseParser.DATABASES or _la==SqlBaseParser.NAMESPACES):
+                if not (
+                    _la == SqlBaseParser.DATABASES or _la == SqlBaseParser.NAMESPACES
+                ):
                     self._errHandler.recoverInline(self)
                 else:
                     self._errHandler.reportMatch(self)
@@ -5148,10 +5982,10 @@ class SqlBaseParser ( Parser ):
                 self.state = 368
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==SqlBaseParser.FROM or _la==SqlBaseParser.IN:
+                if _la == SqlBaseParser.FROM or _la == SqlBaseParser.IN:
                     self.state = 366
                     _la = self._input.LA(1)
-                    if not(_la==SqlBaseParser.FROM or _la==SqlBaseParser.IN):
+                    if not (_la == SqlBaseParser.FROM or _la == SqlBaseParser.IN):
                         self._errHandler.recoverInline(self)
                     else:
                         self._errHandler.reportMatch(self)
@@ -5159,22 +5993,19 @@ class SqlBaseParser ( Parser ):
                     self.state = 367
                     self.multipartIdentifier()
 
-
                 self.state = 374
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==SqlBaseParser.LIKE or _la==SqlBaseParser.STRING:
+                if _la == SqlBaseParser.LIKE or _la == SqlBaseParser.STRING:
                     self.state = 371
                     self._errHandler.sync(self)
                     _la = self._input.LA(1)
-                    if _la==SqlBaseParser.LIKE:
+                    if _la == SqlBaseParser.LIKE:
                         self.state = 370
                         self.match(SqlBaseParser.LIKE)
 
-
                     self.state = 373
                     localctx.pattern = self.match(SqlBaseParser.STRING)
-
 
                 pass
 
@@ -5185,7 +6016,7 @@ class SqlBaseParser ( Parser ):
                 self.createTableHeader()
                 self.state = 381
                 self._errHandler.sync(self)
-                la_ = self._interp.adaptivePredict(self._input,11,self._ctx)
+                la_ = self._interp.adaptivePredict(self._input, 11, self._ctx)
                 if la_ == 1:
                     self.state = 377
                     self.match(SqlBaseParser.T__1)
@@ -5194,32 +6025,47 @@ class SqlBaseParser ( Parser ):
                     self.state = 379
                     self.match(SqlBaseParser.T__2)
 
-
                 self.state = 384
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==SqlBaseParser.USING:
+                if _la == SqlBaseParser.USING:
                     self.state = 383
                     self.tableProvider()
-
 
                 self.state = 386
                 self.createTableClauses()
                 self.state = 391
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==SqlBaseParser.T__1 or _la==SqlBaseParser.AS or _la==SqlBaseParser.FROM or _la==SqlBaseParser.MAP or ((((_la - 188)) & ~0x3f) == 0 and ((1 << (_la - 188)) & ((1 << (SqlBaseParser.REDUCE - 188)) | (1 << (SqlBaseParser.SELECT - 188)) | (1 << (SqlBaseParser.TABLE - 188)))) != 0) or _la==SqlBaseParser.VALUES or _la==SqlBaseParser.WITH:
+                if (
+                    _la == SqlBaseParser.T__1
+                    or _la == SqlBaseParser.AS
+                    or _la == SqlBaseParser.FROM
+                    or _la == SqlBaseParser.MAP
+                    or (
+                        (((_la - 188)) & ~0x3F) == 0
+                        and (
+                            (1 << (_la - 188))
+                            & (
+                                (1 << (SqlBaseParser.REDUCE - 188))
+                                | (1 << (SqlBaseParser.SELECT - 188))
+                                | (1 << (SqlBaseParser.TABLE - 188))
+                            )
+                        )
+                        != 0
+                    )
+                    or _la == SqlBaseParser.VALUES
+                    or _la == SqlBaseParser.WITH
+                ):
                     self.state = 388
                     self._errHandler.sync(self)
                     _la = self._input.LA(1)
-                    if _la==SqlBaseParser.AS:
+                    if _la == SqlBaseParser.AS:
                         self.state = 387
                         self.match(SqlBaseParser.AS)
 
-
                     self.state = 390
                     self.query()
-
 
                 pass
 
@@ -5232,7 +6078,7 @@ class SqlBaseParser ( Parser ):
                 self.match(SqlBaseParser.TABLE)
                 self.state = 398
                 self._errHandler.sync(self)
-                la_ = self._interp.adaptivePredict(self._input,15,self._ctx)
+                la_ = self._interp.adaptivePredict(self._input, 15, self._ctx)
                 if la_ == 1:
                     self.state = 395
                     self.match(SqlBaseParser.IF)
@@ -5240,7 +6086,6 @@ class SqlBaseParser ( Parser ):
                     self.match(SqlBaseParser.NOT)
                     self.state = 397
                     self.match(SqlBaseParser.EXISTS)
-
 
                 self.state = 400
                 localctx.target = self.tableIdentifier()
@@ -5251,7 +6096,19 @@ class SqlBaseParser ( Parser ):
                 self.state = 411
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                while _la==SqlBaseParser.LOCATION or ((((_la - 204)) & ~0x3f) == 0 and ((1 << (_la - 204)) & ((1 << (SqlBaseParser.ROW - 204)) | (1 << (SqlBaseParser.STORED - 204)) | (1 << (SqlBaseParser.TBLPROPERTIES - 204)) | (1 << (SqlBaseParser.USING - 204)))) != 0):
+                while _la == SqlBaseParser.LOCATION or (
+                    (((_la - 204)) & ~0x3F) == 0
+                    and (
+                        (1 << (_la - 204))
+                        & (
+                            (1 << (SqlBaseParser.ROW - 204))
+                            | (1 << (SqlBaseParser.STORED - 204))
+                            | (1 << (SqlBaseParser.TBLPROPERTIES - 204))
+                            | (1 << (SqlBaseParser.USING - 204))
+                        )
+                    )
+                    != 0
+                ):
                     self.state = 409
                     self._errHandler.sync(self)
                     token = self._input.LA(1)
@@ -5293,7 +6150,7 @@ class SqlBaseParser ( Parser ):
                 self.replaceTableHeader()
                 self.state = 419
                 self._errHandler.sync(self)
-                la_ = self._interp.adaptivePredict(self._input,18,self._ctx)
+                la_ = self._interp.adaptivePredict(self._input, 18, self._ctx)
                 if la_ == 1:
                     self.state = 415
                     self.match(SqlBaseParser.T__1)
@@ -5302,32 +6159,47 @@ class SqlBaseParser ( Parser ):
                     self.state = 417
                     self.match(SqlBaseParser.T__2)
 
-
                 self.state = 422
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==SqlBaseParser.USING:
+                if _la == SqlBaseParser.USING:
                     self.state = 421
                     self.tableProvider()
-
 
                 self.state = 424
                 self.createTableClauses()
                 self.state = 429
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==SqlBaseParser.T__1 or _la==SqlBaseParser.AS or _la==SqlBaseParser.FROM or _la==SqlBaseParser.MAP or ((((_la - 188)) & ~0x3f) == 0 and ((1 << (_la - 188)) & ((1 << (SqlBaseParser.REDUCE - 188)) | (1 << (SqlBaseParser.SELECT - 188)) | (1 << (SqlBaseParser.TABLE - 188)))) != 0) or _la==SqlBaseParser.VALUES or _la==SqlBaseParser.WITH:
+                if (
+                    _la == SqlBaseParser.T__1
+                    or _la == SqlBaseParser.AS
+                    or _la == SqlBaseParser.FROM
+                    or _la == SqlBaseParser.MAP
+                    or (
+                        (((_la - 188)) & ~0x3F) == 0
+                        and (
+                            (1 << (_la - 188))
+                            & (
+                                (1 << (SqlBaseParser.REDUCE - 188))
+                                | (1 << (SqlBaseParser.SELECT - 188))
+                                | (1 << (SqlBaseParser.TABLE - 188))
+                            )
+                        )
+                        != 0
+                    )
+                    or _la == SqlBaseParser.VALUES
+                    or _la == SqlBaseParser.WITH
+                ):
                     self.state = 426
                     self._errHandler.sync(self)
                     _la = self._input.LA(1)
-                    if _la==SqlBaseParser.AS:
+                    if _la == SqlBaseParser.AS:
                         self.state = 425
                         self.match(SqlBaseParser.AS)
 
-
                     self.state = 428
                     self.query()
-
 
                 pass
 
@@ -5343,10 +6215,9 @@ class SqlBaseParser ( Parser ):
                 self.state = 435
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==SqlBaseParser.PARTITION:
+                if _la == SqlBaseParser.PARTITION:
                     self.state = 434
                     self.partitionSpec()
-
 
                 self.state = 437
                 self.match(SqlBaseParser.COMPUTE)
@@ -5354,7 +6225,7 @@ class SqlBaseParser ( Parser ):
                 self.match(SqlBaseParser.STATISTICS)
                 self.state = 446
                 self._errHandler.sync(self)
-                la_ = self._interp.adaptivePredict(self._input,23,self._ctx)
+                la_ = self._interp.adaptivePredict(self._input, 23, self._ctx)
                 if la_ == 1:
                     self.state = 439
                     self.identifier()
@@ -5375,7 +6246,6 @@ class SqlBaseParser ( Parser ):
                     self.state = 445
                     self.match(SqlBaseParser.COLUMNS)
 
-
                 pass
 
             elif la_ == 13:
@@ -5388,10 +6258,10 @@ class SqlBaseParser ( Parser ):
                 self.state = 452
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==SqlBaseParser.FROM or _la==SqlBaseParser.IN:
+                if _la == SqlBaseParser.FROM or _la == SqlBaseParser.IN:
                     self.state = 450
                     _la = self._input.LA(1)
-                    if not(_la==SqlBaseParser.FROM or _la==SqlBaseParser.IN):
+                    if not (_la == SqlBaseParser.FROM or _la == SqlBaseParser.IN):
                         self._errHandler.recoverInline(self)
                     else:
                         self._errHandler.reportMatch(self)
@@ -5399,18 +6269,16 @@ class SqlBaseParser ( Parser ):
                     self.state = 451
                     self.multipartIdentifier()
 
-
                 self.state = 454
                 self.match(SqlBaseParser.COMPUTE)
                 self.state = 455
                 self.match(SqlBaseParser.STATISTICS)
                 self.state = 457
                 self._errHandler.sync(self)
-                la_ = self._interp.adaptivePredict(self._input,25,self._ctx)
+                la_ = self._interp.adaptivePredict(self._input, 25, self._ctx)
                 if la_ == 1:
                     self.state = 456
                     self.identifier()
-
 
                 pass
 
@@ -5427,7 +6295,7 @@ class SqlBaseParser ( Parser ):
                 self.match(SqlBaseParser.ADD)
                 self.state = 463
                 _la = self._input.LA(1)
-                if not(_la==SqlBaseParser.COLUMN or _la==SqlBaseParser.COLUMNS):
+                if not (_la == SqlBaseParser.COLUMN or _la == SqlBaseParser.COLUMNS):
                     self._errHandler.recoverInline(self)
                 else:
                     self._errHandler.reportMatch(self)
@@ -5449,7 +6317,7 @@ class SqlBaseParser ( Parser ):
                 self.match(SqlBaseParser.ADD)
                 self.state = 470
                 _la = self._input.LA(1)
-                if not(_la==SqlBaseParser.COLUMN or _la==SqlBaseParser.COLUMNS):
+                if not (_la == SqlBaseParser.COLUMN or _la == SqlBaseParser.COLUMNS):
                     self._errHandler.recoverInline(self)
                 else:
                     self._errHandler.reportMatch(self)
@@ -5476,7 +6344,7 @@ class SqlBaseParser ( Parser ):
                 self.state = 479
                 self.match(SqlBaseParser.COLUMN)
                 self.state = 480
-                localctx.from = self.multipartIdentifier()
+                localctx.from_ = self.multipartIdentifier()
                 self.state = 481
                 self.match(SqlBaseParser.TO)
                 self.state = 482
@@ -5496,7 +6364,7 @@ class SqlBaseParser ( Parser ):
                 self.match(SqlBaseParser.DROP)
                 self.state = 488
                 _la = self._input.LA(1)
-                if not(_la==SqlBaseParser.COLUMN or _la==SqlBaseParser.COLUMNS):
+                if not (_la == SqlBaseParser.COLUMN or _la == SqlBaseParser.COLUMNS):
                     self._errHandler.recoverInline(self)
                 else:
                     self._errHandler.reportMatch(self)
@@ -5522,7 +6390,7 @@ class SqlBaseParser ( Parser ):
                 self.match(SqlBaseParser.DROP)
                 self.state = 497
                 _la = self._input.LA(1)
-                if not(_la==SqlBaseParser.COLUMN or _la==SqlBaseParser.COLUMNS):
+                if not (_la == SqlBaseParser.COLUMN or _la == SqlBaseParser.COLUMNS):
                     self._errHandler.recoverInline(self)
                 else:
                     self._errHandler.reportMatch(self)
@@ -5538,13 +6406,13 @@ class SqlBaseParser ( Parser ):
                 self.match(SqlBaseParser.ALTER)
                 self.state = 501
                 _la = self._input.LA(1)
-                if not(_la==SqlBaseParser.TABLE or _la==SqlBaseParser.VIEW):
+                if not (_la == SqlBaseParser.TABLE or _la == SqlBaseParser.VIEW):
                     self._errHandler.recoverInline(self)
                 else:
                     self._errHandler.reportMatch(self)
                     self.consume()
                 self.state = 502
-                localctx.from = self.multipartIdentifier()
+                localctx.from_ = self.multipartIdentifier()
                 self.state = 503
                 self.match(SqlBaseParser.RENAME)
                 self.state = 504
@@ -5560,7 +6428,7 @@ class SqlBaseParser ( Parser ):
                 self.match(SqlBaseParser.ALTER)
                 self.state = 508
                 _la = self._input.LA(1)
-                if not(_la==SqlBaseParser.TABLE or _la==SqlBaseParser.VIEW):
+                if not (_la == SqlBaseParser.TABLE or _la == SqlBaseParser.VIEW):
                     self._errHandler.recoverInline(self)
                 else:
                     self._errHandler.reportMatch(self)
@@ -5582,7 +6450,7 @@ class SqlBaseParser ( Parser ):
                 self.match(SqlBaseParser.ALTER)
                 self.state = 515
                 _la = self._input.LA(1)
-                if not(_la==SqlBaseParser.TABLE or _la==SqlBaseParser.VIEW):
+                if not (_la == SqlBaseParser.TABLE or _la == SqlBaseParser.VIEW):
                     self._errHandler.recoverInline(self)
                 else:
                     self._errHandler.reportMatch(self)
@@ -5596,12 +6464,11 @@ class SqlBaseParser ( Parser ):
                 self.state = 521
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==SqlBaseParser.IF:
+                if _la == SqlBaseParser.IF:
                     self.state = 519
                     self.match(SqlBaseParser.IF)
                     self.state = 520
                     self.match(SqlBaseParser.EXISTS)
-
 
                 self.state = 523
                 self.tablePropertyList()
@@ -5618,28 +6485,33 @@ class SqlBaseParser ( Parser ):
                 localctx.table = self.multipartIdentifier()
                 self.state = 528
                 _la = self._input.LA(1)
-                if not(_la==SqlBaseParser.ALTER or _la==SqlBaseParser.CHANGE):
+                if not (_la == SqlBaseParser.ALTER or _la == SqlBaseParser.CHANGE):
                     self._errHandler.recoverInline(self)
                 else:
                     self._errHandler.reportMatch(self)
                     self.consume()
                 self.state = 530
                 self._errHandler.sync(self)
-                la_ = self._interp.adaptivePredict(self._input,27,self._ctx)
+                la_ = self._interp.adaptivePredict(self._input, 27, self._ctx)
                 if la_ == 1:
                     self.state = 529
                     self.match(SqlBaseParser.COLUMN)
-
 
                 self.state = 532
                 localctx.column = self.multipartIdentifier()
                 self.state = 534
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==SqlBaseParser.AFTER or _la==SqlBaseParser.COMMENT or _la==SqlBaseParser.DROP or _la==SqlBaseParser.FIRST or _la==SqlBaseParser.SET or _la==SqlBaseParser.TYPE:
+                if (
+                    _la == SqlBaseParser.AFTER
+                    or _la == SqlBaseParser.COMMENT
+                    or _la == SqlBaseParser.DROP
+                    or _la == SqlBaseParser.FIRST
+                    or _la == SqlBaseParser.SET
+                    or _la == SqlBaseParser.TYPE
+                ):
                     self.state = 533
                     self.alterColumnAction()
-
 
                 pass
 
@@ -5655,20 +6527,18 @@ class SqlBaseParser ( Parser ):
                 self.state = 540
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==SqlBaseParser.PARTITION:
+                if _la == SqlBaseParser.PARTITION:
                     self.state = 539
                     self.partitionSpec()
-
 
                 self.state = 542
                 self.match(SqlBaseParser.CHANGE)
                 self.state = 544
                 self._errHandler.sync(self)
-                la_ = self._interp.adaptivePredict(self._input,30,self._ctx)
+                la_ = self._interp.adaptivePredict(self._input, 30, self._ctx)
                 if la_ == 1:
                     self.state = 543
                     self.match(SqlBaseParser.COLUMN)
-
 
                 self.state = 546
                 localctx.colName = self.multipartIdentifier()
@@ -5677,10 +6547,9 @@ class SqlBaseParser ( Parser ):
                 self.state = 549
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==SqlBaseParser.AFTER or _la==SqlBaseParser.FIRST:
+                if _la == SqlBaseParser.AFTER or _la == SqlBaseParser.FIRST:
                     self.state = 548
                     self.colPosition()
-
 
                 pass
 
@@ -5696,10 +6565,9 @@ class SqlBaseParser ( Parser ):
                 self.state = 555
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==SqlBaseParser.PARTITION:
+                if _la == SqlBaseParser.PARTITION:
                     self.state = 554
                     self.partitionSpec()
-
 
                 self.state = 557
                 self.match(SqlBaseParser.REPLACE)
@@ -5725,10 +6593,9 @@ class SqlBaseParser ( Parser ):
                 self.state = 567
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==SqlBaseParser.PARTITION:
+                if _la == SqlBaseParser.PARTITION:
                     self.state = 566
                     self.partitionSpec()
-
 
                 self.state = 569
                 self.match(SqlBaseParser.SET)
@@ -5739,14 +6606,13 @@ class SqlBaseParser ( Parser ):
                 self.state = 575
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==SqlBaseParser.WITH:
+                if _la == SqlBaseParser.WITH:
                     self.state = 572
                     self.match(SqlBaseParser.WITH)
                     self.state = 573
                     self.match(SqlBaseParser.SERDEPROPERTIES)
                     self.state = 574
                     self.tablePropertyList()
-
 
                 pass
 
@@ -5762,10 +6628,9 @@ class SqlBaseParser ( Parser ):
                 self.state = 581
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==SqlBaseParser.PARTITION:
+                if _la == SqlBaseParser.PARTITION:
                     self.state = 580
                     self.partitionSpec()
-
 
                 self.state = 583
                 self.match(SqlBaseParser.SET)
@@ -5782,7 +6647,7 @@ class SqlBaseParser ( Parser ):
                 self.match(SqlBaseParser.ALTER)
                 self.state = 588
                 _la = self._input.LA(1)
-                if not(_la==SqlBaseParser.TABLE or _la==SqlBaseParser.VIEW):
+                if not (_la == SqlBaseParser.TABLE or _la == SqlBaseParser.VIEW):
                     self._errHandler.recoverInline(self)
                 else:
                     self._errHandler.reportMatch(self)
@@ -5794,7 +6659,7 @@ class SqlBaseParser ( Parser ):
                 self.state = 594
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==SqlBaseParser.IF:
+                if _la == SqlBaseParser.IF:
                     self.state = 591
                     self.match(SqlBaseParser.IF)
                     self.state = 592
@@ -5802,17 +6667,16 @@ class SqlBaseParser ( Parser ):
                     self.state = 593
                     self.match(SqlBaseParser.EXISTS)
 
-
-                self.state = 597 
+                self.state = 597
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
                 while True:
                     self.state = 596
                     self.partitionSpecLocation()
-                    self.state = 599 
+                    self.state = 599
                     self._errHandler.sync(self)
                     _la = self._input.LA(1)
-                    if not (_la==SqlBaseParser.PARTITION):
+                    if not (_la == SqlBaseParser.PARTITION):
                         break
 
                 pass
@@ -5827,7 +6691,7 @@ class SqlBaseParser ( Parser ):
                 self.state = 603
                 self.multipartIdentifier()
                 self.state = 604
-                localctx.from = self.partitionSpec()
+                localctx.from_ = self.partitionSpec()
                 self.state = 605
                 self.match(SqlBaseParser.RENAME)
                 self.state = 606
@@ -5843,7 +6707,7 @@ class SqlBaseParser ( Parser ):
                 self.match(SqlBaseParser.ALTER)
                 self.state = 610
                 _la = self._input.LA(1)
-                if not(_la==SqlBaseParser.TABLE or _la==SqlBaseParser.VIEW):
+                if not (_la == SqlBaseParser.TABLE or _la == SqlBaseParser.VIEW):
                     self._errHandler.recoverInline(self)
                 else:
                     self._errHandler.reportMatch(self)
@@ -5855,19 +6719,18 @@ class SqlBaseParser ( Parser ):
                 self.state = 615
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==SqlBaseParser.IF:
+                if _la == SqlBaseParser.IF:
                     self.state = 613
                     self.match(SqlBaseParser.IF)
                     self.state = 614
                     self.match(SqlBaseParser.EXISTS)
-
 
                 self.state = 617
                 self.partitionSpec()
                 self.state = 622
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                while _la==SqlBaseParser.T__3:
+                while _la == SqlBaseParser.T__3:
                     self.state = 618
                     self.match(SqlBaseParser.T__3)
                     self.state = 619
@@ -5879,10 +6742,9 @@ class SqlBaseParser ( Parser ):
                 self.state = 626
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==SqlBaseParser.PURGE:
+                if _la == SqlBaseParser.PURGE:
                     self.state = 625
                     self.match(SqlBaseParser.PURGE)
-
 
                 pass
 
@@ -5898,10 +6760,9 @@ class SqlBaseParser ( Parser ):
                 self.state = 632
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==SqlBaseParser.PARTITION:
+                if _la == SqlBaseParser.PARTITION:
                     self.state = 631
                     self.partitionSpec()
-
 
                 self.state = 634
                 self.match(SqlBaseParser.SET)
@@ -5933,23 +6794,21 @@ class SqlBaseParser ( Parser ):
                 self.match(SqlBaseParser.TABLE)
                 self.state = 647
                 self._errHandler.sync(self)
-                la_ = self._interp.adaptivePredict(self._input,42,self._ctx)
+                la_ = self._interp.adaptivePredict(self._input, 42, self._ctx)
                 if la_ == 1:
                     self.state = 645
                     self.match(SqlBaseParser.IF)
                     self.state = 646
                     self.match(SqlBaseParser.EXISTS)
 
-
                 self.state = 649
                 self.multipartIdentifier()
                 self.state = 651
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==SqlBaseParser.PURGE:
+                if _la == SqlBaseParser.PURGE:
                     self.state = 650
                     self.match(SqlBaseParser.PURGE)
-
 
                 pass
 
@@ -5962,13 +6821,12 @@ class SqlBaseParser ( Parser ):
                 self.match(SqlBaseParser.VIEW)
                 self.state = 657
                 self._errHandler.sync(self)
-                la_ = self._interp.adaptivePredict(self._input,44,self._ctx)
+                la_ = self._interp.adaptivePredict(self._input, 44, self._ctx)
                 if la_ == 1:
                     self.state = 655
                     self.match(SqlBaseParser.IF)
                     self.state = 656
                     self.match(SqlBaseParser.EXISTS)
-
 
                 self.state = 659
                 self.multipartIdentifier()
@@ -5982,34 +6840,31 @@ class SqlBaseParser ( Parser ):
                 self.state = 663
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==SqlBaseParser.OR:
+                if _la == SqlBaseParser.OR:
                     self.state = 661
                     self.match(SqlBaseParser.OR)
                     self.state = 662
                     self.match(SqlBaseParser.REPLACE)
 
-
                 self.state = 669
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==SqlBaseParser.GLOBAL or _la==SqlBaseParser.TEMPORARY:
+                if _la == SqlBaseParser.GLOBAL or _la == SqlBaseParser.TEMPORARY:
                     self.state = 666
                     self._errHandler.sync(self)
                     _la = self._input.LA(1)
-                    if _la==SqlBaseParser.GLOBAL:
+                    if _la == SqlBaseParser.GLOBAL:
                         self.state = 665
                         self.match(SqlBaseParser.GLOBAL)
 
-
                     self.state = 668
                     self.match(SqlBaseParser.TEMPORARY)
-
 
                 self.state = 671
                 self.match(SqlBaseParser.VIEW)
                 self.state = 675
                 self._errHandler.sync(self)
-                la_ = self._interp.adaptivePredict(self._input,48,self._ctx)
+                la_ = self._interp.adaptivePredict(self._input, 48, self._ctx)
                 if la_ == 1:
                     self.state = 672
                     self.match(SqlBaseParser.IF)
@@ -6018,21 +6873,23 @@ class SqlBaseParser ( Parser ):
                     self.state = 674
                     self.match(SqlBaseParser.EXISTS)
 
-
                 self.state = 677
                 self.multipartIdentifier()
                 self.state = 679
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==SqlBaseParser.T__1:
+                if _la == SqlBaseParser.T__1:
                     self.state = 678
                     self.identifierCommentList()
-
 
                 self.state = 689
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                while _la==SqlBaseParser.COMMENT or _la==SqlBaseParser.PARTITIONED or _la==SqlBaseParser.TBLPROPERTIES:
+                while (
+                    _la == SqlBaseParser.COMMENT
+                    or _la == SqlBaseParser.PARTITIONED
+                    or _la == SqlBaseParser.TBLPROPERTIES
+                ):
                     self.state = 687
                     self._errHandler.sync(self)
                     token = self._input.LA(1)
@@ -6075,20 +6932,18 @@ class SqlBaseParser ( Parser ):
                 self.state = 698
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==SqlBaseParser.OR:
+                if _la == SqlBaseParser.OR:
                     self.state = 696
                     self.match(SqlBaseParser.OR)
                     self.state = 697
                     self.match(SqlBaseParser.REPLACE)
 
-
                 self.state = 701
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==SqlBaseParser.GLOBAL:
+                if _la == SqlBaseParser.GLOBAL:
                     self.state = 700
                     self.match(SqlBaseParser.GLOBAL)
-
 
                 self.state = 703
                 self.match(SqlBaseParser.TEMPORARY)
@@ -6099,7 +6954,7 @@ class SqlBaseParser ( Parser ):
                 self.state = 710
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==SqlBaseParser.T__1:
+                if _la == SqlBaseParser.T__1:
                     self.state = 706
                     self.match(SqlBaseParser.T__1)
                     self.state = 707
@@ -6107,18 +6962,16 @@ class SqlBaseParser ( Parser ):
                     self.state = 708
                     self.match(SqlBaseParser.T__2)
 
-
                 self.state = 712
                 self.tableProvider()
                 self.state = 715
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==SqlBaseParser.OPTIONS:
+                if _la == SqlBaseParser.OPTIONS:
                     self.state = 713
                     self.match(SqlBaseParser.OPTIONS)
                     self.state = 714
                     self.tablePropertyList()
-
 
                 pass
 
@@ -6134,10 +6987,9 @@ class SqlBaseParser ( Parser ):
                 self.state = 721
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==SqlBaseParser.AS:
+                if _la == SqlBaseParser.AS:
                     self.state = 720
                     self.match(SqlBaseParser.AS)
-
 
                 self.state = 723
                 self.query()
@@ -6151,26 +7003,24 @@ class SqlBaseParser ( Parser ):
                 self.state = 728
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==SqlBaseParser.OR:
+                if _la == SqlBaseParser.OR:
                     self.state = 726
                     self.match(SqlBaseParser.OR)
                     self.state = 727
                     self.match(SqlBaseParser.REPLACE)
 
-
                 self.state = 731
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==SqlBaseParser.TEMPORARY:
+                if _la == SqlBaseParser.TEMPORARY:
                     self.state = 730
                     self.match(SqlBaseParser.TEMPORARY)
-
 
                 self.state = 733
                 self.match(SqlBaseParser.FUNCTION)
                 self.state = 737
                 self._errHandler.sync(self)
-                la_ = self._interp.adaptivePredict(self._input,59,self._ctx)
+                la_ = self._interp.adaptivePredict(self._input, 59, self._ctx)
                 if la_ == 1:
                     self.state = 734
                     self.match(SqlBaseParser.IF)
@@ -6178,7 +7028,6 @@ class SqlBaseParser ( Parser ):
                     self.match(SqlBaseParser.NOT)
                     self.state = 736
                     self.match(SqlBaseParser.EXISTS)
-
 
                 self.state = 739
                 self.multipartIdentifier()
@@ -6189,7 +7038,7 @@ class SqlBaseParser ( Parser ):
                 self.state = 751
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==SqlBaseParser.USING:
+                if _la == SqlBaseParser.USING:
                     self.state = 742
                     self.match(SqlBaseParser.USING)
                     self.state = 743
@@ -6197,7 +7046,7 @@ class SqlBaseParser ( Parser ):
                     self.state = 748
                     self._errHandler.sync(self)
                     _la = self._input.LA(1)
-                    while _la==SqlBaseParser.T__3:
+                    while _la == SqlBaseParser.T__3:
                         self.state = 744
                         self.match(SqlBaseParser.T__3)
                         self.state = 745
@@ -6205,8 +7054,6 @@ class SqlBaseParser ( Parser ):
                         self.state = 750
                         self._errHandler.sync(self)
                         _la = self._input.LA(1)
-
-
 
                 pass
 
@@ -6218,22 +7065,20 @@ class SqlBaseParser ( Parser ):
                 self.state = 755
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==SqlBaseParser.TEMPORARY:
+                if _la == SqlBaseParser.TEMPORARY:
                     self.state = 754
                     self.match(SqlBaseParser.TEMPORARY)
-
 
                 self.state = 757
                 self.match(SqlBaseParser.FUNCTION)
                 self.state = 760
                 self._errHandler.sync(self)
-                la_ = self._interp.adaptivePredict(self._input,63,self._ctx)
+                la_ = self._interp.adaptivePredict(self._input, 63, self._ctx)
                 if la_ == 1:
                     self.state = 758
                     self.match(SqlBaseParser.IF)
                     self.state = 759
                     self.match(SqlBaseParser.EXISTS)
-
 
                 self.state = 762
                 self.multipartIdentifier()
@@ -6247,15 +7092,44 @@ class SqlBaseParser ( Parser ):
                 self.state = 765
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==SqlBaseParser.CODEGEN or _la==SqlBaseParser.COST or ((((_la - 87)) & ~0x3f) == 0 and ((1 << (_la - 87)) & ((1 << (SqlBaseParser.EXTENDED - 87)) | (1 << (SqlBaseParser.FORMATTED - 87)) | (1 << (SqlBaseParser.LOGICAL - 87)))) != 0):
+                if (
+                    _la == SqlBaseParser.CODEGEN
+                    or _la == SqlBaseParser.COST
+                    or (
+                        (((_la - 87)) & ~0x3F) == 0
+                        and (
+                            (1 << (_la - 87))
+                            & (
+                                (1 << (SqlBaseParser.EXTENDED - 87))
+                                | (1 << (SqlBaseParser.FORMATTED - 87))
+                                | (1 << (SqlBaseParser.LOGICAL - 87))
+                            )
+                        )
+                        != 0
+                    )
+                ):
                     self.state = 764
                     _la = self._input.LA(1)
-                    if not(_la==SqlBaseParser.CODEGEN or _la==SqlBaseParser.COST or ((((_la - 87)) & ~0x3f) == 0 and ((1 << (_la - 87)) & ((1 << (SqlBaseParser.EXTENDED - 87)) | (1 << (SqlBaseParser.FORMATTED - 87)) | (1 << (SqlBaseParser.LOGICAL - 87)))) != 0)):
+                    if not (
+                        _la == SqlBaseParser.CODEGEN
+                        or _la == SqlBaseParser.COST
+                        or (
+                            (((_la - 87)) & ~0x3F) == 0
+                            and (
+                                (1 << (_la - 87))
+                                & (
+                                    (1 << (SqlBaseParser.EXTENDED - 87))
+                                    | (1 << (SqlBaseParser.FORMATTED - 87))
+                                    | (1 << (SqlBaseParser.LOGICAL - 87))
+                                )
+                            )
+                            != 0
+                        )
+                    ):
                         self._errHandler.recoverInline(self)
                     else:
                         self._errHandler.reportMatch(self)
                         self.consume()
-
 
                 self.state = 767
                 self.statement()
@@ -6271,10 +7145,10 @@ class SqlBaseParser ( Parser ):
                 self.state = 772
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==SqlBaseParser.FROM or _la==SqlBaseParser.IN:
+                if _la == SqlBaseParser.FROM or _la == SqlBaseParser.IN:
                     self.state = 770
                     _la = self._input.LA(1)
-                    if not(_la==SqlBaseParser.FROM or _la==SqlBaseParser.IN):
+                    if not (_la == SqlBaseParser.FROM or _la == SqlBaseParser.IN):
                         self._errHandler.recoverInline(self)
                     else:
                         self._errHandler.reportMatch(self)
@@ -6282,22 +7156,19 @@ class SqlBaseParser ( Parser ):
                     self.state = 771
                     self.multipartIdentifier()
 
-
                 self.state = 778
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==SqlBaseParser.LIKE or _la==SqlBaseParser.STRING:
+                if _la == SqlBaseParser.LIKE or _la == SqlBaseParser.STRING:
                     self.state = 775
                     self._errHandler.sync(self)
                     _la = self._input.LA(1)
-                    if _la==SqlBaseParser.LIKE:
+                    if _la == SqlBaseParser.LIKE:
                         self.state = 774
                         self.match(SqlBaseParser.LIKE)
 
-
                     self.state = 777
                     localctx.pattern = self.match(SqlBaseParser.STRING)
-
 
                 pass
 
@@ -6313,17 +7184,16 @@ class SqlBaseParser ( Parser ):
                 self.state = 785
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==SqlBaseParser.FROM or _la==SqlBaseParser.IN:
+                if _la == SqlBaseParser.FROM or _la == SqlBaseParser.IN:
                     self.state = 783
                     _la = self._input.LA(1)
-                    if not(_la==SqlBaseParser.FROM or _la==SqlBaseParser.IN):
+                    if not (_la == SqlBaseParser.FROM or _la == SqlBaseParser.IN):
                         self._errHandler.recoverInline(self)
                     else:
                         self._errHandler.reportMatch(self)
                         self.consume()
                     self.state = 784
                     localctx.ns = self.multipartIdentifier()
-
 
                 self.state = 787
                 self.match(SqlBaseParser.LIKE)
@@ -6332,10 +7202,9 @@ class SqlBaseParser ( Parser ):
                 self.state = 790
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==SqlBaseParser.PARTITION:
+                if _la == SqlBaseParser.PARTITION:
                     self.state = 789
                     self.partitionSpec()
-
 
                 pass
 
@@ -6351,14 +7220,13 @@ class SqlBaseParser ( Parser ):
                 self.state = 799
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==SqlBaseParser.T__1:
+                if _la == SqlBaseParser.T__1:
                     self.state = 795
                     self.match(SqlBaseParser.T__1)
                     self.state = 796
                     localctx.key = self.tablePropertyKey()
                     self.state = 797
                     self.match(SqlBaseParser.T__2)
-
 
                 pass
 
@@ -6371,7 +7239,7 @@ class SqlBaseParser ( Parser ):
                 self.match(SqlBaseParser.COLUMNS)
                 self.state = 803
                 _la = self._input.LA(1)
-                if not(_la==SqlBaseParser.FROM or _la==SqlBaseParser.IN):
+                if not (_la == SqlBaseParser.FROM or _la == SqlBaseParser.IN):
                     self._errHandler.recoverInline(self)
                 else:
                     self._errHandler.reportMatch(self)
@@ -6381,17 +7249,16 @@ class SqlBaseParser ( Parser ):
                 self.state = 807
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==SqlBaseParser.FROM or _la==SqlBaseParser.IN:
+                if _la == SqlBaseParser.FROM or _la == SqlBaseParser.IN:
                     self.state = 805
                     _la = self._input.LA(1)
-                    if not(_la==SqlBaseParser.FROM or _la==SqlBaseParser.IN):
+                    if not (_la == SqlBaseParser.FROM or _la == SqlBaseParser.IN):
                         self._errHandler.recoverInline(self)
                     else:
                         self._errHandler.reportMatch(self)
                         self.consume()
                     self.state = 806
                     localctx.ns = self.multipartIdentifier()
-
 
                 pass
 
@@ -6405,10 +7272,10 @@ class SqlBaseParser ( Parser ):
                 self.state = 813
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==SqlBaseParser.FROM or _la==SqlBaseParser.IN:
+                if _la == SqlBaseParser.FROM or _la == SqlBaseParser.IN:
                     self.state = 811
                     _la = self._input.LA(1)
-                    if not(_la==SqlBaseParser.FROM or _la==SqlBaseParser.IN):
+                    if not (_la == SqlBaseParser.FROM or _la == SqlBaseParser.IN):
                         self._errHandler.recoverInline(self)
                     else:
                         self._errHandler.reportMatch(self)
@@ -6416,22 +7283,19 @@ class SqlBaseParser ( Parser ):
                     self.state = 812
                     self.multipartIdentifier()
 
-
                 self.state = 819
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==SqlBaseParser.LIKE or _la==SqlBaseParser.STRING:
+                if _la == SqlBaseParser.LIKE or _la == SqlBaseParser.STRING:
                     self.state = 816
                     self._errHandler.sync(self)
                     _la = self._input.LA(1)
-                    if _la==SqlBaseParser.LIKE:
+                    if _la == SqlBaseParser.LIKE:
                         self.state = 815
                         self.match(SqlBaseParser.LIKE)
 
-
                     self.state = 818
                     localctx.pattern = self.match(SqlBaseParser.STRING)
-
 
                 pass
 
@@ -6447,10 +7311,9 @@ class SqlBaseParser ( Parser ):
                 self.state = 825
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==SqlBaseParser.PARTITION:
+                if _la == SqlBaseParser.PARTITION:
                     self.state = 824
                     self.partitionSpec()
-
 
                 pass
 
@@ -6461,29 +7324,27 @@ class SqlBaseParser ( Parser ):
                 self.match(SqlBaseParser.SHOW)
                 self.state = 829
                 self._errHandler.sync(self)
-                la_ = self._interp.adaptivePredict(self._input,76,self._ctx)
+                la_ = self._interp.adaptivePredict(self._input, 76, self._ctx)
                 if la_ == 1:
                     self.state = 828
                     self.identifier()
-
 
                 self.state = 831
                 self.match(SqlBaseParser.FUNCTIONS)
                 self.state = 839
                 self._errHandler.sync(self)
-                la_ = self._interp.adaptivePredict(self._input,79,self._ctx)
+                la_ = self._interp.adaptivePredict(self._input, 79, self._ctx)
                 if la_ == 1:
                     self.state = 833
                     self._errHandler.sync(self)
-                    la_ = self._interp.adaptivePredict(self._input,77,self._ctx)
+                    la_ = self._interp.adaptivePredict(self._input, 77, self._ctx)
                     if la_ == 1:
                         self.state = 832
                         self.match(SqlBaseParser.LIKE)
 
-
                     self.state = 837
                     self._errHandler.sync(self)
-                    la_ = self._interp.adaptivePredict(self._input,78,self._ctx)
+                    la_ = self._interp.adaptivePredict(self._input, 78, self._ctx)
                     if la_ == 1:
                         self.state = 835
                         self.multipartIdentifier()
@@ -6493,9 +7354,6 @@ class SqlBaseParser ( Parser ):
                         self.state = 836
                         localctx.pattern = self.match(SqlBaseParser.STRING)
                         pass
-
-
-
 
                 pass
 
@@ -6513,12 +7371,11 @@ class SqlBaseParser ( Parser ):
                 self.state = 847
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==SqlBaseParser.AS:
+                if _la == SqlBaseParser.AS:
                     self.state = 845
                     self.match(SqlBaseParser.AS)
                     self.state = 846
                     self.match(SqlBaseParser.SERDE)
-
 
                 pass
 
@@ -6538,7 +7395,7 @@ class SqlBaseParser ( Parser ):
                 self.enterOuterAlt(localctx, 49)
                 self.state = 852
                 _la = self._input.LA(1)
-                if not(_la==SqlBaseParser.DESC or _la==SqlBaseParser.DESCRIBE):
+                if not (_la == SqlBaseParser.DESC or _la == SqlBaseParser.DESCRIBE):
                     self._errHandler.recoverInline(self)
                 else:
                     self._errHandler.reportMatch(self)
@@ -6547,11 +7404,10 @@ class SqlBaseParser ( Parser ):
                 self.match(SqlBaseParser.FUNCTION)
                 self.state = 855
                 self._errHandler.sync(self)
-                la_ = self._interp.adaptivePredict(self._input,81,self._ctx)
+                la_ = self._interp.adaptivePredict(self._input, 81, self._ctx)
                 if la_ == 1:
                     self.state = 854
                     self.match(SqlBaseParser.EXTENDED)
-
 
                 self.state = 857
                 self.describeFuncName()
@@ -6562,7 +7418,7 @@ class SqlBaseParser ( Parser ):
                 self.enterOuterAlt(localctx, 50)
                 self.state = 858
                 _la = self._input.LA(1)
-                if not(_la==SqlBaseParser.DESC or _la==SqlBaseParser.DESCRIBE):
+                if not (_la == SqlBaseParser.DESC or _la == SqlBaseParser.DESCRIBE):
                     self._errHandler.recoverInline(self)
                 else:
                     self._errHandler.reportMatch(self)
@@ -6571,11 +7427,10 @@ class SqlBaseParser ( Parser ):
                 self.namespace()
                 self.state = 861
                 self._errHandler.sync(self)
-                la_ = self._interp.adaptivePredict(self._input,82,self._ctx)
+                la_ = self._interp.adaptivePredict(self._input, 82, self._ctx)
                 if la_ == 1:
                     self.state = 860
                     self.match(SqlBaseParser.EXTENDED)
-
 
                 self.state = 863
                 self.multipartIdentifier()
@@ -6586,50 +7441,48 @@ class SqlBaseParser ( Parser ):
                 self.enterOuterAlt(localctx, 51)
                 self.state = 865
                 _la = self._input.LA(1)
-                if not(_la==SqlBaseParser.DESC or _la==SqlBaseParser.DESCRIBE):
+                if not (_la == SqlBaseParser.DESC or _la == SqlBaseParser.DESCRIBE):
                     self._errHandler.recoverInline(self)
                 else:
                     self._errHandler.reportMatch(self)
                     self.consume()
                 self.state = 867
                 self._errHandler.sync(self)
-                la_ = self._interp.adaptivePredict(self._input,83,self._ctx)
+                la_ = self._interp.adaptivePredict(self._input, 83, self._ctx)
                 if la_ == 1:
                     self.state = 866
                     self.match(SqlBaseParser.TABLE)
 
-
                 self.state = 870
                 self._errHandler.sync(self)
-                la_ = self._interp.adaptivePredict(self._input,84,self._ctx)
+                la_ = self._interp.adaptivePredict(self._input, 84, self._ctx)
                 if la_ == 1:
                     self.state = 869
                     localctx.option = self._input.LT(1)
                     _la = self._input.LA(1)
-                    if not(_la==SqlBaseParser.EXTENDED or _la==SqlBaseParser.FORMATTED):
+                    if not (
+                        _la == SqlBaseParser.EXTENDED or _la == SqlBaseParser.FORMATTED
+                    ):
                         localctx.option = self._errHandler.recoverInline(self)
                     else:
                         self._errHandler.reportMatch(self)
                         self.consume()
 
-
                 self.state = 872
                 self.multipartIdentifier()
                 self.state = 874
                 self._errHandler.sync(self)
-                la_ = self._interp.adaptivePredict(self._input,85,self._ctx)
+                la_ = self._interp.adaptivePredict(self._input, 85, self._ctx)
                 if la_ == 1:
                     self.state = 873
                     self.partitionSpec()
 
-
                 self.state = 877
                 self._errHandler.sync(self)
-                la_ = self._interp.adaptivePredict(self._input,86,self._ctx)
+                la_ = self._interp.adaptivePredict(self._input, 86, self._ctx)
                 if la_ == 1:
                     self.state = 876
                     self.describeColName()
-
 
                 pass
 
@@ -6638,7 +7491,7 @@ class SqlBaseParser ( Parser ):
                 self.enterOuterAlt(localctx, 52)
                 self.state = 879
                 _la = self._input.LA(1)
-                if not(_la==SqlBaseParser.DESC or _la==SqlBaseParser.DESCRIBE):
+                if not (_la == SqlBaseParser.DESC or _la == SqlBaseParser.DESCRIBE):
                     self._errHandler.recoverInline(self)
                 else:
                     self._errHandler.reportMatch(self)
@@ -6646,10 +7499,9 @@ class SqlBaseParser ( Parser ):
                 self.state = 881
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==SqlBaseParser.QUERY:
+                if _la == SqlBaseParser.QUERY:
                     self.state = 880
                     self.match(SqlBaseParser.QUERY)
-
 
                 self.state = 883
                 self.query()
@@ -6671,7 +7523,7 @@ class SqlBaseParser ( Parser ):
                 self.state = 889
                 localctx.comment = self._input.LT(1)
                 _la = self._input.LA(1)
-                if not(_la==SqlBaseParser.NULL or _la==SqlBaseParser.STRING):
+                if not (_la == SqlBaseParser.NULL or _la == SqlBaseParser.STRING):
                     localctx.comment = self._errHandler.recoverInline(self)
                 else:
                     self._errHandler.reportMatch(self)
@@ -6694,7 +7546,7 @@ class SqlBaseParser ( Parser ):
                 self.state = 896
                 localctx.comment = self._input.LT(1)
                 _la = self._input.LA(1)
-                if not(_la==SqlBaseParser.NULL or _la==SqlBaseParser.STRING):
+                if not (_la == SqlBaseParser.NULL or _la == SqlBaseParser.STRING):
                     localctx.comment = self._errHandler.recoverInline(self)
                 else:
                     self._errHandler.reportMatch(self)
@@ -6730,7 +7582,7 @@ class SqlBaseParser ( Parser ):
                 self.match(SqlBaseParser.REFRESH)
                 self.state = 912
                 self._errHandler.sync(self)
-                la_ = self._interp.adaptivePredict(self._input,89,self._ctx)
+                la_ = self._interp.adaptivePredict(self._input, 89, self._ctx)
                 if la_ == 1:
                     self.state = 905
                     self.match(SqlBaseParser.STRING)
@@ -6739,17 +7591,16 @@ class SqlBaseParser ( Parser ):
                 elif la_ == 2:
                     self.state = 909
                     self._errHandler.sync(self)
-                    _alt = self._interp.adaptivePredict(self._input,88,self._ctx)
-                    while _alt!=1 and _alt!=ATN.INVALID_ALT_NUMBER:
-                        if _alt==1+1:
+                    _alt = self._interp.adaptivePredict(self._input, 88, self._ctx)
+                    while _alt != 1 and _alt != ATN.INVALID_ALT_NUMBER:
+                        if _alt == 1 + 1:
                             self.state = 906
-                            self.matchWildcard() 
+                            self.matchWildcard()
                         self.state = 911
                         self._errHandler.sync(self)
-                        _alt = self._interp.adaptivePredict(self._input,88,self._ctx)
+                        _alt = self._interp.adaptivePredict(self._input, 88, self._ctx)
 
                     pass
-
 
                 pass
 
@@ -6761,10 +7612,9 @@ class SqlBaseParser ( Parser ):
                 self.state = 916
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==SqlBaseParser.LAZY:
+                if _la == SqlBaseParser.LAZY:
                     self.state = 915
                     self.match(SqlBaseParser.LAZY)
-
 
                 self.state = 918
                 self.match(SqlBaseParser.TABLE)
@@ -6773,28 +7623,44 @@ class SqlBaseParser ( Parser ):
                 self.state = 922
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==SqlBaseParser.OPTIONS:
+                if _la == SqlBaseParser.OPTIONS:
                     self.state = 920
                     self.match(SqlBaseParser.OPTIONS)
                     self.state = 921
                     localctx.options = self.tablePropertyList()
 
-
                 self.state = 928
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==SqlBaseParser.T__1 or _la==SqlBaseParser.AS or _la==SqlBaseParser.FROM or _la==SqlBaseParser.MAP or ((((_la - 188)) & ~0x3f) == 0 and ((1 << (_la - 188)) & ((1 << (SqlBaseParser.REDUCE - 188)) | (1 << (SqlBaseParser.SELECT - 188)) | (1 << (SqlBaseParser.TABLE - 188)))) != 0) or _la==SqlBaseParser.VALUES or _la==SqlBaseParser.WITH:
+                if (
+                    _la == SqlBaseParser.T__1
+                    or _la == SqlBaseParser.AS
+                    or _la == SqlBaseParser.FROM
+                    or _la == SqlBaseParser.MAP
+                    or (
+                        (((_la - 188)) & ~0x3F) == 0
+                        and (
+                            (1 << (_la - 188))
+                            & (
+                                (1 << (SqlBaseParser.REDUCE - 188))
+                                | (1 << (SqlBaseParser.SELECT - 188))
+                                | (1 << (SqlBaseParser.TABLE - 188))
+                            )
+                        )
+                        != 0
+                    )
+                    or _la == SqlBaseParser.VALUES
+                    or _la == SqlBaseParser.WITH
+                ):
                     self.state = 925
                     self._errHandler.sync(self)
                     _la = self._input.LA(1)
-                    if _la==SqlBaseParser.AS:
+                    if _la == SqlBaseParser.AS:
                         self.state = 924
                         self.match(SqlBaseParser.AS)
 
-
                     self.state = 927
                     self.query()
-
 
                 pass
 
@@ -6807,13 +7673,12 @@ class SqlBaseParser ( Parser ):
                 self.match(SqlBaseParser.TABLE)
                 self.state = 934
                 self._errHandler.sync(self)
-                la_ = self._interp.adaptivePredict(self._input,94,self._ctx)
+                la_ = self._interp.adaptivePredict(self._input, 94, self._ctx)
                 if la_ == 1:
                     self.state = 932
                     self.match(SqlBaseParser.IF)
                     self.state = 933
                     self.match(SqlBaseParser.EXISTS)
-
 
                 self.state = 936
                 self.multipartIdentifier()
@@ -6838,10 +7703,9 @@ class SqlBaseParser ( Parser ):
                 self.state = 942
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==SqlBaseParser.LOCAL:
+                if _la == SqlBaseParser.LOCAL:
                     self.state = 941
                     self.match(SqlBaseParser.LOCAL)
-
 
                 self.state = 944
                 self.match(SqlBaseParser.INPATH)
@@ -6850,10 +7714,9 @@ class SqlBaseParser ( Parser ):
                 self.state = 947
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==SqlBaseParser.OVERWRITE:
+                if _la == SqlBaseParser.OVERWRITE:
                     self.state = 946
                     self.match(SqlBaseParser.OVERWRITE)
-
 
                 self.state = 949
                 self.match(SqlBaseParser.INTO)
@@ -6864,10 +7727,9 @@ class SqlBaseParser ( Parser ):
                 self.state = 953
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==SqlBaseParser.PARTITION:
+                if _la == SqlBaseParser.PARTITION:
                     self.state = 952
                     self.partitionSpec()
-
 
                 pass
 
@@ -6883,10 +7745,9 @@ class SqlBaseParser ( Parser ):
                 self.state = 959
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==SqlBaseParser.PARTITION:
+                if _la == SqlBaseParser.PARTITION:
                     self.state = 958
                     self.partitionSpec()
-
 
                 pass
 
@@ -6904,18 +7765,25 @@ class SqlBaseParser ( Parser ):
                 self.state = 967
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==SqlBaseParser.ADD or _la==SqlBaseParser.DROP or _la==SqlBaseParser.SYNC:
+                if (
+                    _la == SqlBaseParser.ADD
+                    or _la == SqlBaseParser.DROP
+                    or _la == SqlBaseParser.SYNC
+                ):
                     self.state = 965
                     localctx.option = self._input.LT(1)
                     _la = self._input.LA(1)
-                    if not(_la==SqlBaseParser.ADD or _la==SqlBaseParser.DROP or _la==SqlBaseParser.SYNC):
+                    if not (
+                        _la == SqlBaseParser.ADD
+                        or _la == SqlBaseParser.DROP
+                        or _la == SqlBaseParser.SYNC
+                    ):
                         localctx.option = self._errHandler.recoverInline(self)
                     else:
                         self._errHandler.reportMatch(self)
                         self.consume()
                     self.state = 966
                     self.match(SqlBaseParser.PARTITIONS)
-
 
                 pass
 
@@ -6925,7 +7793,7 @@ class SqlBaseParser ( Parser ):
                 self.state = 969
                 localctx.op = self._input.LT(1)
                 _la = self._input.LA(1)
-                if not(_la==SqlBaseParser.ADD or _la==SqlBaseParser.LIST):
+                if not (_la == SqlBaseParser.ADD or _la == SqlBaseParser.LIST):
                     localctx.op = self._errHandler.recoverInline(self)
                 else:
                     self._errHandler.reportMatch(self)
@@ -6934,14 +7802,14 @@ class SqlBaseParser ( Parser ):
                 self.identifier()
                 self.state = 974
                 self._errHandler.sync(self)
-                _alt = self._interp.adaptivePredict(self._input,100,self._ctx)
-                while _alt!=1 and _alt!=ATN.INVALID_ALT_NUMBER:
-                    if _alt==1+1:
+                _alt = self._interp.adaptivePredict(self._input, 100, self._ctx)
+                while _alt != 1 and _alt != ATN.INVALID_ALT_NUMBER:
+                    if _alt == 1 + 1:
                         self.state = 971
-                        self.matchWildcard() 
+                        self.matchWildcard()
                     self.state = 976
                     self._errHandler.sync(self)
-                    _alt = self._interp.adaptivePredict(self._input,100,self._ctx)
+                    _alt = self._interp.adaptivePredict(self._input, 100, self._ctx)
 
                 pass
 
@@ -6954,14 +7822,14 @@ class SqlBaseParser ( Parser ):
                 self.match(SqlBaseParser.ROLE)
                 self.state = 982
                 self._errHandler.sync(self)
-                _alt = self._interp.adaptivePredict(self._input,101,self._ctx)
-                while _alt!=1 and _alt!=ATN.INVALID_ALT_NUMBER:
-                    if _alt==1+1:
+                _alt = self._interp.adaptivePredict(self._input, 101, self._ctx)
+                while _alt != 1 and _alt != ATN.INVALID_ALT_NUMBER:
+                    if _alt == 1 + 1:
                         self.state = 979
-                        self.matchWildcard() 
+                        self.matchWildcard()
                     self.state = 984
                     self._errHandler.sync(self)
-                    _alt = self._interp.adaptivePredict(self._input,101,self._ctx)
+                    _alt = self._interp.adaptivePredict(self._input, 101, self._ctx)
 
                 pass
 
@@ -6990,7 +7858,7 @@ class SqlBaseParser ( Parser ):
                 self.state = 992
                 localctx.timezone = self._input.LT(1)
                 _la = self._input.LA(1)
-                if not(_la==SqlBaseParser.LOCAL or _la==SqlBaseParser.STRING):
+                if not (_la == SqlBaseParser.LOCAL or _la == SqlBaseParser.STRING):
                     localctx.timezone = self._errHandler.recoverInline(self)
                 else:
                     self._errHandler.reportMatch(self)
@@ -7008,14 +7876,14 @@ class SqlBaseParser ( Parser ):
                 self.match(SqlBaseParser.ZONE)
                 self.state = 999
                 self._errHandler.sync(self)
-                _alt = self._interp.adaptivePredict(self._input,102,self._ctx)
-                while _alt!=1 and _alt!=ATN.INVALID_ALT_NUMBER:
-                    if _alt==1+1:
+                _alt = self._interp.adaptivePredict(self._input, 102, self._ctx)
+                while _alt != 1 and _alt != ATN.INVALID_ALT_NUMBER:
+                    if _alt == 1 + 1:
                         self.state = 996
-                        self.matchWildcard() 
+                        self.matchWildcard()
                     self.state = 1001
                     self._errHandler.sync(self)
-                    _alt = self._interp.adaptivePredict(self._input,102,self._ctx)
+                    _alt = self._interp.adaptivePredict(self._input, 102, self._ctx)
 
                 pass
 
@@ -7042,21 +7910,19 @@ class SqlBaseParser ( Parser ):
                 self.state = 1016
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==SqlBaseParser.EQ:
+                if _la == SqlBaseParser.EQ:
                     self.state = 1009
                     self.match(SqlBaseParser.EQ)
                     self.state = 1013
                     self._errHandler.sync(self)
-                    _alt = self._interp.adaptivePredict(self._input,103,self._ctx)
-                    while _alt!=1 and _alt!=ATN.INVALID_ALT_NUMBER:
-                        if _alt==1+1:
+                    _alt = self._interp.adaptivePredict(self._input, 103, self._ctx)
+                    while _alt != 1 and _alt != ATN.INVALID_ALT_NUMBER:
+                        if _alt == 1 + 1:
                             self.state = 1010
-                            self.matchWildcard() 
+                            self.matchWildcard()
                         self.state = 1015
                         self._errHandler.sync(self)
-                        _alt = self._interp.adaptivePredict(self._input,103,self._ctx)
-
-
+                        _alt = self._interp.adaptivePredict(self._input, 103, self._ctx)
 
                 pass
 
@@ -7067,14 +7933,14 @@ class SqlBaseParser ( Parser ):
                 self.match(SqlBaseParser.SET)
                 self.state = 1022
                 self._errHandler.sync(self)
-                _alt = self._interp.adaptivePredict(self._input,105,self._ctx)
-                while _alt!=1 and _alt!=ATN.INVALID_ALT_NUMBER:
-                    if _alt==1+1:
+                _alt = self._interp.adaptivePredict(self._input, 105, self._ctx)
+                while _alt != 1 and _alt != ATN.INVALID_ALT_NUMBER:
+                    if _alt == 1 + 1:
                         self.state = 1019
-                        self.matchWildcard() 
+                        self.matchWildcard()
                     self.state = 1024
                     self._errHandler.sync(self)
-                    _alt = self._interp.adaptivePredict(self._input,105,self._ctx)
+                    _alt = self._interp.adaptivePredict(self._input, 105, self._ctx)
 
                 self.state = 1025
                 self.match(SqlBaseParser.EQ)
@@ -7089,14 +7955,14 @@ class SqlBaseParser ( Parser ):
                 self.match(SqlBaseParser.SET)
                 self.state = 1031
                 self._errHandler.sync(self)
-                _alt = self._interp.adaptivePredict(self._input,106,self._ctx)
-                while _alt!=1 and _alt!=ATN.INVALID_ALT_NUMBER:
-                    if _alt==1+1:
+                _alt = self._interp.adaptivePredict(self._input, 106, self._ctx)
+                while _alt != 1 and _alt != ATN.INVALID_ALT_NUMBER:
+                    if _alt == 1 + 1:
                         self.state = 1028
-                        self.matchWildcard() 
+                        self.matchWildcard()
                     self.state = 1033
                     self._errHandler.sync(self)
-                    _alt = self._interp.adaptivePredict(self._input,106,self._ctx)
+                    _alt = self._interp.adaptivePredict(self._input, 106, self._ctx)
 
                 pass
 
@@ -7116,14 +7982,14 @@ class SqlBaseParser ( Parser ):
                 self.match(SqlBaseParser.RESET)
                 self.state = 1040
                 self._errHandler.sync(self)
-                _alt = self._interp.adaptivePredict(self._input,107,self._ctx)
-                while _alt!=1 and _alt!=ATN.INVALID_ALT_NUMBER:
-                    if _alt==1+1:
+                _alt = self._interp.adaptivePredict(self._input, 107, self._ctx)
+                while _alt != 1 and _alt != ATN.INVALID_ALT_NUMBER:
+                    if _alt == 1 + 1:
                         self.state = 1037
-                        self.matchWildcard() 
+                        self.matchWildcard()
                     self.state = 1042
                     self._errHandler.sync(self)
-                    _alt = self._interp.adaptivePredict(self._input,107,self._ctx)
+                    _alt = self._interp.adaptivePredict(self._input, 107, self._ctx)
 
                 pass
 
@@ -7134,17 +8000,16 @@ class SqlBaseParser ( Parser ):
                 self.unsupportedHiveNativeCommands()
                 self.state = 1047
                 self._errHandler.sync(self)
-                _alt = self._interp.adaptivePredict(self._input,108,self._ctx)
-                while _alt!=1 and _alt!=ATN.INVALID_ALT_NUMBER:
-                    if _alt==1+1:
+                _alt = self._interp.adaptivePredict(self._input, 108, self._ctx)
+                while _alt != 1 and _alt != ATN.INVALID_ALT_NUMBER:
+                    if _alt == 1 + 1:
                         self.state = 1044
-                        self.matchWildcard() 
+                        self.matchWildcard()
                     self.state = 1049
                     self._errHandler.sync(self)
-                    _alt = self._interp.adaptivePredict(self._input,108,self._ctx)
+                    _alt = self._interp.adaptivePredict(self._input, 108, self._ctx)
 
                 pass
-
 
         except RecognitionException as re:
             localctx.exception = re
@@ -7154,31 +8019,28 @@ class SqlBaseParser ( Parser ):
             self.exitRule()
         return localctx
 
-
     class ConfigKeyContext(ParserRuleContext):
-        __slots__ = 'parser'
+        __slots__ = "parser"
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
         def quotedIdentifier(self):
-            return self.getTypedRuleContext(SqlBaseParser.QuotedIdentifierContext,0)
-
+            return self.getTypedRuleContext(SqlBaseParser.QuotedIdentifierContext, 0)
 
         def getRuleIndex(self):
             return SqlBaseParser.RULE_configKey
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterConfigKey" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterConfigKey"):
                 listener.enterConfigKey(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitConfigKey" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitConfigKey"):
                 listener.exitConfigKey(self)
-
-
-
 
     def configKey(self):
 
@@ -7196,31 +8058,28 @@ class SqlBaseParser ( Parser ):
             self.exitRule()
         return localctx
 
-
     class ConfigValueContext(ParserRuleContext):
-        __slots__ = 'parser'
+        __slots__ = "parser"
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
         def quotedIdentifier(self):
-            return self.getTypedRuleContext(SqlBaseParser.QuotedIdentifierContext,0)
-
+            return self.getTypedRuleContext(SqlBaseParser.QuotedIdentifierContext, 0)
 
         def getRuleIndex(self):
             return SqlBaseParser.RULE_configValue
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterConfigValue" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterConfigValue"):
                 listener.enterConfigValue(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitConfigValue" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitConfigValue"):
                 listener.exitConfigValue(self)
-
-
-
 
     def configValue(self):
 
@@ -7238,19 +8097,20 @@ class SqlBaseParser ( Parser ):
             self.exitRule()
         return localctx
 
-
     class UnsupportedHiveNativeCommandsContext(ParserRuleContext):
-        __slots__ = 'parser'
+        __slots__ = "parser"
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
-            self.kw1 = None # Token
-            self.kw2 = None # Token
-            self.kw3 = None # Token
-            self.kw4 = None # Token
-            self.kw5 = None # Token
-            self.kw6 = None # Token
+            self.kw1 = None  # Token
+            self.kw2 = None  # Token
+            self.kw3 = None  # Token
+            self.kw4 = None  # Token
+            self.kw5 = None  # Token
+            self.kw6 = None  # Token
 
         def CREATE(self):
             return self.getToken(SqlBaseParser.CREATE, 0)
@@ -7322,8 +8182,7 @@ class SqlBaseParser ( Parser ):
             return self.getToken(SqlBaseParser.MACRO, 0)
 
         def tableIdentifier(self):
-            return self.getTypedRuleContext(SqlBaseParser.TableIdentifierContext,0)
-
+            return self.getTypedRuleContext(SqlBaseParser.TableIdentifierContext, 0)
 
         def NOT(self):
             return self.getToken(SqlBaseParser.NOT, 0)
@@ -7374,8 +8233,7 @@ class SqlBaseParser ( Parser ):
             return self.getToken(SqlBaseParser.COMPACT, 0)
 
         def partitionSpec(self):
-            return self.getTypedRuleContext(SqlBaseParser.PartitionSpecContext,0)
-
+            return self.getTypedRuleContext(SqlBaseParser.PartitionSpecContext, 0)
 
         def CONCATENATE(self):
             return self.getToken(SqlBaseParser.CONCATENATE, 0)
@@ -7407,26 +8265,25 @@ class SqlBaseParser ( Parser ):
         def getRuleIndex(self):
             return SqlBaseParser.RULE_unsupportedHiveNativeCommands
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterUnsupportedHiveNativeCommands" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterUnsupportedHiveNativeCommands"):
                 listener.enterUnsupportedHiveNativeCommands(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitUnsupportedHiveNativeCommands" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitUnsupportedHiveNativeCommands"):
                 listener.exitUnsupportedHiveNativeCommands(self)
-
-
-
 
     def unsupportedHiveNativeCommands(self):
 
-        localctx = SqlBaseParser.UnsupportedHiveNativeCommandsContext(self, self._ctx, self.state)
+        localctx = SqlBaseParser.UnsupportedHiveNativeCommandsContext(
+            self, self._ctx, self.state
+        )
         self.enterRule(localctx, 20, self.RULE_unsupportedHiveNativeCommands)
-        self._la = 0 # Token type
+        self._la = 0  # Token type
         try:
             self.state = 1224
             self._errHandler.sync(self)
-            la_ = self._interp.adaptivePredict(self._input,117,self._ctx)
+            la_ = self._interp.adaptivePredict(self._input, 117, self._ctx)
             if la_ == 1:
                 self.enterOuterAlt(localctx, 1)
                 self.state = 1056
@@ -7449,11 +8306,10 @@ class SqlBaseParser ( Parser ):
                 localctx.kw1 = self.match(SqlBaseParser.GRANT)
                 self.state = 1062
                 self._errHandler.sync(self)
-                la_ = self._interp.adaptivePredict(self._input,110,self._ctx)
+                la_ = self._interp.adaptivePredict(self._input, 110, self._ctx)
                 if la_ == 1:
                     self.state = 1061
                     localctx.kw2 = self.match(SqlBaseParser.ROLE)
-
 
                 pass
 
@@ -7463,11 +8319,10 @@ class SqlBaseParser ( Parser ):
                 localctx.kw1 = self.match(SqlBaseParser.REVOKE)
                 self.state = 1066
                 self._errHandler.sync(self)
-                la_ = self._interp.adaptivePredict(self._input,111,self._ctx)
+                la_ = self._interp.adaptivePredict(self._input, 111, self._ctx)
                 if la_ == 1:
                     self.state = 1065
                     localctx.kw2 = self.match(SqlBaseParser.ROLE)
-
 
                 pass
 
@@ -7487,11 +8342,10 @@ class SqlBaseParser ( Parser ):
                 localctx.kw2 = self.match(SqlBaseParser.ROLE)
                 self.state = 1073
                 self._errHandler.sync(self)
-                la_ = self._interp.adaptivePredict(self._input,112,self._ctx)
+                la_ = self._interp.adaptivePredict(self._input, 112, self._ctx)
                 if la_ == 1:
                     self.state = 1072
                     localctx.kw3 = self.match(SqlBaseParser.GRANT)
-
 
                 pass
 
@@ -7824,10 +8678,9 @@ class SqlBaseParser ( Parser ):
                 self.state = 1189
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==SqlBaseParser.PARTITION:
+                if _la == SqlBaseParser.PARTITION:
                     self.state = 1188
                     self.partitionSpec()
-
 
                 self.state = 1191
                 localctx.kw3 = self.match(SqlBaseParser.COMPACT)
@@ -7844,10 +8697,9 @@ class SqlBaseParser ( Parser ):
                 self.state = 1197
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==SqlBaseParser.PARTITION:
+                if _la == SqlBaseParser.PARTITION:
                     self.state = 1196
                     self.partitionSpec()
-
 
                 self.state = 1199
                 localctx.kw3 = self.match(SqlBaseParser.CONCATENATE)
@@ -7864,10 +8716,9 @@ class SqlBaseParser ( Parser ):
                 self.state = 1205
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==SqlBaseParser.PARTITION:
+                if _la == SqlBaseParser.PARTITION:
                     self.state = 1204
                     self.partitionSpec()
-
 
                 self.state = 1207
                 localctx.kw3 = self.match(SqlBaseParser.SET)
@@ -7886,10 +8737,9 @@ class SqlBaseParser ( Parser ):
                 self.state = 1214
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==SqlBaseParser.PARTITION:
+                if _la == SqlBaseParser.PARTITION:
                     self.state = 1213
                     self.partitionSpec()
-
 
                 self.state = 1216
                 localctx.kw3 = self.match(SqlBaseParser.REPLACE)
@@ -7923,7 +8773,6 @@ class SqlBaseParser ( Parser ):
                 localctx.kw1 = self.match(SqlBaseParser.DFS)
                 pass
 
-
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)
@@ -7932,11 +8781,12 @@ class SqlBaseParser ( Parser ):
             self.exitRule()
         return localctx
 
-
     class CreateTableHeaderContext(ParserRuleContext):
-        __slots__ = 'parser'
+        __slots__ = "parser"
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
@@ -7947,8 +8797,7 @@ class SqlBaseParser ( Parser ):
             return self.getToken(SqlBaseParser.TABLE, 0)
 
         def multipartIdentifier(self):
-            return self.getTypedRuleContext(SqlBaseParser.MultipartIdentifierContext,0)
-
+            return self.getTypedRuleContext(SqlBaseParser.MultipartIdentifierContext, 0)
 
         def TEMPORARY(self):
             return self.getToken(SqlBaseParser.TEMPORARY, 0)
@@ -7968,22 +8817,19 @@ class SqlBaseParser ( Parser ):
         def getRuleIndex(self):
             return SqlBaseParser.RULE_createTableHeader
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterCreateTableHeader" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterCreateTableHeader"):
                 listener.enterCreateTableHeader(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitCreateTableHeader" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitCreateTableHeader"):
                 listener.exitCreateTableHeader(self)
-
-
-
 
     def createTableHeader(self):
 
         localctx = SqlBaseParser.CreateTableHeaderContext(self, self._ctx, self.state)
         self.enterRule(localctx, 22, self.RULE_createTableHeader)
-        self._la = 0 # Token type
+        self._la = 0  # Token type
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 1226
@@ -7991,24 +8837,22 @@ class SqlBaseParser ( Parser ):
             self.state = 1228
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if _la==SqlBaseParser.TEMPORARY:
+            if _la == SqlBaseParser.TEMPORARY:
                 self.state = 1227
                 self.match(SqlBaseParser.TEMPORARY)
-
 
             self.state = 1231
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if _la==SqlBaseParser.EXTERNAL:
+            if _la == SqlBaseParser.EXTERNAL:
                 self.state = 1230
                 self.match(SqlBaseParser.EXTERNAL)
-
 
             self.state = 1233
             self.match(SqlBaseParser.TABLE)
             self.state = 1237
             self._errHandler.sync(self)
-            la_ = self._interp.adaptivePredict(self._input,120,self._ctx)
+            la_ = self._interp.adaptivePredict(self._input, 120, self._ctx)
             if la_ == 1:
                 self.state = 1234
                 self.match(SqlBaseParser.IF)
@@ -8016,7 +8860,6 @@ class SqlBaseParser ( Parser ):
                 self.match(SqlBaseParser.NOT)
                 self.state = 1236
                 self.match(SqlBaseParser.EXISTS)
-
 
             self.state = 1239
             self.multipartIdentifier()
@@ -8028,11 +8871,12 @@ class SqlBaseParser ( Parser ):
             self.exitRule()
         return localctx
 
-
     class ReplaceTableHeaderContext(ParserRuleContext):
-        __slots__ = 'parser'
+        __slots__ = "parser"
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
@@ -8043,8 +8887,7 @@ class SqlBaseParser ( Parser ):
             return self.getToken(SqlBaseParser.TABLE, 0)
 
         def multipartIdentifier(self):
-            return self.getTypedRuleContext(SqlBaseParser.MultipartIdentifierContext,0)
-
+            return self.getTypedRuleContext(SqlBaseParser.MultipartIdentifierContext, 0)
 
         def CREATE(self):
             return self.getToken(SqlBaseParser.CREATE, 0)
@@ -8055,33 +8898,29 @@ class SqlBaseParser ( Parser ):
         def getRuleIndex(self):
             return SqlBaseParser.RULE_replaceTableHeader
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterReplaceTableHeader" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterReplaceTableHeader"):
                 listener.enterReplaceTableHeader(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitReplaceTableHeader" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitReplaceTableHeader"):
                 listener.exitReplaceTableHeader(self)
-
-
-
 
     def replaceTableHeader(self):
 
         localctx = SqlBaseParser.ReplaceTableHeaderContext(self, self._ctx, self.state)
         self.enterRule(localctx, 24, self.RULE_replaceTableHeader)
-        self._la = 0 # Token type
+        self._la = 0  # Token type
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 1243
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if _la==SqlBaseParser.CREATE:
+            if _la == SqlBaseParser.CREATE:
                 self.state = 1241
                 self.match(SqlBaseParser.CREATE)
                 self.state = 1242
                 self.match(SqlBaseParser.OR)
-
 
             self.state = 1245
             self.match(SqlBaseParser.REPLACE)
@@ -8097,26 +8936,26 @@ class SqlBaseParser ( Parser ):
             self.exitRule()
         return localctx
 
-
     class BucketSpecContext(ParserRuleContext):
-        __slots__ = 'parser'
+        __slots__ = "parser"
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
         def CLUSTERED(self):
             return self.getToken(SqlBaseParser.CLUSTERED, 0)
 
-        def BY(self, i:int=None):
+        def BY(self, i: int = None):
             if i is None:
                 return self.getTokens(SqlBaseParser.BY)
             else:
                 return self.getToken(SqlBaseParser.BY, i)
 
         def identifierList(self):
-            return self.getTypedRuleContext(SqlBaseParser.IdentifierListContext,0)
-
+            return self.getTypedRuleContext(SqlBaseParser.IdentifierListContext, 0)
 
         def INTO(self):
             return self.getToken(SqlBaseParser.INTO, 0)
@@ -8131,28 +8970,26 @@ class SqlBaseParser ( Parser ):
             return self.getToken(SqlBaseParser.SORTED, 0)
 
         def orderedIdentifierList(self):
-            return self.getTypedRuleContext(SqlBaseParser.OrderedIdentifierListContext,0)
-
+            return self.getTypedRuleContext(
+                SqlBaseParser.OrderedIdentifierListContext, 0
+            )
 
         def getRuleIndex(self):
             return SqlBaseParser.RULE_bucketSpec
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterBucketSpec" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterBucketSpec"):
                 listener.enterBucketSpec(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitBucketSpec" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitBucketSpec"):
                 listener.exitBucketSpec(self)
-
-
-
 
     def bucketSpec(self):
 
         localctx = SqlBaseParser.BucketSpecContext(self, self._ctx, self.state)
         self.enterRule(localctx, 26, self.RULE_bucketSpec)
-        self._la = 0 # Token type
+        self._la = 0  # Token type
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 1249
@@ -8164,14 +9001,13 @@ class SqlBaseParser ( Parser ):
             self.state = 1255
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if _la==SqlBaseParser.SORTED:
+            if _la == SqlBaseParser.SORTED:
                 self.state = 1252
                 self.match(SqlBaseParser.SORTED)
                 self.state = 1253
                 self.match(SqlBaseParser.BY)
                 self.state = 1254
                 self.orderedIdentifierList()
-
 
             self.state = 1257
             self.match(SqlBaseParser.INTO)
@@ -8187,11 +9023,12 @@ class SqlBaseParser ( Parser ):
             self.exitRule()
         return localctx
 
-
     class SkewSpecContext(ParserRuleContext):
-        __slots__ = 'parser'
+        __slots__ = "parser"
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
@@ -8202,19 +9039,16 @@ class SqlBaseParser ( Parser ):
             return self.getToken(SqlBaseParser.BY, 0)
 
         def identifierList(self):
-            return self.getTypedRuleContext(SqlBaseParser.IdentifierListContext,0)
-
+            return self.getTypedRuleContext(SqlBaseParser.IdentifierListContext, 0)
 
         def ON(self):
             return self.getToken(SqlBaseParser.ON, 0)
 
         def constantList(self):
-            return self.getTypedRuleContext(SqlBaseParser.ConstantListContext,0)
-
+            return self.getTypedRuleContext(SqlBaseParser.ConstantListContext, 0)
 
         def nestedConstantList(self):
-            return self.getTypedRuleContext(SqlBaseParser.NestedConstantListContext,0)
-
+            return self.getTypedRuleContext(SqlBaseParser.NestedConstantListContext, 0)
 
         def STORED(self):
             return self.getToken(SqlBaseParser.STORED, 0)
@@ -8228,16 +9062,13 @@ class SqlBaseParser ( Parser ):
         def getRuleIndex(self):
             return SqlBaseParser.RULE_skewSpec
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterSkewSpec" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterSkewSpec"):
                 listener.enterSkewSpec(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitSkewSpec" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitSkewSpec"):
                 listener.exitSkewSpec(self)
-
-
-
 
     def skewSpec(self):
 
@@ -8255,7 +9086,7 @@ class SqlBaseParser ( Parser ):
             self.match(SqlBaseParser.ON)
             self.state = 1267
             self._errHandler.sync(self)
-            la_ = self._interp.adaptivePredict(self._input,123,self._ctx)
+            la_ = self._interp.adaptivePredict(self._input, 123, self._ctx)
             if la_ == 1:
                 self.state = 1265
                 self.constantList()
@@ -8266,10 +9097,9 @@ class SqlBaseParser ( Parser ):
                 self.nestedConstantList()
                 pass
 
-
             self.state = 1272
             self._errHandler.sync(self)
-            la_ = self._interp.adaptivePredict(self._input,124,self._ctx)
+            la_ = self._interp.adaptivePredict(self._input, 124, self._ctx)
             if la_ == 1:
                 self.state = 1269
                 self.match(SqlBaseParser.STORED)
@@ -8277,7 +9107,6 @@ class SqlBaseParser ( Parser ):
                 self.match(SqlBaseParser.AS)
                 self.state = 1271
                 self.match(SqlBaseParser.DIRECTORIES)
-
 
         except RecognitionException as re:
             localctx.exception = re
@@ -8287,11 +9116,12 @@ class SqlBaseParser ( Parser ):
             self.exitRule()
         return localctx
 
-
     class LocationSpecContext(ParserRuleContext):
-        __slots__ = 'parser'
+        __slots__ = "parser"
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
@@ -8304,16 +9134,13 @@ class SqlBaseParser ( Parser ):
         def getRuleIndex(self):
             return SqlBaseParser.RULE_locationSpec
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterLocationSpec" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterLocationSpec"):
                 listener.enterLocationSpec(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitLocationSpec" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitLocationSpec"):
                 listener.exitLocationSpec(self)
-
-
-
 
     def locationSpec(self):
 
@@ -8333,11 +9160,12 @@ class SqlBaseParser ( Parser ):
             self.exitRule()
         return localctx
 
-
     class CommentSpecContext(ParserRuleContext):
-        __slots__ = 'parser'
+        __slots__ = "parser"
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
@@ -8350,16 +9178,13 @@ class SqlBaseParser ( Parser ):
         def getRuleIndex(self):
             return SqlBaseParser.RULE_commentSpec
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterCommentSpec" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterCommentSpec"):
                 listener.enterCommentSpec(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitCommentSpec" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitCommentSpec"):
                 listener.exitCommentSpec(self)
-
-
-
 
     def commentSpec(self):
 
@@ -8379,54 +9204,48 @@ class SqlBaseParser ( Parser ):
             self.exitRule()
         return localctx
 
-
     class QueryContext(ParserRuleContext):
-        __slots__ = 'parser'
+        __slots__ = "parser"
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
         def queryTerm(self):
-            return self.getTypedRuleContext(SqlBaseParser.QueryTermContext,0)
-
+            return self.getTypedRuleContext(SqlBaseParser.QueryTermContext, 0)
 
         def queryOrganization(self):
-            return self.getTypedRuleContext(SqlBaseParser.QueryOrganizationContext,0)
-
+            return self.getTypedRuleContext(SqlBaseParser.QueryOrganizationContext, 0)
 
         def ctes(self):
-            return self.getTypedRuleContext(SqlBaseParser.CtesContext,0)
-
+            return self.getTypedRuleContext(SqlBaseParser.CtesContext, 0)
 
         def getRuleIndex(self):
             return SqlBaseParser.RULE_query
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterQuery" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterQuery"):
                 listener.enterQuery(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitQuery" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitQuery"):
                 listener.exitQuery(self)
-
-
-
 
     def query(self):
 
         localctx = SqlBaseParser.QueryContext(self, self._ctx, self.state)
         self.enterRule(localctx, 34, self.RULE_query)
-        self._la = 0 # Token type
+        self._la = 0  # Token type
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 1281
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if _la==SqlBaseParser.WITH:
+            if _la == SqlBaseParser.WITH:
                 self.state = 1280
                 self.ctes()
-
 
             self.state = 1283
             self.queryTerm(0)
@@ -8440,177 +9259,192 @@ class SqlBaseParser ( Parser ):
             self.exitRule()
         return localctx
 
-
     class InsertIntoContext(ParserRuleContext):
-        __slots__ = 'parser'
+        __slots__ = "parser"
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
-
 
         def getRuleIndex(self):
             return SqlBaseParser.RULE_insertInto
 
-     
-        def copyFrom(self, ctx:ParserRuleContext):
+        def copyFrom(self, ctx: ParserRuleContext):
             super().copyFrom(ctx)
 
-
-
     class InsertOverwriteHiveDirContext(InsertIntoContext):
-
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a SqlBaseParser.InsertIntoContext
+        def __init__(
+            self, parser, ctx: ParserRuleContext
+        ):  # actually a SqlBaseParser.InsertIntoContext
             super().__init__(parser)
-            self.path = None # Token
+            self.path = None  # Token
             self.copyFrom(ctx)
 
         def INSERT(self):
             return self.getToken(SqlBaseParser.INSERT, 0)
+
         def OVERWRITE(self):
             return self.getToken(SqlBaseParser.OVERWRITE, 0)
+
         def DIRECTORY(self):
             return self.getToken(SqlBaseParser.DIRECTORY, 0)
+
         def STRING(self):
             return self.getToken(SqlBaseParser.STRING, 0)
+
         def LOCAL(self):
             return self.getToken(SqlBaseParser.LOCAL, 0)
+
         def rowFormat(self):
-            return self.getTypedRuleContext(SqlBaseParser.RowFormatContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.RowFormatContext, 0)
 
         def createFileFormat(self):
-            return self.getTypedRuleContext(SqlBaseParser.CreateFileFormatContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.CreateFileFormatContext, 0)
 
-
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterInsertOverwriteHiveDir" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterInsertOverwriteHiveDir"):
                 listener.enterInsertOverwriteHiveDir(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitInsertOverwriteHiveDir" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitInsertOverwriteHiveDir"):
                 listener.exitInsertOverwriteHiveDir(self)
 
-
     class InsertOverwriteDirContext(InsertIntoContext):
-
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a SqlBaseParser.InsertIntoContext
+        def __init__(
+            self, parser, ctx: ParserRuleContext
+        ):  # actually a SqlBaseParser.InsertIntoContext
             super().__init__(parser)
-            self.path = None # Token
-            self.options = None # TablePropertyListContext
+            self.path = None  # Token
+            self.options = None  # TablePropertyListContext
             self.copyFrom(ctx)
 
         def INSERT(self):
             return self.getToken(SqlBaseParser.INSERT, 0)
+
         def OVERWRITE(self):
             return self.getToken(SqlBaseParser.OVERWRITE, 0)
+
         def DIRECTORY(self):
             return self.getToken(SqlBaseParser.DIRECTORY, 0)
+
         def tableProvider(self):
-            return self.getTypedRuleContext(SqlBaseParser.TableProviderContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.TableProviderContext, 0)
 
         def LOCAL(self):
             return self.getToken(SqlBaseParser.LOCAL, 0)
+
         def OPTIONS(self):
             return self.getToken(SqlBaseParser.OPTIONS, 0)
+
         def STRING(self):
             return self.getToken(SqlBaseParser.STRING, 0)
+
         def tablePropertyList(self):
-            return self.getTypedRuleContext(SqlBaseParser.TablePropertyListContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.TablePropertyListContext, 0)
 
-
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterInsertOverwriteDir" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterInsertOverwriteDir"):
                 listener.enterInsertOverwriteDir(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitInsertOverwriteDir" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitInsertOverwriteDir"):
                 listener.exitInsertOverwriteDir(self)
 
-
     class InsertOverwriteTableContext(InsertIntoContext):
-
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a SqlBaseParser.InsertIntoContext
+        def __init__(
+            self, parser, ctx: ParserRuleContext
+        ):  # actually a SqlBaseParser.InsertIntoContext
             super().__init__(parser)
             self.copyFrom(ctx)
 
         def INSERT(self):
             return self.getToken(SqlBaseParser.INSERT, 0)
+
         def OVERWRITE(self):
             return self.getToken(SqlBaseParser.OVERWRITE, 0)
+
         def multipartIdentifier(self):
-            return self.getTypedRuleContext(SqlBaseParser.MultipartIdentifierContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.MultipartIdentifierContext, 0)
 
         def TABLE(self):
             return self.getToken(SqlBaseParser.TABLE, 0)
+
         def partitionSpec(self):
-            return self.getTypedRuleContext(SqlBaseParser.PartitionSpecContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.PartitionSpecContext, 0)
 
         def identifierList(self):
-            return self.getTypedRuleContext(SqlBaseParser.IdentifierListContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.IdentifierListContext, 0)
 
         def IF(self):
             return self.getToken(SqlBaseParser.IF, 0)
+
         def NOT(self):
             return self.getToken(SqlBaseParser.NOT, 0)
+
         def EXISTS(self):
             return self.getToken(SqlBaseParser.EXISTS, 0)
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterInsertOverwriteTable" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterInsertOverwriteTable"):
                 listener.enterInsertOverwriteTable(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitInsertOverwriteTable" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitInsertOverwriteTable"):
                 listener.exitInsertOverwriteTable(self)
 
-
     class InsertIntoTableContext(InsertIntoContext):
-
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a SqlBaseParser.InsertIntoContext
+        def __init__(
+            self, parser, ctx: ParserRuleContext
+        ):  # actually a SqlBaseParser.InsertIntoContext
             super().__init__(parser)
             self.copyFrom(ctx)
 
         def INSERT(self):
             return self.getToken(SqlBaseParser.INSERT, 0)
+
         def INTO(self):
             return self.getToken(SqlBaseParser.INTO, 0)
+
         def multipartIdentifier(self):
-            return self.getTypedRuleContext(SqlBaseParser.MultipartIdentifierContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.MultipartIdentifierContext, 0)
 
         def TABLE(self):
             return self.getToken(SqlBaseParser.TABLE, 0)
+
         def partitionSpec(self):
-            return self.getTypedRuleContext(SqlBaseParser.PartitionSpecContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.PartitionSpecContext, 0)
 
         def IF(self):
             return self.getToken(SqlBaseParser.IF, 0)
+
         def NOT(self):
             return self.getToken(SqlBaseParser.NOT, 0)
+
         def EXISTS(self):
             return self.getToken(SqlBaseParser.EXISTS, 0)
+
         def identifierList(self):
-            return self.getTypedRuleContext(SqlBaseParser.IdentifierListContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.IdentifierListContext, 0)
 
-
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterInsertIntoTable" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterInsertIntoTable"):
                 listener.enterInsertIntoTable(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitInsertIntoTable" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitInsertIntoTable"):
                 listener.exitInsertIntoTable(self)
-
-
 
     def insertInto(self):
 
         localctx = SqlBaseParser.InsertIntoContext(self, self._ctx, self.state)
         self.enterRule(localctx, 36, self.RULE_insertInto)
-        self._la = 0 # Token type
+        self._la = 0  # Token type
         try:
             self.state = 1347
             self._errHandler.sync(self)
-            la_ = self._interp.adaptivePredict(self._input,140,self._ctx)
+            la_ = self._interp.adaptivePredict(self._input, 140, self._ctx)
             if la_ == 1:
                 localctx = SqlBaseParser.InsertOverwriteTableContext(self, localctx)
                 self.enterOuterAlt(localctx, 1)
@@ -8620,24 +9454,23 @@ class SqlBaseParser ( Parser ):
                 self.match(SqlBaseParser.OVERWRITE)
                 self.state = 1289
                 self._errHandler.sync(self)
-                la_ = self._interp.adaptivePredict(self._input,126,self._ctx)
+                la_ = self._interp.adaptivePredict(self._input, 126, self._ctx)
                 if la_ == 1:
                     self.state = 1288
                     self.match(SqlBaseParser.TABLE)
-
 
                 self.state = 1291
                 self.multipartIdentifier()
                 self.state = 1298
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==SqlBaseParser.PARTITION:
+                if _la == SqlBaseParser.PARTITION:
                     self.state = 1292
                     self.partitionSpec()
                     self.state = 1296
                     self._errHandler.sync(self)
                     _la = self._input.LA(1)
-                    if _la==SqlBaseParser.IF:
+                    if _la == SqlBaseParser.IF:
                         self.state = 1293
                         self.match(SqlBaseParser.IF)
                         self.state = 1294
@@ -8645,16 +9478,12 @@ class SqlBaseParser ( Parser ):
                         self.state = 1295
                         self.match(SqlBaseParser.EXISTS)
 
-
-
-
                 self.state = 1301
                 self._errHandler.sync(self)
-                la_ = self._interp.adaptivePredict(self._input,129,self._ctx)
+                la_ = self._interp.adaptivePredict(self._input, 129, self._ctx)
                 if la_ == 1:
                     self.state = 1300
                     self.identifierList()
-
 
                 pass
 
@@ -8667,26 +9496,24 @@ class SqlBaseParser ( Parser ):
                 self.match(SqlBaseParser.INTO)
                 self.state = 1306
                 self._errHandler.sync(self)
-                la_ = self._interp.adaptivePredict(self._input,130,self._ctx)
+                la_ = self._interp.adaptivePredict(self._input, 130, self._ctx)
                 if la_ == 1:
                     self.state = 1305
                     self.match(SqlBaseParser.TABLE)
-
 
                 self.state = 1308
                 self.multipartIdentifier()
                 self.state = 1310
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==SqlBaseParser.PARTITION:
+                if _la == SqlBaseParser.PARTITION:
                     self.state = 1309
                     self.partitionSpec()
-
 
                 self.state = 1315
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==SqlBaseParser.IF:
+                if _la == SqlBaseParser.IF:
                     self.state = 1312
                     self.match(SqlBaseParser.IF)
                     self.state = 1313
@@ -8694,14 +9521,12 @@ class SqlBaseParser ( Parser ):
                     self.state = 1314
                     self.match(SqlBaseParser.EXISTS)
 
-
                 self.state = 1318
                 self._errHandler.sync(self)
-                la_ = self._interp.adaptivePredict(self._input,133,self._ctx)
+                la_ = self._interp.adaptivePredict(self._input, 133, self._ctx)
                 if la_ == 1:
                     self.state = 1317
                     self.identifierList()
-
 
                 pass
 
@@ -8715,10 +9540,9 @@ class SqlBaseParser ( Parser ):
                 self.state = 1323
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==SqlBaseParser.LOCAL:
+                if _la == SqlBaseParser.LOCAL:
                     self.state = 1322
                     self.match(SqlBaseParser.LOCAL)
-
 
                 self.state = 1325
                 self.match(SqlBaseParser.DIRECTORY)
@@ -8727,18 +9551,16 @@ class SqlBaseParser ( Parser ):
                 self.state = 1328
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==SqlBaseParser.ROW:
+                if _la == SqlBaseParser.ROW:
                     self.state = 1327
                     self.rowFormat()
-
 
                 self.state = 1331
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==SqlBaseParser.STORED:
+                if _la == SqlBaseParser.STORED:
                     self.state = 1330
                     self.createFileFormat()
-
 
                 pass
 
@@ -8752,35 +9574,31 @@ class SqlBaseParser ( Parser ):
                 self.state = 1336
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==SqlBaseParser.LOCAL:
+                if _la == SqlBaseParser.LOCAL:
                     self.state = 1335
                     self.match(SqlBaseParser.LOCAL)
-
 
                 self.state = 1338
                 self.match(SqlBaseParser.DIRECTORY)
                 self.state = 1340
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==SqlBaseParser.STRING:
+                if _la == SqlBaseParser.STRING:
                     self.state = 1339
                     localctx.path = self.match(SqlBaseParser.STRING)
-
 
                 self.state = 1342
                 self.tableProvider()
                 self.state = 1345
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==SqlBaseParser.OPTIONS:
+                if _la == SqlBaseParser.OPTIONS:
                     self.state = 1343
                     self.match(SqlBaseParser.OPTIONS)
                     self.state = 1344
                     localctx.options = self.tablePropertyList()
 
-
                 pass
-
 
         except RecognitionException as re:
             localctx.exception = re
@@ -8790,41 +9608,39 @@ class SqlBaseParser ( Parser ):
             self.exitRule()
         return localctx
 
-
     class PartitionSpecLocationContext(ParserRuleContext):
-        __slots__ = 'parser'
+        __slots__ = "parser"
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
         def partitionSpec(self):
-            return self.getTypedRuleContext(SqlBaseParser.PartitionSpecContext,0)
-
+            return self.getTypedRuleContext(SqlBaseParser.PartitionSpecContext, 0)
 
         def locationSpec(self):
-            return self.getTypedRuleContext(SqlBaseParser.LocationSpecContext,0)
-
+            return self.getTypedRuleContext(SqlBaseParser.LocationSpecContext, 0)
 
         def getRuleIndex(self):
             return SqlBaseParser.RULE_partitionSpecLocation
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterPartitionSpecLocation" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterPartitionSpecLocation"):
                 listener.enterPartitionSpecLocation(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitPartitionSpecLocation" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitPartitionSpecLocation"):
                 listener.exitPartitionSpecLocation(self)
-
-
-
 
     def partitionSpecLocation(self):
 
-        localctx = SqlBaseParser.PartitionSpecLocationContext(self, self._ctx, self.state)
+        localctx = SqlBaseParser.PartitionSpecLocationContext(
+            self, self._ctx, self.state
+        )
         self.enterRule(localctx, 38, self.RULE_partitionSpecLocation)
-        self._la = 0 # Token type
+        self._la = 0  # Token type
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 1349
@@ -8832,10 +9648,9 @@ class SqlBaseParser ( Parser ):
             self.state = 1351
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if _la==SqlBaseParser.LOCATION:
+            if _la == SqlBaseParser.LOCATION:
                 self.state = 1350
                 self.locationSpec()
-
 
         except RecognitionException as re:
             localctx.exception = re
@@ -8845,43 +9660,40 @@ class SqlBaseParser ( Parser ):
             self.exitRule()
         return localctx
 
-
     class PartitionSpecContext(ParserRuleContext):
-        __slots__ = 'parser'
+        __slots__ = "parser"
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
         def PARTITION(self):
             return self.getToken(SqlBaseParser.PARTITION, 0)
 
-        def partitionVal(self, i:int=None):
+        def partitionVal(self, i: int = None):
             if i is None:
                 return self.getTypedRuleContexts(SqlBaseParser.PartitionValContext)
             else:
-                return self.getTypedRuleContext(SqlBaseParser.PartitionValContext,i)
-
+                return self.getTypedRuleContext(SqlBaseParser.PartitionValContext, i)
 
         def getRuleIndex(self):
             return SqlBaseParser.RULE_partitionSpec
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterPartitionSpec" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterPartitionSpec"):
                 listener.enterPartitionSpec(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitPartitionSpec" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitPartitionSpec"):
                 listener.exitPartitionSpec(self)
-
-
-
 
     def partitionSpec(self):
 
         localctx = SqlBaseParser.PartitionSpecContext(self, self._ctx, self.state)
         self.enterRule(localctx, 40, self.RULE_partitionSpec)
-        self._la = 0 # Token type
+        self._la = 0  # Token type
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 1353
@@ -8893,7 +9705,7 @@ class SqlBaseParser ( Parser ):
             self.state = 1360
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            while _la==SqlBaseParser.T__3:
+            while _la == SqlBaseParser.T__3:
                 self.state = 1356
                 self.match(SqlBaseParser.T__3)
                 self.state = 1357
@@ -8912,44 +9724,40 @@ class SqlBaseParser ( Parser ):
             self.exitRule()
         return localctx
 
-
     class PartitionValContext(ParserRuleContext):
-        __slots__ = 'parser'
+        __slots__ = "parser"
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
         def identifier(self):
-            return self.getTypedRuleContext(SqlBaseParser.IdentifierContext,0)
-
+            return self.getTypedRuleContext(SqlBaseParser.IdentifierContext, 0)
 
         def EQ(self):
             return self.getToken(SqlBaseParser.EQ, 0)
 
         def constant(self):
-            return self.getTypedRuleContext(SqlBaseParser.ConstantContext,0)
-
+            return self.getTypedRuleContext(SqlBaseParser.ConstantContext, 0)
 
         def getRuleIndex(self):
             return SqlBaseParser.RULE_partitionVal
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterPartitionVal" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterPartitionVal"):
                 listener.enterPartitionVal(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitPartitionVal" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitPartitionVal"):
                 listener.exitPartitionVal(self)
-
-
-
 
     def partitionVal(self):
 
         localctx = SqlBaseParser.PartitionValContext(self, self._ctx, self.state)
         self.enterRule(localctx, 42, self.RULE_partitionVal)
-        self._la = 0 # Token type
+        self._la = 0  # Token type
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 1365
@@ -8957,12 +9765,11 @@ class SqlBaseParser ( Parser ):
             self.state = 1368
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if _la==SqlBaseParser.EQ:
+            if _la == SqlBaseParser.EQ:
                 self.state = 1366
                 self.match(SqlBaseParser.EQ)
                 self.state = 1367
                 self.constant()
-
 
         except RecognitionException as re:
             localctx.exception = re
@@ -8972,11 +9779,12 @@ class SqlBaseParser ( Parser ):
             self.exitRule()
         return localctx
 
-
     class NamespaceContext(ParserRuleContext):
-        __slots__ = 'parser'
+        __slots__ = "parser"
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
@@ -8992,27 +9800,28 @@ class SqlBaseParser ( Parser ):
         def getRuleIndex(self):
             return SqlBaseParser.RULE_namespace
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterNamespace" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterNamespace"):
                 listener.enterNamespace(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitNamespace" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitNamespace"):
                 listener.exitNamespace(self)
-
-
-
 
     def namespace(self):
 
         localctx = SqlBaseParser.NamespaceContext(self, self._ctx, self.state)
         self.enterRule(localctx, 44, self.RULE_namespace)
-        self._la = 0 # Token type
+        self._la = 0  # Token type
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 1370
             _la = self._input.LA(1)
-            if not(_la==SqlBaseParser.DATABASE or _la==SqlBaseParser.NAMESPACE or _la==SqlBaseParser.SCHEMA):
+            if not (
+                _la == SqlBaseParser.DATABASE
+                or _la == SqlBaseParser.NAMESPACE
+                or _la == SqlBaseParser.SCHEMA
+            ):
                 self._errHandler.recoverInline(self)
             else:
                 self._errHandler.reportMatch(self)
@@ -9025,46 +9834,40 @@ class SqlBaseParser ( Parser ):
             self.exitRule()
         return localctx
 
-
     class DescribeFuncNameContext(ParserRuleContext):
-        __slots__ = 'parser'
+        __slots__ = "parser"
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
         def qualifiedName(self):
-            return self.getTypedRuleContext(SqlBaseParser.QualifiedNameContext,0)
-
+            return self.getTypedRuleContext(SqlBaseParser.QualifiedNameContext, 0)
 
         def STRING(self):
             return self.getToken(SqlBaseParser.STRING, 0)
 
         def comparisonOperator(self):
-            return self.getTypedRuleContext(SqlBaseParser.ComparisonOperatorContext,0)
-
+            return self.getTypedRuleContext(SqlBaseParser.ComparisonOperatorContext, 0)
 
         def arithmeticOperator(self):
-            return self.getTypedRuleContext(SqlBaseParser.ArithmeticOperatorContext,0)
-
+            return self.getTypedRuleContext(SqlBaseParser.ArithmeticOperatorContext, 0)
 
         def predicateOperator(self):
-            return self.getTypedRuleContext(SqlBaseParser.PredicateOperatorContext,0)
-
+            return self.getTypedRuleContext(SqlBaseParser.PredicateOperatorContext, 0)
 
         def getRuleIndex(self):
             return SqlBaseParser.RULE_describeFuncName
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterDescribeFuncName" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterDescribeFuncName"):
                 listener.enterDescribeFuncName(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitDescribeFuncName" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitDescribeFuncName"):
                 listener.exitDescribeFuncName(self)
-
-
-
 
     def describeFuncName(self):
 
@@ -9073,7 +9876,7 @@ class SqlBaseParser ( Parser ):
         try:
             self.state = 1377
             self._errHandler.sync(self)
-            la_ = self._interp.adaptivePredict(self._input,144,self._ctx)
+            la_ = self._interp.adaptivePredict(self._input, 144, self._ctx)
             if la_ == 1:
                 self.enterOuterAlt(localctx, 1)
                 self.state = 1372
@@ -9104,7 +9907,6 @@ class SqlBaseParser ( Parser ):
                 self.predicateOperator()
                 pass
 
-
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)
@@ -9113,42 +9915,39 @@ class SqlBaseParser ( Parser ):
             self.exitRule()
         return localctx
 
-
     class DescribeColNameContext(ParserRuleContext):
-        __slots__ = 'parser'
+        __slots__ = "parser"
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
-            self._identifier = None # IdentifierContext
-            self.nameParts = list() # of IdentifierContexts
+            self._identifier = None  # IdentifierContext
+            self.nameParts = list()  # of IdentifierContexts
 
-        def identifier(self, i:int=None):
+        def identifier(self, i: int = None):
             if i is None:
                 return self.getTypedRuleContexts(SqlBaseParser.IdentifierContext)
             else:
-                return self.getTypedRuleContext(SqlBaseParser.IdentifierContext,i)
-
+                return self.getTypedRuleContext(SqlBaseParser.IdentifierContext, i)
 
         def getRuleIndex(self):
             return SqlBaseParser.RULE_describeColName
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterDescribeColName" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterDescribeColName"):
                 listener.enterDescribeColName(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitDescribeColName" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitDescribeColName"):
                 listener.exitDescribeColName(self)
-
-
-
 
     def describeColName(self):
 
         localctx = SqlBaseParser.DescribeColNameContext(self, self._ctx, self.state)
         self.enterRule(localctx, 48, self.RULE_describeColName)
-        self._la = 0 # Token type
+        self._la = 0  # Token type
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 1379
@@ -9157,7 +9956,7 @@ class SqlBaseParser ( Parser ):
             self.state = 1384
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            while _la==SqlBaseParser.T__4:
+            while _la == SqlBaseParser.T__4:
                 self.state = 1380
                 self.match(SqlBaseParser.T__4)
                 self.state = 1381
@@ -9175,43 +9974,40 @@ class SqlBaseParser ( Parser ):
             self.exitRule()
         return localctx
 
-
     class CtesContext(ParserRuleContext):
-        __slots__ = 'parser'
+        __slots__ = "parser"
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
         def WITH(self):
             return self.getToken(SqlBaseParser.WITH, 0)
 
-        def namedQuery(self, i:int=None):
+        def namedQuery(self, i: int = None):
             if i is None:
                 return self.getTypedRuleContexts(SqlBaseParser.NamedQueryContext)
             else:
-                return self.getTypedRuleContext(SqlBaseParser.NamedQueryContext,i)
-
+                return self.getTypedRuleContext(SqlBaseParser.NamedQueryContext, i)
 
         def getRuleIndex(self):
             return SqlBaseParser.RULE_ctes
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterCtes" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterCtes"):
                 listener.enterCtes(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitCtes" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitCtes"):
                 listener.exitCtes(self)
-
-
-
 
     def ctes(self):
 
         localctx = SqlBaseParser.CtesContext(self, self._ctx, self.state)
         self.enterRule(localctx, 50, self.RULE_ctes)
-        self._la = 0 # Token type
+        self._la = 0  # Token type
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 1387
@@ -9221,7 +10017,7 @@ class SqlBaseParser ( Parser ):
             self.state = 1393
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            while _la==SqlBaseParser.T__3:
+            while _la == SqlBaseParser.T__3:
                 self.state = 1389
                 self.match(SqlBaseParser.T__3)
                 self.state = 1390
@@ -9238,69 +10034,64 @@ class SqlBaseParser ( Parser ):
             self.exitRule()
         return localctx
 
-
     class NamedQueryContext(ParserRuleContext):
-        __slots__ = 'parser'
+        __slots__ = "parser"
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
-            self.name = None # ErrorCapturingIdentifierContext
-            self.columnAliases = None # IdentifierListContext
+            self.name = None  # ErrorCapturingIdentifierContext
+            self.columnAliases = None  # IdentifierListContext
 
         def query(self):
-            return self.getTypedRuleContext(SqlBaseParser.QueryContext,0)
-
+            return self.getTypedRuleContext(SqlBaseParser.QueryContext, 0)
 
         def errorCapturingIdentifier(self):
-            return self.getTypedRuleContext(SqlBaseParser.ErrorCapturingIdentifierContext,0)
-
+            return self.getTypedRuleContext(
+                SqlBaseParser.ErrorCapturingIdentifierContext, 0
+            )
 
         def AS(self):
             return self.getToken(SqlBaseParser.AS, 0)
 
         def identifierList(self):
-            return self.getTypedRuleContext(SqlBaseParser.IdentifierListContext,0)
-
+            return self.getTypedRuleContext(SqlBaseParser.IdentifierListContext, 0)
 
         def getRuleIndex(self):
             return SqlBaseParser.RULE_namedQuery
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterNamedQuery" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterNamedQuery"):
                 listener.enterNamedQuery(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitNamedQuery" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitNamedQuery"):
                 listener.exitNamedQuery(self)
-
-
-
 
     def namedQuery(self):
 
         localctx = SqlBaseParser.NamedQueryContext(self, self._ctx, self.state)
         self.enterRule(localctx, 52, self.RULE_namedQuery)
-        self._la = 0 # Token type
+        self._la = 0  # Token type
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 1396
             localctx.name = self.errorCapturingIdentifier()
             self.state = 1398
             self._errHandler.sync(self)
-            la_ = self._interp.adaptivePredict(self._input,147,self._ctx)
+            la_ = self._interp.adaptivePredict(self._input, 147, self._ctx)
             if la_ == 1:
                 self.state = 1397
                 localctx.columnAliases = self.identifierList()
 
-
             self.state = 1401
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if _la==SqlBaseParser.AS:
+            if _la == SqlBaseParser.AS:
                 self.state = 1400
                 self.match(SqlBaseParser.AS)
-
 
             self.state = 1403
             self.match(SqlBaseParser.T__1)
@@ -9316,11 +10107,12 @@ class SqlBaseParser ( Parser ):
             self.exitRule()
         return localctx
 
-
     class TableProviderContext(ParserRuleContext):
-        __slots__ = 'parser'
+        __slots__ = "parser"
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
@@ -9328,22 +10120,18 @@ class SqlBaseParser ( Parser ):
             return self.getToken(SqlBaseParser.USING, 0)
 
         def multipartIdentifier(self):
-            return self.getTypedRuleContext(SqlBaseParser.MultipartIdentifierContext,0)
-
+            return self.getTypedRuleContext(SqlBaseParser.MultipartIdentifierContext, 0)
 
         def getRuleIndex(self):
             return SqlBaseParser.RULE_tableProvider
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterTableProvider" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterTableProvider"):
                 listener.enterTableProvider(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitTableProvider" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitTableProvider"):
                 listener.exitTableProvider(self)
-
-
-
 
     def tableProvider(self):
 
@@ -9363,122 +10151,148 @@ class SqlBaseParser ( Parser ):
             self.exitRule()
         return localctx
 
-
     class CreateTableClausesContext(ParserRuleContext):
-        __slots__ = 'parser'
+        __slots__ = "parser"
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
-            self.options = None # TablePropertyListContext
-            self.partitioning = None # PartitionFieldListContext
-            self.tableProps = None # TablePropertyListContext
+            self.options = None  # TablePropertyListContext
+            self.partitioning = None  # PartitionFieldListContext
+            self.tableProps = None  # TablePropertyListContext
 
-        def skewSpec(self, i:int=None):
+        def skewSpec(self, i: int = None):
             if i is None:
                 return self.getTypedRuleContexts(SqlBaseParser.SkewSpecContext)
             else:
-                return self.getTypedRuleContext(SqlBaseParser.SkewSpecContext,i)
+                return self.getTypedRuleContext(SqlBaseParser.SkewSpecContext, i)
 
-
-        def bucketSpec(self, i:int=None):
+        def bucketSpec(self, i: int = None):
             if i is None:
                 return self.getTypedRuleContexts(SqlBaseParser.BucketSpecContext)
             else:
-                return self.getTypedRuleContext(SqlBaseParser.BucketSpecContext,i)
+                return self.getTypedRuleContext(SqlBaseParser.BucketSpecContext, i)
 
-
-        def rowFormat(self, i:int=None):
+        def rowFormat(self, i: int = None):
             if i is None:
                 return self.getTypedRuleContexts(SqlBaseParser.RowFormatContext)
             else:
-                return self.getTypedRuleContext(SqlBaseParser.RowFormatContext,i)
+                return self.getTypedRuleContext(SqlBaseParser.RowFormatContext, i)
 
-
-        def createFileFormat(self, i:int=None):
+        def createFileFormat(self, i: int = None):
             if i is None:
                 return self.getTypedRuleContexts(SqlBaseParser.CreateFileFormatContext)
             else:
-                return self.getTypedRuleContext(SqlBaseParser.CreateFileFormatContext,i)
+                return self.getTypedRuleContext(
+                    SqlBaseParser.CreateFileFormatContext, i
+                )
 
-
-        def locationSpec(self, i:int=None):
+        def locationSpec(self, i: int = None):
             if i is None:
                 return self.getTypedRuleContexts(SqlBaseParser.LocationSpecContext)
             else:
-                return self.getTypedRuleContext(SqlBaseParser.LocationSpecContext,i)
+                return self.getTypedRuleContext(SqlBaseParser.LocationSpecContext, i)
 
-
-        def commentSpec(self, i:int=None):
+        def commentSpec(self, i: int = None):
             if i is None:
                 return self.getTypedRuleContexts(SqlBaseParser.CommentSpecContext)
             else:
-                return self.getTypedRuleContext(SqlBaseParser.CommentSpecContext,i)
+                return self.getTypedRuleContext(SqlBaseParser.CommentSpecContext, i)
 
-
-        def OPTIONS(self, i:int=None):
+        def OPTIONS(self, i: int = None):
             if i is None:
                 return self.getTokens(SqlBaseParser.OPTIONS)
             else:
                 return self.getToken(SqlBaseParser.OPTIONS, i)
 
-        def PARTITIONED(self, i:int=None):
+        def PARTITIONED(self, i: int = None):
             if i is None:
                 return self.getTokens(SqlBaseParser.PARTITIONED)
             else:
                 return self.getToken(SqlBaseParser.PARTITIONED, i)
 
-        def BY(self, i:int=None):
+        def BY(self, i: int = None):
             if i is None:
                 return self.getTokens(SqlBaseParser.BY)
             else:
                 return self.getToken(SqlBaseParser.BY, i)
 
-        def TBLPROPERTIES(self, i:int=None):
+        def TBLPROPERTIES(self, i: int = None):
             if i is None:
                 return self.getTokens(SqlBaseParser.TBLPROPERTIES)
             else:
                 return self.getToken(SqlBaseParser.TBLPROPERTIES, i)
 
-        def tablePropertyList(self, i:int=None):
+        def tablePropertyList(self, i: int = None):
             if i is None:
                 return self.getTypedRuleContexts(SqlBaseParser.TablePropertyListContext)
             else:
-                return self.getTypedRuleContext(SqlBaseParser.TablePropertyListContext,i)
+                return self.getTypedRuleContext(
+                    SqlBaseParser.TablePropertyListContext, i
+                )
 
-
-        def partitionFieldList(self, i:int=None):
+        def partitionFieldList(self, i: int = None):
             if i is None:
-                return self.getTypedRuleContexts(SqlBaseParser.PartitionFieldListContext)
+                return self.getTypedRuleContexts(
+                    SqlBaseParser.PartitionFieldListContext
+                )
             else:
-                return self.getTypedRuleContext(SqlBaseParser.PartitionFieldListContext,i)
-
+                return self.getTypedRuleContext(
+                    SqlBaseParser.PartitionFieldListContext, i
+                )
 
         def getRuleIndex(self):
             return SqlBaseParser.RULE_createTableClauses
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterCreateTableClauses" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterCreateTableClauses"):
                 listener.enterCreateTableClauses(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitCreateTableClauses" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitCreateTableClauses"):
                 listener.exitCreateTableClauses(self)
-
-
-
 
     def createTableClauses(self):
 
         localctx = SqlBaseParser.CreateTableClausesContext(self, self._ctx, self.state)
         self.enterRule(localctx, 56, self.RULE_createTableClauses)
-        self._la = 0 # Token type
+        self._la = 0  # Token type
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 1425
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            while _la==SqlBaseParser.CLUSTERED or _la==SqlBaseParser.COMMENT or ((((_la - 139)) & ~0x3f) == 0 and ((1 << (_la - 139)) & ((1 << (SqlBaseParser.LOCATION - 139)) | (1 << (SqlBaseParser.OPTIONS - 139)) | (1 << (SqlBaseParser.PARTITIONED - 139)))) != 0) or ((((_la - 204)) & ~0x3f) == 0 and ((1 << (_la - 204)) & ((1 << (SqlBaseParser.ROW - 204)) | (1 << (SqlBaseParser.SKEWED - 204)) | (1 << (SqlBaseParser.STORED - 204)) | (1 << (SqlBaseParser.TBLPROPERTIES - 204)))) != 0):
+            while (
+                _la == SqlBaseParser.CLUSTERED
+                or _la == SqlBaseParser.COMMENT
+                or (
+                    (((_la - 139)) & ~0x3F) == 0
+                    and (
+                        (1 << (_la - 139))
+                        & (
+                            (1 << (SqlBaseParser.LOCATION - 139))
+                            | (1 << (SqlBaseParser.OPTIONS - 139))
+                            | (1 << (SqlBaseParser.PARTITIONED - 139))
+                        )
+                    )
+                    != 0
+                )
+                or (
+                    (((_la - 204)) & ~0x3F) == 0
+                    and (
+                        (1 << (_la - 204))
+                        & (
+                            (1 << (SqlBaseParser.ROW - 204))
+                            | (1 << (SqlBaseParser.SKEWED - 204))
+                            | (1 << (SqlBaseParser.STORED - 204))
+                            | (1 << (SqlBaseParser.TBLPROPERTIES - 204))
+                        )
+                    )
+                    != 0
+                )
+            ):
                 self.state = 1423
                 self._errHandler.sync(self)
                 token = self._input.LA(1)
@@ -9541,40 +10355,37 @@ class SqlBaseParser ( Parser ):
             self.exitRule()
         return localctx
 
-
     class TablePropertyListContext(ParserRuleContext):
-        __slots__ = 'parser'
+        __slots__ = "parser"
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
-        def tableProperty(self, i:int=None):
+        def tableProperty(self, i: int = None):
             if i is None:
                 return self.getTypedRuleContexts(SqlBaseParser.TablePropertyContext)
             else:
-                return self.getTypedRuleContext(SqlBaseParser.TablePropertyContext,i)
-
+                return self.getTypedRuleContext(SqlBaseParser.TablePropertyContext, i)
 
         def getRuleIndex(self):
             return SqlBaseParser.RULE_tablePropertyList
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterTablePropertyList" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterTablePropertyList"):
                 listener.enterTablePropertyList(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitTablePropertyList" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitTablePropertyList"):
                 listener.exitTablePropertyList(self)
-
-
-
 
     def tablePropertyList(self):
 
         localctx = SqlBaseParser.TablePropertyListContext(self, self._ctx, self.state)
         self.enterRule(localctx, 58, self.RULE_tablePropertyList)
-        self._la = 0 # Token type
+        self._la = 0  # Token type
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 1428
@@ -9584,7 +10395,7 @@ class SqlBaseParser ( Parser ):
             self.state = 1434
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            while _la==SqlBaseParser.T__3:
+            while _la == SqlBaseParser.T__3:
                 self.state = 1430
                 self.match(SqlBaseParser.T__3)
                 self.state = 1431
@@ -9603,23 +10414,22 @@ class SqlBaseParser ( Parser ):
             self.exitRule()
         return localctx
 
-
     class TablePropertyContext(ParserRuleContext):
-        __slots__ = 'parser'
+        __slots__ = "parser"
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
-            self.key = None # TablePropertyKeyContext
-            self.value = None # TablePropertyValueContext
+            self.key = None  # TablePropertyKeyContext
+            self.value = None  # TablePropertyValueContext
 
         def tablePropertyKey(self):
-            return self.getTypedRuleContext(SqlBaseParser.TablePropertyKeyContext,0)
-
+            return self.getTypedRuleContext(SqlBaseParser.TablePropertyKeyContext, 0)
 
         def tablePropertyValue(self):
-            return self.getTypedRuleContext(SqlBaseParser.TablePropertyValueContext,0)
-
+            return self.getTypedRuleContext(SqlBaseParser.TablePropertyValueContext, 0)
 
         def EQ(self):
             return self.getToken(SqlBaseParser.EQ, 0)
@@ -9627,22 +10437,19 @@ class SqlBaseParser ( Parser ):
         def getRuleIndex(self):
             return SqlBaseParser.RULE_tableProperty
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterTableProperty" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterTableProperty"):
                 listener.enterTableProperty(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitTableProperty" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitTableProperty"):
                 listener.exitTableProperty(self)
-
-
-
 
     def tableProperty(self):
 
         localctx = SqlBaseParser.TablePropertyContext(self, self._ctx, self.state)
         self.enterRule(localctx, 60, self.RULE_tableProperty)
-        self._la = 0 # Token type
+        self._la = 0  # Token type
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 1439
@@ -9650,18 +10457,29 @@ class SqlBaseParser ( Parser ):
             self.state = 1444
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if _la==SqlBaseParser.FALSE or ((((_la - 245)) & ~0x3f) == 0 and ((1 << (_la - 245)) & ((1 << (SqlBaseParser.TRUE - 245)) | (1 << (SqlBaseParser.EQ - 245)) | (1 << (SqlBaseParser.STRING - 245)) | (1 << (SqlBaseParser.INTEGER_VALUE - 245)) | (1 << (SqlBaseParser.DECIMAL_VALUE - 245)))) != 0):
+            if _la == SqlBaseParser.FALSE or (
+                (((_la - 245)) & ~0x3F) == 0
+                and (
+                    (1 << (_la - 245))
+                    & (
+                        (1 << (SqlBaseParser.TRUE - 245))
+                        | (1 << (SqlBaseParser.EQ - 245))
+                        | (1 << (SqlBaseParser.STRING - 245))
+                        | (1 << (SqlBaseParser.INTEGER_VALUE - 245))
+                        | (1 << (SqlBaseParser.DECIMAL_VALUE - 245))
+                    )
+                )
+                != 0
+            ):
                 self.state = 1441
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==SqlBaseParser.EQ:
+                if _la == SqlBaseParser.EQ:
                     self.state = 1440
                     self.match(SqlBaseParser.EQ)
 
-
                 self.state = 1443
                 localctx.value = self.tablePropertyValue()
-
 
         except RecognitionException as re:
             localctx.exception = re
@@ -9671,20 +10489,20 @@ class SqlBaseParser ( Parser ):
             self.exitRule()
         return localctx
 
-
     class TablePropertyKeyContext(ParserRuleContext):
-        __slots__ = 'parser'
+        __slots__ = "parser"
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
-        def identifier(self, i:int=None):
+        def identifier(self, i: int = None):
             if i is None:
                 return self.getTypedRuleContexts(SqlBaseParser.IdentifierContext)
             else:
-                return self.getTypedRuleContext(SqlBaseParser.IdentifierContext,i)
-
+                return self.getTypedRuleContext(SqlBaseParser.IdentifierContext, i)
 
         def STRING(self):
             return self.getToken(SqlBaseParser.STRING, 0)
@@ -9692,26 +10510,23 @@ class SqlBaseParser ( Parser ):
         def getRuleIndex(self):
             return SqlBaseParser.RULE_tablePropertyKey
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterTablePropertyKey" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterTablePropertyKey"):
                 listener.enterTablePropertyKey(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitTablePropertyKey" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitTablePropertyKey"):
                 listener.exitTablePropertyKey(self)
-
-
-
 
     def tablePropertyKey(self):
 
         localctx = SqlBaseParser.TablePropertyKeyContext(self, self._ctx, self.state)
         self.enterRule(localctx, 62, self.RULE_tablePropertyKey)
-        self._la = 0 # Token type
+        self._la = 0  # Token type
         try:
             self.state = 1455
             self._errHandler.sync(self)
-            la_ = self._interp.adaptivePredict(self._input,155,self._ctx)
+            la_ = self._interp.adaptivePredict(self._input, 155, self._ctx)
             if la_ == 1:
                 self.enterOuterAlt(localctx, 1)
                 self.state = 1446
@@ -9719,7 +10534,7 @@ class SqlBaseParser ( Parser ):
                 self.state = 1451
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                while _la==SqlBaseParser.T__4:
+                while _la == SqlBaseParser.T__4:
                     self.state = 1447
                     self.match(SqlBaseParser.T__4)
                     self.state = 1448
@@ -9736,7 +10551,6 @@ class SqlBaseParser ( Parser ):
                 self.match(SqlBaseParser.STRING)
                 pass
 
-
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)
@@ -9745,11 +10559,12 @@ class SqlBaseParser ( Parser ):
             self.exitRule()
         return localctx
 
-
     class TablePropertyValueContext(ParserRuleContext):
-        __slots__ = 'parser'
+        __slots__ = "parser"
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
@@ -9760,8 +10575,7 @@ class SqlBaseParser ( Parser ):
             return self.getToken(SqlBaseParser.DECIMAL_VALUE, 0)
 
         def booleanValue(self):
-            return self.getTypedRuleContext(SqlBaseParser.BooleanValueContext,0)
-
+            return self.getTypedRuleContext(SqlBaseParser.BooleanValueContext, 0)
 
         def STRING(self):
             return self.getToken(SqlBaseParser.STRING, 0)
@@ -9769,16 +10583,13 @@ class SqlBaseParser ( Parser ):
         def getRuleIndex(self):
             return SqlBaseParser.RULE_tablePropertyValue
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterTablePropertyValue" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterTablePropertyValue"):
                 listener.enterTablePropertyValue(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitTablePropertyValue" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitTablePropertyValue"):
                 listener.exitTablePropertyValue(self)
-
-
-
 
     def tablePropertyValue(self):
 
@@ -9819,40 +10630,37 @@ class SqlBaseParser ( Parser ):
             self.exitRule()
         return localctx
 
-
     class ConstantListContext(ParserRuleContext):
-        __slots__ = 'parser'
+        __slots__ = "parser"
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
-        def constant(self, i:int=None):
+        def constant(self, i: int = None):
             if i is None:
                 return self.getTypedRuleContexts(SqlBaseParser.ConstantContext)
             else:
-                return self.getTypedRuleContext(SqlBaseParser.ConstantContext,i)
-
+                return self.getTypedRuleContext(SqlBaseParser.ConstantContext, i)
 
         def getRuleIndex(self):
             return SqlBaseParser.RULE_constantList
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterConstantList" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterConstantList"):
                 listener.enterConstantList(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitConstantList" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitConstantList"):
                 listener.exitConstantList(self)
-
-
-
 
     def constantList(self):
 
         localctx = SqlBaseParser.ConstantListContext(self, self._ctx, self.state)
         self.enterRule(localctx, 66, self.RULE_constantList)
-        self._la = 0 # Token type
+        self._la = 0  # Token type
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 1463
@@ -9862,7 +10670,7 @@ class SqlBaseParser ( Parser ):
             self.state = 1469
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            while _la==SqlBaseParser.T__3:
+            while _la == SqlBaseParser.T__3:
                 self.state = 1465
                 self.match(SqlBaseParser.T__3)
                 self.state = 1466
@@ -9881,40 +10689,37 @@ class SqlBaseParser ( Parser ):
             self.exitRule()
         return localctx
 
-
     class NestedConstantListContext(ParserRuleContext):
-        __slots__ = 'parser'
+        __slots__ = "parser"
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
-        def constantList(self, i:int=None):
+        def constantList(self, i: int = None):
             if i is None:
                 return self.getTypedRuleContexts(SqlBaseParser.ConstantListContext)
             else:
-                return self.getTypedRuleContext(SqlBaseParser.ConstantListContext,i)
-
+                return self.getTypedRuleContext(SqlBaseParser.ConstantListContext, i)
 
         def getRuleIndex(self):
             return SqlBaseParser.RULE_nestedConstantList
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterNestedConstantList" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterNestedConstantList"):
                 listener.enterNestedConstantList(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitNestedConstantList" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitNestedConstantList"):
                 listener.exitNestedConstantList(self)
-
-
-
 
     def nestedConstantList(self):
 
         localctx = SqlBaseParser.NestedConstantListContext(self, self._ctx, self.state)
         self.enterRule(localctx, 68, self.RULE_nestedConstantList)
-        self._la = 0 # Token type
+        self._la = 0  # Token type
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 1474
@@ -9924,7 +10729,7 @@ class SqlBaseParser ( Parser ):
             self.state = 1480
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            while _la==SqlBaseParser.T__3:
+            while _la == SqlBaseParser.T__3:
                 self.state = 1476
                 self.match(SqlBaseParser.T__3)
                 self.state = 1477
@@ -9943,11 +10748,12 @@ class SqlBaseParser ( Parser ):
             self.exitRule()
         return localctx
 
-
     class CreateFileFormatContext(ParserRuleContext):
-        __slots__ = 'parser'
+        __slots__ = "parser"
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
@@ -9958,29 +10764,24 @@ class SqlBaseParser ( Parser ):
             return self.getToken(SqlBaseParser.AS, 0)
 
         def fileFormat(self):
-            return self.getTypedRuleContext(SqlBaseParser.FileFormatContext,0)
-
+            return self.getTypedRuleContext(SqlBaseParser.FileFormatContext, 0)
 
         def BY(self):
             return self.getToken(SqlBaseParser.BY, 0)
 
         def storageHandler(self):
-            return self.getTypedRuleContext(SqlBaseParser.StorageHandlerContext,0)
-
+            return self.getTypedRuleContext(SqlBaseParser.StorageHandlerContext, 0)
 
         def getRuleIndex(self):
             return SqlBaseParser.RULE_createFileFormat
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterCreateFileFormat" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterCreateFileFormat"):
                 listener.enterCreateFileFormat(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitCreateFileFormat" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitCreateFileFormat"):
                 listener.exitCreateFileFormat(self)
-
-
-
 
     def createFileFormat(self):
 
@@ -9989,7 +10790,7 @@ class SqlBaseParser ( Parser ):
         try:
             self.state = 1491
             self._errHandler.sync(self)
-            la_ = self._interp.adaptivePredict(self._input,159,self._ctx)
+            la_ = self._interp.adaptivePredict(self._input, 159, self._ctx)
             if la_ == 1:
                 self.enterOuterAlt(localctx, 1)
                 self.state = 1485
@@ -10010,7 +10811,6 @@ class SqlBaseParser ( Parser ):
                 self.storageHandler()
                 pass
 
-
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)
@@ -10019,70 +10819,67 @@ class SqlBaseParser ( Parser ):
             self.exitRule()
         return localctx
 
-
     class FileFormatContext(ParserRuleContext):
-        __slots__ = 'parser'
+        __slots__ = "parser"
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
-
 
         def getRuleIndex(self):
             return SqlBaseParser.RULE_fileFormat
 
-     
-        def copyFrom(self, ctx:ParserRuleContext):
+        def copyFrom(self, ctx: ParserRuleContext):
             super().copyFrom(ctx)
 
-
-
     class TableFileFormatContext(FileFormatContext):
-
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a SqlBaseParser.FileFormatContext
+        def __init__(
+            self, parser, ctx: ParserRuleContext
+        ):  # actually a SqlBaseParser.FileFormatContext
             super().__init__(parser)
-            self.inFmt = None # Token
-            self.outFmt = None # Token
+            self.inFmt = None  # Token
+            self.outFmt = None  # Token
             self.copyFrom(ctx)
 
         def INPUTFORMAT(self):
             return self.getToken(SqlBaseParser.INPUTFORMAT, 0)
+
         def OUTPUTFORMAT(self):
             return self.getToken(SqlBaseParser.OUTPUTFORMAT, 0)
-        def STRING(self, i:int=None):
+
+        def STRING(self, i: int = None):
             if i is None:
                 return self.getTokens(SqlBaseParser.STRING)
             else:
                 return self.getToken(SqlBaseParser.STRING, i)
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterTableFileFormat" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterTableFileFormat"):
                 listener.enterTableFileFormat(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitTableFileFormat" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitTableFileFormat"):
                 listener.exitTableFileFormat(self)
 
-
     class GenericFileFormatContext(FileFormatContext):
-
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a SqlBaseParser.FileFormatContext
+        def __init__(
+            self, parser, ctx: ParserRuleContext
+        ):  # actually a SqlBaseParser.FileFormatContext
             super().__init__(parser)
             self.copyFrom(ctx)
 
         def identifier(self):
-            return self.getTypedRuleContext(SqlBaseParser.IdentifierContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.IdentifierContext, 0)
 
-
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterGenericFileFormat" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterGenericFileFormat"):
                 listener.enterGenericFileFormat(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitGenericFileFormat" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitGenericFileFormat"):
                 listener.exitGenericFileFormat(self)
-
-
 
     def fileFormat(self):
 
@@ -10091,7 +10888,7 @@ class SqlBaseParser ( Parser ):
         try:
             self.state = 1498
             self._errHandler.sync(self)
-            la_ = self._interp.adaptivePredict(self._input,160,self._ctx)
+            la_ = self._interp.adaptivePredict(self._input, 160, self._ctx)
             if la_ == 1:
                 localctx = SqlBaseParser.TableFileFormatContext(self, localctx)
                 self.enterOuterAlt(localctx, 1)
@@ -10112,7 +10909,6 @@ class SqlBaseParser ( Parser ):
                 self.identifier()
                 pass
 
-
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)
@@ -10121,11 +10917,12 @@ class SqlBaseParser ( Parser ):
             self.exitRule()
         return localctx
 
-
     class StorageHandlerContext(ParserRuleContext):
-        __slots__ = 'parser'
+        __slots__ = "parser"
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
@@ -10139,22 +10936,18 @@ class SqlBaseParser ( Parser ):
             return self.getToken(SqlBaseParser.SERDEPROPERTIES, 0)
 
         def tablePropertyList(self):
-            return self.getTypedRuleContext(SqlBaseParser.TablePropertyListContext,0)
-
+            return self.getTypedRuleContext(SqlBaseParser.TablePropertyListContext, 0)
 
         def getRuleIndex(self):
             return SqlBaseParser.RULE_storageHandler
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterStorageHandler" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterStorageHandler"):
                 listener.enterStorageHandler(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitStorageHandler" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitStorageHandler"):
                 listener.exitStorageHandler(self)
-
-
-
 
     def storageHandler(self):
 
@@ -10166,7 +10959,7 @@ class SqlBaseParser ( Parser ):
             self.match(SqlBaseParser.STRING)
             self.state = 1504
             self._errHandler.sync(self)
-            la_ = self._interp.adaptivePredict(self._input,161,self._ctx)
+            la_ = self._interp.adaptivePredict(self._input, 161, self._ctx)
             if la_ == 1:
                 self.state = 1501
                 self.match(SqlBaseParser.WITH)
@@ -10174,7 +10967,6 @@ class SqlBaseParser ( Parser ):
                 self.match(SqlBaseParser.SERDEPROPERTIES)
                 self.state = 1503
                 self.tablePropertyList()
-
 
         except RecognitionException as re:
             localctx.exception = re
@@ -10184,17 +10976,17 @@ class SqlBaseParser ( Parser ):
             self.exitRule()
         return localctx
 
-
     class ResourceContext(ParserRuleContext):
-        __slots__ = 'parser'
+        __slots__ = "parser"
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
         def identifier(self):
-            return self.getTypedRuleContext(SqlBaseParser.IdentifierContext,0)
-
+            return self.getTypedRuleContext(SqlBaseParser.IdentifierContext, 0)
 
         def STRING(self):
             return self.getToken(SqlBaseParser.STRING, 0)
@@ -10202,16 +10994,13 @@ class SqlBaseParser ( Parser ):
         def getRuleIndex(self):
             return SqlBaseParser.RULE_resource
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterResource" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterResource"):
                 listener.enterResource(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitResource" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitResource"):
                 listener.exitResource(self)
-
-
-
 
     def resource(self):
 
@@ -10231,199 +11020,207 @@ class SqlBaseParser ( Parser ):
             self.exitRule()
         return localctx
 
-
     class DmlStatementNoWithContext(ParserRuleContext):
-        __slots__ = 'parser'
+        __slots__ = "parser"
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
-
 
         def getRuleIndex(self):
             return SqlBaseParser.RULE_dmlStatementNoWith
 
-     
-        def copyFrom(self, ctx:ParserRuleContext):
+        def copyFrom(self, ctx: ParserRuleContext):
             super().copyFrom(ctx)
 
-
-
     class DeleteFromTableContext(DmlStatementNoWithContext):
-
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a SqlBaseParser.DmlStatementNoWithContext
+        def __init__(
+            self, parser, ctx: ParserRuleContext
+        ):  # actually a SqlBaseParser.DmlStatementNoWithContext
             super().__init__(parser)
             self.copyFrom(ctx)
 
         def DELETE(self):
             return self.getToken(SqlBaseParser.DELETE, 0)
+
         def FROM(self):
             return self.getToken(SqlBaseParser.FROM, 0)
+
         def multipartIdentifier(self):
-            return self.getTypedRuleContext(SqlBaseParser.MultipartIdentifierContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.MultipartIdentifierContext, 0)
 
         def tableAlias(self):
-            return self.getTypedRuleContext(SqlBaseParser.TableAliasContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.TableAliasContext, 0)
 
         def whereClause(self):
-            return self.getTypedRuleContext(SqlBaseParser.WhereClauseContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.WhereClauseContext, 0)
 
-
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterDeleteFromTable" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterDeleteFromTable"):
                 listener.enterDeleteFromTable(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitDeleteFromTable" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitDeleteFromTable"):
                 listener.exitDeleteFromTable(self)
 
-
     class SingleInsertQueryContext(DmlStatementNoWithContext):
-
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a SqlBaseParser.DmlStatementNoWithContext
+        def __init__(
+            self, parser, ctx: ParserRuleContext
+        ):  # actually a SqlBaseParser.DmlStatementNoWithContext
             super().__init__(parser)
             self.copyFrom(ctx)
 
         def insertInto(self):
-            return self.getTypedRuleContext(SqlBaseParser.InsertIntoContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.InsertIntoContext, 0)
 
         def queryTerm(self):
-            return self.getTypedRuleContext(SqlBaseParser.QueryTermContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.QueryTermContext, 0)
 
         def queryOrganization(self):
-            return self.getTypedRuleContext(SqlBaseParser.QueryOrganizationContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.QueryOrganizationContext, 0)
 
-
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterSingleInsertQuery" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterSingleInsertQuery"):
                 listener.enterSingleInsertQuery(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitSingleInsertQuery" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitSingleInsertQuery"):
                 listener.exitSingleInsertQuery(self)
 
-
     class MultiInsertQueryContext(DmlStatementNoWithContext):
-
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a SqlBaseParser.DmlStatementNoWithContext
+        def __init__(
+            self, parser, ctx: ParserRuleContext
+        ):  # actually a SqlBaseParser.DmlStatementNoWithContext
             super().__init__(parser)
             self.copyFrom(ctx)
 
         def fromClause(self):
-            return self.getTypedRuleContext(SqlBaseParser.FromClauseContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.FromClauseContext, 0)
 
-        def multiInsertQueryBody(self, i:int=None):
+        def multiInsertQueryBody(self, i: int = None):
             if i is None:
-                return self.getTypedRuleContexts(SqlBaseParser.MultiInsertQueryBodyContext)
+                return self.getTypedRuleContexts(
+                    SqlBaseParser.MultiInsertQueryBodyContext
+                )
             else:
-                return self.getTypedRuleContext(SqlBaseParser.MultiInsertQueryBodyContext,i)
+                return self.getTypedRuleContext(
+                    SqlBaseParser.MultiInsertQueryBodyContext, i
+                )
 
-
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterMultiInsertQuery" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterMultiInsertQuery"):
                 listener.enterMultiInsertQuery(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitMultiInsertQuery" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitMultiInsertQuery"):
                 listener.exitMultiInsertQuery(self)
 
-
     class UpdateTableContext(DmlStatementNoWithContext):
-
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a SqlBaseParser.DmlStatementNoWithContext
+        def __init__(
+            self, parser, ctx: ParserRuleContext
+        ):  # actually a SqlBaseParser.DmlStatementNoWithContext
             super().__init__(parser)
             self.copyFrom(ctx)
 
         def UPDATE(self):
             return self.getToken(SqlBaseParser.UPDATE, 0)
+
         def multipartIdentifier(self):
-            return self.getTypedRuleContext(SqlBaseParser.MultipartIdentifierContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.MultipartIdentifierContext, 0)
 
         def tableAlias(self):
-            return self.getTypedRuleContext(SqlBaseParser.TableAliasContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.TableAliasContext, 0)
 
         def setClause(self):
-            return self.getTypedRuleContext(SqlBaseParser.SetClauseContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.SetClauseContext, 0)
 
         def whereClause(self):
-            return self.getTypedRuleContext(SqlBaseParser.WhereClauseContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.WhereClauseContext, 0)
 
-
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterUpdateTable" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterUpdateTable"):
                 listener.enterUpdateTable(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitUpdateTable" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitUpdateTable"):
                 listener.exitUpdateTable(self)
 
-
     class MergeIntoTableContext(DmlStatementNoWithContext):
-
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a SqlBaseParser.DmlStatementNoWithContext
+        def __init__(
+            self, parser, ctx: ParserRuleContext
+        ):  # actually a SqlBaseParser.DmlStatementNoWithContext
             super().__init__(parser)
-            self.target = None # MultipartIdentifierContext
-            self.targetAlias = None # TableAliasContext
-            self.source = None # MultipartIdentifierContext
-            self.sourceQuery = None # QueryContext
-            self.sourceAlias = None # TableAliasContext
-            self.mergeCondition = None # BooleanExpressionContext
+            self.target = None  # MultipartIdentifierContext
+            self.targetAlias = None  # TableAliasContext
+            self.source = None  # MultipartIdentifierContext
+            self.sourceQuery = None  # QueryContext
+            self.sourceAlias = None  # TableAliasContext
+            self.mergeCondition = None  # BooleanExpressionContext
             self.copyFrom(ctx)
 
         def MERGE(self):
             return self.getToken(SqlBaseParser.MERGE, 0)
+
         def INTO(self):
             return self.getToken(SqlBaseParser.INTO, 0)
+
         def USING(self):
             return self.getToken(SqlBaseParser.USING, 0)
+
         def ON(self):
             return self.getToken(SqlBaseParser.ON, 0)
-        def multipartIdentifier(self, i:int=None):
-            if i is None:
-                return self.getTypedRuleContexts(SqlBaseParser.MultipartIdentifierContext)
-            else:
-                return self.getTypedRuleContext(SqlBaseParser.MultipartIdentifierContext,i)
 
-        def tableAlias(self, i:int=None):
+        def multipartIdentifier(self, i: int = None):
+            if i is None:
+                return self.getTypedRuleContexts(
+                    SqlBaseParser.MultipartIdentifierContext
+                )
+            else:
+                return self.getTypedRuleContext(
+                    SqlBaseParser.MultipartIdentifierContext, i
+                )
+
+        def tableAlias(self, i: int = None):
             if i is None:
                 return self.getTypedRuleContexts(SqlBaseParser.TableAliasContext)
             else:
-                return self.getTypedRuleContext(SqlBaseParser.TableAliasContext,i)
+                return self.getTypedRuleContext(SqlBaseParser.TableAliasContext, i)
 
         def booleanExpression(self):
-            return self.getTypedRuleContext(SqlBaseParser.BooleanExpressionContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.BooleanExpressionContext, 0)
 
         def query(self):
-            return self.getTypedRuleContext(SqlBaseParser.QueryContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.QueryContext, 0)
 
-        def matchedClause(self, i:int=None):
+        def matchedClause(self, i: int = None):
             if i is None:
                 return self.getTypedRuleContexts(SqlBaseParser.MatchedClauseContext)
             else:
-                return self.getTypedRuleContext(SqlBaseParser.MatchedClauseContext,i)
+                return self.getTypedRuleContext(SqlBaseParser.MatchedClauseContext, i)
 
-        def notMatchedClause(self, i:int=None):
+        def notMatchedClause(self, i: int = None):
             if i is None:
                 return self.getTypedRuleContexts(SqlBaseParser.NotMatchedClauseContext)
             else:
-                return self.getTypedRuleContext(SqlBaseParser.NotMatchedClauseContext,i)
+                return self.getTypedRuleContext(
+                    SqlBaseParser.NotMatchedClauseContext, i
+                )
 
-
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterMergeIntoTable" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterMergeIntoTable"):
                 listener.enterMergeIntoTable(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitMergeIntoTable" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitMergeIntoTable"):
                 listener.exitMergeIntoTable(self)
-
-
 
     def dmlStatementNoWith(self):
 
         localctx = SqlBaseParser.DmlStatementNoWithContext(self, self._ctx, self.state)
         self.enterRule(localctx, 78, self.RULE_dmlStatementNoWith)
-        self._la = 0 # Token type
+        self._la = 0  # Token type
         try:
             self.state = 1560
             self._errHandler.sync(self)
@@ -10443,16 +11240,16 @@ class SqlBaseParser ( Parser ):
                 self.enterOuterAlt(localctx, 2)
                 self.state = 1513
                 self.fromClause()
-                self.state = 1515 
+                self.state = 1515
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
                 while True:
                     self.state = 1514
                     self.multiInsertQueryBody()
-                    self.state = 1517 
+                    self.state = 1517
                     self._errHandler.sync(self)
                     _la = self._input.LA(1)
-                    if not (_la==SqlBaseParser.INSERT):
+                    if not (_la == SqlBaseParser.INSERT):
                         break
 
                 pass
@@ -10470,10 +11267,9 @@ class SqlBaseParser ( Parser ):
                 self.state = 1524
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==SqlBaseParser.WHERE:
+                if _la == SqlBaseParser.WHERE:
                     self.state = 1523
                     self.whereClause()
-
 
                 pass
             elif token in [SqlBaseParser.UPDATE]:
@@ -10490,10 +11286,9 @@ class SqlBaseParser ( Parser ):
                 self.state = 1531
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==SqlBaseParser.WHERE:
+                if _la == SqlBaseParser.WHERE:
                     self.state = 1530
                     self.whereClause()
-
 
                 pass
             elif token in [SqlBaseParser.MERGE]:
@@ -10511,7 +11306,7 @@ class SqlBaseParser ( Parser ):
                 self.match(SqlBaseParser.USING)
                 self.state = 1543
                 self._errHandler.sync(self)
-                la_ = self._interp.adaptivePredict(self._input,165,self._ctx)
+                la_ = self._interp.adaptivePredict(self._input, 165, self._ctx)
                 if la_ == 1:
                     self.state = 1538
                     localctx.source = self.multipartIdentifier()
@@ -10526,7 +11321,6 @@ class SqlBaseParser ( Parser ):
                     self.match(SqlBaseParser.T__2)
                     pass
 
-
                 self.state = 1545
                 localctx.sourceAlias = self.tableAlias()
                 self.state = 1546
@@ -10535,19 +11329,19 @@ class SqlBaseParser ( Parser ):
                 localctx.mergeCondition = self.booleanExpression(0)
                 self.state = 1551
                 self._errHandler.sync(self)
-                _alt = self._interp.adaptivePredict(self._input,166,self._ctx)
-                while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
-                    if _alt==1:
+                _alt = self._interp.adaptivePredict(self._input, 166, self._ctx)
+                while _alt != 2 and _alt != ATN.INVALID_ALT_NUMBER:
+                    if _alt == 1:
                         self.state = 1548
-                        self.matchedClause() 
+                        self.matchedClause()
                     self.state = 1553
                     self._errHandler.sync(self)
-                    _alt = self._interp.adaptivePredict(self._input,166,self._ctx)
+                    _alt = self._interp.adaptivePredict(self._input, 166, self._ctx)
 
                 self.state = 1557
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                while _la==SqlBaseParser.WHEN:
+                while _la == SqlBaseParser.WHEN:
                     self.state = 1554
                     self.notMatchedClause()
                     self.state = 1559
@@ -10566,25 +11360,26 @@ class SqlBaseParser ( Parser ):
             self.exitRule()
         return localctx
 
-
     class QueryOrganizationContext(ParserRuleContext):
-        __slots__ = 'parser'
+        __slots__ = "parser"
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
-            self._sortItem = None # SortItemContext
-            self.order = list() # of SortItemContexts
-            self._expression = None # ExpressionContext
-            self.clusterBy = list() # of ExpressionContexts
-            self.distributeBy = list() # of ExpressionContexts
-            self.sort = list() # of SortItemContexts
-            self.limit = None # ExpressionContext
+            self._sortItem = None  # SortItemContext
+            self.order = list()  # of SortItemContexts
+            self._expression = None  # ExpressionContext
+            self.clusterBy = list()  # of ExpressionContexts
+            self.distributeBy = list()  # of ExpressionContexts
+            self.sort = list()  # of SortItemContexts
+            self.limit = None  # ExpressionContext
 
         def ORDER(self):
             return self.getToken(SqlBaseParser.ORDER, 0)
 
-        def BY(self, i:int=None):
+        def BY(self, i: int = None):
             if i is None:
                 return self.getTokens(SqlBaseParser.BY)
             else:
@@ -10600,25 +11395,22 @@ class SqlBaseParser ( Parser ):
             return self.getToken(SqlBaseParser.SORT, 0)
 
         def windowClause(self):
-            return self.getTypedRuleContext(SqlBaseParser.WindowClauseContext,0)
-
+            return self.getTypedRuleContext(SqlBaseParser.WindowClauseContext, 0)
 
         def LIMIT(self):
             return self.getToken(SqlBaseParser.LIMIT, 0)
 
-        def sortItem(self, i:int=None):
+        def sortItem(self, i: int = None):
             if i is None:
                 return self.getTypedRuleContexts(SqlBaseParser.SortItemContext)
             else:
-                return self.getTypedRuleContext(SqlBaseParser.SortItemContext,i)
+                return self.getTypedRuleContext(SqlBaseParser.SortItemContext, i)
 
-
-        def expression(self, i:int=None):
+        def expression(self, i: int = None):
             if i is None:
                 return self.getTypedRuleContexts(SqlBaseParser.ExpressionContext)
             else:
-                return self.getTypedRuleContext(SqlBaseParser.ExpressionContext,i)
-
+                return self.getTypedRuleContext(SqlBaseParser.ExpressionContext, i)
 
         def ALL(self):
             return self.getToken(SqlBaseParser.ALL, 0)
@@ -10626,16 +11418,13 @@ class SqlBaseParser ( Parser ):
         def getRuleIndex(self):
             return SqlBaseParser.RULE_queryOrganization
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterQueryOrganization" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterQueryOrganization"):
                 listener.enterQueryOrganization(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitQueryOrganization" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitQueryOrganization"):
                 listener.exitQueryOrganization(self)
-
-
-
 
     def queryOrganization(self):
 
@@ -10645,7 +11434,7 @@ class SqlBaseParser ( Parser ):
             self.enterOuterAlt(localctx, 1)
             self.state = 1572
             self._errHandler.sync(self)
-            la_ = self._interp.adaptivePredict(self._input,170,self._ctx)
+            la_ = self._interp.adaptivePredict(self._input, 170, self._ctx)
             if la_ == 1:
                 self.state = 1562
                 self.match(SqlBaseParser.ORDER)
@@ -10656,23 +11445,21 @@ class SqlBaseParser ( Parser ):
                 localctx.order.append(localctx._sortItem)
                 self.state = 1569
                 self._errHandler.sync(self)
-                _alt = self._interp.adaptivePredict(self._input,169,self._ctx)
-                while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
-                    if _alt==1:
+                _alt = self._interp.adaptivePredict(self._input, 169, self._ctx)
+                while _alt != 2 and _alt != ATN.INVALID_ALT_NUMBER:
+                    if _alt == 1:
                         self.state = 1565
                         self.match(SqlBaseParser.T__3)
                         self.state = 1566
                         localctx._sortItem = self.sortItem()
-                        localctx.order.append(localctx._sortItem) 
+                        localctx.order.append(localctx._sortItem)
                     self.state = 1571
                     self._errHandler.sync(self)
-                    _alt = self._interp.adaptivePredict(self._input,169,self._ctx)
-
-
+                    _alt = self._interp.adaptivePredict(self._input, 169, self._ctx)
 
             self.state = 1584
             self._errHandler.sync(self)
-            la_ = self._interp.adaptivePredict(self._input,172,self._ctx)
+            la_ = self._interp.adaptivePredict(self._input, 172, self._ctx)
             if la_ == 1:
                 self.state = 1574
                 self.match(SqlBaseParser.CLUSTER)
@@ -10683,23 +11470,21 @@ class SqlBaseParser ( Parser ):
                 localctx.clusterBy.append(localctx._expression)
                 self.state = 1581
                 self._errHandler.sync(self)
-                _alt = self._interp.adaptivePredict(self._input,171,self._ctx)
-                while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
-                    if _alt==1:
+                _alt = self._interp.adaptivePredict(self._input, 171, self._ctx)
+                while _alt != 2 and _alt != ATN.INVALID_ALT_NUMBER:
+                    if _alt == 1:
                         self.state = 1577
                         self.match(SqlBaseParser.T__3)
                         self.state = 1578
                         localctx._expression = self.expression()
-                        localctx.clusterBy.append(localctx._expression) 
+                        localctx.clusterBy.append(localctx._expression)
                     self.state = 1583
                     self._errHandler.sync(self)
-                    _alt = self._interp.adaptivePredict(self._input,171,self._ctx)
-
-
+                    _alt = self._interp.adaptivePredict(self._input, 171, self._ctx)
 
             self.state = 1596
             self._errHandler.sync(self)
-            la_ = self._interp.adaptivePredict(self._input,174,self._ctx)
+            la_ = self._interp.adaptivePredict(self._input, 174, self._ctx)
             if la_ == 1:
                 self.state = 1586
                 self.match(SqlBaseParser.DISTRIBUTE)
@@ -10710,23 +11495,21 @@ class SqlBaseParser ( Parser ):
                 localctx.distributeBy.append(localctx._expression)
                 self.state = 1593
                 self._errHandler.sync(self)
-                _alt = self._interp.adaptivePredict(self._input,173,self._ctx)
-                while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
-                    if _alt==1:
+                _alt = self._interp.adaptivePredict(self._input, 173, self._ctx)
+                while _alt != 2 and _alt != ATN.INVALID_ALT_NUMBER:
+                    if _alt == 1:
                         self.state = 1589
                         self.match(SqlBaseParser.T__3)
                         self.state = 1590
                         localctx._expression = self.expression()
-                        localctx.distributeBy.append(localctx._expression) 
+                        localctx.distributeBy.append(localctx._expression)
                     self.state = 1595
                     self._errHandler.sync(self)
-                    _alt = self._interp.adaptivePredict(self._input,173,self._ctx)
-
-
+                    _alt = self._interp.adaptivePredict(self._input, 173, self._ctx)
 
             self.state = 1608
             self._errHandler.sync(self)
-            la_ = self._interp.adaptivePredict(self._input,176,self._ctx)
+            la_ = self._interp.adaptivePredict(self._input, 176, self._ctx)
             if la_ == 1:
                 self.state = 1598
                 self.match(SqlBaseParser.SORT)
@@ -10737,37 +11520,34 @@ class SqlBaseParser ( Parser ):
                 localctx.sort.append(localctx._sortItem)
                 self.state = 1605
                 self._errHandler.sync(self)
-                _alt = self._interp.adaptivePredict(self._input,175,self._ctx)
-                while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
-                    if _alt==1:
+                _alt = self._interp.adaptivePredict(self._input, 175, self._ctx)
+                while _alt != 2 and _alt != ATN.INVALID_ALT_NUMBER:
+                    if _alt == 1:
                         self.state = 1601
                         self.match(SqlBaseParser.T__3)
                         self.state = 1602
                         localctx._sortItem = self.sortItem()
-                        localctx.sort.append(localctx._sortItem) 
+                        localctx.sort.append(localctx._sortItem)
                     self.state = 1607
                     self._errHandler.sync(self)
-                    _alt = self._interp.adaptivePredict(self._input,175,self._ctx)
-
-
+                    _alt = self._interp.adaptivePredict(self._input, 175, self._ctx)
 
             self.state = 1611
             self._errHandler.sync(self)
-            la_ = self._interp.adaptivePredict(self._input,177,self._ctx)
+            la_ = self._interp.adaptivePredict(self._input, 177, self._ctx)
             if la_ == 1:
                 self.state = 1610
                 self.windowClause()
 
-
             self.state = 1618
             self._errHandler.sync(self)
-            la_ = self._interp.adaptivePredict(self._input,179,self._ctx)
+            la_ = self._interp.adaptivePredict(self._input, 179, self._ctx)
             if la_ == 1:
                 self.state = 1613
                 self.match(SqlBaseParser.LIMIT)
                 self.state = 1616
                 self._errHandler.sync(self)
-                la_ = self._interp.adaptivePredict(self._input,178,self._ctx)
+                la_ = self._interp.adaptivePredict(self._input, 178, self._ctx)
                 if la_ == 1:
                     self.state = 1614
                     self.match(SqlBaseParser.ALL)
@@ -10778,9 +11558,6 @@ class SqlBaseParser ( Parser ):
                     localctx.limit = self.expression()
                     pass
 
-
-
-
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)
@@ -10789,39 +11566,37 @@ class SqlBaseParser ( Parser ):
             self.exitRule()
         return localctx
 
-
     class MultiInsertQueryBodyContext(ParserRuleContext):
-        __slots__ = 'parser'
+        __slots__ = "parser"
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
         def insertInto(self):
-            return self.getTypedRuleContext(SqlBaseParser.InsertIntoContext,0)
-
+            return self.getTypedRuleContext(SqlBaseParser.InsertIntoContext, 0)
 
         def fromStatementBody(self):
-            return self.getTypedRuleContext(SqlBaseParser.FromStatementBodyContext,0)
-
+            return self.getTypedRuleContext(SqlBaseParser.FromStatementBodyContext, 0)
 
         def getRuleIndex(self):
             return SqlBaseParser.RULE_multiInsertQueryBody
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterMultiInsertQueryBody" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterMultiInsertQueryBody"):
                 listener.enterMultiInsertQueryBody(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitMultiInsertQueryBody" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitMultiInsertQueryBody"):
                 listener.exitMultiInsertQueryBody(self)
-
-
-
 
     def multiInsertQueryBody(self):
 
-        localctx = SqlBaseParser.MultiInsertQueryBodyContext(self, self._ctx, self.state)
+        localctx = SqlBaseParser.MultiInsertQueryBodyContext(
+            self, self._ctx, self.state
+        )
         self.enterRule(localctx, 82, self.RULE_multiInsertQueryBody)
         try:
             self.enterOuterAlt(localctx, 1)
@@ -10837,87 +11612,86 @@ class SqlBaseParser ( Parser ):
             self.exitRule()
         return localctx
 
-
     class QueryTermContext(ParserRuleContext):
-        __slots__ = 'parser'
+        __slots__ = "parser"
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
-
 
         def getRuleIndex(self):
             return SqlBaseParser.RULE_queryTerm
 
-     
-        def copyFrom(self, ctx:ParserRuleContext):
+        def copyFrom(self, ctx: ParserRuleContext):
             super().copyFrom(ctx)
 
-
     class QueryTermDefaultContext(QueryTermContext):
-
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a SqlBaseParser.QueryTermContext
+        def __init__(
+            self, parser, ctx: ParserRuleContext
+        ):  # actually a SqlBaseParser.QueryTermContext
             super().__init__(parser)
             self.copyFrom(ctx)
 
         def queryPrimary(self):
-            return self.getTypedRuleContext(SqlBaseParser.QueryPrimaryContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.QueryPrimaryContext, 0)
 
-
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterQueryTermDefault" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterQueryTermDefault"):
                 listener.enterQueryTermDefault(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitQueryTermDefault" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitQueryTermDefault"):
                 listener.exitQueryTermDefault(self)
 
-
     class SetOperationContext(QueryTermContext):
-
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a SqlBaseParser.QueryTermContext
+        def __init__(
+            self, parser, ctx: ParserRuleContext
+        ):  # actually a SqlBaseParser.QueryTermContext
             super().__init__(parser)
-            self.left = None # QueryTermContext
-            self.operator = None # Token
-            self.right = None # QueryTermContext
+            self.left = None  # QueryTermContext
+            self.operator = None  # Token
+            self.right = None  # QueryTermContext
             self.copyFrom(ctx)
 
-        def queryTerm(self, i:int=None):
+        def queryTerm(self, i: int = None):
             if i is None:
                 return self.getTypedRuleContexts(SqlBaseParser.QueryTermContext)
             else:
-                return self.getTypedRuleContext(SqlBaseParser.QueryTermContext,i)
+                return self.getTypedRuleContext(SqlBaseParser.QueryTermContext, i)
 
         def INTERSECT(self):
             return self.getToken(SqlBaseParser.INTERSECT, 0)
+
         def UNION(self):
             return self.getToken(SqlBaseParser.UNION, 0)
+
         def EXCEPT(self):
             return self.getToken(SqlBaseParser.EXCEPT, 0)
+
         def SETMINUS(self):
             return self.getToken(SqlBaseParser.SETMINUS, 0)
+
         def setQuantifier(self):
-            return self.getTypedRuleContext(SqlBaseParser.SetQuantifierContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.SetQuantifierContext, 0)
 
-
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterSetOperation" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterSetOperation"):
                 listener.enterSetOperation(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitSetOperation" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitSetOperation"):
                 listener.exitSetOperation(self)
 
-
-
-    def queryTerm(self, _p:int=0):
+    def queryTerm(self, _p: int = 0):
         _parentctx = self._ctx
         _parentState = self.state
         localctx = SqlBaseParser.QueryTermContext(self, self._ctx, _parentState)
         _prevctx = localctx
         _startState = 84
         self.enterRecursionRule(localctx, 84, self.RULE_queryTerm, _p)
-        self._la = 0 # Token type
+        self._la = 0  # Token type
         try:
             self.enterOuterAlt(localctx, 1)
             localctx = SqlBaseParser.QueryTermDefaultContext(self, localctx)
@@ -10929,31 +11703,49 @@ class SqlBaseParser ( Parser ):
             self._ctx.stop = self._input.LT(-1)
             self.state = 1649
             self._errHandler.sync(self)
-            _alt = self._interp.adaptivePredict(self._input,184,self._ctx)
-            while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
-                if _alt==1:
+            _alt = self._interp.adaptivePredict(self._input, 184, self._ctx)
+            while _alt != 2 and _alt != ATN.INVALID_ALT_NUMBER:
+                if _alt == 1:
                     if self._parseListeners is not None:
                         self.triggerExitRuleEvent()
                     _prevctx = localctx
                     self.state = 1647
                     self._errHandler.sync(self)
-                    la_ = self._interp.adaptivePredict(self._input,183,self._ctx)
+                    la_ = self._interp.adaptivePredict(self._input, 183, self._ctx)
                     if la_ == 1:
-                        localctx = SqlBaseParser.SetOperationContext(self, SqlBaseParser.QueryTermContext(self, _parentctx, _parentState))
+                        localctx = SqlBaseParser.SetOperationContext(
+                            self,
+                            SqlBaseParser.QueryTermContext(
+                                self, _parentctx, _parentState
+                            ),
+                        )
                         localctx.left = _prevctx
-                        self.pushNewRecursionContext(localctx, _startState, self.RULE_queryTerm)
+                        self.pushNewRecursionContext(
+                            localctx, _startState, self.RULE_queryTerm
+                        )
                         self.state = 1626
                         if not self.precpred(self._ctx, 3):
                             from antlr4.error.Errors import FailedPredicateException
-                            raise FailedPredicateException(self, "self.precpred(self._ctx, 3)")
+
+                            raise FailedPredicateException(
+                                self, "self.precpred(self._ctx, 3)"
+                            )
                         self.state = 1627
-                        if not legacy_setops_precedence_enabled:
+                        if not self.legacy_setops_precedence_enabled:
                             from antlr4.error.Errors import FailedPredicateException
-                            raise FailedPredicateException(self, "legacy_setops_precedence_enabled")
+
+                            raise FailedPredicateException(
+                                self, "self.legacy_setops_precedence_enabled"
+                            )
                         self.state = 1628
                         localctx.operator = self._input.LT(1)
                         _la = self._input.LA(1)
-                        if not(_la==SqlBaseParser.EXCEPT or _la==SqlBaseParser.INTERSECT or _la==SqlBaseParser.SETMINUS or _la==SqlBaseParser.UNION):
+                        if not (
+                            _la == SqlBaseParser.EXCEPT
+                            or _la == SqlBaseParser.INTERSECT
+                            or _la == SqlBaseParser.SETMINUS
+                            or _la == SqlBaseParser.UNION
+                        ):
                             localctx.operator = self._errHandler.recoverInline(self)
                         else:
                             self._errHandler.reportMatch(self)
@@ -10961,57 +11753,85 @@ class SqlBaseParser ( Parser ):
                         self.state = 1630
                         self._errHandler.sync(self)
                         _la = self._input.LA(1)
-                        if _la==SqlBaseParser.ALL or _la==SqlBaseParser.DISTINCT:
+                        if _la == SqlBaseParser.ALL or _la == SqlBaseParser.DISTINCT:
                             self.state = 1629
                             self.setQuantifier()
-
 
                         self.state = 1632
                         localctx.right = self.queryTerm(4)
                         pass
 
                     elif la_ == 2:
-                        localctx = SqlBaseParser.SetOperationContext(self, SqlBaseParser.QueryTermContext(self, _parentctx, _parentState))
+                        localctx = SqlBaseParser.SetOperationContext(
+                            self,
+                            SqlBaseParser.QueryTermContext(
+                                self, _parentctx, _parentState
+                            ),
+                        )
                         localctx.left = _prevctx
-                        self.pushNewRecursionContext(localctx, _startState, self.RULE_queryTerm)
+                        self.pushNewRecursionContext(
+                            localctx, _startState, self.RULE_queryTerm
+                        )
                         self.state = 1633
                         if not self.precpred(self._ctx, 2):
                             from antlr4.error.Errors import FailedPredicateException
-                            raise FailedPredicateException(self, "self.precpred(self._ctx, 2)")
+
+                            raise FailedPredicateException(
+                                self, "self.precpred(self._ctx, 2)"
+                            )
                         self.state = 1634
-                        if not !legacy_setops_precedence_enabled:
+                        if not not self.legacy_setops_precedence_enabled:
                             from antlr4.error.Errors import FailedPredicateException
-                            raise FailedPredicateException(self, "!legacy_setops_precedence_enabled")
+
+                            raise FailedPredicateException(
+                                self, "not self.legacy_setops_precedence_enabled"
+                            )
                         self.state = 1635
                         localctx.operator = self.match(SqlBaseParser.INTERSECT)
                         self.state = 1637
                         self._errHandler.sync(self)
                         _la = self._input.LA(1)
-                        if _la==SqlBaseParser.ALL or _la==SqlBaseParser.DISTINCT:
+                        if _la == SqlBaseParser.ALL or _la == SqlBaseParser.DISTINCT:
                             self.state = 1636
                             self.setQuantifier()
-
 
                         self.state = 1639
                         localctx.right = self.queryTerm(3)
                         pass
 
                     elif la_ == 3:
-                        localctx = SqlBaseParser.SetOperationContext(self, SqlBaseParser.QueryTermContext(self, _parentctx, _parentState))
+                        localctx = SqlBaseParser.SetOperationContext(
+                            self,
+                            SqlBaseParser.QueryTermContext(
+                                self, _parentctx, _parentState
+                            ),
+                        )
                         localctx.left = _prevctx
-                        self.pushNewRecursionContext(localctx, _startState, self.RULE_queryTerm)
+                        self.pushNewRecursionContext(
+                            localctx, _startState, self.RULE_queryTerm
+                        )
                         self.state = 1640
                         if not self.precpred(self._ctx, 1):
                             from antlr4.error.Errors import FailedPredicateException
-                            raise FailedPredicateException(self, "self.precpred(self._ctx, 1)")
+
+                            raise FailedPredicateException(
+                                self, "self.precpred(self._ctx, 1)"
+                            )
                         self.state = 1641
-                        if not !legacy_setops_precedence_enabled:
+                        if not not self.legacy_setops_precedence_enabled:
                             from antlr4.error.Errors import FailedPredicateException
-                            raise FailedPredicateException(self, "!legacy_setops_precedence_enabled")
+
+                            raise FailedPredicateException(
+                                self, "not self.legacy_setops_precedence_enabled"
+                            )
                         self.state = 1642
                         localctx.operator = self._input.LT(1)
                         _la = self._input.LA(1)
-                        if not(_la==SqlBaseParser.EXCEPT or _la==SqlBaseParser.SETMINUS or _la==SqlBaseParser.UNION):
+                        if not (
+                            _la == SqlBaseParser.EXCEPT
+                            or _la == SqlBaseParser.SETMINUS
+                            or _la == SqlBaseParser.UNION
+                        ):
                             localctx.operator = self._errHandler.recoverInline(self)
                         else:
                             self._errHandler.reportMatch(self)
@@ -11019,19 +11839,17 @@ class SqlBaseParser ( Parser ):
                         self.state = 1644
                         self._errHandler.sync(self)
                         _la = self._input.LA(1)
-                        if _la==SqlBaseParser.ALL or _la==SqlBaseParser.DISTINCT:
+                        if _la == SqlBaseParser.ALL or _la == SqlBaseParser.DISTINCT:
                             self.state = 1643
                             self.setQuantifier()
-
 
                         self.state = 1646
                         localctx.right = self.queryTerm(2)
                         pass
 
-             
                 self.state = 1651
                 self._errHandler.sync(self)
-                _alt = self._interp.adaptivePredict(self._input,184,self._ctx)
+                _alt = self._interp.adaptivePredict(self._input, 184, self._ctx)
 
         except RecognitionException as re:
             localctx.exception = re
@@ -11041,121 +11859,113 @@ class SqlBaseParser ( Parser ):
             self.unrollRecursionContexts(_parentctx)
         return localctx
 
-
     class QueryPrimaryContext(ParserRuleContext):
-        __slots__ = 'parser'
+        __slots__ = "parser"
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
-
 
         def getRuleIndex(self):
             return SqlBaseParser.RULE_queryPrimary
 
-     
-        def copyFrom(self, ctx:ParserRuleContext):
+        def copyFrom(self, ctx: ParserRuleContext):
             super().copyFrom(ctx)
 
-
-
     class SubqueryContext(QueryPrimaryContext):
-
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a SqlBaseParser.QueryPrimaryContext
+        def __init__(
+            self, parser, ctx: ParserRuleContext
+        ):  # actually a SqlBaseParser.QueryPrimaryContext
             super().__init__(parser)
             self.copyFrom(ctx)
 
         def query(self):
-            return self.getTypedRuleContext(SqlBaseParser.QueryContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.QueryContext, 0)
 
-
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterSubquery" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterSubquery"):
                 listener.enterSubquery(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitSubquery" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitSubquery"):
                 listener.exitSubquery(self)
 
-
     class QueryPrimaryDefaultContext(QueryPrimaryContext):
-
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a SqlBaseParser.QueryPrimaryContext
+        def __init__(
+            self, parser, ctx: ParserRuleContext
+        ):  # actually a SqlBaseParser.QueryPrimaryContext
             super().__init__(parser)
             self.copyFrom(ctx)
 
         def querySpecification(self):
-            return self.getTypedRuleContext(SqlBaseParser.QuerySpecificationContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.QuerySpecificationContext, 0)
 
-
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterQueryPrimaryDefault" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterQueryPrimaryDefault"):
                 listener.enterQueryPrimaryDefault(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitQueryPrimaryDefault" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitQueryPrimaryDefault"):
                 listener.exitQueryPrimaryDefault(self)
 
-
     class InlineTableDefault1Context(QueryPrimaryContext):
-
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a SqlBaseParser.QueryPrimaryContext
+        def __init__(
+            self, parser, ctx: ParserRuleContext
+        ):  # actually a SqlBaseParser.QueryPrimaryContext
             super().__init__(parser)
             self.copyFrom(ctx)
 
         def inlineTable(self):
-            return self.getTypedRuleContext(SqlBaseParser.InlineTableContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.InlineTableContext, 0)
 
-
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterInlineTableDefault1" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterInlineTableDefault1"):
                 listener.enterInlineTableDefault1(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitInlineTableDefault1" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitInlineTableDefault1"):
                 listener.exitInlineTableDefault1(self)
 
-
     class FromStmtContext(QueryPrimaryContext):
-
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a SqlBaseParser.QueryPrimaryContext
+        def __init__(
+            self, parser, ctx: ParserRuleContext
+        ):  # actually a SqlBaseParser.QueryPrimaryContext
             super().__init__(parser)
             self.copyFrom(ctx)
 
         def fromStatement(self):
-            return self.getTypedRuleContext(SqlBaseParser.FromStatementContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.FromStatementContext, 0)
 
-
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterFromStmt" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterFromStmt"):
                 listener.enterFromStmt(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitFromStmt" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitFromStmt"):
                 listener.exitFromStmt(self)
 
-
     class TableContext(QueryPrimaryContext):
-
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a SqlBaseParser.QueryPrimaryContext
+        def __init__(
+            self, parser, ctx: ParserRuleContext
+        ):  # actually a SqlBaseParser.QueryPrimaryContext
             super().__init__(parser)
             self.copyFrom(ctx)
 
         def TABLE(self):
             return self.getToken(SqlBaseParser.TABLE, 0)
+
         def multipartIdentifier(self):
-            return self.getTypedRuleContext(SqlBaseParser.MultipartIdentifierContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.MultipartIdentifierContext, 0)
 
-
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterTable" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterTable"):
                 listener.enterTable(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitTable" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitTable"):
                 listener.exitTable(self)
-
-
 
     def queryPrimary(self):
 
@@ -11212,19 +12022,19 @@ class SqlBaseParser ( Parser ):
             self.exitRule()
         return localctx
 
-
     class SortItemContext(ParserRuleContext):
-        __slots__ = 'parser'
+        __slots__ = "parser"
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
-            self.ordering = None # Token
-            self.nullOrder = None # Token
+            self.ordering = None  # Token
+            self.nullOrder = None  # Token
 
         def expression(self):
-            return self.getTypedRuleContext(SqlBaseParser.ExpressionContext,0)
-
+            return self.getTypedRuleContext(SqlBaseParser.ExpressionContext, 0)
 
         def NULLS(self):
             return self.getToken(SqlBaseParser.NULLS, 0)
@@ -11244,55 +12054,50 @@ class SqlBaseParser ( Parser ):
         def getRuleIndex(self):
             return SqlBaseParser.RULE_sortItem
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterSortItem" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterSortItem"):
                 listener.enterSortItem(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitSortItem" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitSortItem"):
                 listener.exitSortItem(self)
-
-
-
 
     def sortItem(self):
 
         localctx = SqlBaseParser.SortItemContext(self, self._ctx, self.state)
         self.enterRule(localctx, 88, self.RULE_sortItem)
-        self._la = 0 # Token type
+        self._la = 0  # Token type
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 1663
             self.expression()
             self.state = 1665
             self._errHandler.sync(self)
-            la_ = self._interp.adaptivePredict(self._input,186,self._ctx)
+            la_ = self._interp.adaptivePredict(self._input, 186, self._ctx)
             if la_ == 1:
                 self.state = 1664
                 localctx.ordering = self._input.LT(1)
                 _la = self._input.LA(1)
-                if not(_la==SqlBaseParser.ASC or _la==SqlBaseParser.DESC):
+                if not (_la == SqlBaseParser.ASC or _la == SqlBaseParser.DESC):
                     localctx.ordering = self._errHandler.recoverInline(self)
                 else:
                     self._errHandler.reportMatch(self)
                     self.consume()
 
-
             self.state = 1669
             self._errHandler.sync(self)
-            la_ = self._interp.adaptivePredict(self._input,187,self._ctx)
+            la_ = self._interp.adaptivePredict(self._input, 187, self._ctx)
             if la_ == 1:
                 self.state = 1667
                 self.match(SqlBaseParser.NULLS)
                 self.state = 1668
                 localctx.nullOrder = self._input.LT(1)
                 _la = self._input.LA(1)
-                if not(_la==SqlBaseParser.FIRST or _la==SqlBaseParser.LAST):
+                if not (_la == SqlBaseParser.FIRST or _la == SqlBaseParser.LAST):
                     localctx.nullOrder = self._errHandler.recoverInline(self)
                 else:
                     self._errHandler.reportMatch(self)
                     self.consume()
-
 
         except RecognitionException as re:
             localctx.exception = re
@@ -11302,38 +12107,36 @@ class SqlBaseParser ( Parser ):
             self.exitRule()
         return localctx
 
-
     class FromStatementContext(ParserRuleContext):
-        __slots__ = 'parser'
+        __slots__ = "parser"
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
         def fromClause(self):
-            return self.getTypedRuleContext(SqlBaseParser.FromClauseContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.FromClauseContext, 0)
 
-
-        def fromStatementBody(self, i:int=None):
+        def fromStatementBody(self, i: int = None):
             if i is None:
                 return self.getTypedRuleContexts(SqlBaseParser.FromStatementBodyContext)
             else:
-                return self.getTypedRuleContext(SqlBaseParser.FromStatementBodyContext,i)
-
+                return self.getTypedRuleContext(
+                    SqlBaseParser.FromStatementBodyContext, i
+                )
 
         def getRuleIndex(self):
             return SqlBaseParser.RULE_fromStatement
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterFromStatement" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterFromStatement"):
                 listener.enterFromStatement(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitFromStatement" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitFromStatement"):
                 listener.exitFromStatement(self)
-
-
-
 
     def fromStatement(self):
 
@@ -11343,19 +12146,19 @@ class SqlBaseParser ( Parser ):
             self.enterOuterAlt(localctx, 1)
             self.state = 1671
             self.fromClause()
-            self.state = 1673 
+            self.state = 1673
             self._errHandler.sync(self)
             _alt = 1
-            while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
+            while _alt != 2 and _alt != ATN.INVALID_ALT_NUMBER:
                 if _alt == 1:
                     self.state = 1672
                     self.fromStatementBody()
 
                 else:
                     raise NoViableAltException(self)
-                self.state = 1675 
+                self.state = 1675
                 self._errHandler.sync(self)
-                _alt = self._interp.adaptivePredict(self._input,188,self._ctx)
+                _alt = self._interp.adaptivePredict(self._input, 188, self._ctx)
 
         except RecognitionException as re:
             localctx.exception = re
@@ -11365,62 +12168,52 @@ class SqlBaseParser ( Parser ):
             self.exitRule()
         return localctx
 
-
     class FromStatementBodyContext(ParserRuleContext):
-        __slots__ = 'parser'
+        __slots__ = "parser"
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
         def transformClause(self):
-            return self.getTypedRuleContext(SqlBaseParser.TransformClauseContext,0)
-
+            return self.getTypedRuleContext(SqlBaseParser.TransformClauseContext, 0)
 
         def queryOrganization(self):
-            return self.getTypedRuleContext(SqlBaseParser.QueryOrganizationContext,0)
-
+            return self.getTypedRuleContext(SqlBaseParser.QueryOrganizationContext, 0)
 
         def whereClause(self):
-            return self.getTypedRuleContext(SqlBaseParser.WhereClauseContext,0)
-
+            return self.getTypedRuleContext(SqlBaseParser.WhereClauseContext, 0)
 
         def selectClause(self):
-            return self.getTypedRuleContext(SqlBaseParser.SelectClauseContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.SelectClauseContext, 0)
 
-
-        def lateralView(self, i:int=None):
+        def lateralView(self, i: int = None):
             if i is None:
                 return self.getTypedRuleContexts(SqlBaseParser.LateralViewContext)
             else:
-                return self.getTypedRuleContext(SqlBaseParser.LateralViewContext,i)
-
+                return self.getTypedRuleContext(SqlBaseParser.LateralViewContext, i)
 
         def aggregationClause(self):
-            return self.getTypedRuleContext(SqlBaseParser.AggregationClauseContext,0)
-
+            return self.getTypedRuleContext(SqlBaseParser.AggregationClauseContext, 0)
 
         def havingClause(self):
-            return self.getTypedRuleContext(SqlBaseParser.HavingClauseContext,0)
-
+            return self.getTypedRuleContext(SqlBaseParser.HavingClauseContext, 0)
 
         def windowClause(self):
-            return self.getTypedRuleContext(SqlBaseParser.WindowClauseContext,0)
-
+            return self.getTypedRuleContext(SqlBaseParser.WindowClauseContext, 0)
 
         def getRuleIndex(self):
             return SqlBaseParser.RULE_fromStatementBody
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterFromStatementBody" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterFromStatementBody"):
                 listener.enterFromStatementBody(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitFromStatementBody" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitFromStatementBody"):
                 listener.exitFromStatementBody(self)
-
-
-
 
     def fromStatementBody(self):
 
@@ -11429,18 +12222,17 @@ class SqlBaseParser ( Parser ):
         try:
             self.state = 1704
             self._errHandler.sync(self)
-            la_ = self._interp.adaptivePredict(self._input,195,self._ctx)
+            la_ = self._interp.adaptivePredict(self._input, 195, self._ctx)
             if la_ == 1:
                 self.enterOuterAlt(localctx, 1)
                 self.state = 1677
                 self.transformClause()
                 self.state = 1679
                 self._errHandler.sync(self)
-                la_ = self._interp.adaptivePredict(self._input,189,self._ctx)
+                la_ = self._interp.adaptivePredict(self._input, 189, self._ctx)
                 if la_ == 1:
                     self.state = 1678
                     self.whereClause()
-
 
                 self.state = 1681
                 self.queryOrganization()
@@ -11452,51 +12244,46 @@ class SqlBaseParser ( Parser ):
                 self.selectClause()
                 self.state = 1687
                 self._errHandler.sync(self)
-                _alt = self._interp.adaptivePredict(self._input,190,self._ctx)
-                while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
-                    if _alt==1:
+                _alt = self._interp.adaptivePredict(self._input, 190, self._ctx)
+                while _alt != 2 and _alt != ATN.INVALID_ALT_NUMBER:
+                    if _alt == 1:
                         self.state = 1684
-                        self.lateralView() 
+                        self.lateralView()
                     self.state = 1689
                     self._errHandler.sync(self)
-                    _alt = self._interp.adaptivePredict(self._input,190,self._ctx)
+                    _alt = self._interp.adaptivePredict(self._input, 190, self._ctx)
 
                 self.state = 1691
                 self._errHandler.sync(self)
-                la_ = self._interp.adaptivePredict(self._input,191,self._ctx)
+                la_ = self._interp.adaptivePredict(self._input, 191, self._ctx)
                 if la_ == 1:
                     self.state = 1690
                     self.whereClause()
 
-
                 self.state = 1694
                 self._errHandler.sync(self)
-                la_ = self._interp.adaptivePredict(self._input,192,self._ctx)
+                la_ = self._interp.adaptivePredict(self._input, 192, self._ctx)
                 if la_ == 1:
                     self.state = 1693
                     self.aggregationClause()
 
-
                 self.state = 1697
                 self._errHandler.sync(self)
-                la_ = self._interp.adaptivePredict(self._input,193,self._ctx)
+                la_ = self._interp.adaptivePredict(self._input, 193, self._ctx)
                 if la_ == 1:
                     self.state = 1696
                     self.havingClause()
 
-
                 self.state = 1700
                 self._errHandler.sync(self)
-                la_ = self._interp.adaptivePredict(self._input,194,self._ctx)
+                la_ = self._interp.adaptivePredict(self._input, 194, self._ctx)
                 if la_ == 1:
                     self.state = 1699
                     self.windowClause()
 
-
                 self.state = 1702
                 self.queryOrganization()
                 pass
-
 
         except RecognitionException as re:
             localctx.exception = re
@@ -11506,104 +12293,98 @@ class SqlBaseParser ( Parser ):
             self.exitRule()
         return localctx
 
-
     class QuerySpecificationContext(ParserRuleContext):
-        __slots__ = 'parser'
+        __slots__ = "parser"
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
-
 
         def getRuleIndex(self):
             return SqlBaseParser.RULE_querySpecification
 
-     
-        def copyFrom(self, ctx:ParserRuleContext):
+        def copyFrom(self, ctx: ParserRuleContext):
             super().copyFrom(ctx)
 
-
-
     class RegularQuerySpecificationContext(QuerySpecificationContext):
-
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a SqlBaseParser.QuerySpecificationContext
+        def __init__(
+            self, parser, ctx: ParserRuleContext
+        ):  # actually a SqlBaseParser.QuerySpecificationContext
             super().__init__(parser)
             self.copyFrom(ctx)
 
         def selectClause(self):
-            return self.getTypedRuleContext(SqlBaseParser.SelectClauseContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.SelectClauseContext, 0)
 
         def fromClause(self):
-            return self.getTypedRuleContext(SqlBaseParser.FromClauseContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.FromClauseContext, 0)
 
-        def lateralView(self, i:int=None):
+        def lateralView(self, i: int = None):
             if i is None:
                 return self.getTypedRuleContexts(SqlBaseParser.LateralViewContext)
             else:
-                return self.getTypedRuleContext(SqlBaseParser.LateralViewContext,i)
+                return self.getTypedRuleContext(SqlBaseParser.LateralViewContext, i)
 
         def whereClause(self):
-            return self.getTypedRuleContext(SqlBaseParser.WhereClauseContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.WhereClauseContext, 0)
 
         def aggregationClause(self):
-            return self.getTypedRuleContext(SqlBaseParser.AggregationClauseContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.AggregationClauseContext, 0)
 
         def havingClause(self):
-            return self.getTypedRuleContext(SqlBaseParser.HavingClauseContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.HavingClauseContext, 0)
 
         def windowClause(self):
-            return self.getTypedRuleContext(SqlBaseParser.WindowClauseContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.WindowClauseContext, 0)
 
-
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterRegularQuerySpecification" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterRegularQuerySpecification"):
                 listener.enterRegularQuerySpecification(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitRegularQuerySpecification" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitRegularQuerySpecification"):
                 listener.exitRegularQuerySpecification(self)
 
-
     class TransformQuerySpecificationContext(QuerySpecificationContext):
-
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a SqlBaseParser.QuerySpecificationContext
+        def __init__(
+            self, parser, ctx: ParserRuleContext
+        ):  # actually a SqlBaseParser.QuerySpecificationContext
             super().__init__(parser)
             self.copyFrom(ctx)
 
         def transformClause(self):
-            return self.getTypedRuleContext(SqlBaseParser.TransformClauseContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.TransformClauseContext, 0)
 
         def fromClause(self):
-            return self.getTypedRuleContext(SqlBaseParser.FromClauseContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.FromClauseContext, 0)
 
-        def lateralView(self, i:int=None):
+        def lateralView(self, i: int = None):
             if i is None:
                 return self.getTypedRuleContexts(SqlBaseParser.LateralViewContext)
             else:
-                return self.getTypedRuleContext(SqlBaseParser.LateralViewContext,i)
+                return self.getTypedRuleContext(SqlBaseParser.LateralViewContext, i)
 
         def whereClause(self):
-            return self.getTypedRuleContext(SqlBaseParser.WhereClauseContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.WhereClauseContext, 0)
 
         def aggregationClause(self):
-            return self.getTypedRuleContext(SqlBaseParser.AggregationClauseContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.AggregationClauseContext, 0)
 
         def havingClause(self):
-            return self.getTypedRuleContext(SqlBaseParser.HavingClauseContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.HavingClauseContext, 0)
 
         def windowClause(self):
-            return self.getTypedRuleContext(SqlBaseParser.WindowClauseContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.WindowClauseContext, 0)
 
-
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterTransformQuerySpecification" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterTransformQuerySpecification"):
                 listener.enterTransformQuerySpecification(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitTransformQuerySpecification" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitTransformQuerySpecification"):
                 listener.exitTransformQuerySpecification(self)
-
-
 
     def querySpecification(self):
 
@@ -11612,123 +12393,116 @@ class SqlBaseParser ( Parser ):
         try:
             self.state = 1750
             self._errHandler.sync(self)
-            la_ = self._interp.adaptivePredict(self._input,208,self._ctx)
+            la_ = self._interp.adaptivePredict(self._input, 208, self._ctx)
             if la_ == 1:
-                localctx = SqlBaseParser.TransformQuerySpecificationContext(self, localctx)
+                localctx = SqlBaseParser.TransformQuerySpecificationContext(
+                    self, localctx
+                )
                 self.enterOuterAlt(localctx, 1)
                 self.state = 1706
                 self.transformClause()
                 self.state = 1708
                 self._errHandler.sync(self)
-                la_ = self._interp.adaptivePredict(self._input,196,self._ctx)
+                la_ = self._interp.adaptivePredict(self._input, 196, self._ctx)
                 if la_ == 1:
                     self.state = 1707
                     self.fromClause()
 
-
                 self.state = 1713
                 self._errHandler.sync(self)
-                _alt = self._interp.adaptivePredict(self._input,197,self._ctx)
-                while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
-                    if _alt==1:
+                _alt = self._interp.adaptivePredict(self._input, 197, self._ctx)
+                while _alt != 2 and _alt != ATN.INVALID_ALT_NUMBER:
+                    if _alt == 1:
                         self.state = 1710
-                        self.lateralView() 
+                        self.lateralView()
                     self.state = 1715
                     self._errHandler.sync(self)
-                    _alt = self._interp.adaptivePredict(self._input,197,self._ctx)
+                    _alt = self._interp.adaptivePredict(self._input, 197, self._ctx)
 
                 self.state = 1717
                 self._errHandler.sync(self)
-                la_ = self._interp.adaptivePredict(self._input,198,self._ctx)
+                la_ = self._interp.adaptivePredict(self._input, 198, self._ctx)
                 if la_ == 1:
                     self.state = 1716
                     self.whereClause()
 
-
                 self.state = 1720
                 self._errHandler.sync(self)
-                la_ = self._interp.adaptivePredict(self._input,199,self._ctx)
+                la_ = self._interp.adaptivePredict(self._input, 199, self._ctx)
                 if la_ == 1:
                     self.state = 1719
                     self.aggregationClause()
 
-
                 self.state = 1723
                 self._errHandler.sync(self)
-                la_ = self._interp.adaptivePredict(self._input,200,self._ctx)
+                la_ = self._interp.adaptivePredict(self._input, 200, self._ctx)
                 if la_ == 1:
                     self.state = 1722
                     self.havingClause()
 
-
                 self.state = 1726
                 self._errHandler.sync(self)
-                la_ = self._interp.adaptivePredict(self._input,201,self._ctx)
+                la_ = self._interp.adaptivePredict(self._input, 201, self._ctx)
                 if la_ == 1:
                     self.state = 1725
                     self.windowClause()
 
-
                 pass
 
             elif la_ == 2:
-                localctx = SqlBaseParser.RegularQuerySpecificationContext(self, localctx)
+                localctx = SqlBaseParser.RegularQuerySpecificationContext(
+                    self, localctx
+                )
                 self.enterOuterAlt(localctx, 2)
                 self.state = 1728
                 self.selectClause()
                 self.state = 1730
                 self._errHandler.sync(self)
-                la_ = self._interp.adaptivePredict(self._input,202,self._ctx)
+                la_ = self._interp.adaptivePredict(self._input, 202, self._ctx)
                 if la_ == 1:
                     self.state = 1729
                     self.fromClause()
 
-
                 self.state = 1735
                 self._errHandler.sync(self)
-                _alt = self._interp.adaptivePredict(self._input,203,self._ctx)
-                while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
-                    if _alt==1:
+                _alt = self._interp.adaptivePredict(self._input, 203, self._ctx)
+                while _alt != 2 and _alt != ATN.INVALID_ALT_NUMBER:
+                    if _alt == 1:
                         self.state = 1732
-                        self.lateralView() 
+                        self.lateralView()
                     self.state = 1737
                     self._errHandler.sync(self)
-                    _alt = self._interp.adaptivePredict(self._input,203,self._ctx)
+                    _alt = self._interp.adaptivePredict(self._input, 203, self._ctx)
 
                 self.state = 1739
                 self._errHandler.sync(self)
-                la_ = self._interp.adaptivePredict(self._input,204,self._ctx)
+                la_ = self._interp.adaptivePredict(self._input, 204, self._ctx)
                 if la_ == 1:
                     self.state = 1738
                     self.whereClause()
 
-
                 self.state = 1742
                 self._errHandler.sync(self)
-                la_ = self._interp.adaptivePredict(self._input,205,self._ctx)
+                la_ = self._interp.adaptivePredict(self._input, 205, self._ctx)
                 if la_ == 1:
                     self.state = 1741
                     self.aggregationClause()
 
-
                 self.state = 1745
                 self._errHandler.sync(self)
-                la_ = self._interp.adaptivePredict(self._input,206,self._ctx)
+                la_ = self._interp.adaptivePredict(self._input, 206, self._ctx)
                 if la_ == 1:
                     self.state = 1744
                     self.havingClause()
 
-
                 self.state = 1748
                 self._errHandler.sync(self)
-                la_ = self._interp.adaptivePredict(self._input,207,self._ctx)
+                la_ = self._interp.adaptivePredict(self._input, 207, self._ctx)
                 if la_ == 1:
                     self.state = 1747
                     self.windowClause()
 
-
                 pass
-
 
         except RecognitionException as re:
             localctx.exception = re
@@ -11738,24 +12512,25 @@ class SqlBaseParser ( Parser ):
             self.exitRule()
         return localctx
 
-
     class TransformClauseContext(ParserRuleContext):
-        __slots__ = 'parser'
+        __slots__ = "parser"
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
-            self.kind = None # Token
-            self.inRowFormat = None # RowFormatContext
-            self.recordWriter = None # Token
-            self.script = None # Token
-            self.outRowFormat = None # RowFormatContext
-            self.recordReader = None # Token
+            self.kind = None  # Token
+            self.inRowFormat = None  # RowFormatContext
+            self.recordWriter = None  # Token
+            self.script = None  # Token
+            self.outRowFormat = None  # RowFormatContext
+            self.recordReader = None  # Token
 
         def USING(self):
             return self.getToken(SqlBaseParser.USING, 0)
 
-        def STRING(self, i:int=None):
+        def STRING(self, i: int = None):
             if i is None:
                 return self.getTokens(SqlBaseParser.STRING)
             else:
@@ -11765,8 +12540,7 @@ class SqlBaseParser ( Parser ):
             return self.getToken(SqlBaseParser.SELECT, 0)
 
         def expressionSeq(self):
-            return self.getTypedRuleContext(SqlBaseParser.ExpressionSeqContext,0)
-
+            return self.getTypedRuleContext(SqlBaseParser.ExpressionSeqContext, 0)
 
         def TRANSFORM(self):
             return self.getToken(SqlBaseParser.TRANSFORM, 0)
@@ -11786,44 +12560,37 @@ class SqlBaseParser ( Parser ):
         def RECORDREADER(self):
             return self.getToken(SqlBaseParser.RECORDREADER, 0)
 
-        def rowFormat(self, i:int=None):
+        def rowFormat(self, i: int = None):
             if i is None:
                 return self.getTypedRuleContexts(SqlBaseParser.RowFormatContext)
             else:
-                return self.getTypedRuleContext(SqlBaseParser.RowFormatContext,i)
-
+                return self.getTypedRuleContext(SqlBaseParser.RowFormatContext, i)
 
         def setQuantifier(self):
-            return self.getTypedRuleContext(SqlBaseParser.SetQuantifierContext,0)
-
+            return self.getTypedRuleContext(SqlBaseParser.SetQuantifierContext, 0)
 
         def identifierSeq(self):
-            return self.getTypedRuleContext(SqlBaseParser.IdentifierSeqContext,0)
-
+            return self.getTypedRuleContext(SqlBaseParser.IdentifierSeqContext, 0)
 
         def colTypeList(self):
-            return self.getTypedRuleContext(SqlBaseParser.ColTypeListContext,0)
-
+            return self.getTypedRuleContext(SqlBaseParser.ColTypeListContext, 0)
 
         def getRuleIndex(self):
             return SqlBaseParser.RULE_transformClause
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterTransformClause" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterTransformClause"):
                 listener.enterTransformClause(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitTransformClause" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitTransformClause"):
                 listener.exitTransformClause(self)
-
-
-
 
     def transformClause(self):
 
         localctx = SqlBaseParser.TransformClauseContext(self, self._ctx, self.state)
         self.enterRule(localctx, 96, self.RULE_transformClause)
-        self._la = 0 # Token type
+        self._la = 0  # Token type
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 1771
@@ -11838,11 +12605,10 @@ class SqlBaseParser ( Parser ):
                 self.match(SqlBaseParser.T__1)
                 self.state = 1756
                 self._errHandler.sync(self)
-                la_ = self._interp.adaptivePredict(self._input,209,self._ctx)
+                la_ = self._interp.adaptivePredict(self._input, 209, self._ctx)
                 if la_ == 1:
                     self.state = 1755
                     self.setQuantifier()
-
 
                 self.state = 1758
                 self.expressionSeq()
@@ -11854,11 +12620,10 @@ class SqlBaseParser ( Parser ):
                 localctx.kind = self.match(SqlBaseParser.MAP)
                 self.state = 1763
                 self._errHandler.sync(self)
-                la_ = self._interp.adaptivePredict(self._input,210,self._ctx)
+                la_ = self._interp.adaptivePredict(self._input, 210, self._ctx)
                 if la_ == 1:
                     self.state = 1762
                     self.setQuantifier()
-
 
                 self.state = 1765
                 self.expressionSeq()
@@ -11868,11 +12633,10 @@ class SqlBaseParser ( Parser ):
                 localctx.kind = self.match(SqlBaseParser.REDUCE)
                 self.state = 1768
                 self._errHandler.sync(self)
-                la_ = self._interp.adaptivePredict(self._input,211,self._ctx)
+                la_ = self._interp.adaptivePredict(self._input, 211, self._ctx)
                 if la_ == 1:
                     self.state = 1767
                     self.setQuantifier()
-
 
                 self.state = 1770
                 self.expressionSeq()
@@ -11883,20 +12647,18 @@ class SqlBaseParser ( Parser ):
             self.state = 1774
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if _la==SqlBaseParser.ROW:
+            if _la == SqlBaseParser.ROW:
                 self.state = 1773
                 localctx.inRowFormat = self.rowFormat()
-
 
             self.state = 1778
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if _la==SqlBaseParser.RECORDWRITER:
+            if _la == SqlBaseParser.RECORDWRITER:
                 self.state = 1776
                 self.match(SqlBaseParser.RECORDWRITER)
                 self.state = 1777
                 localctx.recordWriter = self.match(SqlBaseParser.STRING)
-
 
             self.state = 1780
             self.match(SqlBaseParser.USING)
@@ -11904,13 +12666,13 @@ class SqlBaseParser ( Parser ):
             localctx.script = self.match(SqlBaseParser.STRING)
             self.state = 1794
             self._errHandler.sync(self)
-            la_ = self._interp.adaptivePredict(self._input,217,self._ctx)
+            la_ = self._interp.adaptivePredict(self._input, 217, self._ctx)
             if la_ == 1:
                 self.state = 1782
                 self.match(SqlBaseParser.AS)
                 self.state = 1792
                 self._errHandler.sync(self)
-                la_ = self._interp.adaptivePredict(self._input,216,self._ctx)
+                la_ = self._interp.adaptivePredict(self._input, 216, self._ctx)
                 if la_ == 1:
                     self.state = 1783
                     self.identifierSeq()
@@ -11926,7 +12688,7 @@ class SqlBaseParser ( Parser ):
                     self.match(SqlBaseParser.T__1)
                     self.state = 1788
                     self._errHandler.sync(self)
-                    la_ = self._interp.adaptivePredict(self._input,215,self._ctx)
+                    la_ = self._interp.adaptivePredict(self._input, 215, self._ctx)
                     if la_ == 1:
                         self.state = 1786
                         self.identifierSeq()
@@ -11937,31 +12699,25 @@ class SqlBaseParser ( Parser ):
                         self.colTypeList()
                         pass
 
-
                     self.state = 1790
                     self.match(SqlBaseParser.T__2)
                     pass
 
-
-
-
             self.state = 1797
             self._errHandler.sync(self)
-            la_ = self._interp.adaptivePredict(self._input,218,self._ctx)
+            la_ = self._interp.adaptivePredict(self._input, 218, self._ctx)
             if la_ == 1:
                 self.state = 1796
                 localctx.outRowFormat = self.rowFormat()
 
-
             self.state = 1801
             self._errHandler.sync(self)
-            la_ = self._interp.adaptivePredict(self._input,219,self._ctx)
+            la_ = self._interp.adaptivePredict(self._input, 219, self._ctx)
             if la_ == 1:
                 self.state = 1799
                 self.match(SqlBaseParser.RECORDREADER)
                 self.state = 1800
                 localctx.recordReader = self.match(SqlBaseParser.STRING)
-
 
         except RecognitionException as re:
             localctx.exception = re
@@ -11971,47 +12727,42 @@ class SqlBaseParser ( Parser ):
             self.exitRule()
         return localctx
 
-
     class SelectClauseContext(ParserRuleContext):
-        __slots__ = 'parser'
+        __slots__ = "parser"
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
-            self._hint = None # HintContext
-            self.hints = list() # of HintContexts
+            self._hint = None  # HintContext
+            self.hints = list()  # of HintContexts
 
         def SELECT(self):
             return self.getToken(SqlBaseParser.SELECT, 0)
 
         def namedExpressionSeq(self):
-            return self.getTypedRuleContext(SqlBaseParser.NamedExpressionSeqContext,0)
-
+            return self.getTypedRuleContext(SqlBaseParser.NamedExpressionSeqContext, 0)
 
         def setQuantifier(self):
-            return self.getTypedRuleContext(SqlBaseParser.SetQuantifierContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.SetQuantifierContext, 0)
 
-
-        def hint(self, i:int=None):
+        def hint(self, i: int = None):
             if i is None:
                 return self.getTypedRuleContexts(SqlBaseParser.HintContext)
             else:
-                return self.getTypedRuleContext(SqlBaseParser.HintContext,i)
-
+                return self.getTypedRuleContext(SqlBaseParser.HintContext, i)
 
         def getRuleIndex(self):
             return SqlBaseParser.RULE_selectClause
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterSelectClause" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterSelectClause"):
                 listener.enterSelectClause(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitSelectClause" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitSelectClause"):
                 listener.exitSelectClause(self)
-
-
-
 
     def selectClause(self):
 
@@ -12023,23 +12774,22 @@ class SqlBaseParser ( Parser ):
             self.match(SqlBaseParser.SELECT)
             self.state = 1807
             self._errHandler.sync(self)
-            _alt = self._interp.adaptivePredict(self._input,220,self._ctx)
-            while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
-                if _alt==1:
+            _alt = self._interp.adaptivePredict(self._input, 220, self._ctx)
+            while _alt != 2 and _alt != ATN.INVALID_ALT_NUMBER:
+                if _alt == 1:
                     self.state = 1804
                     localctx._hint = self.hint()
-                    localctx.hints.append(localctx._hint) 
+                    localctx.hints.append(localctx._hint)
                 self.state = 1809
                 self._errHandler.sync(self)
-                _alt = self._interp.adaptivePredict(self._input,220,self._ctx)
+                _alt = self._interp.adaptivePredict(self._input, 220, self._ctx)
 
             self.state = 1811
             self._errHandler.sync(self)
-            la_ = self._interp.adaptivePredict(self._input,221,self._ctx)
+            la_ = self._interp.adaptivePredict(self._input, 221, self._ctx)
             if la_ == 1:
                 self.state = 1810
                 self.setQuantifier()
-
 
             self.state = 1813
             self.namedExpressionSeq()
@@ -12051,11 +12801,12 @@ class SqlBaseParser ( Parser ):
             self.exitRule()
         return localctx
 
-
     class SetClauseContext(ParserRuleContext):
-        __slots__ = 'parser'
+        __slots__ = "parser"
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
@@ -12063,22 +12814,18 @@ class SqlBaseParser ( Parser ):
             return self.getToken(SqlBaseParser.SET, 0)
 
         def assignmentList(self):
-            return self.getTypedRuleContext(SqlBaseParser.AssignmentListContext,0)
-
+            return self.getTypedRuleContext(SqlBaseParser.AssignmentListContext, 0)
 
         def getRuleIndex(self):
             return SqlBaseParser.RULE_setClause
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterSetClause" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterSetClause"):
                 listener.enterSetClause(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitSetClause" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitSetClause"):
                 listener.exitSetClause(self)
-
-
-
 
     def setClause(self):
 
@@ -12098,14 +12845,15 @@ class SqlBaseParser ( Parser ):
             self.exitRule()
         return localctx
 
-
     class MatchedClauseContext(ParserRuleContext):
-        __slots__ = 'parser'
+        __slots__ = "parser"
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
-            self.matchedCond = None # BooleanExpressionContext
+            self.matchedCond = None  # BooleanExpressionContext
 
         def WHEN(self):
             return self.getToken(SqlBaseParser.WHEN, 0)
@@ -12117,35 +12865,30 @@ class SqlBaseParser ( Parser ):
             return self.getToken(SqlBaseParser.THEN, 0)
 
         def matchedAction(self):
-            return self.getTypedRuleContext(SqlBaseParser.MatchedActionContext,0)
-
+            return self.getTypedRuleContext(SqlBaseParser.MatchedActionContext, 0)
 
         def AND(self):
             return self.getToken(SqlBaseParser.AND, 0)
 
         def booleanExpression(self):
-            return self.getTypedRuleContext(SqlBaseParser.BooleanExpressionContext,0)
-
+            return self.getTypedRuleContext(SqlBaseParser.BooleanExpressionContext, 0)
 
         def getRuleIndex(self):
             return SqlBaseParser.RULE_matchedClause
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterMatchedClause" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterMatchedClause"):
                 listener.enterMatchedClause(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitMatchedClause" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitMatchedClause"):
                 listener.exitMatchedClause(self)
-
-
-
 
     def matchedClause(self):
 
         localctx = SqlBaseParser.MatchedClauseContext(self, self._ctx, self.state)
         self.enterRule(localctx, 102, self.RULE_matchedClause)
-        self._la = 0 # Token type
+        self._la = 0  # Token type
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 1818
@@ -12155,12 +12898,11 @@ class SqlBaseParser ( Parser ):
             self.state = 1822
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if _la==SqlBaseParser.AND:
+            if _la == SqlBaseParser.AND:
                 self.state = 1820
                 self.match(SqlBaseParser.AND)
                 self.state = 1821
                 localctx.matchedCond = self.booleanExpression(0)
-
 
             self.state = 1824
             self.match(SqlBaseParser.THEN)
@@ -12174,14 +12916,15 @@ class SqlBaseParser ( Parser ):
             self.exitRule()
         return localctx
 
-
     class NotMatchedClauseContext(ParserRuleContext):
-        __slots__ = 'parser'
+        __slots__ = "parser"
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
-            self.notMatchedCond = None # BooleanExpressionContext
+            self.notMatchedCond = None  # BooleanExpressionContext
 
         def WHEN(self):
             return self.getToken(SqlBaseParser.WHEN, 0)
@@ -12196,35 +12939,30 @@ class SqlBaseParser ( Parser ):
             return self.getToken(SqlBaseParser.THEN, 0)
 
         def notMatchedAction(self):
-            return self.getTypedRuleContext(SqlBaseParser.NotMatchedActionContext,0)
-
+            return self.getTypedRuleContext(SqlBaseParser.NotMatchedActionContext, 0)
 
         def AND(self):
             return self.getToken(SqlBaseParser.AND, 0)
 
         def booleanExpression(self):
-            return self.getTypedRuleContext(SqlBaseParser.BooleanExpressionContext,0)
-
+            return self.getTypedRuleContext(SqlBaseParser.BooleanExpressionContext, 0)
 
         def getRuleIndex(self):
             return SqlBaseParser.RULE_notMatchedClause
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterNotMatchedClause" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterNotMatchedClause"):
                 listener.enterNotMatchedClause(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitNotMatchedClause" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitNotMatchedClause"):
                 listener.exitNotMatchedClause(self)
-
-
-
 
     def notMatchedClause(self):
 
         localctx = SqlBaseParser.NotMatchedClauseContext(self, self._ctx, self.state)
         self.enterRule(localctx, 104, self.RULE_notMatchedClause)
-        self._la = 0 # Token type
+        self._la = 0  # Token type
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 1827
@@ -12236,12 +12974,11 @@ class SqlBaseParser ( Parser ):
             self.state = 1832
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if _la==SqlBaseParser.AND:
+            if _la == SqlBaseParser.AND:
                 self.state = 1830
                 self.match(SqlBaseParser.AND)
                 self.state = 1831
                 localctx.notMatchedCond = self.booleanExpression(0)
-
 
             self.state = 1834
             self.match(SqlBaseParser.THEN)
@@ -12255,11 +12992,12 @@ class SqlBaseParser ( Parser ):
             self.exitRule()
         return localctx
 
-
     class MatchedActionContext(ParserRuleContext):
-        __slots__ = 'parser'
+        __slots__ = "parser"
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
@@ -12276,22 +13014,18 @@ class SqlBaseParser ( Parser ):
             return self.getToken(SqlBaseParser.ASTERISK, 0)
 
         def assignmentList(self):
-            return self.getTypedRuleContext(SqlBaseParser.AssignmentListContext,0)
-
+            return self.getTypedRuleContext(SqlBaseParser.AssignmentListContext, 0)
 
         def getRuleIndex(self):
             return SqlBaseParser.RULE_matchedAction
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterMatchedAction" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterMatchedAction"):
                 listener.enterMatchedAction(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitMatchedAction" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitMatchedAction"):
                 listener.exitMatchedAction(self)
-
-
-
 
     def matchedAction(self):
 
@@ -12300,7 +13034,7 @@ class SqlBaseParser ( Parser ):
         try:
             self.state = 1844
             self._errHandler.sync(self)
-            la_ = self._interp.adaptivePredict(self._input,224,self._ctx)
+            la_ = self._interp.adaptivePredict(self._input, 224, self._ctx)
             if la_ == 1:
                 self.enterOuterAlt(localctx, 1)
                 self.state = 1837
@@ -12327,7 +13061,6 @@ class SqlBaseParser ( Parser ):
                 self.assignmentList()
                 pass
 
-
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)
@@ -12336,14 +13069,15 @@ class SqlBaseParser ( Parser ):
             self.exitRule()
         return localctx
 
-
     class NotMatchedActionContext(ParserRuleContext):
-        __slots__ = 'parser'
+        __slots__ = "parser"
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
-            self.columns = None # MultipartIdentifierListContext
+            self.columns = None  # MultipartIdentifierListContext
 
         def INSERT(self):
             return self.getToken(SqlBaseParser.INSERT, 0)
@@ -12354,40 +13088,37 @@ class SqlBaseParser ( Parser ):
         def VALUES(self):
             return self.getToken(SqlBaseParser.VALUES, 0)
 
-        def expression(self, i:int=None):
+        def expression(self, i: int = None):
             if i is None:
                 return self.getTypedRuleContexts(SqlBaseParser.ExpressionContext)
             else:
-                return self.getTypedRuleContext(SqlBaseParser.ExpressionContext,i)
-
+                return self.getTypedRuleContext(SqlBaseParser.ExpressionContext, i)
 
         def multipartIdentifierList(self):
-            return self.getTypedRuleContext(SqlBaseParser.MultipartIdentifierListContext,0)
-
+            return self.getTypedRuleContext(
+                SqlBaseParser.MultipartIdentifierListContext, 0
+            )
 
         def getRuleIndex(self):
             return SqlBaseParser.RULE_notMatchedAction
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterNotMatchedAction" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterNotMatchedAction"):
                 listener.enterNotMatchedAction(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitNotMatchedAction" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitNotMatchedAction"):
                 listener.exitNotMatchedAction(self)
-
-
-
 
     def notMatchedAction(self):
 
         localctx = SqlBaseParser.NotMatchedActionContext(self, self._ctx, self.state)
         self.enterRule(localctx, 108, self.RULE_notMatchedAction)
-        self._la = 0 # Token type
+        self._la = 0  # Token type
         try:
             self.state = 1864
             self._errHandler.sync(self)
-            la_ = self._interp.adaptivePredict(self._input,226,self._ctx)
+            la_ = self._interp.adaptivePredict(self._input, 226, self._ctx)
             if la_ == 1:
                 self.enterOuterAlt(localctx, 1)
                 self.state = 1846
@@ -12415,7 +13146,7 @@ class SqlBaseParser ( Parser ):
                 self.state = 1859
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                while _la==SqlBaseParser.T__3:
+                while _la == SqlBaseParser.T__3:
                     self.state = 1855
                     self.match(SqlBaseParser.T__3)
                     self.state = 1856
@@ -12428,7 +13159,6 @@ class SqlBaseParser ( Parser ):
                 self.match(SqlBaseParser.T__2)
                 pass
 
-
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)
@@ -12437,40 +13167,37 @@ class SqlBaseParser ( Parser ):
             self.exitRule()
         return localctx
 
-
     class AssignmentListContext(ParserRuleContext):
-        __slots__ = 'parser'
+        __slots__ = "parser"
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
-        def assignment(self, i:int=None):
+        def assignment(self, i: int = None):
             if i is None:
                 return self.getTypedRuleContexts(SqlBaseParser.AssignmentContext)
             else:
-                return self.getTypedRuleContext(SqlBaseParser.AssignmentContext,i)
-
+                return self.getTypedRuleContext(SqlBaseParser.AssignmentContext, i)
 
         def getRuleIndex(self):
             return SqlBaseParser.RULE_assignmentList
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterAssignmentList" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterAssignmentList"):
                 listener.enterAssignmentList(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitAssignmentList" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitAssignmentList"):
                 listener.exitAssignmentList(self)
-
-
-
 
     def assignmentList(self):
 
         localctx = SqlBaseParser.AssignmentListContext(self, self._ctx, self.state)
         self.enterRule(localctx, 110, self.RULE_assignmentList)
-        self._la = 0 # Token type
+        self._la = 0  # Token type
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 1866
@@ -12478,7 +13205,7 @@ class SqlBaseParser ( Parser ):
             self.state = 1871
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            while _la==SqlBaseParser.T__3:
+            while _la == SqlBaseParser.T__3:
                 self.state = 1867
                 self.match(SqlBaseParser.T__3)
                 self.state = 1868
@@ -12495,40 +13222,36 @@ class SqlBaseParser ( Parser ):
             self.exitRule()
         return localctx
 
-
     class AssignmentContext(ParserRuleContext):
-        __slots__ = 'parser'
+        __slots__ = "parser"
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
-            self.key = None # MultipartIdentifierContext
-            self.value = None # ExpressionContext
+            self.key = None  # MultipartIdentifierContext
+            self.value = None  # ExpressionContext
 
         def EQ(self):
             return self.getToken(SqlBaseParser.EQ, 0)
 
         def multipartIdentifier(self):
-            return self.getTypedRuleContext(SqlBaseParser.MultipartIdentifierContext,0)
-
+            return self.getTypedRuleContext(SqlBaseParser.MultipartIdentifierContext, 0)
 
         def expression(self):
-            return self.getTypedRuleContext(SqlBaseParser.ExpressionContext,0)
-
+            return self.getTypedRuleContext(SqlBaseParser.ExpressionContext, 0)
 
         def getRuleIndex(self):
             return SqlBaseParser.RULE_assignment
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterAssignment" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterAssignment"):
                 listener.enterAssignment(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitAssignment" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitAssignment"):
                 listener.exitAssignment(self)
-
-
-
 
     def assignment(self):
 
@@ -12550,11 +13273,12 @@ class SqlBaseParser ( Parser ):
             self.exitRule()
         return localctx
 
-
     class WhereClauseContext(ParserRuleContext):
-        __slots__ = 'parser'
+        __slots__ = "parser"
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
@@ -12562,22 +13286,18 @@ class SqlBaseParser ( Parser ):
             return self.getToken(SqlBaseParser.WHERE, 0)
 
         def booleanExpression(self):
-            return self.getTypedRuleContext(SqlBaseParser.BooleanExpressionContext,0)
-
+            return self.getTypedRuleContext(SqlBaseParser.BooleanExpressionContext, 0)
 
         def getRuleIndex(self):
             return SqlBaseParser.RULE_whereClause
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterWhereClause" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterWhereClause"):
                 listener.enterWhereClause(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitWhereClause" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitWhereClause"):
                 listener.exitWhereClause(self)
-
-
-
 
     def whereClause(self):
 
@@ -12597,11 +13317,12 @@ class SqlBaseParser ( Parser ):
             self.exitRule()
         return localctx
 
-
     class HavingClauseContext(ParserRuleContext):
-        __slots__ = 'parser'
+        __slots__ = "parser"
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
@@ -12609,22 +13330,18 @@ class SqlBaseParser ( Parser ):
             return self.getToken(SqlBaseParser.HAVING, 0)
 
         def booleanExpression(self):
-            return self.getTypedRuleContext(SqlBaseParser.BooleanExpressionContext,0)
-
+            return self.getTypedRuleContext(SqlBaseParser.BooleanExpressionContext, 0)
 
         def getRuleIndex(self):
             return SqlBaseParser.RULE_havingClause
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterHavingClause" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterHavingClause"):
                 listener.enterHavingClause(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitHavingClause" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitHavingClause"):
                 listener.exitHavingClause(self)
-
-
-
 
     def havingClause(self):
 
@@ -12644,36 +13361,33 @@ class SqlBaseParser ( Parser ):
             self.exitRule()
         return localctx
 
-
     class HintContext(ParserRuleContext):
-        __slots__ = 'parser'
+        __slots__ = "parser"
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
-            self._hintStatement = None # HintStatementContext
-            self.hintStatements = list() # of HintStatementContexts
+            self._hintStatement = None  # HintStatementContext
+            self.hintStatements = list()  # of HintStatementContexts
 
-        def hintStatement(self, i:int=None):
+        def hintStatement(self, i: int = None):
             if i is None:
                 return self.getTypedRuleContexts(SqlBaseParser.HintStatementContext)
             else:
-                return self.getTypedRuleContext(SqlBaseParser.HintStatementContext,i)
-
+                return self.getTypedRuleContext(SqlBaseParser.HintStatementContext, i)
 
         def getRuleIndex(self):
             return SqlBaseParser.RULE_hint
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterHint" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterHint"):
                 listener.enterHint(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitHint" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitHint"):
                 listener.exitHint(self)
-
-
-
 
     def hint(self):
 
@@ -12688,23 +13402,22 @@ class SqlBaseParser ( Parser ):
             localctx.hintStatements.append(localctx._hintStatement)
             self.state = 1892
             self._errHandler.sync(self)
-            _alt = self._interp.adaptivePredict(self._input,229,self._ctx)
-            while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
-                if _alt==1:
+            _alt = self._interp.adaptivePredict(self._input, 229, self._ctx)
+            while _alt != 2 and _alt != ATN.INVALID_ALT_NUMBER:
+                if _alt == 1:
                     self.state = 1887
                     self._errHandler.sync(self)
-                    la_ = self._interp.adaptivePredict(self._input,228,self._ctx)
+                    la_ = self._interp.adaptivePredict(self._input, 228, self._ctx)
                     if la_ == 1:
                         self.state = 1886
                         self.match(SqlBaseParser.T__3)
 
-
                     self.state = 1889
                     localctx._hintStatement = self.hintStatement()
-                    localctx.hintStatements.append(localctx._hintStatement) 
+                    localctx.hintStatements.append(localctx._hintStatement)
                 self.state = 1894
                 self._errHandler.sync(self)
-                _alt = self._interp.adaptivePredict(self._input,229,self._ctx)
+                _alt = self._interp.adaptivePredict(self._input, 229, self._ctx)
 
             self.state = 1895
             self.match(SqlBaseParser.T__6)
@@ -12716,51 +13429,49 @@ class SqlBaseParser ( Parser ):
             self.exitRule()
         return localctx
 
-
     class HintStatementContext(ParserRuleContext):
-        __slots__ = 'parser'
+        __slots__ = "parser"
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
-            self.hintName = None # IdentifierContext
-            self._primaryExpression = None # PrimaryExpressionContext
-            self.parameters = list() # of PrimaryExpressionContexts
+            self.hintName = None  # IdentifierContext
+            self._primaryExpression = None  # PrimaryExpressionContext
+            self.parameters = list()  # of PrimaryExpressionContexts
 
         def identifier(self):
-            return self.getTypedRuleContext(SqlBaseParser.IdentifierContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.IdentifierContext, 0)
 
-
-        def primaryExpression(self, i:int=None):
+        def primaryExpression(self, i: int = None):
             if i is None:
                 return self.getTypedRuleContexts(SqlBaseParser.PrimaryExpressionContext)
             else:
-                return self.getTypedRuleContext(SqlBaseParser.PrimaryExpressionContext,i)
-
+                return self.getTypedRuleContext(
+                    SqlBaseParser.PrimaryExpressionContext, i
+                )
 
         def getRuleIndex(self):
             return SqlBaseParser.RULE_hintStatement
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterHintStatement" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterHintStatement"):
                 listener.enterHintStatement(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitHintStatement" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitHintStatement"):
                 listener.exitHintStatement(self)
-
-
-
 
     def hintStatement(self):
 
         localctx = SqlBaseParser.HintStatementContext(self, self._ctx, self.state)
         self.enterRule(localctx, 120, self.RULE_hintStatement)
-        self._la = 0 # Token type
+        self._la = 0  # Token type
         try:
             self.state = 1910
             self._errHandler.sync(self)
-            la_ = self._interp.adaptivePredict(self._input,231,self._ctx)
+            la_ = self._interp.adaptivePredict(self._input, 231, self._ctx)
             if la_ == 1:
                 self.enterOuterAlt(localctx, 1)
                 self.state = 1897
@@ -12779,7 +13490,7 @@ class SqlBaseParser ( Parser ):
                 self.state = 1905
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                while _la==SqlBaseParser.T__3:
+                while _la == SqlBaseParser.T__3:
                     self.state = 1901
                     self.match(SqlBaseParser.T__3)
                     self.state = 1902
@@ -12793,7 +13504,6 @@ class SqlBaseParser ( Parser ):
                 self.match(SqlBaseParser.T__2)
                 pass
 
-
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)
@@ -12802,48 +13512,43 @@ class SqlBaseParser ( Parser ):
             self.exitRule()
         return localctx
 
-
     class FromClauseContext(ParserRuleContext):
-        __slots__ = 'parser'
+        __slots__ = "parser"
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
         def FROM(self):
             return self.getToken(SqlBaseParser.FROM, 0)
 
-        def relation(self, i:int=None):
+        def relation(self, i: int = None):
             if i is None:
                 return self.getTypedRuleContexts(SqlBaseParser.RelationContext)
             else:
-                return self.getTypedRuleContext(SqlBaseParser.RelationContext,i)
+                return self.getTypedRuleContext(SqlBaseParser.RelationContext, i)
 
-
-        def lateralView(self, i:int=None):
+        def lateralView(self, i: int = None):
             if i is None:
                 return self.getTypedRuleContexts(SqlBaseParser.LateralViewContext)
             else:
-                return self.getTypedRuleContext(SqlBaseParser.LateralViewContext,i)
-
+                return self.getTypedRuleContext(SqlBaseParser.LateralViewContext, i)
 
         def pivotClause(self):
-            return self.getTypedRuleContext(SqlBaseParser.PivotClauseContext,0)
-
+            return self.getTypedRuleContext(SqlBaseParser.PivotClauseContext, 0)
 
         def getRuleIndex(self):
             return SqlBaseParser.RULE_fromClause
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterFromClause" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterFromClause"):
                 listener.enterFromClause(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitFromClause" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitFromClause"):
                 listener.exitFromClause(self)
-
-
-
 
     def fromClause(self):
 
@@ -12857,35 +13562,34 @@ class SqlBaseParser ( Parser ):
             self.relation()
             self.state = 1918
             self._errHandler.sync(self)
-            _alt = self._interp.adaptivePredict(self._input,232,self._ctx)
-            while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
-                if _alt==1:
+            _alt = self._interp.adaptivePredict(self._input, 232, self._ctx)
+            while _alt != 2 and _alt != ATN.INVALID_ALT_NUMBER:
+                if _alt == 1:
                     self.state = 1914
                     self.match(SqlBaseParser.T__3)
                     self.state = 1915
-                    self.relation() 
+                    self.relation()
                 self.state = 1920
                 self._errHandler.sync(self)
-                _alt = self._interp.adaptivePredict(self._input,232,self._ctx)
+                _alt = self._interp.adaptivePredict(self._input, 232, self._ctx)
 
             self.state = 1924
             self._errHandler.sync(self)
-            _alt = self._interp.adaptivePredict(self._input,233,self._ctx)
-            while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
-                if _alt==1:
+            _alt = self._interp.adaptivePredict(self._input, 233, self._ctx)
+            while _alt != 2 and _alt != ATN.INVALID_ALT_NUMBER:
+                if _alt == 1:
                     self.state = 1921
-                    self.lateralView() 
+                    self.lateralView()
                 self.state = 1926
                 self._errHandler.sync(self)
-                _alt = self._interp.adaptivePredict(self._input,233,self._ctx)
+                _alt = self._interp.adaptivePredict(self._input, 233, self._ctx)
 
             self.state = 1928
             self._errHandler.sync(self)
-            la_ = self._interp.adaptivePredict(self._input,234,self._ctx)
+            la_ = self._interp.adaptivePredict(self._input, 234, self._ctx)
             if la_ == 1:
                 self.state = 1927
                 self.pivotClause()
-
 
         except RecognitionException as re:
             localctx.exception = re
@@ -12895,18 +13599,21 @@ class SqlBaseParser ( Parser ):
             self.exitRule()
         return localctx
 
-
     class AggregationClauseContext(ParserRuleContext):
-        __slots__ = 'parser'
+        __slots__ = "parser"
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
-            self._groupByClause = None # GroupByClauseContext
-            self.groupingExpressionsWithGroupingAnalytics = list() # of GroupByClauseContexts
-            self._expression = None # ExpressionContext
-            self.groupingExpressions = list() # of ExpressionContexts
-            self.kind = None # Token
+            self._groupByClause = None  # GroupByClauseContext
+            self.groupingExpressionsWithGroupingAnalytics = (
+                list()
+            )  # of GroupByClauseContexts
+            self._expression = None  # ExpressionContext
+            self.groupingExpressions = list()  # of ExpressionContexts
+            self.kind = None  # Token
 
         def GROUP(self):
             return self.getToken(SqlBaseParser.GROUP, 0)
@@ -12914,19 +13621,17 @@ class SqlBaseParser ( Parser ):
         def BY(self):
             return self.getToken(SqlBaseParser.BY, 0)
 
-        def groupByClause(self, i:int=None):
+        def groupByClause(self, i: int = None):
             if i is None:
                 return self.getTypedRuleContexts(SqlBaseParser.GroupByClauseContext)
             else:
-                return self.getTypedRuleContext(SqlBaseParser.GroupByClauseContext,i)
+                return self.getTypedRuleContext(SqlBaseParser.GroupByClauseContext, i)
 
-
-        def expression(self, i:int=None):
+        def expression(self, i: int = None):
             if i is None:
                 return self.getTypedRuleContexts(SqlBaseParser.ExpressionContext)
             else:
-                return self.getTypedRuleContext(SqlBaseParser.ExpressionContext,i)
-
+                return self.getTypedRuleContext(SqlBaseParser.ExpressionContext, i)
 
         def WITH(self):
             return self.getToken(SqlBaseParser.WITH, 0)
@@ -12934,12 +13639,11 @@ class SqlBaseParser ( Parser ):
         def SETS(self):
             return self.getToken(SqlBaseParser.SETS, 0)
 
-        def groupingSet(self, i:int=None):
+        def groupingSet(self, i: int = None):
             if i is None:
                 return self.getTypedRuleContexts(SqlBaseParser.GroupingSetContext)
             else:
-                return self.getTypedRuleContext(SqlBaseParser.GroupingSetContext,i)
-
+                return self.getTypedRuleContext(SqlBaseParser.GroupingSetContext, i)
 
         def ROLLUP(self):
             return self.getToken(SqlBaseParser.ROLLUP, 0)
@@ -12953,26 +13657,23 @@ class SqlBaseParser ( Parser ):
         def getRuleIndex(self):
             return SqlBaseParser.RULE_aggregationClause
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterAggregationClause" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterAggregationClause"):
                 listener.enterAggregationClause(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitAggregationClause" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitAggregationClause"):
                 listener.exitAggregationClause(self)
-
-
-
 
     def aggregationClause(self):
 
         localctx = SqlBaseParser.AggregationClauseContext(self, self._ctx, self.state)
         self.enterRule(localctx, 124, self.RULE_aggregationClause)
-        self._la = 0 # Token type
+        self._la = 0  # Token type
         try:
             self.state = 1969
             self._errHandler.sync(self)
-            la_ = self._interp.adaptivePredict(self._input,239,self._ctx)
+            la_ = self._interp.adaptivePredict(self._input, 239, self._ctx)
             if la_ == 1:
                 self.enterOuterAlt(localctx, 1)
                 self.state = 1930
@@ -12981,20 +13682,24 @@ class SqlBaseParser ( Parser ):
                 self.match(SqlBaseParser.BY)
                 self.state = 1932
                 localctx._groupByClause = self.groupByClause()
-                localctx.groupingExpressionsWithGroupingAnalytics.append(localctx._groupByClause)
+                localctx.groupingExpressionsWithGroupingAnalytics.append(
+                    localctx._groupByClause
+                )
                 self.state = 1937
                 self._errHandler.sync(self)
-                _alt = self._interp.adaptivePredict(self._input,235,self._ctx)
-                while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
-                    if _alt==1:
+                _alt = self._interp.adaptivePredict(self._input, 235, self._ctx)
+                while _alt != 2 and _alt != ATN.INVALID_ALT_NUMBER:
+                    if _alt == 1:
                         self.state = 1933
                         self.match(SqlBaseParser.T__3)
                         self.state = 1934
                         localctx._groupByClause = self.groupByClause()
-                        localctx.groupingExpressionsWithGroupingAnalytics.append(localctx._groupByClause) 
+                        localctx.groupingExpressionsWithGroupingAnalytics.append(
+                            localctx._groupByClause
+                        )
                     self.state = 1939
                     self._errHandler.sync(self)
-                    _alt = self._interp.adaptivePredict(self._input,235,self._ctx)
+                    _alt = self._interp.adaptivePredict(self._input, 235, self._ctx)
 
                 pass
 
@@ -13009,21 +13714,21 @@ class SqlBaseParser ( Parser ):
                 localctx.groupingExpressions.append(localctx._expression)
                 self.state = 1947
                 self._errHandler.sync(self)
-                _alt = self._interp.adaptivePredict(self._input,236,self._ctx)
-                while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
-                    if _alt==1:
+                _alt = self._interp.adaptivePredict(self._input, 236, self._ctx)
+                while _alt != 2 and _alt != ATN.INVALID_ALT_NUMBER:
+                    if _alt == 1:
                         self.state = 1943
                         self.match(SqlBaseParser.T__3)
                         self.state = 1944
                         localctx._expression = self.expression()
-                        localctx.groupingExpressions.append(localctx._expression) 
+                        localctx.groupingExpressions.append(localctx._expression)
                     self.state = 1949
                     self._errHandler.sync(self)
-                    _alt = self._interp.adaptivePredict(self._input,236,self._ctx)
+                    _alt = self._interp.adaptivePredict(self._input, 236, self._ctx)
 
                 self.state = 1967
                 self._errHandler.sync(self)
-                la_ = self._interp.adaptivePredict(self._input,238,self._ctx)
+                la_ = self._interp.adaptivePredict(self._input, 238, self._ctx)
                 if la_ == 1:
                     self.state = 1950
                     self.match(SqlBaseParser.WITH)
@@ -13048,7 +13753,7 @@ class SqlBaseParser ( Parser ):
                     self.state = 1962
                     self._errHandler.sync(self)
                     _la = self._input.LA(1)
-                    while _la==SqlBaseParser.T__3:
+                    while _la == SqlBaseParser.T__3:
                         self.state = 1958
                         self.match(SqlBaseParser.T__3)
                         self.state = 1959
@@ -13060,9 +13765,7 @@ class SqlBaseParser ( Parser ):
                     self.state = 1965
                     self.match(SqlBaseParser.T__2)
 
-
                 pass
-
 
         except RecognitionException as re:
             localctx.exception = re
@@ -13072,35 +13775,31 @@ class SqlBaseParser ( Parser ):
             self.exitRule()
         return localctx
 
-
     class GroupByClauseContext(ParserRuleContext):
-        __slots__ = 'parser'
+        __slots__ = "parser"
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
         def groupingAnalytics(self):
-            return self.getTypedRuleContext(SqlBaseParser.GroupingAnalyticsContext,0)
-
+            return self.getTypedRuleContext(SqlBaseParser.GroupingAnalyticsContext, 0)
 
         def expression(self):
-            return self.getTypedRuleContext(SqlBaseParser.ExpressionContext,0)
-
+            return self.getTypedRuleContext(SqlBaseParser.ExpressionContext, 0)
 
         def getRuleIndex(self):
             return SqlBaseParser.RULE_groupByClause
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterGroupByClause" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterGroupByClause"):
                 listener.enterGroupByClause(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitGroupByClause" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitGroupByClause"):
                 listener.exitGroupByClause(self)
-
-
-
 
     def groupByClause(self):
 
@@ -13109,7 +13808,7 @@ class SqlBaseParser ( Parser ):
         try:
             self.state = 1973
             self._errHandler.sync(self)
-            la_ = self._interp.adaptivePredict(self._input,240,self._ctx)
+            la_ = self._interp.adaptivePredict(self._input, 240, self._ctx)
             if la_ == 1:
                 self.enterOuterAlt(localctx, 1)
                 self.state = 1971
@@ -13122,7 +13821,6 @@ class SqlBaseParser ( Parser ):
                 self.expression()
                 pass
 
-
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)
@@ -13131,20 +13829,20 @@ class SqlBaseParser ( Parser ):
             self.exitRule()
         return localctx
 
-
     class GroupingAnalyticsContext(ParserRuleContext):
-        __slots__ = 'parser'
+        __slots__ = "parser"
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
-        def groupingSet(self, i:int=None):
+        def groupingSet(self, i: int = None):
             if i is None:
                 return self.getTypedRuleContexts(SqlBaseParser.GroupingSetContext)
             else:
-                return self.getTypedRuleContext(SqlBaseParser.GroupingSetContext,i)
-
+                return self.getTypedRuleContext(SqlBaseParser.GroupingSetContext, i)
 
         def ROLLUP(self):
             return self.getToken(SqlBaseParser.ROLLUP, 0)
@@ -13158,32 +13856,28 @@ class SqlBaseParser ( Parser ):
         def SETS(self):
             return self.getToken(SqlBaseParser.SETS, 0)
 
-        def groupingElement(self, i:int=None):
+        def groupingElement(self, i: int = None):
             if i is None:
                 return self.getTypedRuleContexts(SqlBaseParser.GroupingElementContext)
             else:
-                return self.getTypedRuleContext(SqlBaseParser.GroupingElementContext,i)
-
+                return self.getTypedRuleContext(SqlBaseParser.GroupingElementContext, i)
 
         def getRuleIndex(self):
             return SqlBaseParser.RULE_groupingAnalytics
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterGroupingAnalytics" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterGroupingAnalytics"):
                 listener.enterGroupingAnalytics(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitGroupingAnalytics" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitGroupingAnalytics"):
                 listener.exitGroupingAnalytics(self)
-
-
-
 
     def groupingAnalytics(self):
 
         localctx = SqlBaseParser.GroupingAnalyticsContext(self, self._ctx, self.state)
         self.enterRule(localctx, 128, self.RULE_groupingAnalytics)
-        self._la = 0 # Token type
+        self._la = 0  # Token type
         try:
             self.state = 2000
             self._errHandler.sync(self)
@@ -13192,7 +13886,7 @@ class SqlBaseParser ( Parser ):
                 self.enterOuterAlt(localctx, 1)
                 self.state = 1975
                 _la = self._input.LA(1)
-                if not(_la==SqlBaseParser.CUBE or _la==SqlBaseParser.ROLLUP):
+                if not (_la == SqlBaseParser.CUBE or _la == SqlBaseParser.ROLLUP):
                     self._errHandler.recoverInline(self)
                 else:
                     self._errHandler.reportMatch(self)
@@ -13204,7 +13898,7 @@ class SqlBaseParser ( Parser ):
                 self.state = 1982
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                while _la==SqlBaseParser.T__3:
+                while _la == SqlBaseParser.T__3:
                     self.state = 1978
                     self.match(SqlBaseParser.T__3)
                     self.state = 1979
@@ -13229,7 +13923,7 @@ class SqlBaseParser ( Parser ):
                 self.state = 1995
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                while _la==SqlBaseParser.T__3:
+                while _la == SqlBaseParser.T__3:
                     self.state = 1991
                     self.match(SqlBaseParser.T__3)
                     self.state = 1992
@@ -13252,35 +13946,31 @@ class SqlBaseParser ( Parser ):
             self.exitRule()
         return localctx
 
-
     class GroupingElementContext(ParserRuleContext):
-        __slots__ = 'parser'
+        __slots__ = "parser"
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
         def groupingAnalytics(self):
-            return self.getTypedRuleContext(SqlBaseParser.GroupingAnalyticsContext,0)
-
+            return self.getTypedRuleContext(SqlBaseParser.GroupingAnalyticsContext, 0)
 
         def groupingSet(self):
-            return self.getTypedRuleContext(SqlBaseParser.GroupingSetContext,0)
-
+            return self.getTypedRuleContext(SqlBaseParser.GroupingSetContext, 0)
 
         def getRuleIndex(self):
             return SqlBaseParser.RULE_groupingElement
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterGroupingElement" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterGroupingElement"):
                 listener.enterGroupingElement(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitGroupingElement" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitGroupingElement"):
                 listener.exitGroupingElement(self)
-
-
-
 
     def groupingElement(self):
 
@@ -13289,7 +13979,7 @@ class SqlBaseParser ( Parser ):
         try:
             self.state = 2004
             self._errHandler.sync(self)
-            la_ = self._interp.adaptivePredict(self._input,244,self._ctx)
+            la_ = self._interp.adaptivePredict(self._input, 244, self._ctx)
             if la_ == 1:
                 self.enterOuterAlt(localctx, 1)
                 self.state = 2002
@@ -13302,7 +13992,6 @@ class SqlBaseParser ( Parser ):
                 self.groupingSet()
                 pass
 
-
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)
@@ -13311,58 +14000,55 @@ class SqlBaseParser ( Parser ):
             self.exitRule()
         return localctx
 
-
     class GroupingSetContext(ParserRuleContext):
-        __slots__ = 'parser'
+        __slots__ = "parser"
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
-        def expression(self, i:int=None):
+        def expression(self, i: int = None):
             if i is None:
                 return self.getTypedRuleContexts(SqlBaseParser.ExpressionContext)
             else:
-                return self.getTypedRuleContext(SqlBaseParser.ExpressionContext,i)
-
+                return self.getTypedRuleContext(SqlBaseParser.ExpressionContext, i)
 
         def getRuleIndex(self):
             return SqlBaseParser.RULE_groupingSet
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterGroupingSet" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterGroupingSet"):
                 listener.enterGroupingSet(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitGroupingSet" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitGroupingSet"):
                 listener.exitGroupingSet(self)
-
-
-
 
     def groupingSet(self):
 
         localctx = SqlBaseParser.GroupingSetContext(self, self._ctx, self.state)
         self.enterRule(localctx, 132, self.RULE_groupingSet)
-        self._la = 0 # Token type
+        self._la = 0  # Token type
         try:
             self.state = 2019
             self._errHandler.sync(self)
-            la_ = self._interp.adaptivePredict(self._input,247,self._ctx)
+            la_ = self._interp.adaptivePredict(self._input, 247, self._ctx)
             if la_ == 1:
                 self.enterOuterAlt(localctx, 1)
                 self.state = 2006
                 self.match(SqlBaseParser.T__1)
                 self.state = 2015
                 self._errHandler.sync(self)
-                la_ = self._interp.adaptivePredict(self._input,246,self._ctx)
+                la_ = self._interp.adaptivePredict(self._input, 246, self._ctx)
                 if la_ == 1:
                     self.state = 2007
                     self.expression()
                     self.state = 2012
                     self._errHandler.sync(self)
                     _la = self._input.LA(1)
-                    while _la==SqlBaseParser.T__3:
+                    while _la == SqlBaseParser.T__3:
                         self.state = 2008
                         self.match(SqlBaseParser.T__3)
                         self.state = 2009
@@ -13370,8 +14056,6 @@ class SqlBaseParser ( Parser ):
                         self.state = 2014
                         self._errHandler.sync(self)
                         _la = self._input.LA(1)
-
-
 
                 self.state = 2017
                 self.match(SqlBaseParser.T__2)
@@ -13383,7 +14067,6 @@ class SqlBaseParser ( Parser ):
                 self.expression()
                 pass
 
-
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)
@@ -13392,16 +14075,17 @@ class SqlBaseParser ( Parser ):
             self.exitRule()
         return localctx
 
-
     class PivotClauseContext(ParserRuleContext):
-        __slots__ = 'parser'
+        __slots__ = "parser"
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
-            self.aggregates = None # NamedExpressionSeqContext
-            self._pivotValue = None # PivotValueContext
-            self.pivotValues = list() # of PivotValueContexts
+            self.aggregates = None  # NamedExpressionSeqContext
+            self._pivotValue = None  # PivotValueContext
+            self.pivotValues = list()  # of PivotValueContexts
 
         def PIVOT(self):
             return self.getToken(SqlBaseParser.PIVOT, 0)
@@ -13410,42 +14094,36 @@ class SqlBaseParser ( Parser ):
             return self.getToken(SqlBaseParser.FOR, 0)
 
         def pivotColumn(self):
-            return self.getTypedRuleContext(SqlBaseParser.PivotColumnContext,0)
-
+            return self.getTypedRuleContext(SqlBaseParser.PivotColumnContext, 0)
 
         def IN(self):
             return self.getToken(SqlBaseParser.IN, 0)
 
         def namedExpressionSeq(self):
-            return self.getTypedRuleContext(SqlBaseParser.NamedExpressionSeqContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.NamedExpressionSeqContext, 0)
 
-
-        def pivotValue(self, i:int=None):
+        def pivotValue(self, i: int = None):
             if i is None:
                 return self.getTypedRuleContexts(SqlBaseParser.PivotValueContext)
             else:
-                return self.getTypedRuleContext(SqlBaseParser.PivotValueContext,i)
-
+                return self.getTypedRuleContext(SqlBaseParser.PivotValueContext, i)
 
         def getRuleIndex(self):
             return SqlBaseParser.RULE_pivotClause
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterPivotClause" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterPivotClause"):
                 listener.enterPivotClause(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitPivotClause" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitPivotClause"):
                 listener.exitPivotClause(self)
-
-
-
 
     def pivotClause(self):
 
         localctx = SqlBaseParser.PivotClauseContext(self, self._ctx, self.state)
         self.enterRule(localctx, 134, self.RULE_pivotClause)
-        self._la = 0 # Token type
+        self._la = 0  # Token type
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 2021
@@ -13468,7 +14146,7 @@ class SqlBaseParser ( Parser ):
             self.state = 2033
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            while _la==SqlBaseParser.T__3:
+            while _la == SqlBaseParser.T__3:
                 self.state = 2029
                 self.match(SqlBaseParser.T__3)
                 self.state = 2030
@@ -13490,46 +14168,43 @@ class SqlBaseParser ( Parser ):
             self.exitRule()
         return localctx
 
-
     class PivotColumnContext(ParserRuleContext):
-        __slots__ = 'parser'
+        __slots__ = "parser"
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
-            self._identifier = None # IdentifierContext
-            self.identifiers = list() # of IdentifierContexts
+            self._identifier = None  # IdentifierContext
+            self.identifiers = list()  # of IdentifierContexts
 
-        def identifier(self, i:int=None):
+        def identifier(self, i: int = None):
             if i is None:
                 return self.getTypedRuleContexts(SqlBaseParser.IdentifierContext)
             else:
-                return self.getTypedRuleContext(SqlBaseParser.IdentifierContext,i)
-
+                return self.getTypedRuleContext(SqlBaseParser.IdentifierContext, i)
 
         def getRuleIndex(self):
             return SqlBaseParser.RULE_pivotColumn
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterPivotColumn" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterPivotColumn"):
                 listener.enterPivotColumn(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitPivotColumn" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitPivotColumn"):
                 listener.exitPivotColumn(self)
-
-
-
 
     def pivotColumn(self):
 
         localctx = SqlBaseParser.PivotColumnContext(self, self._ctx, self.state)
         self.enterRule(localctx, 136, self.RULE_pivotColumn)
-        self._la = 0 # Token type
+        self._la = 0  # Token type
         try:
             self.state = 2051
             self._errHandler.sync(self)
-            la_ = self._interp.adaptivePredict(self._input,250,self._ctx)
+            la_ = self._interp.adaptivePredict(self._input, 250, self._ctx)
             if la_ == 1:
                 self.enterOuterAlt(localctx, 1)
                 self.state = 2039
@@ -13547,7 +14222,7 @@ class SqlBaseParser ( Parser ):
                 self.state = 2046
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                while _la==SqlBaseParser.T__3:
+                while _la == SqlBaseParser.T__3:
                     self.state = 2042
                     self.match(SqlBaseParser.T__3)
                     self.state = 2043
@@ -13561,7 +14236,6 @@ class SqlBaseParser ( Parser ):
                 self.match(SqlBaseParser.T__2)
                 pass
 
-
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)
@@ -13570,21 +14244,20 @@ class SqlBaseParser ( Parser ):
             self.exitRule()
         return localctx
 
-
     class PivotValueContext(ParserRuleContext):
-        __slots__ = 'parser'
+        __slots__ = "parser"
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
         def expression(self):
-            return self.getTypedRuleContext(SqlBaseParser.ExpressionContext,0)
-
+            return self.getTypedRuleContext(SqlBaseParser.ExpressionContext, 0)
 
         def identifier(self):
-            return self.getTypedRuleContext(SqlBaseParser.IdentifierContext,0)
-
+            return self.getTypedRuleContext(SqlBaseParser.IdentifierContext, 0)
 
         def AS(self):
             return self.getToken(SqlBaseParser.AS, 0)
@@ -13592,16 +14265,13 @@ class SqlBaseParser ( Parser ):
         def getRuleIndex(self):
             return SqlBaseParser.RULE_pivotValue
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterPivotValue" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterPivotValue"):
                 listener.enterPivotValue(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitPivotValue" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitPivotValue"):
                 listener.exitPivotValue(self)
-
-
-
 
     def pivotValue(self):
 
@@ -13613,19 +14283,17 @@ class SqlBaseParser ( Parser ):
             self.expression()
             self.state = 2058
             self._errHandler.sync(self)
-            la_ = self._interp.adaptivePredict(self._input,252,self._ctx)
+            la_ = self._interp.adaptivePredict(self._input, 252, self._ctx)
             if la_ == 1:
                 self.state = 2055
                 self._errHandler.sync(self)
-                la_ = self._interp.adaptivePredict(self._input,251,self._ctx)
+                la_ = self._interp.adaptivePredict(self._input, 251, self._ctx)
                 if la_ == 1:
                     self.state = 2054
                     self.match(SqlBaseParser.AS)
 
-
                 self.state = 2057
                 self.identifier()
-
 
         except RecognitionException as re:
             localctx.exception = re
@@ -13635,16 +14303,17 @@ class SqlBaseParser ( Parser ):
             self.exitRule()
         return localctx
 
-
     class LateralViewContext(ParserRuleContext):
-        __slots__ = 'parser'
+        __slots__ = "parser"
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
-            self.tblName = None # IdentifierContext
-            self._identifier = None # IdentifierContext
-            self.colName = list() # of IdentifierContexts
+            self.tblName = None  # IdentifierContext
+            self._identifier = None  # IdentifierContext
+            self.colName = list()  # of IdentifierContexts
 
         def LATERAL(self):
             return self.getToken(SqlBaseParser.LATERAL, 0)
@@ -13653,25 +14322,22 @@ class SqlBaseParser ( Parser ):
             return self.getToken(SqlBaseParser.VIEW, 0)
 
         def qualifiedName(self):
-            return self.getTypedRuleContext(SqlBaseParser.QualifiedNameContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.QualifiedNameContext, 0)
 
-
-        def identifier(self, i:int=None):
+        def identifier(self, i: int = None):
             if i is None:
                 return self.getTypedRuleContexts(SqlBaseParser.IdentifierContext)
             else:
-                return self.getTypedRuleContext(SqlBaseParser.IdentifierContext,i)
-
+                return self.getTypedRuleContext(SqlBaseParser.IdentifierContext, i)
 
         def OUTER(self):
             return self.getToken(SqlBaseParser.OUTER, 0)
 
-        def expression(self, i:int=None):
+        def expression(self, i: int = None):
             if i is None:
                 return self.getTypedRuleContexts(SqlBaseParser.ExpressionContext)
             else:
-                return self.getTypedRuleContext(SqlBaseParser.ExpressionContext,i)
-
+                return self.getTypedRuleContext(SqlBaseParser.ExpressionContext, i)
 
         def AS(self):
             return self.getToken(SqlBaseParser.AS, 0)
@@ -13679,22 +14345,19 @@ class SqlBaseParser ( Parser ):
         def getRuleIndex(self):
             return SqlBaseParser.RULE_lateralView
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterLateralView" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterLateralView"):
                 listener.enterLateralView(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitLateralView" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitLateralView"):
                 listener.exitLateralView(self)
-
-
-
 
     def lateralView(self):
 
         localctx = SqlBaseParser.LateralViewContext(self, self._ctx, self.state)
         self.enterRule(localctx, 140, self.RULE_lateralView)
-        self._la = 0 # Token type
+        self._la = 0  # Token type
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 2060
@@ -13703,11 +14366,10 @@ class SqlBaseParser ( Parser ):
             self.match(SqlBaseParser.VIEW)
             self.state = 2063
             self._errHandler.sync(self)
-            la_ = self._interp.adaptivePredict(self._input,253,self._ctx)
+            la_ = self._interp.adaptivePredict(self._input, 253, self._ctx)
             if la_ == 1:
                 self.state = 2062
                 self.match(SqlBaseParser.OUTER)
-
 
             self.state = 2065
             self.qualifiedName()
@@ -13715,14 +14377,14 @@ class SqlBaseParser ( Parser ):
             self.match(SqlBaseParser.T__1)
             self.state = 2075
             self._errHandler.sync(self)
-            la_ = self._interp.adaptivePredict(self._input,255,self._ctx)
+            la_ = self._interp.adaptivePredict(self._input, 255, self._ctx)
             if la_ == 1:
                 self.state = 2067
                 self.expression()
                 self.state = 2072
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                while _la==SqlBaseParser.T__3:
+                while _la == SqlBaseParser.T__3:
                     self.state = 2068
                     self.match(SqlBaseParser.T__3)
                     self.state = 2069
@@ -13731,42 +14393,37 @@ class SqlBaseParser ( Parser ):
                     self._errHandler.sync(self)
                     _la = self._input.LA(1)
 
-
-
             self.state = 2077
             self.match(SqlBaseParser.T__2)
             self.state = 2078
             localctx.tblName = self.identifier()
             self.state = 2090
             self._errHandler.sync(self)
-            la_ = self._interp.adaptivePredict(self._input,258,self._ctx)
+            la_ = self._interp.adaptivePredict(self._input, 258, self._ctx)
             if la_ == 1:
                 self.state = 2080
                 self._errHandler.sync(self)
-                la_ = self._interp.adaptivePredict(self._input,256,self._ctx)
+                la_ = self._interp.adaptivePredict(self._input, 256, self._ctx)
                 if la_ == 1:
                     self.state = 2079
                     self.match(SqlBaseParser.AS)
-
 
                 self.state = 2082
                 localctx._identifier = self.identifier()
                 localctx.colName.append(localctx._identifier)
                 self.state = 2087
                 self._errHandler.sync(self)
-                _alt = self._interp.adaptivePredict(self._input,257,self._ctx)
-                while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
-                    if _alt==1:
+                _alt = self._interp.adaptivePredict(self._input, 257, self._ctx)
+                while _alt != 2 and _alt != ATN.INVALID_ALT_NUMBER:
+                    if _alt == 1:
                         self.state = 2083
                         self.match(SqlBaseParser.T__3)
                         self.state = 2084
                         localctx._identifier = self.identifier()
-                        localctx.colName.append(localctx._identifier) 
+                        localctx.colName.append(localctx._identifier)
                     self.state = 2089
                     self._errHandler.sync(self)
-                    _alt = self._interp.adaptivePredict(self._input,257,self._ctx)
-
-
+                    _alt = self._interp.adaptivePredict(self._input, 257, self._ctx)
 
         except RecognitionException as re:
             localctx.exception = re
@@ -13776,11 +14433,12 @@ class SqlBaseParser ( Parser ):
             self.exitRule()
         return localctx
 
-
     class SetQuantifierContext(ParserRuleContext):
-        __slots__ = 'parser'
+        __slots__ = "parser"
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
@@ -13793,27 +14451,24 @@ class SqlBaseParser ( Parser ):
         def getRuleIndex(self):
             return SqlBaseParser.RULE_setQuantifier
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterSetQuantifier" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterSetQuantifier"):
                 listener.enterSetQuantifier(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitSetQuantifier" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitSetQuantifier"):
                 listener.exitSetQuantifier(self)
-
-
-
 
     def setQuantifier(self):
 
         localctx = SqlBaseParser.SetQuantifierContext(self, self._ctx, self.state)
         self.enterRule(localctx, 142, self.RULE_setQuantifier)
-        self._la = 0 # Token type
+        self._la = 0  # Token type
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 2092
             _la = self._input.LA(1)
-            if not(_la==SqlBaseParser.ALL or _la==SqlBaseParser.DISTINCT):
+            if not (_la == SqlBaseParser.ALL or _la == SqlBaseParser.DISTINCT):
                 self._errHandler.recoverInline(self)
             else:
                 self._errHandler.reportMatch(self)
@@ -13826,41 +14481,37 @@ class SqlBaseParser ( Parser ):
             self.exitRule()
         return localctx
 
-
     class RelationContext(ParserRuleContext):
-        __slots__ = 'parser'
+        __slots__ = "parser"
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
         def relationPrimary(self):
-            return self.getTypedRuleContext(SqlBaseParser.RelationPrimaryContext,0)
-
+            return self.getTypedRuleContext(SqlBaseParser.RelationPrimaryContext, 0)
 
         def LATERAL(self):
             return self.getToken(SqlBaseParser.LATERAL, 0)
 
-        def joinRelation(self, i:int=None):
+        def joinRelation(self, i: int = None):
             if i is None:
                 return self.getTypedRuleContexts(SqlBaseParser.JoinRelationContext)
             else:
-                return self.getTypedRuleContext(SqlBaseParser.JoinRelationContext,i)
-
+                return self.getTypedRuleContext(SqlBaseParser.JoinRelationContext, i)
 
         def getRuleIndex(self):
             return SqlBaseParser.RULE_relation
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterRelation" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterRelation"):
                 listener.enterRelation(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitRelation" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitRelation"):
                 listener.exitRelation(self)
-
-
-
 
     def relation(self):
 
@@ -13870,24 +14521,23 @@ class SqlBaseParser ( Parser ):
             self.enterOuterAlt(localctx, 1)
             self.state = 2095
             self._errHandler.sync(self)
-            la_ = self._interp.adaptivePredict(self._input,259,self._ctx)
+            la_ = self._interp.adaptivePredict(self._input, 259, self._ctx)
             if la_ == 1:
                 self.state = 2094
                 self.match(SqlBaseParser.LATERAL)
-
 
             self.state = 2097
             self.relationPrimary()
             self.state = 2101
             self._errHandler.sync(self)
-            _alt = self._interp.adaptivePredict(self._input,260,self._ctx)
-            while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
-                if _alt==1:
+            _alt = self._interp.adaptivePredict(self._input, 260, self._ctx)
+            while _alt != 2 and _alt != ATN.INVALID_ALT_NUMBER:
+                if _alt == 1:
                     self.state = 2098
-                    self.joinRelation() 
+                    self.joinRelation()
                 self.state = 2103
                 self._errHandler.sync(self)
-                _alt = self._interp.adaptivePredict(self._input,260,self._ctx)
+                _alt = self._interp.adaptivePredict(self._input, 260, self._ctx)
 
         except RecognitionException as re:
             localctx.exception = re
@@ -13897,32 +14547,30 @@ class SqlBaseParser ( Parser ):
             self.exitRule()
         return localctx
 
-
     class JoinRelationContext(ParserRuleContext):
-        __slots__ = 'parser'
+        __slots__ = "parser"
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
-            self.right = None # RelationPrimaryContext
+            self.right = None  # RelationPrimaryContext
 
         def JOIN(self):
             return self.getToken(SqlBaseParser.JOIN, 0)
 
         def relationPrimary(self):
-            return self.getTypedRuleContext(SqlBaseParser.RelationPrimaryContext,0)
-
+            return self.getTypedRuleContext(SqlBaseParser.RelationPrimaryContext, 0)
 
         def joinType(self):
-            return self.getTypedRuleContext(SqlBaseParser.JoinTypeContext,0)
-
+            return self.getTypedRuleContext(SqlBaseParser.JoinTypeContext, 0)
 
         def LATERAL(self):
             return self.getToken(SqlBaseParser.LATERAL, 0)
 
         def joinCriteria(self):
-            return self.getTypedRuleContext(SqlBaseParser.JoinCriteriaContext,0)
-
+            return self.getTypedRuleContext(SqlBaseParser.JoinCriteriaContext, 0)
 
         def NATURAL(self):
             return self.getToken(SqlBaseParser.NATURAL, 0)
@@ -13930,16 +14578,13 @@ class SqlBaseParser ( Parser ):
         def getRuleIndex(self):
             return SqlBaseParser.RULE_joinRelation
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterJoinRelation" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterJoinRelation"):
                 listener.enterJoinRelation(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitJoinRelation" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitJoinRelation"):
                 listener.exitJoinRelation(self)
-
-
-
 
     def joinRelation(self):
 
@@ -13949,7 +14594,16 @@ class SqlBaseParser ( Parser ):
             self.state = 2121
             self._errHandler.sync(self)
             token = self._input.LA(1)
-            if token in [SqlBaseParser.ANTI, SqlBaseParser.CROSS, SqlBaseParser.FULL, SqlBaseParser.INNER, SqlBaseParser.JOIN, SqlBaseParser.LEFT, SqlBaseParser.RIGHT, SqlBaseParser.SEMI]:
+            if token in [
+                SqlBaseParser.ANTI,
+                SqlBaseParser.CROSS,
+                SqlBaseParser.FULL,
+                SqlBaseParser.INNER,
+                SqlBaseParser.JOIN,
+                SqlBaseParser.LEFT,
+                SqlBaseParser.RIGHT,
+                SqlBaseParser.SEMI,
+            ]:
                 self.enterOuterAlt(localctx, 1)
                 self.state = 2104
                 self.joinType()
@@ -13957,21 +14611,19 @@ class SqlBaseParser ( Parser ):
                 self.match(SqlBaseParser.JOIN)
                 self.state = 2107
                 self._errHandler.sync(self)
-                la_ = self._interp.adaptivePredict(self._input,261,self._ctx)
+                la_ = self._interp.adaptivePredict(self._input, 261, self._ctx)
                 if la_ == 1:
                     self.state = 2106
                     self.match(SqlBaseParser.LATERAL)
-
 
                 self.state = 2109
                 localctx.right = self.relationPrimary()
                 self.state = 2111
                 self._errHandler.sync(self)
-                la_ = self._interp.adaptivePredict(self._input,262,self._ctx)
+                la_ = self._interp.adaptivePredict(self._input, 262, self._ctx)
                 if la_ == 1:
                     self.state = 2110
                     self.joinCriteria()
-
 
                 pass
             elif token in [SqlBaseParser.NATURAL]:
@@ -13984,11 +14636,10 @@ class SqlBaseParser ( Parser ):
                 self.match(SqlBaseParser.JOIN)
                 self.state = 2117
                 self._errHandler.sync(self)
-                la_ = self._interp.adaptivePredict(self._input,263,self._ctx)
+                la_ = self._interp.adaptivePredict(self._input, 263, self._ctx)
                 if la_ == 1:
                     self.state = 2116
                     self.match(SqlBaseParser.LATERAL)
-
 
                 self.state = 2119
                 localctx.right = self.relationPrimary()
@@ -14004,11 +14655,12 @@ class SqlBaseParser ( Parser ):
             self.exitRule()
         return localctx
 
-
     class JoinTypeContext(ParserRuleContext):
-        __slots__ = 'parser'
+        __slots__ = "parser"
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
@@ -14039,35 +14691,31 @@ class SqlBaseParser ( Parser ):
         def getRuleIndex(self):
             return SqlBaseParser.RULE_joinType
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterJoinType" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterJoinType"):
                 listener.enterJoinType(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitJoinType" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitJoinType"):
                 listener.exitJoinType(self)
-
-
-
 
     def joinType(self):
 
         localctx = SqlBaseParser.JoinTypeContext(self, self._ctx, self.state)
         self.enterRule(localctx, 148, self.RULE_joinType)
-        self._la = 0 # Token type
+        self._la = 0  # Token type
         try:
             self.state = 2147
             self._errHandler.sync(self)
-            la_ = self._interp.adaptivePredict(self._input,271,self._ctx)
+            la_ = self._interp.adaptivePredict(self._input, 271, self._ctx)
             if la_ == 1:
                 self.enterOuterAlt(localctx, 1)
                 self.state = 2124
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==SqlBaseParser.INNER:
+                if _la == SqlBaseParser.INNER:
                     self.state = 2123
                     self.match(SqlBaseParser.INNER)
-
 
                 pass
 
@@ -14084,10 +14732,9 @@ class SqlBaseParser ( Parser ):
                 self.state = 2129
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==SqlBaseParser.OUTER:
+                if _la == SqlBaseParser.OUTER:
                     self.state = 2128
                     self.match(SqlBaseParser.OUTER)
-
 
                 pass
 
@@ -14096,10 +14743,9 @@ class SqlBaseParser ( Parser ):
                 self.state = 2132
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==SqlBaseParser.LEFT:
+                if _la == SqlBaseParser.LEFT:
                     self.state = 2131
                     self.match(SqlBaseParser.LEFT)
-
 
                 self.state = 2134
                 self.match(SqlBaseParser.SEMI)
@@ -14112,10 +14758,9 @@ class SqlBaseParser ( Parser ):
                 self.state = 2137
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==SqlBaseParser.OUTER:
+                if _la == SqlBaseParser.OUTER:
                     self.state = 2136
                     self.match(SqlBaseParser.OUTER)
-
 
                 pass
 
@@ -14126,10 +14771,9 @@ class SqlBaseParser ( Parser ):
                 self.state = 2141
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==SqlBaseParser.OUTER:
+                if _la == SqlBaseParser.OUTER:
                     self.state = 2140
                     self.match(SqlBaseParser.OUTER)
-
 
                 pass
 
@@ -14138,15 +14782,13 @@ class SqlBaseParser ( Parser ):
                 self.state = 2144
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==SqlBaseParser.LEFT:
+                if _la == SqlBaseParser.LEFT:
                     self.state = 2143
                     self.match(SqlBaseParser.LEFT)
-
 
                 self.state = 2146
                 self.match(SqlBaseParser.ANTI)
                 pass
-
 
         except RecognitionException as re:
             localctx.exception = re
@@ -14156,11 +14798,12 @@ class SqlBaseParser ( Parser ):
             self.exitRule()
         return localctx
 
-
     class JoinCriteriaContext(ParserRuleContext):
-        __slots__ = 'parser'
+        __slots__ = "parser"
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
@@ -14168,29 +14811,24 @@ class SqlBaseParser ( Parser ):
             return self.getToken(SqlBaseParser.ON, 0)
 
         def booleanExpression(self):
-            return self.getTypedRuleContext(SqlBaseParser.BooleanExpressionContext,0)
-
+            return self.getTypedRuleContext(SqlBaseParser.BooleanExpressionContext, 0)
 
         def USING(self):
             return self.getToken(SqlBaseParser.USING, 0)
 
         def identifierList(self):
-            return self.getTypedRuleContext(SqlBaseParser.IdentifierListContext,0)
-
+            return self.getTypedRuleContext(SqlBaseParser.IdentifierListContext, 0)
 
         def getRuleIndex(self):
             return SqlBaseParser.RULE_joinCriteria
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterJoinCriteria" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterJoinCriteria"):
                 listener.enterJoinCriteria(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitJoinCriteria" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitJoinCriteria"):
                 listener.exitJoinCriteria(self)
-
-
-
 
     def joinCriteria(self):
 
@@ -14225,11 +14863,12 @@ class SqlBaseParser ( Parser ):
             self.exitRule()
         return localctx
 
-
     class SampleContext(ParserRuleContext):
-        __slots__ = 'parser'
+        __slots__ = "parser"
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
@@ -14237,22 +14876,18 @@ class SqlBaseParser ( Parser ):
             return self.getToken(SqlBaseParser.TABLESAMPLE, 0)
 
         def sampleMethod(self):
-            return self.getTypedRuleContext(SqlBaseParser.SampleMethodContext,0)
-
+            return self.getTypedRuleContext(SqlBaseParser.SampleMethodContext, 0)
 
         def getRuleIndex(self):
             return SqlBaseParser.RULE_sample
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterSample" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterSample"):
                 listener.enterSample(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitSample" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitSample"):
                 listener.exitSample(self)
-
-
-
 
     def sample(self):
 
@@ -14266,11 +14901,10 @@ class SqlBaseParser ( Parser ):
             self.match(SqlBaseParser.T__1)
             self.state = 2158
             self._errHandler.sync(self)
-            la_ = self._interp.adaptivePredict(self._input,273,self._ctx)
+            la_ = self._interp.adaptivePredict(self._input, 273, self._ctx)
             if la_ == 1:
                 self.state = 2157
                 self.sampleMethod()
-
 
             self.state = 2160
             self.match(SqlBaseParser.T__2)
@@ -14282,154 +14916,158 @@ class SqlBaseParser ( Parser ):
             self.exitRule()
         return localctx
 
-
     class SampleMethodContext(ParserRuleContext):
-        __slots__ = 'parser'
+        __slots__ = "parser"
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
-
 
         def getRuleIndex(self):
             return SqlBaseParser.RULE_sampleMethod
 
-     
-        def copyFrom(self, ctx:ParserRuleContext):
+        def copyFrom(self, ctx: ParserRuleContext):
             super().copyFrom(ctx)
 
-
-
     class SampleByRowsContext(SampleMethodContext):
-
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a SqlBaseParser.SampleMethodContext
+        def __init__(
+            self, parser, ctx: ParserRuleContext
+        ):  # actually a SqlBaseParser.SampleMethodContext
             super().__init__(parser)
             self.copyFrom(ctx)
 
         def expression(self):
-            return self.getTypedRuleContext(SqlBaseParser.ExpressionContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.ExpressionContext, 0)
 
         def ROWS(self):
             return self.getToken(SqlBaseParser.ROWS, 0)
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterSampleByRows" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterSampleByRows"):
                 listener.enterSampleByRows(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitSampleByRows" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitSampleByRows"):
                 listener.exitSampleByRows(self)
 
-
     class SampleByPercentileContext(SampleMethodContext):
-
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a SqlBaseParser.SampleMethodContext
+        def __init__(
+            self, parser, ctx: ParserRuleContext
+        ):  # actually a SqlBaseParser.SampleMethodContext
             super().__init__(parser)
-            self.negativeSign = None # Token
-            self.percentage = None # Token
+            self.negativeSign = None  # Token
+            self.percentage = None  # Token
             self.copyFrom(ctx)
 
         def PERCENTLIT(self):
             return self.getToken(SqlBaseParser.PERCENTLIT, 0)
+
         def INTEGER_VALUE(self):
             return self.getToken(SqlBaseParser.INTEGER_VALUE, 0)
+
         def DECIMAL_VALUE(self):
             return self.getToken(SqlBaseParser.DECIMAL_VALUE, 0)
+
         def MINUS(self):
             return self.getToken(SqlBaseParser.MINUS, 0)
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterSampleByPercentile" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterSampleByPercentile"):
                 listener.enterSampleByPercentile(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitSampleByPercentile" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitSampleByPercentile"):
                 listener.exitSampleByPercentile(self)
 
-
     class SampleByBucketContext(SampleMethodContext):
-
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a SqlBaseParser.SampleMethodContext
+        def __init__(
+            self, parser, ctx: ParserRuleContext
+        ):  # actually a SqlBaseParser.SampleMethodContext
             super().__init__(parser)
-            self.sampleType = None # Token
-            self.numerator = None # Token
-            self.denominator = None # Token
+            self.sampleType = None  # Token
+            self.numerator = None  # Token
+            self.denominator = None  # Token
             self.copyFrom(ctx)
 
         def OUT(self):
             return self.getToken(SqlBaseParser.OUT, 0)
+
         def OF(self):
             return self.getToken(SqlBaseParser.OF, 0)
+
         def BUCKET(self):
             return self.getToken(SqlBaseParser.BUCKET, 0)
-        def INTEGER_VALUE(self, i:int=None):
+
+        def INTEGER_VALUE(self, i: int = None):
             if i is None:
                 return self.getTokens(SqlBaseParser.INTEGER_VALUE)
             else:
                 return self.getToken(SqlBaseParser.INTEGER_VALUE, i)
+
         def ON(self):
             return self.getToken(SqlBaseParser.ON, 0)
+
         def identifier(self):
-            return self.getTypedRuleContext(SqlBaseParser.IdentifierContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.IdentifierContext, 0)
 
         def qualifiedName(self):
-            return self.getTypedRuleContext(SqlBaseParser.QualifiedNameContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.QualifiedNameContext, 0)
 
-
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterSampleByBucket" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterSampleByBucket"):
                 listener.enterSampleByBucket(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitSampleByBucket" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitSampleByBucket"):
                 listener.exitSampleByBucket(self)
 
-
     class SampleByBytesContext(SampleMethodContext):
-
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a SqlBaseParser.SampleMethodContext
+        def __init__(
+            self, parser, ctx: ParserRuleContext
+        ):  # actually a SqlBaseParser.SampleMethodContext
             super().__init__(parser)
-            self.bytes = None # ExpressionContext
+            self.bytes = None  # ExpressionContext
             self.copyFrom(ctx)
 
         def expression(self):
-            return self.getTypedRuleContext(SqlBaseParser.ExpressionContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.ExpressionContext, 0)
 
-
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterSampleByBytes" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterSampleByBytes"):
                 listener.enterSampleByBytes(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitSampleByBytes" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitSampleByBytes"):
                 listener.exitSampleByBytes(self)
-
-
 
     def sampleMethod(self):
 
         localctx = SqlBaseParser.SampleMethodContext(self, self._ctx, self.state)
         self.enterRule(localctx, 154, self.RULE_sampleMethod)
-        self._la = 0 # Token type
+        self._la = 0  # Token type
         try:
             self.state = 2186
             self._errHandler.sync(self)
-            la_ = self._interp.adaptivePredict(self._input,277,self._ctx)
+            la_ = self._interp.adaptivePredict(self._input, 277, self._ctx)
             if la_ == 1:
                 localctx = SqlBaseParser.SampleByPercentileContext(self, localctx)
                 self.enterOuterAlt(localctx, 1)
                 self.state = 2163
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==SqlBaseParser.MINUS:
+                if _la == SqlBaseParser.MINUS:
                     self.state = 2162
                     localctx.negativeSign = self.match(SqlBaseParser.MINUS)
-
 
                 self.state = 2165
                 localctx.percentage = self._input.LT(1)
                 _la = self._input.LA(1)
-                if not(_la==SqlBaseParser.INTEGER_VALUE or _la==SqlBaseParser.DECIMAL_VALUE):
+                if not (
+                    _la == SqlBaseParser.INTEGER_VALUE
+                    or _la == SqlBaseParser.DECIMAL_VALUE
+                ):
                     localctx.percentage = self._errHandler.recoverInline(self)
                 else:
                     self._errHandler.reportMatch(self)
@@ -14463,12 +15101,12 @@ class SqlBaseParser ( Parser ):
                 self.state = 2183
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==SqlBaseParser.ON:
+                if _la == SqlBaseParser.ON:
                     self.state = 2175
                     self.match(SqlBaseParser.ON)
                     self.state = 2181
                     self._errHandler.sync(self)
-                    la_ = self._interp.adaptivePredict(self._input,275,self._ctx)
+                    la_ = self._interp.adaptivePredict(self._input, 275, self._ctx)
                     if la_ == 1:
                         self.state = 2176
                         self.identifier()
@@ -14483,9 +15121,6 @@ class SqlBaseParser ( Parser ):
                         self.match(SqlBaseParser.T__2)
                         pass
 
-
-
-
                 pass
 
             elif la_ == 4:
@@ -14495,7 +15130,6 @@ class SqlBaseParser ( Parser ):
                 localctx.bytes = self.expression()
                 pass
 
-
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)
@@ -14504,31 +15138,28 @@ class SqlBaseParser ( Parser ):
             self.exitRule()
         return localctx
 
-
     class IdentifierListContext(ParserRuleContext):
-        __slots__ = 'parser'
+        __slots__ = "parser"
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
         def identifierSeq(self):
-            return self.getTypedRuleContext(SqlBaseParser.IdentifierSeqContext,0)
-
+            return self.getTypedRuleContext(SqlBaseParser.IdentifierSeqContext, 0)
 
         def getRuleIndex(self):
             return SqlBaseParser.RULE_identifierList
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterIdentifierList" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterIdentifierList"):
                 listener.enterIdentifierList(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitIdentifierList" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitIdentifierList"):
                 listener.exitIdentifierList(self)
-
-
-
 
     def identifierList(self):
 
@@ -14550,36 +15181,37 @@ class SqlBaseParser ( Parser ):
             self.exitRule()
         return localctx
 
-
     class IdentifierSeqContext(ParserRuleContext):
-        __slots__ = 'parser'
+        __slots__ = "parser"
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
-            self._errorCapturingIdentifier = None # ErrorCapturingIdentifierContext
-            self.ident = list() # of ErrorCapturingIdentifierContexts
+            self._errorCapturingIdentifier = None  # ErrorCapturingIdentifierContext
+            self.ident = list()  # of ErrorCapturingIdentifierContexts
 
-        def errorCapturingIdentifier(self, i:int=None):
+        def errorCapturingIdentifier(self, i: int = None):
             if i is None:
-                return self.getTypedRuleContexts(SqlBaseParser.ErrorCapturingIdentifierContext)
+                return self.getTypedRuleContexts(
+                    SqlBaseParser.ErrorCapturingIdentifierContext
+                )
             else:
-                return self.getTypedRuleContext(SqlBaseParser.ErrorCapturingIdentifierContext,i)
-
+                return self.getTypedRuleContext(
+                    SqlBaseParser.ErrorCapturingIdentifierContext, i
+                )
 
         def getRuleIndex(self):
             return SqlBaseParser.RULE_identifierSeq
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterIdentifierSeq" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterIdentifierSeq"):
                 listener.enterIdentifierSeq(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitIdentifierSeq" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitIdentifierSeq"):
                 listener.exitIdentifierSeq(self)
-
-
-
 
     def identifierSeq(self):
 
@@ -14592,17 +15224,17 @@ class SqlBaseParser ( Parser ):
             localctx.ident.append(localctx._errorCapturingIdentifier)
             self.state = 2197
             self._errHandler.sync(self)
-            _alt = self._interp.adaptivePredict(self._input,278,self._ctx)
-            while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
-                if _alt==1:
+            _alt = self._interp.adaptivePredict(self._input, 278, self._ctx)
+            while _alt != 2 and _alt != ATN.INVALID_ALT_NUMBER:
+                if _alt == 1:
                     self.state = 2193
                     self.match(SqlBaseParser.T__3)
                     self.state = 2194
                     localctx._errorCapturingIdentifier = self.errorCapturingIdentifier()
-                    localctx.ident.append(localctx._errorCapturingIdentifier) 
+                    localctx.ident.append(localctx._errorCapturingIdentifier)
                 self.state = 2199
                 self._errHandler.sync(self)
-                _alt = self._interp.adaptivePredict(self._input,278,self._ctx)
+                _alt = self._interp.adaptivePredict(self._input, 278, self._ctx)
 
         except RecognitionException as re:
             localctx.exception = re
@@ -14612,40 +15244,41 @@ class SqlBaseParser ( Parser ):
             self.exitRule()
         return localctx
 
-
     class OrderedIdentifierListContext(ParserRuleContext):
-        __slots__ = 'parser'
+        __slots__ = "parser"
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
-        def orderedIdentifier(self, i:int=None):
+        def orderedIdentifier(self, i: int = None):
             if i is None:
                 return self.getTypedRuleContexts(SqlBaseParser.OrderedIdentifierContext)
             else:
-                return self.getTypedRuleContext(SqlBaseParser.OrderedIdentifierContext,i)
-
+                return self.getTypedRuleContext(
+                    SqlBaseParser.OrderedIdentifierContext, i
+                )
 
         def getRuleIndex(self):
             return SqlBaseParser.RULE_orderedIdentifierList
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterOrderedIdentifierList" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterOrderedIdentifierList"):
                 listener.enterOrderedIdentifierList(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitOrderedIdentifierList" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitOrderedIdentifierList"):
                 listener.exitOrderedIdentifierList(self)
-
-
-
 
     def orderedIdentifierList(self):
 
-        localctx = SqlBaseParser.OrderedIdentifierListContext(self, self._ctx, self.state)
+        localctx = SqlBaseParser.OrderedIdentifierListContext(
+            self, self._ctx, self.state
+        )
         self.enterRule(localctx, 160, self.RULE_orderedIdentifierList)
-        self._la = 0 # Token type
+        self._la = 0  # Token type
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 2200
@@ -14655,7 +15288,7 @@ class SqlBaseParser ( Parser ):
             self.state = 2206
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            while _la==SqlBaseParser.T__3:
+            while _la == SqlBaseParser.T__3:
                 self.state = 2202
                 self.match(SqlBaseParser.T__3)
                 self.state = 2203
@@ -14674,19 +15307,21 @@ class SqlBaseParser ( Parser ):
             self.exitRule()
         return localctx
 
-
     class OrderedIdentifierContext(ParserRuleContext):
-        __slots__ = 'parser'
+        __slots__ = "parser"
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
-            self.ident = None # ErrorCapturingIdentifierContext
-            self.ordering = None # Token
+            self.ident = None  # ErrorCapturingIdentifierContext
+            self.ordering = None  # Token
 
         def errorCapturingIdentifier(self):
-            return self.getTypedRuleContext(SqlBaseParser.ErrorCapturingIdentifierContext,0)
-
+            return self.getTypedRuleContext(
+                SqlBaseParser.ErrorCapturingIdentifierContext, 0
+            )
 
         def ASC(self):
             return self.getToken(SqlBaseParser.ASC, 0)
@@ -14697,22 +15332,19 @@ class SqlBaseParser ( Parser ):
         def getRuleIndex(self):
             return SqlBaseParser.RULE_orderedIdentifier
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterOrderedIdentifier" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterOrderedIdentifier"):
                 listener.enterOrderedIdentifier(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitOrderedIdentifier" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitOrderedIdentifier"):
                 listener.exitOrderedIdentifier(self)
-
-
-
 
     def orderedIdentifier(self):
 
         localctx = SqlBaseParser.OrderedIdentifierContext(self, self._ctx, self.state)
         self.enterRule(localctx, 162, self.RULE_orderedIdentifier)
-        self._la = 0 # Token type
+        self._la = 0  # Token type
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 2211
@@ -14720,16 +15352,15 @@ class SqlBaseParser ( Parser ):
             self.state = 2213
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if _la==SqlBaseParser.ASC or _la==SqlBaseParser.DESC:
+            if _la == SqlBaseParser.ASC or _la == SqlBaseParser.DESC:
                 self.state = 2212
                 localctx.ordering = self._input.LT(1)
                 _la = self._input.LA(1)
-                if not(_la==SqlBaseParser.ASC or _la==SqlBaseParser.DESC):
+                if not (_la == SqlBaseParser.ASC or _la == SqlBaseParser.DESC):
                     localctx.ordering = self._errHandler.recoverInline(self)
                 else:
                     self._errHandler.reportMatch(self)
                     self.consume()
-
 
         except RecognitionException as re:
             localctx.exception = re
@@ -14739,40 +15370,41 @@ class SqlBaseParser ( Parser ):
             self.exitRule()
         return localctx
 
-
     class IdentifierCommentListContext(ParserRuleContext):
-        __slots__ = 'parser'
+        __slots__ = "parser"
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
-        def identifierComment(self, i:int=None):
+        def identifierComment(self, i: int = None):
             if i is None:
                 return self.getTypedRuleContexts(SqlBaseParser.IdentifierCommentContext)
             else:
-                return self.getTypedRuleContext(SqlBaseParser.IdentifierCommentContext,i)
-
+                return self.getTypedRuleContext(
+                    SqlBaseParser.IdentifierCommentContext, i
+                )
 
         def getRuleIndex(self):
             return SqlBaseParser.RULE_identifierCommentList
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterIdentifierCommentList" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterIdentifierCommentList"):
                 listener.enterIdentifierCommentList(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitIdentifierCommentList" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitIdentifierCommentList"):
                 listener.exitIdentifierCommentList(self)
-
-
-
 
     def identifierCommentList(self):
 
-        localctx = SqlBaseParser.IdentifierCommentListContext(self, self._ctx, self.state)
+        localctx = SqlBaseParser.IdentifierCommentListContext(
+            self, self._ctx, self.state
+        )
         self.enterRule(localctx, 164, self.RULE_identifierCommentList)
-        self._la = 0 # Token type
+        self._la = 0  # Token type
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 2215
@@ -14782,7 +15414,7 @@ class SqlBaseParser ( Parser ):
             self.state = 2221
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            while _la==SqlBaseParser.T__3:
+            while _la == SqlBaseParser.T__3:
                 self.state = 2217
                 self.match(SqlBaseParser.T__3)
                 self.state = 2218
@@ -14801,41 +15433,37 @@ class SqlBaseParser ( Parser ):
             self.exitRule()
         return localctx
 
-
     class IdentifierCommentContext(ParserRuleContext):
-        __slots__ = 'parser'
+        __slots__ = "parser"
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
         def identifier(self):
-            return self.getTypedRuleContext(SqlBaseParser.IdentifierContext,0)
-
+            return self.getTypedRuleContext(SqlBaseParser.IdentifierContext, 0)
 
         def commentSpec(self):
-            return self.getTypedRuleContext(SqlBaseParser.CommentSpecContext,0)
-
+            return self.getTypedRuleContext(SqlBaseParser.CommentSpecContext, 0)
 
         def getRuleIndex(self):
             return SqlBaseParser.RULE_identifierComment
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterIdentifierComment" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterIdentifierComment"):
                 listener.enterIdentifierComment(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitIdentifierComment" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitIdentifierComment"):
                 listener.exitIdentifierComment(self)
-
-
-
 
     def identifierComment(self):
 
         localctx = SqlBaseParser.IdentifierCommentContext(self, self._ctx, self.state)
         self.enterRule(localctx, 166, self.RULE_identifierComment)
-        self._la = 0 # Token type
+        self._la = 0  # Token type
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 2226
@@ -14843,10 +15471,9 @@ class SqlBaseParser ( Parser ):
             self.state = 2228
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if _la==SqlBaseParser.COMMENT:
+            if _la == SqlBaseParser.COMMENT:
                 self.state = 2227
                 self.commentSpec()
-
 
         except RecognitionException as re:
             localctx.exception = re
@@ -14856,137 +15483,128 @@ class SqlBaseParser ( Parser ):
             self.exitRule()
         return localctx
 
-
     class RelationPrimaryContext(ParserRuleContext):
-        __slots__ = 'parser'
+        __slots__ = "parser"
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
-
 
         def getRuleIndex(self):
             return SqlBaseParser.RULE_relationPrimary
 
-     
-        def copyFrom(self, ctx:ParserRuleContext):
+        def copyFrom(self, ctx: ParserRuleContext):
             super().copyFrom(ctx)
 
-
-
     class TableValuedFunctionContext(RelationPrimaryContext):
-
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a SqlBaseParser.RelationPrimaryContext
+        def __init__(
+            self, parser, ctx: ParserRuleContext
+        ):  # actually a SqlBaseParser.RelationPrimaryContext
             super().__init__(parser)
             self.copyFrom(ctx)
 
         def functionTable(self):
-            return self.getTypedRuleContext(SqlBaseParser.FunctionTableContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.FunctionTableContext, 0)
 
-
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterTableValuedFunction" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterTableValuedFunction"):
                 listener.enterTableValuedFunction(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitTableValuedFunction" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitTableValuedFunction"):
                 listener.exitTableValuedFunction(self)
 
-
     class InlineTableDefault2Context(RelationPrimaryContext):
-
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a SqlBaseParser.RelationPrimaryContext
+        def __init__(
+            self, parser, ctx: ParserRuleContext
+        ):  # actually a SqlBaseParser.RelationPrimaryContext
             super().__init__(parser)
             self.copyFrom(ctx)
 
         def inlineTable(self):
-            return self.getTypedRuleContext(SqlBaseParser.InlineTableContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.InlineTableContext, 0)
 
-
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterInlineTableDefault2" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterInlineTableDefault2"):
                 listener.enterInlineTableDefault2(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitInlineTableDefault2" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitInlineTableDefault2"):
                 listener.exitInlineTableDefault2(self)
 
-
     class AliasedRelationContext(RelationPrimaryContext):
-
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a SqlBaseParser.RelationPrimaryContext
+        def __init__(
+            self, parser, ctx: ParserRuleContext
+        ):  # actually a SqlBaseParser.RelationPrimaryContext
             super().__init__(parser)
             self.copyFrom(ctx)
 
         def relation(self):
-            return self.getTypedRuleContext(SqlBaseParser.RelationContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.RelationContext, 0)
 
         def tableAlias(self):
-            return self.getTypedRuleContext(SqlBaseParser.TableAliasContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.TableAliasContext, 0)
 
         def sample(self):
-            return self.getTypedRuleContext(SqlBaseParser.SampleContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.SampleContext, 0)
 
-
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterAliasedRelation" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterAliasedRelation"):
                 listener.enterAliasedRelation(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitAliasedRelation" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitAliasedRelation"):
                 listener.exitAliasedRelation(self)
 
-
     class AliasedQueryContext(RelationPrimaryContext):
-
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a SqlBaseParser.RelationPrimaryContext
+        def __init__(
+            self, parser, ctx: ParserRuleContext
+        ):  # actually a SqlBaseParser.RelationPrimaryContext
             super().__init__(parser)
             self.copyFrom(ctx)
 
         def query(self):
-            return self.getTypedRuleContext(SqlBaseParser.QueryContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.QueryContext, 0)
 
         def tableAlias(self):
-            return self.getTypedRuleContext(SqlBaseParser.TableAliasContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.TableAliasContext, 0)
 
         def sample(self):
-            return self.getTypedRuleContext(SqlBaseParser.SampleContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.SampleContext, 0)
 
-
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterAliasedQuery" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterAliasedQuery"):
                 listener.enterAliasedQuery(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitAliasedQuery" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitAliasedQuery"):
                 listener.exitAliasedQuery(self)
 
-
     class TableNameContext(RelationPrimaryContext):
-
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a SqlBaseParser.RelationPrimaryContext
+        def __init__(
+            self, parser, ctx: ParserRuleContext
+        ):  # actually a SqlBaseParser.RelationPrimaryContext
             super().__init__(parser)
             self.copyFrom(ctx)
 
         def multipartIdentifier(self):
-            return self.getTypedRuleContext(SqlBaseParser.MultipartIdentifierContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.MultipartIdentifierContext, 0)
 
         def tableAlias(self):
-            return self.getTypedRuleContext(SqlBaseParser.TableAliasContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.TableAliasContext, 0)
 
         def sample(self):
-            return self.getTypedRuleContext(SqlBaseParser.SampleContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.SampleContext, 0)
 
-
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterTableName" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterTableName"):
                 listener.enterTableName(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitTableName" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitTableName"):
                 listener.exitTableName(self)
-
-
 
     def relationPrimary(self):
 
@@ -14995,7 +15613,7 @@ class SqlBaseParser ( Parser ):
         try:
             self.state = 2254
             self._errHandler.sync(self)
-            la_ = self._interp.adaptivePredict(self._input,286,self._ctx)
+            la_ = self._interp.adaptivePredict(self._input, 286, self._ctx)
             if la_ == 1:
                 localctx = SqlBaseParser.TableNameContext(self, localctx)
                 self.enterOuterAlt(localctx, 1)
@@ -15003,11 +15621,10 @@ class SqlBaseParser ( Parser ):
                 self.multipartIdentifier()
                 self.state = 2232
                 self._errHandler.sync(self)
-                la_ = self._interp.adaptivePredict(self._input,283,self._ctx)
+                la_ = self._interp.adaptivePredict(self._input, 283, self._ctx)
                 if la_ == 1:
                     self.state = 2231
                     self.sample()
-
 
                 self.state = 2234
                 self.tableAlias()
@@ -15024,11 +15641,10 @@ class SqlBaseParser ( Parser ):
                 self.match(SqlBaseParser.T__2)
                 self.state = 2240
                 self._errHandler.sync(self)
-                la_ = self._interp.adaptivePredict(self._input,284,self._ctx)
+                la_ = self._interp.adaptivePredict(self._input, 284, self._ctx)
                 if la_ == 1:
                     self.state = 2239
                     self.sample()
-
 
                 self.state = 2242
                 self.tableAlias()
@@ -15045,11 +15661,10 @@ class SqlBaseParser ( Parser ):
                 self.match(SqlBaseParser.T__2)
                 self.state = 2248
                 self._errHandler.sync(self)
-                la_ = self._interp.adaptivePredict(self._input,285,self._ctx)
+                la_ = self._interp.adaptivePredict(self._input, 285, self._ctx)
                 if la_ == 1:
                     self.state = 2247
                     self.sample()
-
 
                 self.state = 2250
                 self.tableAlias()
@@ -15069,7 +15684,6 @@ class SqlBaseParser ( Parser ):
                 self.functionTable()
                 pass
 
-
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)
@@ -15078,41 +15692,37 @@ class SqlBaseParser ( Parser ):
             self.exitRule()
         return localctx
 
-
     class InlineTableContext(ParserRuleContext):
-        __slots__ = 'parser'
+        __slots__ = "parser"
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
         def VALUES(self):
             return self.getToken(SqlBaseParser.VALUES, 0)
 
-        def expression(self, i:int=None):
+        def expression(self, i: int = None):
             if i is None:
                 return self.getTypedRuleContexts(SqlBaseParser.ExpressionContext)
             else:
-                return self.getTypedRuleContext(SqlBaseParser.ExpressionContext,i)
-
+                return self.getTypedRuleContext(SqlBaseParser.ExpressionContext, i)
 
         def tableAlias(self):
-            return self.getTypedRuleContext(SqlBaseParser.TableAliasContext,0)
-
+            return self.getTypedRuleContext(SqlBaseParser.TableAliasContext, 0)
 
         def getRuleIndex(self):
             return SqlBaseParser.RULE_inlineTable
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterInlineTable" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterInlineTable"):
                 listener.enterInlineTable(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitInlineTable" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitInlineTable"):
                 listener.exitInlineTable(self)
-
-
-
 
     def inlineTable(self):
 
@@ -15126,16 +15736,16 @@ class SqlBaseParser ( Parser ):
             self.expression()
             self.state = 2262
             self._errHandler.sync(self)
-            _alt = self._interp.adaptivePredict(self._input,287,self._ctx)
-            while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
-                if _alt==1:
+            _alt = self._interp.adaptivePredict(self._input, 287, self._ctx)
+            while _alt != 2 and _alt != ATN.INVALID_ALT_NUMBER:
+                if _alt == 1:
                     self.state = 2258
                     self.match(SqlBaseParser.T__3)
                     self.state = 2259
-                    self.expression() 
+                    self.expression()
                 self.state = 2264
                 self._errHandler.sync(self)
-                _alt = self._interp.adaptivePredict(self._input,287,self._ctx)
+                _alt = self._interp.adaptivePredict(self._input, 287, self._ctx)
 
             self.state = 2265
             self.tableAlias()
@@ -15147,49 +15757,44 @@ class SqlBaseParser ( Parser ):
             self.exitRule()
         return localctx
 
-
     class FunctionTableContext(ParserRuleContext):
-        __slots__ = 'parser'
+        __slots__ = "parser"
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
-            self.funcName = None # FunctionNameContext
+            self.funcName = None  # FunctionNameContext
 
         def tableAlias(self):
-            return self.getTypedRuleContext(SqlBaseParser.TableAliasContext,0)
-
+            return self.getTypedRuleContext(SqlBaseParser.TableAliasContext, 0)
 
         def functionName(self):
-            return self.getTypedRuleContext(SqlBaseParser.FunctionNameContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.FunctionNameContext, 0)
 
-
-        def expression(self, i:int=None):
+        def expression(self, i: int = None):
             if i is None:
                 return self.getTypedRuleContexts(SqlBaseParser.ExpressionContext)
             else:
-                return self.getTypedRuleContext(SqlBaseParser.ExpressionContext,i)
-
+                return self.getTypedRuleContext(SqlBaseParser.ExpressionContext, i)
 
         def getRuleIndex(self):
             return SqlBaseParser.RULE_functionTable
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterFunctionTable" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterFunctionTable"):
                 listener.enterFunctionTable(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitFunctionTable" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitFunctionTable"):
                 listener.exitFunctionTable(self)
-
-
-
 
     def functionTable(self):
 
         localctx = SqlBaseParser.FunctionTableContext(self, self._ctx, self.state)
         self.enterRule(localctx, 172, self.RULE_functionTable)
-        self._la = 0 # Token type
+        self._la = 0  # Token type
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 2267
@@ -15198,14 +15803,14 @@ class SqlBaseParser ( Parser ):
             self.match(SqlBaseParser.T__1)
             self.state = 2277
             self._errHandler.sync(self)
-            la_ = self._interp.adaptivePredict(self._input,289,self._ctx)
+            la_ = self._interp.adaptivePredict(self._input, 289, self._ctx)
             if la_ == 1:
                 self.state = 2269
                 self.expression()
                 self.state = 2274
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                while _la==SqlBaseParser.T__3:
+                while _la == SqlBaseParser.T__3:
                     self.state = 2270
                     self.match(SqlBaseParser.T__3)
                     self.state = 2271
@@ -15213,8 +15818,6 @@ class SqlBaseParser ( Parser ):
                     self.state = 2276
                     self._errHandler.sync(self)
                     _la = self._input.LA(1)
-
-
 
             self.state = 2279
             self.match(SqlBaseParser.T__2)
@@ -15228,38 +15831,34 @@ class SqlBaseParser ( Parser ):
             self.exitRule()
         return localctx
 
-
     class TableAliasContext(ParserRuleContext):
-        __slots__ = 'parser'
+        __slots__ = "parser"
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
         def strictIdentifier(self):
-            return self.getTypedRuleContext(SqlBaseParser.StrictIdentifierContext,0)
-
+            return self.getTypedRuleContext(SqlBaseParser.StrictIdentifierContext, 0)
 
         def AS(self):
             return self.getToken(SqlBaseParser.AS, 0)
 
         def identifierList(self):
-            return self.getTypedRuleContext(SqlBaseParser.IdentifierListContext,0)
-
+            return self.getTypedRuleContext(SqlBaseParser.IdentifierListContext, 0)
 
         def getRuleIndex(self):
             return SqlBaseParser.RULE_tableAlias
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterTableAlias" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterTableAlias"):
                 listener.enterTableAlias(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitTableAlias" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitTableAlias"):
                 listener.exitTableAlias(self)
-
-
-
 
     def tableAlias(self):
 
@@ -15269,27 +15868,23 @@ class SqlBaseParser ( Parser ):
             self.enterOuterAlt(localctx, 1)
             self.state = 2289
             self._errHandler.sync(self)
-            la_ = self._interp.adaptivePredict(self._input,292,self._ctx)
+            la_ = self._interp.adaptivePredict(self._input, 292, self._ctx)
             if la_ == 1:
                 self.state = 2283
                 self._errHandler.sync(self)
-                la_ = self._interp.adaptivePredict(self._input,290,self._ctx)
+                la_ = self._interp.adaptivePredict(self._input, 290, self._ctx)
                 if la_ == 1:
                     self.state = 2282
                     self.match(SqlBaseParser.AS)
-
 
                 self.state = 2285
                 self.strictIdentifier()
                 self.state = 2287
                 self._errHandler.sync(self)
-                la_ = self._interp.adaptivePredict(self._input,291,self._ctx)
+                la_ = self._interp.adaptivePredict(self._input, 291, self._ctx)
                 if la_ == 1:
                     self.state = 2286
                     self.identifierList()
-
-
-
 
         except RecognitionException as re:
             localctx.exception = re
@@ -15299,120 +15894,136 @@ class SqlBaseParser ( Parser ):
             self.exitRule()
         return localctx
 
-
     class RowFormatContext(ParserRuleContext):
-        __slots__ = 'parser'
+        __slots__ = "parser"
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
-
 
         def getRuleIndex(self):
             return SqlBaseParser.RULE_rowFormat
 
-     
-        def copyFrom(self, ctx:ParserRuleContext):
+        def copyFrom(self, ctx: ParserRuleContext):
             super().copyFrom(ctx)
 
-
-
     class RowFormatSerdeContext(RowFormatContext):
-
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a SqlBaseParser.RowFormatContext
+        def __init__(
+            self, parser, ctx: ParserRuleContext
+        ):  # actually a SqlBaseParser.RowFormatContext
             super().__init__(parser)
-            self.name = None # Token
-            self.props = None # TablePropertyListContext
+            self.name = None  # Token
+            self.props = None  # TablePropertyListContext
             self.copyFrom(ctx)
 
         def ROW(self):
             return self.getToken(SqlBaseParser.ROW, 0)
+
         def FORMAT(self):
             return self.getToken(SqlBaseParser.FORMAT, 0)
+
         def SERDE(self):
             return self.getToken(SqlBaseParser.SERDE, 0)
+
         def STRING(self):
             return self.getToken(SqlBaseParser.STRING, 0)
+
         def WITH(self):
             return self.getToken(SqlBaseParser.WITH, 0)
+
         def SERDEPROPERTIES(self):
             return self.getToken(SqlBaseParser.SERDEPROPERTIES, 0)
+
         def tablePropertyList(self):
-            return self.getTypedRuleContext(SqlBaseParser.TablePropertyListContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.TablePropertyListContext, 0)
 
-
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterRowFormatSerde" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterRowFormatSerde"):
                 listener.enterRowFormatSerde(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitRowFormatSerde" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitRowFormatSerde"):
                 listener.exitRowFormatSerde(self)
 
-
     class RowFormatDelimitedContext(RowFormatContext):
-
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a SqlBaseParser.RowFormatContext
+        def __init__(
+            self, parser, ctx: ParserRuleContext
+        ):  # actually a SqlBaseParser.RowFormatContext
             super().__init__(parser)
-            self.fieldsTerminatedBy = None # Token
-            self.escapedBy = None # Token
-            self.collectionItemsTerminatedBy = None # Token
-            self.keysTerminatedBy = None # Token
-            self.linesSeparatedBy = None # Token
-            self.nullDefinedAs = None # Token
+            self.fieldsTerminatedBy = None  # Token
+            self.escapedBy = None  # Token
+            self.collectionItemsTerminatedBy = None  # Token
+            self.keysTerminatedBy = None  # Token
+            self.linesSeparatedBy = None  # Token
+            self.nullDefinedAs = None  # Token
             self.copyFrom(ctx)
 
         def ROW(self):
             return self.getToken(SqlBaseParser.ROW, 0)
+
         def FORMAT(self):
             return self.getToken(SqlBaseParser.FORMAT, 0)
+
         def DELIMITED(self):
             return self.getToken(SqlBaseParser.DELIMITED, 0)
+
         def FIELDS(self):
             return self.getToken(SqlBaseParser.FIELDS, 0)
-        def TERMINATED(self, i:int=None):
+
+        def TERMINATED(self, i: int = None):
             if i is None:
                 return self.getTokens(SqlBaseParser.TERMINATED)
             else:
                 return self.getToken(SqlBaseParser.TERMINATED, i)
-        def BY(self, i:int=None):
+
+        def BY(self, i: int = None):
             if i is None:
                 return self.getTokens(SqlBaseParser.BY)
             else:
                 return self.getToken(SqlBaseParser.BY, i)
+
         def COLLECTION(self):
             return self.getToken(SqlBaseParser.COLLECTION, 0)
+
         def ITEMS(self):
             return self.getToken(SqlBaseParser.ITEMS, 0)
+
         def MAP(self):
             return self.getToken(SqlBaseParser.MAP, 0)
+
         def KEYS(self):
             return self.getToken(SqlBaseParser.KEYS, 0)
+
         def LINES(self):
             return self.getToken(SqlBaseParser.LINES, 0)
+
         def NULL(self):
             return self.getToken(SqlBaseParser.NULL, 0)
+
         def DEFINED(self):
             return self.getToken(SqlBaseParser.DEFINED, 0)
+
         def AS(self):
             return self.getToken(SqlBaseParser.AS, 0)
-        def STRING(self, i:int=None):
+
+        def STRING(self, i: int = None):
             if i is None:
                 return self.getTokens(SqlBaseParser.STRING)
             else:
                 return self.getToken(SqlBaseParser.STRING, i)
+
         def ESCAPED(self):
             return self.getToken(SqlBaseParser.ESCAPED, 0)
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterRowFormatDelimited" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterRowFormatDelimited"):
                 listener.enterRowFormatDelimited(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitRowFormatDelimited" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitRowFormatDelimited"):
                 listener.exitRowFormatDelimited(self)
-
-
 
     def rowFormat(self):
 
@@ -15421,7 +16032,7 @@ class SqlBaseParser ( Parser ):
         try:
             self.state = 2340
             self._errHandler.sync(self)
-            la_ = self._interp.adaptivePredict(self._input,300,self._ctx)
+            la_ = self._interp.adaptivePredict(self._input, 300, self._ctx)
             if la_ == 1:
                 localctx = SqlBaseParser.RowFormatSerdeContext(self, localctx)
                 self.enterOuterAlt(localctx, 1)
@@ -15435,7 +16046,7 @@ class SqlBaseParser ( Parser ):
                 localctx.name = self.match(SqlBaseParser.STRING)
                 self.state = 2298
                 self._errHandler.sync(self)
-                la_ = self._interp.adaptivePredict(self._input,293,self._ctx)
+                la_ = self._interp.adaptivePredict(self._input, 293, self._ctx)
                 if la_ == 1:
                     self.state = 2295
                     self.match(SqlBaseParser.WITH)
@@ -15443,7 +16054,6 @@ class SqlBaseParser ( Parser ):
                     self.match(SqlBaseParser.SERDEPROPERTIES)
                     self.state = 2297
                     localctx.props = self.tablePropertyList()
-
 
                 pass
 
@@ -15458,7 +16068,7 @@ class SqlBaseParser ( Parser ):
                 self.match(SqlBaseParser.DELIMITED)
                 self.state = 2312
                 self._errHandler.sync(self)
-                la_ = self._interp.adaptivePredict(self._input,295,self._ctx)
+                la_ = self._interp.adaptivePredict(self._input, 295, self._ctx)
                 if la_ == 1:
                     self.state = 2303
                     self.match(SqlBaseParser.FIELDS)
@@ -15470,7 +16080,7 @@ class SqlBaseParser ( Parser ):
                     localctx.fieldsTerminatedBy = self.match(SqlBaseParser.STRING)
                     self.state = 2310
                     self._errHandler.sync(self)
-                    la_ = self._interp.adaptivePredict(self._input,294,self._ctx)
+                    la_ = self._interp.adaptivePredict(self._input, 294, self._ctx)
                     if la_ == 1:
                         self.state = 2307
                         self.match(SqlBaseParser.ESCAPED)
@@ -15479,12 +16089,9 @@ class SqlBaseParser ( Parser ):
                         self.state = 2309
                         localctx.escapedBy = self.match(SqlBaseParser.STRING)
 
-
-
-
                 self.state = 2319
                 self._errHandler.sync(self)
-                la_ = self._interp.adaptivePredict(self._input,296,self._ctx)
+                la_ = self._interp.adaptivePredict(self._input, 296, self._ctx)
                 if la_ == 1:
                     self.state = 2314
                     self.match(SqlBaseParser.COLLECTION)
@@ -15495,12 +16102,13 @@ class SqlBaseParser ( Parser ):
                     self.state = 2317
                     self.match(SqlBaseParser.BY)
                     self.state = 2318
-                    localctx.collectionItemsTerminatedBy = self.match(SqlBaseParser.STRING)
-
+                    localctx.collectionItemsTerminatedBy = self.match(
+                        SqlBaseParser.STRING
+                    )
 
                 self.state = 2326
                 self._errHandler.sync(self)
-                la_ = self._interp.adaptivePredict(self._input,297,self._ctx)
+                la_ = self._interp.adaptivePredict(self._input, 297, self._ctx)
                 if la_ == 1:
                     self.state = 2321
                     self.match(SqlBaseParser.MAP)
@@ -15513,10 +16121,9 @@ class SqlBaseParser ( Parser ):
                     self.state = 2325
                     localctx.keysTerminatedBy = self.match(SqlBaseParser.STRING)
 
-
                 self.state = 2332
                 self._errHandler.sync(self)
-                la_ = self._interp.adaptivePredict(self._input,298,self._ctx)
+                la_ = self._interp.adaptivePredict(self._input, 298, self._ctx)
                 if la_ == 1:
                     self.state = 2328
                     self.match(SqlBaseParser.LINES)
@@ -15527,10 +16134,9 @@ class SqlBaseParser ( Parser ):
                     self.state = 2331
                     localctx.linesSeparatedBy = self.match(SqlBaseParser.STRING)
 
-
                 self.state = 2338
                 self._errHandler.sync(self)
-                la_ = self._interp.adaptivePredict(self._input,299,self._ctx)
+                la_ = self._interp.adaptivePredict(self._input, 299, self._ctx)
                 if la_ == 1:
                     self.state = 2334
                     self.match(SqlBaseParser.NULL)
@@ -15541,9 +16147,7 @@ class SqlBaseParser ( Parser ):
                     self.state = 2337
                     localctx.nullDefinedAs = self.match(SqlBaseParser.STRING)
 
-
                 pass
-
 
         except RecognitionException as re:
             localctx.exception = re
@@ -15553,40 +16157,43 @@ class SqlBaseParser ( Parser ):
             self.exitRule()
         return localctx
 
-
     class MultipartIdentifierListContext(ParserRuleContext):
-        __slots__ = 'parser'
+        __slots__ = "parser"
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
-        def multipartIdentifier(self, i:int=None):
+        def multipartIdentifier(self, i: int = None):
             if i is None:
-                return self.getTypedRuleContexts(SqlBaseParser.MultipartIdentifierContext)
+                return self.getTypedRuleContexts(
+                    SqlBaseParser.MultipartIdentifierContext
+                )
             else:
-                return self.getTypedRuleContext(SqlBaseParser.MultipartIdentifierContext,i)
-
+                return self.getTypedRuleContext(
+                    SqlBaseParser.MultipartIdentifierContext, i
+                )
 
         def getRuleIndex(self):
             return SqlBaseParser.RULE_multipartIdentifierList
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterMultipartIdentifierList" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterMultipartIdentifierList"):
                 listener.enterMultipartIdentifierList(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitMultipartIdentifierList" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitMultipartIdentifierList"):
                 listener.exitMultipartIdentifierList(self)
-
-
-
 
     def multipartIdentifierList(self):
 
-        localctx = SqlBaseParser.MultipartIdentifierListContext(self, self._ctx, self.state)
+        localctx = SqlBaseParser.MultipartIdentifierListContext(
+            self, self._ctx, self.state
+        )
         self.enterRule(localctx, 178, self.RULE_multipartIdentifierList)
-        self._la = 0 # Token type
+        self._la = 0  # Token type
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 2342
@@ -15594,7 +16201,7 @@ class SqlBaseParser ( Parser ):
             self.state = 2347
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            while _la==SqlBaseParser.T__3:
+            while _la == SqlBaseParser.T__3:
                 self.state = 2343
                 self.match(SqlBaseParser.T__3)
                 self.state = 2344
@@ -15611,36 +16218,37 @@ class SqlBaseParser ( Parser ):
             self.exitRule()
         return localctx
 
-
     class MultipartIdentifierContext(ParserRuleContext):
-        __slots__ = 'parser'
+        __slots__ = "parser"
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
-            self._errorCapturingIdentifier = None # ErrorCapturingIdentifierContext
-            self.parts = list() # of ErrorCapturingIdentifierContexts
+            self._errorCapturingIdentifier = None  # ErrorCapturingIdentifierContext
+            self.parts = list()  # of ErrorCapturingIdentifierContexts
 
-        def errorCapturingIdentifier(self, i:int=None):
+        def errorCapturingIdentifier(self, i: int = None):
             if i is None:
-                return self.getTypedRuleContexts(SqlBaseParser.ErrorCapturingIdentifierContext)
+                return self.getTypedRuleContexts(
+                    SqlBaseParser.ErrorCapturingIdentifierContext
+                )
             else:
-                return self.getTypedRuleContext(SqlBaseParser.ErrorCapturingIdentifierContext,i)
-
+                return self.getTypedRuleContext(
+                    SqlBaseParser.ErrorCapturingIdentifierContext, i
+                )
 
         def getRuleIndex(self):
             return SqlBaseParser.RULE_multipartIdentifier
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterMultipartIdentifier" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterMultipartIdentifier"):
                 listener.enterMultipartIdentifier(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitMultipartIdentifier" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitMultipartIdentifier"):
                 listener.exitMultipartIdentifier(self)
-
-
-
 
     def multipartIdentifier(self):
 
@@ -15653,17 +16261,17 @@ class SqlBaseParser ( Parser ):
             localctx.parts.append(localctx._errorCapturingIdentifier)
             self.state = 2355
             self._errHandler.sync(self)
-            _alt = self._interp.adaptivePredict(self._input,302,self._ctx)
-            while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
-                if _alt==1:
+            _alt = self._interp.adaptivePredict(self._input, 302, self._ctx)
+            while _alt != 2 and _alt != ATN.INVALID_ALT_NUMBER:
+                if _alt == 1:
                     self.state = 2351
                     self.match(SqlBaseParser.T__4)
                     self.state = 2352
                     localctx._errorCapturingIdentifier = self.errorCapturingIdentifier()
-                    localctx.parts.append(localctx._errorCapturingIdentifier) 
+                    localctx.parts.append(localctx._errorCapturingIdentifier)
                 self.state = 2357
                 self._errHandler.sync(self)
-                _alt = self._interp.adaptivePredict(self._input,302,self._ctx)
+                _alt = self._interp.adaptivePredict(self._input, 302, self._ctx)
 
         except RecognitionException as re:
             localctx.exception = re
@@ -15673,36 +16281,37 @@ class SqlBaseParser ( Parser ):
             self.exitRule()
         return localctx
 
-
     class TableIdentifierContext(ParserRuleContext):
-        __slots__ = 'parser'
+        __slots__ = "parser"
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
-            self.db = None # ErrorCapturingIdentifierContext
-            self.table = None # ErrorCapturingIdentifierContext
+            self.db = None  # ErrorCapturingIdentifierContext
+            self.table = None  # ErrorCapturingIdentifierContext
 
-        def errorCapturingIdentifier(self, i:int=None):
+        def errorCapturingIdentifier(self, i: int = None):
             if i is None:
-                return self.getTypedRuleContexts(SqlBaseParser.ErrorCapturingIdentifierContext)
+                return self.getTypedRuleContexts(
+                    SqlBaseParser.ErrorCapturingIdentifierContext
+                )
             else:
-                return self.getTypedRuleContext(SqlBaseParser.ErrorCapturingIdentifierContext,i)
-
+                return self.getTypedRuleContext(
+                    SqlBaseParser.ErrorCapturingIdentifierContext, i
+                )
 
         def getRuleIndex(self):
             return SqlBaseParser.RULE_tableIdentifier
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterTableIdentifier" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterTableIdentifier"):
                 listener.enterTableIdentifier(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitTableIdentifier" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitTableIdentifier"):
                 listener.exitTableIdentifier(self)
-
-
-
 
     def tableIdentifier(self):
 
@@ -15712,13 +16321,12 @@ class SqlBaseParser ( Parser ):
             self.enterOuterAlt(localctx, 1)
             self.state = 2361
             self._errHandler.sync(self)
-            la_ = self._interp.adaptivePredict(self._input,303,self._ctx)
+            la_ = self._interp.adaptivePredict(self._input, 303, self._ctx)
             if la_ == 1:
                 self.state = 2358
                 localctx.db = self.errorCapturingIdentifier()
                 self.state = 2359
                 self.match(SqlBaseParser.T__4)
-
 
             self.state = 2363
             localctx.table = self.errorCapturingIdentifier()
@@ -15730,36 +16338,37 @@ class SqlBaseParser ( Parser ):
             self.exitRule()
         return localctx
 
-
     class FunctionIdentifierContext(ParserRuleContext):
-        __slots__ = 'parser'
+        __slots__ = "parser"
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
-            self.db = None # ErrorCapturingIdentifierContext
-            self.function = None # ErrorCapturingIdentifierContext
+            self.db = None  # ErrorCapturingIdentifierContext
+            self.function = None  # ErrorCapturingIdentifierContext
 
-        def errorCapturingIdentifier(self, i:int=None):
+        def errorCapturingIdentifier(self, i: int = None):
             if i is None:
-                return self.getTypedRuleContexts(SqlBaseParser.ErrorCapturingIdentifierContext)
+                return self.getTypedRuleContexts(
+                    SqlBaseParser.ErrorCapturingIdentifierContext
+                )
             else:
-                return self.getTypedRuleContext(SqlBaseParser.ErrorCapturingIdentifierContext,i)
-
+                return self.getTypedRuleContext(
+                    SqlBaseParser.ErrorCapturingIdentifierContext, i
+                )
 
         def getRuleIndex(self):
             return SqlBaseParser.RULE_functionIdentifier
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterFunctionIdentifier" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterFunctionIdentifier"):
                 listener.enterFunctionIdentifier(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitFunctionIdentifier" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitFunctionIdentifier"):
                 listener.exitFunctionIdentifier(self)
-
-
-
 
     def functionIdentifier(self):
 
@@ -15769,13 +16378,12 @@ class SqlBaseParser ( Parser ):
             self.enterOuterAlt(localctx, 1)
             self.state = 2368
             self._errHandler.sync(self)
-            la_ = self._interp.adaptivePredict(self._input,304,self._ctx)
+            la_ = self._interp.adaptivePredict(self._input, 304, self._ctx)
             if la_ == 1:
                 self.state = 2365
                 localctx.db = self.errorCapturingIdentifier()
                 self.state = 2366
                 self.match(SqlBaseParser.T__4)
-
 
             self.state = 2370
             localctx.function = self.errorCapturingIdentifier()
@@ -15787,43 +16395,40 @@ class SqlBaseParser ( Parser ):
             self.exitRule()
         return localctx
 
-
     class NamedExpressionContext(ParserRuleContext):
-        __slots__ = 'parser'
+        __slots__ = "parser"
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
-            self.name = None # ErrorCapturingIdentifierContext
+            self.name = None  # ErrorCapturingIdentifierContext
 
         def expression(self):
-            return self.getTypedRuleContext(SqlBaseParser.ExpressionContext,0)
-
+            return self.getTypedRuleContext(SqlBaseParser.ExpressionContext, 0)
 
         def identifierList(self):
-            return self.getTypedRuleContext(SqlBaseParser.IdentifierListContext,0)
-
+            return self.getTypedRuleContext(SqlBaseParser.IdentifierListContext, 0)
 
         def AS(self):
             return self.getToken(SqlBaseParser.AS, 0)
 
         def errorCapturingIdentifier(self):
-            return self.getTypedRuleContext(SqlBaseParser.ErrorCapturingIdentifierContext,0)
-
+            return self.getTypedRuleContext(
+                SqlBaseParser.ErrorCapturingIdentifierContext, 0
+            )
 
         def getRuleIndex(self):
             return SqlBaseParser.RULE_namedExpression
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterNamedExpression" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterNamedExpression"):
                 listener.enterNamedExpression(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitNamedExpression" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitNamedExpression"):
                 listener.exitNamedExpression(self)
-
-
-
 
     def namedExpression(self):
 
@@ -15835,19 +16440,18 @@ class SqlBaseParser ( Parser ):
             self.expression()
             self.state = 2380
             self._errHandler.sync(self)
-            la_ = self._interp.adaptivePredict(self._input,307,self._ctx)
+            la_ = self._interp.adaptivePredict(self._input, 307, self._ctx)
             if la_ == 1:
                 self.state = 2374
                 self._errHandler.sync(self)
-                la_ = self._interp.adaptivePredict(self._input,305,self._ctx)
+                la_ = self._interp.adaptivePredict(self._input, 305, self._ctx)
                 if la_ == 1:
                     self.state = 2373
                     self.match(SqlBaseParser.AS)
 
-
                 self.state = 2378
                 self._errHandler.sync(self)
-                la_ = self._interp.adaptivePredict(self._input,306,self._ctx)
+                la_ = self._interp.adaptivePredict(self._input, 306, self._ctx)
                 if la_ == 1:
                     self.state = 2376
                     localctx.name = self.errorCapturingIdentifier()
@@ -15858,9 +16462,6 @@ class SqlBaseParser ( Parser ):
                     self.identifierList()
                     pass
 
-
-
-
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)
@@ -15869,34 +16470,31 @@ class SqlBaseParser ( Parser ):
             self.exitRule()
         return localctx
 
-
     class NamedExpressionSeqContext(ParserRuleContext):
-        __slots__ = 'parser'
+        __slots__ = "parser"
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
-        def namedExpression(self, i:int=None):
+        def namedExpression(self, i: int = None):
             if i is None:
                 return self.getTypedRuleContexts(SqlBaseParser.NamedExpressionContext)
             else:
-                return self.getTypedRuleContext(SqlBaseParser.NamedExpressionContext,i)
-
+                return self.getTypedRuleContext(SqlBaseParser.NamedExpressionContext, i)
 
         def getRuleIndex(self):
             return SqlBaseParser.RULE_namedExpressionSeq
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterNamedExpressionSeq" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterNamedExpressionSeq"):
                 listener.enterNamedExpressionSeq(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitNamedExpressionSeq" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitNamedExpressionSeq"):
                 listener.exitNamedExpressionSeq(self)
-
-
-
 
     def namedExpressionSeq(self):
 
@@ -15908,16 +16506,16 @@ class SqlBaseParser ( Parser ):
             self.namedExpression()
             self.state = 2387
             self._errHandler.sync(self)
-            _alt = self._interp.adaptivePredict(self._input,308,self._ctx)
-            while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
-                if _alt==1:
+            _alt = self._interp.adaptivePredict(self._input, 308, self._ctx)
+            while _alt != 2 and _alt != ATN.INVALID_ALT_NUMBER:
+                if _alt == 1:
                     self.state = 2383
                     self.match(SqlBaseParser.T__3)
                     self.state = 2384
-                    self.namedExpression() 
+                    self.namedExpression()
                 self.state = 2389
                 self._errHandler.sync(self)
-                _alt = self._interp.adaptivePredict(self._input,308,self._ctx)
+                _alt = self._interp.adaptivePredict(self._input, 308, self._ctx)
 
         except RecognitionException as re:
             localctx.exception = re
@@ -15927,42 +16525,39 @@ class SqlBaseParser ( Parser ):
             self.exitRule()
         return localctx
 
-
     class PartitionFieldListContext(ParserRuleContext):
-        __slots__ = 'parser'
+        __slots__ = "parser"
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
-            self._partitionField = None # PartitionFieldContext
-            self.fields = list() # of PartitionFieldContexts
+            self._partitionField = None  # PartitionFieldContext
+            self.fields = list()  # of PartitionFieldContexts
 
-        def partitionField(self, i:int=None):
+        def partitionField(self, i: int = None):
             if i is None:
                 return self.getTypedRuleContexts(SqlBaseParser.PartitionFieldContext)
             else:
-                return self.getTypedRuleContext(SqlBaseParser.PartitionFieldContext,i)
-
+                return self.getTypedRuleContext(SqlBaseParser.PartitionFieldContext, i)
 
         def getRuleIndex(self):
             return SqlBaseParser.RULE_partitionFieldList
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterPartitionFieldList" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterPartitionFieldList"):
                 listener.enterPartitionFieldList(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitPartitionFieldList" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitPartitionFieldList"):
                 listener.exitPartitionFieldList(self)
-
-
-
 
     def partitionFieldList(self):
 
         localctx = SqlBaseParser.PartitionFieldListContext(self, self._ctx, self.state)
         self.enterRule(localctx, 190, self.RULE_partitionFieldList)
-        self._la = 0 # Token type
+        self._la = 0  # Token type
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 2390
@@ -15973,7 +16568,7 @@ class SqlBaseParser ( Parser ):
             self.state = 2396
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            while _la==SqlBaseParser.T__3:
+            while _la == SqlBaseParser.T__3:
                 self.state = 2392
                 self.match(SqlBaseParser.T__3)
                 self.state = 2393
@@ -15993,62 +16588,56 @@ class SqlBaseParser ( Parser ):
             self.exitRule()
         return localctx
 
-
     class PartitionFieldContext(ParserRuleContext):
-        __slots__ = 'parser'
+        __slots__ = "parser"
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
-
 
         def getRuleIndex(self):
             return SqlBaseParser.RULE_partitionField
 
-     
-        def copyFrom(self, ctx:ParserRuleContext):
+        def copyFrom(self, ctx: ParserRuleContext):
             super().copyFrom(ctx)
 
-
-
     class PartitionColumnContext(PartitionFieldContext):
-
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a SqlBaseParser.PartitionFieldContext
+        def __init__(
+            self, parser, ctx: ParserRuleContext
+        ):  # actually a SqlBaseParser.PartitionFieldContext
             super().__init__(parser)
             self.copyFrom(ctx)
 
         def colType(self):
-            return self.getTypedRuleContext(SqlBaseParser.ColTypeContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.ColTypeContext, 0)
 
-
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterPartitionColumn" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterPartitionColumn"):
                 listener.enterPartitionColumn(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitPartitionColumn" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitPartitionColumn"):
                 listener.exitPartitionColumn(self)
 
-
     class PartitionTransformContext(PartitionFieldContext):
-
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a SqlBaseParser.PartitionFieldContext
+        def __init__(
+            self, parser, ctx: ParserRuleContext
+        ):  # actually a SqlBaseParser.PartitionFieldContext
             super().__init__(parser)
             self.copyFrom(ctx)
 
         def transform(self):
-            return self.getTypedRuleContext(SqlBaseParser.TransformContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.TransformContext, 0)
 
-
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterPartitionTransform" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterPartitionTransform"):
                 listener.enterPartitionTransform(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitPartitionTransform" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitPartitionTransform"):
                 listener.exitPartitionTransform(self)
-
-
 
     def partitionField(self):
 
@@ -16057,7 +16646,7 @@ class SqlBaseParser ( Parser ):
         try:
             self.state = 2403
             self._errHandler.sync(self)
-            la_ = self._interp.adaptivePredict(self._input,310,self._ctx)
+            la_ = self._interp.adaptivePredict(self._input, 310, self._ctx)
             if la_ == 1:
                 localctx = SqlBaseParser.PartitionTransformContext(self, localctx)
                 self.enterOuterAlt(localctx, 1)
@@ -16072,7 +16661,6 @@ class SqlBaseParser ( Parser ):
                 self.colType()
                 pass
 
-
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)
@@ -16081,81 +16669,77 @@ class SqlBaseParser ( Parser ):
             self.exitRule()
         return localctx
 
-
     class TransformContext(ParserRuleContext):
-        __slots__ = 'parser'
+        __slots__ = "parser"
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
-
 
         def getRuleIndex(self):
             return SqlBaseParser.RULE_transform
 
-     
-        def copyFrom(self, ctx:ParserRuleContext):
+        def copyFrom(self, ctx: ParserRuleContext):
             super().copyFrom(ctx)
 
-
-
     class IdentityTransformContext(TransformContext):
-
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a SqlBaseParser.TransformContext
+        def __init__(
+            self, parser, ctx: ParserRuleContext
+        ):  # actually a SqlBaseParser.TransformContext
             super().__init__(parser)
             self.copyFrom(ctx)
 
         def qualifiedName(self):
-            return self.getTypedRuleContext(SqlBaseParser.QualifiedNameContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.QualifiedNameContext, 0)
 
-
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterIdentityTransform" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterIdentityTransform"):
                 listener.enterIdentityTransform(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitIdentityTransform" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitIdentityTransform"):
                 listener.exitIdentityTransform(self)
 
-
     class ApplyTransformContext(TransformContext):
-
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a SqlBaseParser.TransformContext
+        def __init__(
+            self, parser, ctx: ParserRuleContext
+        ):  # actually a SqlBaseParser.TransformContext
             super().__init__(parser)
-            self.transformName = None # IdentifierContext
-            self._transformArgument = None # TransformArgumentContext
-            self.argument = list() # of TransformArgumentContexts
+            self.transformName = None  # IdentifierContext
+            self._transformArgument = None  # TransformArgumentContext
+            self.argument = list()  # of TransformArgumentContexts
             self.copyFrom(ctx)
 
         def identifier(self):
-            return self.getTypedRuleContext(SqlBaseParser.IdentifierContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.IdentifierContext, 0)
 
-        def transformArgument(self, i:int=None):
+        def transformArgument(self, i: int = None):
             if i is None:
                 return self.getTypedRuleContexts(SqlBaseParser.TransformArgumentContext)
             else:
-                return self.getTypedRuleContext(SqlBaseParser.TransformArgumentContext,i)
+                return self.getTypedRuleContext(
+                    SqlBaseParser.TransformArgumentContext, i
+                )
 
-
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterApplyTransform" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterApplyTransform"):
                 listener.enterApplyTransform(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitApplyTransform" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitApplyTransform"):
                 listener.exitApplyTransform(self)
-
-
 
     def transform(self):
 
         localctx = SqlBaseParser.TransformContext(self, self._ctx, self.state)
         self.enterRule(localctx, 194, self.RULE_transform)
-        self._la = 0 # Token type
+        self._la = 0  # Token type
         try:
             self.state = 2418
             self._errHandler.sync(self)
-            la_ = self._interp.adaptivePredict(self._input,312,self._ctx)
+            la_ = self._interp.adaptivePredict(self._input, 312, self._ctx)
             if la_ == 1:
                 localctx = SqlBaseParser.IdentityTransformContext(self, localctx)
                 self.enterOuterAlt(localctx, 1)
@@ -16176,7 +16760,7 @@ class SqlBaseParser ( Parser ):
                 self.state = 2413
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                while _la==SqlBaseParser.T__3:
+                while _la == SqlBaseParser.T__3:
                     self.state = 2409
                     self.match(SqlBaseParser.T__3)
                     self.state = 2410
@@ -16190,7 +16774,6 @@ class SqlBaseParser ( Parser ):
                 self.match(SqlBaseParser.T__2)
                 pass
 
-
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)
@@ -16199,35 +16782,31 @@ class SqlBaseParser ( Parser ):
             self.exitRule()
         return localctx
 
-
     class TransformArgumentContext(ParserRuleContext):
-        __slots__ = 'parser'
+        __slots__ = "parser"
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
         def qualifiedName(self):
-            return self.getTypedRuleContext(SqlBaseParser.QualifiedNameContext,0)
-
+            return self.getTypedRuleContext(SqlBaseParser.QualifiedNameContext, 0)
 
         def constant(self):
-            return self.getTypedRuleContext(SqlBaseParser.ConstantContext,0)
-
+            return self.getTypedRuleContext(SqlBaseParser.ConstantContext, 0)
 
         def getRuleIndex(self):
             return SqlBaseParser.RULE_transformArgument
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterTransformArgument" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterTransformArgument"):
                 listener.enterTransformArgument(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitTransformArgument" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitTransformArgument"):
                 listener.exitTransformArgument(self)
-
-
-
 
     def transformArgument(self):
 
@@ -16236,7 +16815,7 @@ class SqlBaseParser ( Parser ):
         try:
             self.state = 2422
             self._errHandler.sync(self)
-            la_ = self._interp.adaptivePredict(self._input,313,self._ctx)
+            la_ = self._interp.adaptivePredict(self._input, 313, self._ctx)
             if la_ == 1:
                 self.enterOuterAlt(localctx, 1)
                 self.state = 2420
@@ -16249,7 +16828,6 @@ class SqlBaseParser ( Parser ):
                 self.constant()
                 pass
 
-
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)
@@ -16258,31 +16836,28 @@ class SqlBaseParser ( Parser ):
             self.exitRule()
         return localctx
 
-
     class ExpressionContext(ParserRuleContext):
-        __slots__ = 'parser'
+        __slots__ = "parser"
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
         def booleanExpression(self):
-            return self.getTypedRuleContext(SqlBaseParser.BooleanExpressionContext,0)
-
+            return self.getTypedRuleContext(SqlBaseParser.BooleanExpressionContext, 0)
 
         def getRuleIndex(self):
             return SqlBaseParser.RULE_expression
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterExpression" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterExpression"):
                 listener.enterExpression(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitExpression" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitExpression"):
                 listener.exitExpression(self)
-
-
-
 
     def expression(self):
 
@@ -16300,40 +16875,37 @@ class SqlBaseParser ( Parser ):
             self.exitRule()
         return localctx
 
-
     class ExpressionSeqContext(ParserRuleContext):
-        __slots__ = 'parser'
+        __slots__ = "parser"
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
-        def expression(self, i:int=None):
+        def expression(self, i: int = None):
             if i is None:
                 return self.getTypedRuleContexts(SqlBaseParser.ExpressionContext)
             else:
-                return self.getTypedRuleContext(SqlBaseParser.ExpressionContext,i)
-
+                return self.getTypedRuleContext(SqlBaseParser.ExpressionContext, i)
 
         def getRuleIndex(self):
             return SqlBaseParser.RULE_expressionSeq
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterExpressionSeq" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterExpressionSeq"):
                 listener.enterExpressionSeq(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitExpressionSeq" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitExpressionSeq"):
                 listener.exitExpressionSeq(self)
-
-
-
 
     def expressionSeq(self):
 
         localctx = SqlBaseParser.ExpressionSeqContext(self, self._ctx, self.state)
         self.enterRule(localctx, 200, self.RULE_expressionSeq)
-        self._la = 0 # Token type
+        self._la = 0  # Token type
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 2426
@@ -16341,7 +16913,7 @@ class SqlBaseParser ( Parser ):
             self.state = 2431
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            while _la==SqlBaseParser.T__3:
+            while _la == SqlBaseParser.T__3:
                 self.state = 2427
                 self.match(SqlBaseParser.T__3)
                 self.state = 2428
@@ -16358,118 +16930,117 @@ class SqlBaseParser ( Parser ):
             self.exitRule()
         return localctx
 
-
     class BooleanExpressionContext(ParserRuleContext):
-        __slots__ = 'parser'
+        __slots__ = "parser"
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
-
 
         def getRuleIndex(self):
             return SqlBaseParser.RULE_booleanExpression
 
-     
-        def copyFrom(self, ctx:ParserRuleContext):
+        def copyFrom(self, ctx: ParserRuleContext):
             super().copyFrom(ctx)
 
-
     class LogicalNotContext(BooleanExpressionContext):
-
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a SqlBaseParser.BooleanExpressionContext
+        def __init__(
+            self, parser, ctx: ParserRuleContext
+        ):  # actually a SqlBaseParser.BooleanExpressionContext
             super().__init__(parser)
             self.copyFrom(ctx)
 
         def NOT(self):
             return self.getToken(SqlBaseParser.NOT, 0)
+
         def booleanExpression(self):
-            return self.getTypedRuleContext(SqlBaseParser.BooleanExpressionContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.BooleanExpressionContext, 0)
 
-
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterLogicalNot" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterLogicalNot"):
                 listener.enterLogicalNot(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitLogicalNot" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitLogicalNot"):
                 listener.exitLogicalNot(self)
 
-
     class PredicatedContext(BooleanExpressionContext):
-
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a SqlBaseParser.BooleanExpressionContext
+        def __init__(
+            self, parser, ctx: ParserRuleContext
+        ):  # actually a SqlBaseParser.BooleanExpressionContext
             super().__init__(parser)
             self.copyFrom(ctx)
 
         def valueExpression(self):
-            return self.getTypedRuleContext(SqlBaseParser.ValueExpressionContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.ValueExpressionContext, 0)
 
         def predicate(self):
-            return self.getTypedRuleContext(SqlBaseParser.PredicateContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.PredicateContext, 0)
 
-
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterPredicated" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterPredicated"):
                 listener.enterPredicated(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitPredicated" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitPredicated"):
                 listener.exitPredicated(self)
 
-
     class ExistsContext(BooleanExpressionContext):
-
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a SqlBaseParser.BooleanExpressionContext
+        def __init__(
+            self, parser, ctx: ParserRuleContext
+        ):  # actually a SqlBaseParser.BooleanExpressionContext
             super().__init__(parser)
             self.copyFrom(ctx)
 
         def EXISTS(self):
             return self.getToken(SqlBaseParser.EXISTS, 0)
+
         def query(self):
-            return self.getTypedRuleContext(SqlBaseParser.QueryContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.QueryContext, 0)
 
-
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterExists" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterExists"):
                 listener.enterExists(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitExists" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitExists"):
                 listener.exitExists(self)
 
-
     class LogicalBinaryContext(BooleanExpressionContext):
-
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a SqlBaseParser.BooleanExpressionContext
+        def __init__(
+            self, parser, ctx: ParserRuleContext
+        ):  # actually a SqlBaseParser.BooleanExpressionContext
             super().__init__(parser)
-            self.left = None # BooleanExpressionContext
-            self.operator = None # Token
-            self.right = None # BooleanExpressionContext
+            self.left = None  # BooleanExpressionContext
+            self.operator = None  # Token
+            self.right = None  # BooleanExpressionContext
             self.copyFrom(ctx)
 
-        def booleanExpression(self, i:int=None):
+        def booleanExpression(self, i: int = None):
             if i is None:
                 return self.getTypedRuleContexts(SqlBaseParser.BooleanExpressionContext)
             else:
-                return self.getTypedRuleContext(SqlBaseParser.BooleanExpressionContext,i)
+                return self.getTypedRuleContext(
+                    SqlBaseParser.BooleanExpressionContext, i
+                )
 
         def AND(self):
             return self.getToken(SqlBaseParser.AND, 0)
+
         def OR(self):
             return self.getToken(SqlBaseParser.OR, 0)
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterLogicalBinary" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterLogicalBinary"):
                 listener.enterLogicalBinary(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitLogicalBinary" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitLogicalBinary"):
                 listener.exitLogicalBinary(self)
 
-
-
-    def booleanExpression(self, _p:int=0):
+    def booleanExpression(self, _p: int = 0):
         _parentctx = self._ctx
         _parentState = self.state
         localctx = SqlBaseParser.BooleanExpressionContext(self, self._ctx, _parentState)
@@ -16480,7 +17051,7 @@ class SqlBaseParser ( Parser ):
             self.enterOuterAlt(localctx, 1)
             self.state = 2446
             self._errHandler.sync(self)
-            la_ = self._interp.adaptivePredict(self._input,316,self._ctx)
+            la_ = self._interp.adaptivePredict(self._input, 316, self._ctx)
             if la_ == 1:
                 localctx = SqlBaseParser.LogicalNotContext(self, localctx)
                 self._ctx = localctx
@@ -16514,35 +17085,43 @@ class SqlBaseParser ( Parser ):
                 self.valueExpression(0)
                 self.state = 2444
                 self._errHandler.sync(self)
-                la_ = self._interp.adaptivePredict(self._input,315,self._ctx)
+                la_ = self._interp.adaptivePredict(self._input, 315, self._ctx)
                 if la_ == 1:
                     self.state = 2443
                     self.predicate()
 
-
                 pass
-
 
             self._ctx.stop = self._input.LT(-1)
             self.state = 2456
             self._errHandler.sync(self)
-            _alt = self._interp.adaptivePredict(self._input,318,self._ctx)
-            while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
-                if _alt==1:
+            _alt = self._interp.adaptivePredict(self._input, 318, self._ctx)
+            while _alt != 2 and _alt != ATN.INVALID_ALT_NUMBER:
+                if _alt == 1:
                     if self._parseListeners is not None:
                         self.triggerExitRuleEvent()
                     _prevctx = localctx
                     self.state = 2454
                     self._errHandler.sync(self)
-                    la_ = self._interp.adaptivePredict(self._input,317,self._ctx)
+                    la_ = self._interp.adaptivePredict(self._input, 317, self._ctx)
                     if la_ == 1:
-                        localctx = SqlBaseParser.LogicalBinaryContext(self, SqlBaseParser.BooleanExpressionContext(self, _parentctx, _parentState))
+                        localctx = SqlBaseParser.LogicalBinaryContext(
+                            self,
+                            SqlBaseParser.BooleanExpressionContext(
+                                self, _parentctx, _parentState
+                            ),
+                        )
                         localctx.left = _prevctx
-                        self.pushNewRecursionContext(localctx, _startState, self.RULE_booleanExpression)
+                        self.pushNewRecursionContext(
+                            localctx, _startState, self.RULE_booleanExpression
+                        )
                         self.state = 2448
                         if not self.precpred(self._ctx, 2):
                             from antlr4.error.Errors import FailedPredicateException
-                            raise FailedPredicateException(self, "self.precpred(self._ctx, 2)")
+
+                            raise FailedPredicateException(
+                                self, "self.precpred(self._ctx, 2)"
+                            )
                         self.state = 2449
                         localctx.operator = self.match(SqlBaseParser.AND)
                         self.state = 2450
@@ -16550,23 +17129,32 @@ class SqlBaseParser ( Parser ):
                         pass
 
                     elif la_ == 2:
-                        localctx = SqlBaseParser.LogicalBinaryContext(self, SqlBaseParser.BooleanExpressionContext(self, _parentctx, _parentState))
+                        localctx = SqlBaseParser.LogicalBinaryContext(
+                            self,
+                            SqlBaseParser.BooleanExpressionContext(
+                                self, _parentctx, _parentState
+                            ),
+                        )
                         localctx.left = _prevctx
-                        self.pushNewRecursionContext(localctx, _startState, self.RULE_booleanExpression)
+                        self.pushNewRecursionContext(
+                            localctx, _startState, self.RULE_booleanExpression
+                        )
                         self.state = 2451
                         if not self.precpred(self._ctx, 1):
                             from antlr4.error.Errors import FailedPredicateException
-                            raise FailedPredicateException(self, "self.precpred(self._ctx, 1)")
+
+                            raise FailedPredicateException(
+                                self, "self.precpred(self._ctx, 1)"
+                            )
                         self.state = 2452
                         localctx.operator = self.match(SqlBaseParser.OR)
                         self.state = 2453
                         localctx.right = self.booleanExpression(2)
                         pass
 
-             
                 self.state = 2458
                 self._errHandler.sync(self)
-                _alt = self._interp.adaptivePredict(self._input,318,self._ctx)
+                _alt = self._interp.adaptivePredict(self._input, 318, self._ctx)
 
         except RecognitionException as re:
             localctx.exception = re
@@ -16576,20 +17164,21 @@ class SqlBaseParser ( Parser ):
             self.unrollRecursionContexts(_parentctx)
         return localctx
 
-
     class PredicateContext(ParserRuleContext):
-        __slots__ = 'parser'
+        __slots__ = "parser"
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
-            self.kind = None # Token
-            self.lower = None # ValueExpressionContext
-            self.upper = None # ValueExpressionContext
-            self.pattern = None # ValueExpressionContext
-            self.quantifier = None # Token
-            self.escapeChar = None # Token
-            self.right = None # ValueExpressionContext
+            self.kind = None  # Token
+            self.lower = None  # ValueExpressionContext
+            self.upper = None  # ValueExpressionContext
+            self.pattern = None  # ValueExpressionContext
+            self.quantifier = None  # Token
+            self.escapeChar = None  # Token
+            self.right = None  # ValueExpressionContext
 
         def AND(self):
             return self.getToken(SqlBaseParser.AND, 0)
@@ -16597,29 +17186,26 @@ class SqlBaseParser ( Parser ):
         def BETWEEN(self):
             return self.getToken(SqlBaseParser.BETWEEN, 0)
 
-        def valueExpression(self, i:int=None):
+        def valueExpression(self, i: int = None):
             if i is None:
                 return self.getTypedRuleContexts(SqlBaseParser.ValueExpressionContext)
             else:
-                return self.getTypedRuleContext(SqlBaseParser.ValueExpressionContext,i)
-
+                return self.getTypedRuleContext(SqlBaseParser.ValueExpressionContext, i)
 
         def NOT(self):
             return self.getToken(SqlBaseParser.NOT, 0)
 
-        def expression(self, i:int=None):
+        def expression(self, i: int = None):
             if i is None:
                 return self.getTypedRuleContexts(SqlBaseParser.ExpressionContext)
             else:
-                return self.getTypedRuleContext(SqlBaseParser.ExpressionContext,i)
-
+                return self.getTypedRuleContext(SqlBaseParser.ExpressionContext, i)
 
         def IN(self):
             return self.getToken(SqlBaseParser.IN, 0)
 
         def query(self):
-            return self.getTypedRuleContext(SqlBaseParser.QueryContext,0)
-
+            return self.getTypedRuleContext(SqlBaseParser.QueryContext, 0)
 
         def RLIKE(self):
             return self.getToken(SqlBaseParser.RLIKE, 0)
@@ -16666,35 +17252,31 @@ class SqlBaseParser ( Parser ):
         def getRuleIndex(self):
             return SqlBaseParser.RULE_predicate
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterPredicate" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterPredicate"):
                 listener.enterPredicate(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitPredicate" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitPredicate"):
                 listener.exitPredicate(self)
-
-
-
 
     def predicate(self):
 
         localctx = SqlBaseParser.PredicateContext(self, self._ctx, self.state)
         self.enterRule(localctx, 204, self.RULE_predicate)
-        self._la = 0 # Token type
+        self._la = 0  # Token type
         try:
             self.state = 2541
             self._errHandler.sync(self)
-            la_ = self._interp.adaptivePredict(self._input,332,self._ctx)
+            la_ = self._interp.adaptivePredict(self._input, 332, self._ctx)
             if la_ == 1:
                 self.enterOuterAlt(localctx, 1)
                 self.state = 2460
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==SqlBaseParser.NOT:
+                if _la == SqlBaseParser.NOT:
                     self.state = 2459
                     self.match(SqlBaseParser.NOT)
-
 
                 self.state = 2462
                 localctx.kind = self.match(SqlBaseParser.BETWEEN)
@@ -16711,10 +17293,9 @@ class SqlBaseParser ( Parser ):
                 self.state = 2468
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==SqlBaseParser.NOT:
+                if _la == SqlBaseParser.NOT:
                     self.state = 2467
                     self.match(SqlBaseParser.NOT)
-
 
                 self.state = 2470
                 localctx.kind = self.match(SqlBaseParser.IN)
@@ -16725,7 +17306,7 @@ class SqlBaseParser ( Parser ):
                 self.state = 2477
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                while _la==SqlBaseParser.T__3:
+                while _la == SqlBaseParser.T__3:
                     self.state = 2473
                     self.match(SqlBaseParser.T__3)
                     self.state = 2474
@@ -16743,10 +17324,9 @@ class SqlBaseParser ( Parser ):
                 self.state = 2483
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==SqlBaseParser.NOT:
+                if _la == SqlBaseParser.NOT:
                     self.state = 2482
                     self.match(SqlBaseParser.NOT)
-
 
                 self.state = 2485
                 localctx.kind = self.match(SqlBaseParser.IN)
@@ -16763,10 +17343,9 @@ class SqlBaseParser ( Parser ):
                 self.state = 2491
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==SqlBaseParser.NOT:
+                if _la == SqlBaseParser.NOT:
                     self.state = 2490
                     self.match(SqlBaseParser.NOT)
-
 
                 self.state = 2493
                 localctx.kind = self.match(SqlBaseParser.RLIKE)
@@ -16779,24 +17358,27 @@ class SqlBaseParser ( Parser ):
                 self.state = 2496
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==SqlBaseParser.NOT:
+                if _la == SqlBaseParser.NOT:
                     self.state = 2495
                     self.match(SqlBaseParser.NOT)
-
 
                 self.state = 2498
                 localctx.kind = self.match(SqlBaseParser.LIKE)
                 self.state = 2499
                 localctx.quantifier = self._input.LT(1)
                 _la = self._input.LA(1)
-                if not(_la==SqlBaseParser.ALL or _la==SqlBaseParser.ANY or _la==SqlBaseParser.SOME):
+                if not (
+                    _la == SqlBaseParser.ALL
+                    or _la == SqlBaseParser.ANY
+                    or _la == SqlBaseParser.SOME
+                ):
                     localctx.quantifier = self._errHandler.recoverInline(self)
                 else:
                     self._errHandler.reportMatch(self)
                     self.consume()
                 self.state = 2513
                 self._errHandler.sync(self)
-                la_ = self._interp.adaptivePredict(self._input,326,self._ctx)
+                la_ = self._interp.adaptivePredict(self._input, 326, self._ctx)
                 if la_ == 1:
                     self.state = 2500
                     self.match(SqlBaseParser.T__1)
@@ -16812,7 +17394,7 @@ class SqlBaseParser ( Parser ):
                     self.state = 2508
                     self._errHandler.sync(self)
                     _la = self._input.LA(1)
-                    while _la==SqlBaseParser.T__3:
+                    while _la == SqlBaseParser.T__3:
                         self.state = 2504
                         self.match(SqlBaseParser.T__3)
                         self.state = 2505
@@ -16825,7 +17407,6 @@ class SqlBaseParser ( Parser ):
                     self.match(SqlBaseParser.T__2)
                     pass
 
-
                 pass
 
             elif la_ == 6:
@@ -16833,10 +17414,9 @@ class SqlBaseParser ( Parser ):
                 self.state = 2516
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==SqlBaseParser.NOT:
+                if _la == SqlBaseParser.NOT:
                     self.state = 2515
                     self.match(SqlBaseParser.NOT)
-
 
                 self.state = 2518
                 localctx.kind = self.match(SqlBaseParser.LIKE)
@@ -16844,13 +17424,12 @@ class SqlBaseParser ( Parser ):
                 localctx.pattern = self.valueExpression(0)
                 self.state = 2522
                 self._errHandler.sync(self)
-                la_ = self._interp.adaptivePredict(self._input,328,self._ctx)
+                la_ = self._interp.adaptivePredict(self._input, 328, self._ctx)
                 if la_ == 1:
                     self.state = 2520
                     self.match(SqlBaseParser.ESCAPE)
                     self.state = 2521
                     localctx.escapeChar = self.match(SqlBaseParser.STRING)
-
 
                 pass
 
@@ -16861,10 +17440,9 @@ class SqlBaseParser ( Parser ):
                 self.state = 2526
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==SqlBaseParser.NOT:
+                if _la == SqlBaseParser.NOT:
                     self.state = 2525
                     self.match(SqlBaseParser.NOT)
-
 
                 self.state = 2528
                 localctx.kind = self.match(SqlBaseParser.NULL)
@@ -16877,15 +17455,18 @@ class SqlBaseParser ( Parser ):
                 self.state = 2531
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==SqlBaseParser.NOT:
+                if _la == SqlBaseParser.NOT:
                     self.state = 2530
                     self.match(SqlBaseParser.NOT)
-
 
                 self.state = 2533
                 localctx.kind = self._input.LT(1)
                 _la = self._input.LA(1)
-                if not(_la==SqlBaseParser.FALSE or _la==SqlBaseParser.TRUE or _la==SqlBaseParser.UNKNOWN):
+                if not (
+                    _la == SqlBaseParser.FALSE
+                    or _la == SqlBaseParser.TRUE
+                    or _la == SqlBaseParser.UNKNOWN
+                ):
                     localctx.kind = self._errHandler.recoverInline(self)
                 else:
                     self._errHandler.reportMatch(self)
@@ -16899,10 +17480,9 @@ class SqlBaseParser ( Parser ):
                 self.state = 2536
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==SqlBaseParser.NOT:
+                if _la == SqlBaseParser.NOT:
                     self.state = 2535
                     self.match(SqlBaseParser.NOT)
-
 
                 self.state = 2538
                 localctx.kind = self.match(SqlBaseParser.DISTINCT)
@@ -16912,7 +17492,6 @@ class SqlBaseParser ( Parser ):
                 localctx.right = self.valueExpression(0)
                 pass
 
-
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)
@@ -16921,154 +17500,160 @@ class SqlBaseParser ( Parser ):
             self.exitRule()
         return localctx
 
-
     class ValueExpressionContext(ParserRuleContext):
-        __slots__ = 'parser'
+        __slots__ = "parser"
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
-
 
         def getRuleIndex(self):
             return SqlBaseParser.RULE_valueExpression
 
-     
-        def copyFrom(self, ctx:ParserRuleContext):
+        def copyFrom(self, ctx: ParserRuleContext):
             super().copyFrom(ctx)
 
-
     class ValueExpressionDefaultContext(ValueExpressionContext):
-
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a SqlBaseParser.ValueExpressionContext
+        def __init__(
+            self, parser, ctx: ParserRuleContext
+        ):  # actually a SqlBaseParser.ValueExpressionContext
             super().__init__(parser)
             self.copyFrom(ctx)
 
         def primaryExpression(self):
-            return self.getTypedRuleContext(SqlBaseParser.PrimaryExpressionContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.PrimaryExpressionContext, 0)
 
-
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterValueExpressionDefault" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterValueExpressionDefault"):
                 listener.enterValueExpressionDefault(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitValueExpressionDefault" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitValueExpressionDefault"):
                 listener.exitValueExpressionDefault(self)
 
-
     class ComparisonContext(ValueExpressionContext):
-
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a SqlBaseParser.ValueExpressionContext
+        def __init__(
+            self, parser, ctx: ParserRuleContext
+        ):  # actually a SqlBaseParser.ValueExpressionContext
             super().__init__(parser)
-            self.left = None # ValueExpressionContext
-            self.right = None # ValueExpressionContext
+            self.left = None  # ValueExpressionContext
+            self.right = None  # ValueExpressionContext
             self.copyFrom(ctx)
 
         def comparisonOperator(self):
-            return self.getTypedRuleContext(SqlBaseParser.ComparisonOperatorContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.ComparisonOperatorContext, 0)
 
-        def valueExpression(self, i:int=None):
+        def valueExpression(self, i: int = None):
             if i is None:
                 return self.getTypedRuleContexts(SqlBaseParser.ValueExpressionContext)
             else:
-                return self.getTypedRuleContext(SqlBaseParser.ValueExpressionContext,i)
+                return self.getTypedRuleContext(SqlBaseParser.ValueExpressionContext, i)
 
-
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterComparison" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterComparison"):
                 listener.enterComparison(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitComparison" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitComparison"):
                 listener.exitComparison(self)
 
-
     class ArithmeticBinaryContext(ValueExpressionContext):
-
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a SqlBaseParser.ValueExpressionContext
+        def __init__(
+            self, parser, ctx: ParserRuleContext
+        ):  # actually a SqlBaseParser.ValueExpressionContext
             super().__init__(parser)
-            self.left = None # ValueExpressionContext
-            self.operator = None # Token
-            self.right = None # ValueExpressionContext
+            self.left = None  # ValueExpressionContext
+            self.operator = None  # Token
+            self.right = None  # ValueExpressionContext
             self.copyFrom(ctx)
 
-        def valueExpression(self, i:int=None):
+        def valueExpression(self, i: int = None):
             if i is None:
                 return self.getTypedRuleContexts(SqlBaseParser.ValueExpressionContext)
             else:
-                return self.getTypedRuleContext(SqlBaseParser.ValueExpressionContext,i)
+                return self.getTypedRuleContext(SqlBaseParser.ValueExpressionContext, i)
 
         def ASTERISK(self):
             return self.getToken(SqlBaseParser.ASTERISK, 0)
+
         def SLASH(self):
             return self.getToken(SqlBaseParser.SLASH, 0)
+
         def PERCENT(self):
             return self.getToken(SqlBaseParser.PERCENT, 0)
+
         def DIV(self):
             return self.getToken(SqlBaseParser.DIV, 0)
+
         def PLUS(self):
             return self.getToken(SqlBaseParser.PLUS, 0)
+
         def MINUS(self):
             return self.getToken(SqlBaseParser.MINUS, 0)
+
         def CONCAT_PIPE(self):
             return self.getToken(SqlBaseParser.CONCAT_PIPE, 0)
+
         def AMPERSAND(self):
             return self.getToken(SqlBaseParser.AMPERSAND, 0)
+
         def HAT(self):
             return self.getToken(SqlBaseParser.HAT, 0)
+
         def PIPE(self):
             return self.getToken(SqlBaseParser.PIPE, 0)
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterArithmeticBinary" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterArithmeticBinary"):
                 listener.enterArithmeticBinary(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitArithmeticBinary" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitArithmeticBinary"):
                 listener.exitArithmeticBinary(self)
 
-
     class ArithmeticUnaryContext(ValueExpressionContext):
-
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a SqlBaseParser.ValueExpressionContext
+        def __init__(
+            self, parser, ctx: ParserRuleContext
+        ):  # actually a SqlBaseParser.ValueExpressionContext
             super().__init__(parser)
-            self.operator = None # Token
+            self.operator = None  # Token
             self.copyFrom(ctx)
 
         def valueExpression(self):
-            return self.getTypedRuleContext(SqlBaseParser.ValueExpressionContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.ValueExpressionContext, 0)
 
         def MINUS(self):
             return self.getToken(SqlBaseParser.MINUS, 0)
+
         def PLUS(self):
             return self.getToken(SqlBaseParser.PLUS, 0)
+
         def TILDE(self):
             return self.getToken(SqlBaseParser.TILDE, 0)
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterArithmeticUnary" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterArithmeticUnary"):
                 listener.enterArithmeticUnary(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitArithmeticUnary" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitArithmeticUnary"):
                 listener.exitArithmeticUnary(self)
 
-
-
-    def valueExpression(self, _p:int=0):
+    def valueExpression(self, _p: int = 0):
         _parentctx = self._ctx
         _parentState = self.state
         localctx = SqlBaseParser.ValueExpressionContext(self, self._ctx, _parentState)
         _prevctx = localctx
         _startState = 206
         self.enterRecursionRule(localctx, 206, self.RULE_valueExpression, _p)
-        self._la = 0 # Token type
+        self._la = 0  # Token type
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 2547
             self._errHandler.sync(self)
-            la_ = self._interp.adaptivePredict(self._input,333,self._ctx)
+            la_ = self._interp.adaptivePredict(self._input, 333, self._ctx)
             if la_ == 1:
                 localctx = SqlBaseParser.ValueExpressionDefaultContext(self, localctx)
                 self._ctx = localctx
@@ -17085,7 +17670,20 @@ class SqlBaseParser ( Parser ):
                 self.state = 2545
                 localctx.operator = self._input.LT(1)
                 _la = self._input.LA(1)
-                if not(((((_la - 278)) & ~0x3f) == 0 and ((1 << (_la - 278)) & ((1 << (SqlBaseParser.PLUS - 278)) | (1 << (SqlBaseParser.MINUS - 278)) | (1 << (SqlBaseParser.TILDE - 278)))) != 0)):
+                if not (
+                    (
+                        (((_la - 278)) & ~0x3F) == 0
+                        and (
+                            (1 << (_la - 278))
+                            & (
+                                (1 << (SqlBaseParser.PLUS - 278))
+                                | (1 << (SqlBaseParser.MINUS - 278))
+                                | (1 << (SqlBaseParser.TILDE - 278))
+                            )
+                        )
+                        != 0
+                    )
+                ):
                     localctx.operator = self._errHandler.recoverInline(self)
                 else:
                     self._errHandler.reportMatch(self)
@@ -17094,31 +17692,54 @@ class SqlBaseParser ( Parser ):
                 self.valueExpression(7)
                 pass
 
-
             self._ctx.stop = self._input.LT(-1)
             self.state = 2570
             self._errHandler.sync(self)
-            _alt = self._interp.adaptivePredict(self._input,335,self._ctx)
-            while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
-                if _alt==1:
+            _alt = self._interp.adaptivePredict(self._input, 335, self._ctx)
+            while _alt != 2 and _alt != ATN.INVALID_ALT_NUMBER:
+                if _alt == 1:
                     if self._parseListeners is not None:
                         self.triggerExitRuleEvent()
                     _prevctx = localctx
                     self.state = 2568
                     self._errHandler.sync(self)
-                    la_ = self._interp.adaptivePredict(self._input,334,self._ctx)
+                    la_ = self._interp.adaptivePredict(self._input, 334, self._ctx)
                     if la_ == 1:
-                        localctx = SqlBaseParser.ArithmeticBinaryContext(self, SqlBaseParser.ValueExpressionContext(self, _parentctx, _parentState))
+                        localctx = SqlBaseParser.ArithmeticBinaryContext(
+                            self,
+                            SqlBaseParser.ValueExpressionContext(
+                                self, _parentctx, _parentState
+                            ),
+                        )
                         localctx.left = _prevctx
-                        self.pushNewRecursionContext(localctx, _startState, self.RULE_valueExpression)
+                        self.pushNewRecursionContext(
+                            localctx, _startState, self.RULE_valueExpression
+                        )
                         self.state = 2549
                         if not self.precpred(self._ctx, 6):
                             from antlr4.error.Errors import FailedPredicateException
-                            raise FailedPredicateException(self, "self.precpred(self._ctx, 6)")
+
+                            raise FailedPredicateException(
+                                self, "self.precpred(self._ctx, 6)"
+                            )
                         self.state = 2550
                         localctx.operator = self._input.LT(1)
                         _la = self._input.LA(1)
-                        if not(_la==SqlBaseParser.DIV or ((((_la - 280)) & ~0x3f) == 0 and ((1 << (_la - 280)) & ((1 << (SqlBaseParser.ASTERISK - 280)) | (1 << (SqlBaseParser.SLASH - 280)) | (1 << (SqlBaseParser.PERCENT - 280)))) != 0)):
+                        if not (
+                            _la == SqlBaseParser.DIV
+                            or (
+                                (((_la - 280)) & ~0x3F) == 0
+                                and (
+                                    (1 << (_la - 280))
+                                    & (
+                                        (1 << (SqlBaseParser.ASTERISK - 280))
+                                        | (1 << (SqlBaseParser.SLASH - 280))
+                                        | (1 << (SqlBaseParser.PERCENT - 280))
+                                    )
+                                )
+                                != 0
+                            )
+                        ):
                             localctx.operator = self._errHandler.recoverInline(self)
                         else:
                             self._errHandler.reportMatch(self)
@@ -17128,17 +17749,40 @@ class SqlBaseParser ( Parser ):
                         pass
 
                     elif la_ == 2:
-                        localctx = SqlBaseParser.ArithmeticBinaryContext(self, SqlBaseParser.ValueExpressionContext(self, _parentctx, _parentState))
+                        localctx = SqlBaseParser.ArithmeticBinaryContext(
+                            self,
+                            SqlBaseParser.ValueExpressionContext(
+                                self, _parentctx, _parentState
+                            ),
+                        )
                         localctx.left = _prevctx
-                        self.pushNewRecursionContext(localctx, _startState, self.RULE_valueExpression)
+                        self.pushNewRecursionContext(
+                            localctx, _startState, self.RULE_valueExpression
+                        )
                         self.state = 2552
                         if not self.precpred(self._ctx, 5):
                             from antlr4.error.Errors import FailedPredicateException
-                            raise FailedPredicateException(self, "self.precpred(self._ctx, 5)")
+
+                            raise FailedPredicateException(
+                                self, "self.precpred(self._ctx, 5)"
+                            )
                         self.state = 2553
                         localctx.operator = self._input.LT(1)
                         _la = self._input.LA(1)
-                        if not(((((_la - 278)) & ~0x3f) == 0 and ((1 << (_la - 278)) & ((1 << (SqlBaseParser.PLUS - 278)) | (1 << (SqlBaseParser.MINUS - 278)) | (1 << (SqlBaseParser.CONCAT_PIPE - 278)))) != 0)):
+                        if not (
+                            (
+                                (((_la - 278)) & ~0x3F) == 0
+                                and (
+                                    (1 << (_la - 278))
+                                    & (
+                                        (1 << (SqlBaseParser.PLUS - 278))
+                                        | (1 << (SqlBaseParser.MINUS - 278))
+                                        | (1 << (SqlBaseParser.CONCAT_PIPE - 278))
+                                    )
+                                )
+                                != 0
+                            )
+                        ):
                             localctx.operator = self._errHandler.recoverInline(self)
                         else:
                             self._errHandler.reportMatch(self)
@@ -17148,13 +17792,23 @@ class SqlBaseParser ( Parser ):
                         pass
 
                     elif la_ == 3:
-                        localctx = SqlBaseParser.ArithmeticBinaryContext(self, SqlBaseParser.ValueExpressionContext(self, _parentctx, _parentState))
+                        localctx = SqlBaseParser.ArithmeticBinaryContext(
+                            self,
+                            SqlBaseParser.ValueExpressionContext(
+                                self, _parentctx, _parentState
+                            ),
+                        )
                         localctx.left = _prevctx
-                        self.pushNewRecursionContext(localctx, _startState, self.RULE_valueExpression)
+                        self.pushNewRecursionContext(
+                            localctx, _startState, self.RULE_valueExpression
+                        )
                         self.state = 2555
                         if not self.precpred(self._ctx, 4):
                             from antlr4.error.Errors import FailedPredicateException
-                            raise FailedPredicateException(self, "self.precpred(self._ctx, 4)")
+
+                            raise FailedPredicateException(
+                                self, "self.precpred(self._ctx, 4)"
+                            )
                         self.state = 2556
                         localctx.operator = self.match(SqlBaseParser.AMPERSAND)
                         self.state = 2557
@@ -17162,13 +17816,23 @@ class SqlBaseParser ( Parser ):
                         pass
 
                     elif la_ == 4:
-                        localctx = SqlBaseParser.ArithmeticBinaryContext(self, SqlBaseParser.ValueExpressionContext(self, _parentctx, _parentState))
+                        localctx = SqlBaseParser.ArithmeticBinaryContext(
+                            self,
+                            SqlBaseParser.ValueExpressionContext(
+                                self, _parentctx, _parentState
+                            ),
+                        )
                         localctx.left = _prevctx
-                        self.pushNewRecursionContext(localctx, _startState, self.RULE_valueExpression)
+                        self.pushNewRecursionContext(
+                            localctx, _startState, self.RULE_valueExpression
+                        )
                         self.state = 2558
                         if not self.precpred(self._ctx, 3):
                             from antlr4.error.Errors import FailedPredicateException
-                            raise FailedPredicateException(self, "self.precpred(self._ctx, 3)")
+
+                            raise FailedPredicateException(
+                                self, "self.precpred(self._ctx, 3)"
+                            )
                         self.state = 2559
                         localctx.operator = self.match(SqlBaseParser.HAT)
                         self.state = 2560
@@ -17176,13 +17840,23 @@ class SqlBaseParser ( Parser ):
                         pass
 
                     elif la_ == 5:
-                        localctx = SqlBaseParser.ArithmeticBinaryContext(self, SqlBaseParser.ValueExpressionContext(self, _parentctx, _parentState))
+                        localctx = SqlBaseParser.ArithmeticBinaryContext(
+                            self,
+                            SqlBaseParser.ValueExpressionContext(
+                                self, _parentctx, _parentState
+                            ),
+                        )
                         localctx.left = _prevctx
-                        self.pushNewRecursionContext(localctx, _startState, self.RULE_valueExpression)
+                        self.pushNewRecursionContext(
+                            localctx, _startState, self.RULE_valueExpression
+                        )
                         self.state = 2561
                         if not self.precpred(self._ctx, 2):
                             from antlr4.error.Errors import FailedPredicateException
-                            raise FailedPredicateException(self, "self.precpred(self._ctx, 2)")
+
+                            raise FailedPredicateException(
+                                self, "self.precpred(self._ctx, 2)"
+                            )
                         self.state = 2562
                         localctx.operator = self.match(SqlBaseParser.PIPE)
                         self.state = 2563
@@ -17190,23 +17864,32 @@ class SqlBaseParser ( Parser ):
                         pass
 
                     elif la_ == 6:
-                        localctx = SqlBaseParser.ComparisonContext(self, SqlBaseParser.ValueExpressionContext(self, _parentctx, _parentState))
+                        localctx = SqlBaseParser.ComparisonContext(
+                            self,
+                            SqlBaseParser.ValueExpressionContext(
+                                self, _parentctx, _parentState
+                            ),
+                        )
                         localctx.left = _prevctx
-                        self.pushNewRecursionContext(localctx, _startState, self.RULE_valueExpression)
+                        self.pushNewRecursionContext(
+                            localctx, _startState, self.RULE_valueExpression
+                        )
                         self.state = 2564
                         if not self.precpred(self._ctx, 1):
                             from antlr4.error.Errors import FailedPredicateException
-                            raise FailedPredicateException(self, "self.precpred(self._ctx, 1)")
+
+                            raise FailedPredicateException(
+                                self, "self.precpred(self._ctx, 1)"
+                            )
                         self.state = 2565
                         self.comparisonOperator()
                         self.state = 2566
                         localctx.right = self.valueExpression(2)
                         pass
 
-             
                 self.state = 2572
                 self._errHandler.sync(self)
-                _alt = self._interp.adaptivePredict(self._input,335,self._ctx)
+                _alt = self._interp.adaptivePredict(self._input, 335, self._ctx)
 
         except RecognitionException as re:
             localctx.exception = re
@@ -17216,633 +17899,651 @@ class SqlBaseParser ( Parser ):
             self.unrollRecursionContexts(_parentctx)
         return localctx
 
-
     class PrimaryExpressionContext(ParserRuleContext):
-        __slots__ = 'parser'
+        __slots__ = "parser"
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
-
 
         def getRuleIndex(self):
             return SqlBaseParser.RULE_primaryExpression
 
-     
-        def copyFrom(self, ctx:ParserRuleContext):
+        def copyFrom(self, ctx: ParserRuleContext):
             super().copyFrom(ctx)
 
-
     class StructContext(PrimaryExpressionContext):
-
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a SqlBaseParser.PrimaryExpressionContext
+        def __init__(
+            self, parser, ctx: ParserRuleContext
+        ):  # actually a SqlBaseParser.PrimaryExpressionContext
             super().__init__(parser)
-            self._namedExpression = None # NamedExpressionContext
-            self.argument = list() # of NamedExpressionContexts
+            self._namedExpression = None  # NamedExpressionContext
+            self.argument = list()  # of NamedExpressionContexts
             self.copyFrom(ctx)
 
         def STRUCT(self):
             return self.getToken(SqlBaseParser.STRUCT, 0)
-        def namedExpression(self, i:int=None):
+
+        def namedExpression(self, i: int = None):
             if i is None:
                 return self.getTypedRuleContexts(SqlBaseParser.NamedExpressionContext)
             else:
-                return self.getTypedRuleContext(SqlBaseParser.NamedExpressionContext,i)
+                return self.getTypedRuleContext(SqlBaseParser.NamedExpressionContext, i)
 
-
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterStruct" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterStruct"):
                 listener.enterStruct(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitStruct" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitStruct"):
                 listener.exitStruct(self)
 
-
     class DereferenceContext(PrimaryExpressionContext):
-
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a SqlBaseParser.PrimaryExpressionContext
+        def __init__(
+            self, parser, ctx: ParserRuleContext
+        ):  # actually a SqlBaseParser.PrimaryExpressionContext
             super().__init__(parser)
-            self.base = None # PrimaryExpressionContext
-            self.fieldName = None # IdentifierContext
+            self.base = None  # PrimaryExpressionContext
+            self.fieldName = None  # IdentifierContext
             self.copyFrom(ctx)
 
         def primaryExpression(self):
-            return self.getTypedRuleContext(SqlBaseParser.PrimaryExpressionContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.PrimaryExpressionContext, 0)
 
         def identifier(self):
-            return self.getTypedRuleContext(SqlBaseParser.IdentifierContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.IdentifierContext, 0)
 
-
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterDereference" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterDereference"):
                 listener.enterDereference(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitDereference" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitDereference"):
                 listener.exitDereference(self)
 
-
     class SimpleCaseContext(PrimaryExpressionContext):
-
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a SqlBaseParser.PrimaryExpressionContext
+        def __init__(
+            self, parser, ctx: ParserRuleContext
+        ):  # actually a SqlBaseParser.PrimaryExpressionContext
             super().__init__(parser)
-            self.value = None # ExpressionContext
-            self.elseExpression = None # ExpressionContext
+            self.value = None  # ExpressionContext
+            self.elseExpression = None  # ExpressionContext
             self.copyFrom(ctx)
 
         def CASE(self):
             return self.getToken(SqlBaseParser.CASE, 0)
+
         def END(self):
             return self.getToken(SqlBaseParser.END, 0)
-        def expression(self, i:int=None):
+
+        def expression(self, i: int = None):
             if i is None:
                 return self.getTypedRuleContexts(SqlBaseParser.ExpressionContext)
             else:
-                return self.getTypedRuleContext(SqlBaseParser.ExpressionContext,i)
+                return self.getTypedRuleContext(SqlBaseParser.ExpressionContext, i)
 
-        def whenClause(self, i:int=None):
+        def whenClause(self, i: int = None):
             if i is None:
                 return self.getTypedRuleContexts(SqlBaseParser.WhenClauseContext)
             else:
-                return self.getTypedRuleContext(SqlBaseParser.WhenClauseContext,i)
+                return self.getTypedRuleContext(SqlBaseParser.WhenClauseContext, i)
 
         def ELSE(self):
             return self.getToken(SqlBaseParser.ELSE, 0)
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterSimpleCase" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterSimpleCase"):
                 listener.enterSimpleCase(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitSimpleCase" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitSimpleCase"):
                 listener.exitSimpleCase(self)
 
-
     class CurrentLikeContext(PrimaryExpressionContext):
-
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a SqlBaseParser.PrimaryExpressionContext
+        def __init__(
+            self, parser, ctx: ParserRuleContext
+        ):  # actually a SqlBaseParser.PrimaryExpressionContext
             super().__init__(parser)
-            self.name = None # Token
+            self.name = None  # Token
             self.copyFrom(ctx)
 
         def CURRENT_DATE(self):
             return self.getToken(SqlBaseParser.CURRENT_DATE, 0)
+
         def CURRENT_TIMESTAMP(self):
             return self.getToken(SqlBaseParser.CURRENT_TIMESTAMP, 0)
+
         def CURRENT_USER(self):
             return self.getToken(SqlBaseParser.CURRENT_USER, 0)
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterCurrentLike" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterCurrentLike"):
                 listener.enterCurrentLike(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitCurrentLike" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitCurrentLike"):
                 listener.exitCurrentLike(self)
 
-
     class ColumnReferenceContext(PrimaryExpressionContext):
-
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a SqlBaseParser.PrimaryExpressionContext
+        def __init__(
+            self, parser, ctx: ParserRuleContext
+        ):  # actually a SqlBaseParser.PrimaryExpressionContext
             super().__init__(parser)
             self.copyFrom(ctx)
 
         def identifier(self):
-            return self.getTypedRuleContext(SqlBaseParser.IdentifierContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.IdentifierContext, 0)
 
-
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterColumnReference" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterColumnReference"):
                 listener.enterColumnReference(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitColumnReference" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitColumnReference"):
                 listener.exitColumnReference(self)
 
-
     class RowConstructorContext(PrimaryExpressionContext):
-
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a SqlBaseParser.PrimaryExpressionContext
+        def __init__(
+            self, parser, ctx: ParserRuleContext
+        ):  # actually a SqlBaseParser.PrimaryExpressionContext
             super().__init__(parser)
             self.copyFrom(ctx)
 
-        def namedExpression(self, i:int=None):
+        def namedExpression(self, i: int = None):
             if i is None:
                 return self.getTypedRuleContexts(SqlBaseParser.NamedExpressionContext)
             else:
-                return self.getTypedRuleContext(SqlBaseParser.NamedExpressionContext,i)
+                return self.getTypedRuleContext(SqlBaseParser.NamedExpressionContext, i)
 
-
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterRowConstructor" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterRowConstructor"):
                 listener.enterRowConstructor(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitRowConstructor" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitRowConstructor"):
                 listener.exitRowConstructor(self)
 
-
     class LastContext(PrimaryExpressionContext):
-
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a SqlBaseParser.PrimaryExpressionContext
+        def __init__(
+            self, parser, ctx: ParserRuleContext
+        ):  # actually a SqlBaseParser.PrimaryExpressionContext
             super().__init__(parser)
             self.copyFrom(ctx)
 
         def LAST(self):
             return self.getToken(SqlBaseParser.LAST, 0)
+
         def expression(self):
-            return self.getTypedRuleContext(SqlBaseParser.ExpressionContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.ExpressionContext, 0)
 
         def IGNORE(self):
             return self.getToken(SqlBaseParser.IGNORE, 0)
+
         def NULLS(self):
             return self.getToken(SqlBaseParser.NULLS, 0)
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterLast" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterLast"):
                 listener.enterLast(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitLast" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitLast"):
                 listener.exitLast(self)
 
-
     class StarContext(PrimaryExpressionContext):
-
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a SqlBaseParser.PrimaryExpressionContext
+        def __init__(
+            self, parser, ctx: ParserRuleContext
+        ):  # actually a SqlBaseParser.PrimaryExpressionContext
             super().__init__(parser)
             self.copyFrom(ctx)
 
         def ASTERISK(self):
             return self.getToken(SqlBaseParser.ASTERISK, 0)
+
         def qualifiedName(self):
-            return self.getTypedRuleContext(SqlBaseParser.QualifiedNameContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.QualifiedNameContext, 0)
 
-
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterStar" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterStar"):
                 listener.enterStar(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitStar" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitStar"):
                 listener.exitStar(self)
 
-
     class OverlayContext(PrimaryExpressionContext):
-
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a SqlBaseParser.PrimaryExpressionContext
+        def __init__(
+            self, parser, ctx: ParserRuleContext
+        ):  # actually a SqlBaseParser.PrimaryExpressionContext
             super().__init__(parser)
-            self.input = None # ValueExpressionContext
-            self.replace = None # ValueExpressionContext
-            self.position = None # ValueExpressionContext
-            self.length = None # ValueExpressionContext
+            self.input_ = None  # ValueExpressionContext
+            self.replace = None  # ValueExpressionContext
+            self.position = None  # ValueExpressionContext
+            self.length = None  # ValueExpressionContext
             self.copyFrom(ctx)
 
         def OVERLAY(self):
             return self.getToken(SqlBaseParser.OVERLAY, 0)
+
         def PLACING(self):
             return self.getToken(SqlBaseParser.PLACING, 0)
+
         def FROM(self):
             return self.getToken(SqlBaseParser.FROM, 0)
-        def valueExpression(self, i:int=None):
+
+        def valueExpression(self, i: int = None):
             if i is None:
                 return self.getTypedRuleContexts(SqlBaseParser.ValueExpressionContext)
             else:
-                return self.getTypedRuleContext(SqlBaseParser.ValueExpressionContext,i)
+                return self.getTypedRuleContext(SqlBaseParser.ValueExpressionContext, i)
 
         def FOR(self):
             return self.getToken(SqlBaseParser.FOR, 0)
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterOverlay" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterOverlay"):
                 listener.enterOverlay(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitOverlay" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitOverlay"):
                 listener.exitOverlay(self)
 
-
     class SubscriptContext(PrimaryExpressionContext):
-
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a SqlBaseParser.PrimaryExpressionContext
+        def __init__(
+            self, parser, ctx: ParserRuleContext
+        ):  # actually a SqlBaseParser.PrimaryExpressionContext
             super().__init__(parser)
-            self.value = None # PrimaryExpressionContext
-            self.index = None # ValueExpressionContext
+            self.value = None  # PrimaryExpressionContext
+            self.index = None  # ValueExpressionContext
             self.copyFrom(ctx)
 
         def primaryExpression(self):
-            return self.getTypedRuleContext(SqlBaseParser.PrimaryExpressionContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.PrimaryExpressionContext, 0)
 
         def valueExpression(self):
-            return self.getTypedRuleContext(SqlBaseParser.ValueExpressionContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.ValueExpressionContext, 0)
 
-
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterSubscript" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterSubscript"):
                 listener.enterSubscript(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitSubscript" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitSubscript"):
                 listener.exitSubscript(self)
 
-
     class SubqueryExpressionContext(PrimaryExpressionContext):
-
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a SqlBaseParser.PrimaryExpressionContext
+        def __init__(
+            self, parser, ctx: ParserRuleContext
+        ):  # actually a SqlBaseParser.PrimaryExpressionContext
             super().__init__(parser)
             self.copyFrom(ctx)
 
         def query(self):
-            return self.getTypedRuleContext(SqlBaseParser.QueryContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.QueryContext, 0)
 
-
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterSubqueryExpression" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterSubqueryExpression"):
                 listener.enterSubqueryExpression(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitSubqueryExpression" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitSubqueryExpression"):
                 listener.exitSubqueryExpression(self)
 
-
     class SubstringContext(PrimaryExpressionContext):
-
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a SqlBaseParser.PrimaryExpressionContext
+        def __init__(
+            self, parser, ctx: ParserRuleContext
+        ):  # actually a SqlBaseParser.PrimaryExpressionContext
             super().__init__(parser)
-            self.str = None # ValueExpressionContext
-            self.pos = None # ValueExpressionContext
-            self.len = None # ValueExpressionContext
+            self.str_ = None  # ValueExpressionContext
+            self.pos = None  # ValueExpressionContext
+            self.len_ = None  # ValueExpressionContext
             self.copyFrom(ctx)
 
         def SUBSTR(self):
             return self.getToken(SqlBaseParser.SUBSTR, 0)
+
         def SUBSTRING(self):
             return self.getToken(SqlBaseParser.SUBSTRING, 0)
-        def valueExpression(self, i:int=None):
+
+        def valueExpression(self, i: int = None):
             if i is None:
                 return self.getTypedRuleContexts(SqlBaseParser.ValueExpressionContext)
             else:
-                return self.getTypedRuleContext(SqlBaseParser.ValueExpressionContext,i)
+                return self.getTypedRuleContext(SqlBaseParser.ValueExpressionContext, i)
 
         def FROM(self):
             return self.getToken(SqlBaseParser.FROM, 0)
+
         def FOR(self):
             return self.getToken(SqlBaseParser.FOR, 0)
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterSubstring" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterSubstring"):
                 listener.enterSubstring(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitSubstring" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitSubstring"):
                 listener.exitSubstring(self)
 
-
     class CastContext(PrimaryExpressionContext):
-
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a SqlBaseParser.PrimaryExpressionContext
+        def __init__(
+            self, parser, ctx: ParserRuleContext
+        ):  # actually a SqlBaseParser.PrimaryExpressionContext
             super().__init__(parser)
-            self.name = None # Token
+            self.name = None  # Token
             self.copyFrom(ctx)
 
         def expression(self):
-            return self.getTypedRuleContext(SqlBaseParser.ExpressionContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.ExpressionContext, 0)
 
         def AS(self):
             return self.getToken(SqlBaseParser.AS, 0)
+
         def dataType(self):
-            return self.getTypedRuleContext(SqlBaseParser.DataTypeContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.DataTypeContext, 0)
 
         def CAST(self):
             return self.getToken(SqlBaseParser.CAST, 0)
+
         def TRY_CAST(self):
             return self.getToken(SqlBaseParser.TRY_CAST, 0)
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterCast" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterCast"):
                 listener.enterCast(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitCast" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitCast"):
                 listener.exitCast(self)
 
-
     class ConstantDefaultContext(PrimaryExpressionContext):
-
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a SqlBaseParser.PrimaryExpressionContext
+        def __init__(
+            self, parser, ctx: ParserRuleContext
+        ):  # actually a SqlBaseParser.PrimaryExpressionContext
             super().__init__(parser)
             self.copyFrom(ctx)
 
         def constant(self):
-            return self.getTypedRuleContext(SqlBaseParser.ConstantContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.ConstantContext, 0)
 
-
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterConstantDefault" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterConstantDefault"):
                 listener.enterConstantDefault(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitConstantDefault" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitConstantDefault"):
                 listener.exitConstantDefault(self)
 
-
     class LambdaContext(PrimaryExpressionContext):
-
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a SqlBaseParser.PrimaryExpressionContext
+        def __init__(
+            self, parser, ctx: ParserRuleContext
+        ):  # actually a SqlBaseParser.PrimaryExpressionContext
             super().__init__(parser)
             self.copyFrom(ctx)
 
-        def identifier(self, i:int=None):
+        def identifier(self, i: int = None):
             if i is None:
                 return self.getTypedRuleContexts(SqlBaseParser.IdentifierContext)
             else:
-                return self.getTypedRuleContext(SqlBaseParser.IdentifierContext,i)
+                return self.getTypedRuleContext(SqlBaseParser.IdentifierContext, i)
 
         def expression(self):
-            return self.getTypedRuleContext(SqlBaseParser.ExpressionContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.ExpressionContext, 0)
 
-
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterLambda" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterLambda"):
                 listener.enterLambda(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitLambda" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitLambda"):
                 listener.exitLambda(self)
 
-
     class ParenthesizedExpressionContext(PrimaryExpressionContext):
-
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a SqlBaseParser.PrimaryExpressionContext
+        def __init__(
+            self, parser, ctx: ParserRuleContext
+        ):  # actually a SqlBaseParser.PrimaryExpressionContext
             super().__init__(parser)
             self.copyFrom(ctx)
 
         def expression(self):
-            return self.getTypedRuleContext(SqlBaseParser.ExpressionContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.ExpressionContext, 0)
 
-
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterParenthesizedExpression" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterParenthesizedExpression"):
                 listener.enterParenthesizedExpression(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitParenthesizedExpression" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitParenthesizedExpression"):
                 listener.exitParenthesizedExpression(self)
 
-
     class ExtractContext(PrimaryExpressionContext):
-
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a SqlBaseParser.PrimaryExpressionContext
+        def __init__(
+            self, parser, ctx: ParserRuleContext
+        ):  # actually a SqlBaseParser.PrimaryExpressionContext
             super().__init__(parser)
-            self.field = None # IdentifierContext
-            self.source = None # ValueExpressionContext
+            self.field = None  # IdentifierContext
+            self.source = None  # ValueExpressionContext
             self.copyFrom(ctx)
 
         def EXTRACT(self):
             return self.getToken(SqlBaseParser.EXTRACT, 0)
+
         def FROM(self):
             return self.getToken(SqlBaseParser.FROM, 0)
+
         def identifier(self):
-            return self.getTypedRuleContext(SqlBaseParser.IdentifierContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.IdentifierContext, 0)
 
         def valueExpression(self):
-            return self.getTypedRuleContext(SqlBaseParser.ValueExpressionContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.ValueExpressionContext, 0)
 
-
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterExtract" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterExtract"):
                 listener.enterExtract(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitExtract" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitExtract"):
                 listener.exitExtract(self)
 
-
     class TrimContext(PrimaryExpressionContext):
-
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a SqlBaseParser.PrimaryExpressionContext
+        def __init__(
+            self, parser, ctx: ParserRuleContext
+        ):  # actually a SqlBaseParser.PrimaryExpressionContext
             super().__init__(parser)
-            self.trimOption = None # Token
-            self.trimStr = None # ValueExpressionContext
-            self.srcStr = None # ValueExpressionContext
+            self.trimOption = None  # Token
+            self.trimStr = None  # ValueExpressionContext
+            self.srcStr = None  # ValueExpressionContext
             self.copyFrom(ctx)
 
         def TRIM(self):
             return self.getToken(SqlBaseParser.TRIM, 0)
+
         def FROM(self):
             return self.getToken(SqlBaseParser.FROM, 0)
-        def valueExpression(self, i:int=None):
+
+        def valueExpression(self, i: int = None):
             if i is None:
                 return self.getTypedRuleContexts(SqlBaseParser.ValueExpressionContext)
             else:
-                return self.getTypedRuleContext(SqlBaseParser.ValueExpressionContext,i)
+                return self.getTypedRuleContext(SqlBaseParser.ValueExpressionContext, i)
 
         def BOTH(self):
             return self.getToken(SqlBaseParser.BOTH, 0)
+
         def LEADING(self):
             return self.getToken(SqlBaseParser.LEADING, 0)
+
         def TRAILING(self):
             return self.getToken(SqlBaseParser.TRAILING, 0)
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterTrim" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterTrim"):
                 listener.enterTrim(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitTrim" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitTrim"):
                 listener.exitTrim(self)
 
-
     class FunctionCallContext(PrimaryExpressionContext):
-
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a SqlBaseParser.PrimaryExpressionContext
+        def __init__(
+            self, parser, ctx: ParserRuleContext
+        ):  # actually a SqlBaseParser.PrimaryExpressionContext
             super().__init__(parser)
-            self._expression = None # ExpressionContext
-            self.argument = list() # of ExpressionContexts
-            self.where = None # BooleanExpressionContext
-            self.nullsOption = None # Token
+            self._expression = None  # ExpressionContext
+            self.argument = list()  # of ExpressionContexts
+            self.where = None  # BooleanExpressionContext
+            self.nullsOption = None  # Token
             self.copyFrom(ctx)
 
         def functionName(self):
-            return self.getTypedRuleContext(SqlBaseParser.FunctionNameContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.FunctionNameContext, 0)
 
         def FILTER(self):
             return self.getToken(SqlBaseParser.FILTER, 0)
+
         def WHERE(self):
             return self.getToken(SqlBaseParser.WHERE, 0)
+
         def NULLS(self):
             return self.getToken(SqlBaseParser.NULLS, 0)
+
         def OVER(self):
             return self.getToken(SqlBaseParser.OVER, 0)
-        def windowSpec(self):
-            return self.getTypedRuleContext(SqlBaseParser.WindowSpecContext,0)
 
-        def expression(self, i:int=None):
+        def windowSpec(self):
+            return self.getTypedRuleContext(SqlBaseParser.WindowSpecContext, 0)
+
+        def expression(self, i: int = None):
             if i is None:
                 return self.getTypedRuleContexts(SqlBaseParser.ExpressionContext)
             else:
-                return self.getTypedRuleContext(SqlBaseParser.ExpressionContext,i)
+                return self.getTypedRuleContext(SqlBaseParser.ExpressionContext, i)
 
         def booleanExpression(self):
-            return self.getTypedRuleContext(SqlBaseParser.BooleanExpressionContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.BooleanExpressionContext, 0)
 
         def IGNORE(self):
             return self.getToken(SqlBaseParser.IGNORE, 0)
+
         def RESPECT(self):
             return self.getToken(SqlBaseParser.RESPECT, 0)
+
         def setQuantifier(self):
-            return self.getTypedRuleContext(SqlBaseParser.SetQuantifierContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.SetQuantifierContext, 0)
 
-
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterFunctionCall" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterFunctionCall"):
                 listener.enterFunctionCall(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitFunctionCall" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitFunctionCall"):
                 listener.exitFunctionCall(self)
 
-
     class SearchedCaseContext(PrimaryExpressionContext):
-
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a SqlBaseParser.PrimaryExpressionContext
+        def __init__(
+            self, parser, ctx: ParserRuleContext
+        ):  # actually a SqlBaseParser.PrimaryExpressionContext
             super().__init__(parser)
-            self.elseExpression = None # ExpressionContext
+            self.elseExpression = None  # ExpressionContext
             self.copyFrom(ctx)
 
         def CASE(self):
             return self.getToken(SqlBaseParser.CASE, 0)
+
         def END(self):
             return self.getToken(SqlBaseParser.END, 0)
-        def whenClause(self, i:int=None):
+
+        def whenClause(self, i: int = None):
             if i is None:
                 return self.getTypedRuleContexts(SqlBaseParser.WhenClauseContext)
             else:
-                return self.getTypedRuleContext(SqlBaseParser.WhenClauseContext,i)
+                return self.getTypedRuleContext(SqlBaseParser.WhenClauseContext, i)
 
         def ELSE(self):
             return self.getToken(SqlBaseParser.ELSE, 0)
+
         def expression(self):
-            return self.getTypedRuleContext(SqlBaseParser.ExpressionContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.ExpressionContext, 0)
 
-
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterSearchedCase" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterSearchedCase"):
                 listener.enterSearchedCase(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitSearchedCase" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitSearchedCase"):
                 listener.exitSearchedCase(self)
 
-
     class PositionContext(PrimaryExpressionContext):
-
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a SqlBaseParser.PrimaryExpressionContext
+        def __init__(
+            self, parser, ctx: ParserRuleContext
+        ):  # actually a SqlBaseParser.PrimaryExpressionContext
             super().__init__(parser)
-            self.substr = None # ValueExpressionContext
-            self.str = None # ValueExpressionContext
+            self.substr = None  # ValueExpressionContext
+            self.str_ = None  # ValueExpressionContext
             self.copyFrom(ctx)
 
         def POSITION(self):
             return self.getToken(SqlBaseParser.POSITION, 0)
+
         def IN(self):
             return self.getToken(SqlBaseParser.IN, 0)
-        def valueExpression(self, i:int=None):
+
+        def valueExpression(self, i: int = None):
             if i is None:
                 return self.getTypedRuleContexts(SqlBaseParser.ValueExpressionContext)
             else:
-                return self.getTypedRuleContext(SqlBaseParser.ValueExpressionContext,i)
+                return self.getTypedRuleContext(SqlBaseParser.ValueExpressionContext, i)
 
-
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterPosition" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterPosition"):
                 listener.enterPosition(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitPosition" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitPosition"):
                 listener.exitPosition(self)
 
-
     class FirstContext(PrimaryExpressionContext):
-
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a SqlBaseParser.PrimaryExpressionContext
+        def __init__(
+            self, parser, ctx: ParserRuleContext
+        ):  # actually a SqlBaseParser.PrimaryExpressionContext
             super().__init__(parser)
             self.copyFrom(ctx)
 
         def FIRST(self):
             return self.getToken(SqlBaseParser.FIRST, 0)
+
         def expression(self):
-            return self.getTypedRuleContext(SqlBaseParser.ExpressionContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.ExpressionContext, 0)
 
         def IGNORE(self):
             return self.getToken(SqlBaseParser.IGNORE, 0)
+
         def NULLS(self):
             return self.getToken(SqlBaseParser.NULLS, 0)
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterFirst" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterFirst"):
                 listener.enterFirst(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitFirst" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitFirst"):
                 listener.exitFirst(self)
 
-
-
-    def primaryExpression(self, _p:int=0):
+    def primaryExpression(self, _p: int = 0):
         _parentctx = self._ctx
         _parentState = self.state
         localctx = SqlBaseParser.PrimaryExpressionContext(self, self._ctx, _parentState)
         _prevctx = localctx
         _startState = 208
         self.enterRecursionRule(localctx, 208, self.RULE_primaryExpression, _p)
-        self._la = 0 # Token type
+        self._la = 0  # Token type
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 2761
             self._errHandler.sync(self)
-            la_ = self._interp.adaptivePredict(self._input,356,self._ctx)
+            la_ = self._interp.adaptivePredict(self._input, 356, self._ctx)
             if la_ == 1:
                 localctx = SqlBaseParser.CurrentLikeContext(self, localctx)
                 self._ctx = localctx
@@ -17851,7 +18552,20 @@ class SqlBaseParser ( Parser ):
                 self.state = 2574
                 localctx.name = self._input.LT(1)
                 _la = self._input.LA(1)
-                if not((((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << SqlBaseParser.CURRENT_DATE) | (1 << SqlBaseParser.CURRENT_TIMESTAMP) | (1 << SqlBaseParser.CURRENT_USER))) != 0)):
+                if not (
+                    (
+                        ((_la) & ~0x3F) == 0
+                        and (
+                            (1 << _la)
+                            & (
+                                (1 << SqlBaseParser.CURRENT_DATE)
+                                | (1 << SqlBaseParser.CURRENT_TIMESTAMP)
+                                | (1 << SqlBaseParser.CURRENT_USER)
+                            )
+                        )
+                        != 0
+                    )
+                ):
                     localctx.name = self._errHandler.recoverInline(self)
                 else:
                     self._errHandler.reportMatch(self)
@@ -17864,27 +18578,26 @@ class SqlBaseParser ( Parser ):
                 _prevctx = localctx
                 self.state = 2575
                 self.match(SqlBaseParser.CASE)
-                self.state = 2577 
+                self.state = 2577
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
                 while True:
                     self.state = 2576
                     self.whenClause()
-                    self.state = 2579 
+                    self.state = 2579
                     self._errHandler.sync(self)
                     _la = self._input.LA(1)
-                    if not (_la==SqlBaseParser.WHEN):
+                    if not (_la == SqlBaseParser.WHEN):
                         break
 
                 self.state = 2583
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==SqlBaseParser.ELSE:
+                if _la == SqlBaseParser.ELSE:
                     self.state = 2581
                     self.match(SqlBaseParser.ELSE)
                     self.state = 2582
                     localctx.elseExpression = self.expression()
-
 
                 self.state = 2585
                 self.match(SqlBaseParser.END)
@@ -17898,27 +18611,26 @@ class SqlBaseParser ( Parser ):
                 self.match(SqlBaseParser.CASE)
                 self.state = 2588
                 localctx.value = self.expression()
-                self.state = 2590 
+                self.state = 2590
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
                 while True:
                     self.state = 2589
                     self.whenClause()
-                    self.state = 2592 
+                    self.state = 2592
                     self._errHandler.sync(self)
                     _la = self._input.LA(1)
-                    if not (_la==SqlBaseParser.WHEN):
+                    if not (_la == SqlBaseParser.WHEN):
                         break
 
                 self.state = 2596
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==SqlBaseParser.ELSE:
+                if _la == SqlBaseParser.ELSE:
                     self.state = 2594
                     self.match(SqlBaseParser.ELSE)
                     self.state = 2595
                     localctx.elseExpression = self.expression()
-
 
                 self.state = 2598
                 self.match(SqlBaseParser.END)
@@ -17931,7 +18643,7 @@ class SqlBaseParser ( Parser ):
                 self.state = 2600
                 localctx.name = self._input.LT(1)
                 _la = self._input.LA(1)
-                if not(_la==SqlBaseParser.CAST or _la==SqlBaseParser.TRY_CAST):
+                if not (_la == SqlBaseParser.CAST or _la == SqlBaseParser.TRY_CAST):
                     localctx.name = self._errHandler.recoverInline(self)
                 else:
                     self._errHandler.reportMatch(self)
@@ -17958,7 +18670,7 @@ class SqlBaseParser ( Parser ):
                 self.match(SqlBaseParser.T__1)
                 self.state = 2617
                 self._errHandler.sync(self)
-                la_ = self._interp.adaptivePredict(self._input,341,self._ctx)
+                la_ = self._interp.adaptivePredict(self._input, 341, self._ctx)
                 if la_ == 1:
                     self.state = 2609
                     localctx._namedExpression = self.namedExpression()
@@ -17966,7 +18678,7 @@ class SqlBaseParser ( Parser ):
                     self.state = 2614
                     self._errHandler.sync(self)
                     _la = self._input.LA(1)
-                    while _la==SqlBaseParser.T__3:
+                    while _la == SqlBaseParser.T__3:
                         self.state = 2610
                         self.match(SqlBaseParser.T__3)
                         self.state = 2611
@@ -17975,8 +18687,6 @@ class SqlBaseParser ( Parser ):
                         self.state = 2616
                         self._errHandler.sync(self)
                         _la = self._input.LA(1)
-
-
 
                 self.state = 2619
                 self.match(SqlBaseParser.T__2)
@@ -17995,12 +18705,11 @@ class SqlBaseParser ( Parser ):
                 self.state = 2625
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==SqlBaseParser.IGNORE:
+                if _la == SqlBaseParser.IGNORE:
                     self.state = 2623
                     self.match(SqlBaseParser.IGNORE)
                     self.state = 2624
                     self.match(SqlBaseParser.NULLS)
-
 
                 self.state = 2627
                 self.match(SqlBaseParser.T__2)
@@ -18019,12 +18728,11 @@ class SqlBaseParser ( Parser ):
                 self.state = 2634
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==SqlBaseParser.IGNORE:
+                if _la == SqlBaseParser.IGNORE:
                     self.state = 2632
                     self.match(SqlBaseParser.IGNORE)
                     self.state = 2633
                     self.match(SqlBaseParser.NULLS)
-
 
                 self.state = 2636
                 self.match(SqlBaseParser.T__2)
@@ -18043,7 +18751,7 @@ class SqlBaseParser ( Parser ):
                 self.state = 2641
                 self.match(SqlBaseParser.IN)
                 self.state = 2642
-                localctx.str = self.valueExpression(0)
+                localctx.str_ = self.valueExpression(0)
                 self.state = 2643
                 self.match(SqlBaseParser.T__2)
                 pass
@@ -18084,7 +18792,7 @@ class SqlBaseParser ( Parser ):
                 self.match(SqlBaseParser.T__1)
                 self.state = 2652
                 self.namedExpression()
-                self.state = 2655 
+                self.state = 2655
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
                 while True:
@@ -18092,10 +18800,10 @@ class SqlBaseParser ( Parser ):
                     self.match(SqlBaseParser.T__3)
                     self.state = 2654
                     self.namedExpression()
-                    self.state = 2657 
+                    self.state = 2657
                     self._errHandler.sync(self)
                     _la = self._input.LA(1)
-                    if not (_la==SqlBaseParser.T__3):
+                    if not (_la == SqlBaseParser.T__3):
                         break
 
                 self.state = 2659
@@ -18124,15 +18832,14 @@ class SqlBaseParser ( Parser ):
                 self.match(SqlBaseParser.T__1)
                 self.state = 2678
                 self._errHandler.sync(self)
-                la_ = self._interp.adaptivePredict(self._input,347,self._ctx)
+                la_ = self._interp.adaptivePredict(self._input, 347, self._ctx)
                 if la_ == 1:
                     self.state = 2668
                     self._errHandler.sync(self)
-                    la_ = self._interp.adaptivePredict(self._input,345,self._ctx)
+                    la_ = self._interp.adaptivePredict(self._input, 345, self._ctx)
                     if la_ == 1:
                         self.state = 2667
                         self.setQuantifier()
-
 
                     self.state = 2670
                     localctx._expression = self.expression()
@@ -18140,7 +18847,7 @@ class SqlBaseParser ( Parser ):
                     self.state = 2675
                     self._errHandler.sync(self)
                     _la = self._input.LA(1)
-                    while _la==SqlBaseParser.T__3:
+                    while _la == SqlBaseParser.T__3:
                         self.state = 2671
                         self.match(SqlBaseParser.T__3)
                         self.state = 2672
@@ -18150,13 +18857,11 @@ class SqlBaseParser ( Parser ):
                         self._errHandler.sync(self)
                         _la = self._input.LA(1)
 
-
-
                 self.state = 2680
                 self.match(SqlBaseParser.T__2)
                 self.state = 2687
                 self._errHandler.sync(self)
-                la_ = self._interp.adaptivePredict(self._input,348,self._ctx)
+                la_ = self._interp.adaptivePredict(self._input, 348, self._ctx)
                 if la_ == 1:
                     self.state = 2681
                     self.match(SqlBaseParser.FILTER)
@@ -18169,15 +18874,16 @@ class SqlBaseParser ( Parser ):
                     self.state = 2685
                     self.match(SqlBaseParser.T__2)
 
-
                 self.state = 2691
                 self._errHandler.sync(self)
-                la_ = self._interp.adaptivePredict(self._input,349,self._ctx)
+                la_ = self._interp.adaptivePredict(self._input, 349, self._ctx)
                 if la_ == 1:
                     self.state = 2689
                     localctx.nullsOption = self._input.LT(1)
                     _la = self._input.LA(1)
-                    if not(_la==SqlBaseParser.IGNORE or _la==SqlBaseParser.RESPECT):
+                    if not (
+                        _la == SqlBaseParser.IGNORE or _la == SqlBaseParser.RESPECT
+                    ):
                         localctx.nullsOption = self._errHandler.recoverInline(self)
                     else:
                         self._errHandler.reportMatch(self)
@@ -18185,16 +18891,14 @@ class SqlBaseParser ( Parser ):
                     self.state = 2690
                     self.match(SqlBaseParser.NULLS)
 
-
                 self.state = 2695
                 self._errHandler.sync(self)
-                la_ = self._interp.adaptivePredict(self._input,350,self._ctx)
+                la_ = self._interp.adaptivePredict(self._input, 350, self._ctx)
                 if la_ == 1:
                     self.state = 2693
                     self.match(SqlBaseParser.OVER)
                     self.state = 2694
                     self.windowSpec()
-
 
                 pass
 
@@ -18218,7 +18922,7 @@ class SqlBaseParser ( Parser ):
                 self.match(SqlBaseParser.T__1)
                 self.state = 2702
                 self.identifier()
-                self.state = 2705 
+                self.state = 2705
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
                 while True:
@@ -18226,10 +18930,10 @@ class SqlBaseParser ( Parser ):
                     self.match(SqlBaseParser.T__3)
                     self.state = 2704
                     self.identifier()
-                    self.state = 2707 
+                    self.state = 2707
                     self._errHandler.sync(self)
                     _la = self._input.LA(1)
-                    if not (_la==SqlBaseParser.T__3):
+                    if not (_la == SqlBaseParser.T__3):
                         break
 
                 self.state = 2709
@@ -18284,7 +18988,7 @@ class SqlBaseParser ( Parser ):
                 _prevctx = localctx
                 self.state = 2725
                 _la = self._input.LA(1)
-                if not(_la==SqlBaseParser.SUBSTR or _la==SqlBaseParser.SUBSTRING):
+                if not (_la == SqlBaseParser.SUBSTR or _la == SqlBaseParser.SUBSTRING):
                     self._errHandler.recoverInline(self)
                 else:
                     self._errHandler.reportMatch(self)
@@ -18292,10 +18996,10 @@ class SqlBaseParser ( Parser ):
                 self.state = 2726
                 self.match(SqlBaseParser.T__1)
                 self.state = 2727
-                localctx.str = self.valueExpression(0)
+                localctx.str_ = self.valueExpression(0)
                 self.state = 2728
                 _la = self._input.LA(1)
-                if not(_la==SqlBaseParser.T__3 or _la==SqlBaseParser.FROM):
+                if not (_la == SqlBaseParser.T__3 or _la == SqlBaseParser.FROM):
                     self._errHandler.recoverInline(self)
                 else:
                     self._errHandler.reportMatch(self)
@@ -18305,17 +19009,16 @@ class SqlBaseParser ( Parser ):
                 self.state = 2732
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==SqlBaseParser.T__3 or _la==SqlBaseParser.FOR:
+                if _la == SqlBaseParser.T__3 or _la == SqlBaseParser.FOR:
                     self.state = 2730
                     _la = self._input.LA(1)
-                    if not(_la==SqlBaseParser.T__3 or _la==SqlBaseParser.FOR):
+                    if not (_la == SqlBaseParser.T__3 or _la == SqlBaseParser.FOR):
                         self._errHandler.recoverInline(self)
                     else:
                         self._errHandler.reportMatch(self)
                         self.consume()
                     self.state = 2731
-                    localctx.len = self.valueExpression(0)
-
+                    localctx.len_ = self.valueExpression(0)
 
                 self.state = 2734
                 self.match(SqlBaseParser.T__2)
@@ -18331,25 +19034,27 @@ class SqlBaseParser ( Parser ):
                 self.match(SqlBaseParser.T__1)
                 self.state = 2739
                 self._errHandler.sync(self)
-                la_ = self._interp.adaptivePredict(self._input,353,self._ctx)
+                la_ = self._interp.adaptivePredict(self._input, 353, self._ctx)
                 if la_ == 1:
                     self.state = 2738
                     localctx.trimOption = self._input.LT(1)
                     _la = self._input.LA(1)
-                    if not(_la==SqlBaseParser.BOTH or _la==SqlBaseParser.LEADING or _la==SqlBaseParser.TRAILING):
+                    if not (
+                        _la == SqlBaseParser.BOTH
+                        or _la == SqlBaseParser.LEADING
+                        or _la == SqlBaseParser.TRAILING
+                    ):
                         localctx.trimOption = self._errHandler.recoverInline(self)
                     else:
                         self._errHandler.reportMatch(self)
                         self.consume()
 
-
                 self.state = 2742
                 self._errHandler.sync(self)
-                la_ = self._interp.adaptivePredict(self._input,354,self._ctx)
+                la_ = self._interp.adaptivePredict(self._input, 354, self._ctx)
                 if la_ == 1:
                     self.state = 2741
                     localctx.trimStr = self.valueExpression(0)
-
 
                 self.state = 2744
                 self.match(SqlBaseParser.FROM)
@@ -18368,7 +19073,7 @@ class SqlBaseParser ( Parser ):
                 self.state = 2749
                 self.match(SqlBaseParser.T__1)
                 self.state = 2750
-                localctx.input = self.valueExpression(0)
+                localctx.input_ = self.valueExpression(0)
                 self.state = 2751
                 self.match(SqlBaseParser.PLACING)
                 self.state = 2752
@@ -18380,38 +19085,46 @@ class SqlBaseParser ( Parser ):
                 self.state = 2757
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==SqlBaseParser.FOR:
+                if _la == SqlBaseParser.FOR:
                     self.state = 2755
                     self.match(SqlBaseParser.FOR)
                     self.state = 2756
                     localctx.length = self.valueExpression(0)
 
-
                 self.state = 2759
                 self.match(SqlBaseParser.T__2)
                 pass
 
-
             self._ctx.stop = self._input.LT(-1)
             self.state = 2773
             self._errHandler.sync(self)
-            _alt = self._interp.adaptivePredict(self._input,358,self._ctx)
-            while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
-                if _alt==1:
+            _alt = self._interp.adaptivePredict(self._input, 358, self._ctx)
+            while _alt != 2 and _alt != ATN.INVALID_ALT_NUMBER:
+                if _alt == 1:
                     if self._parseListeners is not None:
                         self.triggerExitRuleEvent()
                     _prevctx = localctx
                     self.state = 2771
                     self._errHandler.sync(self)
-                    la_ = self._interp.adaptivePredict(self._input,357,self._ctx)
+                    la_ = self._interp.adaptivePredict(self._input, 357, self._ctx)
                     if la_ == 1:
-                        localctx = SqlBaseParser.SubscriptContext(self, SqlBaseParser.PrimaryExpressionContext(self, _parentctx, _parentState))
+                        localctx = SqlBaseParser.SubscriptContext(
+                            self,
+                            SqlBaseParser.PrimaryExpressionContext(
+                                self, _parentctx, _parentState
+                            ),
+                        )
                         localctx.value = _prevctx
-                        self.pushNewRecursionContext(localctx, _startState, self.RULE_primaryExpression)
+                        self.pushNewRecursionContext(
+                            localctx, _startState, self.RULE_primaryExpression
+                        )
                         self.state = 2763
                         if not self.precpred(self._ctx, 8):
                             from antlr4.error.Errors import FailedPredicateException
-                            raise FailedPredicateException(self, "self.precpred(self._ctx, 8)")
+
+                            raise FailedPredicateException(
+                                self, "self.precpred(self._ctx, 8)"
+                            )
                         self.state = 2764
                         self.match(SqlBaseParser.T__8)
                         self.state = 2765
@@ -18421,23 +19134,32 @@ class SqlBaseParser ( Parser ):
                         pass
 
                     elif la_ == 2:
-                        localctx = SqlBaseParser.DereferenceContext(self, SqlBaseParser.PrimaryExpressionContext(self, _parentctx, _parentState))
+                        localctx = SqlBaseParser.DereferenceContext(
+                            self,
+                            SqlBaseParser.PrimaryExpressionContext(
+                                self, _parentctx, _parentState
+                            ),
+                        )
                         localctx.base = _prevctx
-                        self.pushNewRecursionContext(localctx, _startState, self.RULE_primaryExpression)
+                        self.pushNewRecursionContext(
+                            localctx, _startState, self.RULE_primaryExpression
+                        )
                         self.state = 2768
                         if not self.precpred(self._ctx, 6):
                             from antlr4.error.Errors import FailedPredicateException
-                            raise FailedPredicateException(self, "self.precpred(self._ctx, 6)")
+
+                            raise FailedPredicateException(
+                                self, "self.precpred(self._ctx, 6)"
+                            )
                         self.state = 2769
                         self.match(SqlBaseParser.T__4)
                         self.state = 2770
                         localctx.fieldName = self.identifier()
                         pass
 
-             
                 self.state = 2775
                 self._errHandler.sync(self)
-                _alt = self._interp.adaptivePredict(self._input,358,self._ctx)
+                _alt = self._interp.adaptivePredict(self._input, 358, self._ctx)
 
         except RecognitionException as re:
             localctx.exception = re
@@ -18447,141 +19169,134 @@ class SqlBaseParser ( Parser ):
             self.unrollRecursionContexts(_parentctx)
         return localctx
 
-
     class ConstantContext(ParserRuleContext):
-        __slots__ = 'parser'
+        __slots__ = "parser"
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
-
 
         def getRuleIndex(self):
             return SqlBaseParser.RULE_constant
 
-     
-        def copyFrom(self, ctx:ParserRuleContext):
+        def copyFrom(self, ctx: ParserRuleContext):
             super().copyFrom(ctx)
 
-
-
     class NullLiteralContext(ConstantContext):
-
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a SqlBaseParser.ConstantContext
+        def __init__(
+            self, parser, ctx: ParserRuleContext
+        ):  # actually a SqlBaseParser.ConstantContext
             super().__init__(parser)
             self.copyFrom(ctx)
 
         def NULL(self):
             return self.getToken(SqlBaseParser.NULL, 0)
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterNullLiteral" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterNullLiteral"):
                 listener.enterNullLiteral(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitNullLiteral" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitNullLiteral"):
                 listener.exitNullLiteral(self)
 
-
     class StringLiteralContext(ConstantContext):
-
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a SqlBaseParser.ConstantContext
+        def __init__(
+            self, parser, ctx: ParserRuleContext
+        ):  # actually a SqlBaseParser.ConstantContext
             super().__init__(parser)
             self.copyFrom(ctx)
 
-        def STRING(self, i:int=None):
+        def STRING(self, i: int = None):
             if i is None:
                 return self.getTokens(SqlBaseParser.STRING)
             else:
                 return self.getToken(SqlBaseParser.STRING, i)
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterStringLiteral" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterStringLiteral"):
                 listener.enterStringLiteral(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitStringLiteral" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitStringLiteral"):
                 listener.exitStringLiteral(self)
 
-
     class TypeConstructorContext(ConstantContext):
-
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a SqlBaseParser.ConstantContext
+        def __init__(
+            self, parser, ctx: ParserRuleContext
+        ):  # actually a SqlBaseParser.ConstantContext
             super().__init__(parser)
             self.copyFrom(ctx)
 
         def identifier(self):
-            return self.getTypedRuleContext(SqlBaseParser.IdentifierContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.IdentifierContext, 0)
 
         def STRING(self):
             return self.getToken(SqlBaseParser.STRING, 0)
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterTypeConstructor" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterTypeConstructor"):
                 listener.enterTypeConstructor(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitTypeConstructor" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitTypeConstructor"):
                 listener.exitTypeConstructor(self)
 
-
     class IntervalLiteralContext(ConstantContext):
-
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a SqlBaseParser.ConstantContext
+        def __init__(
+            self, parser, ctx: ParserRuleContext
+        ):  # actually a SqlBaseParser.ConstantContext
             super().__init__(parser)
             self.copyFrom(ctx)
 
         def interval(self):
-            return self.getTypedRuleContext(SqlBaseParser.IntervalContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.IntervalContext, 0)
 
-
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterIntervalLiteral" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterIntervalLiteral"):
                 listener.enterIntervalLiteral(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitIntervalLiteral" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitIntervalLiteral"):
                 listener.exitIntervalLiteral(self)
 
-
     class NumericLiteralContext(ConstantContext):
-
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a SqlBaseParser.ConstantContext
+        def __init__(
+            self, parser, ctx: ParserRuleContext
+        ):  # actually a SqlBaseParser.ConstantContext
             super().__init__(parser)
             self.copyFrom(ctx)
 
         def number(self):
-            return self.getTypedRuleContext(SqlBaseParser.NumberContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.NumberContext, 0)
 
-
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterNumericLiteral" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterNumericLiteral"):
                 listener.enterNumericLiteral(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitNumericLiteral" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitNumericLiteral"):
                 listener.exitNumericLiteral(self)
 
-
     class BooleanLiteralContext(ConstantContext):
-
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a SqlBaseParser.ConstantContext
+        def __init__(
+            self, parser, ctx: ParserRuleContext
+        ):  # actually a SqlBaseParser.ConstantContext
             super().__init__(parser)
             self.copyFrom(ctx)
 
         def booleanValue(self):
-            return self.getTypedRuleContext(SqlBaseParser.BooleanValueContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.BooleanValueContext, 0)
 
-
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterBooleanLiteral" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterBooleanLiteral"):
                 listener.enterBooleanLiteral(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitBooleanLiteral" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitBooleanLiteral"):
                 listener.exitBooleanLiteral(self)
-
-
 
     def constant(self):
 
@@ -18590,7 +19305,7 @@ class SqlBaseParser ( Parser ):
         try:
             self.state = 2788
             self._errHandler.sync(self)
-            la_ = self._interp.adaptivePredict(self._input,360,self._ctx)
+            la_ = self._interp.adaptivePredict(self._input, 360, self._ctx)
             if la_ == 1:
                 localctx = SqlBaseParser.NullLiteralContext(self, localctx)
                 self.enterOuterAlt(localctx, 1)
@@ -18631,22 +19346,21 @@ class SqlBaseParser ( Parser ):
             elif la_ == 6:
                 localctx = SqlBaseParser.StringLiteralContext(self, localctx)
                 self.enterOuterAlt(localctx, 6)
-                self.state = 2784 
+                self.state = 2784
                 self._errHandler.sync(self)
                 _alt = 1
-                while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
+                while _alt != 2 and _alt != ATN.INVALID_ALT_NUMBER:
                     if _alt == 1:
                         self.state = 2783
                         self.match(SqlBaseParser.STRING)
 
                     else:
                         raise NoViableAltException(self)
-                    self.state = 2786 
+                    self.state = 2786
                     self._errHandler.sync(self)
-                    _alt = self._interp.adaptivePredict(self._input,359,self._ctx)
+                    _alt = self._interp.adaptivePredict(self._input, 359, self._ctx)
 
                 pass
-
 
         except RecognitionException as re:
             localctx.exception = re
@@ -18656,11 +19370,12 @@ class SqlBaseParser ( Parser ):
             self.exitRule()
         return localctx
 
-
     class ComparisonOperatorContext(ParserRuleContext):
-        __slots__ = 'parser'
+        __slots__ = "parser"
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
@@ -18691,27 +19406,42 @@ class SqlBaseParser ( Parser ):
         def getRuleIndex(self):
             return SqlBaseParser.RULE_comparisonOperator
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterComparisonOperator" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterComparisonOperator"):
                 listener.enterComparisonOperator(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitComparisonOperator" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitComparisonOperator"):
                 listener.exitComparisonOperator(self)
-
-
-
 
     def comparisonOperator(self):
 
         localctx = SqlBaseParser.ComparisonOperatorContext(self, self._ctx, self.state)
         self.enterRule(localctx, 212, self.RULE_comparisonOperator)
-        self._la = 0 # Token type
+        self._la = 0  # Token type
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 2790
             _la = self._input.LA(1)
-            if not(((((_la - 270)) & ~0x3f) == 0 and ((1 << (_la - 270)) & ((1 << (SqlBaseParser.EQ - 270)) | (1 << (SqlBaseParser.NSEQ - 270)) | (1 << (SqlBaseParser.NEQ - 270)) | (1 << (SqlBaseParser.NEQJ - 270)) | (1 << (SqlBaseParser.LT - 270)) | (1 << (SqlBaseParser.LTE - 270)) | (1 << (SqlBaseParser.GT - 270)) | (1 << (SqlBaseParser.GTE - 270)))) != 0)):
+            if not (
+                (
+                    (((_la - 270)) & ~0x3F) == 0
+                    and (
+                        (1 << (_la - 270))
+                        & (
+                            (1 << (SqlBaseParser.EQ - 270))
+                            | (1 << (SqlBaseParser.NSEQ - 270))
+                            | (1 << (SqlBaseParser.NEQ - 270))
+                            | (1 << (SqlBaseParser.NEQJ - 270))
+                            | (1 << (SqlBaseParser.LT - 270))
+                            | (1 << (SqlBaseParser.LTE - 270))
+                            | (1 << (SqlBaseParser.GT - 270))
+                            | (1 << (SqlBaseParser.GTE - 270))
+                        )
+                    )
+                    != 0
+                )
+            ):
                 self._errHandler.recoverInline(self)
             else:
                 self._errHandler.reportMatch(self)
@@ -18724,11 +19454,12 @@ class SqlBaseParser ( Parser ):
             self.exitRule()
         return localctx
 
-
     class ArithmeticOperatorContext(ParserRuleContext):
-        __slots__ = 'parser'
+        __slots__ = "parser"
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
@@ -18768,27 +19499,45 @@ class SqlBaseParser ( Parser ):
         def getRuleIndex(self):
             return SqlBaseParser.RULE_arithmeticOperator
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterArithmeticOperator" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterArithmeticOperator"):
                 listener.enterArithmeticOperator(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitArithmeticOperator" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitArithmeticOperator"):
                 listener.exitArithmeticOperator(self)
-
-
-
 
     def arithmeticOperator(self):
 
         localctx = SqlBaseParser.ArithmeticOperatorContext(self, self._ctx, self.state)
         self.enterRule(localctx, 214, self.RULE_arithmeticOperator)
-        self._la = 0 # Token type
+        self._la = 0  # Token type
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 2792
             _la = self._input.LA(1)
-            if not(_la==SqlBaseParser.DIV or ((((_la - 278)) & ~0x3f) == 0 and ((1 << (_la - 278)) & ((1 << (SqlBaseParser.PLUS - 278)) | (1 << (SqlBaseParser.MINUS - 278)) | (1 << (SqlBaseParser.ASTERISK - 278)) | (1 << (SqlBaseParser.SLASH - 278)) | (1 << (SqlBaseParser.PERCENT - 278)) | (1 << (SqlBaseParser.TILDE - 278)) | (1 << (SqlBaseParser.AMPERSAND - 278)) | (1 << (SqlBaseParser.PIPE - 278)) | (1 << (SqlBaseParser.CONCAT_PIPE - 278)) | (1 << (SqlBaseParser.HAT - 278)))) != 0)):
+            if not (
+                _la == SqlBaseParser.DIV
+                or (
+                    (((_la - 278)) & ~0x3F) == 0
+                    and (
+                        (1 << (_la - 278))
+                        & (
+                            (1 << (SqlBaseParser.PLUS - 278))
+                            | (1 << (SqlBaseParser.MINUS - 278))
+                            | (1 << (SqlBaseParser.ASTERISK - 278))
+                            | (1 << (SqlBaseParser.SLASH - 278))
+                            | (1 << (SqlBaseParser.PERCENT - 278))
+                            | (1 << (SqlBaseParser.TILDE - 278))
+                            | (1 << (SqlBaseParser.AMPERSAND - 278))
+                            | (1 << (SqlBaseParser.PIPE - 278))
+                            | (1 << (SqlBaseParser.CONCAT_PIPE - 278))
+                            | (1 << (SqlBaseParser.HAT - 278))
+                        )
+                    )
+                    != 0
+                )
+            ):
                 self._errHandler.recoverInline(self)
             else:
                 self._errHandler.reportMatch(self)
@@ -18801,11 +19550,12 @@ class SqlBaseParser ( Parser ):
             self.exitRule()
         return localctx
 
-
     class PredicateOperatorContext(ParserRuleContext):
-        __slots__ = 'parser'
+        __slots__ = "parser"
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
@@ -18824,27 +19574,38 @@ class SqlBaseParser ( Parser ):
         def getRuleIndex(self):
             return SqlBaseParser.RULE_predicateOperator
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterPredicateOperator" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterPredicateOperator"):
                 listener.enterPredicateOperator(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitPredicateOperator" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitPredicateOperator"):
                 listener.exitPredicateOperator(self)
-
-
-
 
     def predicateOperator(self):
 
         localctx = SqlBaseParser.PredicateOperatorContext(self, self._ctx, self.state)
         self.enterRule(localctx, 216, self.RULE_predicateOperator)
-        self._la = 0 # Token type
+        self._la = 0  # Token type
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 2794
             _la = self._input.LA(1)
-            if not(_la==SqlBaseParser.AND or ((((_la - 114)) & ~0x3f) == 0 and ((1 << (_la - 114)) & ((1 << (SqlBaseParser.IN - 114)) | (1 << (SqlBaseParser.NOT - 114)) | (1 << (SqlBaseParser.OR - 114)))) != 0)):
+            if not (
+                _la == SqlBaseParser.AND
+                or (
+                    (((_la - 114)) & ~0x3F) == 0
+                    and (
+                        (1 << (_la - 114))
+                        & (
+                            (1 << (SqlBaseParser.IN - 114))
+                            | (1 << (SqlBaseParser.NOT - 114))
+                            | (1 << (SqlBaseParser.OR - 114))
+                        )
+                    )
+                    != 0
+                )
+            ):
                 self._errHandler.recoverInline(self)
             else:
                 self._errHandler.reportMatch(self)
@@ -18857,11 +19618,12 @@ class SqlBaseParser ( Parser ):
             self.exitRule()
         return localctx
 
-
     class BooleanValueContext(ParserRuleContext):
-        __slots__ = 'parser'
+        __slots__ = "parser"
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
@@ -18874,27 +19636,24 @@ class SqlBaseParser ( Parser ):
         def getRuleIndex(self):
             return SqlBaseParser.RULE_booleanValue
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterBooleanValue" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterBooleanValue"):
                 listener.enterBooleanValue(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitBooleanValue" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitBooleanValue"):
                 listener.exitBooleanValue(self)
-
-
-
 
     def booleanValue(self):
 
         localctx = SqlBaseParser.BooleanValueContext(self, self._ctx, self.state)
         self.enterRule(localctx, 218, self.RULE_booleanValue)
-        self._la = 0 # Token type
+        self._la = 0  # Token type
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 2796
             _la = self._input.LA(1)
-            if not(_la==SqlBaseParser.FALSE or _la==SqlBaseParser.TRUE):
+            if not (_la == SqlBaseParser.FALSE or _la == SqlBaseParser.TRUE):
                 self._errHandler.recoverInline(self)
             else:
                 self._errHandler.reportMatch(self)
@@ -18907,11 +19666,12 @@ class SqlBaseParser ( Parser ):
             self.exitRule()
         return localctx
 
-
     class IntervalContext(ParserRuleContext):
-        __slots__ = 'parser'
+        __slots__ = "parser"
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
@@ -18919,26 +19679,25 @@ class SqlBaseParser ( Parser ):
             return self.getToken(SqlBaseParser.INTERVAL, 0)
 
         def errorCapturingMultiUnitsInterval(self):
-            return self.getTypedRuleContext(SqlBaseParser.ErrorCapturingMultiUnitsIntervalContext,0)
-
+            return self.getTypedRuleContext(
+                SqlBaseParser.ErrorCapturingMultiUnitsIntervalContext, 0
+            )
 
         def errorCapturingUnitToUnitInterval(self):
-            return self.getTypedRuleContext(SqlBaseParser.ErrorCapturingUnitToUnitIntervalContext,0)
-
+            return self.getTypedRuleContext(
+                SqlBaseParser.ErrorCapturingUnitToUnitIntervalContext, 0
+            )
 
         def getRuleIndex(self):
             return SqlBaseParser.RULE_interval
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterInterval" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterInterval"):
                 listener.enterInterval(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitInterval" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitInterval"):
                 listener.exitInterval(self)
-
-
-
 
     def interval(self):
 
@@ -18950,7 +19709,7 @@ class SqlBaseParser ( Parser ):
             self.match(SqlBaseParser.INTERVAL)
             self.state = 2801
             self._errHandler.sync(self)
-            la_ = self._interp.adaptivePredict(self._input,361,self._ctx)
+            la_ = self._interp.adaptivePredict(self._input, 361, self._ctx)
             if la_ == 1:
                 self.state = 2799
                 self.errorCapturingMultiUnitsInterval()
@@ -18959,7 +19718,6 @@ class SqlBaseParser ( Parser ):
                 self.state = 2800
                 self.errorCapturingUnitToUnitInterval()
 
-
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)
@@ -18968,40 +19726,38 @@ class SqlBaseParser ( Parser ):
             self.exitRule()
         return localctx
 
-
     class ErrorCapturingMultiUnitsIntervalContext(ParserRuleContext):
-        __slots__ = 'parser'
+        __slots__ = "parser"
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
-            self.body = None # MultiUnitsIntervalContext
+            self.body = None  # MultiUnitsIntervalContext
 
         def multiUnitsInterval(self):
-            return self.getTypedRuleContext(SqlBaseParser.MultiUnitsIntervalContext,0)
-
+            return self.getTypedRuleContext(SqlBaseParser.MultiUnitsIntervalContext, 0)
 
         def unitToUnitInterval(self):
-            return self.getTypedRuleContext(SqlBaseParser.UnitToUnitIntervalContext,0)
-
+            return self.getTypedRuleContext(SqlBaseParser.UnitToUnitIntervalContext, 0)
 
         def getRuleIndex(self):
             return SqlBaseParser.RULE_errorCapturingMultiUnitsInterval
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterErrorCapturingMultiUnitsInterval" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterErrorCapturingMultiUnitsInterval"):
                 listener.enterErrorCapturingMultiUnitsInterval(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitErrorCapturingMultiUnitsInterval" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitErrorCapturingMultiUnitsInterval"):
                 listener.exitErrorCapturingMultiUnitsInterval(self)
-
-
-
 
     def errorCapturingMultiUnitsInterval(self):
 
-        localctx = SqlBaseParser.ErrorCapturingMultiUnitsIntervalContext(self, self._ctx, self.state)
+        localctx = SqlBaseParser.ErrorCapturingMultiUnitsIntervalContext(
+            self, self._ctx, self.state
+        )
         self.enterRule(localctx, 222, self.RULE_errorCapturingMultiUnitsInterval)
         try:
             self.enterOuterAlt(localctx, 1)
@@ -19009,11 +19765,10 @@ class SqlBaseParser ( Parser ):
             localctx.body = self.multiUnitsInterval()
             self.state = 2805
             self._errHandler.sync(self)
-            la_ = self._interp.adaptivePredict(self._input,362,self._ctx)
+            la_ = self._interp.adaptivePredict(self._input, 362, self._ctx)
             if la_ == 1:
                 self.state = 2804
                 self.unitToUnitInterval()
-
 
         except RecognitionException as re:
             localctx.exception = re
@@ -19023,43 +19778,39 @@ class SqlBaseParser ( Parser ):
             self.exitRule()
         return localctx
 
-
     class MultiUnitsIntervalContext(ParserRuleContext):
-        __slots__ = 'parser'
+        __slots__ = "parser"
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
-            self._identifier = None # IdentifierContext
-            self.unit = list() # of IdentifierContexts
+            self._identifier = None  # IdentifierContext
+            self.unit = list()  # of IdentifierContexts
 
-        def intervalValue(self, i:int=None):
+        def intervalValue(self, i: int = None):
             if i is None:
                 return self.getTypedRuleContexts(SqlBaseParser.IntervalValueContext)
             else:
-                return self.getTypedRuleContext(SqlBaseParser.IntervalValueContext,i)
+                return self.getTypedRuleContext(SqlBaseParser.IntervalValueContext, i)
 
-
-        def identifier(self, i:int=None):
+        def identifier(self, i: int = None):
             if i is None:
                 return self.getTypedRuleContexts(SqlBaseParser.IdentifierContext)
             else:
-                return self.getTypedRuleContext(SqlBaseParser.IdentifierContext,i)
-
+                return self.getTypedRuleContext(SqlBaseParser.IdentifierContext, i)
 
         def getRuleIndex(self):
             return SqlBaseParser.RULE_multiUnitsInterval
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterMultiUnitsInterval" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterMultiUnitsInterval"):
                 listener.enterMultiUnitsInterval(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitMultiUnitsInterval" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitMultiUnitsInterval"):
                 listener.exitMultiUnitsInterval(self)
-
-
-
 
     def multiUnitsInterval(self):
 
@@ -19067,10 +19818,10 @@ class SqlBaseParser ( Parser ):
         self.enterRule(localctx, 224, self.RULE_multiUnitsInterval)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 2810 
+            self.state = 2810
             self._errHandler.sync(self)
             _alt = 1
-            while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
+            while _alt != 2 and _alt != ATN.INVALID_ALT_NUMBER:
                 if _alt == 1:
                     self.state = 2807
                     self.intervalValue()
@@ -19080,9 +19831,9 @@ class SqlBaseParser ( Parser ):
 
                 else:
                     raise NoViableAltException(self)
-                self.state = 2812 
+                self.state = 2812
                 self._errHandler.sync(self)
-                _alt = self._interp.adaptivePredict(self._input,363,self._ctx)
+                _alt = self._interp.adaptivePredict(self._input, 363, self._ctx)
 
         except RecognitionException as re:
             localctx.exception = re
@@ -19092,45 +19843,47 @@ class SqlBaseParser ( Parser ):
             self.exitRule()
         return localctx
 
-
     class ErrorCapturingUnitToUnitIntervalContext(ParserRuleContext):
-        __slots__ = 'parser'
+        __slots__ = "parser"
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
-            self.body = None # UnitToUnitIntervalContext
-            self.error1 = None # MultiUnitsIntervalContext
-            self.error2 = None # UnitToUnitIntervalContext
+            self.body = None  # UnitToUnitIntervalContext
+            self.error1 = None  # MultiUnitsIntervalContext
+            self.error2 = None  # UnitToUnitIntervalContext
 
-        def unitToUnitInterval(self, i:int=None):
+        def unitToUnitInterval(self, i: int = None):
             if i is None:
-                return self.getTypedRuleContexts(SqlBaseParser.UnitToUnitIntervalContext)
+                return self.getTypedRuleContexts(
+                    SqlBaseParser.UnitToUnitIntervalContext
+                )
             else:
-                return self.getTypedRuleContext(SqlBaseParser.UnitToUnitIntervalContext,i)
-
+                return self.getTypedRuleContext(
+                    SqlBaseParser.UnitToUnitIntervalContext, i
+                )
 
         def multiUnitsInterval(self):
-            return self.getTypedRuleContext(SqlBaseParser.MultiUnitsIntervalContext,0)
-
+            return self.getTypedRuleContext(SqlBaseParser.MultiUnitsIntervalContext, 0)
 
         def getRuleIndex(self):
             return SqlBaseParser.RULE_errorCapturingUnitToUnitInterval
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterErrorCapturingUnitToUnitInterval" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterErrorCapturingUnitToUnitInterval"):
                 listener.enterErrorCapturingUnitToUnitInterval(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitErrorCapturingUnitToUnitInterval" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitErrorCapturingUnitToUnitInterval"):
                 listener.exitErrorCapturingUnitToUnitInterval(self)
-
-
-
 
     def errorCapturingUnitToUnitInterval(self):
 
-        localctx = SqlBaseParser.ErrorCapturingUnitToUnitIntervalContext(self, self._ctx, self.state)
+        localctx = SqlBaseParser.ErrorCapturingUnitToUnitIntervalContext(
+            self, self._ctx, self.state
+        )
         self.enterRule(localctx, 226, self.RULE_errorCapturingUnitToUnitInterval)
         try:
             self.enterOuterAlt(localctx, 1)
@@ -19138,7 +19891,7 @@ class SqlBaseParser ( Parser ):
             localctx.body = self.unitToUnitInterval()
             self.state = 2817
             self._errHandler.sync(self)
-            la_ = self._interp.adaptivePredict(self._input,364,self._ctx)
+            la_ = self._interp.adaptivePredict(self._input, 364, self._ctx)
             if la_ == 1:
                 self.state = 2815
                 localctx.error1 = self.multiUnitsInterval()
@@ -19147,7 +19900,6 @@ class SqlBaseParser ( Parser ):
                 self.state = 2816
                 localctx.error2 = self.unitToUnitInterval()
 
-
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)
@@ -19156,44 +19908,40 @@ class SqlBaseParser ( Parser ):
             self.exitRule()
         return localctx
 
-
     class UnitToUnitIntervalContext(ParserRuleContext):
-        __slots__ = 'parser'
+        __slots__ = "parser"
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
-            self.value = None # IntervalValueContext
-            self.from = None # IdentifierContext
-            self.to = None # IdentifierContext
+            self.value = None  # IntervalValueContext
+            self.from_ = None  # IdentifierContext
+            self.to = None  # IdentifierContext
 
         def TO(self):
             return self.getToken(SqlBaseParser.TO, 0)
 
         def intervalValue(self):
-            return self.getTypedRuleContext(SqlBaseParser.IntervalValueContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.IntervalValueContext, 0)
 
-
-        def identifier(self, i:int=None):
+        def identifier(self, i: int = None):
             if i is None:
                 return self.getTypedRuleContexts(SqlBaseParser.IdentifierContext)
             else:
-                return self.getTypedRuleContext(SqlBaseParser.IdentifierContext,i)
-
+                return self.getTypedRuleContext(SqlBaseParser.IdentifierContext, i)
 
         def getRuleIndex(self):
             return SqlBaseParser.RULE_unitToUnitInterval
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterUnitToUnitInterval" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterUnitToUnitInterval"):
                 listener.enterUnitToUnitInterval(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitUnitToUnitInterval" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitUnitToUnitInterval"):
                 listener.exitUnitToUnitInterval(self)
-
-
-
 
     def unitToUnitInterval(self):
 
@@ -19204,7 +19952,7 @@ class SqlBaseParser ( Parser ):
             self.state = 2819
             localctx.value = self.intervalValue()
             self.state = 2820
-            localctx.from = self.identifier()
+            localctx.from_ = self.identifier()
             self.state = 2821
             self.match(SqlBaseParser.TO)
             self.state = 2822
@@ -19217,11 +19965,12 @@ class SqlBaseParser ( Parser ):
             self.exitRule()
         return localctx
 
-
     class IntervalValueContext(ParserRuleContext):
-        __slots__ = 'parser'
+        __slots__ = "parser"
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
@@ -19243,40 +19992,49 @@ class SqlBaseParser ( Parser ):
         def getRuleIndex(self):
             return SqlBaseParser.RULE_intervalValue
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterIntervalValue" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterIntervalValue"):
                 listener.enterIntervalValue(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitIntervalValue" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitIntervalValue"):
                 listener.exitIntervalValue(self)
-
-
-
 
     def intervalValue(self):
 
         localctx = SqlBaseParser.IntervalValueContext(self, self._ctx, self.state)
         self.enterRule(localctx, 230, self.RULE_intervalValue)
-        self._la = 0 # Token type
+        self._la = 0  # Token type
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 2825
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if _la==SqlBaseParser.PLUS or _la==SqlBaseParser.MINUS:
+            if _la == SqlBaseParser.PLUS or _la == SqlBaseParser.MINUS:
                 self.state = 2824
                 _la = self._input.LA(1)
-                if not(_la==SqlBaseParser.PLUS or _la==SqlBaseParser.MINUS):
+                if not (_la == SqlBaseParser.PLUS or _la == SqlBaseParser.MINUS):
                     self._errHandler.recoverInline(self)
                 else:
                     self._errHandler.reportMatch(self)
                     self.consume()
 
-
             self.state = 2827
             _la = self._input.LA(1)
-            if not(((((_la - 288)) & ~0x3f) == 0 and ((1 << (_la - 288)) & ((1 << (SqlBaseParser.STRING - 288)) | (1 << (SqlBaseParser.INTEGER_VALUE - 288)) | (1 << (SqlBaseParser.DECIMAL_VALUE - 288)))) != 0)):
+            if not (
+                (
+                    (((_la - 288)) & ~0x3F) == 0
+                    and (
+                        (1 << (_la - 288))
+                        & (
+                            (1 << (SqlBaseParser.STRING - 288))
+                            | (1 << (SqlBaseParser.INTEGER_VALUE - 288))
+                            | (1 << (SqlBaseParser.DECIMAL_VALUE - 288))
+                        )
+                    )
+                    != 0
+                )
+            ):
                 self._errHandler.recoverInline(self)
             else:
                 self._errHandler.reportMatch(self)
@@ -19289,15 +20047,16 @@ class SqlBaseParser ( Parser ):
             self.exitRule()
         return localctx
 
-
     class ColPositionContext(ParserRuleContext):
-        __slots__ = 'parser'
+        __slots__ = "parser"
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
-            self.position = None # Token
-            self.afterCol = None # ErrorCapturingIdentifierContext
+            self.position = None  # Token
+            self.afterCol = None  # ErrorCapturingIdentifierContext
 
         def FIRST(self):
             return self.getToken(SqlBaseParser.FIRST, 0)
@@ -19306,22 +20065,20 @@ class SqlBaseParser ( Parser ):
             return self.getToken(SqlBaseParser.AFTER, 0)
 
         def errorCapturingIdentifier(self):
-            return self.getTypedRuleContext(SqlBaseParser.ErrorCapturingIdentifierContext,0)
-
+            return self.getTypedRuleContext(
+                SqlBaseParser.ErrorCapturingIdentifierContext, 0
+            )
 
         def getRuleIndex(self):
             return SqlBaseParser.RULE_colPosition
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterColPosition" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterColPosition"):
                 listener.enterColPosition(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitColPosition" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitColPosition"):
                 listener.exitColPosition(self)
-
-
-
 
     def colPosition(self):
 
@@ -19354,169 +20111,178 @@ class SqlBaseParser ( Parser ):
             self.exitRule()
         return localctx
 
-
     class DataTypeContext(ParserRuleContext):
-        __slots__ = 'parser'
+        __slots__ = "parser"
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
-
 
         def getRuleIndex(self):
             return SqlBaseParser.RULE_dataType
 
-     
-        def copyFrom(self, ctx:ParserRuleContext):
+        def copyFrom(self, ctx: ParserRuleContext):
             super().copyFrom(ctx)
 
-
-
     class ComplexDataTypeContext(DataTypeContext):
-
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a SqlBaseParser.DataTypeContext
+        def __init__(
+            self, parser, ctx: ParserRuleContext
+        ):  # actually a SqlBaseParser.DataTypeContext
             super().__init__(parser)
-            self.complex = None # Token
+            self.complex_ = None  # Token
             self.copyFrom(ctx)
 
         def LT(self):
             return self.getToken(SqlBaseParser.LT, 0)
-        def dataType(self, i:int=None):
+
+        def dataType(self, i: int = None):
             if i is None:
                 return self.getTypedRuleContexts(SqlBaseParser.DataTypeContext)
             else:
-                return self.getTypedRuleContext(SqlBaseParser.DataTypeContext,i)
+                return self.getTypedRuleContext(SqlBaseParser.DataTypeContext, i)
 
         def GT(self):
             return self.getToken(SqlBaseParser.GT, 0)
+
         def ARRAY(self):
             return self.getToken(SqlBaseParser.ARRAY, 0)
+
         def MAP(self):
             return self.getToken(SqlBaseParser.MAP, 0)
+
         def STRUCT(self):
             return self.getToken(SqlBaseParser.STRUCT, 0)
+
         def NEQ(self):
             return self.getToken(SqlBaseParser.NEQ, 0)
+
         def complexColTypeList(self):
-            return self.getTypedRuleContext(SqlBaseParser.ComplexColTypeListContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.ComplexColTypeListContext, 0)
 
-
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterComplexDataType" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterComplexDataType"):
                 listener.enterComplexDataType(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitComplexDataType" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitComplexDataType"):
                 listener.exitComplexDataType(self)
 
-
     class YearMonthIntervalDataTypeContext(DataTypeContext):
-
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a SqlBaseParser.DataTypeContext
+        def __init__(
+            self, parser, ctx: ParserRuleContext
+        ):  # actually a SqlBaseParser.DataTypeContext
             super().__init__(parser)
-            self.from = None # Token
-            self.to = None # Token
+            self.from_ = None  # Token
+            self.to = None  # Token
             self.copyFrom(ctx)
 
         def INTERVAL(self):
             return self.getToken(SqlBaseParser.INTERVAL, 0)
+
         def YEAR(self):
             return self.getToken(SqlBaseParser.YEAR, 0)
-        def MONTH(self, i:int=None):
+
+        def MONTH(self, i: int = None):
             if i is None:
                 return self.getTokens(SqlBaseParser.MONTH)
             else:
                 return self.getToken(SqlBaseParser.MONTH, i)
+
         def TO(self):
             return self.getToken(SqlBaseParser.TO, 0)
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterYearMonthIntervalDataType" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterYearMonthIntervalDataType"):
                 listener.enterYearMonthIntervalDataType(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitYearMonthIntervalDataType" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitYearMonthIntervalDataType"):
                 listener.exitYearMonthIntervalDataType(self)
 
-
     class DayTimeIntervalDataTypeContext(DataTypeContext):
-
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a SqlBaseParser.DataTypeContext
+        def __init__(
+            self, parser, ctx: ParserRuleContext
+        ):  # actually a SqlBaseParser.DataTypeContext
             super().__init__(parser)
-            self.from = None # Token
-            self.to = None # Token
+            self.from_ = None  # Token
+            self.to = None  # Token
             self.copyFrom(ctx)
 
         def INTERVAL(self):
             return self.getToken(SqlBaseParser.INTERVAL, 0)
+
         def DAY(self):
             return self.getToken(SqlBaseParser.DAY, 0)
-        def HOUR(self, i:int=None):
+
+        def HOUR(self, i: int = None):
             if i is None:
                 return self.getTokens(SqlBaseParser.HOUR)
             else:
                 return self.getToken(SqlBaseParser.HOUR, i)
-        def MINUTE(self, i:int=None):
+
+        def MINUTE(self, i: int = None):
             if i is None:
                 return self.getTokens(SqlBaseParser.MINUTE)
             else:
                 return self.getToken(SqlBaseParser.MINUTE, i)
-        def SECOND(self, i:int=None):
+
+        def SECOND(self, i: int = None):
             if i is None:
                 return self.getTokens(SqlBaseParser.SECOND)
             else:
                 return self.getToken(SqlBaseParser.SECOND, i)
+
         def TO(self):
             return self.getToken(SqlBaseParser.TO, 0)
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterDayTimeIntervalDataType" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterDayTimeIntervalDataType"):
                 listener.enterDayTimeIntervalDataType(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitDayTimeIntervalDataType" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitDayTimeIntervalDataType"):
                 listener.exitDayTimeIntervalDataType(self)
 
-
     class PrimitiveDataTypeContext(DataTypeContext):
-
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a SqlBaseParser.DataTypeContext
+        def __init__(
+            self, parser, ctx: ParserRuleContext
+        ):  # actually a SqlBaseParser.DataTypeContext
             super().__init__(parser)
             self.copyFrom(ctx)
 
         def identifier(self):
-            return self.getTypedRuleContext(SqlBaseParser.IdentifierContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.IdentifierContext, 0)
 
-        def INTEGER_VALUE(self, i:int=None):
+        def INTEGER_VALUE(self, i: int = None):
             if i is None:
                 return self.getTokens(SqlBaseParser.INTEGER_VALUE)
             else:
                 return self.getToken(SqlBaseParser.INTEGER_VALUE, i)
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterPrimitiveDataType" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterPrimitiveDataType"):
                 listener.enterPrimitiveDataType(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitPrimitiveDataType" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitPrimitiveDataType"):
                 listener.exitPrimitiveDataType(self)
-
-
 
     def dataType(self):
 
         localctx = SqlBaseParser.DataTypeContext(self, self._ctx, self.state)
         self.enterRule(localctx, 234, self.RULE_dataType)
-        self._la = 0 # Token type
+        self._la = 0  # Token type
         try:
             self.state = 2880
             self._errHandler.sync(self)
-            la_ = self._interp.adaptivePredict(self._input,373,self._ctx)
+            la_ = self._interp.adaptivePredict(self._input, 373, self._ctx)
             if la_ == 1:
                 localctx = SqlBaseParser.ComplexDataTypeContext(self, localctx)
                 self.enterOuterAlt(localctx, 1)
                 self.state = 2834
-                localctx.complex = self.match(SqlBaseParser.ARRAY)
+                localctx.complex_ = self.match(SqlBaseParser.ARRAY)
                 self.state = 2835
                 self.match(SqlBaseParser.LT)
                 self.state = 2836
@@ -19529,7 +20295,7 @@ class SqlBaseParser ( Parser ):
                 localctx = SqlBaseParser.ComplexDataTypeContext(self, localctx)
                 self.enterOuterAlt(localctx, 2)
                 self.state = 2839
-                localctx.complex = self.match(SqlBaseParser.MAP)
+                localctx.complex_ = self.match(SqlBaseParser.MAP)
                 self.state = 2840
                 self.match(SqlBaseParser.LT)
                 self.state = 2841
@@ -19546,7 +20312,7 @@ class SqlBaseParser ( Parser ):
                 localctx = SqlBaseParser.ComplexDataTypeContext(self, localctx)
                 self.enterOuterAlt(localctx, 3)
                 self.state = 2846
-                localctx.complex = self.match(SqlBaseParser.STRUCT)
+                localctx.complex_ = self.match(SqlBaseParser.STRUCT)
                 self.state = 2853
                 self._errHandler.sync(self)
                 token = self._input.LA(1)
@@ -19555,11 +20321,10 @@ class SqlBaseParser ( Parser ):
                     self.match(SqlBaseParser.LT)
                     self.state = 2849
                     self._errHandler.sync(self)
-                    la_ = self._interp.adaptivePredict(self._input,367,self._ctx)
+                    la_ = self._interp.adaptivePredict(self._input, 367, self._ctx)
                     if la_ == 1:
                         self.state = 2848
                         self.complexColTypeList()
-
 
                     self.state = 2851
                     self.match(SqlBaseParser.GT)
@@ -19574,27 +20339,28 @@ class SqlBaseParser ( Parser ):
                 pass
 
             elif la_ == 4:
-                localctx = SqlBaseParser.YearMonthIntervalDataTypeContext(self, localctx)
+                localctx = SqlBaseParser.YearMonthIntervalDataTypeContext(
+                    self, localctx
+                )
                 self.enterOuterAlt(localctx, 4)
                 self.state = 2855
                 self.match(SqlBaseParser.INTERVAL)
                 self.state = 2856
-                localctx.from = self._input.LT(1)
+                localctx.from_ = self._input.LT(1)
                 _la = self._input.LA(1)
-                if not(_la==SqlBaseParser.MONTH or _la==SqlBaseParser.YEAR):
-                    localctx.from = self._errHandler.recoverInline(self)
+                if not (_la == SqlBaseParser.MONTH or _la == SqlBaseParser.YEAR):
+                    localctx.from_ = self._errHandler.recoverInline(self)
                 else:
                     self._errHandler.reportMatch(self)
                     self.consume()
                 self.state = 2859
                 self._errHandler.sync(self)
-                la_ = self._interp.adaptivePredict(self._input,369,self._ctx)
+                la_ = self._interp.adaptivePredict(self._input, 369, self._ctx)
                 if la_ == 1:
                     self.state = 2857
                     self.match(SqlBaseParser.TO)
                     self.state = 2858
                     localctx.to = self.match(SqlBaseParser.MONTH)
-
 
                 pass
 
@@ -19604,28 +20370,36 @@ class SqlBaseParser ( Parser ):
                 self.state = 2861
                 self.match(SqlBaseParser.INTERVAL)
                 self.state = 2862
-                localctx.from = self._input.LT(1)
+                localctx.from_ = self._input.LT(1)
                 _la = self._input.LA(1)
-                if not(_la==SqlBaseParser.DAY or _la==SqlBaseParser.HOUR or _la==SqlBaseParser.MINUTE or _la==SqlBaseParser.SECOND):
-                    localctx.from = self._errHandler.recoverInline(self)
+                if not (
+                    _la == SqlBaseParser.DAY
+                    or _la == SqlBaseParser.HOUR
+                    or _la == SqlBaseParser.MINUTE
+                    or _la == SqlBaseParser.SECOND
+                ):
+                    localctx.from_ = self._errHandler.recoverInline(self)
                 else:
                     self._errHandler.reportMatch(self)
                     self.consume()
                 self.state = 2865
                 self._errHandler.sync(self)
-                la_ = self._interp.adaptivePredict(self._input,370,self._ctx)
+                la_ = self._interp.adaptivePredict(self._input, 370, self._ctx)
                 if la_ == 1:
                     self.state = 2863
                     self.match(SqlBaseParser.TO)
                     self.state = 2864
                     localctx.to = self._input.LT(1)
                     _la = self._input.LA(1)
-                    if not(_la==SqlBaseParser.HOUR or _la==SqlBaseParser.MINUTE or _la==SqlBaseParser.SECOND):
+                    if not (
+                        _la == SqlBaseParser.HOUR
+                        or _la == SqlBaseParser.MINUTE
+                        or _la == SqlBaseParser.SECOND
+                    ):
                         localctx.to = self._errHandler.recoverInline(self)
                     else:
                         self._errHandler.reportMatch(self)
                         self.consume()
-
 
                 pass
 
@@ -19636,7 +20410,7 @@ class SqlBaseParser ( Parser ):
                 self.identifier()
                 self.state = 2878
                 self._errHandler.sync(self)
-                la_ = self._interp.adaptivePredict(self._input,372,self._ctx)
+                la_ = self._interp.adaptivePredict(self._input, 372, self._ctx)
                 if la_ == 1:
                     self.state = 2868
                     self.match(SqlBaseParser.T__1)
@@ -19645,7 +20419,7 @@ class SqlBaseParser ( Parser ):
                     self.state = 2874
                     self._errHandler.sync(self)
                     _la = self._input.LA(1)
-                    while _la==SqlBaseParser.T__3:
+                    while _la == SqlBaseParser.T__3:
                         self.state = 2870
                         self.match(SqlBaseParser.T__3)
                         self.state = 2871
@@ -19657,9 +20431,7 @@ class SqlBaseParser ( Parser ):
                     self.state = 2877
                     self.match(SqlBaseParser.T__2)
 
-
                 pass
-
 
         except RecognitionException as re:
             localctx.exception = re
@@ -19669,40 +20441,43 @@ class SqlBaseParser ( Parser ):
             self.exitRule()
         return localctx
 
-
     class QualifiedColTypeWithPositionListContext(ParserRuleContext):
-        __slots__ = 'parser'
+        __slots__ = "parser"
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
-        def qualifiedColTypeWithPosition(self, i:int=None):
+        def qualifiedColTypeWithPosition(self, i: int = None):
             if i is None:
-                return self.getTypedRuleContexts(SqlBaseParser.QualifiedColTypeWithPositionContext)
+                return self.getTypedRuleContexts(
+                    SqlBaseParser.QualifiedColTypeWithPositionContext
+                )
             else:
-                return self.getTypedRuleContext(SqlBaseParser.QualifiedColTypeWithPositionContext,i)
-
+                return self.getTypedRuleContext(
+                    SqlBaseParser.QualifiedColTypeWithPositionContext, i
+                )
 
         def getRuleIndex(self):
             return SqlBaseParser.RULE_qualifiedColTypeWithPositionList
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterQualifiedColTypeWithPositionList" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterQualifiedColTypeWithPositionList"):
                 listener.enterQualifiedColTypeWithPositionList(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitQualifiedColTypeWithPositionList" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitQualifiedColTypeWithPositionList"):
                 listener.exitQualifiedColTypeWithPositionList(self)
-
-
-
 
     def qualifiedColTypeWithPositionList(self):
 
-        localctx = SqlBaseParser.QualifiedColTypeWithPositionListContext(self, self._ctx, self.state)
+        localctx = SqlBaseParser.QualifiedColTypeWithPositionListContext(
+            self, self._ctx, self.state
+        )
         self.enterRule(localctx, 236, self.RULE_qualifiedColTypeWithPositionList)
-        self._la = 0 # Token type
+        self._la = 0  # Token type
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 2882
@@ -19710,7 +20485,7 @@ class SqlBaseParser ( Parser ):
             self.state = 2887
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            while _la==SqlBaseParser.T__3:
+            while _la == SqlBaseParser.T__3:
                 self.state = 2883
                 self.match(SqlBaseParser.T__3)
                 self.state = 2884
@@ -19727,22 +20502,21 @@ class SqlBaseParser ( Parser ):
             self.exitRule()
         return localctx
 
-
     class QualifiedColTypeWithPositionContext(ParserRuleContext):
-        __slots__ = 'parser'
+        __slots__ = "parser"
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
-            self.name = None # MultipartIdentifierContext
+            self.name = None  # MultipartIdentifierContext
 
         def dataType(self):
-            return self.getTypedRuleContext(SqlBaseParser.DataTypeContext,0)
-
+            return self.getTypedRuleContext(SqlBaseParser.DataTypeContext, 0)
 
         def multipartIdentifier(self):
-            return self.getTypedRuleContext(SqlBaseParser.MultipartIdentifierContext,0)
-
+            return self.getTypedRuleContext(SqlBaseParser.MultipartIdentifierContext, 0)
 
         def NOT(self):
             return self.getToken(SqlBaseParser.NOT, 0)
@@ -19751,32 +20525,29 @@ class SqlBaseParser ( Parser ):
             return self.getToken(SqlBaseParser.NULL, 0)
 
         def commentSpec(self):
-            return self.getTypedRuleContext(SqlBaseParser.CommentSpecContext,0)
-
+            return self.getTypedRuleContext(SqlBaseParser.CommentSpecContext, 0)
 
         def colPosition(self):
-            return self.getTypedRuleContext(SqlBaseParser.ColPositionContext,0)
-
+            return self.getTypedRuleContext(SqlBaseParser.ColPositionContext, 0)
 
         def getRuleIndex(self):
             return SqlBaseParser.RULE_qualifiedColTypeWithPosition
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterQualifiedColTypeWithPosition" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterQualifiedColTypeWithPosition"):
                 listener.enterQualifiedColTypeWithPosition(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitQualifiedColTypeWithPosition" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitQualifiedColTypeWithPosition"):
                 listener.exitQualifiedColTypeWithPosition(self)
-
-
-
 
     def qualifiedColTypeWithPosition(self):
 
-        localctx = SqlBaseParser.QualifiedColTypeWithPositionContext(self, self._ctx, self.state)
+        localctx = SqlBaseParser.QualifiedColTypeWithPositionContext(
+            self, self._ctx, self.state
+        )
         self.enterRule(localctx, 238, self.RULE_qualifiedColTypeWithPosition)
-        self._la = 0 # Token type
+        self._la = 0  # Token type
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 2890
@@ -19786,28 +20557,25 @@ class SqlBaseParser ( Parser ):
             self.state = 2894
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if _la==SqlBaseParser.NOT:
+            if _la == SqlBaseParser.NOT:
                 self.state = 2892
                 self.match(SqlBaseParser.NOT)
                 self.state = 2893
                 self.match(SqlBaseParser.NULL)
 
-
             self.state = 2897
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if _la==SqlBaseParser.COMMENT:
+            if _la == SqlBaseParser.COMMENT:
                 self.state = 2896
                 self.commentSpec()
-
 
             self.state = 2900
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if _la==SqlBaseParser.AFTER or _la==SqlBaseParser.FIRST:
+            if _la == SqlBaseParser.AFTER or _la == SqlBaseParser.FIRST:
                 self.state = 2899
                 self.colPosition()
-
 
         except RecognitionException as re:
             localctx.exception = re
@@ -19817,34 +20585,31 @@ class SqlBaseParser ( Parser ):
             self.exitRule()
         return localctx
 
-
     class ColTypeListContext(ParserRuleContext):
-        __slots__ = 'parser'
+        __slots__ = "parser"
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
-        def colType(self, i:int=None):
+        def colType(self, i: int = None):
             if i is None:
                 return self.getTypedRuleContexts(SqlBaseParser.ColTypeContext)
             else:
-                return self.getTypedRuleContext(SqlBaseParser.ColTypeContext,i)
-
+                return self.getTypedRuleContext(SqlBaseParser.ColTypeContext, i)
 
         def getRuleIndex(self):
             return SqlBaseParser.RULE_colTypeList
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterColTypeList" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterColTypeList"):
                 listener.enterColTypeList(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitColTypeList" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitColTypeList"):
                 listener.exitColTypeList(self)
-
-
-
 
     def colTypeList(self):
 
@@ -19856,16 +20621,16 @@ class SqlBaseParser ( Parser ):
             self.colType()
             self.state = 2907
             self._errHandler.sync(self)
-            _alt = self._interp.adaptivePredict(self._input,378,self._ctx)
-            while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
-                if _alt==1:
+            _alt = self._interp.adaptivePredict(self._input, 378, self._ctx)
+            while _alt != 2 and _alt != ATN.INVALID_ALT_NUMBER:
+                if _alt == 1:
                     self.state = 2903
                     self.match(SqlBaseParser.T__3)
                     self.state = 2904
-                    self.colType() 
+                    self.colType()
                 self.state = 2909
                 self._errHandler.sync(self)
-                _alt = self._interp.adaptivePredict(self._input,378,self._ctx)
+                _alt = self._interp.adaptivePredict(self._input, 378, self._ctx)
 
         except RecognitionException as re:
             localctx.exception = re
@@ -19875,22 +20640,23 @@ class SqlBaseParser ( Parser ):
             self.exitRule()
         return localctx
 
-
     class ColTypeContext(ParserRuleContext):
-        __slots__ = 'parser'
+        __slots__ = "parser"
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
-            self.colName = None # ErrorCapturingIdentifierContext
+            self.colName = None  # ErrorCapturingIdentifierContext
 
         def dataType(self):
-            return self.getTypedRuleContext(SqlBaseParser.DataTypeContext,0)
-
+            return self.getTypedRuleContext(SqlBaseParser.DataTypeContext, 0)
 
         def errorCapturingIdentifier(self):
-            return self.getTypedRuleContext(SqlBaseParser.ErrorCapturingIdentifierContext,0)
-
+            return self.getTypedRuleContext(
+                SqlBaseParser.ErrorCapturingIdentifierContext, 0
+            )
 
         def NOT(self):
             return self.getToken(SqlBaseParser.NOT, 0)
@@ -19899,22 +20665,18 @@ class SqlBaseParser ( Parser ):
             return self.getToken(SqlBaseParser.NULL, 0)
 
         def commentSpec(self):
-            return self.getTypedRuleContext(SqlBaseParser.CommentSpecContext,0)
-
+            return self.getTypedRuleContext(SqlBaseParser.CommentSpecContext, 0)
 
         def getRuleIndex(self):
             return SqlBaseParser.RULE_colType
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterColType" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterColType"):
                 listener.enterColType(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitColType" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitColType"):
                 listener.exitColType(self)
-
-
-
 
     def colType(self):
 
@@ -19928,21 +20690,19 @@ class SqlBaseParser ( Parser ):
             self.dataType()
             self.state = 2914
             self._errHandler.sync(self)
-            la_ = self._interp.adaptivePredict(self._input,379,self._ctx)
+            la_ = self._interp.adaptivePredict(self._input, 379, self._ctx)
             if la_ == 1:
                 self.state = 2912
                 self.match(SqlBaseParser.NOT)
                 self.state = 2913
                 self.match(SqlBaseParser.NULL)
 
-
             self.state = 2917
             self._errHandler.sync(self)
-            la_ = self._interp.adaptivePredict(self._input,380,self._ctx)
+            la_ = self._interp.adaptivePredict(self._input, 380, self._ctx)
             if la_ == 1:
                 self.state = 2916
                 self.commentSpec()
-
 
         except RecognitionException as re:
             localctx.exception = re
@@ -19952,40 +20712,37 @@ class SqlBaseParser ( Parser ):
             self.exitRule()
         return localctx
 
-
     class ComplexColTypeListContext(ParserRuleContext):
-        __slots__ = 'parser'
+        __slots__ = "parser"
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
-        def complexColType(self, i:int=None):
+        def complexColType(self, i: int = None):
             if i is None:
                 return self.getTypedRuleContexts(SqlBaseParser.ComplexColTypeContext)
             else:
-                return self.getTypedRuleContext(SqlBaseParser.ComplexColTypeContext,i)
-
+                return self.getTypedRuleContext(SqlBaseParser.ComplexColTypeContext, i)
 
         def getRuleIndex(self):
             return SqlBaseParser.RULE_complexColTypeList
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterComplexColTypeList" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterComplexColTypeList"):
                 listener.enterComplexColTypeList(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitComplexColTypeList" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitComplexColTypeList"):
                 listener.exitComplexColTypeList(self)
-
-
-
 
     def complexColTypeList(self):
 
         localctx = SqlBaseParser.ComplexColTypeListContext(self, self._ctx, self.state)
         self.enterRule(localctx, 244, self.RULE_complexColTypeList)
-        self._la = 0 # Token type
+        self._la = 0  # Token type
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 2919
@@ -19993,7 +20750,7 @@ class SqlBaseParser ( Parser ):
             self.state = 2924
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            while _la==SqlBaseParser.T__3:
+            while _la == SqlBaseParser.T__3:
                 self.state = 2920
                 self.match(SqlBaseParser.T__3)
                 self.state = 2921
@@ -20010,21 +20767,20 @@ class SqlBaseParser ( Parser ):
             self.exitRule()
         return localctx
 
-
     class ComplexColTypeContext(ParserRuleContext):
-        __slots__ = 'parser'
+        __slots__ = "parser"
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
         def identifier(self):
-            return self.getTypedRuleContext(SqlBaseParser.IdentifierContext,0)
-
+            return self.getTypedRuleContext(SqlBaseParser.IdentifierContext, 0)
 
         def dataType(self):
-            return self.getTypedRuleContext(SqlBaseParser.DataTypeContext,0)
-
+            return self.getTypedRuleContext(SqlBaseParser.DataTypeContext, 0)
 
         def NOT(self):
             return self.getToken(SqlBaseParser.NOT, 0)
@@ -20033,59 +20789,52 @@ class SqlBaseParser ( Parser ):
             return self.getToken(SqlBaseParser.NULL, 0)
 
         def commentSpec(self):
-            return self.getTypedRuleContext(SqlBaseParser.CommentSpecContext,0)
-
+            return self.getTypedRuleContext(SqlBaseParser.CommentSpecContext, 0)
 
         def getRuleIndex(self):
             return SqlBaseParser.RULE_complexColType
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterComplexColType" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterComplexColType"):
                 listener.enterComplexColType(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitComplexColType" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitComplexColType"):
                 listener.exitComplexColType(self)
-
-
-
 
     def complexColType(self):
 
         localctx = SqlBaseParser.ComplexColTypeContext(self, self._ctx, self.state)
         self.enterRule(localctx, 246, self.RULE_complexColType)
-        self._la = 0 # Token type
+        self._la = 0  # Token type
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 2927
             self.identifier()
             self.state = 2929
             self._errHandler.sync(self)
-            la_ = self._interp.adaptivePredict(self._input,382,self._ctx)
+            la_ = self._interp.adaptivePredict(self._input, 382, self._ctx)
             if la_ == 1:
                 self.state = 2928
                 self.match(SqlBaseParser.T__10)
-
 
             self.state = 2931
             self.dataType()
             self.state = 2934
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if _la==SqlBaseParser.NOT:
+            if _la == SqlBaseParser.NOT:
                 self.state = 2932
                 self.match(SqlBaseParser.NOT)
                 self.state = 2933
                 self.match(SqlBaseParser.NULL)
 
-
             self.state = 2937
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if _la==SqlBaseParser.COMMENT:
+            if _la == SqlBaseParser.COMMENT:
                 self.state = 2936
                 self.commentSpec()
-
 
         except RecognitionException as re:
             localctx.exception = re
@@ -20095,15 +20844,16 @@ class SqlBaseParser ( Parser ):
             self.exitRule()
         return localctx
 
-
     class WhenClauseContext(ParserRuleContext):
-        __slots__ = 'parser'
+        __slots__ = "parser"
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
-            self.condition = None # ExpressionContext
-            self.result = None # ExpressionContext
+            self.condition = None  # ExpressionContext
+            self.result = None  # ExpressionContext
 
         def WHEN(self):
             return self.getToken(SqlBaseParser.WHEN, 0)
@@ -20111,26 +20861,22 @@ class SqlBaseParser ( Parser ):
         def THEN(self):
             return self.getToken(SqlBaseParser.THEN, 0)
 
-        def expression(self, i:int=None):
+        def expression(self, i: int = None):
             if i is None:
                 return self.getTypedRuleContexts(SqlBaseParser.ExpressionContext)
             else:
-                return self.getTypedRuleContext(SqlBaseParser.ExpressionContext,i)
-
+                return self.getTypedRuleContext(SqlBaseParser.ExpressionContext, i)
 
         def getRuleIndex(self):
             return SqlBaseParser.RULE_whenClause
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterWhenClause" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterWhenClause"):
                 listener.enterWhenClause(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitWhenClause" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitWhenClause"):
                 listener.exitWhenClause(self)
-
-
-
 
     def whenClause(self):
 
@@ -20154,37 +20900,34 @@ class SqlBaseParser ( Parser ):
             self.exitRule()
         return localctx
 
-
     class WindowClauseContext(ParserRuleContext):
-        __slots__ = 'parser'
+        __slots__ = "parser"
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
         def WINDOW(self):
             return self.getToken(SqlBaseParser.WINDOW, 0)
 
-        def namedWindow(self, i:int=None):
+        def namedWindow(self, i: int = None):
             if i is None:
                 return self.getTypedRuleContexts(SqlBaseParser.NamedWindowContext)
             else:
-                return self.getTypedRuleContext(SqlBaseParser.NamedWindowContext,i)
-
+                return self.getTypedRuleContext(SqlBaseParser.NamedWindowContext, i)
 
         def getRuleIndex(self):
             return SqlBaseParser.RULE_windowClause
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterWindowClause" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterWindowClause"):
                 listener.enterWindowClause(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitWindowClause" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitWindowClause"):
                 listener.exitWindowClause(self)
-
-
-
 
     def windowClause(self):
 
@@ -20198,16 +20941,16 @@ class SqlBaseParser ( Parser ):
             self.namedWindow()
             self.state = 2950
             self._errHandler.sync(self)
-            _alt = self._interp.adaptivePredict(self._input,385,self._ctx)
-            while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
-                if _alt==1:
+            _alt = self._interp.adaptivePredict(self._input, 385, self._ctx)
+            while _alt != 2 and _alt != ATN.INVALID_ALT_NUMBER:
+                if _alt == 1:
                     self.state = 2946
                     self.match(SqlBaseParser.T__3)
                     self.state = 2947
-                    self.namedWindow() 
+                    self.namedWindow()
                 self.state = 2952
                 self._errHandler.sync(self)
-                _alt = self._interp.adaptivePredict(self._input,385,self._ctx)
+                _alt = self._interp.adaptivePredict(self._input, 385, self._ctx)
 
         except RecognitionException as re:
             localctx.exception = re
@@ -20217,39 +20960,37 @@ class SqlBaseParser ( Parser ):
             self.exitRule()
         return localctx
 
-
     class NamedWindowContext(ParserRuleContext):
-        __slots__ = 'parser'
+        __slots__ = "parser"
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
-            self.name = None # ErrorCapturingIdentifierContext
+            self.name = None  # ErrorCapturingIdentifierContext
 
         def AS(self):
             return self.getToken(SqlBaseParser.AS, 0)
 
         def windowSpec(self):
-            return self.getTypedRuleContext(SqlBaseParser.WindowSpecContext,0)
-
+            return self.getTypedRuleContext(SqlBaseParser.WindowSpecContext, 0)
 
         def errorCapturingIdentifier(self):
-            return self.getTypedRuleContext(SqlBaseParser.ErrorCapturingIdentifierContext,0)
-
+            return self.getTypedRuleContext(
+                SqlBaseParser.ErrorCapturingIdentifierContext, 0
+            )
 
         def getRuleIndex(self):
             return SqlBaseParser.RULE_namedWindow
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterNamedWindow" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterNamedWindow"):
                 listener.enterNamedWindow(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitNamedWindow" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitNamedWindow"):
                 listener.exitNamedWindow(self)
-
-
-
 
     def namedWindow(self):
 
@@ -20271,102 +21012,104 @@ class SqlBaseParser ( Parser ):
             self.exitRule()
         return localctx
 
-
     class WindowSpecContext(ParserRuleContext):
-        __slots__ = 'parser'
+        __slots__ = "parser"
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
-
 
         def getRuleIndex(self):
             return SqlBaseParser.RULE_windowSpec
 
-     
-        def copyFrom(self, ctx:ParserRuleContext):
+        def copyFrom(self, ctx: ParserRuleContext):
             super().copyFrom(ctx)
 
-
-
     class WindowRefContext(WindowSpecContext):
-
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a SqlBaseParser.WindowSpecContext
+        def __init__(
+            self, parser, ctx: ParserRuleContext
+        ):  # actually a SqlBaseParser.WindowSpecContext
             super().__init__(parser)
-            self.name = None # ErrorCapturingIdentifierContext
+            self.name = None  # ErrorCapturingIdentifierContext
             self.copyFrom(ctx)
 
         def errorCapturingIdentifier(self):
-            return self.getTypedRuleContext(SqlBaseParser.ErrorCapturingIdentifierContext,0)
+            return self.getTypedRuleContext(
+                SqlBaseParser.ErrorCapturingIdentifierContext, 0
+            )
 
-
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterWindowRef" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterWindowRef"):
                 listener.enterWindowRef(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitWindowRef" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitWindowRef"):
                 listener.exitWindowRef(self)
 
-
     class WindowDefContext(WindowSpecContext):
-
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a SqlBaseParser.WindowSpecContext
+        def __init__(
+            self, parser, ctx: ParserRuleContext
+        ):  # actually a SqlBaseParser.WindowSpecContext
             super().__init__(parser)
-            self._expression = None # ExpressionContext
-            self.partition = list() # of ExpressionContexts
+            self._expression = None  # ExpressionContext
+            self.partition = list()  # of ExpressionContexts
             self.copyFrom(ctx)
 
         def CLUSTER(self):
             return self.getToken(SqlBaseParser.CLUSTER, 0)
-        def BY(self, i:int=None):
+
+        def BY(self, i: int = None):
             if i is None:
                 return self.getTokens(SqlBaseParser.BY)
             else:
                 return self.getToken(SqlBaseParser.BY, i)
-        def expression(self, i:int=None):
+
+        def expression(self, i: int = None):
             if i is None:
                 return self.getTypedRuleContexts(SqlBaseParser.ExpressionContext)
             else:
-                return self.getTypedRuleContext(SqlBaseParser.ExpressionContext,i)
+                return self.getTypedRuleContext(SqlBaseParser.ExpressionContext, i)
 
         def windowFrame(self):
-            return self.getTypedRuleContext(SqlBaseParser.WindowFrameContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.WindowFrameContext, 0)
 
-        def sortItem(self, i:int=None):
+        def sortItem(self, i: int = None):
             if i is None:
                 return self.getTypedRuleContexts(SqlBaseParser.SortItemContext)
             else:
-                return self.getTypedRuleContext(SqlBaseParser.SortItemContext,i)
+                return self.getTypedRuleContext(SqlBaseParser.SortItemContext, i)
 
         def PARTITION(self):
             return self.getToken(SqlBaseParser.PARTITION, 0)
+
         def DISTRIBUTE(self):
             return self.getToken(SqlBaseParser.DISTRIBUTE, 0)
+
         def ORDER(self):
             return self.getToken(SqlBaseParser.ORDER, 0)
+
         def SORT(self):
             return self.getToken(SqlBaseParser.SORT, 0)
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterWindowDef" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterWindowDef"):
                 listener.enterWindowDef(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitWindowDef" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitWindowDef"):
                 listener.exitWindowDef(self)
-
-
 
     def windowSpec(self):
 
         localctx = SqlBaseParser.WindowSpecContext(self, self._ctx, self.state)
         self.enterRule(localctx, 254, self.RULE_windowSpec)
-        self._la = 0 # Token type
+        self._la = 0  # Token type
         try:
             self.state = 3003
             self._errHandler.sync(self)
-            la_ = self._interp.adaptivePredict(self._input,393,self._ctx)
+            la_ = self._interp.adaptivePredict(self._input, 393, self._ctx)
             if la_ == 1:
                 localctx = SqlBaseParser.WindowRefContext(self, localctx)
                 self.enterOuterAlt(localctx, 1)
@@ -20404,7 +21147,7 @@ class SqlBaseParser ( Parser ):
                     self.state = 2970
                     self._errHandler.sync(self)
                     _la = self._input.LA(1)
-                    while _la==SqlBaseParser.T__3:
+                    while _la == SqlBaseParser.T__3:
                         self.state = 2966
                         self.match(SqlBaseParser.T__3)
                         self.state = 2967
@@ -20415,14 +21158,28 @@ class SqlBaseParser ( Parser ):
                         _la = self._input.LA(1)
 
                     pass
-                elif token in [SqlBaseParser.T__2, SqlBaseParser.DISTRIBUTE, SqlBaseParser.ORDER, SqlBaseParser.PARTITION, SqlBaseParser.RANGE, SqlBaseParser.ROWS, SqlBaseParser.SORT]:
+                elif token in [
+                    SqlBaseParser.T__2,
+                    SqlBaseParser.DISTRIBUTE,
+                    SqlBaseParser.ORDER,
+                    SqlBaseParser.PARTITION,
+                    SqlBaseParser.RANGE,
+                    SqlBaseParser.ROWS,
+                    SqlBaseParser.SORT,
+                ]:
                     self.state = 2983
                     self._errHandler.sync(self)
                     _la = self._input.LA(1)
-                    if _la==SqlBaseParser.DISTRIBUTE or _la==SqlBaseParser.PARTITION:
+                    if (
+                        _la == SqlBaseParser.DISTRIBUTE
+                        or _la == SqlBaseParser.PARTITION
+                    ):
                         self.state = 2973
                         _la = self._input.LA(1)
-                        if not(_la==SqlBaseParser.DISTRIBUTE or _la==SqlBaseParser.PARTITION):
+                        if not (
+                            _la == SqlBaseParser.DISTRIBUTE
+                            or _la == SqlBaseParser.PARTITION
+                        ):
                             self._errHandler.recoverInline(self)
                         else:
                             self._errHandler.reportMatch(self)
@@ -20435,7 +21192,7 @@ class SqlBaseParser ( Parser ):
                         self.state = 2980
                         self._errHandler.sync(self)
                         _la = self._input.LA(1)
-                        while _la==SqlBaseParser.T__3:
+                        while _la == SqlBaseParser.T__3:
                             self.state = 2976
                             self.match(SqlBaseParser.T__3)
                             self.state = 2977
@@ -20445,15 +21202,15 @@ class SqlBaseParser ( Parser ):
                             self._errHandler.sync(self)
                             _la = self._input.LA(1)
 
-
-
                     self.state = 2995
                     self._errHandler.sync(self)
                     _la = self._input.LA(1)
-                    if _la==SqlBaseParser.ORDER or _la==SqlBaseParser.SORT:
+                    if _la == SqlBaseParser.ORDER or _la == SqlBaseParser.SORT:
                         self.state = 2985
                         _la = self._input.LA(1)
-                        if not(_la==SqlBaseParser.ORDER or _la==SqlBaseParser.SORT):
+                        if not (
+                            _la == SqlBaseParser.ORDER or _la == SqlBaseParser.SORT
+                        ):
                             self._errHandler.recoverInline(self)
                         else:
                             self._errHandler.reportMatch(self)
@@ -20465,7 +21222,7 @@ class SqlBaseParser ( Parser ):
                         self.state = 2992
                         self._errHandler.sync(self)
                         _la = self._input.LA(1)
-                        while _la==SqlBaseParser.T__3:
+                        while _la == SqlBaseParser.T__3:
                             self.state = 2988
                             self.match(SqlBaseParser.T__3)
                             self.state = 2989
@@ -20474,8 +21231,6 @@ class SqlBaseParser ( Parser ):
                             self._errHandler.sync(self)
                             _la = self._input.LA(1)
 
-
-
                     pass
                 else:
                     raise NoViableAltException(self)
@@ -20483,15 +21238,13 @@ class SqlBaseParser ( Parser ):
                 self.state = 3000
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==SqlBaseParser.RANGE or _la==SqlBaseParser.ROWS:
+                if _la == SqlBaseParser.RANGE or _la == SqlBaseParser.ROWS:
                     self.state = 2999
                     self.windowFrame()
-
 
                 self.state = 3002
                 self.match(SqlBaseParser.T__2)
                 pass
-
 
         except RecognitionException as re:
             localctx.exception = re
@@ -20501,26 +21254,26 @@ class SqlBaseParser ( Parser ):
             self.exitRule()
         return localctx
 
-
     class WindowFrameContext(ParserRuleContext):
-        __slots__ = 'parser'
+        __slots__ = "parser"
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
-            self.frameType = None # Token
-            self.start = None # FrameBoundContext
-            self.end = None # FrameBoundContext
+            self.frameType = None  # Token
+            self.start = None  # FrameBoundContext
+            self.end = None  # FrameBoundContext
 
         def RANGE(self):
             return self.getToken(SqlBaseParser.RANGE, 0)
 
-        def frameBound(self, i:int=None):
+        def frameBound(self, i: int = None):
             if i is None:
                 return self.getTypedRuleContexts(SqlBaseParser.FrameBoundContext)
             else:
-                return self.getTypedRuleContext(SqlBaseParser.FrameBoundContext,i)
-
+                return self.getTypedRuleContext(SqlBaseParser.FrameBoundContext, i)
 
         def ROWS(self):
             return self.getToken(SqlBaseParser.ROWS, 0)
@@ -20534,16 +21287,13 @@ class SqlBaseParser ( Parser ):
         def getRuleIndex(self):
             return SqlBaseParser.RULE_windowFrame
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterWindowFrame" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterWindowFrame"):
                 listener.enterWindowFrame(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitWindowFrame" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitWindowFrame"):
                 listener.exitWindowFrame(self)
-
-
-
 
     def windowFrame(self):
 
@@ -20552,7 +21302,7 @@ class SqlBaseParser ( Parser ):
         try:
             self.state = 3021
             self._errHandler.sync(self)
-            la_ = self._interp.adaptivePredict(self._input,394,self._ctx)
+            la_ = self._interp.adaptivePredict(self._input, 394, self._ctx)
             if la_ == 1:
                 self.enterOuterAlt(localctx, 1)
                 self.state = 3005
@@ -20597,7 +21347,6 @@ class SqlBaseParser ( Parser ):
                 localctx.end = self.frameBound()
                 pass
 
-
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)
@@ -20606,14 +21355,15 @@ class SqlBaseParser ( Parser ):
             self.exitRule()
         return localctx
 
-
     class FrameBoundContext(ParserRuleContext):
-        __slots__ = 'parser'
+        __slots__ = "parser"
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
-            self.boundType = None # Token
+            self.boundType = None  # Token
 
         def UNBOUNDED(self):
             return self.getToken(SqlBaseParser.UNBOUNDED, 0)
@@ -20631,32 +21381,28 @@ class SqlBaseParser ( Parser ):
             return self.getToken(SqlBaseParser.CURRENT, 0)
 
         def expression(self):
-            return self.getTypedRuleContext(SqlBaseParser.ExpressionContext,0)
-
+            return self.getTypedRuleContext(SqlBaseParser.ExpressionContext, 0)
 
         def getRuleIndex(self):
             return SqlBaseParser.RULE_frameBound
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterFrameBound" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterFrameBound"):
                 listener.enterFrameBound(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitFrameBound" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitFrameBound"):
                 listener.exitFrameBound(self)
-
-
-
 
     def frameBound(self):
 
         localctx = SqlBaseParser.FrameBoundContext(self, self._ctx, self.state)
         self.enterRule(localctx, 258, self.RULE_frameBound)
-        self._la = 0 # Token type
+        self._la = 0  # Token type
         try:
             self.state = 3030
             self._errHandler.sync(self)
-            la_ = self._interp.adaptivePredict(self._input,395,self._ctx)
+            la_ = self._interp.adaptivePredict(self._input, 395, self._ctx)
             if la_ == 1:
                 self.enterOuterAlt(localctx, 1)
                 self.state = 3023
@@ -20664,7 +21410,9 @@ class SqlBaseParser ( Parser ):
                 self.state = 3024
                 localctx.boundType = self._input.LT(1)
                 _la = self._input.LA(1)
-                if not(_la==SqlBaseParser.FOLLOWING or _la==SqlBaseParser.PRECEDING):
+                if not (
+                    _la == SqlBaseParser.FOLLOWING or _la == SqlBaseParser.PRECEDING
+                ):
                     localctx.boundType = self._errHandler.recoverInline(self)
                 else:
                     self._errHandler.reportMatch(self)
@@ -20686,13 +21434,14 @@ class SqlBaseParser ( Parser ):
                 self.state = 3028
                 localctx.boundType = self._input.LT(1)
                 _la = self._input.LA(1)
-                if not(_la==SqlBaseParser.FOLLOWING or _la==SqlBaseParser.PRECEDING):
+                if not (
+                    _la == SqlBaseParser.FOLLOWING or _la == SqlBaseParser.PRECEDING
+                ):
                     localctx.boundType = self._errHandler.recoverInline(self)
                 else:
                     self._errHandler.reportMatch(self)
                     self.consume()
                 pass
-
 
         except RecognitionException as re:
             localctx.exception = re
@@ -20702,40 +21451,37 @@ class SqlBaseParser ( Parser ):
             self.exitRule()
         return localctx
 
-
     class QualifiedNameListContext(ParserRuleContext):
-        __slots__ = 'parser'
+        __slots__ = "parser"
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
-        def qualifiedName(self, i:int=None):
+        def qualifiedName(self, i: int = None):
             if i is None:
                 return self.getTypedRuleContexts(SqlBaseParser.QualifiedNameContext)
             else:
-                return self.getTypedRuleContext(SqlBaseParser.QualifiedNameContext,i)
-
+                return self.getTypedRuleContext(SqlBaseParser.QualifiedNameContext, i)
 
         def getRuleIndex(self):
             return SqlBaseParser.RULE_qualifiedNameList
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterQualifiedNameList" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterQualifiedNameList"):
                 listener.enterQualifiedNameList(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitQualifiedNameList" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitQualifiedNameList"):
                 listener.exitQualifiedNameList(self)
-
-
-
 
     def qualifiedNameList(self):
 
         localctx = SqlBaseParser.QualifiedNameListContext(self, self._ctx, self.state)
         self.enterRule(localctx, 260, self.RULE_qualifiedNameList)
-        self._la = 0 # Token type
+        self._la = 0  # Token type
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 3032
@@ -20743,7 +21489,7 @@ class SqlBaseParser ( Parser ):
             self.state = 3037
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            while _la==SqlBaseParser.T__3:
+            while _la == SqlBaseParser.T__3:
                 self.state = 3033
                 self.match(SqlBaseParser.T__3)
                 self.state = 3034
@@ -20760,17 +21506,17 @@ class SqlBaseParser ( Parser ):
             self.exitRule()
         return localctx
 
-
     class FunctionNameContext(ParserRuleContext):
-        __slots__ = 'parser'
+        __slots__ = "parser"
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
         def qualifiedName(self):
-            return self.getTypedRuleContext(SqlBaseParser.QualifiedNameContext,0)
-
+            return self.getTypedRuleContext(SqlBaseParser.QualifiedNameContext, 0)
 
         def FILTER(self):
             return self.getToken(SqlBaseParser.FILTER, 0)
@@ -20784,16 +21530,13 @@ class SqlBaseParser ( Parser ):
         def getRuleIndex(self):
             return SqlBaseParser.RULE_functionName
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterFunctionName" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterFunctionName"):
                 listener.enterFunctionName(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitFunctionName" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitFunctionName"):
                 listener.exitFunctionName(self)
-
-
-
 
     def functionName(self):
 
@@ -20802,7 +21545,7 @@ class SqlBaseParser ( Parser ):
         try:
             self.state = 3044
             self._errHandler.sync(self)
-            la_ = self._interp.adaptivePredict(self._input,397,self._ctx)
+            la_ = self._interp.adaptivePredict(self._input, 397, self._ctx)
             if la_ == 1:
                 self.enterOuterAlt(localctx, 1)
                 self.state = 3040
@@ -20827,7 +21570,6 @@ class SqlBaseParser ( Parser ):
                 self.match(SqlBaseParser.RIGHT)
                 pass
 
-
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)
@@ -20836,34 +21578,31 @@ class SqlBaseParser ( Parser ):
             self.exitRule()
         return localctx
 
-
     class QualifiedNameContext(ParserRuleContext):
-        __slots__ = 'parser'
+        __slots__ = "parser"
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
-        def identifier(self, i:int=None):
+        def identifier(self, i: int = None):
             if i is None:
                 return self.getTypedRuleContexts(SqlBaseParser.IdentifierContext)
             else:
-                return self.getTypedRuleContext(SqlBaseParser.IdentifierContext,i)
-
+                return self.getTypedRuleContext(SqlBaseParser.IdentifierContext, i)
 
         def getRuleIndex(self):
             return SqlBaseParser.RULE_qualifiedName
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterQualifiedName" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterQualifiedName"):
                 listener.enterQualifiedName(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitQualifiedName" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitQualifiedName"):
                 listener.exitQualifiedName(self)
-
-
-
 
     def qualifiedName(self):
 
@@ -20875,16 +21614,16 @@ class SqlBaseParser ( Parser ):
             self.identifier()
             self.state = 3051
             self._errHandler.sync(self)
-            _alt = self._interp.adaptivePredict(self._input,398,self._ctx)
-            while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
-                if _alt==1:
+            _alt = self._interp.adaptivePredict(self._input, 398, self._ctx)
+            while _alt != 2 and _alt != ATN.INVALID_ALT_NUMBER:
+                if _alt == 1:
                     self.state = 3047
                     self.match(SqlBaseParser.T__4)
                     self.state = 3048
-                    self.identifier() 
+                    self.identifier()
                 self.state = 3053
                 self._errHandler.sync(self)
-                _alt = self._interp.adaptivePredict(self._input,398,self._ctx)
+                _alt = self._interp.adaptivePredict(self._input, 398, self._ctx)
 
         except RecognitionException as re:
             localctx.exception = re
@@ -20894,39 +21633,39 @@ class SqlBaseParser ( Parser ):
             self.exitRule()
         return localctx
 
-
     class ErrorCapturingIdentifierContext(ParserRuleContext):
-        __slots__ = 'parser'
+        __slots__ = "parser"
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
         def identifier(self):
-            return self.getTypedRuleContext(SqlBaseParser.IdentifierContext,0)
-
+            return self.getTypedRuleContext(SqlBaseParser.IdentifierContext, 0)
 
         def errorCapturingIdentifierExtra(self):
-            return self.getTypedRuleContext(SqlBaseParser.ErrorCapturingIdentifierExtraContext,0)
-
+            return self.getTypedRuleContext(
+                SqlBaseParser.ErrorCapturingIdentifierExtraContext, 0
+            )
 
         def getRuleIndex(self):
             return SqlBaseParser.RULE_errorCapturingIdentifier
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterErrorCapturingIdentifier" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterErrorCapturingIdentifier"):
                 listener.enterErrorCapturingIdentifier(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitErrorCapturingIdentifier" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitErrorCapturingIdentifier"):
                 listener.exitErrorCapturingIdentifier(self)
-
-
-
 
     def errorCapturingIdentifier(self):
 
-        localctx = SqlBaseParser.ErrorCapturingIdentifierContext(self, self._ctx, self.state)
+        localctx = SqlBaseParser.ErrorCapturingIdentifierContext(
+            self, self._ctx, self.state
+        )
         self.enterRule(localctx, 266, self.RULE_errorCapturingIdentifier)
         try:
             self.enterOuterAlt(localctx, 1)
@@ -20942,83 +21681,80 @@ class SqlBaseParser ( Parser ):
             self.exitRule()
         return localctx
 
-
     class ErrorCapturingIdentifierExtraContext(ParserRuleContext):
-        __slots__ = 'parser'
+        __slots__ = "parser"
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
-
 
         def getRuleIndex(self):
             return SqlBaseParser.RULE_errorCapturingIdentifierExtra
 
-     
-        def copyFrom(self, ctx:ParserRuleContext):
+        def copyFrom(self, ctx: ParserRuleContext):
             super().copyFrom(ctx)
 
-
-
     class ErrorIdentContext(ErrorCapturingIdentifierExtraContext):
-
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a SqlBaseParser.ErrorCapturingIdentifierExtraContext
+        def __init__(
+            self, parser, ctx: ParserRuleContext
+        ):  # actually a SqlBaseParser.ErrorCapturingIdentifierExtraContext
             super().__init__(parser)
             self.copyFrom(ctx)
 
-        def MINUS(self, i:int=None):
+        def MINUS(self, i: int = None):
             if i is None:
                 return self.getTokens(SqlBaseParser.MINUS)
             else:
                 return self.getToken(SqlBaseParser.MINUS, i)
-        def identifier(self, i:int=None):
+
+        def identifier(self, i: int = None):
             if i is None:
                 return self.getTypedRuleContexts(SqlBaseParser.IdentifierContext)
             else:
-                return self.getTypedRuleContext(SqlBaseParser.IdentifierContext,i)
+                return self.getTypedRuleContext(SqlBaseParser.IdentifierContext, i)
 
-
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterErrorIdent" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterErrorIdent"):
                 listener.enterErrorIdent(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitErrorIdent" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitErrorIdent"):
                 listener.exitErrorIdent(self)
 
-
     class RealIdentContext(ErrorCapturingIdentifierExtraContext):
-
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a SqlBaseParser.ErrorCapturingIdentifierExtraContext
+        def __init__(
+            self, parser, ctx: ParserRuleContext
+        ):  # actually a SqlBaseParser.ErrorCapturingIdentifierExtraContext
             super().__init__(parser)
             self.copyFrom(ctx)
 
-
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterRealIdent" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterRealIdent"):
                 listener.enterRealIdent(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitRealIdent" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitRealIdent"):
                 listener.exitRealIdent(self)
-
-
 
     def errorCapturingIdentifierExtra(self):
 
-        localctx = SqlBaseParser.ErrorCapturingIdentifierExtraContext(self, self._ctx, self.state)
+        localctx = SqlBaseParser.ErrorCapturingIdentifierExtraContext(
+            self, self._ctx, self.state
+        )
         self.enterRule(localctx, 268, self.RULE_errorCapturingIdentifierExtra)
         try:
             self.state = 3064
             self._errHandler.sync(self)
-            la_ = self._interp.adaptivePredict(self._input,400,self._ctx)
+            la_ = self._interp.adaptivePredict(self._input, 400, self._ctx)
             if la_ == 1:
                 localctx = SqlBaseParser.ErrorIdentContext(self, localctx)
                 self.enterOuterAlt(localctx, 1)
-                self.state = 3059 
+                self.state = 3059
                 self._errHandler.sync(self)
                 _alt = 1
-                while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
+                while _alt != 2 and _alt != ATN.INVALID_ALT_NUMBER:
                     if _alt == 1:
                         self.state = 3057
                         self.match(SqlBaseParser.MINUS)
@@ -21027,9 +21763,9 @@ class SqlBaseParser ( Parser ):
 
                     else:
                         raise NoViableAltException(self)
-                    self.state = 3061 
+                    self.state = 3061
                     self._errHandler.sync(self)
-                    _alt = self._interp.adaptivePredict(self._input,399,self._ctx)
+                    _alt = self._interp.adaptivePredict(self._input, 399, self._ctx)
 
                 pass
 
@@ -21039,7 +21775,6 @@ class SqlBaseParser ( Parser ):
 
                 pass
 
-
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)
@@ -21048,35 +21783,31 @@ class SqlBaseParser ( Parser ):
             self.exitRule()
         return localctx
 
-
     class IdentifierContext(ParserRuleContext):
-        __slots__ = 'parser'
+        __slots__ = "parser"
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
         def strictIdentifier(self):
-            return self.getTypedRuleContext(SqlBaseParser.StrictIdentifierContext,0)
-
+            return self.getTypedRuleContext(SqlBaseParser.StrictIdentifierContext, 0)
 
         def strictNonReserved(self):
-            return self.getTypedRuleContext(SqlBaseParser.StrictNonReservedContext,0)
-
+            return self.getTypedRuleContext(SqlBaseParser.StrictNonReservedContext, 0)
 
         def getRuleIndex(self):
             return SqlBaseParser.RULE_identifier
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterIdentifier" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterIdentifier"):
                 listener.enterIdentifier(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitIdentifier" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitIdentifier"):
                 listener.exitIdentifier(self)
-
-
-
 
     def identifier(self):
 
@@ -21085,7 +21816,7 @@ class SqlBaseParser ( Parser ):
         try:
             self.state = 3069
             self._errHandler.sync(self)
-            la_ = self._interp.adaptivePredict(self._input,401,self._ctx)
+            la_ = self._interp.adaptivePredict(self._input, 401, self._ctx)
             if la_ == 1:
                 self.enterOuterAlt(localctx, 1)
                 self.state = 3066
@@ -21095,13 +21826,15 @@ class SqlBaseParser ( Parser ):
             elif la_ == 2:
                 self.enterOuterAlt(localctx, 2)
                 self.state = 3067
-                if not !SQL_standard_keyword_behavior:
+                if not not self.SQL_standard_keyword_behavior:
                     from antlr4.error.Errors import FailedPredicateException
-                    raise FailedPredicateException(self, "!SQL_standard_keyword_behavior")
+
+                    raise FailedPredicateException(
+                        self, "not self.SQL_standard_keyword_behavior"
+                    )
                 self.state = 3068
                 self.strictNonReserved()
                 pass
-
 
         except RecognitionException as re:
             localctx.exception = re
@@ -21111,67 +21844,62 @@ class SqlBaseParser ( Parser ):
             self.exitRule()
         return localctx
 
-
     class StrictIdentifierContext(ParserRuleContext):
-        __slots__ = 'parser'
+        __slots__ = "parser"
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
-
 
         def getRuleIndex(self):
             return SqlBaseParser.RULE_strictIdentifier
 
-     
-        def copyFrom(self, ctx:ParserRuleContext):
+        def copyFrom(self, ctx: ParserRuleContext):
             super().copyFrom(ctx)
 
-
-
     class QuotedIdentifierAlternativeContext(StrictIdentifierContext):
-
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a SqlBaseParser.StrictIdentifierContext
+        def __init__(
+            self, parser, ctx: ParserRuleContext
+        ):  # actually a SqlBaseParser.StrictIdentifierContext
             super().__init__(parser)
             self.copyFrom(ctx)
 
         def quotedIdentifier(self):
-            return self.getTypedRuleContext(SqlBaseParser.QuotedIdentifierContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.QuotedIdentifierContext, 0)
 
-
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterQuotedIdentifierAlternative" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterQuotedIdentifierAlternative"):
                 listener.enterQuotedIdentifierAlternative(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitQuotedIdentifierAlternative" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitQuotedIdentifierAlternative"):
                 listener.exitQuotedIdentifierAlternative(self)
 
-
     class UnquotedIdentifierContext(StrictIdentifierContext):
-
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a SqlBaseParser.StrictIdentifierContext
+        def __init__(
+            self, parser, ctx: ParserRuleContext
+        ):  # actually a SqlBaseParser.StrictIdentifierContext
             super().__init__(parser)
             self.copyFrom(ctx)
 
         def IDENTIFIER(self):
             return self.getToken(SqlBaseParser.IDENTIFIER, 0)
+
         def ansiNonReserved(self):
-            return self.getTypedRuleContext(SqlBaseParser.AnsiNonReservedContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.AnsiNonReservedContext, 0)
 
         def nonReserved(self):
-            return self.getTypedRuleContext(SqlBaseParser.NonReservedContext,0)
+            return self.getTypedRuleContext(SqlBaseParser.NonReservedContext, 0)
 
-
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterUnquotedIdentifier" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterUnquotedIdentifier"):
                 listener.enterUnquotedIdentifier(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitUnquotedIdentifier" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitUnquotedIdentifier"):
                 listener.exitUnquotedIdentifier(self)
-
-
 
     def strictIdentifier(self):
 
@@ -21180,7 +21908,7 @@ class SqlBaseParser ( Parser ):
         try:
             self.state = 3077
             self._errHandler.sync(self)
-            la_ = self._interp.adaptivePredict(self._input,402,self._ctx)
+            la_ = self._interp.adaptivePredict(self._input, 402, self._ctx)
             if la_ == 1:
                 localctx = SqlBaseParser.UnquotedIdentifierContext(self, localctx)
                 self.enterOuterAlt(localctx, 1)
@@ -21189,7 +21917,9 @@ class SqlBaseParser ( Parser ):
                 pass
 
             elif la_ == 2:
-                localctx = SqlBaseParser.QuotedIdentifierAlternativeContext(self, localctx)
+                localctx = SqlBaseParser.QuotedIdentifierAlternativeContext(
+                    self, localctx
+                )
                 self.enterOuterAlt(localctx, 2)
                 self.state = 3072
                 self.quotedIdentifier()
@@ -21199,9 +21929,12 @@ class SqlBaseParser ( Parser ):
                 localctx = SqlBaseParser.UnquotedIdentifierContext(self, localctx)
                 self.enterOuterAlt(localctx, 3)
                 self.state = 3073
-                if not SQL_standard_keyword_behavior:
+                if not self.SQL_standard_keyword_behavior:
                     from antlr4.error.Errors import FailedPredicateException
-                    raise FailedPredicateException(self, "SQL_standard_keyword_behavior")
+
+                    raise FailedPredicateException(
+                        self, "self.SQL_standard_keyword_behavior"
+                    )
                 self.state = 3074
                 self.ansiNonReserved()
                 pass
@@ -21210,13 +21943,15 @@ class SqlBaseParser ( Parser ):
                 localctx = SqlBaseParser.UnquotedIdentifierContext(self, localctx)
                 self.enterOuterAlt(localctx, 4)
                 self.state = 3075
-                if not !SQL_standard_keyword_behavior:
+                if not not self.SQL_standard_keyword_behavior:
                     from antlr4.error.Errors import FailedPredicateException
-                    raise FailedPredicateException(self, "!SQL_standard_keyword_behavior")
+
+                    raise FailedPredicateException(
+                        self, "not self.SQL_standard_keyword_behavior"
+                    )
                 self.state = 3076
                 self.nonReserved()
                 pass
-
 
         except RecognitionException as re:
             localctx.exception = re
@@ -21226,11 +21961,12 @@ class SqlBaseParser ( Parser ):
             self.exitRule()
         return localctx
 
-
     class QuotedIdentifierContext(ParserRuleContext):
-        __slots__ = 'parser'
+        __slots__ = "parser"
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
@@ -21240,16 +21976,13 @@ class SqlBaseParser ( Parser ):
         def getRuleIndex(self):
             return SqlBaseParser.RULE_quotedIdentifier
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterQuotedIdentifier" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterQuotedIdentifier"):
                 listener.enterQuotedIdentifier(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitQuotedIdentifier" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitQuotedIdentifier"):
                 listener.exitQuotedIdentifier(self)
-
-
-
 
     def quotedIdentifier(self):
 
@@ -21267,250 +22000,259 @@ class SqlBaseParser ( Parser ):
             self.exitRule()
         return localctx
 
-
     class NumberContext(ParserRuleContext):
-        __slots__ = 'parser'
+        __slots__ = "parser"
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
-
 
         def getRuleIndex(self):
             return SqlBaseParser.RULE_number
 
-     
-        def copyFrom(self, ctx:ParserRuleContext):
+        def copyFrom(self, ctx: ParserRuleContext):
             super().copyFrom(ctx)
 
-
-
     class DecimalLiteralContext(NumberContext):
-
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a SqlBaseParser.NumberContext
+        def __init__(
+            self, parser, ctx: ParserRuleContext
+        ):  # actually a SqlBaseParser.NumberContext
             super().__init__(parser)
             self.copyFrom(ctx)
 
         def DECIMAL_VALUE(self):
             return self.getToken(SqlBaseParser.DECIMAL_VALUE, 0)
+
         def MINUS(self):
             return self.getToken(SqlBaseParser.MINUS, 0)
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterDecimalLiteral" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterDecimalLiteral"):
                 listener.enterDecimalLiteral(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitDecimalLiteral" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitDecimalLiteral"):
                 listener.exitDecimalLiteral(self)
 
-
     class BigIntLiteralContext(NumberContext):
-
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a SqlBaseParser.NumberContext
+        def __init__(
+            self, parser, ctx: ParserRuleContext
+        ):  # actually a SqlBaseParser.NumberContext
             super().__init__(parser)
             self.copyFrom(ctx)
 
         def BIGINT_LITERAL(self):
             return self.getToken(SqlBaseParser.BIGINT_LITERAL, 0)
+
         def MINUS(self):
             return self.getToken(SqlBaseParser.MINUS, 0)
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterBigIntLiteral" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterBigIntLiteral"):
                 listener.enterBigIntLiteral(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitBigIntLiteral" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitBigIntLiteral"):
                 listener.exitBigIntLiteral(self)
 
-
     class TinyIntLiteralContext(NumberContext):
-
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a SqlBaseParser.NumberContext
+        def __init__(
+            self, parser, ctx: ParserRuleContext
+        ):  # actually a SqlBaseParser.NumberContext
             super().__init__(parser)
             self.copyFrom(ctx)
 
         def TINYINT_LITERAL(self):
             return self.getToken(SqlBaseParser.TINYINT_LITERAL, 0)
+
         def MINUS(self):
             return self.getToken(SqlBaseParser.MINUS, 0)
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterTinyIntLiteral" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterTinyIntLiteral"):
                 listener.enterTinyIntLiteral(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitTinyIntLiteral" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitTinyIntLiteral"):
                 listener.exitTinyIntLiteral(self)
 
-
     class LegacyDecimalLiteralContext(NumberContext):
-
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a SqlBaseParser.NumberContext
+        def __init__(
+            self, parser, ctx: ParserRuleContext
+        ):  # actually a SqlBaseParser.NumberContext
             super().__init__(parser)
             self.copyFrom(ctx)
 
         def EXPONENT_VALUE(self):
             return self.getToken(SqlBaseParser.EXPONENT_VALUE, 0)
+
         def DECIMAL_VALUE(self):
             return self.getToken(SqlBaseParser.DECIMAL_VALUE, 0)
+
         def MINUS(self):
             return self.getToken(SqlBaseParser.MINUS, 0)
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterLegacyDecimalLiteral" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterLegacyDecimalLiteral"):
                 listener.enterLegacyDecimalLiteral(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitLegacyDecimalLiteral" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitLegacyDecimalLiteral"):
                 listener.exitLegacyDecimalLiteral(self)
 
-
     class BigDecimalLiteralContext(NumberContext):
-
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a SqlBaseParser.NumberContext
+        def __init__(
+            self, parser, ctx: ParserRuleContext
+        ):  # actually a SqlBaseParser.NumberContext
             super().__init__(parser)
             self.copyFrom(ctx)
 
         def BIGDECIMAL_LITERAL(self):
             return self.getToken(SqlBaseParser.BIGDECIMAL_LITERAL, 0)
+
         def MINUS(self):
             return self.getToken(SqlBaseParser.MINUS, 0)
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterBigDecimalLiteral" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterBigDecimalLiteral"):
                 listener.enterBigDecimalLiteral(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitBigDecimalLiteral" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitBigDecimalLiteral"):
                 listener.exitBigDecimalLiteral(self)
 
-
     class ExponentLiteralContext(NumberContext):
-
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a SqlBaseParser.NumberContext
+        def __init__(
+            self, parser, ctx: ParserRuleContext
+        ):  # actually a SqlBaseParser.NumberContext
             super().__init__(parser)
             self.copyFrom(ctx)
 
         def EXPONENT_VALUE(self):
             return self.getToken(SqlBaseParser.EXPONENT_VALUE, 0)
+
         def MINUS(self):
             return self.getToken(SqlBaseParser.MINUS, 0)
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterExponentLiteral" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterExponentLiteral"):
                 listener.enterExponentLiteral(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitExponentLiteral" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitExponentLiteral"):
                 listener.exitExponentLiteral(self)
 
-
     class DoubleLiteralContext(NumberContext):
-
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a SqlBaseParser.NumberContext
+        def __init__(
+            self, parser, ctx: ParserRuleContext
+        ):  # actually a SqlBaseParser.NumberContext
             super().__init__(parser)
             self.copyFrom(ctx)
 
         def DOUBLE_LITERAL(self):
             return self.getToken(SqlBaseParser.DOUBLE_LITERAL, 0)
+
         def MINUS(self):
             return self.getToken(SqlBaseParser.MINUS, 0)
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterDoubleLiteral" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterDoubleLiteral"):
                 listener.enterDoubleLiteral(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitDoubleLiteral" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitDoubleLiteral"):
                 listener.exitDoubleLiteral(self)
 
-
     class IntegerLiteralContext(NumberContext):
-
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a SqlBaseParser.NumberContext
+        def __init__(
+            self, parser, ctx: ParserRuleContext
+        ):  # actually a SqlBaseParser.NumberContext
             super().__init__(parser)
             self.copyFrom(ctx)
 
         def INTEGER_VALUE(self):
             return self.getToken(SqlBaseParser.INTEGER_VALUE, 0)
+
         def MINUS(self):
             return self.getToken(SqlBaseParser.MINUS, 0)
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterIntegerLiteral" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterIntegerLiteral"):
                 listener.enterIntegerLiteral(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitIntegerLiteral" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitIntegerLiteral"):
                 listener.exitIntegerLiteral(self)
 
-
     class FloatLiteralContext(NumberContext):
-
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a SqlBaseParser.NumberContext
+        def __init__(
+            self, parser, ctx: ParserRuleContext
+        ):  # actually a SqlBaseParser.NumberContext
             super().__init__(parser)
             self.copyFrom(ctx)
 
         def FLOAT_LITERAL(self):
             return self.getToken(SqlBaseParser.FLOAT_LITERAL, 0)
+
         def MINUS(self):
             return self.getToken(SqlBaseParser.MINUS, 0)
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterFloatLiteral" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterFloatLiteral"):
                 listener.enterFloatLiteral(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitFloatLiteral" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitFloatLiteral"):
                 listener.exitFloatLiteral(self)
 
-
     class SmallIntLiteralContext(NumberContext):
-
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a SqlBaseParser.NumberContext
+        def __init__(
+            self, parser, ctx: ParserRuleContext
+        ):  # actually a SqlBaseParser.NumberContext
             super().__init__(parser)
             self.copyFrom(ctx)
 
         def SMALLINT_LITERAL(self):
             return self.getToken(SqlBaseParser.SMALLINT_LITERAL, 0)
+
         def MINUS(self):
             return self.getToken(SqlBaseParser.MINUS, 0)
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterSmallIntLiteral" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterSmallIntLiteral"):
                 listener.enterSmallIntLiteral(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitSmallIntLiteral" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitSmallIntLiteral"):
                 listener.exitSmallIntLiteral(self)
-
-
 
     def number(self):
 
         localctx = SqlBaseParser.NumberContext(self, self._ctx, self.state)
         self.enterRule(localctx, 276, self.RULE_number)
-        self._la = 0 # Token type
+        self._la = 0  # Token type
         try:
             self.state = 3124
             self._errHandler.sync(self)
-            la_ = self._interp.adaptivePredict(self._input,413,self._ctx)
+            la_ = self._interp.adaptivePredict(self._input, 413, self._ctx)
             if la_ == 1:
                 localctx = SqlBaseParser.ExponentLiteralContext(self, localctx)
                 self.enterOuterAlt(localctx, 1)
                 self.state = 3081
-                if not !legacy_exponent_literal_as_decimal_enabled:
+                if not not self.legacy_exponent_literal_as_decimal_enabled:
                     from antlr4.error.Errors import FailedPredicateException
-                    raise FailedPredicateException(self, "!legacy_exponent_literal_as_decimal_enabled")
+
+                    raise FailedPredicateException(
+                        self, "not self.legacy_exponent_literal_as_decimal_enabled"
+                    )
                 self.state = 3083
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==SqlBaseParser.MINUS:
+                if _la == SqlBaseParser.MINUS:
                     self.state = 3082
                     self.match(SqlBaseParser.MINUS)
-
 
                 self.state = 3085
                 self.match(SqlBaseParser.EXPONENT_VALUE)
@@ -21520,16 +22262,18 @@ class SqlBaseParser ( Parser ):
                 localctx = SqlBaseParser.DecimalLiteralContext(self, localctx)
                 self.enterOuterAlt(localctx, 2)
                 self.state = 3086
-                if not !legacy_exponent_literal_as_decimal_enabled:
+                if not not self.legacy_exponent_literal_as_decimal_enabled:
                     from antlr4.error.Errors import FailedPredicateException
-                    raise FailedPredicateException(self, "!legacy_exponent_literal_as_decimal_enabled")
+
+                    raise FailedPredicateException(
+                        self, "not self.legacy_exponent_literal_as_decimal_enabled"
+                    )
                 self.state = 3088
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==SqlBaseParser.MINUS:
+                if _la == SqlBaseParser.MINUS:
                     self.state = 3087
                     self.match(SqlBaseParser.MINUS)
-
 
                 self.state = 3090
                 self.match(SqlBaseParser.DECIMAL_VALUE)
@@ -21539,20 +22283,25 @@ class SqlBaseParser ( Parser ):
                 localctx = SqlBaseParser.LegacyDecimalLiteralContext(self, localctx)
                 self.enterOuterAlt(localctx, 3)
                 self.state = 3091
-                if not legacy_exponent_literal_as_decimal_enabled:
+                if not self.legacy_exponent_literal_as_decimal_enabled:
                     from antlr4.error.Errors import FailedPredicateException
-                    raise FailedPredicateException(self, "legacy_exponent_literal_as_decimal_enabled")
+
+                    raise FailedPredicateException(
+                        self, "self.legacy_exponent_literal_as_decimal_enabled"
+                    )
                 self.state = 3093
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==SqlBaseParser.MINUS:
+                if _la == SqlBaseParser.MINUS:
                     self.state = 3092
                     self.match(SqlBaseParser.MINUS)
 
-
                 self.state = 3095
                 _la = self._input.LA(1)
-                if not(_la==SqlBaseParser.EXPONENT_VALUE or _la==SqlBaseParser.DECIMAL_VALUE):
+                if not (
+                    _la == SqlBaseParser.EXPONENT_VALUE
+                    or _la == SqlBaseParser.DECIMAL_VALUE
+                ):
                     self._errHandler.recoverInline(self)
                 else:
                     self._errHandler.reportMatch(self)
@@ -21565,10 +22314,9 @@ class SqlBaseParser ( Parser ):
                 self.state = 3097
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==SqlBaseParser.MINUS:
+                if _la == SqlBaseParser.MINUS:
                     self.state = 3096
                     self.match(SqlBaseParser.MINUS)
-
 
                 self.state = 3099
                 self.match(SqlBaseParser.INTEGER_VALUE)
@@ -21580,10 +22328,9 @@ class SqlBaseParser ( Parser ):
                 self.state = 3101
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==SqlBaseParser.MINUS:
+                if _la == SqlBaseParser.MINUS:
                     self.state = 3100
                     self.match(SqlBaseParser.MINUS)
-
 
                 self.state = 3103
                 self.match(SqlBaseParser.BIGINT_LITERAL)
@@ -21595,10 +22342,9 @@ class SqlBaseParser ( Parser ):
                 self.state = 3105
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==SqlBaseParser.MINUS:
+                if _la == SqlBaseParser.MINUS:
                     self.state = 3104
                     self.match(SqlBaseParser.MINUS)
-
 
                 self.state = 3107
                 self.match(SqlBaseParser.SMALLINT_LITERAL)
@@ -21610,10 +22356,9 @@ class SqlBaseParser ( Parser ):
                 self.state = 3109
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==SqlBaseParser.MINUS:
+                if _la == SqlBaseParser.MINUS:
                     self.state = 3108
                     self.match(SqlBaseParser.MINUS)
-
 
                 self.state = 3111
                 self.match(SqlBaseParser.TINYINT_LITERAL)
@@ -21625,10 +22370,9 @@ class SqlBaseParser ( Parser ):
                 self.state = 3113
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==SqlBaseParser.MINUS:
+                if _la == SqlBaseParser.MINUS:
                     self.state = 3112
                     self.match(SqlBaseParser.MINUS)
-
 
                 self.state = 3115
                 self.match(SqlBaseParser.DOUBLE_LITERAL)
@@ -21640,10 +22384,9 @@ class SqlBaseParser ( Parser ):
                 self.state = 3117
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==SqlBaseParser.MINUS:
+                if _la == SqlBaseParser.MINUS:
                     self.state = 3116
                     self.match(SqlBaseParser.MINUS)
-
 
                 self.state = 3119
                 self.match(SqlBaseParser.FLOAT_LITERAL)
@@ -21655,15 +22398,13 @@ class SqlBaseParser ( Parser ):
                 self.state = 3121
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==SqlBaseParser.MINUS:
+                if _la == SqlBaseParser.MINUS:
                     self.state = 3120
                     self.match(SqlBaseParser.MINUS)
-
 
                 self.state = 3123
                 self.match(SqlBaseParser.BIGDECIMAL_LITERAL)
                 pass
-
 
         except RecognitionException as re:
             localctx.exception = re
@@ -21673,29 +22414,27 @@ class SqlBaseParser ( Parser ):
             self.exitRule()
         return localctx
 
-
     class AlterColumnActionContext(ParserRuleContext):
-        __slots__ = 'parser'
+        __slots__ = "parser"
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
-            self.setOrDrop = None # Token
+            self.setOrDrop = None  # Token
 
         def TYPE(self):
             return self.getToken(SqlBaseParser.TYPE, 0)
 
         def dataType(self):
-            return self.getTypedRuleContext(SqlBaseParser.DataTypeContext,0)
-
+            return self.getTypedRuleContext(SqlBaseParser.DataTypeContext, 0)
 
         def commentSpec(self):
-            return self.getTypedRuleContext(SqlBaseParser.CommentSpecContext,0)
-
+            return self.getTypedRuleContext(SqlBaseParser.CommentSpecContext, 0)
 
         def colPosition(self):
-            return self.getTypedRuleContext(SqlBaseParser.ColPositionContext,0)
-
+            return self.getTypedRuleContext(SqlBaseParser.ColPositionContext, 0)
 
         def NOT(self):
             return self.getToken(SqlBaseParser.NOT, 0)
@@ -21712,22 +22451,19 @@ class SqlBaseParser ( Parser ):
         def getRuleIndex(self):
             return SqlBaseParser.RULE_alterColumnAction
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterAlterColumnAction" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterAlterColumnAction"):
                 listener.enterAlterColumnAction(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitAlterColumnAction" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitAlterColumnAction"):
                 listener.exitAlterColumnAction(self)
-
-
-
 
     def alterColumnAction(self):
 
         localctx = SqlBaseParser.AlterColumnActionContext(self, self._ctx, self.state)
         self.enterRule(localctx, 278, self.RULE_alterColumnAction)
-        self._la = 0 # Token type
+        self._la = 0  # Token type
         try:
             self.state = 3133
             self._errHandler.sync(self)
@@ -21754,7 +22490,7 @@ class SqlBaseParser ( Parser ):
                 self.state = 3130
                 localctx.setOrDrop = self._input.LT(1)
                 _la = self._input.LA(1)
-                if not(_la==SqlBaseParser.DROP or _la==SqlBaseParser.SET):
+                if not (_la == SqlBaseParser.DROP or _la == SqlBaseParser.SET):
                     localctx.setOrDrop = self._errHandler.recoverInline(self)
                 else:
                     self._errHandler.reportMatch(self)
@@ -21775,11 +22511,12 @@ class SqlBaseParser ( Parser ):
             self.exitRule()
         return localctx
 
-
     class AnsiNonReservedContext(ParserRuleContext):
-        __slots__ = 'parser'
+        __slots__ = "parser"
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
@@ -22350,27 +23087,258 @@ class SqlBaseParser ( Parser ):
         def getRuleIndex(self):
             return SqlBaseParser.RULE_ansiNonReserved
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterAnsiNonReserved" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterAnsiNonReserved"):
                 listener.enterAnsiNonReserved(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitAnsiNonReserved" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitAnsiNonReserved"):
                 listener.exitAnsiNonReserved(self)
-
-
-
 
     def ansiNonReserved(self):
 
         localctx = SqlBaseParser.AnsiNonReservedContext(self, self._ctx, self.state)
         self.enterRule(localctx, 280, self.RULE_ansiNonReserved)
-        self._la = 0 # Token type
+        self._la = 0  # Token type
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 3135
             _la = self._input.LA(1)
-            if not((((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << SqlBaseParser.ADD) | (1 << SqlBaseParser.AFTER) | (1 << SqlBaseParser.ALTER) | (1 << SqlBaseParser.ANALYZE) | (1 << SqlBaseParser.ANTI) | (1 << SqlBaseParser.ARCHIVE) | (1 << SqlBaseParser.ARRAY) | (1 << SqlBaseParser.ASC) | (1 << SqlBaseParser.AT) | (1 << SqlBaseParser.BETWEEN) | (1 << SqlBaseParser.BUCKET) | (1 << SqlBaseParser.BUCKETS) | (1 << SqlBaseParser.BY) | (1 << SqlBaseParser.CACHE) | (1 << SqlBaseParser.CASCADE) | (1 << SqlBaseParser.CHANGE) | (1 << SqlBaseParser.CLEAR) | (1 << SqlBaseParser.CLUSTER) | (1 << SqlBaseParser.CLUSTERED) | (1 << SqlBaseParser.CODEGEN) | (1 << SqlBaseParser.COLLECTION) | (1 << SqlBaseParser.COLUMNS) | (1 << SqlBaseParser.COMMENT) | (1 << SqlBaseParser.COMMIT) | (1 << SqlBaseParser.COMPACT) | (1 << SqlBaseParser.COMPACTIONS) | (1 << SqlBaseParser.COMPUTE) | (1 << SqlBaseParser.CONCATENATE) | (1 << SqlBaseParser.COST) | (1 << SqlBaseParser.CUBE) | (1 << SqlBaseParser.CURRENT) | (1 << SqlBaseParser.DAY) | (1 << SqlBaseParser.DATA) | (1 << SqlBaseParser.DATABASE))) != 0) or ((((_la - 64)) & ~0x3f) == 0 and ((1 << (_la - 64)) & ((1 << (SqlBaseParser.DATABASES - 64)) | (1 << (SqlBaseParser.DBPROPERTIES - 64)) | (1 << (SqlBaseParser.DEFINED - 64)) | (1 << (SqlBaseParser.DELETE - 64)) | (1 << (SqlBaseParser.DELIMITED - 64)) | (1 << (SqlBaseParser.DESC - 64)) | (1 << (SqlBaseParser.DESCRIBE - 64)) | (1 << (SqlBaseParser.DFS - 64)) | (1 << (SqlBaseParser.DIRECTORIES - 64)) | (1 << (SqlBaseParser.DIRECTORY - 64)) | (1 << (SqlBaseParser.DISTRIBUTE - 64)) | (1 << (SqlBaseParser.DIV - 64)) | (1 << (SqlBaseParser.DROP - 64)) | (1 << (SqlBaseParser.ESCAPED - 64)) | (1 << (SqlBaseParser.EXCHANGE - 64)) | (1 << (SqlBaseParser.EXISTS - 64)) | (1 << (SqlBaseParser.EXPLAIN - 64)) | (1 << (SqlBaseParser.EXPORT - 64)) | (1 << (SqlBaseParser.EXTENDED - 64)) | (1 << (SqlBaseParser.EXTERNAL - 64)) | (1 << (SqlBaseParser.EXTRACT - 64)) | (1 << (SqlBaseParser.FIELDS - 64)) | (1 << (SqlBaseParser.FILEFORMAT - 64)) | (1 << (SqlBaseParser.FIRST - 64)) | (1 << (SqlBaseParser.FOLLOWING - 64)) | (1 << (SqlBaseParser.FORMAT - 64)) | (1 << (SqlBaseParser.FORMATTED - 64)) | (1 << (SqlBaseParser.FUNCTION - 64)) | (1 << (SqlBaseParser.FUNCTIONS - 64)) | (1 << (SqlBaseParser.GLOBAL - 64)) | (1 << (SqlBaseParser.GROUPING - 64)) | (1 << (SqlBaseParser.HOUR - 64)) | (1 << (SqlBaseParser.IF - 64)) | (1 << (SqlBaseParser.IGNORE - 64)) | (1 << (SqlBaseParser.IMPORT - 64)) | (1 << (SqlBaseParser.INDEX - 64)) | (1 << (SqlBaseParser.INDEXES - 64)) | (1 << (SqlBaseParser.INPATH - 64)) | (1 << (SqlBaseParser.INPUTFORMAT - 64)) | (1 << (SqlBaseParser.INSERT - 64)) | (1 << (SqlBaseParser.INTERVAL - 64)) | (1 << (SqlBaseParser.ITEMS - 64)) | (1 << (SqlBaseParser.KEYS - 64)))) != 0) or ((((_la - 128)) & ~0x3f) == 0 and ((1 << (_la - 128)) & ((1 << (SqlBaseParser.LAST - 128)) | (1 << (SqlBaseParser.LAZY - 128)) | (1 << (SqlBaseParser.LIKE - 128)) | (1 << (SqlBaseParser.LIMIT - 128)) | (1 << (SqlBaseParser.LINES - 128)) | (1 << (SqlBaseParser.LIST - 128)) | (1 << (SqlBaseParser.LOAD - 128)) | (1 << (SqlBaseParser.LOCAL - 128)) | (1 << (SqlBaseParser.LOCATION - 128)) | (1 << (SqlBaseParser.LOCK - 128)) | (1 << (SqlBaseParser.LOCKS - 128)) | (1 << (SqlBaseParser.LOGICAL - 128)) | (1 << (SqlBaseParser.MACRO - 128)) | (1 << (SqlBaseParser.MAP - 128)) | (1 << (SqlBaseParser.MATCHED - 128)) | (1 << (SqlBaseParser.MERGE - 128)) | (1 << (SqlBaseParser.MINUTE - 128)) | (1 << (SqlBaseParser.MONTH - 128)) | (1 << (SqlBaseParser.MSCK - 128)) | (1 << (SqlBaseParser.NAMESPACE - 128)) | (1 << (SqlBaseParser.NAMESPACES - 128)) | (1 << (SqlBaseParser.NO - 128)) | (1 << (SqlBaseParser.NULLS - 128)) | (1 << (SqlBaseParser.OF - 128)) | (1 << (SqlBaseParser.OPTION - 128)) | (1 << (SqlBaseParser.OPTIONS - 128)) | (1 << (SqlBaseParser.OUT - 128)) | (1 << (SqlBaseParser.OUTPUTFORMAT - 128)) | (1 << (SqlBaseParser.OVER - 128)) | (1 << (SqlBaseParser.OVERLAY - 128)) | (1 << (SqlBaseParser.OVERWRITE - 128)) | (1 << (SqlBaseParser.PARTITION - 128)) | (1 << (SqlBaseParser.PARTITIONED - 128)) | (1 << (SqlBaseParser.PARTITIONS - 128)) | (1 << (SqlBaseParser.PERCENTLIT - 128)) | (1 << (SqlBaseParser.PIVOT - 128)) | (1 << (SqlBaseParser.PLACING - 128)) | (1 << (SqlBaseParser.POSITION - 128)) | (1 << (SqlBaseParser.PRECEDING - 128)) | (1 << (SqlBaseParser.PRINCIPALS - 128)) | (1 << (SqlBaseParser.PROPERTIES - 128)) | (1 << (SqlBaseParser.PURGE - 128)) | (1 << (SqlBaseParser.QUERY - 128)) | (1 << (SqlBaseParser.RANGE - 128)) | (1 << (SqlBaseParser.RECORDREADER - 128)) | (1 << (SqlBaseParser.RECORDWRITER - 128)) | (1 << (SqlBaseParser.RECOVER - 128)) | (1 << (SqlBaseParser.REDUCE - 128)) | (1 << (SqlBaseParser.REFRESH - 128)) | (1 << (SqlBaseParser.RENAME - 128)))) != 0) or ((((_la - 192)) & ~0x3f) == 0 and ((1 << (_la - 192)) & ((1 << (SqlBaseParser.REPAIR - 192)) | (1 << (SqlBaseParser.REPLACE - 192)) | (1 << (SqlBaseParser.RESET - 192)) | (1 << (SqlBaseParser.RESPECT - 192)) | (1 << (SqlBaseParser.RESTRICT - 192)) | (1 << (SqlBaseParser.REVOKE - 192)) | (1 << (SqlBaseParser.RLIKE - 192)) | (1 << (SqlBaseParser.ROLE - 192)) | (1 << (SqlBaseParser.ROLES - 192)) | (1 << (SqlBaseParser.ROLLBACK - 192)) | (1 << (SqlBaseParser.ROLLUP - 192)) | (1 << (SqlBaseParser.ROW - 192)) | (1 << (SqlBaseParser.ROWS - 192)) | (1 << (SqlBaseParser.SECOND - 192)) | (1 << (SqlBaseParser.SCHEMA - 192)) | (1 << (SqlBaseParser.SEMI - 192)) | (1 << (SqlBaseParser.SEPARATED - 192)) | (1 << (SqlBaseParser.SERDE - 192)) | (1 << (SqlBaseParser.SERDEPROPERTIES - 192)) | (1 << (SqlBaseParser.SET - 192)) | (1 << (SqlBaseParser.SETMINUS - 192)) | (1 << (SqlBaseParser.SETS - 192)) | (1 << (SqlBaseParser.SHOW - 192)) | (1 << (SqlBaseParser.SKEWED - 192)) | (1 << (SqlBaseParser.SORT - 192)) | (1 << (SqlBaseParser.SORTED - 192)) | (1 << (SqlBaseParser.START - 192)) | (1 << (SqlBaseParser.STATISTICS - 192)) | (1 << (SqlBaseParser.STORED - 192)) | (1 << (SqlBaseParser.STRATIFY - 192)) | (1 << (SqlBaseParser.STRUCT - 192)) | (1 << (SqlBaseParser.SUBSTR - 192)) | (1 << (SqlBaseParser.SUBSTRING - 192)) | (1 << (SqlBaseParser.SYNC - 192)) | (1 << (SqlBaseParser.TABLES - 192)) | (1 << (SqlBaseParser.TABLESAMPLE - 192)) | (1 << (SqlBaseParser.TBLPROPERTIES - 192)) | (1 << (SqlBaseParser.TEMPORARY - 192)) | (1 << (SqlBaseParser.TERMINATED - 192)) | (1 << (SqlBaseParser.TOUCH - 192)) | (1 << (SqlBaseParser.TRANSACTION - 192)) | (1 << (SqlBaseParser.TRANSACTIONS - 192)) | (1 << (SqlBaseParser.TRANSFORM - 192)) | (1 << (SqlBaseParser.TRIM - 192)) | (1 << (SqlBaseParser.TRUE - 192)) | (1 << (SqlBaseParser.TRUNCATE - 192)) | (1 << (SqlBaseParser.TRY_CAST - 192)) | (1 << (SqlBaseParser.TYPE - 192)) | (1 << (SqlBaseParser.UNARCHIVE - 192)) | (1 << (SqlBaseParser.UNBOUNDED - 192)) | (1 << (SqlBaseParser.UNCACHE - 192)) | (1 << (SqlBaseParser.UNLOCK - 192)))) != 0) or ((((_la - 256)) & ~0x3f) == 0 and ((1 << (_la - 256)) & ((1 << (SqlBaseParser.UNSET - 256)) | (1 << (SqlBaseParser.UPDATE - 256)) | (1 << (SqlBaseParser.USE - 256)) | (1 << (SqlBaseParser.VALUES - 256)) | (1 << (SqlBaseParser.VIEW - 256)) | (1 << (SqlBaseParser.VIEWS - 256)) | (1 << (SqlBaseParser.WINDOW - 256)) | (1 << (SqlBaseParser.YEAR - 256)) | (1 << (SqlBaseParser.ZONE - 256)))) != 0)):
+            if not (
+                (
+                    ((_la) & ~0x3F) == 0
+                    and (
+                        (1 << _la)
+                        & (
+                            (1 << SqlBaseParser.ADD)
+                            | (1 << SqlBaseParser.AFTER)
+                            | (1 << SqlBaseParser.ALTER)
+                            | (1 << SqlBaseParser.ANALYZE)
+                            | (1 << SqlBaseParser.ANTI)
+                            | (1 << SqlBaseParser.ARCHIVE)
+                            | (1 << SqlBaseParser.ARRAY)
+                            | (1 << SqlBaseParser.ASC)
+                            | (1 << SqlBaseParser.AT)
+                            | (1 << SqlBaseParser.BETWEEN)
+                            | (1 << SqlBaseParser.BUCKET)
+                            | (1 << SqlBaseParser.BUCKETS)
+                            | (1 << SqlBaseParser.BY)
+                            | (1 << SqlBaseParser.CACHE)
+                            | (1 << SqlBaseParser.CASCADE)
+                            | (1 << SqlBaseParser.CHANGE)
+                            | (1 << SqlBaseParser.CLEAR)
+                            | (1 << SqlBaseParser.CLUSTER)
+                            | (1 << SqlBaseParser.CLUSTERED)
+                            | (1 << SqlBaseParser.CODEGEN)
+                            | (1 << SqlBaseParser.COLLECTION)
+                            | (1 << SqlBaseParser.COLUMNS)
+                            | (1 << SqlBaseParser.COMMENT)
+                            | (1 << SqlBaseParser.COMMIT)
+                            | (1 << SqlBaseParser.COMPACT)
+                            | (1 << SqlBaseParser.COMPACTIONS)
+                            | (1 << SqlBaseParser.COMPUTE)
+                            | (1 << SqlBaseParser.CONCATENATE)
+                            | (1 << SqlBaseParser.COST)
+                            | (1 << SqlBaseParser.CUBE)
+                            | (1 << SqlBaseParser.CURRENT)
+                            | (1 << SqlBaseParser.DAY)
+                            | (1 << SqlBaseParser.DATA)
+                            | (1 << SqlBaseParser.DATABASE)
+                        )
+                    )
+                    != 0
+                )
+                or (
+                    (((_la - 64)) & ~0x3F) == 0
+                    and (
+                        (1 << (_la - 64))
+                        & (
+                            (1 << (SqlBaseParser.DATABASES - 64))
+                            | (1 << (SqlBaseParser.DBPROPERTIES - 64))
+                            | (1 << (SqlBaseParser.DEFINED - 64))
+                            | (1 << (SqlBaseParser.DELETE - 64))
+                            | (1 << (SqlBaseParser.DELIMITED - 64))
+                            | (1 << (SqlBaseParser.DESC - 64))
+                            | (1 << (SqlBaseParser.DESCRIBE - 64))
+                            | (1 << (SqlBaseParser.DFS - 64))
+                            | (1 << (SqlBaseParser.DIRECTORIES - 64))
+                            | (1 << (SqlBaseParser.DIRECTORY - 64))
+                            | (1 << (SqlBaseParser.DISTRIBUTE - 64))
+                            | (1 << (SqlBaseParser.DIV - 64))
+                            | (1 << (SqlBaseParser.DROP - 64))
+                            | (1 << (SqlBaseParser.ESCAPED - 64))
+                            | (1 << (SqlBaseParser.EXCHANGE - 64))
+                            | (1 << (SqlBaseParser.EXISTS - 64))
+                            | (1 << (SqlBaseParser.EXPLAIN - 64))
+                            | (1 << (SqlBaseParser.EXPORT - 64))
+                            | (1 << (SqlBaseParser.EXTENDED - 64))
+                            | (1 << (SqlBaseParser.EXTERNAL - 64))
+                            | (1 << (SqlBaseParser.EXTRACT - 64))
+                            | (1 << (SqlBaseParser.FIELDS - 64))
+                            | (1 << (SqlBaseParser.FILEFORMAT - 64))
+                            | (1 << (SqlBaseParser.FIRST - 64))
+                            | (1 << (SqlBaseParser.FOLLOWING - 64))
+                            | (1 << (SqlBaseParser.FORMAT - 64))
+                            | (1 << (SqlBaseParser.FORMATTED - 64))
+                            | (1 << (SqlBaseParser.FUNCTION - 64))
+                            | (1 << (SqlBaseParser.FUNCTIONS - 64))
+                            | (1 << (SqlBaseParser.GLOBAL - 64))
+                            | (1 << (SqlBaseParser.GROUPING - 64))
+                            | (1 << (SqlBaseParser.HOUR - 64))
+                            | (1 << (SqlBaseParser.IF - 64))
+                            | (1 << (SqlBaseParser.IGNORE - 64))
+                            | (1 << (SqlBaseParser.IMPORT - 64))
+                            | (1 << (SqlBaseParser.INDEX - 64))
+                            | (1 << (SqlBaseParser.INDEXES - 64))
+                            | (1 << (SqlBaseParser.INPATH - 64))
+                            | (1 << (SqlBaseParser.INPUTFORMAT - 64))
+                            | (1 << (SqlBaseParser.INSERT - 64))
+                            | (1 << (SqlBaseParser.INTERVAL - 64))
+                            | (1 << (SqlBaseParser.ITEMS - 64))
+                            | (1 << (SqlBaseParser.KEYS - 64))
+                        )
+                    )
+                    != 0
+                )
+                or (
+                    (((_la - 128)) & ~0x3F) == 0
+                    and (
+                        (1 << (_la - 128))
+                        & (
+                            (1 << (SqlBaseParser.LAST - 128))
+                            | (1 << (SqlBaseParser.LAZY - 128))
+                            | (1 << (SqlBaseParser.LIKE - 128))
+                            | (1 << (SqlBaseParser.LIMIT - 128))
+                            | (1 << (SqlBaseParser.LINES - 128))
+                            | (1 << (SqlBaseParser.LIST - 128))
+                            | (1 << (SqlBaseParser.LOAD - 128))
+                            | (1 << (SqlBaseParser.LOCAL - 128))
+                            | (1 << (SqlBaseParser.LOCATION - 128))
+                            | (1 << (SqlBaseParser.LOCK - 128))
+                            | (1 << (SqlBaseParser.LOCKS - 128))
+                            | (1 << (SqlBaseParser.LOGICAL - 128))
+                            | (1 << (SqlBaseParser.MACRO - 128))
+                            | (1 << (SqlBaseParser.MAP - 128))
+                            | (1 << (SqlBaseParser.MATCHED - 128))
+                            | (1 << (SqlBaseParser.MERGE - 128))
+                            | (1 << (SqlBaseParser.MINUTE - 128))
+                            | (1 << (SqlBaseParser.MONTH - 128))
+                            | (1 << (SqlBaseParser.MSCK - 128))
+                            | (1 << (SqlBaseParser.NAMESPACE - 128))
+                            | (1 << (SqlBaseParser.NAMESPACES - 128))
+                            | (1 << (SqlBaseParser.NO - 128))
+                            | (1 << (SqlBaseParser.NULLS - 128))
+                            | (1 << (SqlBaseParser.OF - 128))
+                            | (1 << (SqlBaseParser.OPTION - 128))
+                            | (1 << (SqlBaseParser.OPTIONS - 128))
+                            | (1 << (SqlBaseParser.OUT - 128))
+                            | (1 << (SqlBaseParser.OUTPUTFORMAT - 128))
+                            | (1 << (SqlBaseParser.OVER - 128))
+                            | (1 << (SqlBaseParser.OVERLAY - 128))
+                            | (1 << (SqlBaseParser.OVERWRITE - 128))
+                            | (1 << (SqlBaseParser.PARTITION - 128))
+                            | (1 << (SqlBaseParser.PARTITIONED - 128))
+                            | (1 << (SqlBaseParser.PARTITIONS - 128))
+                            | (1 << (SqlBaseParser.PERCENTLIT - 128))
+                            | (1 << (SqlBaseParser.PIVOT - 128))
+                            | (1 << (SqlBaseParser.PLACING - 128))
+                            | (1 << (SqlBaseParser.POSITION - 128))
+                            | (1 << (SqlBaseParser.PRECEDING - 128))
+                            | (1 << (SqlBaseParser.PRINCIPALS - 128))
+                            | (1 << (SqlBaseParser.PROPERTIES - 128))
+                            | (1 << (SqlBaseParser.PURGE - 128))
+                            | (1 << (SqlBaseParser.QUERY - 128))
+                            | (1 << (SqlBaseParser.RANGE - 128))
+                            | (1 << (SqlBaseParser.RECORDREADER - 128))
+                            | (1 << (SqlBaseParser.RECORDWRITER - 128))
+                            | (1 << (SqlBaseParser.RECOVER - 128))
+                            | (1 << (SqlBaseParser.REDUCE - 128))
+                            | (1 << (SqlBaseParser.REFRESH - 128))
+                            | (1 << (SqlBaseParser.RENAME - 128))
+                        )
+                    )
+                    != 0
+                )
+                or (
+                    (((_la - 192)) & ~0x3F) == 0
+                    and (
+                        (1 << (_la - 192))
+                        & (
+                            (1 << (SqlBaseParser.REPAIR - 192))
+                            | (1 << (SqlBaseParser.REPLACE - 192))
+                            | (1 << (SqlBaseParser.RESET - 192))
+                            | (1 << (SqlBaseParser.RESPECT - 192))
+                            | (1 << (SqlBaseParser.RESTRICT - 192))
+                            | (1 << (SqlBaseParser.REVOKE - 192))
+                            | (1 << (SqlBaseParser.RLIKE - 192))
+                            | (1 << (SqlBaseParser.ROLE - 192))
+                            | (1 << (SqlBaseParser.ROLES - 192))
+                            | (1 << (SqlBaseParser.ROLLBACK - 192))
+                            | (1 << (SqlBaseParser.ROLLUP - 192))
+                            | (1 << (SqlBaseParser.ROW - 192))
+                            | (1 << (SqlBaseParser.ROWS - 192))
+                            | (1 << (SqlBaseParser.SECOND - 192))
+                            | (1 << (SqlBaseParser.SCHEMA - 192))
+                            | (1 << (SqlBaseParser.SEMI - 192))
+                            | (1 << (SqlBaseParser.SEPARATED - 192))
+                            | (1 << (SqlBaseParser.SERDE - 192))
+                            | (1 << (SqlBaseParser.SERDEPROPERTIES - 192))
+                            | (1 << (SqlBaseParser.SET - 192))
+                            | (1 << (SqlBaseParser.SETMINUS - 192))
+                            | (1 << (SqlBaseParser.SETS - 192))
+                            | (1 << (SqlBaseParser.SHOW - 192))
+                            | (1 << (SqlBaseParser.SKEWED - 192))
+                            | (1 << (SqlBaseParser.SORT - 192))
+                            | (1 << (SqlBaseParser.SORTED - 192))
+                            | (1 << (SqlBaseParser.START - 192))
+                            | (1 << (SqlBaseParser.STATISTICS - 192))
+                            | (1 << (SqlBaseParser.STORED - 192))
+                            | (1 << (SqlBaseParser.STRATIFY - 192))
+                            | (1 << (SqlBaseParser.STRUCT - 192))
+                            | (1 << (SqlBaseParser.SUBSTR - 192))
+                            | (1 << (SqlBaseParser.SUBSTRING - 192))
+                            | (1 << (SqlBaseParser.SYNC - 192))
+                            | (1 << (SqlBaseParser.TABLES - 192))
+                            | (1 << (SqlBaseParser.TABLESAMPLE - 192))
+                            | (1 << (SqlBaseParser.TBLPROPERTIES - 192))
+                            | (1 << (SqlBaseParser.TEMPORARY - 192))
+                            | (1 << (SqlBaseParser.TERMINATED - 192))
+                            | (1 << (SqlBaseParser.TOUCH - 192))
+                            | (1 << (SqlBaseParser.TRANSACTION - 192))
+                            | (1 << (SqlBaseParser.TRANSACTIONS - 192))
+                            | (1 << (SqlBaseParser.TRANSFORM - 192))
+                            | (1 << (SqlBaseParser.TRIM - 192))
+                            | (1 << (SqlBaseParser.TRUE - 192))
+                            | (1 << (SqlBaseParser.TRUNCATE - 192))
+                            | (1 << (SqlBaseParser.TRY_CAST - 192))
+                            | (1 << (SqlBaseParser.TYPE - 192))
+                            | (1 << (SqlBaseParser.UNARCHIVE - 192))
+                            | (1 << (SqlBaseParser.UNBOUNDED - 192))
+                            | (1 << (SqlBaseParser.UNCACHE - 192))
+                            | (1 << (SqlBaseParser.UNLOCK - 192))
+                        )
+                    )
+                    != 0
+                )
+                or (
+                    (((_la - 256)) & ~0x3F) == 0
+                    and (
+                        (1 << (_la - 256))
+                        & (
+                            (1 << (SqlBaseParser.UNSET - 256))
+                            | (1 << (SqlBaseParser.UPDATE - 256))
+                            | (1 << (SqlBaseParser.USE - 256))
+                            | (1 << (SqlBaseParser.VALUES - 256))
+                            | (1 << (SqlBaseParser.VIEW - 256))
+                            | (1 << (SqlBaseParser.VIEWS - 256))
+                            | (1 << (SqlBaseParser.WINDOW - 256))
+                            | (1 << (SqlBaseParser.YEAR - 256))
+                            | (1 << (SqlBaseParser.ZONE - 256))
+                        )
+                    )
+                    != 0
+                )
+            ):
                 self._errHandler.recoverInline(self)
             else:
                 self._errHandler.reportMatch(self)
@@ -22383,11 +23351,12 @@ class SqlBaseParser ( Parser ):
             self.exitRule()
         return localctx
 
-
     class StrictNonReservedContext(ParserRuleContext):
-        __slots__ = 'parser'
+        __slots__ = "parser"
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
@@ -22442,27 +23411,59 @@ class SqlBaseParser ( Parser ):
         def getRuleIndex(self):
             return SqlBaseParser.RULE_strictNonReserved
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterStrictNonReserved" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterStrictNonReserved"):
                 listener.enterStrictNonReserved(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitStrictNonReserved" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitStrictNonReserved"):
                 listener.exitStrictNonReserved(self)
-
-
-
 
     def strictNonReserved(self):
 
         localctx = SqlBaseParser.StrictNonReservedContext(self, self._ctx, self.state)
         self.enterRule(localctx, 282, self.RULE_strictNonReserved)
-        self._la = 0 # Token type
+        self._la = 0  # Token type
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 3137
             _la = self._input.LA(1)
-            if not(_la==SqlBaseParser.ANTI or _la==SqlBaseParser.CROSS or ((((_la - 82)) & ~0x3f) == 0 and ((1 << (_la - 82)) & ((1 << (SqlBaseParser.EXCEPT - 82)) | (1 << (SqlBaseParser.FULL - 82)) | (1 << (SqlBaseParser.INNER - 82)) | (1 << (SqlBaseParser.INTERSECT - 82)) | (1 << (SqlBaseParser.JOIN - 82)) | (1 << (SqlBaseParser.LATERAL - 82)) | (1 << (SqlBaseParser.LEFT - 82)))) != 0) or ((((_la - 152)) & ~0x3f) == 0 and ((1 << (_la - 152)) & ((1 << (SqlBaseParser.NATURAL - 152)) | (1 << (SqlBaseParser.ON - 152)) | (1 << (SqlBaseParser.RIGHT - 152)) | (1 << (SqlBaseParser.SEMI - 152)) | (1 << (SqlBaseParser.SETMINUS - 152)))) != 0) or _la==SqlBaseParser.UNION or _la==SqlBaseParser.USING):
+            if not (
+                _la == SqlBaseParser.ANTI
+                or _la == SqlBaseParser.CROSS
+                or (
+                    (((_la - 82)) & ~0x3F) == 0
+                    and (
+                        (1 << (_la - 82))
+                        & (
+                            (1 << (SqlBaseParser.EXCEPT - 82))
+                            | (1 << (SqlBaseParser.FULL - 82))
+                            | (1 << (SqlBaseParser.INNER - 82))
+                            | (1 << (SqlBaseParser.INTERSECT - 82))
+                            | (1 << (SqlBaseParser.JOIN - 82))
+                            | (1 << (SqlBaseParser.LATERAL - 82))
+                            | (1 << (SqlBaseParser.LEFT - 82))
+                        )
+                    )
+                    != 0
+                )
+                or (
+                    (((_la - 152)) & ~0x3F) == 0
+                    and (
+                        (1 << (_la - 152))
+                        & (
+                            (1 << (SqlBaseParser.NATURAL - 152))
+                            | (1 << (SqlBaseParser.ON - 152))
+                            | (1 << (SqlBaseParser.RIGHT - 152))
+                            | (1 << (SqlBaseParser.SEMI - 152))
+                            | (1 << (SqlBaseParser.SETMINUS - 152))
+                        )
+                    )
+                    != 0
+                )
+                or _la == SqlBaseParser.UNION
+                or _la == SqlBaseParser.USING
+            ):
                 self._errHandler.recoverInline(self)
             else:
                 self._errHandler.reportMatch(self)
@@ -22475,11 +23476,12 @@ class SqlBaseParser ( Parser ):
             self.exitRule()
         return localctx
 
-
     class NonReservedContext(ParserRuleContext):
-        __slots__ = 'parser'
+        __slots__ = "parser"
 
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+        def __init__(
+            self, parser, parent: ParserRuleContext = None, invokingState: int = -1
+        ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
@@ -23212,27 +24214,312 @@ class SqlBaseParser ( Parser ):
         def getRuleIndex(self):
             return SqlBaseParser.RULE_nonReserved
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterNonReserved" ):
+        def enterRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "enterNonReserved"):
                 listener.enterNonReserved(self)
 
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitNonReserved" ):
+        def exitRule(self, listener: ParseTreeListener):
+            if hasattr(listener, "exitNonReserved"):
                 listener.exitNonReserved(self)
-
-
-
 
     def nonReserved(self):
 
         localctx = SqlBaseParser.NonReservedContext(self, self._ctx, self.state)
         self.enterRule(localctx, 284, self.RULE_nonReserved)
-        self._la = 0 # Token type
+        self._la = 0  # Token type
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 3139
             _la = self._input.LA(1)
-            if not((((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << SqlBaseParser.ADD) | (1 << SqlBaseParser.AFTER) | (1 << SqlBaseParser.ALL) | (1 << SqlBaseParser.ALTER) | (1 << SqlBaseParser.ANALYZE) | (1 << SqlBaseParser.AND) | (1 << SqlBaseParser.ANY) | (1 << SqlBaseParser.ARCHIVE) | (1 << SqlBaseParser.ARRAY) | (1 << SqlBaseParser.AS) | (1 << SqlBaseParser.ASC) | (1 << SqlBaseParser.AT) | (1 << SqlBaseParser.AUTHORIZATION) | (1 << SqlBaseParser.BETWEEN) | (1 << SqlBaseParser.BOTH) | (1 << SqlBaseParser.BUCKET) | (1 << SqlBaseParser.BUCKETS) | (1 << SqlBaseParser.BY) | (1 << SqlBaseParser.CACHE) | (1 << SqlBaseParser.CASCADE) | (1 << SqlBaseParser.CASE) | (1 << SqlBaseParser.CAST) | (1 << SqlBaseParser.CHANGE) | (1 << SqlBaseParser.CHECK) | (1 << SqlBaseParser.CLEAR) | (1 << SqlBaseParser.CLUSTER) | (1 << SqlBaseParser.CLUSTERED) | (1 << SqlBaseParser.CODEGEN) | (1 << SqlBaseParser.COLLATE) | (1 << SqlBaseParser.COLLECTION) | (1 << SqlBaseParser.COLUMN) | (1 << SqlBaseParser.COLUMNS) | (1 << SqlBaseParser.COMMENT) | (1 << SqlBaseParser.COMMIT) | (1 << SqlBaseParser.COMPACT) | (1 << SqlBaseParser.COMPACTIONS) | (1 << SqlBaseParser.COMPUTE) | (1 << SqlBaseParser.CONCATENATE) | (1 << SqlBaseParser.CONSTRAINT) | (1 << SqlBaseParser.COST) | (1 << SqlBaseParser.CREATE) | (1 << SqlBaseParser.CUBE) | (1 << SqlBaseParser.CURRENT) | (1 << SqlBaseParser.CURRENT_DATE) | (1 << SqlBaseParser.CURRENT_TIME) | (1 << SqlBaseParser.CURRENT_TIMESTAMP) | (1 << SqlBaseParser.CURRENT_USER) | (1 << SqlBaseParser.DAY) | (1 << SqlBaseParser.DATA) | (1 << SqlBaseParser.DATABASE))) != 0) or ((((_la - 64)) & ~0x3f) == 0 and ((1 << (_la - 64)) & ((1 << (SqlBaseParser.DATABASES - 64)) | (1 << (SqlBaseParser.DBPROPERTIES - 64)) | (1 << (SqlBaseParser.DEFINED - 64)) | (1 << (SqlBaseParser.DELETE - 64)) | (1 << (SqlBaseParser.DELIMITED - 64)) | (1 << (SqlBaseParser.DESC - 64)) | (1 << (SqlBaseParser.DESCRIBE - 64)) | (1 << (SqlBaseParser.DFS - 64)) | (1 << (SqlBaseParser.DIRECTORIES - 64)) | (1 << (SqlBaseParser.DIRECTORY - 64)) | (1 << (SqlBaseParser.DISTINCT - 64)) | (1 << (SqlBaseParser.DISTRIBUTE - 64)) | (1 << (SqlBaseParser.DIV - 64)) | (1 << (SqlBaseParser.DROP - 64)) | (1 << (SqlBaseParser.ELSE - 64)) | (1 << (SqlBaseParser.END - 64)) | (1 << (SqlBaseParser.ESCAPE - 64)) | (1 << (SqlBaseParser.ESCAPED - 64)) | (1 << (SqlBaseParser.EXCHANGE - 64)) | (1 << (SqlBaseParser.EXISTS - 64)) | (1 << (SqlBaseParser.EXPLAIN - 64)) | (1 << (SqlBaseParser.EXPORT - 64)) | (1 << (SqlBaseParser.EXTENDED - 64)) | (1 << (SqlBaseParser.EXTERNAL - 64)) | (1 << (SqlBaseParser.EXTRACT - 64)) | (1 << (SqlBaseParser.FALSE - 64)) | (1 << (SqlBaseParser.FETCH - 64)) | (1 << (SqlBaseParser.FIELDS - 64)) | (1 << (SqlBaseParser.FILTER - 64)) | (1 << (SqlBaseParser.FILEFORMAT - 64)) | (1 << (SqlBaseParser.FIRST - 64)) | (1 << (SqlBaseParser.FOLLOWING - 64)) | (1 << (SqlBaseParser.FOR - 64)) | (1 << (SqlBaseParser.FOREIGN - 64)) | (1 << (SqlBaseParser.FORMAT - 64)) | (1 << (SqlBaseParser.FORMATTED - 64)) | (1 << (SqlBaseParser.FROM - 64)) | (1 << (SqlBaseParser.FUNCTION - 64)) | (1 << (SqlBaseParser.FUNCTIONS - 64)) | (1 << (SqlBaseParser.GLOBAL - 64)) | (1 << (SqlBaseParser.GRANT - 64)) | (1 << (SqlBaseParser.GROUP - 64)) | (1 << (SqlBaseParser.GROUPING - 64)) | (1 << (SqlBaseParser.HAVING - 64)) | (1 << (SqlBaseParser.HOUR - 64)) | (1 << (SqlBaseParser.IF - 64)) | (1 << (SqlBaseParser.IGNORE - 64)) | (1 << (SqlBaseParser.IMPORT - 64)) | (1 << (SqlBaseParser.IN - 64)) | (1 << (SqlBaseParser.INDEX - 64)) | (1 << (SqlBaseParser.INDEXES - 64)) | (1 << (SqlBaseParser.INPATH - 64)) | (1 << (SqlBaseParser.INPUTFORMAT - 64)) | (1 << (SqlBaseParser.INSERT - 64)) | (1 << (SqlBaseParser.INTERVAL - 64)) | (1 << (SqlBaseParser.INTO - 64)) | (1 << (SqlBaseParser.IS - 64)) | (1 << (SqlBaseParser.ITEMS - 64)) | (1 << (SqlBaseParser.KEYS - 64)))) != 0) or ((((_la - 128)) & ~0x3f) == 0 and ((1 << (_la - 128)) & ((1 << (SqlBaseParser.LAST - 128)) | (1 << (SqlBaseParser.LAZY - 128)) | (1 << (SqlBaseParser.LEADING - 128)) | (1 << (SqlBaseParser.LIKE - 128)) | (1 << (SqlBaseParser.LIMIT - 128)) | (1 << (SqlBaseParser.LINES - 128)) | (1 << (SqlBaseParser.LIST - 128)) | (1 << (SqlBaseParser.LOAD - 128)) | (1 << (SqlBaseParser.LOCAL - 128)) | (1 << (SqlBaseParser.LOCATION - 128)) | (1 << (SqlBaseParser.LOCK - 128)) | (1 << (SqlBaseParser.LOCKS - 128)) | (1 << (SqlBaseParser.LOGICAL - 128)) | (1 << (SqlBaseParser.MACRO - 128)) | (1 << (SqlBaseParser.MAP - 128)) | (1 << (SqlBaseParser.MATCHED - 128)) | (1 << (SqlBaseParser.MERGE - 128)) | (1 << (SqlBaseParser.MINUTE - 128)) | (1 << (SqlBaseParser.MONTH - 128)) | (1 << (SqlBaseParser.MSCK - 128)) | (1 << (SqlBaseParser.NAMESPACE - 128)) | (1 << (SqlBaseParser.NAMESPACES - 128)) | (1 << (SqlBaseParser.NO - 128)) | (1 << (SqlBaseParser.NOT - 128)) | (1 << (SqlBaseParser.NULL - 128)) | (1 << (SqlBaseParser.NULLS - 128)) | (1 << (SqlBaseParser.OF - 128)) | (1 << (SqlBaseParser.ONLY - 128)) | (1 << (SqlBaseParser.OPTION - 128)) | (1 << (SqlBaseParser.OPTIONS - 128)) | (1 << (SqlBaseParser.OR - 128)) | (1 << (SqlBaseParser.ORDER - 128)) | (1 << (SqlBaseParser.OUT - 128)) | (1 << (SqlBaseParser.OUTER - 128)) | (1 << (SqlBaseParser.OUTPUTFORMAT - 128)) | (1 << (SqlBaseParser.OVER - 128)) | (1 << (SqlBaseParser.OVERLAPS - 128)) | (1 << (SqlBaseParser.OVERLAY - 128)) | (1 << (SqlBaseParser.OVERWRITE - 128)) | (1 << (SqlBaseParser.PARTITION - 128)) | (1 << (SqlBaseParser.PARTITIONED - 128)) | (1 << (SqlBaseParser.PARTITIONS - 128)) | (1 << (SqlBaseParser.PERCENTLIT - 128)) | (1 << (SqlBaseParser.PIVOT - 128)) | (1 << (SqlBaseParser.PLACING - 128)) | (1 << (SqlBaseParser.POSITION - 128)) | (1 << (SqlBaseParser.PRECEDING - 128)) | (1 << (SqlBaseParser.PRIMARY - 128)) | (1 << (SqlBaseParser.PRINCIPALS - 128)) | (1 << (SqlBaseParser.PROPERTIES - 128)) | (1 << (SqlBaseParser.PURGE - 128)) | (1 << (SqlBaseParser.QUERY - 128)) | (1 << (SqlBaseParser.RANGE - 128)) | (1 << (SqlBaseParser.RECORDREADER - 128)) | (1 << (SqlBaseParser.RECORDWRITER - 128)) | (1 << (SqlBaseParser.RECOVER - 128)) | (1 << (SqlBaseParser.REDUCE - 128)) | (1 << (SqlBaseParser.REFERENCES - 128)) | (1 << (SqlBaseParser.REFRESH - 128)) | (1 << (SqlBaseParser.RENAME - 128)))) != 0) or ((((_la - 192)) & ~0x3f) == 0 and ((1 << (_la - 192)) & ((1 << (SqlBaseParser.REPAIR - 192)) | (1 << (SqlBaseParser.REPLACE - 192)) | (1 << (SqlBaseParser.RESET - 192)) | (1 << (SqlBaseParser.RESPECT - 192)) | (1 << (SqlBaseParser.RESTRICT - 192)) | (1 << (SqlBaseParser.REVOKE - 192)) | (1 << (SqlBaseParser.RLIKE - 192)) | (1 << (SqlBaseParser.ROLE - 192)) | (1 << (SqlBaseParser.ROLES - 192)) | (1 << (SqlBaseParser.ROLLBACK - 192)) | (1 << (SqlBaseParser.ROLLUP - 192)) | (1 << (SqlBaseParser.ROW - 192)) | (1 << (SqlBaseParser.ROWS - 192)) | (1 << (SqlBaseParser.SECOND - 192)) | (1 << (SqlBaseParser.SCHEMA - 192)) | (1 << (SqlBaseParser.SELECT - 192)) | (1 << (SqlBaseParser.SEPARATED - 192)) | (1 << (SqlBaseParser.SERDE - 192)) | (1 << (SqlBaseParser.SERDEPROPERTIES - 192)) | (1 << (SqlBaseParser.SESSION_USER - 192)) | (1 << (SqlBaseParser.SET - 192)) | (1 << (SqlBaseParser.SETS - 192)) | (1 << (SqlBaseParser.SHOW - 192)) | (1 << (SqlBaseParser.SKEWED - 192)) | (1 << (SqlBaseParser.SOME - 192)) | (1 << (SqlBaseParser.SORT - 192)) | (1 << (SqlBaseParser.SORTED - 192)) | (1 << (SqlBaseParser.START - 192)) | (1 << (SqlBaseParser.STATISTICS - 192)) | (1 << (SqlBaseParser.STORED - 192)) | (1 << (SqlBaseParser.STRATIFY - 192)) | (1 << (SqlBaseParser.STRUCT - 192)) | (1 << (SqlBaseParser.SUBSTR - 192)) | (1 << (SqlBaseParser.SUBSTRING - 192)) | (1 << (SqlBaseParser.SYNC - 192)) | (1 << (SqlBaseParser.TABLE - 192)) | (1 << (SqlBaseParser.TABLES - 192)) | (1 << (SqlBaseParser.TABLESAMPLE - 192)) | (1 << (SqlBaseParser.TBLPROPERTIES - 192)) | (1 << (SqlBaseParser.TEMPORARY - 192)) | (1 << (SqlBaseParser.TERMINATED - 192)) | (1 << (SqlBaseParser.THEN - 192)) | (1 << (SqlBaseParser.TIME - 192)) | (1 << (SqlBaseParser.TO - 192)) | (1 << (SqlBaseParser.TOUCH - 192)) | (1 << (SqlBaseParser.TRAILING - 192)) | (1 << (SqlBaseParser.TRANSACTION - 192)) | (1 << (SqlBaseParser.TRANSACTIONS - 192)) | (1 << (SqlBaseParser.TRANSFORM - 192)) | (1 << (SqlBaseParser.TRIM - 192)) | (1 << (SqlBaseParser.TRUE - 192)) | (1 << (SqlBaseParser.TRUNCATE - 192)) | (1 << (SqlBaseParser.TRY_CAST - 192)) | (1 << (SqlBaseParser.TYPE - 192)) | (1 << (SqlBaseParser.UNARCHIVE - 192)) | (1 << (SqlBaseParser.UNBOUNDED - 192)) | (1 << (SqlBaseParser.UNCACHE - 192)) | (1 << (SqlBaseParser.UNIQUE - 192)) | (1 << (SqlBaseParser.UNKNOWN - 192)) | (1 << (SqlBaseParser.UNLOCK - 192)))) != 0) or ((((_la - 256)) & ~0x3f) == 0 and ((1 << (_la - 256)) & ((1 << (SqlBaseParser.UNSET - 256)) | (1 << (SqlBaseParser.UPDATE - 256)) | (1 << (SqlBaseParser.USE - 256)) | (1 << (SqlBaseParser.USER - 256)) | (1 << (SqlBaseParser.VALUES - 256)) | (1 << (SqlBaseParser.VIEW - 256)) | (1 << (SqlBaseParser.VIEWS - 256)) | (1 << (SqlBaseParser.WHEN - 256)) | (1 << (SqlBaseParser.WHERE - 256)) | (1 << (SqlBaseParser.WINDOW - 256)) | (1 << (SqlBaseParser.WITH - 256)) | (1 << (SqlBaseParser.YEAR - 256)) | (1 << (SqlBaseParser.ZONE - 256)))) != 0)):
+            if not (
+                (
+                    ((_la) & ~0x3F) == 0
+                    and (
+                        (1 << _la)
+                        & (
+                            (1 << SqlBaseParser.ADD)
+                            | (1 << SqlBaseParser.AFTER)
+                            | (1 << SqlBaseParser.ALL)
+                            | (1 << SqlBaseParser.ALTER)
+                            | (1 << SqlBaseParser.ANALYZE)
+                            | (1 << SqlBaseParser.AND)
+                            | (1 << SqlBaseParser.ANY)
+                            | (1 << SqlBaseParser.ARCHIVE)
+                            | (1 << SqlBaseParser.ARRAY)
+                            | (1 << SqlBaseParser.AS)
+                            | (1 << SqlBaseParser.ASC)
+                            | (1 << SqlBaseParser.AT)
+                            | (1 << SqlBaseParser.AUTHORIZATION)
+                            | (1 << SqlBaseParser.BETWEEN)
+                            | (1 << SqlBaseParser.BOTH)
+                            | (1 << SqlBaseParser.BUCKET)
+                            | (1 << SqlBaseParser.BUCKETS)
+                            | (1 << SqlBaseParser.BY)
+                            | (1 << SqlBaseParser.CACHE)
+                            | (1 << SqlBaseParser.CASCADE)
+                            | (1 << SqlBaseParser.CASE)
+                            | (1 << SqlBaseParser.CAST)
+                            | (1 << SqlBaseParser.CHANGE)
+                            | (1 << SqlBaseParser.CHECK)
+                            | (1 << SqlBaseParser.CLEAR)
+                            | (1 << SqlBaseParser.CLUSTER)
+                            | (1 << SqlBaseParser.CLUSTERED)
+                            | (1 << SqlBaseParser.CODEGEN)
+                            | (1 << SqlBaseParser.COLLATE)
+                            | (1 << SqlBaseParser.COLLECTION)
+                            | (1 << SqlBaseParser.COLUMN)
+                            | (1 << SqlBaseParser.COLUMNS)
+                            | (1 << SqlBaseParser.COMMENT)
+                            | (1 << SqlBaseParser.COMMIT)
+                            | (1 << SqlBaseParser.COMPACT)
+                            | (1 << SqlBaseParser.COMPACTIONS)
+                            | (1 << SqlBaseParser.COMPUTE)
+                            | (1 << SqlBaseParser.CONCATENATE)
+                            | (1 << SqlBaseParser.CONSTRAINT)
+                            | (1 << SqlBaseParser.COST)
+                            | (1 << SqlBaseParser.CREATE)
+                            | (1 << SqlBaseParser.CUBE)
+                            | (1 << SqlBaseParser.CURRENT)
+                            | (1 << SqlBaseParser.CURRENT_DATE)
+                            | (1 << SqlBaseParser.CURRENT_TIME)
+                            | (1 << SqlBaseParser.CURRENT_TIMESTAMP)
+                            | (1 << SqlBaseParser.CURRENT_USER)
+                            | (1 << SqlBaseParser.DAY)
+                            | (1 << SqlBaseParser.DATA)
+                            | (1 << SqlBaseParser.DATABASE)
+                        )
+                    )
+                    != 0
+                )
+                or (
+                    (((_la - 64)) & ~0x3F) == 0
+                    and (
+                        (1 << (_la - 64))
+                        & (
+                            (1 << (SqlBaseParser.DATABASES - 64))
+                            | (1 << (SqlBaseParser.DBPROPERTIES - 64))
+                            | (1 << (SqlBaseParser.DEFINED - 64))
+                            | (1 << (SqlBaseParser.DELETE - 64))
+                            | (1 << (SqlBaseParser.DELIMITED - 64))
+                            | (1 << (SqlBaseParser.DESC - 64))
+                            | (1 << (SqlBaseParser.DESCRIBE - 64))
+                            | (1 << (SqlBaseParser.DFS - 64))
+                            | (1 << (SqlBaseParser.DIRECTORIES - 64))
+                            | (1 << (SqlBaseParser.DIRECTORY - 64))
+                            | (1 << (SqlBaseParser.DISTINCT - 64))
+                            | (1 << (SqlBaseParser.DISTRIBUTE - 64))
+                            | (1 << (SqlBaseParser.DIV - 64))
+                            | (1 << (SqlBaseParser.DROP - 64))
+                            | (1 << (SqlBaseParser.ELSE - 64))
+                            | (1 << (SqlBaseParser.END - 64))
+                            | (1 << (SqlBaseParser.ESCAPE - 64))
+                            | (1 << (SqlBaseParser.ESCAPED - 64))
+                            | (1 << (SqlBaseParser.EXCHANGE - 64))
+                            | (1 << (SqlBaseParser.EXISTS - 64))
+                            | (1 << (SqlBaseParser.EXPLAIN - 64))
+                            | (1 << (SqlBaseParser.EXPORT - 64))
+                            | (1 << (SqlBaseParser.EXTENDED - 64))
+                            | (1 << (SqlBaseParser.EXTERNAL - 64))
+                            | (1 << (SqlBaseParser.EXTRACT - 64))
+                            | (1 << (SqlBaseParser.FALSE - 64))
+                            | (1 << (SqlBaseParser.FETCH - 64))
+                            | (1 << (SqlBaseParser.FIELDS - 64))
+                            | (1 << (SqlBaseParser.FILTER - 64))
+                            | (1 << (SqlBaseParser.FILEFORMAT - 64))
+                            | (1 << (SqlBaseParser.FIRST - 64))
+                            | (1 << (SqlBaseParser.FOLLOWING - 64))
+                            | (1 << (SqlBaseParser.FOR - 64))
+                            | (1 << (SqlBaseParser.FOREIGN - 64))
+                            | (1 << (SqlBaseParser.FORMAT - 64))
+                            | (1 << (SqlBaseParser.FORMATTED - 64))
+                            | (1 << (SqlBaseParser.FROM - 64))
+                            | (1 << (SqlBaseParser.FUNCTION - 64))
+                            | (1 << (SqlBaseParser.FUNCTIONS - 64))
+                            | (1 << (SqlBaseParser.GLOBAL - 64))
+                            | (1 << (SqlBaseParser.GRANT - 64))
+                            | (1 << (SqlBaseParser.GROUP - 64))
+                            | (1 << (SqlBaseParser.GROUPING - 64))
+                            | (1 << (SqlBaseParser.HAVING - 64))
+                            | (1 << (SqlBaseParser.HOUR - 64))
+                            | (1 << (SqlBaseParser.IF - 64))
+                            | (1 << (SqlBaseParser.IGNORE - 64))
+                            | (1 << (SqlBaseParser.IMPORT - 64))
+                            | (1 << (SqlBaseParser.IN - 64))
+                            | (1 << (SqlBaseParser.INDEX - 64))
+                            | (1 << (SqlBaseParser.INDEXES - 64))
+                            | (1 << (SqlBaseParser.INPATH - 64))
+                            | (1 << (SqlBaseParser.INPUTFORMAT - 64))
+                            | (1 << (SqlBaseParser.INSERT - 64))
+                            | (1 << (SqlBaseParser.INTERVAL - 64))
+                            | (1 << (SqlBaseParser.INTO - 64))
+                            | (1 << (SqlBaseParser.IS - 64))
+                            | (1 << (SqlBaseParser.ITEMS - 64))
+                            | (1 << (SqlBaseParser.KEYS - 64))
+                        )
+                    )
+                    != 0
+                )
+                or (
+                    (((_la - 128)) & ~0x3F) == 0
+                    and (
+                        (1 << (_la - 128))
+                        & (
+                            (1 << (SqlBaseParser.LAST - 128))
+                            | (1 << (SqlBaseParser.LAZY - 128))
+                            | (1 << (SqlBaseParser.LEADING - 128))
+                            | (1 << (SqlBaseParser.LIKE - 128))
+                            | (1 << (SqlBaseParser.LIMIT - 128))
+                            | (1 << (SqlBaseParser.LINES - 128))
+                            | (1 << (SqlBaseParser.LIST - 128))
+                            | (1 << (SqlBaseParser.LOAD - 128))
+                            | (1 << (SqlBaseParser.LOCAL - 128))
+                            | (1 << (SqlBaseParser.LOCATION - 128))
+                            | (1 << (SqlBaseParser.LOCK - 128))
+                            | (1 << (SqlBaseParser.LOCKS - 128))
+                            | (1 << (SqlBaseParser.LOGICAL - 128))
+                            | (1 << (SqlBaseParser.MACRO - 128))
+                            | (1 << (SqlBaseParser.MAP - 128))
+                            | (1 << (SqlBaseParser.MATCHED - 128))
+                            | (1 << (SqlBaseParser.MERGE - 128))
+                            | (1 << (SqlBaseParser.MINUTE - 128))
+                            | (1 << (SqlBaseParser.MONTH - 128))
+                            | (1 << (SqlBaseParser.MSCK - 128))
+                            | (1 << (SqlBaseParser.NAMESPACE - 128))
+                            | (1 << (SqlBaseParser.NAMESPACES - 128))
+                            | (1 << (SqlBaseParser.NO - 128))
+                            | (1 << (SqlBaseParser.NOT - 128))
+                            | (1 << (SqlBaseParser.NULL - 128))
+                            | (1 << (SqlBaseParser.NULLS - 128))
+                            | (1 << (SqlBaseParser.OF - 128))
+                            | (1 << (SqlBaseParser.ONLY - 128))
+                            | (1 << (SqlBaseParser.OPTION - 128))
+                            | (1 << (SqlBaseParser.OPTIONS - 128))
+                            | (1 << (SqlBaseParser.OR - 128))
+                            | (1 << (SqlBaseParser.ORDER - 128))
+                            | (1 << (SqlBaseParser.OUT - 128))
+                            | (1 << (SqlBaseParser.OUTER - 128))
+                            | (1 << (SqlBaseParser.OUTPUTFORMAT - 128))
+                            | (1 << (SqlBaseParser.OVER - 128))
+                            | (1 << (SqlBaseParser.OVERLAPS - 128))
+                            | (1 << (SqlBaseParser.OVERLAY - 128))
+                            | (1 << (SqlBaseParser.OVERWRITE - 128))
+                            | (1 << (SqlBaseParser.PARTITION - 128))
+                            | (1 << (SqlBaseParser.PARTITIONED - 128))
+                            | (1 << (SqlBaseParser.PARTITIONS - 128))
+                            | (1 << (SqlBaseParser.PERCENTLIT - 128))
+                            | (1 << (SqlBaseParser.PIVOT - 128))
+                            | (1 << (SqlBaseParser.PLACING - 128))
+                            | (1 << (SqlBaseParser.POSITION - 128))
+                            | (1 << (SqlBaseParser.PRECEDING - 128))
+                            | (1 << (SqlBaseParser.PRIMARY - 128))
+                            | (1 << (SqlBaseParser.PRINCIPALS - 128))
+                            | (1 << (SqlBaseParser.PROPERTIES - 128))
+                            | (1 << (SqlBaseParser.PURGE - 128))
+                            | (1 << (SqlBaseParser.QUERY - 128))
+                            | (1 << (SqlBaseParser.RANGE - 128))
+                            | (1 << (SqlBaseParser.RECORDREADER - 128))
+                            | (1 << (SqlBaseParser.RECORDWRITER - 128))
+                            | (1 << (SqlBaseParser.RECOVER - 128))
+                            | (1 << (SqlBaseParser.REDUCE - 128))
+                            | (1 << (SqlBaseParser.REFERENCES - 128))
+                            | (1 << (SqlBaseParser.REFRESH - 128))
+                            | (1 << (SqlBaseParser.RENAME - 128))
+                        )
+                    )
+                    != 0
+                )
+                or (
+                    (((_la - 192)) & ~0x3F) == 0
+                    and (
+                        (1 << (_la - 192))
+                        & (
+                            (1 << (SqlBaseParser.REPAIR - 192))
+                            | (1 << (SqlBaseParser.REPLACE - 192))
+                            | (1 << (SqlBaseParser.RESET - 192))
+                            | (1 << (SqlBaseParser.RESPECT - 192))
+                            | (1 << (SqlBaseParser.RESTRICT - 192))
+                            | (1 << (SqlBaseParser.REVOKE - 192))
+                            | (1 << (SqlBaseParser.RLIKE - 192))
+                            | (1 << (SqlBaseParser.ROLE - 192))
+                            | (1 << (SqlBaseParser.ROLES - 192))
+                            | (1 << (SqlBaseParser.ROLLBACK - 192))
+                            | (1 << (SqlBaseParser.ROLLUP - 192))
+                            | (1 << (SqlBaseParser.ROW - 192))
+                            | (1 << (SqlBaseParser.ROWS - 192))
+                            | (1 << (SqlBaseParser.SECOND - 192))
+                            | (1 << (SqlBaseParser.SCHEMA - 192))
+                            | (1 << (SqlBaseParser.SELECT - 192))
+                            | (1 << (SqlBaseParser.SEPARATED - 192))
+                            | (1 << (SqlBaseParser.SERDE - 192))
+                            | (1 << (SqlBaseParser.SERDEPROPERTIES - 192))
+                            | (1 << (SqlBaseParser.SESSION_USER - 192))
+                            | (1 << (SqlBaseParser.SET - 192))
+                            | (1 << (SqlBaseParser.SETS - 192))
+                            | (1 << (SqlBaseParser.SHOW - 192))
+                            | (1 << (SqlBaseParser.SKEWED - 192))
+                            | (1 << (SqlBaseParser.SOME - 192))
+                            | (1 << (SqlBaseParser.SORT - 192))
+                            | (1 << (SqlBaseParser.SORTED - 192))
+                            | (1 << (SqlBaseParser.START - 192))
+                            | (1 << (SqlBaseParser.STATISTICS - 192))
+                            | (1 << (SqlBaseParser.STORED - 192))
+                            | (1 << (SqlBaseParser.STRATIFY - 192))
+                            | (1 << (SqlBaseParser.STRUCT - 192))
+                            | (1 << (SqlBaseParser.SUBSTR - 192))
+                            | (1 << (SqlBaseParser.SUBSTRING - 192))
+                            | (1 << (SqlBaseParser.SYNC - 192))
+                            | (1 << (SqlBaseParser.TABLE - 192))
+                            | (1 << (SqlBaseParser.TABLES - 192))
+                            | (1 << (SqlBaseParser.TABLESAMPLE - 192))
+                            | (1 << (SqlBaseParser.TBLPROPERTIES - 192))
+                            | (1 << (SqlBaseParser.TEMPORARY - 192))
+                            | (1 << (SqlBaseParser.TERMINATED - 192))
+                            | (1 << (SqlBaseParser.THEN - 192))
+                            | (1 << (SqlBaseParser.TIME - 192))
+                            | (1 << (SqlBaseParser.TO - 192))
+                            | (1 << (SqlBaseParser.TOUCH - 192))
+                            | (1 << (SqlBaseParser.TRAILING - 192))
+                            | (1 << (SqlBaseParser.TRANSACTION - 192))
+                            | (1 << (SqlBaseParser.TRANSACTIONS - 192))
+                            | (1 << (SqlBaseParser.TRANSFORM - 192))
+                            | (1 << (SqlBaseParser.TRIM - 192))
+                            | (1 << (SqlBaseParser.TRUE - 192))
+                            | (1 << (SqlBaseParser.TRUNCATE - 192))
+                            | (1 << (SqlBaseParser.TRY_CAST - 192))
+                            | (1 << (SqlBaseParser.TYPE - 192))
+                            | (1 << (SqlBaseParser.UNARCHIVE - 192))
+                            | (1 << (SqlBaseParser.UNBOUNDED - 192))
+                            | (1 << (SqlBaseParser.UNCACHE - 192))
+                            | (1 << (SqlBaseParser.UNIQUE - 192))
+                            | (1 << (SqlBaseParser.UNKNOWN - 192))
+                            | (1 << (SqlBaseParser.UNLOCK - 192))
+                        )
+                    )
+                    != 0
+                )
+                or (
+                    (((_la - 256)) & ~0x3F) == 0
+                    and (
+                        (1 << (_la - 256))
+                        & (
+                            (1 << (SqlBaseParser.UNSET - 256))
+                            | (1 << (SqlBaseParser.UPDATE - 256))
+                            | (1 << (SqlBaseParser.USE - 256))
+                            | (1 << (SqlBaseParser.USER - 256))
+                            | (1 << (SqlBaseParser.VALUES - 256))
+                            | (1 << (SqlBaseParser.VIEW - 256))
+                            | (1 << (SqlBaseParser.VIEWS - 256))
+                            | (1 << (SqlBaseParser.WHEN - 256))
+                            | (1 << (SqlBaseParser.WHERE - 256))
+                            | (1 << (SqlBaseParser.WINDOW - 256))
+                            | (1 << (SqlBaseParser.WITH - 256))
+                            | (1 << (SqlBaseParser.YEAR - 256))
+                            | (1 << (SqlBaseParser.ZONE - 256))
+                        )
+                    )
+                    != 0
+                )
+            ):
                 self._errHandler.recoverInline(self)
             else:
                 self._errHandler.reportMatch(self)
@@ -23245,9 +24532,7 @@ class SqlBaseParser ( Parser ):
             self.exitRule()
         return localctx
 
-
-
-    def sempred(self, localctx:RuleContext, ruleIndex:int, predIndex:int):
+    def sempred(self, localctx: RuleContext, ruleIndex: int, predIndex: int):
         if self._predicates == None:
             self._predicates = dict()
         self._predicates[42] = self.queryTerm_sempred
@@ -23263,101 +24548,81 @@ class SqlBaseParser ( Parser ):
         else:
             return pred(localctx, predIndex)
 
-    def queryTerm_sempred(self, localctx:QueryTermContext, predIndex:int):
-            if predIndex == 0:
-                return self.precpred(self._ctx, 3)
-         
+    def queryTerm_sempred(self, localctx: QueryTermContext, predIndex: int):
+        if predIndex == 0:
+            return self.precpred(self._ctx, 3)
 
-            if predIndex == 1:
-                return legacy_setops_precedence_enabled
-         
+        if predIndex == 1:
+            return self.legacy_setops_precedence_enabled
 
-            if predIndex == 2:
-                return self.precpred(self._ctx, 2)
-         
+        if predIndex == 2:
+            return self.precpred(self._ctx, 2)
 
-            if predIndex == 3:
-                return !legacy_setops_precedence_enabled
-         
+        if predIndex == 3:
+            return not self.legacy_setops_precedence_enabled
 
-            if predIndex == 4:
-                return self.precpred(self._ctx, 1)
-         
+        if predIndex == 4:
+            return self.precpred(self._ctx, 1)
 
-            if predIndex == 5:
-                return !legacy_setops_precedence_enabled
-         
+        if predIndex == 5:
+            return not self.legacy_setops_precedence_enabled
 
-    def booleanExpression_sempred(self, localctx:BooleanExpressionContext, predIndex:int):
-            if predIndex == 6:
-                return self.precpred(self._ctx, 2)
-         
+    def booleanExpression_sempred(
+        self, localctx: BooleanExpressionContext, predIndex: int
+    ):
+        if predIndex == 6:
+            return self.precpred(self._ctx, 2)
 
-            if predIndex == 7:
-                return self.precpred(self._ctx, 1)
-         
+        if predIndex == 7:
+            return self.precpred(self._ctx, 1)
 
-    def valueExpression_sempred(self, localctx:ValueExpressionContext, predIndex:int):
-            if predIndex == 8:
-                return self.precpred(self._ctx, 6)
-         
+    def valueExpression_sempred(self, localctx: ValueExpressionContext, predIndex: int):
+        if predIndex == 8:
+            return self.precpred(self._ctx, 6)
 
-            if predIndex == 9:
-                return self.precpred(self._ctx, 5)
-         
+        if predIndex == 9:
+            return self.precpred(self._ctx, 5)
 
-            if predIndex == 10:
-                return self.precpred(self._ctx, 4)
-         
+        if predIndex == 10:
+            return self.precpred(self._ctx, 4)
 
-            if predIndex == 11:
-                return self.precpred(self._ctx, 3)
-         
+        if predIndex == 11:
+            return self.precpred(self._ctx, 3)
 
-            if predIndex == 12:
-                return self.precpred(self._ctx, 2)
-         
+        if predIndex == 12:
+            return self.precpred(self._ctx, 2)
 
-            if predIndex == 13:
-                return self.precpred(self._ctx, 1)
-         
+        if predIndex == 13:
+            return self.precpred(self._ctx, 1)
 
-    def primaryExpression_sempred(self, localctx:PrimaryExpressionContext, predIndex:int):
-            if predIndex == 14:
-                return self.precpred(self._ctx, 8)
-         
+    def primaryExpression_sempred(
+        self, localctx: PrimaryExpressionContext, predIndex: int
+    ):
+        if predIndex == 14:
+            return self.precpred(self._ctx, 8)
 
-            if predIndex == 15:
-                return self.precpred(self._ctx, 6)
-         
+        if predIndex == 15:
+            return self.precpred(self._ctx, 6)
 
-    def identifier_sempred(self, localctx:IdentifierContext, predIndex:int):
-            if predIndex == 16:
-                return !SQL_standard_keyword_behavior
-         
+    def identifier_sempred(self, localctx: IdentifierContext, predIndex: int):
+        if predIndex == 16:
+            return not self.SQL_standard_keyword_behavior
 
-    def strictIdentifier_sempred(self, localctx:StrictIdentifierContext, predIndex:int):
-            if predIndex == 17:
-                return SQL_standard_keyword_behavior
-         
+    def strictIdentifier_sempred(
+        self, localctx: StrictIdentifierContext, predIndex: int
+    ):
+        if predIndex == 17:
+            return self.SQL_standard_keyword_behavior
 
-            if predIndex == 18:
-                return !SQL_standard_keyword_behavior
-         
+        if predIndex == 18:
+            return not self.SQL_standard_keyword_behavior
 
-    def number_sempred(self, localctx:NumberContext, predIndex:int):
-            if predIndex == 19:
-                return !legacy_exponent_literal_as_decimal_enabled
-         
+    def number_sempred(self, localctx: NumberContext, predIndex: int):
+        if predIndex == 19:
+            return not self.legacy_exponent_literal_as_decimal_enabled
 
-            if predIndex == 20:
-                return !legacy_exponent_literal_as_decimal_enabled
-         
+        if predIndex == 20:
+            return not self.legacy_exponent_literal_as_decimal_enabled
 
-            if predIndex == 21:
-                return legacy_exponent_literal_as_decimal_enabled
-         
-
-
-
-
+        if predIndex == 21:
+            return self.legacy_exponent_literal_as_decimal_enabled
